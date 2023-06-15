@@ -1,0 +1,61 @@
+[
+    {
+        "GlobalKey": "Location_Addresses_Inactive_PostCustom0jIBm00000009XxMAIItem35",
+        "InputFieldName": "AddressIneffectiveDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "Location_Addresses_Inactive_Post",
+        "OmniDataTransformationId": {
+            "Name": "Location_Addresses_Inactive_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/Location_Addresses_Inactive_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Date(YYYY-MM-dd)",
+        "OutputFieldName": "Address_Ineffective_Date__c",
+        "OutputObjectName": "Address_Location__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "Location_Addresses_Inactive_PostCustom0jIBm00000009XxMAIItem28",
+        "InputFieldName": "LocationId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": true,
+        "Name": "Location_Addresses_Inactive_Post",
+        "OmniDataTransformationId": {
+            "Name": "Location_Addresses_Inactive_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/Location_Addresses_Inactive_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Address_Location__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "Location_Addresses_Inactive_PostCustom0jIBm00000009XxMAIItem29",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "Location_Addresses_Inactive_Post",
+        "OmniDataTransformationId": {
+            "Name": "Location_Addresses_Inactive_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/Location_Addresses_Inactive_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Address_Location__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

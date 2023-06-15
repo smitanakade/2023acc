@@ -1,0 +1,59 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Event_Withdrawn",
+    "OmniProcessId": {
+        "Name": "ServiceVariationAddress",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceVariationAddress/CreateEvent/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Withdraw",
+        "OmniProcessId": {
+            "Name": "ServiceVariationAddress",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceVariationAddress/CreateEvent/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceVariationAddress/CreateEvent/Procedure/Withdraw",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Withdraw",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Id": "=%EventId%",
+            "PreviousPage": "=\"Withdrawn\"",
+            "Status": "=\"Withdrawn\"",
+            "StatusEffectiveDate": "=%CurrentDateText%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Event_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction8",
+        "responseJSONNode": "EventId2",
+        "responseJSONPath": "Event__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceVariationAddress/CreateEvent/Procedure/Event_Withdrawn"
+}

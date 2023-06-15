@@ -1,0 +1,102 @@
+[
+    {
+        "FormulaExpression": "IF(HoldCER == true OR HoldQI == true OR HoldCM == true, true, false)",
+        "FormulaResultPath": "RatingUnderReview",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_SetServiceUnderReviewHold2569477914127334",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_SetServiceUnderReviewHold",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_SetServiceUnderReviewHold",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_SetServiceUnderReviewHold",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "NOW()",
+        "FormulaResultPath": "CurrentDateTime",
+        "FormulaSequence": 2,
+        "GlobalKey": "SRQI_DR_SetServiceUnderReviewHold650847376774478",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_SetServiceUnderReviewHold",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_SetServiceUnderReviewHold",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_SetServiceUnderReviewHold",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_SetServiceUnderReviewHold12985868094261455",
+        "InputFieldName": "CurrentDateTime",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_SetServiceUnderReviewHold",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_SetServiceUnderReviewHold",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_SetServiceUnderReviewHold",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Date_Time_of_hold__c",
+        "OutputObjectName": "BusinessLicense",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_SetServiceUnderReviewHold406626392619053",
+        "InputFieldName": "ServiceId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_SetServiceUnderReviewHold",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_SetServiceUnderReviewHold",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_SetServiceUnderReviewHold",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "BusinessLicense",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_SetServiceUnderReviewHold39717366380093444",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_SetServiceUnderReviewHold",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_SetServiceUnderReviewHold",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_SetServiceUnderReviewHold",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "BusinessLicense",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

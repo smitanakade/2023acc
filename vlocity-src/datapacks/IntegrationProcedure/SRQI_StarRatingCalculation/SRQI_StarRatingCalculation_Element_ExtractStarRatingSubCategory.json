@@ -1,0 +1,66 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ExtractStarRatingSubCategory",
+    "OmniProcessId": {
+        "Name": "SRHCalculation_New",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/StarRatingCalculation/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ReCalcSCRWithNewSRH",
+        "OmniProcessId": {
+            "Name": "SRHCalculation_New",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/StarRatingCalculation/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/StarRatingCalculation/Procedure/ReCalcSCRWithNewSRH",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ReCalcSCRWithNewSRH",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+        },
+        "additionalOutput": {
+        },
+        "bundle": "SRQI_DR_ExtractStarRatingSubCategory",
+        "chainOnStep": false,
+        "dataRaptor Input Parameters": [
+            {
+                "element": "SRHID",
+                "inputParam": "SRHID"
+            }
+        ],
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "SRHSubData:Id == null",
+        "failureResponse": {
+            "Success": false,
+            "errorMessage": "No Star Rating Sub category records found.",
+            "node": "SRQI_StarRatingCalculation:ReCalcSCRWithNewSRH:ExtractStarRatingSubCategory",
+            "status": "error"
+        },
+        "ignoreCache": false,
+        "label": "DataRaptorExtractAction5",
+        "responseJSONNode": "SRHSubData",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": true,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Extract Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/StarRatingCalculation/Procedure/ExtractStarRatingSubCategory"
+}

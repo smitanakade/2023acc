@@ -1,0 +1,49 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "ApprovedProviderQFRStatements",
+    "OmniProcessId": {
+        "Name": "STApprovedProviderQuarterlyFinancialStatements",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/STApprovedProviderQuarterlyFinancialStatements/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "STApprovedProviderQuarterlyFinancialStatements",
+        "OmniProcessId": {
+            "Name": "STApprovedProviderQuarterlyFinancialStatements",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/STApprovedProviderQuarterlyFinancialStatements/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/STApprovedProviderQuarterlyFinancialStatements/English/STApprovedProviderQuarterlyFinancialStatements",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "STApprovedProviderQuarterlyFinancialStatements",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "bStandalone": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "customAttributes": [
+            {
+                "name": "show-toggles",
+                "source": "true"
+            },
+            {
+                "name": "record-id",
+                "source": "%ApprovedProviderQuarterlyFinancialStatementsFormId%"
+            }
+        ],
+        "hide": false,
+        "label": "ApprovedProviderQFRStatements",
+        "lwcName": "omniProviderDatatable",
+        "show": null
+    },
+    "Type": "Custom Lightning Web Component",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/STApprovedProviderQuarterlyFinancialStatements/English/ApprovedProviderQFRStatements"
+}

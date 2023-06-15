@@ -1,0 +1,60 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "TextBlock3",
+    "OmniProcessId": {
+        "Name": "SRQI_OS_HoldStarRatings",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/HoldStarRatings/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ExistingCasesLinkedToSRHError",
+        "OmniProcessId": {
+            "Name": "SRQI_OS_HoldStarRatings",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/HoldStarRatings/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/HoldStarRatings/English/ExistingCasesLinkedToSRHError",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ExistingCasesLinkedToSRHError",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "TextBlock1",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "CMCaseRelease"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "QICaseRelease"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "CERCaseRelease"
+                    }
+                ]
+            }
+        },
+        "text": "<p><span style=\"color: #e03e2d;\"><strong>The dispute management cases for the following subdomains are still open or in progress. The star ratings cannot be released from hold until the authorised person have closed the cases.</strong></span></p>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/HoldStarRatings/English/TextBlock3"
+}

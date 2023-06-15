@@ -1,0 +1,63 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "LiveNotificationsForHoldRelease",
+    "OmniProcessId": {
+        "Name": "SRQI_IP_HoldStarRatings",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/HoldStarRatings/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "LoopOnContacts",
+        "OmniProcessId": {
+            "Name": "SRQI_IP_HoldStarRatings",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/HoldStarRatings/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/HoldStarRatings/Procedure/LoopOnContacts",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "LoopOnContacts",
+    "ParentElementType": "Loop Block",
+    "PropertySetConfig": {
+        "OrgWideEmailAddress": "%FetchNotificationSetting:EmailSetting:OWEA%",
+        "actionMessage": "",
+        "attachmentList": "",
+        "chainOnStep": false,
+        "contentVersionList": "",
+        "disOnTplt": false,
+        "emailInformation": {
+            "bccAddressList": [
+            ],
+            "ccAddressList": [
+            ],
+            "emailBody": "",
+            "emailSubject": "",
+            "setHtmlBody": false,
+            "toAddressList": [
+            ]
+        },
+        "emailTemplateInformation": {
+            "emailTargetObjectId": "%GetACR:ACR:ContactId%",
+            "emailTemplateName": "GoLive_Star_Rating_Report_Template",
+            "saveAsActivity": false,
+            "whatId": "%DRTransformServiceDetails:ProviderId%"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "EmailAction1",
+        "show": null,
+        "staticDocList": [
+        ],
+        "useTemplate": true
+    },
+    "Type": "Email Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/HoldStarRatings/Procedure/LiveNotificationsForHoldRelease"
+}

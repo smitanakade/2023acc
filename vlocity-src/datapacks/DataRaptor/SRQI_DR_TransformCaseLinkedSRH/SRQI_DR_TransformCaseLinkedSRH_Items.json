@@ -1,0 +1,162 @@
+[
+    {
+        "FormulaExpression": "SERIALIZE(LIST(Case:CaseDomain))",
+        "FormulaResultPath": "SerialisedListOfDomains",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_TransformCaseLinkedSRHCustom6306",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformCaseLinkedSRH",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "SerialisedListOfDomains LIKE \"Care Minutes\"",
+        "FormulaResultPath": "CMCaseExists",
+        "FormulaSequence": 4,
+        "GlobalKey": "SRQI_DR_TransformCaseLinkedSRHCustom822",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformCaseLinkedSRH",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "SerialisedListOfDomains LIKE \"Consumer Experience Report\"",
+        "FormulaResultPath": "CERCaseExists",
+        "FormulaSequence": 2,
+        "GlobalKey": "SRQI_DR_TransformCaseLinkedSRHCustom530",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformCaseLinkedSRH",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "SerialisedListOfDomains LIKE \"Quality Indicator\"",
+        "FormulaResultPath": "QICaseExists",
+        "FormulaSequence": 3,
+        "GlobalKey": "SRQI_DR_TransformCaseLinkedSRHCustom1380",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformCaseLinkedSRH",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_TransformCaseLinkedSRHCustom2901",
+        "InputFieldName": "CERCaseExists",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformCaseLinkedSRH",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CERCaseExists",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_TransformCaseLinkedSRHCustom2535",
+        "InputFieldName": "CMCaseExists",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformCaseLinkedSRH",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CMCaseExists",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_TransformCaseLinkedSRHCustom1882",
+        "InputFieldName": "NumberOfCases",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformCaseLinkedSRH",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "NumberOfCases",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_TransformCaseLinkedSRHCustom7619",
+        "InputFieldName": "QICaseExists",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformCaseLinkedSRH",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformCaseLinkedSRH",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "QICaseExists",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

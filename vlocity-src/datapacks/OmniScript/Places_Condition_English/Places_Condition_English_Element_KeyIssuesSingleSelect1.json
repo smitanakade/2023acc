@@ -1,0 +1,111 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "KeyIssuesSingleSelect1",
+    "OmniProcessId": {
+        "Name": "PlacesConditions",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Places/Condition/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "TargetGroup",
+        "OmniProcessId": {
+            "Name": "PlacesConditions",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Places/Condition/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Places/Condition/English/TargetGroup",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "TargetGroup",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 9,
+        "controllingField": {
+            "element": "",
+            "source": "",
+            "type": ""
+        },
+        "defaultValue": null,
+        "disOnTplt": false,
+        "enableCaption": true,
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "horizontalMode": false,
+        "imageCountInRow": 3,
+        "label": "",
+        "optionHeight": 100,
+        "optionSource": {
+            "source": "",
+            "type": ""
+        },
+        "optionWidth": 100,
+        "options": [
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "Dementia",
+                "value": "Dementia"
+            },
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "Dementia for places located in a secure unit designed to provide the appropriate level of care to cater to the needs of people with a diagnosis of dementia",
+                "value": "Dementia for places located in a secure unit designed to provide the appropriate level of care to cater to the needs of people with a diagnosis of dementia"
+            },
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "Challenging behaviours",
+                "value": "Challenging behaviours"
+            }
+        ],
+        "readOnly": true,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "General Access",
+                        "field": "TargetGroup1|n"
+                    },
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "<>",
+                                    "data": "Or people with",
+                                    "field": "With|n"
+                                },
+                                {
+                                    "condition": "<>",
+                                    "data": "And people with",
+                                    "field": "With|n"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "Radio",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Places/Condition/English/KeyIssuesSingleSelect1"
+}

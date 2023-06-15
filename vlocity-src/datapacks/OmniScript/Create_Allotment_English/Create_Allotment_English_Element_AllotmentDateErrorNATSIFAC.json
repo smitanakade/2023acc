@@ -1,0 +1,51 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "AllotmentDateErrorNATSIFAC",
+    "OmniProcessId": {
+        "Name": "CreateAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Create/Allotment/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementErrorMap": {
+            "DateOfAllotment": "Date of Allotment must be after Service Status Start Date (%ServiceStatusStartDate%)"
+        },
+        "label": "Allotment Date Error",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "NATSIFAC_Service",
+                        "field": "RecordTypeDeveloperName"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "BAD",
+                        "field": "checkAllotmentDate"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "validationRequired": "Step",
+        "wpm": false
+    },
+    "Type": "Set Errors",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Create/Allotment/English/AllotmentDateErrorNATSIFAC"
+}

@@ -1,0 +1,95 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "TextBlock3",
+    "OmniProcessId": {
+        "Name": "Address_Services",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "SelectAddress",
+        "OmniProcessId": {
+            "Name": "Address_Services",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/SelectAddress",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "SelectAddress",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 7,
+        "dataJSON": false,
+        "label": "TextBlock1",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "<>",
+                                    "data": null,
+                                    "field": "SelectAddress:CustomLWC2:SelectedAddress:SingleLineAddress"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "0",
+                                    "field": "PostalAddressCount"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Physical",
+                                    "field": "AddressRecordType"
+                                },
+                                {
+                                    "condition": "<>",
+                                    "data": "No Match",
+                                    "field": "CheckIfAValueIsSelected2"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "0",
+                                    "field": "PostalAddressCount"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Physical",
+                                    "field": "AddressRecordType"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "No",
+                                    "field": "SelectAddress:CGISAddress"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "text": "<h3><span style=\"color: #000000;\"><em><strong>Postal Address As above?</strong></em></span></h3>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/TextBlock3"
+}

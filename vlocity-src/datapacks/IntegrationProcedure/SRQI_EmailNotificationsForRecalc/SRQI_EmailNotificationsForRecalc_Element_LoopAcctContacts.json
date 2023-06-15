@@ -1,0 +1,39 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "LoopAcctContacts",
+    "OmniProcessId": {
+        "Name": "EmailNotificationsForRecalc",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "LoopContacts",
+        "OmniProcessId": {
+            "Name": "EmailNotificationsForRecalc",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure/LoopContacts",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "LoopContacts",
+    "ParentElementType": "Loop Block",
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "status == 'Published' &&\r\nFetchPublishNotificationSetting:EmailSetting:PublishNotificationforRecal == \"true\"",
+        "label": "LoopBlock2",
+        "loopList": "GetContactsFromACR:ACR",
+        "loopOutput": {
+        },
+        "show": null
+    },
+    "Type": "Loop Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure/LoopAcctContacts"
+}

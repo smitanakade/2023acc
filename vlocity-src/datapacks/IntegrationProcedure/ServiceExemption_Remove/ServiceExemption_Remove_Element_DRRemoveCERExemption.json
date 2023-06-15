@@ -1,0 +1,59 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DRRemoveCERExemption",
+    "OmniProcessId": {
+        "Name": "RemoveServiceExemption",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceExemption/Remove/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RemoveExemption",
+        "OmniProcessId": {
+            "Name": "RemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceExemption/Remove/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceExemption/Remove/Procedure/RemoveExemption",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RemoveExemption",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "CERId": "%DRTransformExemptionDetails:CERId%",
+            "RemDet": "%exRemoverDetail%",
+            "Remv": "%exRemover%",
+            "ServID": "%serviceID%",
+            "ServName": "%DRGetExemption:Exemption|1:ServiceName%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "SRQI_DR_CERRemoveServiceExemption",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "Step0:SelectDomain:SetDomain == \"exemptremoveCER\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceExemption/Remove/Procedure/DRRemoveCERExemption"
+}

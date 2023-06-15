@@ -1,0 +1,22 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Only_If_We_Need_To_Create_A_New_SDO",
+    "OmniProcessId": {
+        "Name": "CreateServiceDeliveryOrganisation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceDeliveryOrganisation/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "SearchSDO:FindSDO:ChooseSDO == \"Create a new Service Delivery Organisation\"",
+        "isIfElseBlock": false,
+        "label": "ConditionalBlock5",
+        "show": null
+    },
+    "Type": "Conditional Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceDeliveryOrganisation/Create/Procedure/Only_If_We_Need_To_Create_A_New_SDO"
+}

@@ -1,0 +1,63 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Email StarRatings",
+    "OmniProcessId": {
+        "Name": "SRHCalculation_New",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/StarRatingCalculation/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Loop Contacts",
+        "OmniProcessId": {
+            "Name": "SRHCalculation_New",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/StarRatingCalculation/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/StarRatingCalculation/Procedure/Loop Contacts",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Loop Contacts",
+    "ParentElementType": "Loop Block",
+    "PropertySetConfig": {
+        "OrgWideEmailAddress": "%SRHSubData:EmailSetting:OWEA%",
+        "actionMessage": "",
+        "attachmentList": "",
+        "chainOnStep": false,
+        "contentVersionList": "",
+        "disOnTplt": false,
+        "emailInformation": {
+            "bccAddressList": [
+            ],
+            "ccAddressList": [
+            ],
+            "emailBody": "",
+            "emailSubject": "",
+            "setHtmlBody": false,
+            "toAddressList": [
+            ]
+        },
+        "emailTemplateInformation": {
+            "emailTargetObjectId": "%GetContactsFromACReln:ACR:ContactId%",
+            "emailTemplateName": "Send_Star_Rating_Report_Template",
+            "saveAsActivity": false,
+            "whatId": "%GetContactsFromACReln:ACR:AccountId%"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "EmailAction2",
+        "show": null,
+        "staticDocList": [
+        ],
+        "useTemplate": true
+    },
+    "Type": "Email Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/StarRatingCalculation/Procedure/Email StarRatings"
+}

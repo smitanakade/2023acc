@@ -1,0 +1,600 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "RPId",
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem4",
+        "InputFieldName": "Reporting_Period__c",
+        "InputObjectName": "SRQI_CER__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "CER",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "ServID",
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem3",
+        "InputFieldName": "Service__c",
+        "InputObjectName": "SRQI_CER__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "CER",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": ">=",
+        "FilterValue": "CER:Service_Account__r.Association_Start_Date__c",
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom9757",
+        "InputFieldName": "Activity_Start_Date__c",
+        "InputObjectName": "SRQI_CEI__c",
+        "InputObjectQuerySequence": 2,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "CEI",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "CER:Id",
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem5",
+        "InputFieldName": "CER_Id__c",
+        "InputObjectName": "SRQI_CEI__c",
+        "InputObjectQuerySequence": 2,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "CEI",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "'Yes'",
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem7",
+        "InputFieldName": "Consent_Status__c",
+        "InputObjectName": "SRQI_CEI__c",
+        "InputObjectQuerySequence": 2,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "CEI",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "'true'",
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom9856",
+        "InputFieldName": "Active__c",
+        "InputObjectName": "SRQI_Exemption__c",
+        "InputObjectQuerySequence": 3,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Exempt",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "\"CER Exemption\"",
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom6793",
+        "InputFieldName": "RecordType.Name",
+        "InputObjectName": "SRQI_Exemption__c",
+        "InputObjectQuerySequence": 3,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Exempt",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "ServID",
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom2559",
+        "InputFieldName": "Service__c",
+        "InputObjectName": "SRQI_Exemption__c",
+        "InputObjectQuerySequence": 3,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Exempt",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "LIMIT",
+        "FilterValue": "1",
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom9130",
+        "InputObjectName": "SRQI_Exemption__c",
+        "InputObjectQuerySequence": 3,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Exempt",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(ISBLANK(CEI),0, LISTSIZE(CEI))",
+        "FormulaResultPath": "Listsize",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem6",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem11",
+        "InputFieldName": "CEI:Care_Need__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CEI:CareNeedResponse",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem13",
+        "InputFieldName": "CEI:Caring__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CEI:CaringResponse",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem14",
+        "InputFieldName": "CEI:Competent__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CEI:CompetentResponse",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem15",
+        "InputFieldName": "CEI:Explain__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CEI:ExplainResponse",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem16",
+        "InputFieldName": "CEI:Follow_Up__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CEI:FollowUpResponse",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem17",
+        "InputFieldName": "CEI:Food__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CEI:FoodResponse",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem18",
+        "InputFieldName": "CEI:Home__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CEI:HomeResponse",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem19",
+        "InputFieldName": "CEI:Independent__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CEI:IndependentResponse",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem20",
+        "InputFieldName": "CEI:Operation__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CEI:OperationResponse",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem8",
+        "InputFieldName": "CEI:Respect__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CEI:RespectResponse",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem9",
+        "InputFieldName": "CEI:Safety__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CEI:SafetyResponse",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem10",
+        "InputFieldName": "CEI:Voice__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CEI:VoiceResponse",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom9978",
+        "InputFieldName": "CER:Service__r.CER_Consent_Revoked__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CER:Consent",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom7700",
+        "InputFieldName": "Exempt:Exemption_Finish__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CER:Date",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom7314",
+        "InputFieldName": "CER:Service__r.CER_Exempt__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Boolean",
+        "OutputFieldName": "CER:Exempt",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom0jI9h0000000ADtEAMItem12",
+        "InputFieldName": "CER:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CER:Id",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom261",
+        "InputFieldName": "Exempt:Reason__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CER:Reason",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom4185",
+        "InputFieldName": "User",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "User:Id",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractServiceCEIsforRPCustom7947",
+        "InputFieldName": "Listsize",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractServiceCEIsforRP",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "listsize",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

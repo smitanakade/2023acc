@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "IsPostcodeValid",
+    "OmniProcessId": {
+        "Name": "Addresses",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Accounts/Update/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Address",
+        "OmniProcessId": {
+            "Name": "Addresses",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Accounts/Update/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Accounts/Update/English/Address",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Address",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF (%State_Physical% = 'ACT' & NUMBER(%PostCode_Physical%) >= 200 & NUMBER(%PostCode_Physical%) <=299, 'GOOD' ,IF (%State_Physical% = 'ACT' & NUMBER(%PostCode_Physical%) >= 2600 & NUMBER(%PostCode_Physical%) <=2619, 'GOOD' ,IF (%State_Physical% = 'ACT' & NUMBER(%PostCode_Physical%) >= 2900 & NUMBER(%PostCode_Physical%) <=2920, 'GOOD' ,IF (%State_Physical% = 'NSW' & NUMBER(%PostCode_Physical%) >= 1000 & NUMBER(%PostCode_Physical%) <=2599, 'GOOD' ,IF (%State_Physical% = 'NSW' & NUMBER(%PostCode_Physical%) >= 2620 & NUMBER(%PostCode_Physical%) <=2899, 'GOOD' ,IF (%State_Physical% = 'NSW' & NUMBER(%PostCode_Physical%) >= 2921 & NUMBER(%PostCode_Physical%) <=2999, 'GOOD' ,IF (%State_Physical% = 'VIC' & NUMBER(%PostCode_Physical%) >= 8000 & NUMBER(%PostCode_Physical%) <=8999, 'GOOD' ,IF (%State_Physical% = 'VIC' & NUMBER(%PostCode_Physical%) >= 3000 & NUMBER(%PostCode_Physical%) <=3999, 'GOOD' ,IF (%State_Physical% = 'TAS' & NUMBER(%PostCode_Physical%) >= 7000 & NUMBER(%PostCode_Physical%) <=7999, 'GOOD' ,IF (%State_Physical% = 'SA' & NUMBER(%PostCode_Physical%) >= 5000 & NUMBER(%PostCode_Physical%) <=5999, 'GOOD' ,IF (%State_Physical% = 'WA' & NUMBER(%PostCode_Physical%) >= 6000 & NUMBER(%PostCode_Physical%) <=6999, 'GOOD' ,IF (%State_Physical% = 'NT' & NUMBER(%PostCode_Physical%) >= 800 & NUMBER(%PostCode_Physical%) <=999, 'GOOD' ,IF (%State_Physical% = 'QLD' & NUMBER(%PostCode_Physical%) >= 9000 & NUMBER(%PostCode_Physical%) <=999, 'GOOD' ,IF (%State_Physical% = 'QLD' & NUMBER(%PostCode_Physical%) >= 4000 & NUMBER(%PostCode_Physical%) <=4999, 'GOOD' ,IF (%State_Physical% = 'QLD' & NUMBER(%PostCode_Physical%) >= 9000 & NUMBER(%PostCode_Physical%) <=9999,'GOOD','BAD')))))))))))))))",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "IsPostcodeValid",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Accounts/Update/English/IsPostcodeValid"
+}

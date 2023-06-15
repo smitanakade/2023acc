@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "SingleLine_Postal",
+    "OmniProcessId": {
+        "Name": "Addresses",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Accounts/Update/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "PostalAddressBlock",
+        "OmniProcessId": {
+            "Name": "Addresses",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Accounts/Update/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Accounts/Update/English/PostalAddressBlock",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "PostalAddressBlock",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataType": "Text",
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF(%LotStreetRadio_Postal% = \"Lot/Section Number\", \"LOT \" +  CASE(%StreetNumber_Postal%,UPPER), CASE(%StreetNumber_Postal%,UPPER)) + ' ' + CASE(%StreetName_Postal%,UPPER) + ' ' + IF(%StreetSuffix_Postal% = NULL, CASE(%StreetType_Postal%,UPPER),  CASE(%StreetType_Postal%,UPPER) + ' ' + CASE(%StreetSuffix_Postal%,UPPER)) + ', ' + IF(%UnitRadio_Postal% <> 'Not Applicable', %UnitRadio_Postal%  + ' ' + %Unit_Postal% + ' ', '') + IF(%LevelFloorRadio_Postal% <> 'Not Applicable', %LevelFloorRadio_Postal%  + ' ' + %LevelFloor_Postal% + ', ', '') + CASE(%SuburbOrTown_Postal%,UPPER)  + ' ' + %State_Postal% + ' ' + %PostCode_Postal%",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "SingleLine_Postal",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Accounts/Update/English/SingleLine_Postal"
+}

@@ -1,0 +1,65 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "NATSIFACServiceCreation_Post",
+    "OmniProcessId": {
+        "Name": "ServiceCreation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "NatsiServiceCondition",
+        "OmniProcessId": {
+            "Name": "ServiceCreation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Create/Procedure/NatsiServiceCondition",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "NatsiServiceCondition",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AccountId": "=%accountId%",
+            "AssociationStartDate": "=%NATSIFACServiceDetails:NATSIFACServiceInformation:NATSIFACAssociationStartDate1%",
+            "CareType": "=%NATSIFACServiceDetails:NATSIFACServiceInformation:NATSIFACServiceCareType%",
+            "EffectiveDate": "=%NATSIFACServiceDetails:NATSIFACServiceInformation:NATSIFACAssociationStartDate%",
+            "ProviderID": "=%accountId%",
+            "RecordType": "=\"Provider_to_Service_Read_Only\"",
+            "RecordTypeId": "=\"NATSIFAC_Service\"",
+            "Service_Name": "=%NATSIFACServiceDetails:NATSIFACServiceInformation:NATSIFACServiceName%",
+            "Status": "=\"Non-Operational\"",
+            "SubType": "=%NATSIFACServiceDetails:NATSIFACServiceInformation:NATSIFACServiceCareSubType%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ServiceCreation_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction6",
+        "responseJSONNode": "BusinessLicenseId",
+        "responseJSONPath": "BusinessLicense_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Create/Procedure/NATSIFACServiceCreation_Post"
+}

@@ -1,0 +1,42 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "PlaceByTargetGroup/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "a2KBm0000016jjRMAQ"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "AllotmentId": "{recordId}"
+            },
+            "ipMethod": "TargetGroup_TargetGroup",
+            "resultVar": "[\"Total\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "PlaceByTargetGroup_Flexible",
+    "Namespace": "",
+    "OmniUiCardKey": "PlaceByTargetGroup_Flexible/GPMS/4.0",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "PlaceByTargetGroup_Flexible.json",
+    "SampleDataSourceResponse": "{\"SplKey\":{\"Total\":0},\"TargetGroup\":{\"CareLevelNumber\":\"0\"},\"Total\":{\"SplKey\":{\"Total\":0},\"GeneralAccessSum\":0,\"SplKeySum\":0,\"CareLevel\":\"Multiple-Purpose Service\",\"NotSpecifiedSum\":0,\"CareType\":\"Flexible\"}}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 4,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/PlaceByTargetGroup_Flexible"
+}

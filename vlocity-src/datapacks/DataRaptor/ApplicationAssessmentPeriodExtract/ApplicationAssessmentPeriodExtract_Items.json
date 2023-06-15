@@ -1,0 +1,109 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "ApplicationId",
+        "GlobalKey": "ApplicationAssessmentPeriodExtract4476620539586291",
+        "InputFieldName": "Id",
+        "InputObjectName": "BusinessLicenseApplication",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ApplicationAssessmentPeriodExtract",
+        "OmniDataTransformationId": {
+            "Name": "ApplicationAssessmentPeriodExtract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ApplicationAssessmentPeriodExtract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Application",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "<>",
+        "FilterValue": "\"\"",
+        "GlobalKey": "ApplicationAssessmentPeriodExtractCustom5488",
+        "InputFieldName": "UnderFormalAssessmentDate__c",
+        "InputObjectName": "BusinessLicenseApplication",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ApplicationAssessmentPeriodExtract",
+        "OmniDataTransformationId": {
+            "Name": "ApplicationAssessmentPeriodExtract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ApplicationAssessmentPeriodExtract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Application",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ApplicationAssessmentPeriodExtractCustom3396",
+        "InputFieldName": "Application:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ApplicationAssessmentPeriodExtract",
+        "OmniDataTransformationId": {
+            "Name": "ApplicationAssessmentPeriodExtract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ApplicationAssessmentPeriodExtract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ApplicationAssessmentPeriodExtract045121363898930955",
+        "InputFieldName": "Application:NewStatus__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ApplicationAssessmentPeriodExtract",
+        "OmniDataTransformationId": {
+            "Name": "ApplicationAssessmentPeriodExtract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ApplicationAssessmentPeriodExtract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "String",
+        "OutputFieldName": "NewStatus__c",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ApplicationAssessmentPeriodExtract02197480182709377",
+        "InputFieldName": "Application:UnderFormalAssessmentDaysCalculation__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ApplicationAssessmentPeriodExtract",
+        "OmniDataTransformationId": {
+            "Name": "ApplicationAssessmentPeriodExtract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ApplicationAssessmentPeriodExtract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "String",
+        "OutputFieldName": "UnderFormalAssessmentDaysCalculation__c",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

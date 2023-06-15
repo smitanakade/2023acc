@@ -1,0 +1,79 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "AccountPhysicalAddressOnly_Typeahead",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "PHYSICAL_ONLY",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/PHYSICAL_ONLY",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "PHYSICAL_ONLY",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressEffectiveDate": "=IF(ISNOTBLANK(%PhysicalAddresses:Address:EffectiveDateFormula%, true), %PhysicalAddresses:Address:EffectiveDateFormula%, TODAY())",
+            "AddressId": "=%concatAddress:dupCheckResult:recordId%",
+            "AddressType": "=%LocationRecordType%",
+            "BuildingName": "=%Physical_Candidates:add_bldg%",
+            "City": "=%Physical_Candidates:nbrhd%",
+            "Country": "=\"Australia\"",
+            "CurrentAccountId": "=%CurrentRecordId%",
+            "Latitude": "=%Physical_Candidates:latitude%",
+            "LevelNumber": "=%Physical_Candidates:level_name%",
+            "LevelType": "=%Physical_Candidates:level_type%",
+            "LocationType": "=\"Physical\"",
+            "Longitude": "=%Physical_Candidates:longitude%",
+            "LotNumber": "=%Physical_Candidates:place_name%",
+            "Postcode": "=%Physical_Candidates:postal%",
+            "State": "=%Physical_Candidates:region%",
+            "Street": "=%Physical_Candidates:st_name%",
+            "StreetNumber": "=%Physical_Candidates:add_num%",
+            "StreetSuffixType": "=%Physical_Candidates:st_dir%",
+            "StreetTypeDescription": "=%Physical_Candidates:st_type%",
+            "UniqueKey": "=%concatAddress:dupCheckResult:concatAddress%",
+            "UnitNumber": "=%Physical_Candidates:unit_name%",
+            "UnitType": "=%Physical_Candidates:unit_type%",
+            "ValidatedByCGIS": "=\"Yes\"",
+            "gnaf_pid": "=%Physical_Candidates:gnaf_pid%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "LocationAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "%PhysicalAddresses:Address:AddressEntry%  = \"false\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "PhysicalAddressId",
+        "responseJSONPath": "Address__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/AccountPhysicalAddressOnly_Typeahead"
+}

@@ -1,0 +1,44 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "ApplicationReconsiderationDecisionLog/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 2,
+                "name": "recordId",
+                "val": "a1t9r000000CVHlAAO"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "ApexRemote",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "ApplicationId": "{recordId}",
+                "Type": "applicationAATReview"
+            },
+            "remoteClass": "GPMSApplicationDecisionLog",
+            "remoteMethod": "DecisionLog",
+            "resultVar": "result",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "ApplicationAATReviewDecisionLog",
+    "Namespace": "",
+    "OmniUiCardKey": "ApplicationAATReviewDecisionLog/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "ApplicationAATReviewDecisionLog.json",
+    "SampleDataSourceResponse": "{\"errorCode\":\"INVOKE-200\",\"error\":\"OK\"}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/ApplicationAATReviewDecisionLog"
+}

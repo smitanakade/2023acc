@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "IncorporationIDType_formula",
+    "OmniProcessId": {
+        "Name": "NATSIFACProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/NATSIFACProvider/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "NATSIFACProvider",
+        "OmniProcessId": {
+            "Name": "NATSIFACProvider",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/NATSIFACProvider/Create/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/NATSIFACProvider/Create/English/NATSIFACProvider",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "NATSIFACProvider",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 6,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF (%SearchExistingACO_NATSIFAC:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationIDType% = null, %ACODetail:IncorporationIDType%, %SearchExistingACO_NATSIFAC:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationIDType%)",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "IncorporationIDType_formula",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/NATSIFACProvider/Create/English/IncorporationIDType_formula"
+}

@@ -1,0 +1,265 @@
+{
+    "dataSource": {
+        "contextVariables": [
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "Custom",
+        "value": {
+            "body": "    {\n      \"AddressState\": \"VIC\",\n      \"RACSID\": \"6323425\",\n      \"Id\": \"0cEBm0000000sMzMAI\",\n      \"ProvisionalPlaces\": 43,\n      \"ProvisionalPlacesFormula\": \"Yes\",\n      \"ACMPSNotified\": \"Yes\",\n      \"Name\": \"Squad C Residential B1\",\n      \"AccreditedStatus\": \"Yes\",\n      \"IntegrationID\": \"SRV-16954\",\n      \"CertifiedStatus\": \"Yes\",\n      \"FullAddress\": \"33 ERANG DRIVE, MOUNT ELIZA, VIC, 3930\",\n      \"CareType\": \"Residential\",\n      \"DateFirstOpened\": \"2023-03-15\",\n      \"Status\": \"Operational\"\n    }",
+            "dsDelay": "",
+            "resultVar": ""
+        }
+    },
+    "enableLwc": true,
+    "events": [
+        {
+            "actionList": [
+                {
+                    "actionIndex": 0,
+                    "card": "{card}",
+                    "draggable": false,
+                    "isOpen": true,
+                    "key": "1679374418745-92f7agy9r",
+                    "label": "Action",
+                    "stateAction": {
+                        "Web Page": {
+                            "targetName": "/apex"
+                        },
+                        "displayName": "Action",
+                        "id": "flex-action-1679626907536",
+                        "message": "{\"type\":\"Custom\",\"value\":{\"dsDelay\":\"\",\"body\":\"    {\\n      \\\"AddressState\\\": \\\"VIC\\\",\\n      \\\"RACSID\\\": \\\"6323425\\\",\\n      \\\"Id\\\": \\\"0cEBm0000000sMzMAI\\\",\\n      \\\"ProvisionalPlaces\\\": 43,\\n      \\\"ProvisionalPlacesFormula\\\": \\\"Yes\\\",\\n      \\\"ACMPSNotified\\\": \\\"Yes\\\",\\n      \\\"Name\\\": \\\"Squad C Residential B1\\\",\\n      \\\"AccreditedStatus\\\": \\\"Yes\\\",\\n      \\\"IntegrationID\\\": \\\"SRV-16954\\\",\\n      \\\"CertifiedStatus\\\": \\\"Yes\\\",\\n      \\\"FullAddress\\\": \\\"33 ERANG DRIVE, MOUNT ELIZA, VIC, 3930\\\",\\n      \\\"CareType\\\": \\\"Residential\\\",\\n      \\\"DateFirstOpened\\\": \\\"2023-03-15\\\",\\n      \\\"Status\\\": \\\"Operational\\\"\\n    }\",\"resultVar\":\"\"},\"orderBy\":{\"name\":\"\",\"isReverse\":\"\"},\"contextVariables\":[]}",
+                        "openUrlIn": "Current Window",
+                        "targetType": "Web Page",
+                        "type": "DataAction",
+                        "vlocityIcon": "standard-default"
+                    }
+                }
+            ],
+            "channelname": "CombineSummary",
+            "displayLabel": "CombineSummary:data",
+            "element": "action",
+            "eventLabel": "pubsub",
+            "eventname": "data",
+            "eventtype": "pubsub",
+            "key": "event-0",
+            "recordIndex": "0",
+            "showSpinner": "false"
+        }
+    ],
+    "isFlex": true,
+    "isRepeatable": false,
+    "lwc": {
+        "DeveloperName": "cfCombineSummary_1_GPMS",
+        "Id": "0RbBm00000031CTKAY",
+        "ManageableState": "unmanaged",
+        "MasterLabel": "cfCombineSummary_1_GPMS",
+        "NamespacePrefix": "c"
+    },
+    "selectableMode": "Multi",
+    "states": [
+        {
+            "actions": [
+            ],
+            "childCards": [
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "flexDatatable",
+                            "elementLabel": "Datatable-0",
+                            "name": "Datatable",
+                            "property": {
+                                "card": "{card}",
+                                "cellLevelEdit": true,
+                                "columns": [
+                                    {
+                                        "fieldName": "Name",
+                                        "label": "Service Name",
+                                        "searchable": true,
+                                        "sortable": "false",
+                                        "visible": "true"
+                                    },
+                                    {
+                                        "fieldName": "IntegrationID",
+                                        "label": "Integration ID",
+                                        "searchable": true,
+                                        "sortable": "false",
+                                        "visible": "true"
+                                    },
+                                    {
+                                        "fieldName": "RACSID",
+                                        "label": "RACS ID",
+                                        "searchable": true,
+                                        "sortable": "false",
+                                        "type": "text",
+                                        "visible": "true"
+                                    },
+                                    {
+                                        "fieldName": "ACMPSNotified",
+                                        "label": "ACMPS Notified",
+                                        "searchable": true,
+                                        "sortable": "false",
+                                        "visible": "true"
+                                    },
+                                    {
+                                        "fieldName": "Status",
+                                        "label": "Status",
+                                        "searchable": true,
+                                        "sortable": "false",
+                                        "visible": "true"
+                                    },
+                                    {
+                                        "fieldName": "DateFirstOpened",
+                                        "format": "D/M/YYYY",
+                                        "label": "Date First Opened",
+                                        "searchable": true,
+                                        "sortable": "false",
+                                        "type": "date",
+                                        "visible": "true"
+                                    },
+                                    {
+                                        "fieldName": "ProvisionalPlacesFormula",
+                                        "label": "Provisional Places",
+                                        "searchable": true,
+                                        "sortable": "false",
+                                        "visible": "true"
+                                    },
+                                    {
+                                        "fieldName": "AccreditedStatus",
+                                        "label": "Accredited",
+                                        "searchable": true,
+                                        "sortable": "false",
+                                        "visible": "true"
+                                    },
+                                    {
+                                        "fieldName": "CertifiedStatus",
+                                        "label": "Certified",
+                                        "searchable": true,
+                                        "sortable": "false",
+                                        "visible": "true"
+                                    },
+                                    {
+                                        "fieldName": "FullAddress",
+                                        "label": "Address",
+                                        "searchable": true,
+                                        "sortable": "false",
+                                        "visible": "true"
+                                    }
+                                ],
+                                "groupOrder": "asc",
+                                "issearchavailable": false,
+                                "issortavailable": true,
+                                "pagelimit": 3,
+                                "record": "{record}",
+                                "records": "{records}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Active",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "class": "slds-card slds-p-around_x-small slds-m-bottom_x-small",
+                "container": {
+                    "class": "slds-card"
+                },
+                "margin": [
+                    {
+                        "size": "none",
+                        "type": "around"
+                    }
+                ],
+                "padding": [
+                    {
+                        "size": "x-small",
+                        "type": "around"
+                    }
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12"
+            }
+        }
+    ],
+    "theme": "slds",
+    "title": "CombineSummary",
+    "xmlJson": [
+        {
+            "@attributes": {
+                "targets": "lightning__AppPage"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "name": "recordId",
+                        "type": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "@attributes": {
+                "targets": "lightning__RecordPage"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                }
+            ]
+        }
+    ],
+    "xmlObject": {
+        "targetConfigs": "PHRhcmdldENvbmZpZyB0YXJnZXRzPSJsaWdodG5pbmdfX0FwcFBhZ2UiPgogICAgICAgICAgICAgICAgICAgICAgPHByb3BlcnR5IG5hbWU9ImRlYnVnIiB0eXBlPSJCb29sZWFuIi8+CiAgICAgICAgICAgICAgICAgICAgICA8cHJvcGVydHkgbmFtZT0icmVjb3JkSWQiIHR5cGU9IlN0cmluZyIvPgogICAgICAgICAgICAgICAgICA8L3RhcmdldENvbmZpZz4KICAgICAgICAgICAgICAgICAgPHRhcmdldENvbmZpZyB0YXJnZXRzPSJsaWdodG5pbmdfX1JlY29yZFBhZ2UiPgogICAgICAgICAgICAgICAgICAgICAgPHByb3BlcnR5IG5hbWU9ImRlYnVnIiB0eXBlPSJCb29sZWFuIi8+CiAgICAgICAgICAgICAgICAgIDwvdGFyZ2V0Q29uZmlnPg==",
+        "targets": {
+            "target": [
+                "lightning__RecordPage",
+                "lightning__AppPage",
+                "lightning__HomePage"
+            ]
+        }
+    }
+}

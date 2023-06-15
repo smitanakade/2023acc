@@ -1,0 +1,63 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RecordReqforReconsideration",
+    "OmniProcessId": {
+        "Name": "PlaceExtendPA",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RecordRequestforReconsideration",
+        "OmniProcessId": {
+            "Name": "PlaceExtendPA",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure/RecordRequestforReconsideration",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RecordRequestforReconsideration",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Comments": "=%ExtractPA:Comments%",
+            "DateofRequest": "=%ExtractPA:DateofRequest%",
+            "DecisionDueDate": "=%ExtractPA:DecisionDueDateLoad%",
+            "EventId": "=%EventId%",
+            "LinktoDocument": "=%ExtractPA:LinktoDocument%",
+            "PreviousPage": "=%PreviousPage%",
+            "RecordType": "=\"Record_Request_for_Reconsideration_Extend_PA\"",
+            "RequestType": "=%ExtractPA:RequestType%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ExtendPA_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction3",
+        "responseJSONNode": "RecordReqReconsiderId",
+        "responseJSONPath": "GPMS_Extend_PA_Period_Details__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure/RecordReqforReconsideration"
+}

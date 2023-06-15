@@ -1,0 +1,40 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetUserInput",
+    "OmniProcessId": {
+        "Name": "Create Exemption",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Exemption/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "Input": {
+                "exemptionApprovalDetails": "%Step2:ExemptionDetails:exemptionApprovalDetails%",
+                "exemptionApprover": "%Step2:ExemptionDetails:exemptionApprover%",
+                "exemptionEndDate": "%Step2:ExemptionDetails:exemptionEndDate%",
+                "exemptionStartDate": "%Step2:ExemptionDetails:exemptionStartDate%",
+                "exemptionType": "%Step2:SelectDomain:SetDomain%",
+                "serviceID": "=IF(%ContextId% == NULL, %Step2:SelectService:SetServ-Block:Id%, %ContextId%)"
+            }
+        },
+        "label": "SetUserInput",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Exemption/Create/English/SetUserInput"
+}

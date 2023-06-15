@@ -1,0 +1,69 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RecordBringOnlineDecision",
+    "OmniProcessId": {
+        "Name": "Revoke",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesREvoke/PlacesRevoke/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RecordDecision",
+        "OmniProcessId": {
+            "Name": "Revoke",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesREvoke/PlacesRevoke/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesREvoke/PlacesRevoke/Procedure/RecordDecision",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RecordDecision",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Comments": "=%Revoke:Comments%",
+            "Decision": "=%Revoke:Decision2%",
+            "DecisionDate": "=%Revoke:DecisionDate1%",
+            "DelegateName": "=%Revoke:DelegateName%",
+            "DelegatePosition": "=%Revoke:DelegatePosition%",
+            "EventId": "=%EventId%",
+            "IsActing": "=%Revoke:IsActing%",
+            "LatestSubmissionReceivedDate": "=%Revoke:LatestSubmissionReceivedDate%",
+            "LinktoDocument": "=%Revoke:LinktoDocument%",
+            "NoticeOfDecisionSent": "=%Revoke:NoticeOfDecisionSent%",
+            "PreviousPage": "=\"Record Decision\"",
+            "RecordType": "=\"Record_Decision_Revoke\"",
+            "RevocationEffectiveDate": "=%Revoke:RevocationEffectiveDate%",
+            "SubmissionComments": "=%Revoke:SubmissionComments%",
+            "SubmissionReceivedPriorToDueByDate": "=%Revoke:SubmissionReceivedPriorToDueByDate%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Revoke_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction3",
+        "responseJSONNode": "RecordId",
+        "responseJSONPath": "GPMS_Revocation_History__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesREvoke/PlacesRevoke/Procedure/RecordBringOnlineDecision"
+}

@@ -1,0 +1,34 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "EmbeddedOmniScriptKey": "NewVariation|Condition|English",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "VariationNewAllotmentCondition",
+    "OmniProcessId": {
+        "Name": "PlacesEventsTransferCreate",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesEventsTransfer/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "Language": "English",
+        "Sub Type": "Condition",
+        "Type": "NewVariation",
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "",
+                        "field": "VariationAllotmentId"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "OmniScript",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesEventsTransfer/Create/English/VariationNewAllotmentCondition"
+}

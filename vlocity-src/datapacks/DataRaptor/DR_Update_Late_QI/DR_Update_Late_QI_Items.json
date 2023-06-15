@@ -1,0 +1,260 @@
+[
+    {
+        "FormulaExpression": "'false'",
+        "FormulaResultPath": "IPRequired",
+        "FormulaSequence": 3,
+        "GlobalKey": "DR_Update_Late_QICustom6092",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(QIExempt == true, 'No Data Available-Exemption', IF(Score == \"1\", \"Well Below Average\", IF(Score == \"2\", \"Below Average\", IF(Score = \"3\",\"Average\", IF(Score = \"4\",\"Above Average\", IF(Score = \"5\",\"Well Above Average\", \"No Data Available\")))))",
+        "FormulaResultPath": "Description",
+        "FormulaSequence": 5,
+        "GlobalKey": "DR_Update_Late_QICustom2293",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(QIExempt == true, \"0\", IF(Status == 'Late Submission' || Status == 'Not Submitted', 1, %Score%)",
+        "FormulaResultPath": "Score",
+        "FormulaSequence": 4,
+        "GlobalKey": "DR_Update_Late_QICustom6210",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(QIExempt == true, true, false)",
+        "FormulaResultPath": "RatingExempt",
+        "FormulaSequence": 2,
+        "GlobalKey": "DR_Update_Late_QICustom5439",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "NOW()",
+        "FormulaResultPath": "CalculationDate",
+        "FormulaSequence": 1,
+        "GlobalKey": "DR_Update_Late_QICustom236",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DR_Update_Late_QICustom358",
+        "InputFieldName": "IPRequired",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "IPRequired__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DR_Update_Late_QICustom0jI9h0000000EvpEAEItem1",
+        "InputFieldName": "RecordId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "DR_Update_Late_QICustom0jI9h0000000EvpEAEItem2",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DR_Update_Late_QICustom0jI9h0000000EvpEAEItem0",
+        "InputFieldName": "Description",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Quality_Indicator_Rating_Label__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DR_Update_Late_QICustom0jI9h0000000EvpEAEItem3",
+        "InputFieldName": "Score",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Quality_Indicator_Rating__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DR_Update_Late_QICustom935",
+        "InputFieldName": "CalculationDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Calc_Date__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DR_Update_Late_QICustom2555",
+        "InputFieldName": "RatingExempt",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Exemption_Granted__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DR_Update_Late_QICustom2648",
+        "InputFieldName": "ExemptReason",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Late_QI",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Late_QI",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Late_QI",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Exemption_Reason__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

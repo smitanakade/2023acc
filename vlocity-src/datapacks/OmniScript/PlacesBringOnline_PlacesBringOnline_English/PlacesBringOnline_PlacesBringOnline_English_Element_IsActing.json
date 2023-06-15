@@ -1,0 +1,70 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "IsActing",
+    "OmniProcessId": {
+        "Name": "PlacesBringOnline",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesBringOnline/PlacesBringOnline/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "BringOnline",
+        "OmniProcessId": {
+            "Name": "PlacesBringOnline",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesBringOnline/PlacesBringOnline/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesBringOnline/PlacesBringOnline/English/BringOnline",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "BringOnline",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "checkLabel": "Check box if Acting",
+        "conditionType": "Hide if False",
+        "controlWidth": 4,
+        "defaultValue": false,
+        "disOnTplt": false,
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "label": "Checkbox1",
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Record Decision",
+                        "field": "PerformAction:Action"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Withdraw",
+                        "field": "PerformAction:Action"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Record a Decision on Request for Reconsideration",
+                        "field": "PerformAction:Action"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "Checkbox",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesBringOnline/PlacesBringOnline/English/IsActing"
+}

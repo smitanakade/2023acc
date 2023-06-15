@@ -1,0 +1,64 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "MakeCMList",
+    "OmniProcessId": {
+        "Name": "Calculate Care Minutes",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/CareMinutes/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CalculateCM",
+        "OmniProcessId": {
+            "Name": "Calculate Care Minutes",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/CareMinutes/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/CareMinutes/Procedure/CalculateCM",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CalculateCM",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "CMData": {
+                "AvgRNCM": "%AvgRNCM%",
+                "AvgTotalCM": "%AvgTotalCM%",
+                "CMID": "%CMID%",
+                "IsLateSub": "%IsLateSub%",
+                "ServID": "%ServID%",
+                "TgtRNCM": "%TgtRNCM%",
+                "TgtTotalCM": "%TgtTotalCM%"
+            }
+        },
+        "additionalOutput": {
+        },
+        "bundle": "SRQI_DR_TransformCMSummtoList",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "ignoreCache": false,
+        "label": "DataRaptorTransformAction3",
+        "responseJSONNode": "CMData",
+        "responseJSONPath": "CMData",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Transform Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/CareMinutes/Procedure/MakeCMList"
+}

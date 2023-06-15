@@ -1,0 +1,130 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "UnitRadio_Physical",
+    "OmniProcessId": {
+        "Name": "Address_Services",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Address",
+        "OmniProcessId": {
+            "Name": "Address_Services",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/Address",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Address",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "controllingField": {
+            "element": "",
+            "source": "",
+            "type": ""
+        },
+        "defaultValue": "Not Applicable",
+        "disOnTplt": false,
+        "enableCaption": true,
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "horizontalMode": true,
+        "imageCountInRow": 3,
+        "label": "",
+        "optionHeight": 100,
+        "optionSource": {
+            "source": "",
+            "type": ""
+        },
+        "optionWidth": 100,
+        "options": [
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "UNIT",
+                "value": "Unit"
+            },
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "SUITE",
+                "value": "Suite"
+            },
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "APARTMENT NUMBER",
+                "value": "Apartment Number"
+            },
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "SHOP",
+                "value": "Shop"
+            },
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "OFFICE",
+                "value": "Office"
+            },
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "FLAT",
+                "value": "Flat"
+            },
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "ROOM",
+                "value": "Room"
+            },
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "Unknown",
+                "value": "Unknown"
+            },
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "Not Applicable",
+                "value": "Not Applicable"
+            }
+        ],
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "AddressEntry_Dummy"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "Radio",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/UnitRadio_Physical"
+}

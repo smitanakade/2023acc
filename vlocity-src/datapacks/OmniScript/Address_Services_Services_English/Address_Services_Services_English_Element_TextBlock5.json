@@ -1,0 +1,56 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "TextBlock5",
+    "OmniProcessId": {
+        "Name": "Address_Services",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "SelectAddress",
+        "OmniProcessId": {
+            "Name": "Address_Services",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/SelectAddress",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "SelectAddress",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "TextBlock1",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "No",
+                        "field": "SelectAddress:CGISAddress"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "ServiceAddresses:Address:AddressEntry_Dummy"
+                    }
+                ]
+            }
+        },
+        "text": "<div>\n<h3><em><strong>Use Unvalidated Address</strong></em></h3>\n<h3><em>%BuildingNameFormula%</em></h3>\n<h3><strong>%ServiceAddresses:Address:SingleLine_Physical%</strong></h3>\n</div>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/TextBlock5"
+}

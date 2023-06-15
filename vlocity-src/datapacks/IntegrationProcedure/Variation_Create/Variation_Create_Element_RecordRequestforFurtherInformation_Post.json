@@ -1,0 +1,62 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RecordRequestforFurtherInformation_Post",
+    "OmniProcessId": {
+        "Name": "Variation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RecordRequestforFurtherInformationStep",
+        "OmniProcessId": {
+            "Name": "Variation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/Create/Procedure/RecordRequestforFurtherInformationStep",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RecordRequestforFurtherInformationStep",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Comments": "=%RecordRequestforFurtherInformationStep:CommentsFurtherInformation%",
+            "DateOfRequest": "=%RecordRequestforFurtherInformationStep:DateOfRequestFurtherInformation%",
+            "DateRequired": "=%RecordRequestforFurtherInformationStep:DateRequired%",
+            "EventId": "=%EventId%",
+            "LinkToDocument": "=%RecordRequestforFurtherInformationStep:LinkDocumentsFurtherInformation%",
+            "RecordType": "=\"Record_Request_For_Further_Information\"",
+            "SummaryOfRequest": "=%RecordRequestforFurtherInformationStep:SummaryofRequestFurtherInformation%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Variation_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "PerformAction:Action = \"Record Request for Further Information\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "VariationId",
+        "responseJSONPath": "GPMS_Variation_History__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/Create/Procedure/RecordRequestforFurtherInformation_Post"
+}

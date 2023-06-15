@@ -1,0 +1,35 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "SVType",
+    "OmniProcessId": {
+        "Name": "QFR Viability Questions - Residential Care Form - Provider - Validation Errors",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/ACFR/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "ResiVia_QA_Outcome": "=IF(%GetFormData_DR:ResidentialViabilityandPrudentialReporting:QA_Outcome__c%==\"Re-Issue\", true, false)",
+            "Type": "Residential Viability and Prudential Reporting"
+        },
+        "label": "Get Type",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/ACFR/English/SVType"
+}

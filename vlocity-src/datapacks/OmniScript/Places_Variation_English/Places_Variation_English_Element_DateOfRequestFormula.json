@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DateOfRequestFormula",
+    "OmniProcessId": {
+        "Name": "PlacesVariation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Places/Variation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RecordRequestforFurtherInformationStep",
+        "OmniProcessId": {
+            "Name": "PlacesVariation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Places/Variation/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Places/Variation/English/RecordRequestforFurtherInformationStep",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RecordRequestforFurtherInformationStep",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataType": "Date",
+        "dateFormat": "d/M/yyyy",
+        "disOnTplt": false,
+        "expression": "YEAR(MOMENT(%DateOfRequestFurtherInformation%)) + '-' + MONTH(MOMENT(%DateOfRequestFurtherInformation%)) + '-' + DAYOFMONTH(MOMENT(%DateOfRequestFurtherInformation%))",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "DateOfRequestFormula",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Places/Variation/English/DateOfRequestFormula"
+}

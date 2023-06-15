@@ -1,0 +1,264 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "EventId",
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom2364",
+        "InputFieldName": "Event__c",
+        "InputObjectName": "Places_Allotment__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Place",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": ">",
+        "FilterValue": "\"0\"",
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom5201",
+        "InputFieldName": "GPMS_Number_of_Remaining__c",
+        "InputObjectName": "Places_Allotment__c",
+        "InputObjectQuerySequence": 2,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "ParentPlace",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "Place:Parent_Packet__c",
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom3876",
+        "InputFieldName": "Id",
+        "InputObjectName": "Places_Allotment__c",
+        "InputObjectQuerySequence": 2,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "ParentPlace",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom3114",
+        "InputFieldName": "ParentPlace:Allotment__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ParentPlace:Allotment",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom6216",
+        "InputFieldName": "ParentPlace:Care_Level__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ParentPlace:CareLevel",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom1637",
+        "InputFieldName": "ParentPlace:Care_Setting__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ParentPlace:CareSetting",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom8722",
+        "InputFieldName": "ParentPlace:Care_Setting_Effective_Date__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ParentPlace:CareSettingEffectiveDate",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom5197",
+        "InputFieldName": "ParentPlace:Care_Type__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ParentPlace:CareType",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom1682",
+        "InputFieldName": "ParentPlace:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ParentPlace:Id",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom3843",
+        "InputFieldName": "ParentPlace:Number_of_Places__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ParentPlace:NumberOfPlaces",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom1328",
+        "InputFieldName": "ParentPlace:GPMS_Number_of_Remaining__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ParentPlace:NumberOfRemaining",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom4993",
+        "InputFieldName": "ParentPlace:Status_of_Places__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ParentPlace:StatusOfPlaces",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ActiveTransferEvent_ExtractCustom5478",
+        "InputFieldName": "ParentPlace:Status_Reason__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ActiveTransferEvent_Extract",
+        "OmniDataTransformationId": {
+            "Name": "ActiveTransferEvent_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ActiveTransferEvent_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ParentPlace:StatusReason",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

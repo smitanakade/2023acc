@@ -1,0 +1,49 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetAddValues",
+    "OmniProcessId": {
+        "Name": "Address_Services",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "Action": "=%Action1%",
+            "AddressRecordType": "=IF (%Action1% == \"CreateMandatoryAddresses\" && %PhysicalAddressCount1% == 0, \"Physical\", %AddressType1%)",
+            "AddressRecordType2": "=%AddressType2%",
+            "AddressType": "%AddressType1%",
+            "CareType": "=%CareType1%",
+            "CurrentDateText": "=YEAR(TODAY())+\"-\"+MONTH(TODAY())+\"-\"+DAYOFMONTH(TODAY())",
+            "CurrentRecordId": "=%CurrentRecordId1%",
+            "LocationId": "=%LocationId1%",
+            "LocationRecordType": "=%RecordType1%",
+            "MaxAdditionalCampus": "=%MaxAdditionalCampus1%",
+            "PhysicalAddressCount": "=%PhysicalAddressCount1%",
+            "PostalAddressCount": "=%PostalAddressCount1%",
+            "ServiceType": "=%ServiceType1%",
+            "Type1": "=\"Service\"",
+            "Type2": "=\"Physical\"",
+            "UseForPostal": "=\"false\""
+        },
+        "label": "SetAddressValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/SetAddValues"
+}

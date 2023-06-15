@@ -1,0 +1,39 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "EmbeddedOmniScriptKey": "Variation|SDA|English",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "VariationSDA",
+    "OmniProcessId": {
+        "Name": "PlacesEventsTransferCreate",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesEventsTransfer/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "Language": "English",
+        "Sub Type": "SDA",
+        "Type": "Variation",
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Yes",
+                        "field": "ChangeService"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Flexible",
+                        "field": "ServiceCareType"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "OmniScript",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesEventsTransfer/Create/English/VariationSDA"
+}

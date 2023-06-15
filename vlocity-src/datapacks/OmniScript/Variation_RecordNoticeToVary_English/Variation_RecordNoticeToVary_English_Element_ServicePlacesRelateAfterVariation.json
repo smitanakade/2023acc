@@ -1,0 +1,117 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ServicePlacesRelateAfterVariation",
+    "OmniProcessId": {
+        "Name": "Variation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/RecordNoticeToVary/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "EnterTheDetailsServiceOrLocation",
+        "OmniProcessId": {
+            "Name": "Variation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/RecordNoticeToVary/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/RecordNoticeToVary/English/EnterTheDetailsServiceOrLocation",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "EnterTheDetailsServiceOrLocation",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "clearValue": true,
+        "conditionType": "Hide if False",
+        "controlWidth": 7,
+        "dataSource": {
+            "mapItems": {
+                "inputParameters": [
+                    {
+                        "element": "ServiceAccountId",
+                        "inputParam": "AccountId"
+                    },
+                    {
+                        "element": "CareType",
+                        "inputParam": "CareType"
+                    },
+                    {
+                        "element": "ServiceId",
+                        "inputParam": "ServiceId"
+                    }
+                ],
+                "phase1MapItems": [
+                    {
+                        "DomainObjectFieldAPIName__c": "Service",
+                        "FilterOperator__c": "=",
+                        "FilterValue__c": "AccountId",
+                        "InterfaceFieldAPIName__c": "AccountId",
+                        "InterfaceObjectLookupOrder__c": 1,
+                        "InterfaceObjectName__c": "BusinessLicense"
+                    },
+                    {
+                        "DomainObjectFieldAPIName__c": "Service",
+                        "FilterOperator__c": "=",
+                        "FilterValue__c": "CareType",
+                        "InterfaceFieldAPIName__c": "Care_Type__c",
+                        "InterfaceObjectLookupOrder__c": 1,
+                        "InterfaceObjectName__c": "BusinessLicense"
+                    },
+                    {
+                        "DomainObjectFieldAPIName__c": "Service",
+                        "FilterOperator__c": "<>",
+                        "FilterValue__c": "ServiceId",
+                        "InterfaceFieldAPIName__c": "Id",
+                        "InterfaceObjectLookupOrder__c": 1,
+                        "InterfaceObjectName__c": "BusinessLicense"
+                    }
+                ],
+                "phase2MapItems": [
+                    {
+                        "DomainObjectAPIName__c": "JSON",
+                        "DomainObjectCreationOrder__c": 1,
+                        "DomainObjectFieldAPIName__c": "name",
+                        "InterfaceFieldAPIName__c": "Service:Id"
+                    },
+                    {
+                        "DomainObjectAPIName__c": "JSON",
+                        "DomainObjectCreationOrder__c": 1,
+                        "DomainObjectFieldAPIName__c": "value",
+                        "InterfaceFieldAPIName__c": "Service:Name"
+                    }
+                ]
+            },
+            "type": "SObject"
+        },
+        "defaultValue": null,
+        "disOnTplt": false,
+        "errorMessage": {
+            "custom": [
+            ],
+            "default": null
+        },
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "inputWidth": 12,
+        "label": "Service and location to which the places will relate after the variation",
+        "placeholder": "",
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": false,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Lookup",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/RecordNoticeToVary/English/ServicePlacesRelateAfterVariation"
+}

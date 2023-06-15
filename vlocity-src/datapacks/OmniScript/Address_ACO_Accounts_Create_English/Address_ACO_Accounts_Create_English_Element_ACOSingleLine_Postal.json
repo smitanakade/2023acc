@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "ACOSingleLine_Postal",
+    "OmniProcessId": {
+        "Name": "Aged Care Addresses",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_ACO_Accounts/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ACOPostalAddressBlock",
+        "OmniProcessId": {
+            "Name": "Aged Care Addresses",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_ACO_Accounts/Create/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_ACO_Accounts/Create/English/ACOPostalAddressBlock",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ACOPostalAddressBlock",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataType": "Text",
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF(%ACOLotStreetRadio_Postal% = \"Lot/Section Number\", \"LOT \" +  CASE(%ACOStreetNumber_Postal%,UPPER), CASE(%ACOStreetNumber_Postal%,UPPER)) + ' ' + CASE(%ACOStreetName_Postal%,UPPER) + ' ' + IF(%ACOStreetSuffix_Postal% = NULL, CASE(%ACOStreetType_Postal%,UPPER),  CASE(%ACOStreetType_Postal%,UPPER) + ' ' + CASE(%ACOStreetSuffix_Postal%,UPPER)) + ', ' + IF(%ACOUnitRadio_Postal% <> 'Not Applicable', %ACOUnitRadio_Postal%  + ' ' + %ACOUnit_Postal% + ' ', '') + IF(%ACOLevelFloorRadio_Postal% <> 'Not Applicable', %ACOLevelFloorRadio_Postal%  + ' ' + %ACOLevelFloor_Postal% + ', ', '') + CASE(%ACOSuburbOrTown_Postal%,UPPER)  + ' ' + %ACOState_Postal% + ' ' + %ACOPostCode_Postal%",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "SingleLine_Postal",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_ACO_Accounts/Create/English/ACOSingleLine_Postal"
+}

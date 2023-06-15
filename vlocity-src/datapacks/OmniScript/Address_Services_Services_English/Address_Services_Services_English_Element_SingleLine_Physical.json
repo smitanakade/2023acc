@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SingleLine_Physical",
+    "OmniProcessId": {
+        "Name": "Address_Services",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Address",
+        "OmniProcessId": {
+            "Name": "Address_Services",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/Address",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Address",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataType": "Text",
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF(%ServiceAddresses:Address:LotStreetRadio_Physical% = \"Lot/Section Number\", \"LOT \" +  CASE(%ServiceAddresses:Address:StreetNumber_Physical%,UPPER), CASE(%ServiceAddresses:Address:StreetNumber_Physical%,UPPER)) + ' ' + CASE(%ServiceAddresses:Address:StreetName_Physical%,UPPER) + ' ' + IF(%ServiceAddresses:Address:StreetSuffix_Physical% = NULL, CASE(%ServiceAddresses:Address:StreetType_Physical%,UPPER),  CASE(%ServiceAddresses:Address:StreetType_Physical%,UPPER) + ' ' + CASE(%ServiceAddresses:Address:StreetSuffix_Physical%,UPPER)) + ', ' + IF(%ServiceAddresses:Address:UnitRadio_Physical% <> 'Not Applicable', %ServiceAddresses:Address:UnitRadio_Physical%  + ' ' + %ServiceAddresses:Address:Unit_Physical% + ' ', '') + IF(%ServiceAddresses:Address:LevelFloorRadio_Physical% <> 'Not Applicable', %ServiceAddresses:Address:LevelFloorRadio_Physical%  + ' ' + %ServiceAddresses:Address:LevelFloor_Physical% + ', ', '') + CASE(%ServiceAddresses:Address:SuburbOrTown_Physical%,UPPER)  + ' ' + %ServiceAddresses:Address:State_Physical_Address% + ' ' + %ServiceAddresses:Address:PostCode_Physical_Address%",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "SingleLine",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/SingleLine_Physical"
+}

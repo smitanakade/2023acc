@@ -1,0 +1,41 @@
+{
+    "AuthorName": "STARS",
+    "ClonedFromOmniUiCardKey": "",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 0,
+                "name": "recordId",
+                "val": "0019h000002hhtNAAQ"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "DataRaptor",
+        "value": {
+            "bundle": "SRQI_DR_ExtractServForProvider",
+            "bundleType": "",
+            "dsDelay": "",
+            "inputMap": {
+                "recordId": "{recordId}"
+            },
+            "resultVar": "[0][\"SAR\"]"
+        }
+    },
+    "Description": "Services and their statuses for recalculation of Star Rating Omni",
+    "IsTrackingEnabled": false,
+    "Name": "SRQI_FC_ServStatus",
+    "Namespace": "",
+    "OmniUiCardKey": "SRQI_FC_ServStatus/STARS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "SRQI_FC_ServStatus.json",
+    "SampleDataSourceResponse": "[{\"ServIds\":[{\"ServID\":\"0cE9h000000077xEAA\"},{\"ServID\":\"0cE9h0000000CKXEA2\"},{\"ServID\":\"0cE9h0000000BOTEA2\"},{\"ServID\":\"0cE9h0000000FiDEAU\"},{\"ServID\":\"0cE9h00000009o5EAA\"}],\"SAR\":[{\"ServStatus\":\"Operational\",\"ServName\":\"Audrey's Service 2\"},{\"ServStatus\":\"Operational\",\"ServName\":\"Matt's Age Service\"},{\"ServStatus\":\"unknown\",\"ServName\":\"Matthews Aged Care Service\"},{\"ServStatus\":\"unknown\",\"ServName\":\"Meditech AgeCare service\"},{\"ServStatus\":\"Operational\",\"ServName\":\"Ronald's aged care service\"}],\"ProviderName\":\"Bupa Provider\",\"ProviderId\":\"0019h000002hhtNAAQ\"}]",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/SRQI_FC_ServStatus"
+}

@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "OriginalPAPeriodEndDate1",
+    "OmniProcessId": {
+        "Name": "PlacesExtendPA",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesExtendPA/PlacesExtendPA/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ExtendPAPeriodDetails",
+        "OmniProcessId": {
+            "Name": "PlacesExtendPA",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesExtendPA/PlacesExtendPA/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesExtendPA/PlacesExtendPA/English/ExtendPAPeriodDetails",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ExtendPAPeriodDetails",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 3,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF(%OriginalPAPeriodEndDate% <> '{OriginalPAPeriodEndDate}', DAYOFMONTH(MOMENT(%OriginalPAPeriodEndDate%).add(0, 'days')) + '/' + MONTH(MOMENT(%OriginalPAPeriodEndDate%).add(0, 'days'))  + '/' + YEAR(MOMENT(%OriginalPAPeriodEndDate%).add(0, 'days')), NULL)",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "Original PA PeriodEndDate1",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesExtendPA/PlacesExtendPA/English/OriginalPAPeriodEndDate1"
+}

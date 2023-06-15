@@ -1,0 +1,69 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateProvisionalRevokeEvent",
+    "OmniProcessId": {
+        "Name": "Revoke",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesREvoke/PlacesRevoke/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RevokeEventProvisional",
+        "OmniProcessId": {
+            "Name": "Revoke",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesREvoke/PlacesRevoke/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesREvoke/PlacesRevoke/Procedure/RevokeEventProvisional",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RevokeEventProvisional",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AllotmentId": "=%AllotmentId%",
+            "DateOfAllotment": "=%DateOfAllotment%",
+            "DateOfNotice": "=%RevokeDetailsProvisional:DateOfNoticeProvisional%",
+            "DecisionDueByNoLaterThanDate": "=%RevokeDetailsProvisional:DecisionDueByNoLaterThanDateProvisionalLoad%",
+            "EventRecordTypeId": "=\"Revoke\"",
+            "EventStatus": "=\"Pending\"",
+            "EventStatusDate": "=%CurrentDateText%",
+            "EventType": "=%PerformAction:SelectAction%",
+            "HaveYouReviewedTheConditions": "=%PlacesToRevoke:RevokePlaceTable:reviewedConditions%",
+            "LinkToDocument": "=%RevokeDetailsProvisional:LinkToDocumentsProvisional%",
+            "NoticeOfIntentionDate": "=%RevokeDetailsProvisional:NoticeOfIntentionDateProvisional%",
+            "NoticeType": "=%RevokeDetailsProvisional:NoticeTypeProvisional%",
+            "RevocationType": "=%PlacesToRevoke:RevokePlaceTable:action%",
+            "ServiceId": "=%ServiceId%",
+            "SubmissionsDueByNoLaterThanDate": "=%RevokeDetailsProvisional:SubmissionsDueByNoLaterThanDateProvisionalLoad%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Allotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction18",
+        "responseJSONNode": "EventId",
+        "responseJSONPath": "Event__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesREvoke/PlacesRevoke/Procedure/CreateProvisionalRevokeEvent"
+}

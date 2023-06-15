@@ -1,0 +1,61 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ApplicationReconsiderationOutcome_Post",
+    "OmniProcessId": {
+        "Name": "ApplicationReconsiderationOutcome",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/ReconsiderationOutcome/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ReconsiderationOutcome",
+        "OmniProcessId": {
+            "Name": "ApplicationReconsiderationOutcome",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Application/ReconsiderationOutcome/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Application/ReconsiderationOutcome/Procedure/ReconsiderationOutcome",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ReconsiderationOutcome",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "ApplicationId": "=%ApplicationId%",
+            "Comment": "=%ReconsiderationComment%",
+            "DecisionDate": "=%DecisionEffecDate%",
+            "OutcomeComment": "=%ReconsiderationComment%",
+            "Reconsideration": "=%Application:Re%",
+            "ReconsiderationDecision": "=%ReconsiderationType%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ApplicationReconsiderationOutcome_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "RecommendationItem",
+        "responseJSONPath": "Recommendation_Item__c_3:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/ReconsiderationOutcome/Procedure/ApplicationReconsiderationOutcome_Post"
+}

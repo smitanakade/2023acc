@@ -1,0 +1,48 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ExtractRPId",
+    "OmniProcessId": {
+        "Name": "CalculateCERData",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/CER/CER/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+        },
+        "additionalOutput": {
+        },
+        "bundle": "SRQI_DR_ExtractPreviousRPId_Year",
+        "chainOnStep": false,
+        "dataRaptor Input Parameters": [
+        ],
+        "disOnTplt": false,
+        "executionConditionalFormula": "RPId == null",
+        "failOnStepError": true,
+        "failureConditionalFormula": "ExtractRPId == null",
+        "failureResponse": {
+            "Success": false,
+            "errorMessage": "Yearly Previous Reporting Period not found.",
+            "node": "CER_CER:ExtractRPId",
+            "status": "Error"
+        },
+        "ignoreCache": false,
+        "label": "DataRaptorExtractAction4",
+        "responseJSONNode": "RPId",
+        "responseJSONPath": "RPId",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": true,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Extract Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/CER/CER/Procedure/ExtractRPId"
+}

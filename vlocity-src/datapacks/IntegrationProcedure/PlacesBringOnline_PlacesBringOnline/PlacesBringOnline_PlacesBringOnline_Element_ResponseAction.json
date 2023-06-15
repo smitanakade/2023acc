@@ -1,0 +1,46 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ResponseAction",
+    "OmniProcessId": {
+        "Name": "PlacesBringOnline",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "additionalOutput": {
+            "AllotmentId": "=%CreateEventAndAssociatedObjects:Allotment__c_3:Id%",
+            "BringOnlineId": "=%BringOnlineId%",
+            "BringOnlinePlacesAllotment1": "=%BringOnlinePlacesAllotment_Post:Places_Allotment__c_1:Id%",
+            "BringOnlinePlacesAllotment2": "=%BringOnlinePlacesAllotment_PostPlaces_Allotment__c_2:Id%",
+            "Event": "%Event%",
+            "EventAllotmentId": "=%CreateEventAndAssociatedObjects:Event_Allotment__c_4:Id%",
+            "EventId": "%Event:Id%",
+            "EventId2": "%EventId2%",
+            "PlacesAllotmentId": "%PlacesAllotmentId%",
+            "ServiceEventId": "=%CreateEventAndAssociatedObjects:Service_Event__c_2:Id%"
+        },
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "label": "ResponseAction1",
+        "responseDefaultData": {
+        },
+        "responseFormat": "JSON",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnFullDataJSON": false,
+        "returnOnlyAdditionalOutput": true,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "show": null,
+        "useFormulas": true,
+        "vlcResponseHeaders": {
+        }
+    },
+    "Type": "Response Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure/ResponseAction"
+}

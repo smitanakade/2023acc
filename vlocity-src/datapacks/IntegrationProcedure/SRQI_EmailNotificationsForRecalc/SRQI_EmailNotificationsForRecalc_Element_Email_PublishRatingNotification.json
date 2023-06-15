@@ -1,0 +1,63 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Email_PublishRatingNotification",
+    "OmniProcessId": {
+        "Name": "EmailNotificationsForRecalc",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "LoopAcctContacts",
+        "OmniProcessId": {
+            "Name": "EmailNotificationsForRecalc",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure/LoopAcctContacts",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "LoopAcctContacts",
+    "ParentElementType": "Loop Block",
+    "PropertySetConfig": {
+        "OrgWideEmailAddress": "%FetchPublishNotificationSetting:EmailSetting:OWEA%",
+        "actionMessage": "",
+        "attachmentList": "",
+        "chainOnStep": false,
+        "contentVersionList": "",
+        "disOnTplt": false,
+        "emailInformation": {
+            "bccAddressList": [
+            ],
+            "ccAddressList": [
+            ],
+            "emailBody": "",
+            "emailSubject": "",
+            "setHtmlBody": false,
+            "toAddressList": [
+            ]
+        },
+        "emailTemplateInformation": {
+            "emailTargetObjectId": "%GetContactsFromACR:ACR:ContactId%",
+            "emailTemplateName": "Send_Star_Rating_Report_Template",
+            "saveAsActivity": false,
+            "whatId": "%GetContactsFromACR:ACR:AccountId%"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "EmailAction2",
+        "show": null,
+        "staticDocList": [
+        ],
+        "useTemplate": true
+    },
+    "Type": "Email Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure/Email_PublishRatingNotification"
+}

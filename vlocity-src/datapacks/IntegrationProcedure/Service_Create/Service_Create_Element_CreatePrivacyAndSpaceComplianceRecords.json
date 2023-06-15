@@ -1,0 +1,59 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreatePrivacyAndSpaceComplianceRecords",
+    "OmniProcessId": {
+        "Name": "ServiceCreation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "APServiceCondition",
+        "OmniProcessId": {
+            "Name": "ServiceCreation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Create/Procedure/APServiceCondition",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "APServiceCondition",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Date": "=TODAY()",
+            "PrivacySpaceRTId": "=%PrivacySpaceRTId%",
+            "PrivacySpaceStatus": "=\"Compliant\"",
+            "ServiceId": "=%BusinessLicenseId%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "APServiceCreationCertificate_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction3",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Create/Procedure/CreatePrivacyAndSpaceComplianceRecords"
+}

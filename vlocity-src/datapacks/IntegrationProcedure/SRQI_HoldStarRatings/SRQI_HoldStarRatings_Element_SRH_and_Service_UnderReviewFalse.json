@@ -1,0 +1,37 @@
+{
+    "Description": "This conditional block unchecks the Under Review checkbox on Star Rating History IF Under Review checkbox across all domains (QI/CM/CER) are false",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SRH_and_Service_UnderReviewFalse",
+    "OmniProcessId": {
+        "Name": "SRQI_IP_HoldStarRatings",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/HoldStarRatings/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ReleaseProcess",
+        "OmniProcessId": {
+            "Name": "SRQI_IP_HoldStarRatings",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/HoldStarRatings/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/HoldStarRatings/Procedure/ReleaseProcess",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ReleaseProcess",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "%DRGetAllDomainUnderReview:QI_UnderReview% == \"false\" AND %DRGetAllDomainUnderReview:CER_UnderReview% == \"false\" AND %DRGetAllDomainUnderReview:CM_UnderReview% == \"false\"",
+        "isIfElseBlock": false,
+        "label": "ConditionalBlock9",
+        "show": null
+    },
+    "Type": "Conditional Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/HoldStarRatings/Procedure/SRH_and_Service_UnderReviewFalse"
+}

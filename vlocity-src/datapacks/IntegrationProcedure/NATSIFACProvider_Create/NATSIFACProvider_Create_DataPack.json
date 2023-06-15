@@ -1,0 +1,33 @@
+{
+    "CustomJavaScript": "NATSIFACProvider_Create_SampleInput.json",
+    "Description": "Package to create a NATSIFAC Provider - Aged Care Org - NATSIFACProvider",
+    "DiscoveryFrameworkUsageType": "Default",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "CreateNATSIFACProvider",
+    "OmniProcessElement": [
+        "NATSIFACProvider_Create_Element_CreateTheInContextAccountRecord.json",
+        "NATSIFACProvider_Create_Element_Only_If_We_Need_To_Create_A_New_ACO.json",
+        "NATSIFACProvider_Create_Element_AgedCareOrganisation_Post.json",
+        "NATSIFACProvider_Create_Element_CreateTheRestOfTheAccountRelationships.json",
+        "NATSIFACProvider_Create_Element_CreateCareTypes.json",
+        "NATSIFACProvider_Create_Element_ABNValidation_Post.json",
+        "NATSIFACProvider_Create_Element_ContactRelationship_POC_Post.json",
+        "NATSIFACProvider_Create_Element_ResponseAction.json"
+    ],
+    "OmniProcessKey": "NATSIFACProvider_Create",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "NATSIFACProvider_Create_PropertySetConfig.json",
+    "SubType": "Create",
+    "Type": "NATSIFACProvider",
+    "UniqueName": "NATSIFACProvider_Create_Procedure_1",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/NATSIFACProvider/Create/Procedure",
+    "WebComponentKey": "f4b3544a-7c4f-ab2e-3850-440dd1b16601"
+}

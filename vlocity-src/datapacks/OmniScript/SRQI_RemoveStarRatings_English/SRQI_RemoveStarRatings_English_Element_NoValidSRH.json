@@ -1,0 +1,34 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "NoValidSRH",
+    "OmniProcessId": {
+        "Name": "SRQI_OS_RemoveStarRatings",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/RemoveStarRatings/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "NoSRHRecord": "=IF(%StarRatingHistory:ServiceName% == \"No Data\", true, false)",
+            "ServiceName": "=IF(%StarRatingHistory:ServiceName% == \"No Data\", \"This Service\", %StarRatingHistory:ServiceName%)"
+        },
+        "label": "NoValidSRH",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/RemoveStarRatings/English/NoValidSRH"
+}

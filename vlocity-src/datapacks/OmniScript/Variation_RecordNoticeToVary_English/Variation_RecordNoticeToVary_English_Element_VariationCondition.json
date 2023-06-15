@@ -1,0 +1,46 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "EmbeddedOmniScriptKey": "Variation|Condition|English",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "VariationCondition",
+    "OmniProcessId": {
+        "Name": "Variation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/RecordNoticeToVary/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "Language": "English",
+        "Sub Type": "Condition",
+        "Type": "Variation",
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "<>",
+                                    "data": null,
+                                    "field": "VariationEventId"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "0",
+                                    "field": "AllRemainingPlaces"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "OmniScript",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/RecordNoticeToVary/English/VariationCondition"
+}

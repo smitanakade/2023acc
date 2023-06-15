@@ -1,0 +1,202 @@
+[
+    {
+        "FormulaExpression": "IF(ISBLANK(FILTER(LIST(CareNeed), 'Response == \"Always\"')),0,LISTSIZE(FILTER(LIST(CareNeed), 'Response == \"Always\"'))",
+        "FormulaResultPath": "CareNeedAlways",
+        "FormulaSequence": 1,
+        "GlobalKey": "CountCEIResponseData2907850419732634",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "CountCEIResponseData",
+        "OmniDataTransformationId": {
+            "Name": "CountCEIResponseData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/CountCEIResponseData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(ISBLANK(FILTER(LIST(CareNeed), 'Response == \"Most of the Time\"')),0,LISTSIZE(FILTER(LIST(CareNeed), 'Response == \"Most of the Time\"'))",
+        "FormulaResultPath": "CareNeedMoT",
+        "FormulaSequence": 2,
+        "GlobalKey": "CountCEIResponseData023994787869688894",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "CountCEIResponseData",
+        "OmniDataTransformationId": {
+            "Name": "CountCEIResponseData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/CountCEIResponseData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(ISBLANK(FILTER(LIST(CareNeed), 'Response == \"Never\"')),0,LISTSIZE(FILTER(LIST(CareNeed), 'Response == \"Never\"'))",
+        "FormulaResultPath": "CareNeedNever",
+        "FormulaSequence": 4,
+        "GlobalKey": "CountCEIResponseData3115692108033328",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "CountCEIResponseData",
+        "OmniDataTransformationId": {
+            "Name": "CountCEIResponseData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/CountCEIResponseData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(ISBLANK(FILTER(LIST(CareNeed), 'Response == \"Some of the Time\"')),0,LISTSIZE(FILTER(LIST(CareNeed), 'Response == \"Some of the Time\"'))",
+        "FormulaResultPath": "CareNeedSoT",
+        "FormulaSequence": 3,
+        "GlobalKey": "CountCEIResponseData6896592363950809",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "CountCEIResponseData",
+        "OmniDataTransformationId": {
+            "Name": "CountCEIResponseData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/CountCEIResponseData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "LISTSIZE(CareNeed)",
+        "FormulaResultPath": "CareNeedTotal",
+        "FormulaSequence": 5,
+        "GlobalKey": "CountCEIResponseDataCustom8407",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "CountCEIResponseData",
+        "OmniDataTransformationId": {
+            "Name": "CountCEIResponseData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/CountCEIResponseData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "CountCEIResponseData3829761088166932",
+        "InputFieldName": "CareNeedAlways",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "CountCEIResponseData",
+        "OmniDataTransformationId": {
+            "Name": "CountCEIResponseData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/CountCEIResponseData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CareNeed:Always",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "CountCEIResponseData5732777372266016",
+        "InputFieldName": "CareNeedMoT",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "CountCEIResponseData",
+        "OmniDataTransformationId": {
+            "Name": "CountCEIResponseData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/CountCEIResponseData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CareNeed:MoT",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "CountCEIResponseData8435784088114398",
+        "InputFieldName": "CareNeedNever",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "CountCEIResponseData",
+        "OmniDataTransformationId": {
+            "Name": "CountCEIResponseData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/CountCEIResponseData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CareNeed:Never",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "CountCEIResponseData776311840301181",
+        "InputFieldName": "CareNeedSoT",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "CountCEIResponseData",
+        "OmniDataTransformationId": {
+            "Name": "CountCEIResponseData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/CountCEIResponseData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CareNeed:SoT",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "CountCEIResponseDataCustom9717",
+        "InputFieldName": "CareNeedTotal",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "CountCEIResponseData",
+        "OmniDataTransformationId": {
+            "Name": "CountCEIResponseData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/CountCEIResponseData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CareNeed:Total",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

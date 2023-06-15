@@ -1,0 +1,160 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "recordId",
+        "GlobalKey": "SRQI_DR_ExtractOpServForProviderCustom0jI9h00000009L3EAIItem0",
+        "InputFieldName": "Id",
+        "InputObjectName": "Account",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractOpServForProvider",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractOpServForProvider",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractOpServForProvider",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Provider",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "Provider:Id",
+        "GlobalKey": "SRQI_DR_ExtractOpServForProviderCustom0jI9h00000009L3EAIItem1",
+        "InputFieldName": "Provider_Name__c",
+        "InputObjectName": "Service_Account_Relationship__c",
+        "InputObjectQuerySequence": 2,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractOpServForProvider",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractOpServForProvider",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractOpServForProvider",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "SAR",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "SAR:Service_Name__c",
+        "GlobalKey": "SRQI_DR_ExtractOpServForProviderCustom0jI9h00000009L3EAIItem2",
+        "InputFieldName": "Id",
+        "InputObjectName": "BusinessLicense",
+        "InputObjectQuerySequence": 3,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractOpServForProvider",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractOpServForProvider",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractOpServForProvider",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Serv",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "'Operational'",
+        "GlobalKey": "SRQI_DR_ExtractOpServForProviderCustom6139",
+        "InputFieldName": "Status__c",
+        "InputObjectName": "BusinessLicense",
+        "InputObjectQuerySequence": 3,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractOpServForProvider",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractOpServForProvider",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractOpServForProvider",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Serv",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "ORDER BY",
+        "FilterValue": "Name ASC",
+        "GlobalKey": "SRQI_DR_ExtractOpServForProviderCustom0jI9h00000009L3EAIItem3",
+        "InputObjectName": "BusinessLicense",
+        "InputObjectQuerySequence": 3,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractOpServForProvider",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractOpServForProvider",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractOpServForProvider",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Serv",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractOpServForProviderCustom8187",
+        "InputFieldName": "Provider:Name",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractOpServForProvider",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractOpServForProvider",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractOpServForProvider",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ProviderName",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "0",
+        "GlobalKey": "SRQI_DR_ExtractOpServForProviderCustom0jI9h00000009L3EAIItem9",
+        "InputFieldName": "Serv:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractOpServForProvider",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractOpServForProvider",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractOpServForProvider",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ServIds:ServID",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

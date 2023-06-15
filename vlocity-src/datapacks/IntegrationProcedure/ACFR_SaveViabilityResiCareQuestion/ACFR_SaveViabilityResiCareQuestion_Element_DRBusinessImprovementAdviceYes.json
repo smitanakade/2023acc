@@ -1,0 +1,59 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DRBusinessImprovementAdviceYes",
+    "OmniProcessId": {
+        "Name": "IPSaveViabilityResiCareQuestion",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityResiCareQuestion/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RDCurrentBusinessImprovementStrategyYes",
+        "OmniProcessId": {
+            "Name": "IPSaveViabilityResiCareQuestion",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityResiCareQuestion/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityResiCareQuestion/Procedure/RDCurrentBusinessImprovementStrategyYes",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RDCurrentBusinessImprovementStrategyYes",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AdditionalInformation": "=''",
+            "FormId": "=%ResidentialViabilityandPrudentialReportingFormId%",
+            "QuestionID": "=%SVBusinessImprovementAdviceQuestionID%",
+            "RadioYesNo": "=%ResidentialProviderFinancialPerformanceSurvey:BLKBusinessImprovementAdvice:RDCurrentBusinessImprovementStrategy%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ACFR_SaveViabilityResiCareQuestion",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityResiCareQuestion/Procedure/DRBusinessImprovementAdviceYes"
+}

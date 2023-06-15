@@ -1,0 +1,346 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "\"Current Rating\"",
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem3",
+        "InputFieldName": "Rating_Type__c",
+        "InputObjectName": "STAR_Rating_History__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "SR",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "\"true\"",
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem4",
+        "InputFieldName": "Reporting_Period__r.Previous_Reporting_Period__c",
+        "InputObjectName": "STAR_Rating_History__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "SR",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "ServID",
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem2",
+        "InputFieldName": "SF_Service_Id__c",
+        "InputObjectName": "STAR_Rating_History__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "SR",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "null",
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem9",
+        "InputFieldName": "SR:Consumer_Experience_Id__r.Availability_Status__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:CERAvailability",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem16",
+        "InputFieldName": "SR:Consumer_Experience_Id__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:CERId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "null",
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem10",
+        "InputFieldName": "SR:Care_Minutes_Id__r.Availability_Status__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:CMAvailability",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem17",
+        "InputFieldName": "SR:Care_Minutes_Id__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:CMId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem7",
+        "InputFieldName": "SR:SF_Provider_Id__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:ProviderId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem12",
+        "InputFieldName": "SR:SF_Provider_Id__r.Name",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:ProviderName",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "null",
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem11",
+        "InputFieldName": "SR:Quality_Indicator_Id__r.Availability_Status__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:QIAvailability",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem6",
+        "InputFieldName": "SR:Quality_Indicator_Id__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:QIId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "null",
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom3262",
+        "InputFieldName": "SR:Service_Compliance_Id__r.Availability_Status__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:SCRAvailability",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem18",
+        "InputFieldName": "SR:Service_Compliance_Id__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:SCRId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom408",
+        "InputFieldName": "SR:Service_Compliance_Id__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:SCRId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem15",
+        "InputFieldName": "SR:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:SRHId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "null",
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem13",
+        "InputFieldName": "SR:Status__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:SRHStatus",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "No Data",
+        "GlobalKey": "SRQI_DR_GetSRHDetails_SimplifiedCustom0jI9h0000000DRtEAMItem14",
+        "InputFieldName": "SR:SF_Service_Id__r.Name",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetSRHDetails_Simplified",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetSRHDetails_Simplified",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StarRatingHistory:ServiceName",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

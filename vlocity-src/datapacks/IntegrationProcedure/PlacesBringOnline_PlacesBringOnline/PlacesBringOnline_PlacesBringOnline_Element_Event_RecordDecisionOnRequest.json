@@ -1,0 +1,60 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Event_RecordDecisionOnRequest",
+    "OmniProcessId": {
+        "Name": "PlacesBringOnline",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "DecisionOnRequestForReconsideration",
+        "OmniProcessId": {
+            "Name": "PlacesBringOnline",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure/DecisionOnRequestForReconsideration",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "DecisionOnRequestForReconsideration",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Id": "=%EventId%",
+            "PreviousPage": "=\"Record Decision on Request for Reconsideration\"",
+            "Review": "=IF(%BringOnline:Decision3% = \"Uphold Decision\", \"Confirm\",\"Vary\")",
+            "Status": "=IF(%BringOnline:Decision3% = \"Uphold Decision\", \"Not Approved by Department\", \"Approved\")",
+            "StatusEffectiveDate": "=%BringOnline:CurrentDateTEXT%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Event_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction10",
+        "responseJSONNode": "EventId2",
+        "responseJSONPath": "Event__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure/Event_RecordDecisionOnRequest"
+}

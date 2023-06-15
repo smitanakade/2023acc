@@ -1,0 +1,68 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateEvent",
+    "OmniProcessId": {
+        "Name": "ServiceVariationAddress",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceVariationAddress/CreateEvent/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CreateServiceChangeEvent_ResidentialOnly",
+        "OmniProcessId": {
+            "Name": "ServiceVariationAddress",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceVariationAddress/CreateEvent/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceVariationAddress/CreateEvent/Procedure/CreateServiceChangeEvent_ResidentialOnly",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CreateServiceChangeEvent_ResidentialOnly",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressFrom": "=%AddressId%",
+            "AddressLocation": "=%LocationId%",
+            "AddressTo": "=%CreateAddress_Event:Address__c_1:Id%",
+            "ApplicationDecisionDate": "=%VaryResiServiceAddress:ApplicationDecisionDate%",
+            "ApplicationReceivedDate": "=%VaryResiServiceAddress:ApplicationReceivedDate%",
+            "Comments": "=%SelectAddress:Comments%",
+            "DateEffectiveFrom": "=%SelectAddress:PhysicalAddressEffectiveDate%",
+            "EventRecordTypeId": "=\"GPMS_Vary_Service_Location\"",
+            "EventStatus": "=\"Pending\"",
+            "EventStatusDate": "=%CurrentDateText%",
+            "EventType": "=\"Vary Service Location\"",
+            "ProposedVariationDay": "=%VaryResiServiceAddress:ProposedVariationDay%",
+            "ServiceId": "=%CurrentRecordId%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Event_No_Allotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceVariationAddress/CreateEvent/Procedure/CreateEvent"
+}

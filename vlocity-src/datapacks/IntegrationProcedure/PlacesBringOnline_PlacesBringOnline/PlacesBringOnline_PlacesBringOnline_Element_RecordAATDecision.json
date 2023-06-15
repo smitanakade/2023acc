@@ -1,0 +1,62 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RecordAATDecision",
+    "OmniProcessId": {
+        "Name": "PlacesBringOnline",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "AATDecision",
+        "OmniProcessId": {
+            "Name": "PlacesBringOnline",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure/AATDecision",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "AATDecision",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Comments": "=%BringOnline:Comments%",
+            "Decision": "=%BringOnline:Decision3%",
+            "DecisionDate": "=%BringOnline:DecisionDate5%",
+            "DecisionDueDate": "=%BringOnline:DecisionDueDate%",
+            "EventId": "=%EventId%",
+            "LinktoDocument": "=%BringOnline:LinktoDocument%",
+            "RecordType": "=\"Record_AAT_Decision_BringOnline\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "BringOnline_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction13",
+        "responseJSONNode": "BringOnlineId",
+        "responseJSONPath": "Bring_Online__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure/RecordAATDecision"
+}

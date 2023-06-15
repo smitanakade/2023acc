@@ -1,0 +1,61 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Event_RecordDecision",
+    "OmniProcessId": {
+        "Name": "PlaceExtendPA",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RecordDecision",
+        "OmniProcessId": {
+            "Name": "PlaceExtendPA",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure/RecordDecision",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RecordDecision",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Id": "=%EventId%",
+            "PreviousPage": "=\"Record Decision\"",
+            "Status": "=%ExtractPA:Decision2%",
+            "StatusEffectiveDate": "=%CurrentDateText%"
+        },
+        "additionalOutput": {
+            "": ""
+        },
+        "bundle": "Event_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "ISNOTBLANK(EventId)",
+        "failOnStepError": false,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+            "": ""
+        },
+        "label": "DataRaptorPostAction8",
+        "responseJSONNode": "EventStatus",
+        "responseJSONPath": "Event__c_1:Status",
+        "returnOnlyAdditionalOutput": true,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure/Event_RecordDecision"
+}

@@ -1,0 +1,42 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "LocationAccountAddresses_List/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 2,
+                "name": "recordId",
+                "val": "0039r0000044K7oAAE"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "RecordId": "{recordId}"
+            },
+            "ipMethod": "LocationAddress_RelatedList",
+            "resultVar": "[\"LocationAddress\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "Related List for Location Contact Addresses",
+    "IsTrackingEnabled": false,
+    "Name": "LocationContactAddresses_List",
+    "Namespace": "",
+    "OmniUiCardKey": "LocationContactAddresses_List/GPMS/3.0",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "LocationContactAddresses_List.json",
+    "SampleDataSourceResponse": "{\"LocationAddress\":[{\"UnitTypeDescription\":\"NotApplicable\",\"AddressType\":\"Residential Address\",\"UnitNumber\":\"NotApplicable\",\"State\":\"NSW\",\"LevelTypeDescription\":\"NotApplicable\",\"AddressEffectiveDate\":\"NotApplicable\",\"AddressName\":\"ADD-01187\",\"ContactRelRecordType\":\"NotApplicable\",\"POBOXType\":\"NotApplicable\",\"StreetTypeDescription\":\"NotApplicable\",\"StreetNumber1\":\"NotApplicable\",\"City\":\"test\",\"StreetSuffixTypeDescription\":\"NotApplicable\",\"MaxAdditionalCampus\":0,\"LocationId\":\"a1p9r0000009gpfAAA\",\"AddressIneffectiveDate\":\"NotApplicable\",\"ContactRecordType\":\"GPMS Contact\",\"AccountRecordType\":\"NotApplicable\",\"LotNumber\":\"NotApplicable\",\"AddressId\":\"a1o9r000000n6vVAAQ\",\"Street\":\"test\",\"ServiceType\":\"NotApplicable\",\"PostOfficeBox\":\"NotApplicable\",\"LevelNumber\":\"NotApplicable\",\"ServiceId\":\"NotApplicable\",\"ValidatedByCGIS\":\"No\",\"gnaf_pid\":\"NotApplicable\",\"ContactRelId\":\"NotApplicable\",\"PostalCode\":\"2000\",\"CareOf\":\"NotApplicable\",\"BuildingName\":\"NotApplicable\",\"AddressString\":\"test , test, NSW, 2000\",\"AccountId\":\"NotApplicable\"},{\"UnitTypeDescription\":\"NotApplicable\",\"AddressType\":\"Residential Address\",\"UnitNumber\":\"NotApplicable\",\"State\":\"NSW\",\"LevelTypeDescription\":\"NotApplicable\",\"AddressEffectiveDate\":\"NotApplicable\",\"AddressName\":\"ADD-01154\",\"ContactRelRecordType\":\"NotApplicable\",\"POBOXType\":\"NotApplicable\",\"StreetTypeDescription\":\"NotApplicable\",\"StreetNumber1\":\"NotApplicable\",\"City\":\"test\",\"StreetSuffixTypeDescription\":\"NotApplicable\",\"MaxAdditionalCampus\":0,\"LocationId\":\"a1p9r0000009VnlAAE\",\"AddressIneffectiveDate\":\"NotApplicable\",\"ContactRecordType\":\"GPMS Contact\",\"AccountRecordType\":\"NotApplicable\",\"LotNumber\":\"NotApplicable\",\"AddressId\":\"a1o9r000000mkIHAAY\",\"Street\":\"test\",\"ServiceType\":\"NotApplicable\",\"PostOfficeBox\":\"NotApplicable\",\"LevelNumber\":\"NotApplicable\",\"ServiceId\":\"NotApplicable\",\"ValidatedByCGIS\":\"No\",\"gnaf_pid\":\"NotApplicable\",\"ContactRelId\":\"NotApplicable\",\"PostalCode\":\"2000\",\"CareOf\":\"NotApplicable\",\"BuildingName\":\"NotApplicable\",\"AddressString\":\"test , test, NSW, 2000\",\"AccountId\":\"NotApplicable\"},{\"UnitTypeDescription\":\"FLAT\",\"AddressType\":\"Residential Address\",\"UnitNumber\":\"4\",\"State\":\"NSW\",\"LevelTypeDescription\":\"LEVEL\",\"AddressEffectiveDate\":\"NotApplicable\",\"AddressName\":\"ADD-01188\",\"ContactRelRecordType\":\"NotApplicable\",\"POBOXType\":\"GPO Box\",\"StreetTypeDescription\":\"BEND\",\"City\":\"SYDNEY\",\"StreetNumber1\":\"12-90\",\"StreetSuffixTypeDescription\":\"SOUTH WEST\",\"MaxAdditionalCampus\":0,\"LocationId\":\"a1p9r0000009i1pAAA\",\"AddressIneffectiveDate\":\"NotApplicable\",\"ContactRecordType\":\"GPMS Contact\",\"AccountRecordType\":\"NotApplicable\",\"LotNumber\":\"2\",\"AddressId\":\"a1o9r000000n6x7AAA\",\"Street\":\"BOURKE\",\"ServiceType\":\"NotApplicable\",\"PostOfficeBox\":\"1234\",\"LevelNumber\":\"56\",\"ServiceId\":\"NotApplicable\",\"ValidatedByCGIS\":\"No\",\"gnaf_pid\":\"NotApplicable\",\"ContactRelId\":\"NotApplicable\",\"PostalCode\":\"2000\",\"CareOf\":\"NotApplicable\",\"BuildingName\":\"hellofresh\",\"AddressString\":\"GPO Box 1234, FLAT 4, LEVEL 56, hellofresh, 2, 12-90 BOURKE BEND SOUTH WEST, SYDNEY, NSW, 2000\",\"AccountId\":\"NotApplicable\"}],\"AccountParams\":{\"AccountRecordType\":\"NotApplicable\",\"ContactCount\":0},\"AccountPhysicalCount\":0,\"ServiceParams\":{\"ServiceRecordType\":\"NotApplicable\",\"MaxAdditionalCampus\":0,\"ServicePostalAddressCount\":0,\"ServicePhysicalAddressCount\":0,\"CareType\":\"NotApplicable\"},\"AccountPostalCount\":0,\"ContactParams\":{\"ContactRelRecordType\":\"NotApplicable\",\"AdminLiquidatorCount\":0,\"RecordTypeName\":\"GPMS_Contact\",\"ContactCount\":3}}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 3,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/LocationContactAddresses_List"
+}

@@ -1,0 +1,65 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "UpdatePOBoxPostalAddress",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "POBoxOnly",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/POBoxOnly",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "POBoxOnly",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressEffectiveDate": "=TODAY()",
+            "AddressType": "=%LocationRecordType%",
+            "CareOf": "=%ServiceAddressesPostal:PostalAddressBlock:CareOfBlock:PostalCareOf%",
+            "City": "=%ServiceAddressesPostal:PostalAddressBlock:SuburbOrTown_UPPER_Postal%",
+            "Country": "=\"Australia\"",
+            "CurrentServiceId": "=%CurrentRecordId%",
+            "LocationType": "=\"Postal\"",
+            "Postcode": "=%ServiceAddressesPostal:PostalAddressBlock:POBoxBlock:POBoxPostCode_Postal%",
+            "State": "=%ServiceAddressesPostal:PostalAddressBlock:POBoxBlock:POBoxState_Postal%",
+            "Street": "=\"PO BOX\" + \" \" + %ServiceAddressesPostal:PostalAddressBlock:POBoxBlock:POBox_Postal%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "LocationAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "PostalAddressId",
+        "responseJSONPath": "Address__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/UpdatePOBoxPostalAddress"
+}

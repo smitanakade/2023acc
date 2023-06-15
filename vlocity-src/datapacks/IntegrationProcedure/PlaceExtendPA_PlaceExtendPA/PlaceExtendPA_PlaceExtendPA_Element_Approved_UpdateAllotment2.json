@@ -1,0 +1,57 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Approved_UpdateAllotment2",
+    "OmniProcessId": {
+        "Name": "PlaceExtendPA",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RecordADecisionOnRequestForReconsideration",
+        "OmniProcessId": {
+            "Name": "PlaceExtendPA",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure/RecordADecisionOnRequestForReconsideration",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RecordADecisionOnRequestForReconsideration",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AllotmentId": "=%AllotmentId%",
+            "PAPeriodEndDate": "=%ExpectedExtendedPAPeriodEndDate%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "AllotmentLocation_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "ExtractPA:Decision3 == \"Set Aside Decision and Substitute New Decision\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction16",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure/Approved_UpdateAllotment2"
+}

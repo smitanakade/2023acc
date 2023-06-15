@@ -1,0 +1,56 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "PostalNOMatch",
+    "OmniProcessId": {
+        "Name": "Aged Care Addresses",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_ACO_Accounts/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementErrorMap": {
+            "ACOCGISAddress1": "Select an address to continue"
+        },
+        "label": "PostalNOMatch",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "Match",
+                        "field": "CheckIfAValueIsSelected2_2"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Yes",
+                        "field": "ACOCGISAddress1"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "validationRequired": "Step",
+        "wpm": false
+    },
+    "Type": "Set Errors",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_ACO_Accounts/Create/English/PostalNOMatch"
+}

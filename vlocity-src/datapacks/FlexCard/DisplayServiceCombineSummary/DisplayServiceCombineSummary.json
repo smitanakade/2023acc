@@ -1,0 +1,416 @@
+{
+    "dataSource": {
+        "contextVariables": [
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "Custom",
+        "value": {
+            "body": "{\n\t\"ReceivedDateText\": \"21/3/2023\",\n\t\"ProposedDateText\": \"1/3/2023\",\n\t\"DecisionDueBy\": \"15/3/2023\",\n\t\"DecisionDueByLoad\": \"2023-3-15\",\n\t\"ReceivedDate\": \"2023-03-21\",\n\t\"ProposedDate\": \"2023-03-01\",\n\t\"ContinuingService\": [\n\t\t{\n\t\t\t\"Id\": \"0cEBm0000000sMzMAI\",\n\t\t\t\"AddressState\": \"VIC\",\n\t\t\t\"AddressId\": \"a2IBm000000AcwrMAC\",\n\t\t\t\"RACSID\": \"6323425\",\n\t\t\t\"ProvisionalPlaces\": 0,\n\t\t\t\"Accredited\": {\n\t\t\t\t\"Status\": \"Accredited\"\n\t\t\t},\n\t\t\t\"ACMPSNotified\": \"Yes\",\n\t\t\t\"Name\": \"Squad C Residential B1\",\n\t\t\t\"IntegrationID\": \"SRV-16954\",\n\t\t\t\"Certified\": {\n\t\t\t\t\"Status\": \"Certified\"\n\t\t\t},\n\t\t\t\"FullAddress\": \"33 ERANG DRIVE, MOUNT ELIZA, VIC, 3930\",\n\t\t\t\"CareType\": \"Residential\",\n\t\t\t\"DateFirstOpened\": \"2023-03-15\",\n\t\t\t\"Status\": \"Operational\"\n\t\t}\n\t],\n\t\"DiscontinuingService\": [\n\t\t{\n\t\t\t\"Id\": \"0cEBm0000000sd7MAA\",\n\t\t\t\"AddressState\": \"VIC\",\n\t\t\t\"AddressId\": \"a2IBm000000AcwrMAC\",\n\t\t\t\"RACSID\": \"40986\",\n\t\t\t\"ProvisionalPlaces\": 0,\n\t\t\t\"ACMPSNotified\": \"No\",\n\t\t\t\"Name\": \"Squad C Residential C1\",\n\t\t\t\"IntegrationID\": \"SRV-16957\",\n\t\t\t\"Certified\": {\n\t\t\t\t\"Status\": \"Certified\"\n\t\t\t},\n\t\t\t\"FullAddress\": \"33 ERANG DRIVE, MOUNT ELIZA, VIC, 3930\",\n\t\t\t\"CareType\": \"Residential\",\n\t\t\t\"Status\": \"Operational\",\n\t\t\t\"DateFirstOpened\": \"2023-03-15\"\n\t\t},\n\t\t{\n\t\t\t\"Id\": \"0cEBm0000000sBhMAI\",\n\t\t\t\"AddressState\": \"VIC\",\n\t\t\t\"AddressId\": \"a2IBm000000AcwrMAC\",\n\t\t\t\"RACSID\": \"637\",\n\t\t\t\"ProvisionalPlaces\": 0,\n\t\t\t\"ACMPSNotified\": \"Yes\",\n\t\t\t\"Name\": \"Squad C Residential A1\",\n\t\t\t\"IntegrationID\": \"SRV-16953\",\n\t\t\t\"Certified\": {\n\t\t\t\t\"Status\": \"Certified\"\n\t\t\t},\n\t\t\t\"FullAddress\": \"33 ERANG DRIVE, MOUNT ELIZA, VIC, 3930\",\n\t\t\t\"CareType\": \"Residential\",\n\t\t\t\"Status\": \"Operational\",\n\t\t\t\"DateFirstOpened\": \"2023-03-15\"\n\t\t}\n\t]\n}",
+            "dsDelay": "",
+            "resultVar": ""
+        }
+    },
+    "enableLwc": true,
+    "events": [
+        {
+            "actionList": [
+                {
+                    "actionIndex": 0,
+                    "card": "{card}",
+                    "draggable": false,
+                    "isOpen": true,
+                    "key": "1679609243508-k1ksh271g",
+                    "label": "Action",
+                    "stateAction": {
+                        "Web Page": {
+                            "targetName": "/apex"
+                        },
+                        "displayName": "Action",
+                        "id": "flex-action-1679612828372",
+                        "message": "{\"type\":\"Custom\",\"value\":{\"dsDelay\":\"\",\"body\":\"{\\n\\t\\\"ReceivedDateText\\\": \\\"21/3/2023\\\",\\n\\t\\\"ProposedDateText\\\": \\\"1/3/2023\\\",\\n\\t\\\"DecisionDueBy\\\": \\\"15/3/2023\\\",\\n\\t\\\"DecisionDueByLoad\\\": \\\"2023-3-15\\\",\\n\\t\\\"ReceivedDate\\\": \\\"2023-03-21\\\",\\n\\t\\\"ProposedDate\\\": \\\"2023-03-01\\\",\\n\\t\\\"ContinuingService\\\": [\\n\\t\\t{\\n\\t\\t\\t\\\"Id\\\": \\\"0cEBm0000000sMzMAI\\\",\\n\\t\\t\\t\\\"AddressState\\\": \\\"VIC\\\",\\n\\t\\t\\t\\\"AddressId\\\": \\\"a2IBm000000AcwrMAC\\\",\\n\\t\\t\\t\\\"RACSID\\\": \\\"6323425\\\",\\n\\t\\t\\t\\\"ProvisionalPlaces\\\": 0,\\n\\t\\t\\t\\\"Accredited\\\": {\\n\\t\\t\\t\\t\\\"Status\\\": \\\"Accredited\\\"\\n\\t\\t\\t},\\n\\t\\t\\t\\\"ACMPSNotified\\\": \\\"Yes\\\",\\n\\t\\t\\t\\\"Name\\\": \\\"Squad C Residential B1\\\",\\n\\t\\t\\t\\\"IntegrationID\\\": \\\"SRV-16954\\\",\\n\\t\\t\\t\\\"Certified\\\": {\\n\\t\\t\\t\\t\\\"Status\\\": \\\"Certified\\\"\\n\\t\\t\\t},\\n\\t\\t\\t\\\"FullAddress\\\": \\\"33 ERANG DRIVE, MOUNT ELIZA, VIC, 3930\\\",\\n\\t\\t\\t\\\"CareType\\\": \\\"Residential\\\",\\n\\t\\t\\t\\\"DateFirstOpened\\\": \\\"2023-03-15\\\",\\n\\t\\t\\t\\\"Status\\\": \\\"Operational\\\"\\n\\t\\t}\\n\\t],\\n\\t\\\"DiscontinuingService\\\": [\\n\\t\\t{\\n\\t\\t\\t\\\"Id\\\": \\\"0cEBm0000000sd7MAA\\\",\\n\\t\\t\\t\\\"AddressState\\\": \\\"VIC\\\",\\n\\t\\t\\t\\\"AddressId\\\": \\\"a2IBm000000AcwrMAC\\\",\\n\\t\\t\\t\\\"RACSID\\\": \\\"40986\\\",\\n\\t\\t\\t\\\"ProvisionalPlaces\\\": 0,\\n\\t\\t\\t\\\"ACMPSNotified\\\": \\\"No\\\",\\n\\t\\t\\t\\\"Name\\\": \\\"Squad C Residential C1\\\",\\n\\t\\t\\t\\\"IntegrationID\\\": \\\"SRV-16957\\\",\\n\\t\\t\\t\\\"Certified\\\": {\\n\\t\\t\\t\\t\\\"Status\\\": \\\"Certified\\\"\\n\\t\\t\\t},\\n\\t\\t\\t\\\"FullAddress\\\": \\\"33 ERANG DRIVE, MOUNT ELIZA, VIC, 3930\\\",\\n\\t\\t\\t\\\"CareType\\\": \\\"Residential\\\",\\n\\t\\t\\t\\\"Status\\\": \\\"Operational\\\",\\n\\t\\t\\t\\\"DateFirstOpened\\\": \\\"2023-03-15\\\"\\n\\t\\t},\\n\\t\\t{\\n\\t\\t\\t\\\"Id\\\": \\\"0cEBm0000000sBhMAI\\\",\\n\\t\\t\\t\\\"AddressState\\\": \\\"VIC\\\",\\n\\t\\t\\t\\\"AddressId\\\": \\\"a2IBm000000AcwrMAC\\\",\\n\\t\\t\\t\\\"RACSID\\\": \\\"637\\\",\\n\\t\\t\\t\\\"ProvisionalPlaces\\\": 0,\\n\\t\\t\\t\\\"ACMPSNotified\\\": \\\"Yes\\\",\\n\\t\\t\\t\\\"Name\\\": \\\"Squad C Residential A1\\\",\\n\\t\\t\\t\\\"IntegrationID\\\": \\\"SRV-16953\\\",\\n\\t\\t\\t\\\"Certified\\\": {\\n\\t\\t\\t\\t\\\"Status\\\": \\\"Certified\\\"\\n\\t\\t\\t},\\n\\t\\t\\t\\\"FullAddress\\\": \\\"33 ERANG DRIVE, MOUNT ELIZA, VIC, 3930\\\",\\n\\t\\t\\t\\\"CareType\\\": \\\"Residential\\\",\\n\\t\\t\\t\\\"Status\\\": \\\"Operational\\\",\\n\\t\\t\\t\\\"DateFirstOpened\\\": \\\"2023-03-15\\\"\\n\\t\\t}\\n\\t]\\n}\",\"resultVar\":\"\"},\"orderBy\":{\"name\":\"\",\"isReverse\":\"\"},\"contextVariables\":[]}",
+                        "openUrlIn": "Current Window",
+                        "targetType": "Web Page",
+                        "type": "DataAction",
+                        "vlocityIcon": "standard-default"
+                    }
+                }
+            ],
+            "channelname": "DisplayServiceCombineSummary",
+            "displayLabel": "DisplayServiceCombineSummary:data",
+            "element": "action",
+            "eventLabel": "pubsub",
+            "eventname": "data",
+            "eventtype": "pubsub",
+            "key": "event-0",
+            "recordIndex": "0",
+            "showSpinner": "false"
+        }
+    ],
+    "isFlex": true,
+    "isRepeatable": true,
+    "selectableMode": "Multi",
+    "states": [
+        {
+            "actions": [
+            ],
+            "childCards": [
+                "CombineSummary",
+                "DisConCombineSummary"
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "outputField",
+                            "elementLabel": "Text-0",
+                            "name": "Text",
+                            "property": {
+                                "card": "{card}",
+                                "mergeField": "%3Cp%3E%3Cstrong%3E%3Cspan%20style=%22font-size:%2024pt;%22%3ECombine%20Application%20Details%3C/span%3E%3C/strong%3E%3C/p%3E",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "text"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "outputField",
+                            "elementLabel": "Text-4",
+                            "name": "Text",
+                            "property": {
+                                "card": "{card}",
+                                "mergeField": "",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "text"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "outputField",
+                            "elementLabel": "ReceivedDate-1",
+                            "name": "ReceivedDate",
+                            "property": {
+                                "card": "{card}",
+                                "fieldName": "ReceivedDate",
+                                "format": "D/M/YYYY",
+                                "label": "Received Date",
+                                "placeholder": "",
+                                "record": "{record}",
+                                "type": "date"
+                            },
+                            "size": {
+                                "default": "4",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "size": {
+                                    "default": "4",
+                                    "isResponsive": false
+                                },
+                                "sizeClass": "slds-size_4-of-12 "
+                            },
+                            "type": "field"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "outputField",
+                            "elementLabel": "ProposedDate-2",
+                            "name": "ProposedDate",
+                            "property": {
+                                "card": "{card}",
+                                "fieldName": "ProposedDate",
+                                "format": "D/M/YYYY",
+                                "label": "Proposed Date",
+                                "placeholder": "",
+                                "record": "{record}",
+                                "type": "date"
+                            },
+                            "size": {
+                                "default": "4",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "size": {
+                                    "default": "4",
+                                    "isResponsive": false
+                                },
+                                "sizeClass": "slds-size_4-of-12 "
+                            },
+                            "type": "field"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "outputField",
+                            "elementLabel": "DecisionDueBy-3",
+                            "name": "DecisionDueBy",
+                            "property": {
+                                "card": "{card}",
+                                "fieldName": "DecisionDueBy",
+                                "format": "D/M/YYYY",
+                                "label": "Decision Due By",
+                                "placeholder": "",
+                                "record": "{record}",
+                                "type": "date"
+                            },
+                            "size": {
+                                "default": "4",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "size": {
+                                    "default": "4",
+                                    "isResponsive": false
+                                },
+                                "sizeClass": "slds-size_4-of-12 "
+                            },
+                            "type": "field"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "outputField",
+                            "elementLabel": "Text-4-clone-1",
+                            "name": "Text",
+                            "property": {
+                                "card": "{card}",
+                                "mergeField": "%3Cdiv%3E&nbsp;%3C/div%3E%0A%3Cdiv%3E&nbsp;%3C/div%3E",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "text"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "outputField",
+                            "elementLabel": "Text-5",
+                            "name": "Text",
+                            "property": {
+                                "card": "{card}",
+                                "mergeField": "%3Cp%3E%3Cstrong%3E%3Cspan%20style=%22font-size:%2024pt;%22%3EContinuing%20Service%20Details%3C/span%3E%3C/strong%3E%3C/p%3E",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "text"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "childCardPreview",
+                            "elementLabel": "FlexCard-6",
+                            "name": "FlexCard",
+                            "property": {
+                                "cardName": "CombineSummary",
+                                "cardNode": "{record.ContinuingService}",
+                                "isChildCardTrackingEnabled": false,
+                                "recordId": "{recordId}",
+                                "selectedState": "Active"
+                            },
+                            "size": {
+                                "default": 12,
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "size": {
+                                    "default": 12,
+                                    "isResponsive": false
+                                },
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "outputField",
+                            "elementLabel": "Text-4-clone-0",
+                            "name": "Text",
+                            "property": {
+                                "card": "{card}",
+                                "mergeField": "%3Cdiv%3E&nbsp;%3C/div%3E%0A%3Cdiv%3E&nbsp;%3C/div%3E",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "text"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "outputField",
+                            "elementLabel": "Text-7",
+                            "name": "Text",
+                            "property": {
+                                "card": "{card}",
+                                "mergeField": "%3Cp%3E%3Cstrong%3E%3Cspan%20style=%22font-size:%2024pt;%22%3EDiscontinuing%20Service%20Details%3C/span%3E%3C/strong%3E%3C/p%3E",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "text"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "childCardPreview",
+                            "elementLabel": "FlexCard-8",
+                            "name": "FlexCard",
+                            "property": {
+                                "cardName": "DisConCombineSummary",
+                                "cardNode": "{record.DiscontinuingService}",
+                                "isChildCardTrackingEnabled": false,
+                                "recordId": "{recordId}",
+                                "selectedState": "Active"
+                            },
+                            "size": {
+                                "default": 12,
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "size": {
+                                    "default": 12,
+                                    "isResponsive": false
+                                },
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Active",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "class": "slds-card slds-p-around_x-small slds-m-bottom_x-small",
+                "container": {
+                    "class": "slds-card"
+                },
+                "margin": [
+                    {
+                        "size": "x-small",
+                        "type": "bottom"
+                    }
+                ],
+                "padding": [
+                    {
+                        "size": "x-small",
+                        "type": "around"
+                    }
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12"
+            }
+        }
+    ],
+    "theme": "slds",
+    "title": "DisplayServiceCombineSummary",
+    "xmlJson": [
+        {
+            "@attributes": {
+                "targets": "lightning__AppPage"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "name": "recordId",
+                        "type": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "@attributes": {
+                "targets": "lightning__RecordPage"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                }
+            ]
+        }
+    ],
+    "xmlObject": {
+        "targetConfigs": "PHRhcmdldENvbmZpZyB0YXJnZXRzPSJsaWdodG5pbmdfX0FwcFBhZ2UiPgogICAgICAgICAgICAgICAgICAgICAgPHByb3BlcnR5IG5hbWU9ImRlYnVnIiB0eXBlPSJCb29sZWFuIi8+CiAgICAgICAgICAgICAgICAgICAgICA8cHJvcGVydHkgbmFtZT0icmVjb3JkSWQiIHR5cGU9IlN0cmluZyIvPgogICAgICAgICAgICAgICAgICA8L3RhcmdldENvbmZpZz4KICAgICAgICAgICAgICAgICAgPHRhcmdldENvbmZpZyB0YXJnZXRzPSJsaWdodG5pbmdfX1JlY29yZFBhZ2UiPgogICAgICAgICAgICAgICAgICAgICAgPHByb3BlcnR5IG5hbWU9ImRlYnVnIiB0eXBlPSJCb29sZWFuIi8+CiAgICAgICAgICAgICAgICAgIDwvdGFyZ2V0Q29uZmlnPg==",
+        "targets": {
+            "target": [
+                "lightning__RecordPage",
+                "lightning__AppPage",
+                "lightning__HomePage"
+            ]
+        }
+    }
+}

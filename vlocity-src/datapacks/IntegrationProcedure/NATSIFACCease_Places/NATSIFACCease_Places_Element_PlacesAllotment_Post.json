@@ -1,0 +1,63 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "PlacesAllotment_Post",
+    "OmniProcessId": {
+        "Name": "NATSIFACCeasePlaces",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/NATSIFACCease/Places/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Event",
+        "OmniProcessId": {
+            "Name": "NATSIFACCeasePlaces",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/NATSIFACCease/Places/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/NATSIFACCease/Places/Procedure/Event",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Event",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AllotmentId": "=%AllotmentId%",
+            "DatebecomeOperational": "=%CeasePlaces:DateEffectiveFrom%",
+            "EventId": "=%CreateEventAndAssociatedObjects:Event__c_1:Id%",
+            "NewStatusEffectiveDateLoad": "=%CeasePlaces:DateEffectiveFrom%",
+            "NewStatusReason": "=\"Funding agreement ceased\"",
+            "PlaceId": "=%CeasePlaces:Id%",
+            "PlacesNumber": "=%CeasePlaces:CustomLWC1:places%",
+            "totalNumber": "=%CeasePlaces:CustomLWC1:totalNumber%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "NATSICeaseAllotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/NATSIFACCease/Places/Procedure/PlacesAllotment_Post"
+}

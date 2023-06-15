@@ -1,0 +1,61 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RecordRequestForReconsiderationByTheAAT",
+    "OmniProcessId": {
+        "Name": "Revoke",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesREvoke/PlacesRevoke/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RequestForReconsiderationByTheAAT",
+        "OmniProcessId": {
+            "Name": "Revoke",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesREvoke/PlacesRevoke/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesREvoke/PlacesRevoke/Procedure/RequestForReconsiderationByTheAAT",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RequestForReconsiderationByTheAAT",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Comments": "=%Revoke:Comments%",
+            "DateofRequest": "=%Revoke:DateofRequest%",
+            "DecisionDueDate": "=%Revoke:DecisionDueDate1%",
+            "EventId": "=%EventId%",
+            "LinktoDocument": "=%Revoke:LinktoDocument%",
+            "RecordType": "=\"Record_Request_for_Reconsideration_by_the_AAT_Revoke\"",
+            "RequestType": "=\"Request for Reconsideration by the Administrative Appeals Tribunal\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Revoke_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction11",
+        "responseJSONNode": "RecordId",
+        "responseJSONPath": "GPMS_Revocation_History__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesREvoke/PlacesRevoke/Procedure/RecordRequestForReconsiderationByTheAAT"
+}

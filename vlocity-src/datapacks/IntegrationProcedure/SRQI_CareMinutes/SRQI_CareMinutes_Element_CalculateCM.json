@@ -1,0 +1,23 @@
+{
+    "Description": "Called from the CareMinutes_MasterIP IP, which is called during the quarterly periodical calculation",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CalculateCM",
+    "OmniProcessId": {
+        "Name": "Calculate Care Minutes",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/CareMinutes/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "ServID != \"Recalculate\" && CMID != null",
+        "isIfElseBlock": false,
+        "label": "ConditionalBlock1",
+        "show": null
+    },
+    "Type": "Conditional Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/CareMinutes/Procedure/CalculateCM"
+}

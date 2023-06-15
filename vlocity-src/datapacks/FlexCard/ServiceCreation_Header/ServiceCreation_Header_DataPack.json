@@ -1,0 +1,47 @@
+{
+    "AuthorName": "ApprovedProvider",
+    "ClonedFromOmniUiCardKey": "ApprovedProviderServiceCreation_Header/ApprovedProvider/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "accountId",
+                "val": "0019r000003F1OgAAK"
+            },
+            {
+                "id": 4,
+                "name": "recordId",
+                "val": ""
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "accountId": "{recordId}"
+            },
+            "ipMethod": "ServiceCreation_Extract",
+            "resultVar": "",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "The header for Creating a service",
+    "IsTrackingEnabled": false,
+    "Name": "ServiceCreation_Header",
+    "Namespace": "",
+    "OmniUiCardKey": "ServiceCreation_Header/ApprovedProvider/8.0",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "ServiceCreation_Header.json",
+    "SampleDataSourceResponse": "{\"PrivacySpaceRTId\":\"0129r0000002O1UAAU\",\"Service\":{\"ServiceCareSubType\":\"NotApplicable\",\"CareType\":\"NotApplicable\"},\"PermissionName\":\"GPMS_System_Administrators\",\"NATSIFACCareCount\":0,\"HomeCareCount\":0,\"FlexibleCareCount\":0,\"CertificationRTId\":\"0129r0000002O1SAAU\",\"ResidentialCareCount\":0,\"FireSafetyRTId\":\"0129r0000002O1TAAU\"}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 8,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/ServiceCreation_Header"
+}

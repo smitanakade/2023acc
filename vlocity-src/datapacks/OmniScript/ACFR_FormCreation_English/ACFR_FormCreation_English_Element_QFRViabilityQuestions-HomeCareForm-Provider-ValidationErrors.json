@@ -1,0 +1,34 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "EmbeddedOmniScriptKey": "ACFR|SaveProviderHomeCareQuestions|English",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "QFRViabilityQuestions-HomeCareForm-Provider-ValidationErrors",
+    "OmniProcessId": {
+        "Name": "FormsForCommunityPages",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/FormCreation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "Language": "English",
+        "Sub Type": "SaveProviderHomeCareQuestions",
+        "Type": "ACFR",
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "",
+                        "field": "HomeCareViabilityandPrudentialReportingFormId"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "OmniScript",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/FormCreation/English/QFRViabilityQuestions-HomeCareForm-Provider-ValidationErrors"
+}

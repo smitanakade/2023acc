@@ -1,0 +1,35 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "SetFormId",
+    "OmniProcessId": {
+        "Name": "STApprovedProviderQuarterlyFinancialStatements",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/STApprovedProviderQuarterlyFinancialStatements/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "ApprovedProvider_QAOutcome": "=IF(%GetFormData_DR:ApprovedProviderQuarterlyFinancialStatements:QA_Outcome__c%==\"Re-Issue\", true, false)",
+            "formId": "=%ApprovedProviderQuarterlyFinancialStatementsFormId%"
+        },
+        "label": "SetFormId",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/STApprovedProviderQuarterlyFinancialStatements/English/SetFormId"
+}

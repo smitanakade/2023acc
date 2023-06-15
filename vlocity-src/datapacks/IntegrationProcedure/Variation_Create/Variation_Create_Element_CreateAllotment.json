@@ -1,0 +1,67 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateAllotment",
+    "OmniProcessId": {
+        "Name": "Variation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "HasService",
+        "OmniProcessId": {
+            "Name": "Variation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/Create/Procedure/HasService",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "HasService",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressLocation": "=%NewRelatedServiceAddressLocationId%",
+            "AllotmentCareType": "=%AllotmentCareType%",
+            "AllotmentSubType": "=%AllotmentSubType%",
+            "AllotmentType": "=\"Variation\"",
+            "DateOfAllotment": "=%DateOfAllotment%",
+            "OriginalPAPeriodEndDate": "=%OriginalPAPeriodEndDate%",
+            "PAPeriodEndDate": "=%PAPeriodEndDate%",
+            "ParentAllotment": "=%AllotmentId%",
+            "RecordTypeId": "=%AllotmentRT%",
+            "ServiceId": "=%RelocateServiceId%",
+            "VariationEventId": "=%VariationEventId%",
+            "VariedFromId": "=%ServiceId%",
+            "WaiverType": "=%WaiverType%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "VariationAllotmentCreate_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction41",
+        "responseJSONNode": "VariationAllotmentId",
+        "responseJSONPath": "Allotment__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/Create/Procedure/CreateAllotment"
+}

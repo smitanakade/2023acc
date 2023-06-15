@@ -1,0 +1,67 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DRSelfEmployIndividual",
+    "OmniProcessId": {
+        "Name": "IPSaveViabilityHomeCareBusinessStructure",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityHomeCareBusinessStructure/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CBSelfEmployIndividual",
+        "OmniProcessId": {
+            "Name": "IPSaveViabilityHomeCareBusinessStructure",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityHomeCareBusinessStructure/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityHomeCareBusinessStructure/Procedure/CBSelfEmployIndividual",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CBSelfEmployIndividual",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "CKAllied": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKSelfEmployIndividual:CKSelfEmployIndividual_AlliedHealth%",
+            "CKBusinessStructure": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKSelfEmployIndividual:CKSelfEmployIndividual%",
+            "CKClinical": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKSelfEmployIndividual:CKSelfEmployIndividual_ClinicalCare%",
+            "CKDiversional": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKSelfEmployIndividual:CKSelfEmployIndividual_DiversionalTherapy%",
+            "CKLifestyle": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKSelfEmployIndividual:CKSelfEmployIndividual_LifestyleOfficer%",
+            "CKOtherBusiness": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKSelfEmployIndividual:CKSelfEmployIndividual_Other%",
+            "CKPersonal": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKSelfEmployIndividual:CKSelfEmployIndividual_PersonalCare%",
+            "FormId": "=%HomeCareViabilityandPrudentialReportingFormId%",
+            "QuestionID": "=%SVHCSelfEmployIndividualQuestionID%",
+            "TXTAAddtionalInfo": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKSelfEmployIndividual:TXTASelfEmployIndividualAdditionalInformation%",
+            "TXTAOtherBusinessStructureExplain": "=null",
+            "TXTAOtherExplanantion": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKSelfEmployIndividual:TXTASelfEmployIndividualOtherExplanation%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ACFR_SaveViabilityHomeCareBusinessStructure",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityHomeCareBusinessStructure/Procedure/DRSelfEmployIndividual"
+}

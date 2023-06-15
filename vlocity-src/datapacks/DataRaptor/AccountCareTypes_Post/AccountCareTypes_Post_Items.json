@@ -1,0 +1,160 @@
+[
+    {
+        "FormulaSequence": 1,
+        "GlobalKey": "AccountCareTypes_Post6518854420643394",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "AccountCareTypes_Post",
+        "OmniDataTransformationId": {
+            "Name": "AccountCareTypes_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/AccountCareTypes_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "AccountCareTypes_Post6403696520870139",
+        "InputFieldName": "AccountId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "AccountCareTypes_Post",
+        "OmniDataTransformationId": {
+            "Name": "AccountCareTypes_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/AccountCareTypes_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Account__c",
+        "OutputObjectName": "Care_Type__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "AccountCareTypes_Post707325107337408",
+        "InputFieldName": "AccountCareType",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "AccountCareTypes_Post",
+        "OmniDataTransformationId": {
+            "Name": "AccountCareTypes_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/AccountCareTypes_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Care_Type__c",
+        "OutputObjectName": "Care_Type__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "AccountCareTypes_Post9923610155930049",
+        "InputFieldName": "AccountProviderStatus",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "AccountCareTypes_Post",
+        "OmniDataTransformationId": {
+            "Name": "AccountCareTypes_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/AccountCareTypes_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Current_Approval_Status__c",
+        "OutputObjectName": "Care_Type__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "today",
+        "GlobalKey": "AccountCareTypes_Post27654939489389596",
+        "InputFieldName": "AccountEffectiveDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "AccountCareTypes_Post",
+        "OmniDataTransformationId": {
+            "Name": "AccountCareTypes_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/AccountCareTypes_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Date(YYYY-MM-dd)",
+        "OutputFieldName": "Effective_Date__c",
+        "OutputObjectName": "Care_Type__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "AccountCareTypes_Post7355346350328273",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "AccountCareTypes_Post",
+        "OmniDataTransformationId": {
+            "Name": "AccountCareTypes_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/AccountCareTypes_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Care_Type__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "AccountCareTypes_Post8111357488898212",
+        "InputFieldName": "CareTypeRecordId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "LookupByFieldName": "DeveloperName",
+        "LookupObjectName": "RecordType",
+        "LookupReturnedFieldName": "Id",
+        "Name": "AccountCareTypes_Post",
+        "OmniDataTransformationId": {
+            "Name": "AccountCareTypes_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/AccountCareTypes_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "RecordTypeId",
+        "OutputObjectName": "Care_Type__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "AccountCareTypes_PostCustom2312",
+        "InputFieldName": "StatusReason",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "AccountCareTypes_Post",
+        "OmniDataTransformationId": {
+            "Name": "AccountCareTypes_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/AccountCareTypes_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Status_Reason__c",
+        "OutputObjectName": "Care_Type__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

@@ -1,0 +1,51 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SubmissionsDueByNoLaterThanDateProvisionalText",
+    "OmniProcessId": {
+        "Name": "RevocationPlaces",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RevocationPlaces/RevocationPlaces/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RevokeDetailsProvisional",
+        "OmniProcessId": {
+            "Name": "RevocationPlaces",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/RevocationPlaces/RevocationPlaces/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/RevocationPlaces/RevocationPlaces/English/RevokeDetailsProvisional",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RevokeDetailsProvisional",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataJSON": false,
+        "label": "TextBlock1",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "NaN/NaN/NaN",
+                        "field": "SubmissionsDueByNoLaterThanDateProvisional"
+                    }
+                ]
+            }
+        },
+        "text": "<p><strong>Submissions Due By no later than Date : </strong>%SubmissionsDueByNoLaterThanDateProvisional%</p>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RevocationPlaces/RevocationPlaces/English/SubmissionsDueByNoLaterThanDateProvisionalText"
+}

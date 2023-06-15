@@ -1,0 +1,42 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "OfflinePlacesSummary/GPMS/2.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 0,
+                "name": "recordId",
+                "val": "a2KBm0000016hxlMAA"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "DataRaptor",
+        "value": {
+            "bundle": "OfflinePlaces_Extract",
+            "bundleType": "",
+            "dsDelay": "",
+            "inputMap": {
+                "AllotmentId": "{recordId}"
+            },
+            "resultVar": ""
+        }
+    },
+    "Description": "Displays Offline Places related to Allotment",
+    "IsTrackingEnabled": false,
+    "Name": "OfflinePlacesSummary_Flexible",
+    "Namespace": "",
+    "OmniUiCardKey": "OfflinePlacesSummary_Flexible/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "OfflinePlacesSummary_Flexible.json",
+    "SampleDataSourceResponse": "[{\"OfflineStartDate\":\"10/02/2023\",\"OfflineEndDate\":\"2/10/2023\",\"AllotmentId\":\"a2KBm0000016hxlMAA\",\"Offline\":20,\"PrimaryReason\":\"Revocation of Provider’s Approval Status[s10-3]\",\"ExpectedEndDate\":\"3/02/2023\",\"DateOfNotification\":\"1/02/2023\"}]",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/OfflinePlacesSummary_Flexible"
+}

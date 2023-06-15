@@ -1,0 +1,76 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateAddress_Event",
+    "OmniProcessId": {
+        "Name": "ServiceVariationAddress",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceVariationAddress/CreateEvent/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CreateServiceChangeEvent_ResidentialOnly",
+        "OmniProcessId": {
+            "Name": "ServiceVariationAddress",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceVariationAddress/CreateEvent/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceVariationAddress/CreateEvent/Procedure/CreateServiceChangeEvent_ResidentialOnly",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CreateServiceChangeEvent_ResidentialOnly",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressId": "=%checkExistingAddress:dupCheckResult:recordId%",
+            "BuildingName": "=%ServiceAddresses:Address:BuildingName_Physical%",
+            "CGISOverride": "=IF(%SelectAddress:ManualCGISOverride% = \"Manual CGIS Override\" OR %SelectAddress:CGISAddress% = \"No\", \"true\", \"false\")",
+            "City": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:City% , %ServiceAddresses:Address:SuburbOrTown_Physical_UPPER%)",
+            "Country": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:Country%, %ServiceAddresses:Address:Country_Physical%)",
+            "Latitude": "=%SelectAddress:LatitudeOveride%",
+            "LevelNumber": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:level_name%, %ServiceAddresses:Address:LevelFloor_Physical%)",
+            "LevelType": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:level_type%, IF (%ServiceAddresses:Address:LevelFloorRadio_Physical% <> \"Not Applicable\", %ServiceAddresses:Address:LevelFloorRadio_Physical%, NULL))",
+            "Longitude": "=%SelectAddress:LongitudeOverride%",
+            "LotNumber": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:place_name%, IF(%ServiceAddresses:Address:LotStreetRadio_Physical% = \"Lot/Section Number\", %ServiceAddresses:Address:StreetNumber_Physical%, NULL))",
+            "Postcode": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:Postcode%, %ServiceAddresses:Address:PostCode_Physical%)",
+            "State": "=IF(%CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL,%SelectAddress:CGISState%, %ServiceAddresses:Address:State_Physical%)",
+            "Street": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:st_name%, %ServiceAddresses:Address:StreetName_Physical_UPPER%, NULL)",
+            "StreetNumber": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:add_num%, IF(%ServiceAddresses:Address:LotStreetRadio_Physical% = \"Street Number\",%ServiceAddresses:Address:StreetNumber_Physical%, NULL))",
+            "StreetSuffixType": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:st_dir%, %ServiceAddresses:Address:StreetSuffix_Physical%)",
+            "StreetTypeDescription": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:st_type%, %ServiceAddresses:Address:StreetType_Physical%, NULL)",
+            "UniqueKey": "=%checkExistingAddress:dupCheckResult:concatAddress%",
+            "UnitNumber": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:unit_name%, %ServiceAddresses:Address:Unit_Physical%)",
+            "UnitType": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:unit_type%, IF( %ServiceAddresses:Address:UnitRadio_Physical% <> 'Not Applicable, '%ServiceAddresses:Address:UnitRadio_Physical%, NULL))",
+            "ValidatedByCGIS": "=IF(%SelectAddress:CustomLWC2:SelectedAddress:gnaf_pid% = NULL OR %SelectAddress:CGISAddress% = \"No\" , \"No\", \"Yes\")",
+            "gnaf_pid": "=%SelectAddress:CustomLWC2:SelectedAddress:gnaf_pid%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Address_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceVariationAddress/CreateEvent/Procedure/CreateAddress_Event"
+}

@@ -1,0 +1,51 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "TextBlock32",
+    "OmniProcessId": {
+        "Name": "QFR Viability Questions - Home Care Form - Provider - Validation Errors",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveProviderHomeCareQuestions/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "BLKSelfEmployIndividual",
+        "OmniProcessId": {
+            "Name": "QFR Viability Questions - Home Care Form - Provider - Validation Errors",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveProviderHomeCareQuestions/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveProviderHomeCareQuestions/English/BLKSelfEmployIndividual",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "BLKSelfEmployIndividual",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "TextBlock2",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "homeVia_QA_Outcome"
+                    }
+                ]
+            }
+        },
+        "text": "<h4><span style=\"color: #e03e2d;\">QA Assessor Comments</span></h4>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveProviderHomeCareQuestions/English/TextBlock32"
+}

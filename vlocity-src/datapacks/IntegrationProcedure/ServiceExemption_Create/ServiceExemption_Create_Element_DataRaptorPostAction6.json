@@ -1,0 +1,60 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DataRaptorPostAction6",
+    "OmniProcessId": {
+        "Name": "CreateServiceExemption",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceExemption/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CreateAllExemptions",
+        "OmniProcessId": {
+            "Name": "CreateServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceExemption/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceExemption/Create/Procedure/CreateAllExemptions",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CreateAllExemptions",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "CER_Exempt__c": "=%ifStarRating:cerFlag%",
+            "CM_Exempt__c": "=%ifStarRating:cmFlag%",
+            "QI_Exempt__c": "=%ifStarRating:qiFlag%",
+            "Reason__c": "=\"Business Exemption\"",
+            "RecordTypeId": "=\"CM_Exemption\"",
+            "Type": "=\"Business\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "SRQI_DR_CreateServiceExemption",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction2",
+        "responseJSONNode": "CMExemptionID",
+        "responseJSONPath": "SRQI_Exemption__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceExemption/Create/Procedure/DataRaptorPostAction6"
+}

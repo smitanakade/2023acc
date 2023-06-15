@@ -1,0 +1,60 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ApplicationCreateItemHomeCare",
+    "OmniProcessId": {
+        "Name": "ApplicationReconsiderationOutcome",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/ReconsiderationOutcome/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ReconsiderationOutcome",
+        "OmniProcessId": {
+            "Name": "ApplicationReconsiderationOutcome",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Application/ReconsiderationOutcome/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Application/ReconsiderationOutcome/Procedure/ReconsiderationOutcome",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ReconsiderationOutcome",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "ApprovalStatus": "=%HomeCareStatus%",
+            "CareTypeId": "=%Application:HomeCare%",
+            "Decision": "=%HomeCareDecision%",
+            "DecisionType": "=%HomeCareDecisionType%",
+            "RecommendationItem": "=%RecommendationItem%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ApplicationCreateCareTypeItem_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "%HomeCare% == \"true\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction2",
+        "responseJSONNode": "HomeCareItem",
+        "responseJSONPath": "Recommendation_Item_Care_Type__c_2:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/ReconsiderationOutcome/Procedure/ApplicationCreateItemHomeCare"
+}

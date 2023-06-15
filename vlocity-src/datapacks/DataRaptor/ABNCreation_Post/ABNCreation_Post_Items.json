@@ -1,0 +1,61 @@
+[
+    {
+        "GlobalKey": "ABNCreation_PostCustom0jI9r000000017NEAQItem1",
+        "InputFieldName": "data:businessEntity202001:ABN:identifierValue",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": true,
+        "Name": "ABNCreation_Post",
+        "OmniDataTransformationId": {
+            "Name": "ABNCreation_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ABNCreation_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "String",
+        "OutputFieldName": "ABN_Number__c",
+        "OutputObjectName": "Registered_ABN_Name__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "ABNCreation_PostCustom0jI9r000000017NEAQItem3",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "ABNCreation_Post",
+        "OmniDataTransformationId": {
+            "Name": "ABNCreation_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ABNCreation_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Registered_ABN_Name__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ABNCreation_PostCustom0jI9r000000017NEAQItem2",
+        "InputFieldName": "data:businessEntity202001:mainName:organisationName",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ABNCreation_Post",
+        "OmniDataTransformationId": {
+            "Name": "ABNCreation_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ABNCreation_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Name",
+        "OutputObjectName": "Registered_ABN_Name__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

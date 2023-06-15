@@ -1,0 +1,54 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Disclosure2",
+    "OmniProcessId": {
+        "Name": "Application_Recommendation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/Recommendation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "DelegatesDecision",
+        "OmniProcessId": {
+            "Name": "Application_Recommendation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Application/Recommendation/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Application/Recommendation/English/DelegatesDecision",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "DelegatesDecision",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "checkLabel": "",
+        "conditionType": "Optional if False",
+        "controlWidth": 12,
+        "hide": false,
+        "label": "Declaration of Compliance",
+        "readOnly": false,
+        "required": true,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "SendBackToAssessor",
+                        "field": "SendBack"
+                    }
+                ]
+            }
+        },
+        "text": "<p data-ccp-props=\"{&quot;335559683&quot;:0,&quot;335559685&quot;:142,&quot;335562766&quot;:4,&quot;335562767&quot;:12,&quot;335562768&quot;:4,&quot;335562769&quot;:6}\"><span data-scheme-color=\"@000000,1,\" data-usefontface=\"true\" data-contrast=\"none\">As a delegate of the Commissioner of the Aged Care Quality and Safety Commission, I&nbsp;</span><span data-scheme-color=\"@000000,1,\" data-usefontface=\"true\" data-contrast=\"none\">have reviewed the recommendation made in this assessment and have considered&nbsp;</span><span data-scheme-color=\"@000000,1,\" data-usefontface=\"true\" data-contrast=\"none\">whether:</span>​</p>\n<ul>\n<li style=\"list-style-type: none;\">\n<ul>\n<li data-charcodes=\"61623\" data-font=\"Symbol,Sans-Serif\" data-buautonum=\"8\" data-margin=\"540\" data-aria-posinset=\"1\" data-aria-level=\"1\"><span data-scheme-color=\"@000000,1,\" data-usefontface=\"true\" data-contrast=\"none\">63D(1) The person (the Applicant) has made an application under subsection&nbsp;</span><span data-scheme-color=\"@000000,1,\" data-usefontface=\"true\" data-contrast=\"none\">63B(1)</span>​</li>\n<li data-charcodes=\"61623\" data-font=\"Symbol,Sans-Serif\" data-buautonum=\"8\" data-margin=\"540\" data-aria-posinset=\"2\" data-aria-level=\"1\"><span data-scheme-color=\"@000000,1,\" data-usefontface=\"true\" data-contrast=\"none\">63D(2) (a) The Applicant is a corporation</span>​</li>\n<li data-charcodes=\"61623\" data-font=\"Symbol,Sans-Serif\" data-buautonum=\"8\" data-margin=\"540\" data-aria-posinset=\"3\" data-aria-level=\"1\"><span data-scheme-color=\"@000000,1,\" data-usefontface=\"true\" data-contrast=\"none\">63D(2) (b) The Applicant is suitable to provide aged care</span>​</li>\n<li data-charcodes=\"61623\" data-font=\"Symbol,Sans-Serif\" data-buautonum=\"8\" data-margin=\"540\" data-aria-posinset=\"4\" data-aria-level=\"1\"><span data-scheme-color=\"@000000,1,\" data-usefontface=\"true\" data-contrast=\"none\">63D(2) (c) None of the Applicant&rsquo;s key personnel is a disqualified individual</span></li>\n</ul>\n</li>\n</ul>",
+        "textKey": ""
+    },
+    "Type": "Disclosure",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/Recommendation/English/Disclosure2"
+}

@@ -1,0 +1,59 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DRStrategyAlignmentYes",
+    "OmniProcessId": {
+        "Name": "IPSaveViabilityHomeCareQuestion",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityHomeCareQuestion/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CBStrategyAlignmentYes",
+        "OmniProcessId": {
+            "Name": "IPSaveViabilityHomeCareQuestion",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityHomeCareQuestion/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityHomeCareQuestion/Procedure/CBStrategyAlignmentYes",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CBStrategyAlignmentYes",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AdditionalInformation": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessImprovementAdvice:TXTAHCStrategyAlignment%",
+            "FormId": "=%HomeCareViabilityandPrudentialReportingFormId%",
+            "QuestionID": "=%SVHCStrategyAlignmentQuestionID%",
+            "RadioYesNo": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessImprovementAdvice:RDHCStrategyAlignment%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ACFR_SaveViabilityHomeCareQuestion",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityHomeCareQuestion/Procedure/DRStrategyAlignmentYes"
+}

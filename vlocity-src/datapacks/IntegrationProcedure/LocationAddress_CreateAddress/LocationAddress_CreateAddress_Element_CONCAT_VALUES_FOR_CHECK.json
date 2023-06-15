@@ -1,0 +1,32 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CONCAT_VALUES_FOR_CHECK",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "POBOX_EXISTING": "=IF(%PostalAddresses:PostalAddressBlock:POBoxBlock:POBoxType_Postal% <> NULL, CONCAT(%PostalAddresses:PostalAddressBlock:POBoxBlock:POBoxType_Postal%,%PostalAddresses:PostalAddressBlock:POBoxBlock:POBox_Postal_UPPER%, %PostalAddresses:PostalAddressBlock:POBoxBlock:POBoxSuburbOrTown_Postal_UPPER%,%PostalAddresses:PostalAddressBlock:POBoxBlock:POBoxState_Postal%,%PostalAddresses:PostalAddressBlock:POBoxBlock:POBoxPostCode_Postal%))",
+            "ServicePhysicalAdress_EXISTING": ""
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues2",
+        "responseJSONNode": "CheckPOBOXAddress",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/CONCAT_VALUES_FOR_CHECK"
+}

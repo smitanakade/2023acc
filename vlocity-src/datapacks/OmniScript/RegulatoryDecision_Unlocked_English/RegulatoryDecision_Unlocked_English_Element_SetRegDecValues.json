@@ -1,0 +1,44 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetRegDecValues",
+    "OmniProcessId": {
+        "Name": "SRQI_OS_UnlockedRegulatoryDecision",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RegulatoryDecision/Unlocked/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "DefaultStarRating": "%RD:ServiceComplianceRatingEffect%",
+            "OmniType": "%RD:OmniType%",
+            "PreviousStatus": "%RD:PreviousStatus%",
+            "ProviderNameTA": "%RD:ServiceProviderName%",
+            "Published": "%RD:Published%",
+            "RatingRelevant": "%RD:RatingRelevant%",
+            "RegulatoryDecisionTypeTA": "%RD:RegulatoryDecisionMade%",
+            "SCRRating": "%RD:SCRRating%",
+            "ServiceAccountTA": "%RD:ServiceName%",
+            "Status": "%RD:Status%",
+            "userProfile": "%userProfile%",
+            "userRole": "%User|1:Role%"
+        },
+        "label": "SetRegDecValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RegulatoryDecision/Unlocked/English/SetRegDecValues"
+}

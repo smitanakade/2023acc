@@ -1,0 +1,42 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "PlacesTrackerPending_Parent/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "0cEBm0000000IJVMA2"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "ServiceId": "{recordId}"
+            },
+            "ipMethod": "Allotment_Historical",
+            "resultVar": "",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "PlacesTrackerHistorical_Parent",
+    "Namespace": "",
+    "OmniUiCardKey": "PlacesTrackerHistorical_Parent/GPMS/2.0",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "PlacesTrackerHistorical_Parent.json",
+    "SampleDataSourceResponse": "{\"Allotment\":[{\"Allotment_Sub_Type\":\"S14-1\",\"NotSpecified\":0,\"TotalNumberOfPlaces\":0,\"Id\":\"a2KBm0000019Mn7MAE\",\"Date_of_Allotment\":\"17/02/2023\",\"Operational\":0,\"Care_Type\":\"Residential\",\"CountHighCareLevel\":0,\"ZRIL\":\"No\",\"CountResiCareLevel\":0,\"Name\":\"ALMT-00095\",\"SplKey\":0,\"Pre_1997\":\"No\",\"CountSTRCCareLevel\":0,\"CountCommunityCareLevel\":0,\"Provisional\":0,\"CountTransitionCareCareLevel\":0,\"Offline\":0,\"GeneralAccess\":0,\"CountLowCareLevel\":0,\"CountHomeCareCareLevel\":0,\"Ceased\":0,\"Allotment_Type\":\"Allocation\"},{\"Allotment_Sub_Type\":\"S14-9\",\"NotSpecified\":0,\"TotalNumberOfPlaces\":12,\"Id\":\"a2KBm0000016jUvMAI\",\"Date_of_Allotment\":\"30/01/2023\",\"Operational\":12,\"Care_Type\":\"Flexible\",\"CountHighCareLevel\":0,\"ZRIL\":\"No\",\"CountResiCareLevel\":12,\"Name\":\"ALMT-00035\",\"SplKey\":0,\"Pre_1997\":\"No\",\"CountSTRCCareLevel\":0,\"CountCommunityCareLevel\":0,\"Provisional\":0,\"CountTransitionCareCareLevel\":0,\"Offline\":0,\"GeneralAccess\":0,\"CountLowCareLevel\":0,\"CountHomeCareCareLevel\":0,\"Ceased\":0,\"Allotment_Type\":\"Allocation\"}],\"Service\":{\"CareType\":\"Residential\"}}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 2,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/PlacesTrackerHistorical_Parent"
+}

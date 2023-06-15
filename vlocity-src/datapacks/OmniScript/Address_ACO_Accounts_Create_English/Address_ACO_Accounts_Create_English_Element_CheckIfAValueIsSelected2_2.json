@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "CheckIfAValueIsSelected2_2",
+    "OmniProcessId": {
+        "Name": "Aged Care Addresses",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_ACO_Accounts/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "SelectPostalAddress",
+        "OmniProcessId": {
+            "Name": "Aged Care Addresses",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_ACO_Accounts/Create/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_ACO_Accounts/Create/English/SelectPostalAddress",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "SelectPostalAddress",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF(%ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1% = false, 'Match',IF(%SelectPostalAddress:ACOSingleLineInput1% = %SelectPostalAddress:ACOSingleLineAlreadySelected1% & %ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1% = true & %ACOPostalAddresses:ACOPostalAddressBlock:ACOSingleLine_Postal% <> ', null null null null,  null null' & %SelectPostalAddress:ACOCGISAddress1% = 'Yes', 'Match',IF(%SelectPostalAddress:ACOCGISAddress1% = 'No', 'Match', 'No Match')))",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "CheckIfAValueIsSelected2_2",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_ACO_Accounts/Create/English/CheckIfAValueIsSelected2_2"
+}

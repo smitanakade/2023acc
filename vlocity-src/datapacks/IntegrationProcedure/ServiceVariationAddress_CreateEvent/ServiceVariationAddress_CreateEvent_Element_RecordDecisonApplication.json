@@ -1,0 +1,66 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RecordDecisonApplication",
+    "OmniProcessId": {
+        "Name": "ServiceVariationAddress",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceVariationAddress/CreateEvent/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RecordDecision",
+        "OmniProcessId": {
+            "Name": "ServiceVariationAddress",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceVariationAddress/CreateEvent/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceVariationAddress/CreateEvent/Procedure/RecordDecision",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RecordDecision",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Comments": "=%VaryAddress:Comments%",
+            "Decision": "=%VaryAddress:Decision2%",
+            "DecisionDate": "=%VaryAddress:DecisionDate1%",
+            "DelegateName": "=%VaryAddress:DelegateName%",
+            "DelegatePosition": "=%VaryAddress:DelegatePosition%",
+            "DelegateState": "=%VaryAddress:DelegateState%",
+            "EventId": "=%EventId%",
+            "IsActingInPosition": "=%VaryAddress:IsActing%",
+            "LinkToDocument": "=%VaryAddress:LinktoDocument%",
+            "RecordType": "=\"GPMS_Record_Decision_VSL\"",
+            "VariationDateBeingApproved": "=%ProposedVariationDayLoad%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "VaryServiceAddress_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction3",
+        "responseJSONNode": "RecordId",
+        "responseJSONPath": "GPMS_Vary_Service_Location_History__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceVariationAddress/CreateEvent/Procedure/RecordDecisonApplication"
+}

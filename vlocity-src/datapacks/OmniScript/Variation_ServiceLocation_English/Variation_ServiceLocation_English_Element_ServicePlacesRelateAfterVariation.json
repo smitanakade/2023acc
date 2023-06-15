@@ -1,0 +1,147 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "ServicePlacesRelateAfterVariation",
+    "OmniProcessId": {
+        "Name": "VariationServiceLocation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/ServiceLocation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "VariationService",
+        "OmniProcessId": {
+            "Name": "VariationServiceLocation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/ServiceLocation/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/ServiceLocation/English/VariationService",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "VariationService",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "clearValue": true,
+        "conditionType": "Hide if False",
+        "controlWidth": 8,
+        "dataSource": {
+            "mapItems": {
+                "inputParameters": [
+                    {
+                        "element": "ServiceAccountId",
+                        "inputParam": "AccountId"
+                    },
+                    {
+                        "element": "ServiceCareType",
+                        "inputParam": "CareType"
+                    },
+                    {
+                        "element": "ServiceId",
+                        "inputParam": "ServiceId"
+                    },
+                    {
+                        "element": "ServiceCareSubType",
+                        "inputParam": "ServiceCareSubType"
+                    }
+                ],
+                "phase1MapItems": [
+                    {
+                        "DomainObjectFieldAPIName__c": "SAR",
+                        "FilterOperator__c": "=",
+                        "FilterValue__c": "AccountId",
+                        "InterfaceFieldAPIName__c": "Provider_Name__c",
+                        "InterfaceObjectLookupOrder__c": 1,
+                        "InterfaceObjectName__c": "Service_Account_Relationship__c"
+                    },
+                    {
+                        "DomainObjectFieldAPIName__c": "SAR",
+                        "FilterOperator__c": "=",
+                        "FilterValue__c": "CareType",
+                        "InterfaceFieldAPIName__c": "Care_Type__c",
+                        "InterfaceObjectLookupOrder__c": 1,
+                        "InterfaceObjectName__c": "Service_Account_Relationship__c"
+                    },
+                    {
+                        "DomainObjectFieldAPIName__c": "SAR",
+                        "FilterOperator__c": "<>",
+                        "FilterValue__c": "ServiceId",
+                        "InterfaceFieldAPIName__c": "Service_Name__c",
+                        "InterfaceObjectLookupOrder__c": 1,
+                        "InterfaceObjectName__c": "Service_Account_Relationship__c"
+                    },
+                    {
+                        "DomainObjectFieldAPIName__c": "SAR",
+                        "FilterOperator__c": "=",
+                        "FilterValue__c": "\"\"",
+                        "InterfaceFieldAPIName__c": "Association_End_Date__c",
+                        "InterfaceObjectLookupOrder__c": 1,
+                        "InterfaceObjectName__c": "Service_Account_Relationship__c"
+                    },
+                    {
+                        "DomainObjectFieldAPIName__c": "ACPR",
+                        "FilterOperator__c": "=",
+                        "FilterValue__c": "ServiceCareSubType",
+                        "InterfaceFieldAPIName__c": "Care_Sub_Type__c",
+                        "InterfaceObjectLookupOrder__c": 1,
+                        "InterfaceObjectName__c": "Service_Account_Relationship__c"
+                    }
+                ],
+                "phase2MapItems": [
+                    {
+                        "DomainObjectAPIName__c": "JSON",
+                        "DomainObjectCreationOrder__c": 1,
+                        "DomainObjectFieldAPIName__c": "name",
+                        "InterfaceFieldAPIName__c": "SAR:Service_Name__c"
+                    },
+                    {
+                        "DomainObjectAPIName__c": "JSON",
+                        "DomainObjectCreationOrder__c": 1,
+                        "DomainObjectFieldAPIName__c": "value",
+                        "InterfaceFieldAPIName__c": "SAR:Service_Name__r.Name"
+                    }
+                ]
+            },
+            "type": "SObject"
+        },
+        "defaultValue": null,
+        "disOnTplt": false,
+        "errorMessage": {
+            "custom": [
+            ],
+            "default": null
+        },
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "inputWidth": 12,
+        "label": "Service and location to which the places will relate after the variation",
+        "placeholder": "",
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": true,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": null,
+                        "field": "ACPRName"
+                    }
+                ]
+            }
+        },
+        "showInputWidth": false
+    },
+    "Type": "Lookup",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/ServiceLocation/English/ServicePlacesRelateAfterVariation"
+}

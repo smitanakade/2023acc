@@ -1,0 +1,79 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ServiceAllotmentFlexibleMPSPost",
+    "OmniProcessId": {
+        "Name": "ServiceAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Allotment/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "FlexibleMPS",
+        "OmniProcessId": {
+            "Name": "ServiceAllotment",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Allotment/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Allotment/Procedure/FlexibleMPS",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "FlexibleMPS",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressLocation": "=%ServiceToWhichAllotmentRelates:CreateAllotmentAddresses:AllotmentAddress:AddressLocationId%",
+            "AllotmentRecordTypeId": "=\"Approved_Provider_Flexible_ALM\"",
+            "AllotmentType": "=\"Allocation\"",
+            "CareLevel": "=IF(%ServiceCareSubType% = \"Short-Term Restorative Care (STRC)\", \"Short Term Restorative Care(STRC)\", IF(%ServiceCareSubType% = \"Multi-Purpose Service\", \"Multiple-Purpose Service\", IF(%ServiceCareSubType% = \"Transition Care\", \"Transition\", %ServiceCareSubType%)))",
+            "CareType": "=\"Flexible\"",
+            "Comments": "=%AllotmentDetails:Comments%",
+            "DateOfAllotment": "=%AllotmentDetails:DateOfAllotment%",
+            "EndDateOfAllotment": "=%AllotmentDetails:EndDateOfAllotment%",
+            "EventDateOfApproval": "=TODAY()",
+            "EventRecordTypeId": "=\"Record_Allotment\"",
+            "EventService": "=%ServiceId%",
+            "EventStatus": "=\"Approved\"",
+            "EventStatusDate": "=TODAY()",
+            "EventType": "=\"Create Allotment\"",
+            "LinkToDocument": "=%AllotmentDetails:LinkToDocument%",
+            "OriginalDateOfAllotment": "=%AllotmentDetails:DateOfAllotment%",
+            "PAPeriodEndDate": "=%PAPeriodEndDate%",
+            "ServiceId": "=%ServiceId%",
+            "SubType": "=%AllotmentDetails:AllotmentSubType%",
+            "WaiverType": "=%SummaryPage:WaiverType%"
+        },
+        "additionalOutput": {
+            "AllotmentId": "=%ServiceAllotmentFlexibleMPSPost:Allotment__c_3:Id%",
+            "EventAllotmentId": "=%ServiceAllotmentFlexibleMPSPost:Event_Allotment__c_4:Id%",
+            "EventId": "=%ServiceAllotmentFlexibleMPSPost:Event__c_1:Id%",
+            "ServiceEventId": "=%ServiceAllotmentFlexibleMPSPost:Service_Event__c_2:Id%"
+        },
+        "bundle": "Allotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Allotment/Procedure/ServiceAllotmentFlexibleMPSPost"
+}

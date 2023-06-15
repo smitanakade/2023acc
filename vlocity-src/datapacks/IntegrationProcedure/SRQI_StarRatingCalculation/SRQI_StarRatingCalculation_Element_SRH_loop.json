@@ -1,0 +1,47 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SRH_loop",
+    "OmniProcessId": {
+        "Name": "SRHCalculation_New",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/StarRatingCalculation/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ReCalcSCRWithNewSRH",
+        "OmniProcessId": {
+            "Name": "SRHCalculation_New",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/StarRatingCalculation/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/StarRatingCalculation/Procedure/ReCalcSCRWithNewSRH",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ReCalcSCRWithNewSRH",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "label": "LoopBlock3",
+        "loopList": "SRHDataTransformed",
+        "loopOutput": {
+            "ExemptReason": "%SRHDataTransformed:ExemptionReason%",
+            "IsExempt": "%SRHDataTransformed:ExemptionActive%",
+            "MissingRating": "%SRHDataTransformed:MissingRating%",
+            "PublishDates": "%PublishDates:PublishDates%",
+            "RecordId": "%CalcSRHData:output:calculationResults:RecordId%",
+            "SCRRating": "%SRHDataTransformed:SCRRating%",
+            "StarRatingNumber": "%CalcSRHData:output:calculationResults:StarRatingNumber%",
+            "Status": "%SRHDataTransformed:Status%"
+        },
+        "show": null
+    },
+    "Type": "Loop Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/StarRatingCalculation/Procedure/SRH_loop"
+}

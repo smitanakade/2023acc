@@ -1,0 +1,64 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateGEOCodedAddresses",
+    "OmniProcessId": {
+        "Name": "ServiceAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "AllGEOCodedAddreses",
+        "OmniProcessId": {
+            "Name": "ServiceAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceAddress/CreateAddress/Procedure/AllGEOCodedAddreses",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "AllGEOCodedAddreses",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressType": "=%AddressRecordType%",
+            "City": "=%ServiceAddresses:Address:ServiceAddress-Block:CityDisplay_Service%",
+            "Country": "=%ServiceAddresses:Address:Country%",
+            "CurrentServiceId": "=%CurrentServiceId%",
+            "Latitude": "=%ServiceAddresses:Address:LatitudeOveride%",
+            "Longitude": "=%ServiceAddresses:Address:LongitudeOverride%",
+            "Postcode": "=%ServiceAddresses:Address:ServiceAddress-Block:PostcodeDisplay_Service%",
+            "ServiceAddressId": "=%ServiceAddressId%",
+            "State": "=%ServiceAddresses:Address:ServiceAddress-Block:StateDisplay_Service%",
+            "Street": "=%ServiceAddresses:Address:ServiceAddress-Block:StreetDisplay_Service%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ServicesAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceAddress/CreateAddress/Procedure/CreateGEOCodedAddresses"
+}

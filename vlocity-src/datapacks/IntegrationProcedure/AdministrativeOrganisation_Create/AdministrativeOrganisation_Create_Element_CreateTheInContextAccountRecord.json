@@ -1,0 +1,57 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateTheInContextAccountRecord",
+    "OmniProcessId": {
+        "Name": "CreateAdministrativeOrganisation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/AdministrativeOrganisation/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "OnlyifWeNeedToCreateTheInContextAccountRecord",
+        "OmniProcessId": {
+            "Name": "CreateAdministrativeOrganisation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/AdministrativeOrganisation/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/AdministrativeOrganisation/Create/Procedure/OnlyifWeNeedToCreateTheInContextAccountRecord",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "OnlyifWeNeedToCreateTheInContextAccountRecord",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Name": "=%AdministrativeOrganisation:AODetail:AdministrativeOrganisationName%",
+            "NameEffectiveDate": "=%AdministrativeOrganisation:AODetail:NameEffectiveDate%",
+            "RecordTypeId": "=\"Administrative_Organisation\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "AccountGenericParentRecord_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction2",
+        "responseJSONNode": "AccountId",
+        "responseJSONPath": "Account_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/AdministrativeOrganisation/Create/Procedure/CreateTheInContextAccountRecord"
+}

@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ProviderContactInitialization_SV",
+    "OmniProcessId": {
+        "Name": "FormsForCommunityPages",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/FormCreation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "ApprovedProviderQuarterlyFinancialStatementsFormId": "=%GetFormData_DR:ApprovedProviderQuarterlyFinancialStatements:Id%",
+            "FoodandNutritionReportingFormId": "=%GetFormData_DR:FoodandNutritionReporting:Id%",
+            "HomeCareLabourCostsandHoursFormId": "=%GetFormData_DR:HomeCareLabourCostsandHours:Id%",
+            "HomeCareViabilityIsReadOnly": "=BOOLEAN(OR(AND(%GetFormData_DR:HomeCareViabilityandPrudentialReporting:QA_Outcome__c%!=\"Re-Issue\", %GetFormData_DR:Case:Status%==\"Reissued\"),%isReadOnly%==\"true\"))",
+            "HomeCareViabilityandPrudentialReportingFormId": "=%GetFormData_DR:HomeCareViabilityandPrudentialReporting:Id%",
+            "MPSFoodandNutritionFormId": "%GetFormData_DR:MPSFoodandNutritionReporting:Id%",
+            "NATSIFACPFoodandNutritionFormId": "%GetFormData_DR:NATSIFACPFoodandNutritionReporting:Id%",
+            "ResiViabilityIsReadOnly": "=BOOLEAN(OR(AND(%GetFormData_DR:ResidentialViabilityandPrudentialReporting:QA_Outcome__c%!=\"Re-Issue\", %GetFormData_DR:Case:Status%==\"Reissued\"),%isReadOnly%==\"true\",%isReadOnlyInternal%==true))",
+            "ResidentialLabourCostsandHoursFormId": "=%GetFormData_DR:ResidentialLabourCostsandHours:Id%",
+            "ResidentialViabilityandPrudentialReportingFormId": "=%GetFormData_DR:ResidentialViabilityandPrudentialReporting:Id%",
+            "accountRecordId": "=%GetFormData_DR:Case:Account__c%",
+            "caseRecordId": "=%GetFormData_DR:Case:Case__c%"
+        },
+        "label": "ProviderContactInitialization_SV",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/FormCreation/English/ProviderContactInitialization_SV"
+}

@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "SingleLine_Physical",
+    "OmniProcessId": {
+        "Name": "Addresses",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Accounts/Update/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Address",
+        "OmniProcessId": {
+            "Name": "Addresses",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Accounts/Update/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Accounts/Update/English/Address",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Address",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataType": "Text",
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF(%LotStreetRadio_Physical% = \"Lot/Section Number\", \"LOT \" +  CASE(%StreetNumber_Physical%,UPPER), CASE(%StreetNumber_Physical%,UPPER)) + ' ' + CASE(%StreetName_Physical%,UPPER) + ' ' + IF(%StreetSuffix_Physical% = NULL, CASE(%StreetType_Physical%,UPPER),  CASE(%StreetType_Physical%,UPPER) + ' ' + CASE(%StreetSuffix_Physical%,UPPER)) + ', ' + IF(%UnitRadio_Physical% <> 'Not Applicable', %UnitRadio_Physical%  + ' ' + %Unit_Physical% + ' ', '') + IF(%LevelFloorRadio_Physical% <> 'Not Applicable', %LevelFloorRadio_Physical%  + ' ' + %LevelFloor_Physical% + ', ', '') + CASE(%SuburbOrTown_Physical%,UPPER)  + ' ' + %State_Physical% + ' ' + %PostCode_Physical%",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "SingleLine",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Accounts/Update/English/SingleLine_Physical"
+}

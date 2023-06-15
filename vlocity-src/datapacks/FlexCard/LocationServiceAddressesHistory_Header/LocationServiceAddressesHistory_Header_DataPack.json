@@ -1,0 +1,47 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "LocationServiceAddresses_Header/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 22,
+                "name": "recordId",
+                "val": "0cE9r0000000FLdEAM"
+            },
+            {
+                "id": 5,
+                "name": "User.userId",
+                "val": "0059r000000yR6z"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "RecordId": "{recordId}",
+                "userId": "{User.userId}"
+            },
+            "ipMethod": "LocationAddress_RelatedList",
+            "resultVar": "[\"ServiceParams\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "Header for Location Service Addresses",
+    "IsTrackingEnabled": false,
+    "Name": "LocationServiceAddressesHistory_Header",
+    "Namespace": "",
+    "OmniUiCardKey": "LocationServiceAddressesHistory_Header/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "LocationServiceAddressesHistory_Header.json",
+    "SampleDataSourceResponse": "{\"LocationAddress\":[{\"AccountRecordType\":\"NotApplicable\",\"AddressId\":\"a1o9r000000dS9JAAU\",\"AddressType\":\"Additional Campus\",\"AdditionalCampus\":4,\"ServiceType\":\"Approved Provider Service\",\"AddressEffectiveDate\":\"27/7/2022\",\"AddressName\":\"ADR-0000666\",\"ContactRelRecordType\":\"NotApplicable\",\"ServiceId\":\"0cE9r0000000FLdEAM\",\"ValidatedByCGIS\":\"Yes\",\"ContactRelId\":\"NotApplicable\",\"MaxAdditionalCampus\":4,\"CareOf\":\"NotApplicable\",\"LocationId\":\"a1p9r0000005OuXAAU\",\"AddressIneffectiveDate\":\"NotApplicable\",\"AddressString\":\"12 RAILWAY AVENUE , CLONCURRY , QLD , 4824\",\"AccountId\":\"NotApplicable\",\"allowedProfileDevName\":\"Health_Super_Users\",\"POBox\":\"NotApplicable\"},{\"AccountRecordType\":\"NotApplicable\",\"AddressId\":\"a1o9r000000dNKvAAM\",\"AddressType\":\"Physical\",\"ServiceType\":\"Approved Provider Service\",\"AddressEffectiveDate\":\"26/7/2022\",\"AddressName\":\"ADR-0000629\",\"ContactRelRecordType\":\"NotApplicable\",\"ServiceId\":\"0cE9r0000000FLdEAM\",\"ValidatedByCGIS\":\"Yes\",\"ContactRelId\":\"NotApplicable\",\"MaxAdditionalCampus\":4,\"CareOf\":\"NotApplicable\",\"LocationId\":\"a1p9r0000005LQPAA2\",\"AddressIneffectiveDate\":\"NotApplicable\",\"AddressString\":\"12 RED ASH AVENUE , MOUNT ANNAN , NSW , 2567\",\"AccountId\":\"NotApplicable\",\"allowedProfileDevName\":\"Health_Super_Users\",\"POBox\":\"NotApplicable\"},{\"AccountRecordType\":\"NotApplicable\",\"AddressId\":\"a1o9r000000dNKvAAM\",\"AddressType\":\"Postal\",\"ServiceType\":\"Approved Provider Service\",\"AddressEffectiveDate\":\"14/7/2022\",\"AddressName\":\"ADR-0000629\",\"ContactRelRecordType\":\"NotApplicable\",\"ServiceId\":\"0cE9r0000000FLdEAM\",\"ValidatedByCGIS\":\"Yes\",\"ContactRelId\":\"NotApplicable\",\"MaxAdditionalCampus\":4,\"CareOf\":\"NotApplicable\",\"LocationId\":\"a1p9r0000005LS1AAM\",\"AddressIneffectiveDate\":\"NotApplicable\",\"AddressString\":\"12 RED ASH AVENUE , MOUNT ANNAN , NSW , 2567\",\"AccountId\":\"NotApplicable\",\"allowedProfileDevName\":\"Health_Super_Users\",\"POBox\":\"NotApplicable\"},{\"AccountRecordType\":\"NotApplicable\",\"AddressId\":\"a1o9r000000dS1FAAU\",\"AddressType\":\"Additional Campus\",\"AdditionalCampus\":3,\"ServiceType\":\"Approved Provider Service\",\"AddressEffectiveDate\":\"27/7/2022\",\"AddressName\":\"ADR-0000664\",\"ContactRelRecordType\":\"NotApplicable\",\"ServiceId\":\"0cE9r0000000FLdEAM\",\"ValidatedByCGIS\":\"Yes\",\"ContactRelId\":\"NotApplicable\",\"MaxAdditionalCampus\":4,\"CareOf\":\"NotApplicable\",\"LocationId\":\"a1p9r0000005OrJAAU\",\"AddressIneffectiveDate\":\"NotApplicable\",\"AddressString\":\"56 HAIGS ROAD , ALLORA , QLD , 4362\",\"AccountId\":\"NotApplicable\",\"allowedProfileDevName\":\"Health_Super_Users\",\"POBox\":\"NotApplicable\"},{\"AccountRecordType\":\"NotApplicable\",\"AddressId\":\"a1o9r000000dRwPAAU\",\"AddressType\":\"Additional Campus\",\"AdditionalCampus\":1,\"ServiceType\":\"Approved Provider Service\",\"AddressEffectiveDate\":\"27/7/2022\",\"AddressName\":\"ADR-0000662\",\"ContactRelRecordType\":\"NotApplicable\",\"ServiceId\":\"0cE9r0000000FLdEAM\",\"ValidatedByCGIS\":\"Yes\",\"ContactRelId\":\"NotApplicable\",\"MaxAdditionalCampus\":4,\"CareOf\":\"NotApplicable\",\"LocationId\":\"a1p9r0000005Oo5AAE\",\"AddressString\":\"456 TEVIOT ROAD , NORTH MACLEAN , QLD , 4280\",\"AddressIneffectiveDate\":\"26/7/2022\",\"AccountId\":\"NotApplicable\",\"allowedProfileDevName\":\"Health_Super_Users\",\"POBox\":\"NotApplicable\"}],\"AccountParams\":{\"ContactRelRecordType\":\"NotApplicable\",\"AccountRecordType\":\"NotApplicable\",\"AdminLiquidatorCount\":0,\"ContactCount\":0},\"ServiceParams\":{\"ServiceRecordType\":\"Approved Provider Service\",\"MaxAdditionalCampus\":4,\"ServicePostalAddressCount\":1,\"ServicePhysicalAddressCount\":1,\"allowedProfileDevName\":\"Health_Super_Users\",\"CareType\":\"Residential\"}}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/LocationServiceAddressesHistory_Header"
+}

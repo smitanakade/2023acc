@@ -1,0 +1,49 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "HeldOrReleasedDomains",
+    "OmniProcessId": {
+        "Name": "SRQI_OS_HoldStarRatings",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/HoldStarRatings/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "CERCaseHold": "=IF(%Cases:CERCaseExists% == true && CONTAINS(%SetDomain%, \"callCER\"),true,false)",
+            "CERCaseRelease": "=IF(%Cases:CERCaseExists% == true && CONTAINS(%SelectedDomainsForRelease%, \"callCER\"), true, false)",
+            "CMCaseHold": "=IF(%Cases:CMCaseExists% == true && CONTAINS(%SetDomain%, \"callCM\"),true,false)",
+            "CMCaseRelease": "=IF(%Cases:CMCaseExists% == true && CONTAINS(%SelectedDomainsForRelease%, \"callCM\"), true, false)",
+            "CantReleaseDomain": "=AND(%NavigateToHoldOrRelease% == \"Release\",%SRHNotUnderReview% == true)",
+            "HeldAllDomains": "=AND(%NavigateToHoldOrRelease%==\"Hold\", %AllDomainUnderReview%==true)",
+            "HeldCER": "=IF(%Service:CER_UnderReview% == true && CONTAINS(%SetDomain%, \"callCER\"),\"Consumer Experience Report\",NULL)",
+            "HeldCM": "=IF(%Service:CM_UnderReview% == true && CONTAINS(%SetDomain%, \"callCM\"),\"Care Minutes\",NULL)",
+            "HeldQI": "=IF(%Service:QI_UnderReview% == true && CONTAINS(%SetDomain%, \"callQI\"),\"Quality Indicator\",NULL)",
+            "LIVE_CER": "=%Service:CER_UnderReview% == false && CONTAINS(%SetDomain%, \"callCER\") && %Service:Status% = \"LIVE\"",
+            "LIVE_CM": "=%Service:CM_UnderReview% == false && CONTAINS(%SetDomain%, \"callCM\") && %Service:Status% = \"LIVE\"",
+            "LIVE_QI": "=%Service:QI_UnderReview% == false && CONTAINS(%SetDomain%, \"callQI\") && %Service:Status% = \"LIVE\"",
+            "QICaseHold": "=IF(%Cases:QICaseExists% == true && CONTAINS(%SetDomain%, \"callQI\"),true,false)",
+            "QICaseRelease": "=IF(%Cases:QICaseExists% == true && CONTAINS(%SelectedDomainsForRelease%, \"callQI\"), true, false)",
+            "ReleasedCER": "=IF(%Service:CER_UnderReview% == false && CONTAINS(%SelectedDomainsForRelease%, \"callCER\"),\"Consumer Experience Report\",NULL)",
+            "ReleasedCM": "=IF(%Service:CM_UnderReview% == false && CONTAINS(%SelectedDomainsForRelease%, \"callCM\"),\"Care Minutes\",NULL)",
+            "ReleasedQI": "=IF(%Service:QI_UnderReview% == false && CONTAINS(%SelectedDomainsForRelease%, \"callQI\"),\"Quality Indicator\",NULL)"
+        },
+        "label": "HeldDomains",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/HoldStarRatings/English/HeldOrReleasedDomains"
+}

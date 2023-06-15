@@ -1,0 +1,167 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "StreetSuffix_Postal",
+    "OmniProcessId": {
+        "Name": "Addresses",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Accounts/Update/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "PostalAddressBlock",
+        "OmniProcessId": {
+            "Name": "Addresses",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Accounts/Update/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Accounts/Update/English/PostalAddressBlock",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "PostalAddressBlock",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 6,
+        "controllingField": {
+            "element": "",
+            "source": "",
+            "type": ""
+        },
+        "defaultValue": null,
+        "disOnTplt": false,
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "inputWidth": 12,
+        "label": "Street Suffix",
+        "optionSource": {
+            "source": "Address__c.Street_Suffix_Type_Description__c",
+            "type": ""
+        },
+        "options": [
+            {
+                "autoAdv": null,
+                "name": "NORTH WEST",
+                "value": "NORTH WEST"
+            },
+            {
+                "autoAdv": null,
+                "name": "CENTRAL",
+                "value": "CENTRAL"
+            },
+            {
+                "autoAdv": null,
+                "name": "EAST",
+                "value": "EAST"
+            },
+            {
+                "autoAdv": null,
+                "name": "EXTENSION",
+                "value": "EXTENSION"
+            },
+            {
+                "autoAdv": null,
+                "name": "LOWER",
+                "value": "LOWER"
+            },
+            {
+                "autoAdv": null,
+                "name": "NORTH",
+                "value": "NORTH"
+            },
+            {
+                "autoAdv": null,
+                "name": "NORTH EAST",
+                "value": "NORTH EAST"
+            },
+            {
+                "autoAdv": null,
+                "name": "SOUTH",
+                "value": "SOUTH"
+            },
+            {
+                "autoAdv": null,
+                "name": "SOUTH EAST",
+                "value": "SOUTH EAST"
+            },
+            {
+                "autoAdv": null,
+                "name": "SOUTH WEST",
+                "value": "SOUTH WEST"
+            },
+            {
+                "autoAdv": null,
+                "name": "UPPER",
+                "value": "UPPER"
+            },
+            {
+                "autoAdv": null,
+                "name": "WEST",
+                "value": "WEST"
+            }
+        ],
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": false,
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "Not Applicable",
+                                    "field": "POBoxRadio_Postal"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "true",
+                                    "field": "AddressEntry1"
+                                },
+                                {
+                                    "condition": "<>",
+                                    "data": "Registered Business Address",
+                                    "field": "OtherAddressRecordType"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "Registered Business Address",
+                                    "field": "OtherAddressRecordType"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "true",
+                                    "field": "AddressEntry1"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "showInputWidth": false
+    },
+    "Type": "Select",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Accounts/Update/English/StreetSuffix_Postal"
+}

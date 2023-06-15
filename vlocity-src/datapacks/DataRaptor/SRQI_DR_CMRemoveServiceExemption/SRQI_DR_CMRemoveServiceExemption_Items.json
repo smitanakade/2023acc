@@ -1,0 +1,236 @@
+[
+    {
+        "FormulaExpression": "FORMATDATETIME(NOW(),\"yyyy-MM-dd'T'HH:mm:ss.SSSZ\",\"Australia/Sydney\")",
+        "FormulaResultPath": "TodayDate",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_CMRemoveServiceExemptionCustom0jI9h0000000EHVEA2Item1",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CMRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CMRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CMRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "\"false\"",
+        "FormulaResultPath": "False",
+        "FormulaSequence": 2,
+        "GlobalKey": "SRQI_DR_CMRemoveServiceExemptionCustom0jI9h0000000EHVEA2Item0",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CMRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CMRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CMRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CMRemoveServiceExemptionCustom0jI9h0000000EHVEA2Item6",
+        "InputFieldName": "TodayDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CMRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CMRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CMRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Exemption_Finish__c",
+        "OutputObjectName": "SRQI_Exemption__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CMRemoveServiceExemptionCustom0jI9h0000000EHVEA2Item2",
+        "InputFieldName": "CMId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_CMRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CMRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CMRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "SRQI_Exemption__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_CMRemoveServiceExemptionCustom0jI9h0000000EHVEA2Item4",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_CMRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CMRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CMRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "SRQI_Exemption__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CMRemoveServiceExemptionCustom4811",
+        "InputFieldName": "RemDet",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CMRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CMRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CMRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Removal_Reason__c",
+        "OutputObjectName": "SRQI_Exemption__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CMRemoveServiceExemptionCustom8802",
+        "InputFieldName": "Remv",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CMRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CMRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CMRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Remover__c",
+        "OutputObjectName": "SRQI_Exemption__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CMRemoveServiceExemptionCustom9549",
+        "InputFieldName": "ServID",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CMRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CMRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CMRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Service__c",
+        "OutputObjectName": "SRQI_Exemption__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CMRemoveServiceExemptionCustom0jI9h0000000EHVEA2Item10",
+        "InputFieldName": "False",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CMRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CMRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CMRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "CM_Exempt__c",
+        "OutputObjectName": "BusinessLicense",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CMRemoveServiceExemptionCustom0jI9h0000000EHVEA2Item11",
+        "InputFieldName": "ServID",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_CMRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CMRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CMRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "BusinessLicense",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_CMRemoveServiceExemptionCustom0jI9h0000000EHVEA2Item8",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_CMRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CMRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CMRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "BusinessLicense",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CMRemoveServiceExemptionCustom6992",
+        "InputFieldName": "ServName",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CMRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CMRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CMRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "Name",
+        "OutputObjectName": "BusinessLicense",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

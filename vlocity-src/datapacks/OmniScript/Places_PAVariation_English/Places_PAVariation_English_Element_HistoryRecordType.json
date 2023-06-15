@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "HistoryRecordType",
+    "OmniProcessId": {
+        "Name": "PlacesPAVariation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Places/PAVariation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "PerformAction",
+        "OmniProcessId": {
+            "Name": "PlacesPAVariation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Places/PAVariation/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Places/PAVariation/English/PerformAction",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "PerformAction",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataType": "Text",
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF(%PerformAction:Action% = \"Record Decision\", \"GPMS_Decision_PA\", IF(%PerformAction:Action% = \"Record Request for Reconsideration\", \"GPMS_Request_for_Reconsideration_PA\", IF(%PerformAction:Action% = \"Record a Decision on Request for Reconsideration\", \"GPMS_Decision_on_Request_for_Reconsideration_PA\", IF(%PerformAction:Action% = \"Record Request for Reconsideration by the AAT\", \"GPMS_Request_for_Reconsideration_by_the_AAT_PA\", IF(%PerformAction:Action% = \"Record AAT Decision\", \"GPMS_AAT_Decision_PA\", IF(%PerformAction:Action% = \"Cancel\", \"GPMS_Cancel_PA\", IF(%PerformAction:Action% = \"Change Variation Day\", \"GPMS_Change_Variation_Day_PA\", \"\")))))))",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "RecordType",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Places/PAVariation/English/HistoryRecordType"
+}

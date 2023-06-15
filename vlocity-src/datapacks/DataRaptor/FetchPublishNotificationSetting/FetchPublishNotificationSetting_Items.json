@@ -1,0 +1,83 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "\"Send_Email\"",
+        "GlobalKey": "FetchPublishNotificationSettingCustom5644",
+        "InputFieldName": "DeveloperName",
+        "InputObjectName": "EmailNotificationSetting__mdt",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FetchPublishNotificationSetting",
+        "OmniDataTransformationId": {
+            "Name": "FetchPublishNotificationSetting",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FetchPublishNotificationSetting",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "SREmailMDT",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FetchPublishNotificationSettingCustom6044",
+        "InputFieldName": "SREmailMDT:LiveNotificationForRecal__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FetchPublishNotificationSetting",
+        "OmniDataTransformationId": {
+            "Name": "FetchPublishNotificationSetting",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FetchPublishNotificationSetting",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "EmailSetting:LiveNotificationForRecal",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FetchPublishNotificationSettingCustom2362",
+        "InputFieldName": "SREmailMDT:OWEA__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FetchPublishNotificationSetting",
+        "OmniDataTransformationId": {
+            "Name": "FetchPublishNotificationSetting",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FetchPublishNotificationSetting",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "EmailSetting:OWEA",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FetchPublishNotificationSettingCustom4397",
+        "InputFieldName": "SREmailMDT:PublishNotificationForRecal__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FetchPublishNotificationSetting",
+        "OmniDataTransformationId": {
+            "Name": "FetchPublishNotificationSetting",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FetchPublishNotificationSetting",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "EmailSetting:PublishNotificationforRecal",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

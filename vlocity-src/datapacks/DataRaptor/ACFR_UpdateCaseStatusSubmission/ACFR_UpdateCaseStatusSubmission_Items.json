@@ -1,0 +1,80 @@
+[
+    {
+        "FormulaSequence": 1,
+        "GlobalKey": "ACFR_UpdateCaseStatusSubmissionCustom4090",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_UpdateCaseStatusSubmission",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_UpdateCaseStatusSubmission",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_UpdateCaseStatusSubmission",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_UpdateCaseStatusSubmissionCustom4125",
+        "InputFieldName": "caseRecordId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_UpdateCaseStatusSubmission",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_UpdateCaseStatusSubmission",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_UpdateCaseStatusSubmission",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Case",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "ACFR_UpdateCaseStatusSubmissionCustom3550",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "ACFR_UpdateCaseStatusSubmission",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_UpdateCaseStatusSubmission",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_UpdateCaseStatusSubmission",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Case",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_UpdateCaseStatusSubmissionCustom4143",
+        "InputFieldName": "CaseStatus",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_UpdateCaseStatusSubmission",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_UpdateCaseStatusSubmission",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_UpdateCaseStatusSubmission",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "String",
+        "OutputFieldName": "Status",
+        "OutputObjectName": "Case",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

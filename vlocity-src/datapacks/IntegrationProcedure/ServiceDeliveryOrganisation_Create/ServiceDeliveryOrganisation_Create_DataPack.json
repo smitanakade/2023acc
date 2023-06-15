@@ -1,0 +1,33 @@
+{
+    "CustomJavaScript": "ServiceDeliveryOrganisation_Create_SampleInput.json",
+    "Description": "Package to create a Service Delivery Organisation - Aged Care Org - Service Delivery Organisation",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "CreateServiceDeliveryOrganisation",
+    "OmniProcessElement": [
+        "ServiceDeliveryOrganisation_Create_Element_OnlyifWeNeedToCreateTheInContextAccountRecord.json",
+        "ServiceDeliveryOrganisation_Create_Element_CreateTheInContextAccountRecord.json",
+        "ServiceDeliveryOrganisation_Create_Element_Only_If_We_Need_To_Create_A_New_ACO.json",
+        "ServiceDeliveryOrganisation_Create_Element_AgedCareOrganisation_Post.json",
+        "ServiceDeliveryOrganisation_Create_Element_Only_If_We_Need_To_Create_A_New_SDO.json",
+        "ServiceDeliveryOrganisation_Create_Element_CreateTheRestOfTheAccountRelationships.json",
+        "ServiceDeliveryOrganisation_Create_Element_ABNValidation_Post.json",
+        "ServiceDeliveryOrganisation_Create_Element_ContactRelationship_POC_Post.json",
+        "ServiceDeliveryOrganisation_Create_Element_ResponseAction.json"
+    ],
+    "OmniProcessKey": "ServiceDeliveryOrganisation_Create",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "ServiceDeliveryOrganisation_Create_PropertySetConfig.json",
+    "SubType": "Create",
+    "Type": "ServiceDeliveryOrganisation",
+    "UniqueName": "ServiceDeliveryOrganisation_Create_Procedure_2",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/ServiceDeliveryOrganisation/Create/Procedure",
+    "WebComponentKey": "1dacfa6b-817a-3c85-25d7-6ef3225748a6"
+}

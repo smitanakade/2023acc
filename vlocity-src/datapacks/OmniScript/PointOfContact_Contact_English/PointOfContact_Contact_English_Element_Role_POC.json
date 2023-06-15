@@ -1,0 +1,67 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "Role_POC",
+    "OmniProcessId": {
+        "Name": "PointOfContact",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PointOfContact/Contact/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "PointOfContact",
+        "OmniProcessId": {
+            "Name": "PointOfContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PointOfContact/Contact/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PointOfContact/Contact/English/PointOfContact",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "PointOfContact",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 6,
+        "controllingField": {
+            "element": "",
+            "source": "RecordType.Name.PointofContact",
+            "type": "SObject"
+        },
+        "defaultValue": "Primary Contact",
+        "disOnTplt": false,
+        "help": true,
+        "helpText": "The first Point of Contact must be the Primary Contact",
+        "helpTextPos": "",
+        "hide": false,
+        "inputWidth": 12,
+        "label": "Role",
+        "optionSource": {
+            "source": "Contact_Relationship__c.Role__c",
+            "type": ""
+        },
+        "options": [
+            {
+                "autoAdv": null,
+                "name": "Primary Contact",
+                "value": "Primary Contact"
+            }
+        ],
+        "readOnly": true,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": true,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Select",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PointOfContact/Contact/English/Role_POC"
+}

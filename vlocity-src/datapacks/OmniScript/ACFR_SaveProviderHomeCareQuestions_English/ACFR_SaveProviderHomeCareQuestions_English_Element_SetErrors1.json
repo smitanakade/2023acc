@@ -1,0 +1,107 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "SetErrors1",
+    "OmniProcessId": {
+        "Name": "QFR Viability Questions - Home Care Form - Provider - Validation Errors",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveProviderHomeCareQuestions/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementErrorMap": {
+            "RDBusinessImprovementAdvice": "This is required",
+            "RDCashFinancialAssets": "This is required",
+            "RDChangesToManagement": "This is required",
+            "RDClosingOrSelling": "This is required",
+            "RDForecastLoss": "This is required",
+            "RDHomeCareRecipients": "This is required",
+            "RDPurchaseAdditionalHomeCare": "This is required",
+            "RDRetainingStaff": "This is required",
+            "RDSolvencyConcern": "This is required",
+            "RDSolvencySixMonths": "This is required",
+            "RDStrategyAlignment": "This is required"
+        },
+        "label": "This is required",
+        "message": {
+            "RDSolvencyConcern": "null"
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "null",
+                        "field": "RDSolvencyConcern"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "null",
+                        "field": "RDSolvencySixMonths"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "null",
+                        "field": "RDForecastLoss"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "null",
+                        "field": "RDCashFinancialAssets"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "null",
+                        "field": "RDClosingOrSelling"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "null",
+                        "field": "RDPurchaseAdditionalHomeCare"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "null",
+                        "field": "RDHomeCareRecipients"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "null",
+                        "field": "RDBusinessImprovementAdvice"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "null",
+                        "field": "RDStrategyAlignment"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "null",
+                        "field": "RDChangesToManagement"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "null",
+                        "field": "RDRetainingStaff"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": true,
+        "validationRequired": "Step",
+        "wpm": true
+    },
+    "Type": "Set Errors",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveProviderHomeCareQuestions/English/SetErrors1"
+}

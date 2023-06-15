@@ -1,0 +1,53 @@
+{
+    "Description": "ReasonForIssue",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ReasonForIssue",
+    "OmniProcessId": {
+        "Name": "SRQI_OS_PublishedRegulatoryDecision",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RegulatoryDecision/Published/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "DetailedNotesBlock",
+        "OmniProcessId": {
+            "Name": "SRQI_OS_PublishedRegulatoryDecision",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/RegulatoryDecision/Published/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/RegulatoryDecision/Published/English/DetailedNotesBlock",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "DetailedNotesBlock",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "bStandalone": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "customAttributes": [
+            {
+                "name": "record-Id",
+                "source": "%ContextId%"
+            },
+            {
+                "name": "records",
+                "source": "Reason for issuing the regulatory decision"
+            },
+            {
+                "name": "record",
+                "source": "%LockedRegulatoryDecisionStep:RegulatoryDecisionInfoBlock:Published%"
+            }
+        ],
+        "hide": false,
+        "label": "Reason for issuing the regulatory decision",
+        "lwcName": "sRQI_RegulatoryRichText",
+        "show": null
+    },
+    "Type": "Custom Lightning Web Component",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RegulatoryDecision/Published/English/ReasonForIssue"
+}

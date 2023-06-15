@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ExpectedExtendedPAEndDate",
+    "OmniProcessId": {
+        "Name": "PlacesExtendPA",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesExtendPA/PlacesExtendPA/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ExtendPAPeriodDetails",
+        "OmniProcessId": {
+            "Name": "PlacesExtendPA",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesExtendPA/PlacesExtendPA/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesExtendPA/PlacesExtendPA/English/ExtendPAPeriodDetails",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ExtendPAPeriodDetails",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF(%PAPeriodEndDate% <> '{PAPeriodEndDate}', DAYOFMONTH(MOMENT(%PAPeriodEndDate%).add(12, 'months')) + '/' + MONTH(MOMENT(%PAPeriodEndDate%).add(12, 'months'))  + '/' + YEAR(MOMENT(%PAPeriodEndDate%).add(12, 'months')), NULL)",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "ExpectedExtendedPAEndDate",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesExtendPA/PlacesExtendPA/English/ExpectedExtendedPAEndDate"
+}

@@ -1,0 +1,42 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "LocationAddresses/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 2,
+                "name": "recordId",
+                "val": "001Bm000004Jr6MIAS"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "RecordId": "{recordId}"
+            },
+            "ipMethod": "LocationAddress_RelatedList",
+            "resultVar": "[\"LocationAddress\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "Related List for Location Account Addresses",
+    "IsTrackingEnabled": false,
+    "Name": "LocationAccountAddresses_List",
+    "Namespace": "",
+    "OmniUiCardKey": "LocationAccountAddresses_List/GPMS/3.0",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "LocationAccountAddresses_List.json",
+    "SampleDataSourceResponse": "{\"LocationAddress\":[{\"UnitTypeDescription\":\"NotApplicable\",\"AddressType\":\"Registered Business Address\",\"UnitNumber\":\"NotApplicable\",\"State\":\"VIC\",\"LevelTypeDescription\":\"NotApplicable\",\"AddressEffectiveDate\":\"24/1/2023\",\"AddressName\":\"ADD-00052\",\"ContactRelRecordType\":\"NotApplicable\",\"POBOXType\":\"GPO Box\",\"StreetTypeDescription\":\"STREET\",\"StreetNumber1\":\"12\",\"City\":\"MELBOURNE\",\"StreetSuffixTypeDescription\":\"NotApplicable\",\"MaxAdditionalCampus\":0,\"LocationId\":\"a2HBm0000004pjtMAA\",\"RecordTypeName\":\"Account Address\",\"AddressIneffectiveDate\":\"NotApplicable\",\"ContactRecordType\":\"NotApplicable\",\"LotNumber\":\"NotApplicable\",\"AccountRecordType\":\"Aged Care Organisation\",\"AddressId\":\"a2IBm0000009AJVMA2\",\"Street\":\"COLLINS\",\"ServiceType\":\"NotApplicable\",\"PostOfficeBox\":\"NotApplicable\",\"LevelNumber\":\"NotApplicable\",\"ServiceId\":\"NotApplicable\",\"ValidatedByCGIS\":\"No\",\"gnaf_pid\":\"NotApplicable\",\"ContactRelId\":\"NotApplicable\",\"PostalCode\":\"3000\",\"CareOf\":\"NotApplicable\",\"BuildingName\":\"NotApplicable\",\"AddressString\":\"GPO Box , 12 COLLINS STREET, MELBOURNE, VIC, 3000\",\"AccountId\":\"001Bm000004Jr6MIAS\"},{\"UnitTypeDescription\":\"NotApplicable\",\"AddressType\":\"Registered Business Address\",\"UnitNumber\":\"NotApplicable\",\"State\":\"VIC\",\"LevelTypeDescription\":\"NotApplicable\",\"AddressEffectiveDate\":\"24/1/2023\",\"AddressName\":\"ADD-00050\",\"ContactRelRecordType\":\"NotApplicable\",\"POBOXType\":\"GPO Box\",\"StreetTypeDescription\":\"STREET\",\"StreetNumber1\":\"101\",\"City\":\"MELBOURNE\",\"StreetSuffixTypeDescription\":\"NotApplicable\",\"MaxAdditionalCampus\":0,\"LocationId\":\"a2HBm0000004piJMAQ\",\"RecordTypeName\":\"Account Address\",\"AddressIneffectiveDate\":\"24/1/2023\",\"ContactRecordType\":\"NotApplicable\",\"LotNumber\":\"NotApplicable\",\"AccountRecordType\":\"Aged Care Organisation\",\"AddressId\":\"a2IBm0000009AGIMA2\",\"Street\":\"COLLINS\",\"ServiceType\":\"NotApplicable\",\"PostOfficeBox\":\"NotApplicable\",\"LevelNumber\":\"NotApplicable\",\"ServiceId\":\"NotApplicable\",\"ValidatedByCGIS\":\"No\",\"gnaf_pid\":\"NotApplicable\",\"ContactRelId\":\"NotApplicable\",\"PostalCode\":\"3000\",\"CareOf\":\"NotApplicable\",\"BuildingName\":\"NotApplicable\",\"AddressString\":\"GPO Box , 101 COLLINS STREET, MELBOURNE, VIC, 3000\",\"AccountId\":\"001Bm000004Jr6MIAS\"}],\"AccountParams\":{\"AccountRecordType\":\"Aged Care Organisation\",\"ContactCount\":2},\"AccountPhysicalCount\":0,\"PermissionName\":\"GPMS_System_Administrators\",\"ServiceParams\":{\"ServiceRecordType\":\"NotApplicable\",\"MaxAdditionalCampus\":0,\"ServicePostalAddressCount\":0,\"ServicePhysicalAddressCount\":0,\"CareType\":\"NotApplicable\"},\"AccountPostalCount\":0,\"ContactParams\":{\"ContactRelRecordType\":\"NotApplicable\",\"AdminLiquidatorCount\":0,\"ContactCount\":0}}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 3,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/LocationAccountAddresses_List"
+}

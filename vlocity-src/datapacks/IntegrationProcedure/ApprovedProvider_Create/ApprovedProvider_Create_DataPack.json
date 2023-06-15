@@ -1,0 +1,33 @@
+{
+    "CustomJavaScript": "ApprovedProvider_Create_SampleInput.json",
+    "Description": "Package to create an Approved Provider - Aged Care Org - Approved Provider",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "CreateApprovedProvider",
+    "OmniProcessElement": [
+        "ApprovedProvider_Create_Element_CreateTheInContextAccountRecord.json",
+        "ApprovedProvider_Create_Element_Only_If_We_Need_To_Create_A_New_ACO.json",
+        "ApprovedProvider_Create_Element_AgedCareOrganisation_Post.json",
+        "ApprovedProvider_Create_Element_ACO_Via_TypeAhead1.json",
+        "ApprovedProvider_Create_Element_CreateTheRestOfTheAccountRelationships.json",
+        "ApprovedProvider_Create_Element_ABNValidation_Post.json",
+        "ApprovedProvider_Create_Element_ContactRelationship_POC_Post.json",
+        "ApprovedProvider_Create_Element_ContactRelationship_KP_Post.json",
+        "ApprovedProvider_Create_Element_ResponseAction.json"
+    ],
+    "OmniProcessKey": "ApprovedProvider_Create",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "ApprovedProvider_Create_PropertySetConfig.json",
+    "SubType": "Create",
+    "Type": "ApprovedProvider",
+    "UniqueName": "ApprovedProvider_Create_Procedure_3",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/ApprovedProvider/Create/Procedure",
+    "WebComponentKey": "bea5e1f2-a4df-adde-12ff-90fe95ebc127"
+}

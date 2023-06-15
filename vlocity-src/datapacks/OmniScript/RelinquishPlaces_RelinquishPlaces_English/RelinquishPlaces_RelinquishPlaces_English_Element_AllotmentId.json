@@ -1,0 +1,35 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "AllotmentId",
+    "OmniProcessId": {
+        "Name": "RelinquishPlaces",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RelinquishPlaces/RelinquishPlaces/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "AllotmentId": "=%Allotments:CustomLWC1:selectedId%",
+            "CurrentDateText": "=YEAR(TODAY())+\"-\"+MONTH(TODAY())+\"-\"+DAYOFMONTH(TODAY())"
+        },
+        "label": "AllotmentId",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RelinquishPlaces/RelinquishPlaces/English/AllotmentId"
+}

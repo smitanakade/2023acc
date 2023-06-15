@@ -1,0 +1,41 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "PlacesSummaryPage/GPMS/2.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "a2f9r0000000fHhAAI"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "AllotmentId": "{recordId}"
+            },
+            "ipMethod": "Summary_Summary",
+            "resultVar": "[\"Allotment\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "PlacesSummaryPage_Flexi",
+    "Namespace": "",
+    "OmniUiCardKey": "PlacesSummaryPage_Flexi/GPMS/2.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "PlacesSummaryPage_Flexi.json",
+    "SampleDataSourceResponse": "{\"Allotment\":{\"SplNeedsKeyIssuesProvisional\":10,\"Id\":\"a2f9r0000000fHhAAI\",\"HomeCareOffline\":0,\"HighCeased\":3,\"OfflineSum\":22,\"NotSpecifiedCeased\":0,\"CareLevel\":\"High(Innovative Pool)\",\"Provisional\":17,\"LowProvisional\":0,\"GeneralAccessCeased\":0,\"Offline\":9,\"ProvisionalSum\":15,\"NotSpecifiedOffine\":0,\"Pre1997\":\"Yes\",\"SubType\":\"S14-1\",\"SplNeedsKeyIssuesOperational\":10,\"CommunityOffline\":0,\"HomeCareCeased\":0,\"CareType\":\"Flexible\",\"LowOffline\":0,\"LowOperational\":0,\"HighOffline\":9,\"GeneralAccessOffline\":0,\"ResidentialOperational\":0,\"ResidentialOffline\":0,\"CommunityOperational\":0,\"SplNeedsKeyIssuesOffline\":22,\"Operational\":12,\"HomeCareOperational\":0,\"SplNeedsKeyIssuesCeased\":7,\"ResidentialCeased\":0,\"CeasedSum\":7,\"LowCeased\":0,\"OperationalSum\":12,\"HomeCareProvisional\":0,\"ResidentialProvisional\":0,\"GeneralAccessOperational\":2,\"CommunityCeased\":0,\"CareSetting\":\"Mixed\",\"NotSpecifiedOperational\":0,\"GeneralAccessProvisional\":5,\"HighOperational\":12,\"HighProvisional\":17,\"Ceased\":3,\"CommunityProvisional\":0,\"NotSpecifiedProvisional\":0}}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 2,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/PlacesSummaryPage_Flexi"
+}

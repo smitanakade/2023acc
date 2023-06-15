@@ -1,0 +1,81 @@
+[
+    {
+        "FormulaExpression": "IF(SelectedQI == true, true, IF(ReleaseQI == true, false, true))",
+        "FormulaResultPath": "QIUnderReview",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_UpdateQIUnderReviewCustom0jI9h0000000CE5EAMItem0",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_UpdateQIUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_UpdateQIUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_UpdateQIUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_UpdateQIUnderReviewCustom0jI9h0000000CE5EAMItem3",
+        "InputFieldName": "QIId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_UpdateQIUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_UpdateQIUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_UpdateQIUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_UpdateQIUnderReviewCustom0jI9h0000000CE5EAMItem1",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_UpdateQIUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_UpdateQIUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_UpdateQIUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_UpdateQIUnderReviewCustom0jI9h0000000CE5EAMItem2",
+        "InputFieldName": "QIUnderReview",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_UpdateQIUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_UpdateQIUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_UpdateQIUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Under_Review__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

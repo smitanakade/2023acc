@@ -1,0 +1,59 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DRPurchaseAdditionalHomeCareYes",
+    "OmniProcessId": {
+        "Name": "IPSaveViabilityHomeCareQuestion",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityHomeCareQuestion/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CBPurchaseAdditionalHomeCareYes",
+        "OmniProcessId": {
+            "Name": "IPSaveViabilityHomeCareQuestion",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityHomeCareQuestion/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityHomeCareQuestion/Procedure/CBPurchaseAdditionalHomeCareYes",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CBPurchaseAdditionalHomeCareYes",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AdditionalInformation": "=%STViabiltyQuestionsHomeCareProvider:BLKSaleOrPurchase:TXTAHCPurchaseAdditionalHomeCare%",
+            "FormId": "=%HomeCareViabilityandPrudentialReportingFormId%",
+            "QuestionID": "=%SVHCPurchaseAdditionalHomeCareQuestionID%",
+            "RadioYesNo": "=%STViabiltyQuestionsHomeCareProvider:BLKSaleOrPurchase:RDHCPurchaseAdditionalHomeCare%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ACFR_SaveViabilityHomeCareQuestion",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityHomeCareQuestion/Procedure/DRPurchaseAdditionalHomeCareYes"
+}

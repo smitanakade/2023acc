@@ -1,0 +1,65 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RecordWithdraw",
+    "OmniProcessId": {
+        "Name": "RelinquishPlaces",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RelinquishPlaces/RelinquishPlaces/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Withdraw",
+        "OmniProcessId": {
+            "Name": "RelinquishPlaces",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/RelinquishPlaces/RelinquishPlaces/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/RelinquishPlaces/RelinquishPlaces/Procedure/Withdraw",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Withdraw",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Comments": "=%RelinquishPlaces:Comments%",
+            "Decision": "=\"Withdrawn\"",
+            "DecisionDate": "=%RelinquishPlaces:DecisionDate%",
+            "DelegateName": "=%RelinquishPlaces:DelegateName%",
+            "DelegatePosition": "=%RelinquishPlaces:DelegatePosition%",
+            "DelegateState": "=%RelinquishPlaces:DelegateState%",
+            "EventId": "=%EventId%",
+            "IfActing": "=%RelinquishPlaces:IsActing%",
+            "LinkToDocuments": "=%RelinquishPlaces:LinkTodocuments%",
+            "RecordType": "=\"Withdraw_Relinquish\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Relinquish_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "PerformAction:Action = \"Withdraw\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction6",
+        "responseJSONNode": "RelinquishHistoryId",
+        "responseJSONPath": "GPMS_Relinquish_History__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RelinquishPlaces/RelinquishPlaces/Procedure/RecordWithdraw"
+}

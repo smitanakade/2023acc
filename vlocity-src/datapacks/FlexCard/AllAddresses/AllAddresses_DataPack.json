@@ -1,0 +1,41 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "PostalAddress/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 2,
+                "name": "recordId",
+                "val": "0019r00000337UuAAI"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "AccountId": "{recordId}"
+            },
+            "ipMethod": "Address_RelatedList",
+            "resultVar": "[\"Address\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "AllAddresses",
+    "Namespace": "",
+    "OmniUiCardKey": "AllAddresses/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "AllAddresses.json",
+    "SampleDataSourceResponse": "{\"Address\":[{\"LocationType\":\"Physical\",\"AddressId\":\"1309r000000pqarAAA\",\"State_or_Territory__c\":\"VIC\",\"City\":\"Melbourne\",\"Street\":\"100 Collins Street\",\"PostalCode\":\"3000\",\"Country\":\"Australia\",\"LocationId\":\"1319r0000000x6XAAQ\",\"Street_Name__c\":\"Collins Street\",\"State\":\"VIC\",\"Street_Number_1__c\":\"Collins Street\"},{\"LocationType\":\"Postal\",\"AddressId\":\"1309r000000pqasAAA\",\"State_or_Territory__c\":\"NSW\",\"City\":\"Sydney\",\"Street\":\"51 Martin Place\",\"PostalCode\":\"2000\",\"Country\":\"Australia\",\"LocationId\":\"1319r0000000x6YAAQ\",\"Street_Name__c\":\"Martin\",\"State\":\"NSW\",\"Street_Number_1__c\":\"51\"}]}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/AllAddresses"
+}

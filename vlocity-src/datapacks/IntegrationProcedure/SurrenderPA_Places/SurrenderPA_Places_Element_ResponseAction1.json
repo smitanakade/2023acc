@@ -1,0 +1,42 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ResponseAction1",
+    "OmniProcessId": {
+        "Name": "SurrenderPA",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SurrenderPA/Places/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "additionalOutput": {
+            "AllotmentId": "=%SurrenderPADataPost:Allotment__c_3:Id%",
+            "EventAllotmentId": "=%SurrenderPADataPost:Event_Allotment__c_4:Id%",
+            "EventId": "=%SurrenderPADataPost:Event__c_1:Id%",
+            "OriginalPlacesAllotment": "=%UpdateOriginalPlacesAllotment:Places_Allotment__c_1:Id%",
+            "PlacesAllotmentId": "=%PlacesAllotmentId%",
+            "ServiceEventId": "=%SurrenderPADataPost:Service_Event__c_2:Id%"
+        },
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "label": "ResponseAction1",
+        "responseDefaultData": {
+        },
+        "responseFormat": "JSON",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnFullDataJSON": false,
+        "returnOnlyAdditionalOutput": true,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "show": null,
+        "useFormulas": true,
+        "vlcResponseHeaders": {
+        }
+    },
+    "Type": "Response Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SurrenderPA/Places/Procedure/ResponseAction1"
+}

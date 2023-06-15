@@ -1,0 +1,51 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CareSettingEvent_Post",
+    "OmniProcessId": {
+        "Name": "ChangeCareSetting",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Places/ChangeCareSetting/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AllotmentId": "=%AllotmentId%",
+            "CareSettingEffectiveDate": "=%ChangeCareSetting:CareSettingEffectiveDate%",
+            "Comments": "=%ChangeCareSetting:Comments%",
+            "EventRecordTypeId": "=\"Change_Care_Setting\"",
+            "EventStatus": "=%ChangeCareSetting:EventStatus%",
+            "EventStatusDate": "=TODAY()",
+            "EventType": "=\"Change Care Setting\"",
+            "FirstBroughtIntoEffectDate": "=%ChangedCareSetting:FirstBroughtIntoEffectDate%",
+            "LinkToDocument": "=%ChangeCareSetting:LinktoDocuments%",
+            "ServiceId": "=%ServiceId%",
+            "StatusEffectiveDate": "=%ChangeCareSetting:StatusEffectiveDate%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Allotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "EventId",
+        "responseJSONPath": "Event__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Places/ChangeCareSetting/Procedure/CareSettingEvent_Post"
+}

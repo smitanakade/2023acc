@@ -1,0 +1,201 @@
+[
+    {
+        "FormulaExpression": "IF(CMExempt == true, true, false)",
+        "FormulaResultPath": "RatingExempt",
+        "FormulaSequence": 3,
+        "GlobalKey": "SRQI_DR_LoadCMSummaryDataCustom5618",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCMSummaryData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCMSummaryData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCMSummaryData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(IsLateSub == true, \"1\", IF(CMExempt == true, \"0\", ExResult))",
+        "FormulaResultPath": "EXResult",
+        "FormulaSequence": 2,
+        "GlobalKey": "SRQI_DR_LoadCMSummaryDataCustom8582",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCMSummaryData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCMSummaryData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCMSummaryData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "NOW()",
+        "FormulaResultPath": "CalculationDate",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_LoadCMSummaryDataCustom5310",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCMSummaryData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCMSummaryData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCMSummaryData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadCMSummaryDataCustom8369",
+        "InputFieldName": "EXResult",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCMSummaryData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCMSummaryData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCMSummaryData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Integer",
+        "OutputFieldName": "Care_Minutes_Rating__c",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadCMSummaryDataCustom7081",
+        "InputFieldName": "RecordId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_LoadCMSummaryData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCMSummaryData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCMSummaryData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_LoadCMSummaryDataCustom6116",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_LoadCMSummaryData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCMSummaryData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCMSummaryData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadCMSummaryDataCustom5217",
+        "InputFieldName": "IsLateSub",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCMSummaryData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCMSummaryData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCMSummaryData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Late_Submission__c",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadCMSummaryDataCustom333",
+        "InputFieldName": "CalculationDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCMSummaryData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCMSummaryData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCMSummaryData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Calc_Date__c",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadCMSummaryDataCustom699",
+        "InputFieldName": "RatingExempt",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCMSummaryData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCMSummaryData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCMSummaryData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Exemption_Granted__c",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "\"\"",
+        "GlobalKey": "SRQI_DR_LoadCMSummaryDataCustom7723",
+        "InputFieldName": "Reason",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCMSummaryData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCMSummaryData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCMSummaryData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Exemption_Reason__c",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

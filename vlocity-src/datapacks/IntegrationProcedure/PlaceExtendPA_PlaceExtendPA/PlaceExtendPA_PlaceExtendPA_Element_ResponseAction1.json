@@ -1,0 +1,47 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ResponseAction1",
+    "OmniProcessId": {
+        "Name": "PlaceExtendPA",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "additionalOutput": {
+            "AATDecisionId": "=%AATDecisionId%",
+            "AllotmentId": "=%CreateEvent:Allotment__c_3:Id%",
+            "CancelledId": "=%CancelledId%",
+            "EventAllotmentId": "=%CreateEvent:Event_Allotment__c_4:Id%",
+            "EventId": "=%CreateEvent:Event__c_1:Id%",
+            "RecDecsisionReqReconId": "=%RecDecsisionReqReconId%",
+            "RecordDecisionId": "=%RecordDecisionId%",
+            "RecordReqReconsiderId": "=%RecordReqReconsiderId%",
+            "ReqReconAATId": "=%ReqReconAATId%",
+            "ServiceEventId": "=%CreateEvent:Service_Event__c_2:Id%",
+            "WithdrawId": "=%WithdrawId%"
+        },
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "label": "ResponseAction1",
+        "responseDefaultData": {
+        },
+        "responseFormat": "JSON",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnFullDataJSON": false,
+        "returnOnlyAdditionalOutput": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "show": null,
+        "useFormulas": true,
+        "vlcResponseHeaders": {
+        }
+    },
+    "Type": "Response Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure/ResponseAction1"
+}

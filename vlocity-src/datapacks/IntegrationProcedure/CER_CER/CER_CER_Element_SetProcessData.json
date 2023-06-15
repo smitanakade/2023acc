@@ -1,0 +1,58 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetProcessData",
+    "OmniProcessId": {
+        "Name": "CalculateCERData",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/CER/CER/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "LoopBlock1",
+        "OmniProcessId": {
+            "Name": "CalculateCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/CER/CER/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/CER/CER/Procedure/LoopBlock1",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "LoopBlock1",
+    "ParentElementType": "Loop Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "CareNeedScore": "%CalcDomainScores:output:calculationResults:CareNeedScore%",
+            "CaringScore": "%CalcDomainScores:output:calculationResults:CaringScore%",
+            "CompetentScore": "%CalcDomainScores:output:calculationResults:CompetentScore%",
+            "ExplainScore": "%CalcDomainScores:output:calculationResults:ExplainScore%",
+            "FollowUpScore": "%CalcDomainScores:output:calculationResults:FollowUpScore%",
+            "FoodScore": "%CalcDomainScores:output:calculationResults:FoodScore%",
+            "HomeScore": "%CalcDomainScores:output:calculationResults:HomeScore%",
+            "IndependentScore": "%CalcDomainScores:output:calculationResults:IndependentScore%",
+            "OperationScore": "%CalcDomainScores:output:calculationResults:OperationScore%",
+            "ProcessData": "Recalculated by: %Email%",
+            "RespectScore": "%CalcDomainScores:output:calculationResults:RespectScore%",
+            "SafetyScore": "%CalcDomainScores:output:calculationResults:SafetyScore%",
+            "Score": "%CalcDomainScores:output:calculationResults:Score%",
+            "VoiceScore": "%CalcDomainScores:output:calculationResults:VoiceScore%"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues3",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/CER/CER/Procedure/SetProcessData"
+}

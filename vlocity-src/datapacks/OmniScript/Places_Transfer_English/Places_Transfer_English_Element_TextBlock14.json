@@ -1,0 +1,60 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "TextBlock14",
+    "OmniProcessId": {
+        "Name": "PlacesTransfer",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Places/Transfer/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Correct",
+        "OmniProcessId": {
+            "Name": "PlacesTransfer",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Places/Transfer/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Places/Transfer/English/Correct",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Correct",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataJSON": false,
+        "label": "TextBlock14",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Withdraw",
+                        "field": "CurrentTransfer:RecordType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Record Decision to Veto",
+                        "field": "CurrentTransfer:RecordType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Record a Decision on Request for Reconsideration",
+                        "field": "CurrentTransfer:RecordType"
+                    }
+                ]
+            }
+        },
+        "text": "<p><span style=\"color: #e03e2d;\">Current Value: %CurrentTransfer:DelegatePosition%</span></p>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Places/Transfer/English/TextBlock14"
+}

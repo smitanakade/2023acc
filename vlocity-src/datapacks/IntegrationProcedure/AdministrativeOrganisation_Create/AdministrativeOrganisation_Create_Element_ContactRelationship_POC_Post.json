@@ -1,0 +1,64 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ContactRelationship_POC_Post",
+    "OmniProcessId": {
+        "Name": "CreateAdministrativeOrganisation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/AdministrativeOrganisation/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Only_If_We_Need_To_Create_A_New_AO",
+        "OmniProcessId": {
+            "Name": "CreateAdministrativeOrganisation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/AdministrativeOrganisation/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/AdministrativeOrganisation/Create/Procedure/Only_If_We_Need_To_Create_A_New_AO",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Only_If_We_Need_To_Create_A_New_AO",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AccountId": "=%AccountId%",
+            "ContactId": "=%AccountPointOfContact:PointOfContact:ContactPOCInformation-Block:ContactId%",
+            "Email_POC": "=%AccountPointOfContact:PointOfContact:Email_POC%",
+            "EndDate_POC": "=%AccountPointOfContact:PointOfContact:EndDate_POC%",
+            "Mobile_POC": "=%AccountPointOfContact:PointOfContact:Mobile_POC%",
+            "Phone_POC": "=%AccountPointOfContact:PointOfContact:Phone_POC%",
+            "PositionTitle_POC": "=%AccountPointOfContact:PointOfContact:PositionTitle_POC%",
+            "RecordTypeId_POC": "=\"Point_of_Contact_CR\"",
+            "Role_POC": "=%AccountPointOfContact:PointOfContact:Role_POC%",
+            "StartDate_POC": "=%AccountPointOfContact:PointOfContact:StartDate_POC%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ContactRelationship_POC_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction5",
+        "responseJSONNode": "POCContactRelationship",
+        "responseJSONPath": "Contact_Relationship__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/AdministrativeOrganisation/Create/Procedure/ContactRelationship_POC_Post"
+}

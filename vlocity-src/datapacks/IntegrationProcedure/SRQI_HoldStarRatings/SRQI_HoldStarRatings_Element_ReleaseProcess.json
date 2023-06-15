@@ -1,0 +1,23 @@
+{
+    "Description": "A conditional block if user releases one of the domain in omniscript. Update the Under Review checkboxes on the selected domain's record page, and Reason for release on Star Rating History record page.",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ReleaseProcess",
+    "OmniProcessId": {
+        "Name": "SRQI_IP_HoldStarRatings",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/HoldStarRatings/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "%DRTransformServiceDetails:ReleaseQI% == \"true\" OR %DRTransformServiceDetails:ReleaseCM% == \"true\" OR %DRTransformServiceDetails:ReleaseCER% == \"true\"",
+        "isIfElseBlock": false,
+        "label": "ConditionalBlock5",
+        "show": null
+    },
+    "Type": "Conditional Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/HoldStarRatings/Procedure/ReleaseProcess"
+}

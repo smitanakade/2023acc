@@ -1,0 +1,34 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "EmbeddedOmniScriptKey": "ACFR|ACFR|English",
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "QFRViabilityQuestions-ResidentialCareForm-Provider",
+    "OmniProcessId": {
+        "Name": "FormsForCommunityPages",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/FormCreation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "Language": "English",
+        "Sub Type": "ACFR",
+        "Type": "ACFR",
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "",
+                        "field": "ResidentialViabilityandPrudentialReportingFormId"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "OmniScript",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/FormCreation/English/QFRViabilityQuestions-ResidentialCareForm-Provider"
+}

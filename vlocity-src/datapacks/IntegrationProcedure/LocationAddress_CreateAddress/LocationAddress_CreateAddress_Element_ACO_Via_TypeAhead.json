@@ -1,0 +1,80 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ACO_Via_TypeAhead",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ACO_ADDRESSES_CREATED_NEW",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ACO_ADDRESSES_CREATED_NEW",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ACO_ADDRESSES_CREATED_NEW",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressEffectiveDate": "=IF(ISNOTBLANK(%ACOPostalAddresses:ACOPostalAddressBlock:ACOEffectiveDateFormula1%, true), %ACOPostalAddresses:ACOPostalAddressBlock:ACOEffectiveDateFormula1%, TODAY())",
+            "AddressId": "=%contactAddressACO:dupCheckResult:recordId%",
+            "AddressType": "=\"Account Address\"",
+            "BuildingName": "=%ACO_Candidates:add_bldg%",
+            "CareOf": "=%PostalAddresses:PostalAddressBlock:PostalCareOf2%",
+            "City": "=%ACO_Candidates:nbrhd%",
+            "Country": "=\"Australia\"",
+            "CurrentAccountId": "=%ACOId%",
+            "Latitude": "=%ACO_Candidates:latitude%",
+            "LevelNumber": "=%ACO_Candidates:level_name%",
+            "LevelType": "=%ACO_Candidates:level_type%",
+            "LocationType": "=\"Registered Business Address\"",
+            "Longitude": "=%ACO_Candidates:longitude%",
+            "LotNumber": "=%ACO_Candidates:place_name%",
+            "Postcode": "=%ACO_Candidates:postal%",
+            "State": "=%ACO_Candidates:region%",
+            "Street": "=%ACO_Candidates:st_name%",
+            "StreetNumber": "=%ACO_Candidates:add_num%",
+            "StreetSuffixType": "=%ACO_Candidates:st_dir%",
+            "StreetTypeDescription": "=%ACO_Candidates:st_type%",
+            "UniqueKey": "=%contactAddressACO:dupCheckResult:concatAddress%",
+            "UnitNumber": "=%ACO_Candidates:unit_name%",
+            "UnitType": "=%ACO_Candidates:unit_type%",
+            "ValidatedByCGIS": "=\"Yes\"",
+            "gnaf_pid": "=%ACO_Candidates:gnaf_pid%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "LocationAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "ACOAddressId",
+        "responseJSONPath": "Address__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ACO_Via_TypeAhead"
+}

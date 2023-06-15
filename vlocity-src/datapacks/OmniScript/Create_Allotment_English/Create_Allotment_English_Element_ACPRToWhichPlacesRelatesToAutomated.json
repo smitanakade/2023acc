@@ -1,0 +1,61 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ACPRToWhichPlacesRelatesToAutomated",
+    "OmniProcessId": {
+        "Name": "CreateAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Create/Allotment/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ServiceToWhichAllotmentRelates",
+        "OmniProcessId": {
+            "Name": "CreateAllotment",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Create/Allotment/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Create/Allotment/English/ServiceToWhichAllotmentRelates",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ServiceToWhichAllotmentRelates",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "TextBlock1",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Residential",
+                        "field": "ServiceCareType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Approved_Provider_Service",
+                        "field": "RecordTypeDeveloperName"
+                    },
+                    {
+                        "condition": "<>",
+                        "data": null,
+                        "field": "ServiceToWhichAllotmentRelates:CreateAllotmentAddresses:AllotmentAddress|1:GI"
+                    }
+                ]
+            }
+        },
+        "text": "<p><strong>Aged Care Planning Region to which Places Relate : </strong>%ServiceToWhichAllotmentRelates:CreateAllotmentAddresses:AllotmentAddress|1:GI|1:Id%</p>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Create/Allotment/English/ACPRToWhichPlacesRelatesToAutomated"
+}

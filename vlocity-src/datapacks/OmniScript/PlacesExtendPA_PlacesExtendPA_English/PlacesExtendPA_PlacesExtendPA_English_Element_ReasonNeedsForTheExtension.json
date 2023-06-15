@@ -1,0 +1,110 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ReasonNeedsForTheExtension",
+    "OmniProcessId": {
+        "Name": "PlacesExtendPA",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesExtendPA/PlacesExtendPA/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ExtendPAPeriodDetails",
+        "OmniProcessId": {
+            "Name": "PlacesExtendPA",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesExtendPA/PlacesExtendPA/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesExtendPA/PlacesExtendPA/English/ExtendPAPeriodDetails",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ExtendPAPeriodDetails",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "controllingField": {
+            "element": "",
+            "source": "",
+            "type": ""
+        },
+        "defaultValue": null,
+        "disOnTplt": false,
+        "enableCaption": true,
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "horizontalMode": false,
+        "imageCountInRow": 3,
+        "label": "The Reason why the Applicant needs the Extension",
+        "optionHeight": 100,
+        "optionSource": {
+            "source": "Event__c.Reason_Applicant_Ext__c",
+            "type": "SObject"
+        },
+        "optionWidth": 100,
+        "options": [
+            {
+                "developerName": null,
+                "name": "ApprovedProvider",
+                "value": "Organisational death or incapacity of proprietor, restructuring, change of key staff involved in decision making, organisational mergers, sale or purchase of age care facilities affecting the provisional allocation"
+            },
+            {
+                "developerName": null,
+                "name": "Constructionprobs",
+                "value": "Construction probs"
+            },
+            {
+                "developerName": null,
+                "name": "Contractors",
+                "value": "Difficulties in attracting or keeping contractors or tenders including architects, builders, traders people and industrial problems"
+            },
+            {
+                "developerName": null,
+                "name": "Finance",
+                "value": "Difficulties obtaining finance for construction"
+            },
+            {
+                "developerName": null,
+                "name": "Land",
+                "value": "Land originally estimated to be suitable but later discovered to be unavailable, eg: bushfire regulations, too close to environmentally/culturally sensitive or hazardous sites. Or, no suitable land to be found at acceptable price"
+            },
+            {
+                "developerName": null,
+                "name": "Planning",
+                "value": "Applications for building/development approvals to local government authorises and appeals to other agencies as results of decisions; lengthy process in regard to resident objections etc"
+            },
+            {
+                "developerName": null,
+                "name": "Priorities",
+                "value": "Concurrent refurbishments: additional places being allocated in subsequent rounds requiring re-design, combining provisional allocation construction with refurbishment, That is, other projects happening at the same time."
+            },
+            {
+                "developerName": null,
+                "name": "SiteProblems",
+                "value": "Physical site problems and weather conditions delaying construction process. Included sites found to be contaminated, on flood plains, subjects to heritage restrictions etc"
+            },
+            {
+                "developerName": null,
+                "name": "Other",
+                "value": "Other reasons, mostly minor delays. Could also include problems in securing agreements to work."
+            }
+        ],
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": true,
+        "show": null
+    },
+    "Type": "Multi-select",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesExtendPA/PlacesExtendPA/English/ReasonNeedsForTheExtension"
+}

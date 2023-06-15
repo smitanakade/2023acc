@@ -1,0 +1,36 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetUnderReviewAndRole",
+    "OmniProcessId": {
+        "Name": "SRQI_OS_HoldStarRatings",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/HoldStarRatings/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "AllDomainUnderReview": "=AND(%Service:QI_UnderReview% == true, %Service:CM_UnderReview% == true,%Service:CER_UnderReview% == true) ",
+            "NullUnderReview": "=IF(AND(%Service:QI_UnderReview% == false, %Service:CM_UnderReview% == false, %Service:CER_UnderReview% == false, %Service:SRH_UnderReview% == false), 'Bad', 'Good') ",
+            "SRHBadStatus": "=IF(OR(%Service:Status% == 'Published', %Service:Status% == 'LIVE'), 'Good', 'Bad')",
+            "SRHNotUnderReview": "=%Service:SRH_UnderReview% == false"
+        },
+        "label": "SetServiceUnderReview",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/HoldStarRatings/English/SetUnderReviewAndRole"
+}

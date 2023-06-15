@@ -1,0 +1,56 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "SetPostalAddressDetails",
+    "OmniProcessId": {
+        "Name": "Address_Accounts",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Accounts/Accounts_Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "PostalAddress": {
+                "PostAddress": {
+                    "PostAddress_Address": "=IF(%PhysicalAddress:PhysAddress:AsAboveAddress% = true, %PhysicalAddress:PhysAddress:StreetDisplay_PhysicalAddress%,%PostalAddress_DataEntry:PostAddress_DE:StreetDisplay_PostalAddress%)",
+                    "PostAddress_CareOf": "=IF(%PhysicalAddress:PhysAddress:AsAboveAddress% = true, null ,%PostalAddress_DataEntry:PostAddress_DE:PostAddress_CareOf_DE%)",
+                    "PostAddress_Country": "=IF(%PhysicalAddress:PhysAddress:AsAboveAddress% = true, %PhysicalAddress:PhysAddress:CountryDisplay_PhysicalAddress%,%PostalAddress_DataEntry:PostAddress_DE:PostAddress_Country_DE%)",
+                    "PostAddress_FullAddress": "=IF(%PhysicalAddress:PhysAddress:AsAboveAddress% = true, %PhysicalAddress:PhysAddress:PhysAddress_FullAddress%,%PostalAddress_DataEntry:PostAddress_DE:PostAddress_FullAddress%)",
+                    "PostAddress_LocationType": "Postal Address",
+                    "PostAddress_POBox": "=IF(%PhysicalAddress:PhysAddress:AsAboveAddress% = true, null ,%PostalAddress_DataEntry:PostAddress_DE:PostAddress_POBox_DE%)",
+                    "PostAddress_Postcode": "=IF(%PhysicalAddress:PhysAddress:AsAboveAddress% = true, %PhysicalAddress:PhysAddress:PostcodeDisplay_PhysicalAddress%,%PostalAddress_DataEntry:PostAddress_DE:PostcodeDisplay_PostalAddress%)",
+                    "PostAddress_StateTerritory": "=IF(%PhysicalAddress:PhysAddress:AsAboveAddress% = true, %PhysicalAddress:PhysAddress:StateDisplay_PhysicalAddress%,%PostalAddress_DataEntry:PostAddress_DE:StateDisplay_PostalAddress%)",
+                    "PostAddress_SuburbTown": "=IF(%PhysicalAddress:PhysAddress:AsAboveAddress% = true, %PhysicalAddress:PhysAddress:CityDisplay_PhysicalAddress%,%PostalAddress_DataEntry:PostAddress_DE:CityDisplay_PostalAddress%)"
+                }
+            }
+        },
+        "label": "SetPostalAddressDetails",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": null,
+                        "field": "AddressRecordType"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Accounts/Accounts_Create/English/SetPostalAddressDetails"
+}

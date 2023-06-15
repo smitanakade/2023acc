@@ -1,0 +1,248 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "CMSummRecord",
+        "GlobalKey": "SRQI_DR_ExtractSRHRecordCustom4428",
+        "InputFieldName": "Care_Minutes_Id__c",
+        "InputObjectName": "STAR_Rating_History__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractSRHRecord",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractSRHRecord",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractSRHRecord",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "SRH",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "ServID",
+        "GlobalKey": "SRQI_DR_ExtractSRHRecordCustom7574",
+        "InputFieldName": "SF_Service_Id__c",
+        "InputObjectName": "STAR_Rating_History__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractSRHRecord",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractSRHRecord",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractSRHRecord",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "SRH",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(ISBLANK(IsCurrentRecord), QUERY(\"SELECT Id FROM Star_Rating_History__c WHERE Rating_Type__c = 'New Rating' AND SF_Service_Id__c = '{0}'\",ServID), IsCurrentRecord)",
+        "FormulaResultPath": "IsCurrentRecord",
+        "FormulaSequence": 2,
+        "GlobalKey": "SRQI_DR_ExtractSRHRecordCustom2130",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractSRHRecord",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractSRHRecord",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractSRHRecord",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "QUERY(\"SELECT Id FROM Star_Rating_History__c WHERE Rating_Type__c = 'Current Rating' AND SF_Service_Id__c = '{0}'\",ServID)",
+        "FormulaResultPath": "IsCurrentRecord",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_ExtractSRHRecordCustom3723",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractSRHRecord",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractSRHRecord",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractSRHRecord",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "0",
+        "GlobalKey": "SRQI_DR_ExtractSRHRecordCustom5133",
+        "InputFieldName": "SRH:Consumer_Experience_Rating__r.Consumer_Experience_Rating__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractSRHRecord",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractSRHRecord",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractSRHRecord",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Ratings:CERRating",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "0",
+        "GlobalKey": "SRQI_DR_ExtractSRHRecordCustom1529",
+        "InputFieldName": "SRH:Care_Minutes_Id__r.Care_Minutes_Rating__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractSRHRecord",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractSRHRecord",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractSRHRecord",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Ratings:CMRating",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractSRHRecordCustom6499",
+        "InputFieldName": "SRH:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractSRHRecord",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractSRHRecord",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractSRHRecord",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Ratings:Id",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "0",
+        "GlobalKey": "SRQI_DR_ExtractSRHRecordCustom3325",
+        "InputFieldName": "SRH:Quality_Indicator_Id__r.Quality_Indicator_Rating__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractSRHRecord",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractSRHRecord",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractSRHRecord",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Ratings:QIRating",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "0",
+        "GlobalKey": "SRQI_DR_ExtractSRHRecordCustom4552",
+        "InputFieldName": "SRH:Service_Compliance_Id__r.Rating__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractSRHRecord",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractSRHRecord",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractSRHRecord",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Ratings:SCRRating",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractSRHRecordCustom6234",
+        "InputFieldName": "IsCurrentRecord",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractSRHRecord",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractSRHRecord",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractSRHRecord",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRH:Extant",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractSRHRecordCustom9556",
+        "InputFieldName": "SRH:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractSRHRecord",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractSRHRecord",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractSRHRecord",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRH:Id",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractSRHRecordCustom6666",
+        "InputFieldName": "SRH:Rating_Type__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractSRHRecord",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractSRHRecord",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractSRHRecord",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRH:Type",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

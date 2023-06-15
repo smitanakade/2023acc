@@ -1,0 +1,46 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ReviewTypeNew",
+    "OmniProcessId": {
+        "Name": "Application_AATReview",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/AATReview/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "Flexible": "=IF(CONTAINS(%Application:CareTypes%, 'Flexible') && %Application:FlexibleStatus% != 'Approved' && %Application:FlexibleStatus% != 'Approve (with dependencies)',true,false)",
+            "HomeCare": "=IF(CONTAINS(%Application:CareTypes%, 'Home Care') && %Application:HomeCareStatus% != 'Approved' && %Application:HomeCareStatus% != 'Approve (with dependencies)',true,false)",
+            "Residential": "=IF(CONTAINS(%Application:CareTypes%, 'Residential') && %Application:ResidentialStatus% != 'Approved' && %Application:ResidentialStatus% != 'Approve (with dependencies)',true,false)"
+        },
+        "label": "ReviewTypeNew",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "new",
+                        "field": "ReviewType"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/AATReview/English/ReviewTypeNew"
+}

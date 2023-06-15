@@ -1,0 +1,63 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "LiveNotificationForRecal",
+    "OmniProcessId": {
+        "Name": "EmailNotificationsForRecalc",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "LoopOnContacts",
+        "OmniProcessId": {
+            "Name": "EmailNotificationsForRecalc",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure/LoopOnContacts",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "LoopOnContacts",
+    "ParentElementType": "Loop Block",
+    "PropertySetConfig": {
+        "OrgWideEmailAddress": "%FetchNotificationSetting:EmailSetting:OWEA%",
+        "actionMessage": "",
+        "attachmentList": "",
+        "chainOnStep": false,
+        "contentVersionList": "",
+        "disOnTplt": false,
+        "emailInformation": {
+            "bccAddressList": [
+            ],
+            "ccAddressList": [
+            ],
+            "emailBody": "",
+            "emailSubject": "",
+            "setHtmlBody": false,
+            "toAddressList": [
+            ]
+        },
+        "emailTemplateInformation": {
+            "emailTargetObjectId": "%GetContactsFromACR:ACR:ContactId%",
+            "emailTemplateName": "GoLive_Star_Rating_Report_Template",
+            "saveAsActivity": false,
+            "whatId": "%GetContactsFromACR:ACR:AccountId%"
+        },
+        "executionConditionalFormula": "FetchNotificationSetting:EmailSetting:LiveNotificationForRecal == \"true\" && SRHDataTransformed:Status == 'Live'",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "EmailAction3",
+        "show": null,
+        "staticDocList": [
+        ],
+        "useTemplate": true
+    },
+    "Type": "Email Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure/LiveNotificationForRecal"
+}

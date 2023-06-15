@@ -1,0 +1,743 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "ACOStreetType_Postal",
+    "OmniProcessId": {
+        "Name": "Aged Care Addresses",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_ACO_Accounts/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ACOPostalAddressBlock",
+        "OmniProcessId": {
+            "Name": "Aged Care Addresses",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_ACO_Accounts/Create/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_ACO_Accounts/Create/English/ACOPostalAddressBlock",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ACOPostalAddressBlock",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 5,
+        "controllingField": {
+            "element": "",
+            "source": "",
+            "type": ""
+        },
+        "defaultValue": "STREET",
+        "disOnTplt": false,
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "inputWidth": 12,
+        "label": "Street Type",
+        "optionSource": {
+            "source": "Address__c.Street_Type_Description__c",
+            "type": ""
+        },
+        "options": [
+            {
+                "autoAdv": null,
+                "name": "ACCESS",
+                "value": "ACCESS"
+            },
+            {
+                "autoAdv": null,
+                "name": "ALLEY",
+                "value": "ALLEY"
+            },
+            {
+                "autoAdv": null,
+                "name": "ALLEYWAY",
+                "value": "ALLEYWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "AMBLE",
+                "value": "AMBLE"
+            },
+            {
+                "autoAdv": null,
+                "name": "APPROACH",
+                "value": "APPROACH"
+            },
+            {
+                "autoAdv": null,
+                "name": "ARCADE",
+                "value": "ARCADE"
+            },
+            {
+                "autoAdv": null,
+                "name": "ARTERIAL",
+                "value": "ARTERIAL"
+            },
+            {
+                "autoAdv": null,
+                "name": "ARTERY",
+                "value": "ARTERY"
+            },
+            {
+                "autoAdv": null,
+                "name": "AVENUE",
+                "value": "AVENUE"
+            },
+            {
+                "autoAdv": null,
+                "name": "BANAN",
+                "value": "BANAN"
+            },
+            {
+                "autoAdv": null,
+                "name": "BEACH",
+                "value": "BEACH"
+            },
+            {
+                "autoAdv": null,
+                "name": "BEND",
+                "value": "BEND"
+            },
+            {
+                "autoAdv": null,
+                "name": "BOARDWALK",
+                "value": "BOARDWALK"
+            },
+            {
+                "autoAdv": null,
+                "name": "BOULEVARD",
+                "value": "BOULEVARD"
+            },
+            {
+                "autoAdv": null,
+                "name": "BRACE",
+                "value": "BRACE"
+            },
+            {
+                "autoAdv": null,
+                "name": "BRAE",
+                "value": "BRAE"
+            },
+            {
+                "autoAdv": null,
+                "name": "BREAK",
+                "value": "BREAK"
+            },
+            {
+                "autoAdv": null,
+                "name": "BROW",
+                "value": "BROW"
+            },
+            {
+                "autoAdv": null,
+                "name": "BYPASS",
+                "value": "BYPASS"
+            },
+            {
+                "autoAdv": null,
+                "name": "BYWAY",
+                "value": "BYWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "CAUSEWAY",
+                "value": "CAUSEWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "CENTRE",
+                "value": "CENTRE"
+            },
+            {
+                "autoAdv": null,
+                "name": "CHASE",
+                "value": "CHASE"
+            },
+            {
+                "autoAdv": null,
+                "name": "CIRCLE",
+                "value": "CIRCLE"
+            },
+            {
+                "autoAdv": null,
+                "name": "CIRCUIT",
+                "value": "CIRCUIT"
+            },
+            {
+                "autoAdv": null,
+                "name": "CIRCUS",
+                "value": "CIRCUS"
+            },
+            {
+                "autoAdv": null,
+                "name": "CLOSE",
+                "value": "CLOSE"
+            },
+            {
+                "autoAdv": null,
+                "name": "CONCOURSE",
+                "value": "CONCOURSE"
+            },
+            {
+                "autoAdv": null,
+                "name": "COPSE",
+                "value": "COPSE"
+            },
+            {
+                "autoAdv": null,
+                "name": "CORNER",
+                "value": "CORNER"
+            },
+            {
+                "autoAdv": null,
+                "name": "COURT",
+                "value": "COURT"
+            },
+            {
+                "autoAdv": null,
+                "name": "COURTYARD",
+                "value": "COURTYARD"
+            },
+            {
+                "autoAdv": null,
+                "name": "COVE",
+                "value": "COVE"
+            },
+            {
+                "autoAdv": null,
+                "name": "CRESCENT",
+                "value": "CRESCENT"
+            },
+            {
+                "autoAdv": null,
+                "name": "CREST",
+                "value": "CREST"
+            },
+            {
+                "autoAdv": null,
+                "name": "CROSS",
+                "value": "CROSS"
+            },
+            {
+                "autoAdv": null,
+                "name": "CUL-DE-SAC",
+                "value": "CUL-DE-SAC"
+            },
+            {
+                "autoAdv": null,
+                "name": "CUTTING",
+                "value": "CUTTING"
+            },
+            {
+                "autoAdv": null,
+                "name": "DALE",
+                "value": "DALE"
+            },
+            {
+                "autoAdv": null,
+                "name": "DIP",
+                "value": "DIP"
+            },
+            {
+                "autoAdv": null,
+                "name": "DRIVE",
+                "value": "DRIVE"
+            },
+            {
+                "autoAdv": null,
+                "name": "DRIVEWAY",
+                "value": "DRIVEWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "EDGE",
+                "value": "EDGE"
+            },
+            {
+                "autoAdv": null,
+                "name": "ELBOW",
+                "value": "ELBOW"
+            },
+            {
+                "autoAdv": null,
+                "name": "END",
+                "value": "END"
+            },
+            {
+                "autoAdv": null,
+                "name": "ENTRANCE",
+                "value": "ENTRANCE"
+            },
+            {
+                "autoAdv": null,
+                "name": "ESPLANADE",
+                "value": "ESPLANADE"
+            },
+            {
+                "autoAdv": null,
+                "name": "EXPRESSWAY",
+                "value": "EXPRESSWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "FAIRWAY",
+                "value": "FAIRWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "FOLLOW",
+                "value": "FOLLOW"
+            },
+            {
+                "autoAdv": null,
+                "name": "FOOTWAY",
+                "value": "FOOTWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "FORMATION",
+                "value": "FORMATION"
+            },
+            {
+                "autoAdv": null,
+                "name": "FREEWAY",
+                "value": "FREEWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "FRONTAGE",
+                "value": "FRONTAGE"
+            },
+            {
+                "autoAdv": null,
+                "name": "GAP",
+                "value": "GAP"
+            },
+            {
+                "autoAdv": null,
+                "name": "GARDENS",
+                "value": "GARDENS"
+            },
+            {
+                "autoAdv": null,
+                "name": "GATE",
+                "value": "GATE"
+            },
+            {
+                "autoAdv": null,
+                "name": "GLADE",
+                "value": "GLADE"
+            },
+            {
+                "autoAdv": null,
+                "name": "GLEN",
+                "value": "GLEN"
+            },
+            {
+                "autoAdv": null,
+                "name": "GRANGE",
+                "value": "GRANGE"
+            },
+            {
+                "autoAdv": null,
+                "name": "GREEN",
+                "value": "GREEN"
+            },
+            {
+                "autoAdv": null,
+                "name": "GROVE",
+                "value": "GROVE"
+            },
+            {
+                "autoAdv": null,
+                "name": "HEIGHTS",
+                "value": "HEIGHTS"
+            },
+            {
+                "autoAdv": null,
+                "name": "HIGHROAD",
+                "value": "HIGHROAD"
+            },
+            {
+                "autoAdv": null,
+                "name": "HIGHWAY",
+                "value": "HIGHWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "HILL",
+                "value": "HILL"
+            },
+            {
+                "autoAdv": null,
+                "name": "HUB",
+                "value": "HUB"
+            },
+            {
+                "autoAdv": null,
+                "name": "INTERCHANGE",
+                "value": "INTERCHANGE"
+            },
+            {
+                "autoAdv": null,
+                "name": "ISLAND",
+                "value": "ISLAND"
+            },
+            {
+                "autoAdv": null,
+                "name": "JUNCTION",
+                "value": "JUNCTION"
+            },
+            {
+                "autoAdv": null,
+                "name": "KEY",
+                "value": "KEY"
+            },
+            {
+                "autoAdv": null,
+                "name": "LANE",
+                "value": "LANE"
+            },
+            {
+                "autoAdv": null,
+                "name": "LANEWAY",
+                "value": "LANEWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "LINE",
+                "value": "LINE"
+            },
+            {
+                "autoAdv": null,
+                "name": "LINK",
+                "value": "LINK"
+            },
+            {
+                "autoAdv": null,
+                "name": "LOOKOUT",
+                "value": "LOOKOUT"
+            },
+            {
+                "autoAdv": null,
+                "name": "LOOP",
+                "value": "LOOP"
+            },
+            {
+                "autoAdv": null,
+                "name": "MALL",
+                "value": "MALL"
+            },
+            {
+                "autoAdv": null,
+                "name": "MEANDER",
+                "value": "MEANDER"
+            },
+            {
+                "autoAdv": null,
+                "name": "MEWS",
+                "value": "MEWS"
+            },
+            {
+                "autoAdv": null,
+                "name": "MOTORWAY",
+                "value": "MOTORWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "NOOK",
+                "value": "NOOK"
+            },
+            {
+                "autoAdv": null,
+                "name": "OUTLOOK",
+                "value": "OUTLOOK"
+            },
+            {
+                "autoAdv": null,
+                "name": "PARADE",
+                "value": "PARADE"
+            },
+            {
+                "autoAdv": null,
+                "name": "PARKWAY",
+                "value": "PARKWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "PASS",
+                "value": "PASS"
+            },
+            {
+                "autoAdv": null,
+                "name": "PASSAGE",
+                "value": "PASSAGE"
+            },
+            {
+                "autoAdv": null,
+                "name": "PATH",
+                "value": "PATH"
+            },
+            {
+                "autoAdv": null,
+                "name": "PATHWAY",
+                "value": "PATHWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "PIAZZA",
+                "value": "PIAZZA"
+            },
+            {
+                "autoAdv": null,
+                "name": "PLACE",
+                "value": "PLACE"
+            },
+            {
+                "autoAdv": null,
+                "name": "PLAZA",
+                "value": "PLAZA"
+            },
+            {
+                "autoAdv": null,
+                "name": "POCKET",
+                "value": "POCKET"
+            },
+            {
+                "autoAdv": null,
+                "name": "POINT",
+                "value": "POINT"
+            },
+            {
+                "autoAdv": null,
+                "name": "PORT",
+                "value": "PORT"
+            },
+            {
+                "autoAdv": null,
+                "name": "PROMENADE",
+                "value": "PROMENADE"
+            },
+            {
+                "autoAdv": null,
+                "name": "QUADRANT",
+                "value": "QUADRANT"
+            },
+            {
+                "autoAdv": null,
+                "name": "QUAY",
+                "value": "QUAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "QUAYS",
+                "value": "QUAYS"
+            },
+            {
+                "autoAdv": null,
+                "name": "RAMBLE",
+                "value": "RAMBLE"
+            },
+            {
+                "autoAdv": null,
+                "name": "REST",
+                "value": "REST"
+            },
+            {
+                "autoAdv": null,
+                "name": "RETREAT",
+                "value": "RETREAT"
+            },
+            {
+                "autoAdv": null,
+                "name": "RIDGE",
+                "value": "RIDGE"
+            },
+            {
+                "autoAdv": null,
+                "name": "RISE",
+                "value": "RISE"
+            },
+            {
+                "autoAdv": null,
+                "name": "ROAD",
+                "value": "ROAD"
+            },
+            {
+                "autoAdv": null,
+                "name": "ROTARY",
+                "value": "ROTARY"
+            },
+            {
+                "autoAdv": null,
+                "name": "ROUTE",
+                "value": "ROUTE"
+            },
+            {
+                "autoAdv": null,
+                "name": "ROW",
+                "value": "ROW"
+            },
+            {
+                "autoAdv": null,
+                "name": "RUE",
+                "value": "RUE"
+            },
+            {
+                "autoAdv": null,
+                "name": "SERVICEWAY",
+                "value": "SERVICEWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "SHUNT",
+                "value": "SHUNT"
+            },
+            {
+                "autoAdv": null,
+                "name": "SPUR",
+                "value": "SPUR"
+            },
+            {
+                "autoAdv": null,
+                "name": "SQUARE",
+                "value": "SQUARE"
+            },
+            {
+                "autoAdv": null,
+                "name": "STREET",
+                "value": "STREET"
+            },
+            {
+                "autoAdv": null,
+                "name": "SUBWAY",
+                "value": "SUBWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "TARN",
+                "value": "TARN"
+            },
+            {
+                "autoAdv": null,
+                "name": "TERRACE",
+                "value": "TERRACE"
+            },
+            {
+                "autoAdv": null,
+                "name": "THOROUGHFARE",
+                "value": "THOROUGHFARE"
+            },
+            {
+                "autoAdv": null,
+                "name": "TOLLWAY",
+                "value": "TOLLWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "TOP",
+                "value": "TOP"
+            },
+            {
+                "autoAdv": null,
+                "name": "TOR",
+                "value": "TOR"
+            },
+            {
+                "autoAdv": null,
+                "name": "TRACK",
+                "value": "TRACK"
+            },
+            {
+                "autoAdv": null,
+                "name": "TRAIL",
+                "value": "TRAIL"
+            },
+            {
+                "autoAdv": null,
+                "name": "TURN",
+                "value": "TURN"
+            },
+            {
+                "autoAdv": null,
+                "name": "UNDERPASS",
+                "value": "UNDERPASS"
+            },
+            {
+                "autoAdv": null,
+                "name": "VALE",
+                "value": "VALE"
+            },
+            {
+                "autoAdv": null,
+                "name": "VIADUCT",
+                "value": "VIADUCT"
+            },
+            {
+                "autoAdv": null,
+                "name": "VIEW",
+                "value": "VIEW"
+            },
+            {
+                "autoAdv": null,
+                "name": "VISTA",
+                "value": "VISTA"
+            },
+            {
+                "autoAdv": null,
+                "name": "WALK",
+                "value": "WALK"
+            },
+            {
+                "autoAdv": null,
+                "name": "WALKWAY",
+                "value": "WALKWAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "WAY",
+                "value": "WAY"
+            },
+            {
+                "autoAdv": null,
+                "name": "WHARF",
+                "value": "WHARF"
+            },
+            {
+                "autoAdv": null,
+                "name": "WYND",
+                "value": "WYND"
+            }
+        ],
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": true,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "ACOAddressEntry1"
+                    }
+                ]
+            }
+        },
+        "showInputWidth": false
+    },
+    "Type": "Select",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_ACO_Accounts/Create/English/ACOStreetType_Postal"
+}

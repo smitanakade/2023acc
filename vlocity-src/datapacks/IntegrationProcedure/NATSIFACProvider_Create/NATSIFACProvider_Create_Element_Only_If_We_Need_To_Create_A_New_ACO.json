@@ -1,0 +1,24 @@
+{
+    "Description": "Only run this if we need to create a new Aged Care Provider for the Approved Provider",
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Only_If_We_Need_To_Create_A_New_ACO",
+    "OmniProcessId": {
+        "Name": "CreateNATSIFACProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/NATSIFACProvider/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "LinkToACO:SearchForExistingACO:ChooseACO == \"Create a new ACO\"",
+        "isIfElseBlock": false,
+        "label": "ConditionalBlock1",
+        "show": null
+    },
+    "Type": "Conditional Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/NATSIFACProvider/Create/Procedure/Only_If_We_Need_To_Create_A_New_ACO"
+}

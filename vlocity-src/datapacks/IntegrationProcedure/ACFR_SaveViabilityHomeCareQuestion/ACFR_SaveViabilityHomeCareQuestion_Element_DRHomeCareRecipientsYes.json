@@ -1,0 +1,59 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DRHomeCareRecipientsYes",
+    "OmniProcessId": {
+        "Name": "IPSaveViabilityHomeCareQuestion",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityHomeCareQuestion/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CBHomeCareRecipientsYes",
+        "OmniProcessId": {
+            "Name": "IPSaveViabilityHomeCareQuestion",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityHomeCareQuestion/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityHomeCareQuestion/Procedure/CBHomeCareRecipientsYes",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CBHomeCareRecipientsYes",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AdditionalInformation": "=%STViabiltyQuestionsHomeCareProvider:BLKHomeCareRecipients:TXTAHCHomeCareRecipients%",
+            "FormId": "=%HomeCareViabilityandPrudentialReportingFormId%",
+            "QuestionID": "=%SVHCHomeCareRecipientsQuestionID%",
+            "RadioYesNo": "=%STViabiltyQuestionsHomeCareProvider:BLKHomeCareRecipients:RDHCHomeCareRecipients%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ACFR_SaveViabilityHomeCareQuestion",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityHomeCareQuestion/Procedure/DRHomeCareRecipientsYes"
+}

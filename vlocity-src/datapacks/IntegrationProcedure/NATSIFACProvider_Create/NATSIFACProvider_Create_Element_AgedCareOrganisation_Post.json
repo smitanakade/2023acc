@@ -1,0 +1,65 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "AgedCareOrganisation_Post",
+    "OmniProcessId": {
+        "Name": "CreateNATSIFACProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/NATSIFACProvider/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Only_If_We_Need_To_Create_A_New_ACO",
+        "OmniProcessId": {
+            "Name": "CreateNATSIFACProvider",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/NATSIFACProvider/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/NATSIFACProvider/Create/Procedure/Only_If_We_Need_To_Create_A_New_ACO",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Only_If_We_Need_To_Create_A_New_ACO",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "ACOName": "=%AgedCareOrganisation:ACODetail:ACOName%",
+            "ARBN": "=%AgedCareOrganisation:ACODetail:ARBN%",
+            "AccountNumber": "=%AgedCareOrganisation:ACODetail:ACOId%",
+            "IncorporatedUnder": "=%AgedCareOrganisation:ACODetail:IncorporatedUnder%",
+            "IncorporationID": "=%AgedCareOrganisation:ACODetail:IncorporationID%",
+            "IncorporationIDType": "=%AgedCareOrganisation:ACODetail:IncorporationIDType%",
+            "IncorporationStatus": "=%AgedCareOrganisation:ACODetail:IncorporationStatus%",
+            "IncorporationStatusDate": "=%AgedCareOrganisation:ACODetail:IncorporationStatusDate%",
+            "IncorporationType": "=%AgedCareOrganisation:ACODetail:IncorporationType%",
+            "IntegrationId": "=1"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "AgedCareOrganisation_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "ACOId",
+        "responseJSONPath": "Account_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/NATSIFACProvider/Create/Procedure/AgedCareOrganisation_Post"
+}

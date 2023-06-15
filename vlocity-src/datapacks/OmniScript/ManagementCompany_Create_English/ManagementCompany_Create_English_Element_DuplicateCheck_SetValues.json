@@ -1,0 +1,50 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DuplicateCheck_SetValues",
+    "OmniProcessId": {
+        "Name": "ManagementCompany",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ManagementCompany/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "ACNErrorCheck": "=IF(%DuplicateCheck:ACNCOUNT% >0,'NotOk','OK')",
+            "ARBNErrorCheck": "=IF(%DuplicateCheck:ARBNCOUNT% >0,'NotOk','OK')",
+            "ARBNIncIdErrorCheck": "=IF(%DuplicateCheck:ARBN_IncId_COUNT% >0, 'NotOk', 'OK')",
+            "GovErrorCheck": "=IF (%DuplicateCheck:GovCOUNT% >0, 'NotOk', 'OK')",
+            "IANErrorCheck": "=IF (%DuplicateCheck:IANCOUNT% >0, 'NotOk', 'OK')",
+            "ICNErrorCheck": "=IF (%DuplicateCheck:ICNCOUNT% >0, 'NotOk', 'OK')",
+            "OtherErrorCheck": "=IF (%DuplicateCheck:OtherCOUNT% >0, 'NotOk', 'OK')"
+        },
+        "label": "DuplicateCheck_SetValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "Use this one",
+                        "field": "ChooseACO"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ManagementCompany/Create/English/DuplicateCheck_SetValues"
+}

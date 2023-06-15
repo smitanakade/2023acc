@@ -1,0 +1,462 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "\"Flexible\"",
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem2",
+        "InputFieldName": "Care_Type__c",
+        "InputObjectName": "BusinessLicense",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Service",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "ServiceId",
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem6",
+        "InputFieldName": "Id",
+        "InputObjectName": "BusinessLicense",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Service",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "ServiceId",
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem1",
+        "InputFieldName": "Service_Name__c",
+        "InputObjectName": "Allotment__c",
+        "InputObjectQuerySequence": 2,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Allotment",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "Allotment:Id",
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem3",
+        "InputFieldName": "Allotment__c",
+        "InputObjectName": "Service_Delivery_Area__c",
+        "InputObjectQuerySequence": 3,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "SDA",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "SUM(SDA:Number_of_Places__c)",
+        "FormulaResultPath": "CountTotal",
+        "FormulaSequence": 1,
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem0",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem8",
+        "InputFieldName": "ACPR:Id",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ACPR:ACPRId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem7",
+        "InputFieldName": "ACPR:Name",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ACPR:ACPRName",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem12",
+        "InputFieldName": "ACPR:GPMS_Number_of_Places__c",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ACPR:ACPRNumberofPlaces",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem10",
+        "InputFieldName": "ACPR:SA2:Id",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ACPR:SA2:SA2Id",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem9",
+        "InputFieldName": "ACPR:SA2:Name",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ACPR:SA2:SA2Name",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem11",
+        "InputFieldName": "ACPR:SA2:GPMS_Number_of_Places__c",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ACPR:SA2:SA2NumberofPlaces",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom2073",
+        "InputFieldName": "CountACPR",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CountACPR",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom7365",
+        "InputFieldName": "SDA:GPMS_Aged_Care_Planning_Region__r.Name",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SDA:ACPRName",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem14",
+        "InputFieldName": "SDA:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SDA:Id",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom2522",
+        "InputFieldName": "SDA:Number_of_Places__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SDA:NumberofPlaces",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom9323",
+        "InputFieldName": "SDA:GPMS_SA2__r.Name",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SDA:SA2Name",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem16",
+        "InputFieldName": "Service:Allotment:Id",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Service:Allotment:AllotmentId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem13",
+        "InputFieldName": "Service:Allotment:RecordType.Name",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Service:Allotment:RecordTypeName",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem15",
+        "InputFieldName": "Service:Care_Type__c",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Service:Allotment:SDA:ACPR:CareType",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem19",
+        "InputFieldName": "Service:Allotment:SDA:Id",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Service:Allotment:SDA:SDAId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem17",
+        "InputFieldName": "Service:Allotment:Specified_Distribution__c",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Service:Allotment:SpecifiedDristribution",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem20",
+        "InputFieldName": "Service:Name",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Service:Name",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "1",
+        "GlobalKey": "FlexiCareServiceDeliveryArea_ExtractCustom0jI9r0000000KI5EAMItem18",
+        "InputFieldName": "CountTotal",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "FlexiCareServiceDeliveryArea_Extract",
+        "OmniDataTransformationId": {
+            "Name": "FlexiCareServiceDeliveryArea_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/FlexiCareServiceDeliveryArea_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Total",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

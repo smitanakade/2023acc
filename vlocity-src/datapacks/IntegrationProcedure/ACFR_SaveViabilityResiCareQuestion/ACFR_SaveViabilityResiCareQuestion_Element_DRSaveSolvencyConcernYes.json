@@ -1,0 +1,59 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DRSaveSolvencyConcernYes",
+    "OmniProcessId": {
+        "Name": "IPSaveViabilityResiCareQuestion",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityResiCareQuestion/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CBSolvencyConcernYes",
+        "OmniProcessId": {
+            "Name": "IPSaveViabilityResiCareQuestion",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityResiCareQuestion/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityResiCareQuestion/Procedure/CBSolvencyConcernYes",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CBSolvencyConcernYes",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AdditionalInformation": "=%ResidentialProviderFinancialPerformanceSurvey:BLKSolvency:TXTASolvencyConcern%",
+            "FormId": "=%ResidentialViabilityandPrudentialReportingFormId%",
+            "QuestionID": "=%SVSolvencyConcernQuestionID%",
+            "RadioYesNo": "=%ResidentialProviderFinancialPerformanceSurvey:BLKSolvency:RDSolvencyConcern%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ACFR_SaveViabilityResiCareQuestion",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityResiCareQuestion/Procedure/DRSaveSolvencyConcernYes"
+}

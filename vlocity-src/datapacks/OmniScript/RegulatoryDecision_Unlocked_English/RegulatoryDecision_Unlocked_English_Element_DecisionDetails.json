@@ -1,0 +1,53 @@
+{
+    "Description": "RD:DecisionDetails",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DecisionDetails",
+    "OmniProcessId": {
+        "Name": "SRQI_OS_UnlockedRegulatoryDecision",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RegulatoryDecision/Unlocked/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "DetailedNotesBlock",
+        "OmniProcessId": {
+            "Name": "SRQI_OS_UnlockedRegulatoryDecision",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/RegulatoryDecision/Unlocked/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/RegulatoryDecision/Unlocked/English/DetailedNotesBlock",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "DetailedNotesBlock",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "bStandalone": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "customAttributes": [
+            {
+                "name": "records",
+                "source": "Decision Details"
+            },
+            {
+                "name": "record-Id",
+                "source": "%ContextId%"
+            },
+            {
+                "name": "record",
+                "source": "%UnlockedRegDec:RegulatoryDecisionInfoBlock:Published%"
+            }
+        ],
+        "hide": false,
+        "label": "DecisionDetails",
+        "lwcName": "sRQI_RegulatoryRichText",
+        "show": null
+    },
+    "Type": "Custom Lightning Web Component",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RegulatoryDecision/Unlocked/English/DecisionDetails"
+}

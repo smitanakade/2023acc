@@ -1,0 +1,42 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetNoticeOfTransferDetailsValues",
+    "OmniProcessId": {
+        "Name": "PlacesEventsTransferCreate",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesEventsTransfer/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "RecordNoticeOfTransferDetails": {
+                "ApplicationDecisionDueByDate": "=%NoticeOfTransfer:NoticeOfTransferForm:VetoDecisionDueDate%",
+                "ApplicationReceivedDate": "=%NoticeOfTransfer:NoticeOfTransferForm:NoticeOfTransferReceivedDate%",
+                "NameOfTransferee": "=%NoticeOfTransfer:NoticeOfTransferForm:Transferee-Block:Transferee%",
+                "NameOfTransferor": "=%FlexValues:ProviderName%",
+                "ProposedTransferDay": "=%NoticeOfTransfer:NoticeOfTransferForm:ProposedTransferDate%",
+                "TransferType": "=%SelectTransferType%"
+            },
+            "TransferEventType": "=IF(%CountOfOperational% > 0 && %CountOfNonOperational% = 0, \"Transfer - S16-1\", IF(%CountOfOperational% = 0 && %CountOfNonOperational% > 0, \"Transfer - S16-13\",IF(%CountOfOperational% > 0 && %CountOfNonOperational% > 0, \"Transfer - S16-13/S16-1\",\"\")))"
+        },
+        "label": "SetNoticeOfTransferDetailsValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesEventsTransfer/Create/English/SetNoticeOfTransferDetailsValues"
+}

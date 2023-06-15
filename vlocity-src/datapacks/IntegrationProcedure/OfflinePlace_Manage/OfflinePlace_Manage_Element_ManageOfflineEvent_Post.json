@@ -1,0 +1,52 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ManageOfflineEvent_Post",
+    "OmniProcessId": {
+        "Name": "ManageOfflinePlace",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/OfflinePlace/Manage/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AllotmentId": "=%AllotmentId%",
+            "Comments": "=%NotificationDetails:Comments%",
+            "DateOfAllotment": "=%DateOfAllotment%",
+            "DateOfDecision": "=%NotificationDetails:DateofDecision%",
+            "EventRecordTypeId": "=\"GPMS_Manage_Offline_places\"",
+            "EventStatus": "=\"Approved\"",
+            "EventStatusDate": "=TODAY()",
+            "EventType": "=\"Manage Offline Places\"",
+            "LinkToDocument": "=%NotificationDetails:LinktoDocuments%",
+            "NoticeReceivedDate": "=%NotificationDetails:NoticeReceivedDate%",
+            "PreviousPage": "=\"Manage Offline Places\"",
+            "ServiceId": "=%ServiceId%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Allotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction2",
+        "responseJSONNode": "EventId",
+        "responseJSONPath": "Event__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/OfflinePlace/Manage/Procedure/ManageOfflineEvent_Post"
+}

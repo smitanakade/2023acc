@@ -1,0 +1,243 @@
+[
+    {
+        "GlobalKey": "PAVariationEventCreate_PostCustom8123",
+        "InputFieldName": "ApplicationReceivedDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PAVariationEventCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationEventCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationEventCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Date(YYYY-MM-dd)",
+        "OutputFieldName": "Application_Received_Date__c",
+        "OutputObjectName": "Event__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "PAVariationEventCreate_PostCustom5332",
+        "InputFieldName": "EventType",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PAVariationEventCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationEventCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationEventCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Event_Type__c",
+        "OutputObjectName": "Event__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "PAVariationEventCreate_PostCustom6886",
+        "InputFieldName": "ApplicationDecisionbyDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PAVariationEventCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationEventCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationEventCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Date(YYYY-MM-dd)",
+        "OutputFieldName": "GPMS_Application_Decision_Date__c",
+        "OutputObjectName": "Event__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "PAVariationEventCreate_PostCustom9964",
+        "InputFieldName": "NoticeofIntentionSenttoProvider",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PAVariationEventCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationEventCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationEventCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "GPMS_Notice_of_Intention_Sent_Provider__c",
+        "OutputObjectName": "Event__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "PAVariationEventCreate_PostCustom3422",
+        "InputFieldName": "SubmissionDuebyDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PAVariationEventCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationEventCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationEventCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Date(YYYY-MM-dd)",
+        "OutputFieldName": "GPMS_Submission_Due_by_Date__c",
+        "OutputObjectName": "Event__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "PAVariationEventCreate_PostCustom9647",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "PAVariationEventCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationEventCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationEventCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Event__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "Variations_by_Provider_Secretary",
+        "GlobalKey": "PAVariationEventCreate_PostCustom760",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "LookupByFieldName": "DeveloperName",
+        "LookupObjectName": "RecordType",
+        "LookupReturnedFieldName": "Id",
+        "Name": "PAVariationEventCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationEventCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationEventCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "RecordTypeId",
+        "OutputObjectName": "Event__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "Today()",
+        "GlobalKey": "PAVariationEventCreate_PostCustom9267",
+        "InputFieldName": "StatusDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PAVariationEventCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationEventCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationEventCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Date(YYYY-MM-dd)",
+        "OutputFieldName": "Status_Date__c",
+        "OutputObjectName": "Event__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "Inactive",
+        "GlobalKey": "PAVariationEventCreate_PostCustom9173",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PAVariationEventCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationEventCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationEventCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Status__c",
+        "OutputObjectName": "Event__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "PAVariationEventCreate_PostCustom7550",
+        "InputFieldName": "ParentAllotmentId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": true,
+        "Name": "PAVariationEventCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationEventCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationEventCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "Allotment__c",
+        "OutputObjectName": "Event_Allotment__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "PAVariationEventCreate_PostCustom8362",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": true,
+        "LinkedFieldName": "Id",
+        "LinkedObjectSequence": 1,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "PAVariationEventCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationEventCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationEventCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "Event__c",
+        "OutputObjectName": "Event_Allotment__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "PAVariationEventCreate_PostCustom9678",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "PAVariationEventCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationEventCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationEventCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Event_Allotment__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

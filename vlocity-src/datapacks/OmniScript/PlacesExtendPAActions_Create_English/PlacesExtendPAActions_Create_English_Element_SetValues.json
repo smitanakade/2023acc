@@ -1,0 +1,38 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetValues",
+    "OmniProcessId": {
+        "Name": "PlacesExtendPAActions",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesExtendPAActions/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "CorrectAction": "=%CorrectAction1%",
+            "CurrentDateText": "=YEAR(TODAY())+\"-\"+MONTH(TODAY())+\"-\"+DAYOFMONTH(TODAY())",
+            "EventId": "=%EventId1%",
+            "EventStatus": "=%EventStatus1%",
+            "GPMSExtendPAPeriodDetailsCount": "=%GPMSExtendPAPeriodDetailsCount1%"
+        },
+        "label": "SetValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesExtendPAActions/Create/English/SetValues"
+}

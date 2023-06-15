@@ -1,0 +1,47 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetCareType",
+    "OmniProcessId": {
+        "Name": "Application_AATReview",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/AATReview/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "AATReviewCareType": "=IF(%AATReviewNew:CareType% != NULL,%AATReviewNew:CareType%,IF(%AATReviewNew:CareTypeNoHome% != NULL,%AATReviewNew:CareTypeNoHome%,IF(%AATReviewNew:CareTypeNoResidential% != NULL,%AATReviewNew:CareTypeNoResidential%,IF(%AATReviewNew:CareTypeNoFlexible% != NULL,%AATReviewNew:CareTypeNoFlexible%,IF(%AATReviewNew:CareTypeHome% != NULL,%AATReviewNew:CareTypeHome%,IF(%AATReviewNew:CareTypeResidential% != NULL,%AATReviewNew:CareTypeResidential%,IF(%AATReviewNew:HomeCareFlexible% != NULL,%AATReviewNew:HomeCareFlexible%,\"\")))))))",
+            "Comment": "=%AATReview:ReviewComment%",
+            "DecisionType": "=%AATReview:ReviewDecisionType%",
+            "FlexibleDecision": "=%AATReview:FlexibleB:FlexibleDecisionB%",
+            "FlexibleDecisionType": "=%AATReview:ReviewDecisionType%",
+            "FlexibleDecpendencies": "=%AATReview:FlexibleB:FlexibleDependenciesB%",
+            "FlexibleDue": "=%AATReview:FlexibleB:FlexibleDueDateB%",
+            "HomeCareDecision": "=%AATReview:HomeCareB:HomeCareDecisionB%",
+            "HomeCareDecisionType": "=%AATReview:ReviewDecisionType%",
+            "HomeCareDependencies": "=%AATReview:HomeCareB:HomeCareDependenciesB%",
+            "HomeCareDue": "=%AATReview:HomeCareB:HomeCareDueDateB%",
+            "ResidentialDecision": "=%AATReview:ResidentialB:ResidentialDecisionB%",
+            "ResidentialDecisionType": "=%AATReview:ReviewDecisionType%",
+            "ResidentialDependencies": "=%AATReview:ResidentialB:ResidentialDependenciesB%",
+            "ResidentialDue": "=%AATReview:ResidentialB:ResidentialDueDateB%"
+        },
+        "label": "SetCareType",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/AATReview/English/SetCareType"
+}

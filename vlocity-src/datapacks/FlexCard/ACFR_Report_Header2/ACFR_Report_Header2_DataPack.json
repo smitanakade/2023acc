@@ -1,0 +1,42 @@
+{
+    "AuthorName": "QFR",
+    "ClonedFromOmniUiCardKey": "",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 4,
+                "name": "recordId",
+                "val": "5009h000000i9dtAAA"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "CaseId": "{recordId}"
+            },
+            "ipMethod": "ACFR_GetAccountNameAndNpsiIdb",
+            "resultVar": "",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "ACFR_Report_Header2",
+    "Namespace": "",
+    "OmniUiCardKey": "ACFR_Report_Header2/QFR/12.0",
+    "OmniUiCardType": "Child",
+    "OverrideKey": "",
+    "PropertySetConfig": "ACFR_Report_Header2.json",
+    "SampleDataSourceResponse": "{\"AccountName\":\"St Vincent's Home Care Provider\",\"OrganisationType\":\"Local Government\",\"Id\":\"5009h000000i9dtAAA\",\"AccountId\":\"0019h000002aj3vAAA\",\"NAPSID\":\"PRV-00009\",\"ReportingPeriod\":\"QTR 3 2022\",\"end_date\":\"2022-09-30\"}",
+    "StylingConfiguration": "{\"customStyles\":\".outer-header{\\r\\n   box-sizing: border-box;\\r\\n    display: flex;\\r\\n    flex-direction: row;\\r\\n    align-items: flex-start;\\r\\n    padding: 32px, 48px;\\r\\n    gap: 32px;\\r\\n    width: 100%;\\r\\n    height: 156px;\\r\\n    background: #261040;\\r\\n    border-bottom: 1px solid #EEEEEE;\\r\\n    scroll-behavior: normal;\\r\\n    position: sticky;\\r\\n    top: 0;\\r\\n\\r\\n    flex: none;\\r\\n    order: 1;\\r\\n    flex-grow: 0;\\r\\n}\\r\\n\\r\\n.inner-header{\\r\\n     box-sizing: border-box;\\r\\n    display: flex;\\r\\n    flex-direction: row;\\r\\n    align-items: flex-start;\\r\\n    padding: 32px, 48px;\\r\\n    gap: 32px;\\r\\n  \\r\\n    height: 82px;\\r\\n    width: 100%;\\r\\n    background: #261040;\\r\\n    margin-top: 0;\\r\\n    position: sticky;\\r\\n    top: 0;\\r\\n    \\r\\n    flex: none;\\r\\n    order: 1;\\r\\n    flex-grow: 0;\\r\\n}\\r\\n\\r\\n.save-btn{\\r\\n    display: flex;\\r\\nflex-direction: row;\\r\\njustify-content: center;\\r\\nalign-items: flex-start;\\r\\npadding: 14px 24px;\\r\\ngap: 10px;\\r\\n\\r\\nwidth: 170px;\\r\\nheight: 40px;\\r\\nposition: absolute;\\r\\nright: 9.5%;\\r\\ntop: 20%;\\r\\n\\r\\nbackground: #51376B;\\r\\nborder-radius: 2px;\\r\\n\\r\\nflex: none;\\r\\norder: 2;\\r\\nflex-grow: 0;\\r\\n}\\r\\n\\r\\n.save-text{\\r\\n \\r\\nfont-family: 'Roboto';\\r\\nfont-style: normal;\\r\\nfont-weight: 500;\\r\\nfont-size: 15px;\\r\\nline-height: 18px;\\r\\n\\r\\ndisplay: flex;\\r\\nalign-items: center;\\r\\ntext-align: left;\\r\\nmargin-left: 5px;\\r\\n\\r\\ncolor: #FFFFFF;\\r\\n\\r\\nflex: none;\\r\\norder: 0;\\r\\nflex-grow: 0;\\r\\n\\r\\n}\\r\\n.save-text :hover{\\r\\n    color: #cccccc;\\r\\n}\\r\\n\\r\\n.first-text{\\r\\n   width: 224px;\\r\\nheight: 16px;\\r\\nfont-family: 'Roboto';\\r\\nfont-style: normal;\\r\\nfont-weight: 500;\\r\\nfont-size: 14px;\\r\\nline-height: 16px;\\r\\nletter-spacing: 0.25px;\\r\\nvertical-align: top;\\r\\ncolor: #000000;\\r\\nposition: absolute;\\r\\nleft: 3%;\\r\\nright: 3%;\\r\\n\\r\\nflex: none;\\r\\norder: 0;\\r\\nflex-grow: 0;\\r\\n}\\r\\n\\r\\n.first-box{\\r\\n    display: flex;\\r\\nflex-direction: row;\\r\\nalign-items: center;\\r\\npadding: 2px 8px;\\r\\ngap: 10px;\\r\\n\\r\\nwidth: 240px;\\r\\nheight: 20px;\\r\\nposition: absolute;\\r\\ntop: 20%;\\r\\n\\r\\nbackground: #F8F6FB;\\r\\nborder-radius: 2px;\\r\\n\\r\\nflex: none;\\r\\norder: 0;\\r\\nflex-grow: 0;\\r\\n}\\r\\n\\r\\n.title{\\r\\n   width: 1325px;\\r\\nheight: 34px;\\r\\nfont-family: 'Roboto';\\r\\nfont-style: normal;\\r\\nfont-weight: 500;\\r\\nfont-size: 30px;\\r\\nline-height: 34px;\\r\\nvertical-align: baseline;\\r\\ndisplay: flex;\\r\\nalign-items: flex-end;\\r\\ncolor: #FFFFFF;\\r\\nposition: absolute;\\r\\ntop: 60%;\\r\\nleft: 3%;\\r\\nright: 3%;\\r\\nflex: none;\\r\\norder: 0;\\r\\nflex-grow: 0;\\r\\n}\\r\\n\\r\\n.sub-title{\\r\\n    width: 1325px;\\r\\nheight: 22px;\\r\\n\\r\\nfont-family: 'Roboto';\\r\\nfont-style: normal;\\r\\nfont-weight: 400;\\r\\nfont-size: 15px;\\r\\nline-height: 22px;\\r\\n\\r\\ncolor: #FFFFFF;\\r\\nposition: absolute;\\r\\ntop: 90%;\\r\\nleft: 3%;\\r\\nright: 3%;\\r\\n\\r\\nflex: none;\\r\\norder: 1;\\r\\nflex-grow: 0;\\r\\n}\\r\\n\\r\\n.draft{\\r\\n    display: flex;\\r\\nflex-direction: row;\\r\\njustify-content: center;\\r\\nalign-items: center;\\r\\n height: 40px;\\r\\n width: 42px;\\r\\n padding: 0px;\\r\\n position: absolute;\\r\\n\\r\\nleft: 91%;\\r\\ntop: 20%;\\r\\n\\r\\nbackground: #51376B;\\r\\nborder-radius: 2px;\\r\\n\\r\\n\\r\\nflex: none;\\r\\norder: 2;\\r\\nflex-grow: 0;\\r\\n}\"}",
+    "UniqueName": "",
+    "VersionNumber": 12,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/ACFR_Report_Header2"
+}

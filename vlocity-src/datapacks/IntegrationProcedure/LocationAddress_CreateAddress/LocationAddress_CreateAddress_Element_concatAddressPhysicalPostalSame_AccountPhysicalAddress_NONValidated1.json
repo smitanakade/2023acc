@@ -1,0 +1,75 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "concatAddressPhysicalPostalSame_AccountPhysicalAddress_NONValidated1",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "PHYSICAL_AND_POSTAL_SAME",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/PHYSICAL_AND_POSTAL_SAME",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "PHYSICAL_AND_POSTAL_SAME",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "LevelNumber": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"No\",%PhysicalAddresses:Address:LevelFloor_Physical%,\"\")",
+            "buildingName": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"No\",%PhysicalAddresses:Address:BuildingName_Physical%,\"\")",
+            "city": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"No\",%PhysicalAddresses:Address:SuburbOrTown_Physical_UPPER%,\"\")",
+            "country": "=\"Australia\"",
+            "latitude": "=\"\"",
+            "longitude": "=\"\"",
+            "lotNumber": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"No\",IF(%PhysicalAddresses:Address:LotStreetRadio_Physical% = \"Lot/Section Number\",%PhysicalAddresses:Address:StreetNumber_Physical_UPPER%, NULL),\"\")",
+            "poBoxType": "=\"\"",
+            "postOfficeBox": "=\"\"",
+            "stateProvince": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"No\",%PhysicalAddresses:Address:State_Physical%,\"\")",
+            "street1": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"No\",%PhysicalAddresses:Address:StreetName_Physical_UPPER%,\"\")",
+            "streetNumber1": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"No\",IF(%PhysicalAddresses:Address:LotStreetRadio_Physical% = \"Street Number\",%PhysicalAddresses:Address:StreetNumber_Physical_UPPER%, NULL),\"\")",
+            "streetSuffixTypeDescription": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"No\",%PhysicalAddresses:Address:StreetSuffix_Physical%,\"\")",
+            "streetTypeDescription": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"No\",%PhysicalAddresses:Address:StreetType_Physical%,\"\")",
+            "unitNumber": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"No\",%PhysicalAddresses:Address:Unit_Physical_UPPER%,\"\")",
+            "zipPostalCode": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"No\",%PhysicalAddresses:Address:PostCode_Physical%,\"\")"
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"No\"",
+        "failOnStepError": false,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "RemoteAction1",
+        "remoteClass": "UniqueAddressesController",
+        "remoteMethod": "CheckExistingAddress",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "Remote Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/concatAddressPhysicalPostalSame_AccountPhysicalAddress_NONValidated1"
+}

@@ -1,0 +1,67 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DROther",
+    "OmniProcessId": {
+        "Name": "IPSaveViabilityHomeCareBusinessStructure",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityHomeCareBusinessStructure/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CBOther",
+        "OmniProcessId": {
+            "Name": "IPSaveViabilityHomeCareBusinessStructure",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveViabilityHomeCareBusinessStructure/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityHomeCareBusinessStructure/Procedure/CBOther",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CBOther",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "CKAllied": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKOther:CKOther_AlliedHealth%",
+            "CKBusinessStructure": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKOther:CKOther%",
+            "CKClinical": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKOther:CKOther_ClinicalCare%",
+            "CKDiversional": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKOther:CKOther_DiversionalTherapy%",
+            "CKLifestyle": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKOther:CKOther_LifestyleOfficer%",
+            "CKOtherBusiness": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKOther:CKOther_Other%",
+            "CKPersonal": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKOther:CKOther_PersonalCare%",
+            "FormId": "=%HomeCareViabilityandPrudentialReportingFormId%",
+            "QuestionID": "=%SVHCOtherQuestionID%",
+            "TXTAAddtionalInfo": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKOther:TXTAOtherAdditionalInformation%",
+            "TXTAOtherBusinessStructureExplain": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKOther:TXTAOtherExplanation%",
+            "TXTAOtherExplanantion": "=%STViabiltyQuestionsHomeCareProvider:BLKBusinessStructure:BLKOther:TXTAOtherOtherExplanation%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ACFR_SaveViabilityHomeCareBusinessStructure",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveViabilityHomeCareBusinessStructure/Procedure/DROther"
+}

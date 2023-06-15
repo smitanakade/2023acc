@@ -1,0 +1,60 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetNATSIFACValues",
+    "OmniProcessId": {
+        "Name": "CreateAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Create/Allotment/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "SummaryPage": {
+                "ACPRToWhichPlacesRelatesToAutomated": "",
+                "ACPRToWhichPlacesRelatesToManual": "",
+                "AllotmentSubType": "%AllotmentDetails:AllotmentSubTypeNATSIFAC%",
+                "CareType": "%ServiceCareType%",
+                "Comments": "%AllotmentDetails:Comments%",
+                "DateOfAllotment": "%AllotmentDetails:DateOfAllotment_SummaryScreen%",
+                "EndDateOfAllotment": "",
+                "IntegrationID": "%ServiceIntegrationId%",
+                "LinkToDocument": "%AllotmentDetails:LinkToDocument%",
+                "NameOfService": "%ServiceName%",
+                "OriginalDateOfAllotment": "%AllotmentDetails:OriginalDateofAllotment%",
+                "PlaceInformation": "%PlacesBelongingToAllotmentNATSIFAC:PlacesInformationNATSIFAC%",
+                "ServiceAddress": "%ServiceToWhichAllotmentRelates:CreateAllotmentAddresses:AllotmentAddress:FullAddress%",
+                "WaiverType": "Not Applicable"
+            }
+        },
+        "label": "SetNATSIFACValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "NATSIFAC_Service",
+                        "field": "RecordTypeDeveloperName"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Create/Allotment/English/SetNATSIFACValues"
+}

@@ -1,0 +1,131 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "SpecialNeeds2",
+    "OmniProcessId": {
+        "Name": "VariationNewAllotmentCondition",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/NewVariation/Condition/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "NewAllotmentConditions",
+        "OmniProcessId": {
+            "Name": "VariationNewAllotmentCondition",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/NewVariation/Condition/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/NewVariation/Condition/English/NewAllotmentConditions",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "NewAllotmentConditions",
+    "ParentElementType": "Edit Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 9,
+        "controllingField": {
+            "element": "",
+            "source": "",
+            "type": ""
+        },
+        "defaultValue": "",
+        "disOnTplt": false,
+        "enableCaption": true,
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "horizontalMode": false,
+        "imageCountInRow": 3,
+        "label": "",
+        "optionHeight": 100,
+        "optionSource": {
+            "source": "",
+            "type": ""
+        },
+        "optionWidth": 100,
+        "options": [
+            {
+                "developerName": null,
+                "name": "People who are care leavers",
+                "value": "People who are care leavers"
+            },
+            {
+                "developerName": null,
+                "name": "People who live in rural or remote areas",
+                "value": "People who live in rural or remote areas"
+            },
+            {
+                "developerName": null,
+                "name": "People who are financially or socially disadvantaged",
+                "value": "People who are financially or socially disadvantaged"
+            },
+            {
+                "developerName": null,
+                "name": "People from Aboriginal and Torres Strait Islander communities",
+                "value": "People from Aboriginal or Torres Strait Islander communities"
+            },
+            {
+                "developerName": null,
+                "name": "People who are veterans, including a spouse, widow or widower of a veteran",
+                "value": "People who are veterans, including a spouse, widow or widower of a veteran"
+            },
+            {
+                "developerName": null,
+                "name": "In the form of consumer directed care, as described in the Annexure to this Schedule",
+                "value": "In the form of consumer directed care, as described in the Annexure to this Schedule"
+            },
+            {
+                "developerName": null,
+                "name": "People from the Lesbian, Gay, Bisexual, Transgender and Intersex community",
+                "value": "People from the Lesbian, Gay, Bisexual, Transgender and Intersex community"
+            },
+            {
+                "developerName": null,
+                "name": "People who are homeless or at risk of becoming homeless",
+                "value": "People who are homeless or at risk of becoming homeless"
+            },
+            {
+                "developerName": null,
+                "name": "People from a background that is",
+                "value": "People from a background that is"
+            }
+        ],
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "General Access",
+                        "field": "TargetGroup2|n"
+                    },
+                    {
+                        "condition": "=",
+                        "data": null,
+                        "field": "NewName|n"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Target Group",
+                        "field": "NewRecordTypeName|n"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "Multi-select",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/NewVariation/Condition/English/SpecialNeeds2"
+}

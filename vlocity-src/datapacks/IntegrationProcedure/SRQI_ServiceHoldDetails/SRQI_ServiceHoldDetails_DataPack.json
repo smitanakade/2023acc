@@ -1,0 +1,28 @@
+{
+    "CustomJavaScript": "SRQI_ServiceHoldDetails_SampleInput.json",
+    "Description": "This IP is used to extract service's Rating Under Review field and STAR Rating History details",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "SRQI_IP_GetServiceHoldDetails",
+    "OmniProcessElement": [
+        "SRQI_ServiceHoldDetails_Element_GetSRHBlock.json",
+        "SRQI_ServiceHoldDetails_Element_DRGetSRHDetails.json",
+        "SRQI_ServiceHoldDetails_Element_DRGetNumberOfCases.json",
+        "SRQI_ServiceHoldDetails_Element_DRTransformCaseLinkedToSRH.json",
+        "SRQI_ServiceHoldDetails_Element_ServiceDetailsResponse.json"
+    ],
+    "OmniProcessKey": "SRQI_ServiceHoldDetails",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "SRQI_ServiceHoldDetails_PropertySetConfig.json",
+    "SubType": "ServiceHoldDetails",
+    "Type": "SRQI",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/SRQI/ServiceHoldDetails/Procedure",
+    "WebComponentKey": "77267ce2-b2db-9e18-cb90-f0dd2827fb6d"
+}

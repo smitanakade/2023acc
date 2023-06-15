@@ -1,0 +1,204 @@
+[
+    {
+        "FormulaExpression": "IF(RPId LIKE \"VLOCITY\", \"\", RPId)",
+        "FormulaResultPath": "RPId",
+        "FormulaSequence": 4,
+        "GlobalKey": "SQRI_TransformFlowInputCustom603",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SQRI_TransformFlowInput",
+        "OmniDataTransformationId": {
+            "Name": "SQRI_TransformFlowInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SQRI_TransformFlowInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(ServID LIKE \"VLOCITY\", \"\", ServID)",
+        "FormulaResultPath": "ServID",
+        "FormulaSequence": 2,
+        "GlobalKey": "SQRI_TransformFlowInputCustom549",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SQRI_TransformFlowInput",
+        "OmniDataTransformationId": {
+            "Name": "SQRI_TransformFlowInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SQRI_TransformFlowInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "SUBSTRING(LIST(Input),\"0cE\",\",\")",
+        "FormulaResultPath": "ServID",
+        "FormulaSequence": 1,
+        "GlobalKey": "SQRI_TransformFlowInputCustom0jI9r0000000OLhEAMItem0",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SQRI_TransformFlowInput",
+        "OmniDataTransformationId": {
+            "Name": "SQRI_TransformFlowInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SQRI_TransformFlowInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "SUBSTRING(LIST(Input),\"call\",\"]\")",
+        "FormulaResultPath": "Domain",
+        "FormulaSequence": 5,
+        "GlobalKey": "SQRI_TransformFlowInputCustom0jI9r0000000OLhEAMItem2",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SQRI_TransformFlowInput",
+        "OmniDataTransformationId": {
+            "Name": "SQRI_TransformFlowInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SQRI_TransformFlowInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "SUBSTRING(SUBSTRING(LIST(Input),\"a2w\"), \"a2w\", \",\")",
+        "FormulaResultPath": "RPId",
+        "FormulaSequence": 3,
+        "GlobalKey": "SQRI_TransformFlowInputCustom0jI9r0000000OLhEAMItem1",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SQRI_TransformFlowInput",
+        "OmniDataTransformationId": {
+            "Name": "SQRI_TransformFlowInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SQRI_TransformFlowInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "SUBSTRING(SUBSTRING(LIST(Input),\"a32\"), \"a32\", \",\")",
+        "FormulaResultPath": "SRHID",
+        "FormulaSequence": 6,
+        "GlobalKey": "SQRI_TransformFlowInputCustom9164",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SQRI_TransformFlowInput",
+        "OmniDataTransformationId": {
+            "Name": "SQRI_TransformFlowInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SQRI_TransformFlowInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SQRI_TransformFlowInputCustom0jI9r0000000OLhEAMItem5",
+        "InputFieldName": "Domain",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SQRI_TransformFlowInput",
+        "OmniDataTransformationId": {
+            "Name": "SQRI_TransformFlowInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SQRI_TransformFlowInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Domain",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SQRI_TransformFlowInputCustom0jI9r0000000OLhEAMItem4",
+        "InputFieldName": "RPId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SQRI_TransformFlowInput",
+        "OmniDataTransformationId": {
+            "Name": "SQRI_TransformFlowInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SQRI_TransformFlowInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "RPId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SQRI_TransformFlowInputCustom7244",
+        "InputFieldName": "SRHID",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SQRI_TransformFlowInput",
+        "OmniDataTransformationId": {
+            "Name": "SQRI_TransformFlowInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SQRI_TransformFlowInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHID",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SQRI_TransformFlowInputCustom0jI9r0000000OLhEAMItem3",
+        "InputFieldName": "ServID",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SQRI_TransformFlowInput",
+        "OmniDataTransformationId": {
+            "Name": "SQRI_TransformFlowInput",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SQRI_TransformFlowInput",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ServID",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

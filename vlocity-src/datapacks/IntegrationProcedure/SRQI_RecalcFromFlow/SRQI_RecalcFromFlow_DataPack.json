@@ -1,0 +1,29 @@
+{
+    "CustomJavaScript": "SRQI_RecalcFromFlow_SampleInput.json",
+    "Description": "IP that calls the recalculation IPs, depending on which records have been edited. Allows for the passing of an RPId which is not previous reporting period, and the ServID at the top JSON level.Edit: Sending IsRecalc variable",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "RecalcTriggeredFromFlow",
+    "OmniProcessElement": [
+        "SRQI_RecalcFromFlow_Element_Deserialize.json",
+        "SRQI_RecalcFromFlow_Element_LoopOverInput.json",
+        "SRQI_RecalcFromFlow_Element_RecalcForQI.json",
+        "SRQI_RecalcFromFlow_Element_RecalcForCM.json",
+        "SRQI_RecalcFromFlow_Element_RecalcOverall.json",
+        "SRQI_RecalcFromFlow_Element_ResponseAction1.json"
+    ],
+    "OmniProcessKey": "SRQI_RecalcFromFlow",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "SRQI_RecalcFromFlow_PropertySetConfig.json",
+    "SubType": "RecalcFromFlow",
+    "Type": "SRQI",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/SRQI/RecalcFromFlow/Procedure",
+    "WebComponentKey": "4804ec6a-3963-4cd5-3cd1-fcf9e70ad556"
+}

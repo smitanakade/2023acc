@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DecisionByDate",
+    "OmniProcessId": {
+        "Name": "RelinquishPlaces",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RelinquishPlaces/RelinquishPlaces/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RelinquishmentDetails",
+        "OmniProcessId": {
+            "Name": "RelinquishPlaces",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/RelinquishPlaces/RelinquishPlaces/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/RelinquishPlaces/RelinquishPlaces/English/RelinquishmentDetails",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RelinquishmentDetails",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 6,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF(%RelinquishmentDetails:NoticeReceivedDate% <>NULL,DAYOFMONTH(MOMENT(%RelinquishmentDetails:NoticeReceivedDate%).add(14,'days'))+'/'+MONTH(MOMENT(%RelinquishmentDetails:NoticeReceivedDate%).add(14, 'days'))+ '/' + YEAR(MOMENT(%RelinquishmentDetails:NoticeReceivedDate%).add(14, 'days')))",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "Decision Due Date",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RelinquishPlaces/RelinquishPlaces/English/DecisionByDate"
+}

@@ -1,0 +1,127 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "NewInRespectOfCondition",
+    "OmniProcessId": {
+        "Name": "VariationNewAllotmentCondition",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/NewVariation/Condition/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "NewAllotmentConditions",
+        "OmniProcessId": {
+            "Name": "VariationNewAllotmentCondition",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/NewVariation/Condition/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/NewVariation/Condition/English/NewAllotmentConditions",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "NewAllotmentConditions",
+    "ParentElementType": "Edit Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 9,
+        "controllingField": {
+            "element": "",
+            "source": "",
+            "type": ""
+        },
+        "defaultValue": null,
+        "disOnTplt": false,
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "inputWidth": 12,
+        "label": "In Respect Of",
+        "optionSource": {
+            "source": "",
+            "type": ""
+        },
+        "options": [
+            {
+                "autoAdv": null,
+                "name": "All Places",
+                "value": "All Places"
+            },
+            {
+                "autoAdv": null,
+                "name": "Number of Places",
+                "value": "Number of Places"
+            },
+            {
+                "autoAdv": null,
+                "name": "% of Places",
+                "value": "% of Places"
+            },
+            {
+                "autoAdv": null,
+                "name": "A minimum number of Places",
+                "value": "A minimum number of Places"
+            },
+            {
+                "autoAdv": null,
+                "name": "A minimum % of Places",
+                "value": "A minimum % of Places"
+            }
+        ],
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": true,
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "<>",
+                                    "data": "General Access",
+                                    "field": "NewTargetGroup|n"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Target Group",
+                                    "field": "NewRecordTypeName|n"
+                                },
+                                {
+                                    "condition": "<>",
+                                    "data": null,
+                                    "field": "NewName|n"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "Residential Respite Care",
+                                    "field": "NewRecordTypeName|n"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "showInputWidth": false
+    },
+    "Type": "Select",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/NewVariation/Condition/English/NewInRespectOfCondition"
+}

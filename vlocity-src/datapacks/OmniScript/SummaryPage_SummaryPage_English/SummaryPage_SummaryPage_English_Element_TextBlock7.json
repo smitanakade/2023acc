@@ -1,0 +1,50 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "TextBlock7",
+    "OmniProcessId": {
+        "Name": "SummaryPage",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SummaryPage/SummaryPage/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "OrganisationDetails",
+        "OmniProcessId": {
+            "Name": "SummaryPage",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SummaryPage/SummaryPage/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SummaryPage/SummaryPage/English/OrganisationDetails",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "OrganisationDetails",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "TextBlock7",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Approved Provider",
+                        "field": "RecordType"
+                    }
+                ]
+            }
+        },
+        "text": "<h1><span style=\"color: #52386b;\">%ApprovedProvider:ApprovedProviderDetails:ApprovedProviderName%</span></h1>\n<table id=\"vertical-1\" style=\"border-collapse: collapse; width: auto; height: 66px;\">\n<tbody>\n<tr style=\"height: 22px;\">\n<th style=\"border-style: none; border-width: 1px; text-align: left; height: 22px;\"><span style=\"color: #52386b;\">Organisation Purpose</span></th>\n<td style=\"border-style: none; border-width: 1px; height: 22px;\"><span style=\"color: #52386b;\">%ApprovedProvider:ApprovedProviderDetails:OrganisationPurpose%</span></td>\n</tr>\n<tr style=\"height: 44px;\">\n<th style=\"border-style: none; border-width: 1px; text-align: left; height: 44px;\"><span style=\"color: #52386b;\">Organisation Type</span></th>\n<td style=\"border-style: none; border-width: 1px; height: 44px;\"><span style=\"color: #52386b;\">%ApprovedProvider:ApprovedProviderDetails:OrganisationType%</span></td>\n</tr>\n</tbody>\n</table>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SummaryPage/SummaryPage/English/TextBlock7"
+}

@@ -1,0 +1,65 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetResidentialValues",
+    "OmniProcessId": {
+        "Name": "CreateAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Create/Allotment/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "SummaryPage": {
+                "ACPRToWhichPlacesRelatesToAutomated": "%ACPRName%",
+                "ACPRToWhichPlacesRelatesToManual": "%ServiceToWhichAllotmentRelates:ACPRToWhichPlacesRelatesToManual%",
+                "AllotmentSubType": "%AllotmentDetails:AllotmentSubType%",
+                "CareType": "Residential",
+                "Comments": "%AllotmentDetails:Comments%",
+                "DateOfAllotment": "%AllotmentDetails:DateOfAllotment_SummaryScreen%",
+                "EndDateOfAllotment": "%AllotmentDetails:EndDateOfAllotment_SummaryScreen%",
+                "IntegrationID": "%ServiceIntegrationId%",
+                "LinkToDocument": "%AllotmentDetails:LinkToDocument%",
+                "NameOfService": "%ServiceName%",
+                "OriginalDateOfAllotment": "%AllotmentDetails:OriginalDateofAllotment%",
+                "PlaceInformation": "%PlacesBelongingToAllotmentResidential:PlaceInformationResidential%",
+                "ServiceAddress": "%ServiceToWhichAllotmentRelates:CreateAllotmentAddresses:AllotmentAddress:FullAddress%",
+                "WaiverType": "=IF(%AllotmentDetails:AllotmentSubType% = 'S14-1',%AllotmentDetails:WaiverTypeS141%, 'Not Applicable')"
+            }
+        },
+        "label": "SetSummaryValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Residential",
+                        "field": "ServiceCareType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Approved_Provider_Service",
+                        "field": "RecordTypeDeveloperName"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Create/Allotment/English/SetResidentialValues"
+}

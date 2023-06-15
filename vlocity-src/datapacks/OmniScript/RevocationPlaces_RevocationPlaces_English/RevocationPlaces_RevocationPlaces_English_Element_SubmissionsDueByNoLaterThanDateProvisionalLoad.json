@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SubmissionsDueByNoLaterThanDateProvisionalLoad",
+    "OmniProcessId": {
+        "Name": "RevocationPlaces",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RevocationPlaces/RevocationPlaces/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RevokeDetailsProvisional",
+        "OmniProcessId": {
+            "Name": "RevocationPlaces",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/RevocationPlaces/RevocationPlaces/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/RevocationPlaces/RevocationPlaces/English/RevokeDetailsProvisional",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RevokeDetailsProvisional",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 3,
+        "dataType": null,
+        "dateFormat": "yyyy-MM-dd",
+        "disOnTplt": false,
+        "expression": "IF(%NoticeTypeProvisional% = 'Places ceased under s18-1(c)', YEAR(MOMENT(%NoticeOfIntentionDateProvisional%).add(14, 'days')) + '-' + MONTH(MOMENT(%NoticeOfIntentionDateProvisional%).add(14, 'days'))  + '-' + DAYOFMONTH(MOMENT(%NoticeOfIntentionDateProvisional%).add(14, 'days')), YEAR(MOMENT(%NoticeOfIntentionDateProvisional%).add(28, 'days')) + '-' + MONTH(MOMENT(%NoticeOfIntentionDateProvisional%).add(28, 'days'))  + '-' + DAYOFMONTH(MOMENT(%NoticeOfIntentionDateProvisional%).add(28, 'days')))",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "Submissions Due By No Later Than Date",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RevocationPlaces/RevocationPlaces/English/SubmissionsDueByNoLaterThanDateProvisionalLoad"
+}

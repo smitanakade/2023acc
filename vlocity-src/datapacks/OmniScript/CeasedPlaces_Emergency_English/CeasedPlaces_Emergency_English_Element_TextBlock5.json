@@ -1,0 +1,85 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "TextBlock5",
+    "OmniProcessId": {
+        "Name": "CeasedPlacesS14-9",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/CeasedPlaces/Emergency/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Error",
+        "OmniProcessId": {
+            "Name": "CeasedPlacesS14-9",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/CeasedPlaces/Emergency/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/CeasedPlaces/Emergency/English/Error",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Error",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "TextBlock3",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "Not Applicable",
+                                    "field": "WaiverType1"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "S14-1",
+                                    "field": "AllotmentSubType1"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": null,
+                                    "field": "MarkDocumentsAsSent1"
+                                },
+                                {
+                                    "group": {
+                                        "operator": "OR",
+                                        "rules": [
+                                            {
+                                                "condition": "=",
+                                                "data": "Residential",
+                                                "field": "ServiceCareSubType1"
+                                            },
+                                            {
+                                                "condition": "=",
+                                                "data": "Short-Term Restorative Care (STRC)",
+                                                "field": "ServiceCareSubType1"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "text": "<ul>\n<li><span class=\"NormalTextRun SCXW167072363 BCX0\">Documents must be marked as sent</span> <span class=\"NormalTextRun SCXW167072363 BCX0\">b</span><span class=\"NormalTextRun SCXW167072363 BCX0\">efore you can create a new event</span></li>\n</ul>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/CeasedPlaces/Emergency/English/TextBlock5"
+}

@@ -1,0 +1,66 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateEvent",
+    "OmniProcessId": {
+        "Name": "PAVariation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PAVariation/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CreateEventBlock",
+        "OmniProcessId": {
+            "Name": "PAVariation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PAVariation/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PAVariation/Create/Procedure/CreateEventBlock",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CreateEventBlock",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AllotmentId": "=%VariationId%",
+            "ApplicationDecisionDate": "=%VariationApplicationDetails:ApplicationDecisionDate%",
+            "ApplicationReceivedDate": "=%VariationApplicationDetails:ApplicationReceivedDate%",
+            "EventRecordType": "=\"Variations_by_Provider_Secretary\"",
+            "EventType": "=%TypeOfVariationStep:TypeOfVariation%",
+            "ParentAllotmentId": "=%AllotmentId%",
+            "ProposedVariationDay": "=%Variation:ProposedVariationDay%",
+            "ServiceId": "=%ServiceId%",
+            "Status": "=\"Inactive\"",
+            "StatusDate": "=%CurrentDateText%"
+        },
+        "additionalOutput": {
+            "": ""
+        },
+        "bundle": "VariationEventCreate_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "%VariationEventId% = NULL",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction28",
+        "responseJSONNode": "VariationEventId",
+        "responseJSONPath": "Event__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PAVariation/Create/Procedure/CreateEvent"
+}

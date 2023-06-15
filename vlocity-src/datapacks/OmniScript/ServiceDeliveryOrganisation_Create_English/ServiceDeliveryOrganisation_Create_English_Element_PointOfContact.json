@@ -1,0 +1,33 @@
+{
+    "EmbeddedOmniScriptKey": "PointOfContact|Contact|English",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "PointOfContact",
+    "OmniProcessId": {
+        "Name": "ServiceDeliveryOrganisation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceDeliveryOrganisation/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "Language": "English",
+        "Sub Type": "Contact",
+        "Type": "PointOfContact",
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "Use this one",
+                        "field": "ChooseSDO"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "OmniScript",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceDeliveryOrganisation/Create/English/PointOfContact"
+}

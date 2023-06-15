@@ -1,0 +1,246 @@
+[
+    {
+        "FilterDataType": "REFERENCE",
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "accountRecordId",
+        "GlobalKey": "ACFR_GetAccountPrimaryContactCustom0jI9h0000000DwXEAUItem4",
+        "InputFieldName": "Account__c",
+        "InputObjectName": "Contact_Relationship__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountPrimaryContact",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountPrimaryContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountPrimaryContact",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "PrimaryContact",
+        "OutputObjectName": "Turbo Extract",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterDataType": "PICKLIST",
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "'QFR Primary Contact'",
+        "GlobalKey": "ACFR_GetAccountPrimaryContactCustom0jI9h0000000DwXEAUItem16",
+        "InputFieldName": "Role__c",
+        "InputObjectName": "Contact_Relationship__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountPrimaryContact",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountPrimaryContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountPrimaryContact",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "PrimaryContact",
+        "OutputObjectName": "Turbo Extract",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "LIMIT",
+        "FilterValue": "1",
+        "GlobalKey": "ACFR_GetAccountPrimaryContactCustom0jI9h0000000DwXEAUItem0",
+        "InputObjectName": "Contact_Relationship__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountPrimaryContact",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountPrimaryContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountPrimaryContact",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "PrimaryContact",
+        "OutputObjectName": "Turbo Extract",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountPrimaryContactCustom0jI9h0000000DwXEAUItem17",
+        "InputFieldName": "PrimaryContact:Account__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountPrimaryContact",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountPrimaryContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountPrimaryContact",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PrimaryContact:AccountId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountPrimaryContactCustom0jI9h0000000DwXEAUItem28",
+        "InputFieldName": "PrimaryContact:Contact__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountPrimaryContact",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountPrimaryContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountPrimaryContact",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PrimaryContact:ContactId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountPrimaryContactCustom0jI9h0000000DwXEAUItem32",
+        "InputFieldName": "PrimaryContact:Email__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountPrimaryContact",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountPrimaryContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountPrimaryContact",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PrimaryContact:Email",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountPrimaryContactCustom0jI9h0000000DwXEAUItem38",
+        "InputFieldName": "PrimaryContact:Contact__r.FirstName",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountPrimaryContact",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountPrimaryContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountPrimaryContact",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PrimaryContact:FirstName",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountPrimaryContactCustom0jI9h0000000DwXEAUItem27",
+        "InputFieldName": "PrimaryContact:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountPrimaryContact",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountPrimaryContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountPrimaryContact",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PrimaryContact:Id",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountPrimaryContactCustom0jI9h0000000DwXEAUItem40",
+        "InputFieldName": "PrimaryContact:Contact__r.LastName",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountPrimaryContact",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountPrimaryContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountPrimaryContact",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PrimaryContact:LastName",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountPrimaryContactCustom0jI9h0000000DwXEAUItem42",
+        "InputFieldName": "PrimaryContact:Position_Title__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountPrimaryContact",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountPrimaryContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountPrimaryContact",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PrimaryContact:Position_Title",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountPrimaryContactCustom0jI9h0000000DwXEAUItem50",
+        "InputFieldName": "PrimaryContact:Primary_Contact__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountPrimaryContact",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountPrimaryContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountPrimaryContact",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PrimaryContact:Primary_Contact",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountPrimaryContactCustom0jI9h0000000DwXEAUItem41",
+        "InputFieldName": "PrimaryContact:Role__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountPrimaryContact",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountPrimaryContact",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountPrimaryContact",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "PrimaryContact:Role",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

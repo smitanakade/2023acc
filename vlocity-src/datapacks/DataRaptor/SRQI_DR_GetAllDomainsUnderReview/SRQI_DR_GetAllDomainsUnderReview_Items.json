@@ -1,0 +1,131 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "CERId",
+        "GlobalKey": "SRQI_DR_GetAllDomainsUnderReviewCustom4755",
+        "InputFieldName": "Id",
+        "InputObjectName": "SRQI_CER__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetAllDomainsUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetAllDomainsUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetAllDomainsUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "CER",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "QISId",
+        "GlobalKey": "SRQI_DR_GetAllDomainsUnderReviewCustom1604",
+        "InputFieldName": "Id",
+        "InputObjectName": "Quality_Indicator_Summary__c",
+        "InputObjectQuerySequence": 2,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetAllDomainsUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetAllDomainsUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetAllDomainsUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "QIS",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "CMSId",
+        "GlobalKey": "SRQI_DR_GetAllDomainsUnderReviewCustom7567",
+        "InputFieldName": "Id",
+        "InputObjectName": "Care_Minutes_Summary__c",
+        "InputObjectQuerySequence": 3,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetAllDomainsUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetAllDomainsUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetAllDomainsUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "CMS",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_GetAllDomainsUnderReviewCustom5938",
+        "InputFieldName": "CER:Under_Review__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetAllDomainsUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetAllDomainsUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetAllDomainsUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CER_UnderReview",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_GetAllDomainsUnderReviewCustom1922",
+        "InputFieldName": "CMS:Under_Review__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetAllDomainsUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetAllDomainsUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetAllDomainsUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CM_UnderReview",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_GetAllDomainsUnderReviewCustom6200",
+        "InputFieldName": "QIS:Under_Review__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_GetAllDomainsUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_GetAllDomainsUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_GetAllDomainsUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "QI_UnderReview",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

@@ -1,0 +1,69 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateRelinquishEvent",
+    "OmniProcessId": {
+        "Name": "RelinquishPlaces",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RelinquishPlaces/RelinquishPlaces/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RelinquishEvent",
+        "OmniProcessId": {
+            "Name": "RelinquishPlaces",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/RelinquishPlaces/RelinquishPlaces/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/RelinquishPlaces/RelinquishPlaces/Procedure/RelinquishEvent",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RelinquishEvent",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Activated": "=\"No\"",
+            "AllotmentId": "=%AllotmentId%",
+            "ApplicationReceivedDate": "=%RelinquishmentDetails:NoticeReceivedDate%",
+            "DateEffectiveFrom": "=%RelinquishmentDetails:RelinquishmentEffectiveDate%",
+            "DateOfAllotment": "=%RelinquishmentDetails:DateOfAllotment%",
+            "DecisionDueDate": "=%RelinquishmentDetails:DecisionDueDate%",
+            "EventRecordTypeId": "=\"GPMS_Relinquish\"",
+            "EventStatus": "=\"Pending\"",
+            "EventStatusDate": "=%CurrentDateText%",
+            "EventType": "=\"Relinquish Places\"",
+            "PreviousPage": "=\"Relinquish Places\"",
+            "RelinquishmentReason": "=%RelinquishmentDetails:RelinquishmentReason%",
+            "ServiceId": "=%ServiceId%",
+            "SummaryOfProposals": "=%RelinquishmentDetails:SummaryOfProposals%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Allotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "EventId",
+        "responseJSONPath": "Event__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RelinquishPlaces/RelinquishPlaces/Procedure/CreateRelinquishEvent"
+}

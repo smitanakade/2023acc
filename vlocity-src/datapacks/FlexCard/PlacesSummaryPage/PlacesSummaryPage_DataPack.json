@@ -1,0 +1,41 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "PlacesSummary_RelatedList/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "a2f9r0000000fHhAAI"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "AllotmentId": "{recordId}"
+            },
+            "ipMethod": "Summary_Summary",
+            "resultVar": "[\"Allotment\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "PlacesSummaryPage",
+    "Namespace": "",
+    "OmniUiCardKey": "PlacesSummaryPage/GPMS/2.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "PlacesSummaryPage.json",
+    "SampleDataSourceResponse": "{\"Allotment\":{\"SplNeedsKeyIssuesProvisional\":10,\"Id\":\"a2f9r0000000fHhAAI\",\"OfflineSum\":22,\"NotSpecifiedCeased\":0,\"Provisional\":17,\"CareLevel\":\"High(Innovative Pool)\",\"Offline\":9,\"GeneralAccessCeased\":0,\"ProvisionalSum\":15,\"Pre1997\":\"Yes\",\"NotSpecifiedOffine\":0,\"SplNeedsKeyIssuesOperational\":10,\"CareType\":\"Flexible\",\"GeneralAccessOffline\":0,\"SplNeedsKeyIssuesOffline\":22,\"Operational\":12,\"SplNeedsKeyIssuesCeased\":7,\"CeasedSum\":7,\"OperationalSum\":12,\"GeneralAccessOperational\":2,\"CareSetting\":\"Mixed\",\"NotSpecifiedOperational\":0,\"GeneralAccessProvisional\":5,\"Ceased\":3,\"NotSpecifiedProvisional\":0},\"SubType\":\"S14-1\"}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 2,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/PlacesSummaryPage"
+}

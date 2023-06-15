@@ -1,0 +1,38 @@
+{
+    "Description": "The user have used the TypeAhead and both the Physical and Postal Address are the same",
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ALL_NON_PHYSICAL_ADDRESSES",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ALL_NON_SERVICE_ADDRESSES",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ALL_NON_SERVICE_ADDRESSES",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ALL_NON_SERVICE_ADDRESSES",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "SelectionForm:Selection = \"Postal Address Only\" OR (Selection = \"Both Addresses\" AND (PhysicalAddresses:Address:SameAddress = \"false\" OR PhysicalAddresses:Address:SameAddress1 = \"false\")) OR OtherAddressRecordType = \"Registered Business Address\" OR OtherAddressRecordType = \"Residential Address\" OR OtherAddressRecordType = \"Administrator/Liquidator Company Address\" OR Origin = \"Service Account FlexCard\" OR SelectionForm:SelectionFormula = \"Postal Address Only\"",
+        "isIfElseBlock": false,
+        "label": "ConditionalBlock13",
+        "show": null
+    },
+    "Type": "Conditional Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ALL_NON_PHYSICAL_ADDRESSES"
+}

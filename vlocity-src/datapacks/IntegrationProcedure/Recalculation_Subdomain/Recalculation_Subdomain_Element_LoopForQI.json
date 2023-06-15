@@ -1,0 +1,28 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "LoopForQI",
+    "OmniProcessId": {
+        "Name": "RecalculationIPMaster",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Recalculation/Subdomain/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "SetDomain:SetDomain == \"callQI\"",
+        "label": "LoopBlock2",
+        "loopList": "ServIds",
+        "loopOutput": {
+            "Result": {
+                "QIResult": "%QIIP%",
+                "SRHResult": "%SRHIP_QI%"
+            }
+        },
+        "show": null
+    },
+    "Type": "Loop Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Recalculation/Subdomain/Procedure/LoopForQI"
+}

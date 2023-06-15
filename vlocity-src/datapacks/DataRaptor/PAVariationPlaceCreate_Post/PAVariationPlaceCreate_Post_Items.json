@@ -1,0 +1,60 @@
+[
+    {
+        "GlobalKey": "PAVariationPlaceCreate_PostCustom2540",
+        "InputFieldName": "RemainingPlaces:VariationNumber",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "PAVariationPlaceCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationPlaceCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationPlaceCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "GPMS_Number_of_Variation__c",
+        "OutputObjectName": "Places_Allotment__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "PAVariationPlaceCreate_PostCustom4724",
+        "InputFieldName": "RemainingPlaces:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": true,
+        "Name": "PAVariationPlaceCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationPlaceCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationPlaceCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Places_Allotment__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "PAVariationPlaceCreate_PostCustom4617",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "PAVariationPlaceCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "PAVariationPlaceCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/PAVariationPlaceCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Places_Allotment__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

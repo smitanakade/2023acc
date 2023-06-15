@@ -1,0 +1,62 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ServiceAllotmentMPSNotSpecifiedTransform",
+    "OmniProcessId": {
+        "Name": "ServiceAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Allotment/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "FlexibleMPSNotSpecifiedPlaces",
+        "OmniProcessId": {
+            "Name": "ServiceAllotment",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Allotment/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Allotment/Procedure/FlexibleMPSNotSpecifiedPlaces",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "FlexibleMPSNotSpecifiedPlaces",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "ACPRId": "=%AgedCarePlanningRegion:CustomLWC2:selectResult:selectedcard:ACPRId%",
+            "AllotmentId": "=%ServiceAllotmentFlexibleMPSNotSpecifiedPost:AllotmentId%",
+            "EffectiveDate": "=%ServiceDeliveryArea:EffectiveDate%",
+            "EventId": "=%ServiceAllotmentFlexibleMPSNotSpecifiedPost:Event__c_1:Id%",
+            "SA2Id": "=%GeographicLocation:CustomLWC3:selectResult:selectedcard:SA2Id%",
+            "Status": "='Pending'"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ServiceAllotmentNotSpecified_Transform",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "ignoreCache": false,
+        "label": "DataRaptorTransformAction2",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Transform Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Allotment/Procedure/ServiceAllotmentMPSNotSpecifiedTransform"
+}

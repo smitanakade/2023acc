@@ -1,0 +1,71 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateEventAndAssociatedObjects",
+    "OmniProcessId": {
+        "Name": "PlacesBringOnline",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Event",
+        "OmniProcessId": {
+            "Name": "PlacesBringOnline",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure/Event",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Event",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AllotmentId": "=%AllotmentId%",
+            "ApplicationDecisionDate": "=%ApplicationForDetermination:ApplicationDecisionByDate_Load%",
+            "ApplicationReceivedDate": "=%ApplicationForDetermination:ApplicationReceivedDate%",
+            "DateOfAllotment": "=%DateOfAllotment%",
+            "DecisionDueDate": "=%ApplicationForDetermination:ApplicationDecisionByDate_Load%",
+            "EventRecordTypeId": "=\"Bring_Online\"",
+            "EventStatus": "=\"Pending\"",
+            "EventStatusDate": "=%CurrentDateText%",
+            "EventType": "=\"Application For Determination\"",
+            "PreviousPage": "=\"Application For Determination\"",
+            "ProposedOperationalDate": "=%ApplicationForDetermination:DatebecomeOperational%",
+            "ServiceId": "=%ServiceId%"
+        },
+        "additionalOutput": {
+            "AllotmentId": "=%Allotment__c_3:Id%",
+            "EventAllotmentId": "=%Event_Allotment__c_4:Id%",
+            "EventId": "=%Event__c_1:Id%",
+            "ServiceEventId": "=%Service_Event__c_2:Id%"
+        },
+        "bundle": "Allotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction19",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesBringOnline/PlacesBringOnline/Procedure/CreateEventAndAssociatedObjects"
+}

@@ -1,0 +1,42 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 0,
+                "name": "recordId",
+                "val": "a2KBm0000016IUjMAM"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "DataRaptor",
+        "value": {
+            "bundle": "OfflinePlaces_Extract",
+            "bundleType": "",
+            "dsDelay": "",
+            "inputMap": {
+                "AllotmentId": "{recordId}"
+            },
+            "resultVar": ""
+        }
+    },
+    "Description": "Displays Offline Places related to Allotment",
+    "IsTrackingEnabled": false,
+    "Name": "OfflinePlacesSummary",
+    "Namespace": "",
+    "OmniUiCardKey": "OfflinePlacesSummary/GPMS/2.0",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "OfflinePlacesSummary.json",
+    "SampleDataSourceResponse": "[{\"OfflineStartDate\":\"27/02/2023\",\"NotSpecified\":72,\"AllotmentId\":\"a2KBm0000016IUjMAM\",\"Offline\":7,\"GeneralAccess\":72,\"PrimaryReason\":\"Offline at time of migration\",\"SpecialNeedsKeyIssuesSum\":72},{\"OfflineStartDate\":\"18/02/2023\",\"NotSpecified\":72,\"AllotmentId\":\"a2KBm0000016IUjMAM\",\"Offline\":30,\"GeneralAccess\":72,\"PrimaryReason\":\"Places transferred in as offline\",\"Comments\":\"test\",\"ExpectedEndDate\":\"7/03/2023\",\"DateOfNotification\":\"7/3/2023\",\"SpecialNeedsKeyIssuesSum\":72}]",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 2,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/OfflinePlacesSummary"
+}

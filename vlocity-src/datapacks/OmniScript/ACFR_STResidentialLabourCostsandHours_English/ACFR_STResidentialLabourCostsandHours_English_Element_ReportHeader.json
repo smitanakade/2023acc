@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "ReportHeader",
+    "OmniProcessId": {
+        "Name": "STResidentialLabourCostsandHours",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/STResidentialLabourCostsandHours/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "STResidentialLabourCostsandHours",
+        "OmniProcessId": {
+            "Name": "STResidentialLabourCostsandHours",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/STResidentialLabourCostsandHours/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/STResidentialLabourCostsandHours/English/STResidentialLabourCostsandHours",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "STResidentialLabourCostsandHours",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "bStandalone": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "customAttributes": [
+            {
+                "name": "record-id",
+                "source": "%caseRecordId%"
+            }
+        ],
+        "hide": false,
+        "label": "ReportHeader",
+        "lwcName": "cfACFR_Report_Header_Download_Report",
+        "show": null
+    },
+    "Type": "Custom Lightning Web Component",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/STResidentialLabourCostsandHours/English/ReportHeader"
+}

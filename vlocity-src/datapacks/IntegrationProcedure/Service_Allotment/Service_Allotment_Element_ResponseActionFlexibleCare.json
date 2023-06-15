@@ -1,0 +1,56 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ResponseActionFlexibleCare",
+    "OmniProcessId": {
+        "Name": "ServiceAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Allotment/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "FlexibleCare",
+        "OmniProcessId": {
+            "Name": "ServiceAllotment",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Allotment/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Allotment/Procedure/FlexibleCare",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "FlexibleCare",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "additionalOutput": {
+            "AllotmentId": "=%ServiceAllotmentFlexibleCarePost:Allotment__c_3:Id%",
+            "EventAllotmentId": "=%ServiceAllotmentFlexibleCarePost:Event_Allotment__c_4:Id%",
+            "EventId": "=%ServiceAllotmentFlexibleCarePost:Event__c_1:Id%",
+            "PlacesAllotmentId": "=%PlacesAllotmentFlexibleCarePost:Places_Allotment__c_1:Id%",
+            "ServiceDeliveryAreaId": "=%ServiceDeliveryAreaPost:Service_Delivery_Area__c_1:Id%",
+            "ServiceEventId": "=%ServiceAllotmentFlexibleCarePost:Service_Event__c_2:Id%"
+        },
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "label": "ResponseAction1",
+        "responseDefaultData": {
+        },
+        "responseFormat": "JSON",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnFullDataJSON": true,
+        "returnOnlyAdditionalOutput": true,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "show": null,
+        "useFormulas": true,
+        "vlcResponseHeaders": {
+        }
+    },
+    "Type": "Response Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Allotment/Procedure/ResponseActionFlexibleCare"
+}

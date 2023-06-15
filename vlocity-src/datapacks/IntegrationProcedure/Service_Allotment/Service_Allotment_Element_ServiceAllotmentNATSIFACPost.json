@@ -1,0 +1,76 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ServiceAllotmentNATSIFACPost",
+    "OmniProcessId": {
+        "Name": "ServiceAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Allotment/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "NATSIFAC",
+        "OmniProcessId": {
+            "Name": "ServiceAllotment",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Allotment/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Allotment/Procedure/NATSIFAC",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "NATSIFAC",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressLocation": "=%ServiceToWhichAllotmentRelates:CreateAllotmentAddresses:AllotmentAddress:AddressLocationId%",
+            "AllotmentRecordTypeId": "=\"NATSIFAC_Flexible_ALT\"",
+            "AllotmentType": "=\"Allocation\"",
+            "CareType": "=\"NATSIFAC\"",
+            "Comments": "=%AllotmentDetails:Comments%",
+            "DateOfAllotment": "=%AllotmentDetails:DateOfAllotment%",
+            "EventDateOfApproval": "=TODAY()",
+            "EventRecordTypeId": "=\"Record_Allotment\"",
+            "EventService": "=%ServiceId%",
+            "EventStatus": "=\"Approved\"",
+            "EventStatusDate": "=TODAY()",
+            "EventType": "=\"Create Allotment\"",
+            "LinkToDocument": "=%AllotmentDetails:LinkToDocument%",
+            "OriginalDateOfAllotment": "=%AllotmentDetails:DateOfAllotment%",
+            "ServiceId": "=%ServiceId%",
+            "SubType": "=%AllotmentDetails:AllotmentSubTypeNATSIFAC%",
+            "WaiverType": "=%SummaryPage:WaiverType%"
+        },
+        "additionalOutput": {
+            "AllotmentId": "=%ServiceAllotmentNATSIFACPost:Allotment__c_3:Id%",
+            "EventAllotmentId": "=%ServiceAllotmentNATSIFACPost:Event_Allotment__c_4:Id%",
+            "EventId": "=%ServiceAllotmentNATSIFACPost:Event__c_1:Id%",
+            "ServiceEventId": "=%ServiceAllotmentNATSIFACPost:Service_Event__c_2:Id%"
+        },
+        "bundle": "Allotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Allotment/Procedure/ServiceAllotmentNATSIFACPost"
+}

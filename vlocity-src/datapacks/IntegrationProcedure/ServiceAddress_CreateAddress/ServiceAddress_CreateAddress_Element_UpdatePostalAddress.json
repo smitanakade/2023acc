@@ -1,0 +1,64 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "UpdatePostalAddress",
+    "OmniProcessId": {
+        "Name": "ServiceAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "PostalAddress",
+        "OmniProcessId": {
+            "Name": "ServiceAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceAddress/CreateAddress/Procedure/PostalAddress",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "PostalAddress",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressType": "=\"Postal\"",
+            "CareOf": "=%ServiceAddresses:Address1:PostalAddress-Block:PostalCareOf%",
+            "City": "=%ServiceAddresses:Address1:PostalAddress-Block:CityDisplay_Postal%",
+            "Country": "=%ServiceAddresses:Address1:PostalAddress-Block:PostalCountry_Postal%",
+            "CurrentServiceId": "=%CurrentServiceId%",
+            "POBox": "=%ServiceAddresses:Address1:PostalAddress-Block:PostalPOBox_Postal%",
+            "Postcode": "=%ServiceAddresses:Address1:PostalAddress-Block:PostcodeDisplay_Postal%",
+            "ServiceAddressId": "=%ServiceAddressId%",
+            "State": "=%ServiceAddresses:Address1:PostalAddress-Block:StateDisplay_Postal%",
+            "Street": "=%ServiceAddresses:Address1:PostalAddress-Block:StreetDisplay_Postal%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ServicesAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceAddress/CreateAddress/Procedure/UpdatePostalAddress"
+}

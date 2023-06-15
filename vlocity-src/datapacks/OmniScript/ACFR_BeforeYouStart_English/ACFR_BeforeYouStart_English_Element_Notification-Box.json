@@ -1,0 +1,61 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "Notification Box",
+    "OmniProcessId": {
+        "Name": "Before You Start",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/BeforeYouStart/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "STBeforeYouStart",
+        "OmniProcessId": {
+            "Name": "Before You Start",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/BeforeYouStart/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/BeforeYouStart/English/STBeforeYouStart",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "STBeforeYouStart",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "bStandalone": true,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "customAttributes": [
+            {
+                "name": "title",
+                "source": "Compile your information"
+            },
+            {
+                "name": "value",
+                "source": "<p>The data you submit in the Quarterly Financial Report (QFR) will contribute to initiatives to improve financial reporting and strengthen prudential compliance for approved aged care providers. The Quarterly Financial Report collects information relevant to the services you offer:</p> <ul><li>Viability and prudential compliance related questions, for residential and home care providers</li> <li>Quarterly Financial Statements, including income and balance sheet information, for residential and home care providers</li> <li>Labour costs and hours, for residential and home care providers</li> <li>Quarterly food and nutrition information, for residential, MPS, and NATSIFACP providers</li></ul> <p>If you encounter any difficulties or require further information, please contact Forms Administration on (02) 4403 0640.</p>"
+            },
+            {
+                "name": "variant",
+                "source": "info"
+            },
+            {
+                "name": "is-collapsible",
+                "source": "true"
+            },
+            {
+                "name": "is-html",
+                "source": "true"
+            }
+        ],
+        "hide": false,
+        "label": "Notification Box",
+        "lwcName": "qfrNotification",
+        "show": null
+    },
+    "Type": "Custom Lightning Web Component",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/BeforeYouStart/English/Notification Box"
+}

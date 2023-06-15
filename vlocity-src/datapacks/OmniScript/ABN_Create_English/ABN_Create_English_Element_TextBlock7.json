@@ -1,0 +1,50 @@
+{
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "TextBlock7",
+    "OmniProcessId": {
+        "Name": "ABN",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ABN/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "EnterABN",
+        "OmniProcessId": {
+            "Name": "ABN",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ABN/Create/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ABN/Create/English/EnterABN",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "EnterABN",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataJSON": false,
+        "label": "TextBlock7",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "CreateNewMC",
+                        "field": "Action"
+                    }
+                ]
+            }
+        },
+        "text": "<div><span style=\"color: #52386b;\">%ManagementCompany:ABN_Entity_Name%</span></div>\n<div><span style=\"color: #52386b;\">%ManagementCompany:ABN_Entity_Type__c%</span></div>\n<div><span style=\"color: #52386b;\">%ManagementCompany:ABN_Effective_Date__c%</span></div>\n<div><span style=\"color: #52386b;\">%ManagementCompany:Validated_ABN__c%</span><br /><span style=\"color: #52386b;\">%ManagementCompany:GRE__c%</span></div>\n<div><span style=\"color: #52386b;\">%ManagementCompany:Last_ABR_Check__c%</span></div>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ABN/Create/English/TextBlock7"
+}

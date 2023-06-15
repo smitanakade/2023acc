@@ -1,0 +1,33 @@
+{
+    "CustomJavaScript": "CHSPProvider_Create_SampleInput.json",
+    "Description": "Package to create a CHSP Provider - Aged Care Org - CHSP Provider",
+    "DiscoveryFrameworkUsageType": "Default",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "CreateCHSPProvider",
+    "OmniProcessElement": [
+        "CHSPProvider_Create_Element_CreateTheInContextAccountRecord.json",
+        "CHSPProvider_Create_Element_Only_If_We_Need_To_Create_A_New_ACO.json",
+        "CHSPProvider_Create_Element_AgedCareOrganisation_Post.json",
+        "CHSPProvider_Create_Element_CreateTheRestOfTheAccountRelationship.json",
+        "CHSPProvider_Create_Element_CreateCareType.json",
+        "CHSPProvider_Create_Element_ABNValidation_Post.json",
+        "CHSPProvider_Create_Element_ContactRelationship_POC_Post.json",
+        "CHSPProvider_Create_Element_ResponseAction.json"
+    ],
+    "OmniProcessKey": "CHSPProvider_Create",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "CHSPProvider_Create_PropertySetConfig.json",
+    "SubType": "Create",
+    "Type": "CHSPProvider",
+    "UniqueName": "CHSPProvider_Create_Procedure_1",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/CHSPProvider/Create/Procedure",
+    "WebComponentKey": "dea19a43-0e47-5d01-aec3-792c2c2b5840"
+}

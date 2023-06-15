@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetValues",
+    "OmniProcessId": {
+        "Name": "PlacesEventsTransferCreate",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesEventsTransfer/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "FlexValues": {
+                "EventId": "%EventId%",
+                "EventType": "Transfer",
+                "FullAddress": "%FullAddress%",
+                "ProviderIntegrationId": "%ProviderIntegrationId%",
+                "ProviderName": "%ProviderName%",
+                "ServiceCareType": "%ServiceCareType%",
+                "ServiceId": "%ServiceId%",
+                "ServiceIntegrationId": "%ServiceIntegrationId%",
+                "ServiceName": "%ServiceName%"
+            },
+            "Type": "Active"
+        },
+        "label": "SetValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesEventsTransfer/Create/English/SetValues"
+}

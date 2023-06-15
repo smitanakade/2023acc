@@ -1,0 +1,380 @@
+{
+    "dataSource": {
+        "contextVariables": [
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "Custom",
+        "value": {
+            "body": "[\n    {\n      \"NumberOfPlaces\": 124,\n      \"Name\": \"ALMT-00014\",\n      \"Location\": \"98 FOREST HILL DRIVE, OAKHAMPTON HEIGHTS, NSW, 2320\",\n      \"AllotmentId\": \"a2U9r0000000NXhEAM\",\n      \"WaiverType\": \"Not Applicable\",\n      \"RecordTypeId\": \"0129r0000002QcjAAE\",\n      \"ServiceName\": \"Bupa Sutherland MPS Current Service\",\n      \"AllPlace\": [\n        {\n          \"Name\": \"PALT-000008\",\n          \"Id\": \"a2a9r000000EqRlAAK\",\n          \"CareLevel\": \"Home Care\",\n          \"StatusReason\": \"S15-1 Provisional allocation (Provisional)\",\n          \"NumberofPlaces\": 90,\n          \"StatusofPlaces\": \"Provisional\",\n          \"CareType\": \"Flexible-MPS\"\n        },\n        {\n          \"Name\": \"PALT-000009\",\n          \"Id\": \"a2a9r000000EqTNAA0\",\n          \"CareLevel\": \"Residential\",\n          \"StatusReason\": \"S15-1 Provisional allocation (Provisional)\",\n          \"NumberofPlaces\": 45,\n          \"StatusofPlaces\": \"Provisional\",\n          \"CareType\": \"Flexible-MPS\"\n        }\n      ],\n      \"DateOfAllotment\": \"2022-12-05\",\n      \"EndDateOfAllotment\": \"2022-12-01\",\n      \"PAPeriodEndDate\": \"2022-12-29\"\n    },\n    {\n      \"NumberOfPlaces\": 5,\n      \"Name\": \"ALMT-00283\",\n      \"Location\": \"98 FOREST HILL DRIVE, OAKHAMPTON HEIGHTS, NSW, 2320\",\n      \"AllotmentId\": \"a2U9r000000HjDdEAK\",\n      \"WaiverType\": \"Not Applicable\",\n      \"RecordTypeId\": \"0129r0000002QckAAE\",\n      \"ServiceName\": \"Bupa Sutherland MPS Current Service\",\n      \"AllPlace\": [\n        {\n          \"Name\": \"PALT-001121\",\n          \"Id\": \"a2a9r000000FOy5AAG\",\n          \"CareLevel\": \"Residential\",\n          \"FirstBroughtIntoEffectDate\": \"2022-11-29\",\n          \"StatusReason\": \"S15-1 Provisional allocation (Provisional)\",\n          \"NumberofPlaces\": 1,\n          \"StatusofPlaces\": \"Provisional\",\n          \"StatusEffectiveDate\": \"2022-11-29\",\n          \"CareType\": \"Flexible\"\n        },\n        {\n          \"Name\": \"PALT-001122\",\n          \"Id\": \"a2a9r000000FOy6AAG\",\n          \"CareLevel\": \"Home Care\",\n          \"CareSetting\": \"Home Care\",\n          \"FirstBroughtIntoEffectDate\": \"2022-11-29\",\n          \"StatusReason\": \"S15-1 Determined to be in effect at time of allocation (Operational)\",\n          \"NumberofPlaces\": 4,\n          \"StatusofPlaces\": \"Operational\",\n          \"StatusEffectiveDate\": \"2022-11-29\",\n          \"CareType\": \"Flexible\"\n        }\n      ],\n      \"OriginalDateOfAllotment\": \"2022-11-29\",\n      \"DateOfAllotment\": \"2022-11-29\",\n      \"CareType\": \"Residential\"\n    },\n    {\n      \"NumberOfPlaces\": 12,\n      \"Name\": \"ALMT-00343\",\n      \"Location\": \"98 FOREST HILL DRIVE, OAKHAMPTON HEIGHTS, NSW, 2320\",\n      \"AllotmentId\": \"a2U9r000000Hqv3EAC\",\n      \"CareLevel\": \"Residential\",\n      \"WaiverType\": \"Not Applicable\",\n      \"RecordTypeId\": \"0129r0000002QckAAE\",\n      \"ServiceName\": \"Bupa Sutherland MPS Current Service\",\n      \"AllPlace\": {\n        \"Name\": \"PALT-001263\",\n        \"Id\": \"a2a9r000000G31xAAC\",\n        \"CareLevel\": \"Residential\",\n        \"FirstBroughtIntoEffectDate\": \"2022-12-08\",\n        \"StatusReason\": \"S15-1 Determined to be in effect at time of allocation (Operational)\",\n        \"NumberofPlaces\": 12,\n        \"StatusofPlaces\": \"Operational\",\n        \"StatusEffectiveDate\": \"2022-12-08\",\n        \"CareType\": \"Residential\"\n      },\n      \"OriginalDateOfAllotment\": \"2022-12-08\",\n      \"DateOfAllotment\": \"2022-12-08\",\n      \"CareType\": \"Residential\",\n\"OriginalDateOfAllotment\": \"2023-01-04\",\n\"LinkToDocument\":\"LinkToDocument\"\n    }\n  ]",
+            "dsDelay": "",
+            "resultVar": ""
+        }
+    },
+    "enableLwc": true,
+    "events": [
+        {
+            "actionList": [
+                {
+                    "actionIndex": 0,
+                    "card": "{card}",
+                    "draggable": false,
+                    "isOpen": true,
+                    "isTrackingDisabled": true,
+                    "key": "1670203524924-thnijknu4",
+                    "label": "Action",
+                    "stateAction": {
+                        "Web Page": {
+                            "targetName": "/apex"
+                        },
+                        "displayName": "Action",
+                        "eventName": "reload",
+                        "id": "flex-action-1670203524979",
+                        "openUrlIn": "Current Window",
+                        "targetType": "Web Page",
+                        "type": "cardAction",
+                        "vlocityIcon": "standard-default"
+                    }
+                }
+            ],
+            "channelname": "TransferServiceAllotmentList",
+            "displayLabel": "TransferServiceAllotmentList:data",
+            "element": "action",
+            "eventLabel": "pubsub",
+            "eventname": "data",
+            "eventtype": "pubsub",
+            "key": "event-0",
+            "recordIndex": "0",
+            "showSpinner": "false"
+        },
+        {
+            "actionList": [
+                {
+                    "actionIndex": 0,
+                    "card": "{card}",
+                    "draggable": false,
+                    "isOpen": true,
+                    "key": "1670284913746-jl9oeeufz",
+                    "label": "Action",
+                    "stateAction": {
+                        "displayName": "Action",
+                        "elementId": "SelectedAllotment",
+                        "extraParams": {
+                            "AllotmentId": "{AllotmentId}",
+                            "DateOfAllotment": "{DateOfAllotment}",
+                            "EndDateOfAllotment": "{EndDateOfAllotment}",
+                            "LinkToDocument": "{LinkToDocument}",
+                            "OriginalDateOfAllotment": "{OriginalDateOfAllotment}",
+                            "PAPeriodEndDate": "{PAPeriodEndDate}",
+                            "RecordTypeId": "{RecordTypeId}",
+                            "WaiverType": "{WaiverType}"
+                        },
+                        "hasExtraParams": true,
+                        "id": "flex-action-1671078606016",
+                        "openUrlIn": "Current Window",
+                        "type": "updateOmniScript",
+                        "vlocityIcon": "standard-default"
+                    }
+                }
+            ],
+            "channelname": "ServiceAllotmentList",
+            "displayLabel": "selectcards_Allotment",
+            "element": "action",
+            "eventLabel": "custom event",
+            "eventname": "selectcards_Allotment",
+            "eventtype": "event",
+            "key": "event-1",
+            "recordIndex": "0",
+            "showSpinner": "false"
+        }
+    ],
+    "isFlex": true,
+    "isRepeatable": true,
+    "lwc": {
+        "DeveloperName": "cfTransferServiceAllotmentList_2_GPMS",
+        "Id": "0RbBm0000003FnJKAU",
+        "ManageableState": "unmanaged",
+        "MasterLabel": "cfTransferServiceAllotmentList_2_GPMS",
+        "NamespacePrefix": "c"
+    },
+    "osSupport": false,
+    "selectableField": "",
+    "selectableMode": "Single",
+    "selectedCardsLabel": "Allotment",
+    "states": [
+        {
+            "actions": [
+            ],
+            "childCards": [
+                "TransferEventAllotmentPlaces"
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "action",
+                            "elementLabel": "Action-0",
+                            "name": "Action",
+                            "property": {
+                                "actionList": [
+                                    {
+                                        "actionIndex": 0,
+                                        "draggable": false,
+                                        "isOpen": true,
+                                        "isTrackingDisabled": true,
+                                        "key": "1670201338380-sysb0hb4e",
+                                        "label": "SelectedAllotment",
+                                        "stateAction": {
+                                            "Record Relationship": {
+                                            },
+                                            "eventName": "selectcards",
+                                            "id": "flex-action-1670201379211",
+                                            "openUrlIn": "Current Window",
+                                            "targetType": "Record Relationship",
+                                            "type": "cardAction"
+                                        }
+                                    }
+                                ],
+                                "card": "{card}",
+                                "flyoutDetails": {
+                                },
+                                "iconName": "standard-default",
+                                "label": "\\Allotment ID:  {Name} ",
+                                "record": "{record}",
+                                "showSpinner": "false",
+                                "stateObj": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "outputField",
+                            "elementLabel": "Field-2",
+                            "name": "Field",
+                            "property": {
+                                "card": "{card}",
+                                "fieldName": "DateOfAllotment",
+                                "format": "D/M/YYYY",
+                                "label": "Allotment Date:",
+                                "placeholder": "",
+                                "record": "{record}",
+                                "type": "date",
+                                "useAbsoluteDate": true
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "childCardPreview",
+                            "elementLabel": "FlexCard-3",
+                            "name": "FlexCard",
+                            "property": {
+                                "cardName": "TransferEventAllotmentPlaces",
+                                "cardNode": "{record.AllPlace}",
+                                "isChildCardTrackingEnabled": false,
+                                "recordId": "{recordId}",
+                                "selectedState": "Active"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Active",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "class": "slds-card slds-p-around_x-small slds-m-bottom_x-small",
+                "container": {
+                    "class": "slds-card"
+                },
+                "margin": [
+                    {
+                        "size": "x-small",
+                        "type": "bottom"
+                    }
+                ],
+                "padding": [
+                    {
+                        "size": "x-small",
+                        "type": "around"
+                    }
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12"
+            }
+        },
+        {
+            "actions": [
+            ],
+            "blankCardState": true,
+            "childCards": [
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "outputField",
+                            "elementLabel": "Text-0",
+                            "name": "Text",
+                            "property": {
+                                "card": "{card}",
+                                "mergeField": "%3Cdiv%20class=%22slds-text-align_center%22%3E%3Cem%3E%3Cstrong%3ENo%20Allotment.%3C/strong%3E%3C/em%3E%3C/div%3E",
+                                "record": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 1,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "text"
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "No Allotment",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "class": "slds-card slds-p-around_x-small slds-m-bottom_x-small",
+                "container": {
+                    "class": "slds-card"
+                },
+                "margin": [
+                    {
+                        "size": "none",
+                        "type": "around"
+                    }
+                ],
+                "padding": [
+                    {
+                        "size": "x-small",
+                        "type": "around"
+                    }
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12"
+            }
+        }
+    ],
+    "theme": "slds",
+    "title": "TransferServiceAllotmentList",
+    "xmlJson": [
+        {
+            "@attributes": {
+                "targets": "lightning__AppPage",
+                "xmlns": "http://soap.sforce.com/2006/04/metadata"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "name": "recordId",
+                        "type": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "@attributes": {
+                "targets": "lightning__RecordPage",
+                "xmlns": "http://soap.sforce.com/2006/04/metadata"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                }
+            ]
+        }
+    ],
+    "xmlObject": {
+        "apiVersion": 51,
+        "isExplicitImport": false,
+        "isExposed": true,
+        "masterLabel": "TransferServiceAllotmentList",
+        "runtimeNamespace": "%vlocity_namespace%",
+        "targetConfigs": "PHRhcmdldENvbmZpZyB4bWxucz0iaHR0cDovL3NvYXAuc2ZvcmNlLmNvbS8yMDA2LzA0L21ldGFkYXRhIiB0YXJnZXRzPSJsaWdodG5pbmdfX0FwcFBhZ2UiPjxwcm9wZXJ0eSBuYW1lPSJkZWJ1ZyIgdHlwZT0iQm9vbGVhbiIvPjxwcm9wZXJ0eSBuYW1lPSJyZWNvcmRJZCIgdHlwZT0iU3RyaW5nIi8+PC90YXJnZXRDb25maWc+PHRhcmdldENvbmZpZyB4bWxucz0iaHR0cDovL3NvYXAuc2ZvcmNlLmNvbS8yMDA2LzA0L21ldGFkYXRhIiB0YXJnZXRzPSJsaWdodG5pbmdfX1JlY29yZFBhZ2UiPjxwcm9wZXJ0eSBuYW1lPSJkZWJ1ZyIgdHlwZT0iQm9vbGVhbiIvPjwvdGFyZ2V0Q29uZmlnPg==",
+        "targets": {
+            "target": [
+                "lightning__RecordPage",
+                "lightning__AppPage",
+                "lightning__HomePage"
+            ]
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "TargetGroup/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "a2U9r0000000YRVEA2"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "AllotmentId": "{recordId}"
+            },
+            "ipMethod": "TargetGroup_TargetGroup",
+            "resultVar": "[\"Total\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "PlaceByTargetGroup",
+    "Namespace": "",
+    "OmniUiCardKey": "PlaceByTargetGroup/GPMS/2.0",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "PlaceByTargetGroup.json",
+    "SampleDataSourceResponse": "{\"SplKey\":{\"Total\":0},\"TargetGroup\":{\"CareLevelNumber\":\"0\"},\"Total\":{\"SplKey\":{\"Total\":0},\"SplKeySum\":0,\"GeneralAccessSum\":0,\"NotSpecifiedSum\":0,\"CareType\":\"Residential\"}}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 2,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/PlaceByTargetGroup"
+}

@@ -1,0 +1,59 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateTheInContextAccountRecord",
+    "OmniProcessId": {
+        "Name": "CreateManagementCompany",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ManagementCompany/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "OnlyifWeNeedToCreateTheInContextAccountRecord",
+        "OmniProcessId": {
+            "Name": "CreateManagementCompany",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ManagementCompany/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ManagementCompany/Create/Procedure/OnlyifWeNeedToCreateTheInContextAccountRecord",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "OnlyifWeNeedToCreateTheInContextAccountRecord",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "IsApprovedProvider": "=%ManagementCompany:MCDetail:IsApprovedProvider%",
+            "Name": "=%ManagementCompany:MCDetail:ManagementCompanyName%",
+            "NameEffectiveDate": "=%ManagementCompany:MCDetail:NameEffectiveDate%",
+            "Provider": "=%ManagementCompany:FindAP:ApprovedProviderInformation-Block:ApprovedProviderId%",
+            "RecordTypeId": "=\"Management_Company\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "AccountGenericParentRecord_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction8",
+        "responseJSONNode": "AccountId",
+        "responseJSONPath": "Account_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ManagementCompany/Create/Procedure/CreateTheInContextAccountRecord"
+}

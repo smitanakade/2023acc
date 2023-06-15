@@ -1,0 +1,44 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ValidateCeasePlaces",
+    "OmniProcessId": {
+        "Name": "NATSIFACCeasePlaces",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/NATSIFAC/Places/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CeasePlaces",
+        "OmniProcessId": {
+            "Name": "NATSIFACCeasePlaces",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/NATSIFAC/Places/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/NATSIFAC/Places/English/CeasePlaces",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CeasePlaces",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 3,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF(((%OperationalPlacesCeased% == NULL) && (%InactivePlacesCeased% == NULL)) || ((%OperationalPlacesCeased% == NULL) && (%InactivePlacesCeased% >= %InactivePlaces%)) || ((%OperationalPlacesCeased% >= %OperationalPlaces%) && (%InactivePlacesCeased% == NULL)) || ((%OperationalPlacesCeased% >= %OperationalPlaces%) && (%InactivePlacesCeased% >=  %InactivePlaces%))||((%OperationalPlacesCeased% >= %OperationalPlaces%) && (%InactivePlacesCeased% <> NULL))||((%InactivePlacesCeased% >= %InactivePlaces%) && (%OperationalPlacesCeased% <> NULL)), '1','2')",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "ValidateCeasePlaces",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/NATSIFAC/Places/English/ValidateCeasePlaces"
+}

@@ -1,0 +1,33 @@
+{
+    "CustomJavaScript": "SRQI_EmailNotificationsForRecalc_SampleInput.json",
+    "Description": "This IP is responsible for sending Email Notifications when we Recalculate Ratings.",
+    "DiscoveryFrameworkUsageType": "Default",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "EmailNotificationsForRecalc",
+    "OmniProcessElement": [
+        "SRQI_EmailNotificationsForRecalc_Element_FetchNotificationSetting.json",
+        "SRQI_EmailNotificationsForRecalc_Element_LoopSRH.json",
+        "SRQI_EmailNotificationsForRecalc_Element_GetContactsFromACR.json",
+        "SRQI_EmailNotificationsForRecalc_Element_LoopOnContacts.json",
+        "SRQI_EmailNotificationsForRecalc_Element_LiveNotificationForRecal.json",
+        "SRQI_EmailNotificationsForRecalc_Element_LoopAcctContacts.json",
+        "SRQI_EmailNotificationsForRecalc_Element_Email_PublishRatingNotification.json",
+        "SRQI_EmailNotificationsForRecalc_Element_LoopContacts.json",
+        "SRQI_EmailNotificationsForRecalc_Element_Email_LiveRatingNotification.json"
+    ],
+    "OmniProcessKey": "SRQI_EmailNotificationsForRecalc",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "SRQI_EmailNotificationsForRecalc_PropertySetConfig.json",
+    "SubType": "EmailNotificationsForRecalc",
+    "Type": "SRQI",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/SRQI/EmailNotificationsForRecalc/Procedure",
+    "WebComponentKey": "574d7d94-6847-db48-8315-99937c77668c"
+}

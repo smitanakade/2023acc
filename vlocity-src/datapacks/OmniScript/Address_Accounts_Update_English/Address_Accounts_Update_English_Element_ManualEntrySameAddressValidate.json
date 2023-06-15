@@ -1,0 +1,39 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "ManualEntrySameAddressValidate",
+    "OmniProcessId": {
+        "Name": "Addresses",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Accounts/Update/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "applyIfError": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "enableActionMessage": false,
+        "failureGoBackLabel": "Go Back",
+        "failureNextLabel": "Continue",
+        "hide": false,
+        "label": "ManualEntrySameAddressValidate",
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "AddressEntry"
+                    }
+                ]
+            }
+        },
+        "validationRequired": "Step"
+    },
+    "Type": "Action Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Accounts/Update/English/ManualEntrySameAddressValidate"
+}

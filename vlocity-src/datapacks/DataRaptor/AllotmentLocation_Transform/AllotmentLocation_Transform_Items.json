@@ -1,0 +1,40 @@
+[
+    {
+        "GlobalKey": "AllotmentLocation_TransformCustom2903",
+        "InputFieldName": "NewLocationId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "AllotmentLocation_Transform",
+        "OmniDataTransformationId": {
+            "Name": "AllotmentLocation_Transform",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/AllotmentLocation_Transform",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "UpdateAllotments:AddressLocation",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "AllotmentLocation_TransformCustom8266",
+        "InputFieldName": "Address:AllotmentId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "AllotmentLocation_Transform",
+        "OmniDataTransformationId": {
+            "Name": "AllotmentLocation_Transform",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/AllotmentLocation_Transform",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "UpdateAllotments:AllotmentId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

@@ -1,0 +1,76 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "contactAddressACO",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ACO_ADDRESSES_CREATED_NEW",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ACO_ADDRESSES_CREATED_NEW",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ACO_ADDRESSES_CREATED_NEW",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "LevelNumber": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",%ACO_Candidates:level_name%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",%SelectPostalAddress:CustomLWC3:SelectedAddress:level_name%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOLevelFloor_Postal%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",\"\"))))",
+            "buildingName": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",%ACO_Candidates:add_bldg%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOBuildingName_Postal%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOBuildingName_Postal%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",\"\"))))",
+            "city": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",%ACO_Candidates:nbrhd%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",%SelectPostalAddress:CustomLWC3:SelectedAddress:nbrhd%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOSuburbOrTown_Postal_UPPER%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBoxSuburbOrTown_Postal_UPPER%,\"\"))))",
+            "country": "=\"Australia\"",
+            "latitude": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",%ACO_Candidates:latitude%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",%SelectPostalAddress:CustomLWC3:SelectedAddress:latitude%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",\"\"))))",
+            "longitude": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",%ACO_Candidates:longitude%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",%SelectPostalAddress:CustomLWC3:SelectedAddress:longitude%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",\"\"))))",
+            "lotNumber": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",%ACO_Candidates:place_name%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",%SelectPostalAddress:CustomLWC3:SelectedAddress:place_name%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",IF(%ACOPostalAddresses:ACOPostalAddressBlock:ACOLotStreetRadio_Postal% = \"Lot/Section Number\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOStreetNumber_Postal_UPPER%, NULL),IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",\"\"))))",
+            "poBoxType": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",\"\",IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",\"\",IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBoxType_Postal%,\"\"))))",
+            "postOfficeBox": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",\"\",IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",\"\",IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:POBox_Postal_UPPER%,\"\"))))",
+            "stateProvince": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",IF(%ACO_Candidates:region% = \"OT\", \"OT\", %ACO_Candidates:region%),IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",IF(%SelectPostalAddress:CustomLWC3:SelectedAddress:region% = \"OT\", \"OT\", %SelectPostalAddress:CustomLWC3:SelectedAddress:region%),IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOState_Postal%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBoxState_Postal%,\"\"))))",
+            "street1": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",%ACO_Candidates:st_name%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",%SelectPostalAddress:CustomLWC3:SelectedAddress:st_name%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOStreetName_Postal_UPPER%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",\"\"))))",
+            "streetNumber1": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",%ACO_Candidates:add_num%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",%SelectPostalAddress:CustomLWC3:SelectedAddress:add_num%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",IF(%ACOPostalAddresses:ACOPostalAddressBlock:ACOLotStreetRadio_Postal% = \"Street Number\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOStreetNumber_Postal_UPPER%, NULL),IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",\"\"))))",
+            "streetSuffixTypeDescription": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",%ACO_Candidates:st_dir%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",%SelectPostalAddress:CustomLWC3:SelectedAddress:st_dir%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOStreetSuffix_Postal%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",\"\"))))",
+            "streetTypeDescription": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",%ACO_Candidates:st_type%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",%SelectPostalAddress:CustomLWC3:SelectedAddress:st_type%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOStreetType_Postal%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",\"\"))))",
+            "unitNumber": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",%ACO_Candidates:unit_name%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",%SelectPostalAddress:CustomLWC3:SelectedAddress:unit_name%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOUnit_Postal_UPPER%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",\"\",\"\"))))",
+            "zipPostalCode": "=IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\",%ACO_Candidates:postal%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\",%SelectPostalAddress:CustomLWC3:SelectedAddress:postal%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOPostCode_Postal%,IF(ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"No\",%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBoxPostCode_Postal%,\"\"))))"
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": false,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "RemoteAction1",
+        "remoteClass": "UniqueAddressesController",
+        "remoteMethod": "CheckExistingAddress",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "Remote Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/contactAddressACO"
+}

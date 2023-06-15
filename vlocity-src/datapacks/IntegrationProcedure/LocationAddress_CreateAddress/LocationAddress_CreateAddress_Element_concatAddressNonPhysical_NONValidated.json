@@ -1,0 +1,76 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "concatAddressNonPhysical_NONValidated",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ALL_NON_PHYSICAL_ADDRESSES",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ALL_NON_PHYSICAL_ADDRESSES",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ALL_NON_PHYSICAL_ADDRESSES",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "LevelNumber": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\",%PostalAddresses:PostalAddressBlock:LevelFloor_Postal%,\"\")",
+            "buildingName": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\",%PostalAddresses:PostalAddressBlock:BuildingName_Postal%,\"\")",
+            "city": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\",%PostalAddresses:PostalAddressBlock:SuburbOrTown_Postal_UPPER%,\"\")",
+            "country": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\",\"Australia\",\"\")",
+            "latitude": "=\"\"",
+            "longitude": "=\"\"",
+            "lotNumber": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\",IF(%PostalAddresses:PostalAddressBlock:LotStreetRadio_Postal% = \"Lot/Section Number\",%PostalAddresses:PostalAddressBlock:StreetNumber_Postal_UPPER%, NULL),\"\")",
+            "poBoxType": "=\"\"",
+            "postOfficeBox": "=\"\"",
+            "stateProvince": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\",%PostalAddresses:PostalAddressBlock:State_Postal%,\"\")",
+            "street1": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\",%PostalAddresses:PostalAddressBlock:StreetName_Postal_UPPER%,\"\")",
+            "streetNumber1": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\",IF(%PostalAddresses:PostalAddressBlock:LotStreetRadio_Postal% = \"Street Number\",%PostalAddresses:PostalAddressBlock:StreetNumber_Postal_UPPER%, NULL),\"\")",
+            "streetSuffixTypeDescription": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\",%PostalAddresses:PostalAddressBlock:StreetSuffix_Postal%,\"\")",
+            "streetTypeDescription": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\",%PostalAddresses:PostalAddressBlock:StreetType_Postal%,\"\")",
+            "unitNumber": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\",%PostalAddresses:PostalAddressBlock:Unit_Postal_UPPER%,\"\")",
+            "zipPostalCode": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\",%PostalAddresses:PostalAddressBlock:PostCode_Postal%,\"\")"
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\"",
+        "failOnStepError": false,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "RemoteAction1",
+        "remoteClass": "UniqueAddressesController",
+        "remoteMethod": "CheckExistingAddress",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "Remote Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/concatAddressNonPhysical_NONValidated"
+}

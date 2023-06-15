@@ -1,0 +1,80 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "AccountPostalAddress_NONValidated",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ALL_NON_PHYSICAL_ADDRESSES",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ALL_NON_PHYSICAL_ADDRESSES",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ALL_NON_PHYSICAL_ADDRESSES",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressEffectiveDate": "=IF(ISNOTBLANK(%PostalAddresses:PostalAddressBlock:EffectiveDateFormula1%, true), %PostalAddresses:PostalAddressBlock:EffectiveDateFormula1%, TODAY())",
+            "AddressId": "=%concatAddressNonPhysical_NONValidated:dupCheckResult:recordId%",
+            "AddressType": "=IF (%LocationRecordType% = \"Contact Address\", \"Contact Address\", IF(%LocationRecordType% = \"Account Address\", \"Account Address\", %LocationRecordType% )",
+            "BuildingName": "=%PostalAddresses:PostalAddressBlock:BuildingName_Postal%",
+            "CareOf": "=%PostalAddresses:PostalAddressBlock:PostalCareOf2%",
+            "City": "=%PostalAddresses:PostalAddressBlock:SuburbOrTown_Postal_UPPER%",
+            "ContactId": "=IF(%OtherAddressRecordType% = \"Residential Address\", %CurrentRecordId%, NULL)\r\n\r\n",
+            "Country": "=\"Australia\"",
+            "CurrentAccountId": "=IF(%LocationRecordType% = \"Account Address\", %CurrentRecordId%, NULL)",
+            "CurrentContactRelationshipId": "=IF(%OtherAddressRecordType% = \"Administrator/Liquidator Company Address\", %CurrentRecordId%, NULL)",
+            "CurrentServiceId": "=IF(%Origin% = \"Service Account FlexCard\", %CurrentRecordId%, NULL)",
+            "LevelNumber": "=%PostalAddresses:PostalAddressBlock:LevelFloor_Postal%",
+            "LevelType": "=IF(%PostalAddresses:PostalAddressBlock:LevelFloorRadio_Postal% = \"Not Applicable\", NULL, %PostalAddresses:PostalAddressBlock:LevelFloorRadio_Postal%)",
+            "LocationType": "=%PostalAddresses:PostalAddressBlock:LocationTypeFormula%",
+            "LotNumber": "=IF(%PostalAddresses:PostalAddressBlock:LotStreetRadio_Postal% = \"Lot/Section Number\",%PostalAddresses:PostalAddressBlock:StreetNumber_Postal_UPPER%, NULL)",
+            "Postcode": "=%PostalAddresses:PostalAddressBlock:PostCode_Postal%",
+            "State": "=%PostalAddresses:PostalAddressBlock:State_Postal%",
+            "Street": "=%PostalAddresses:PostalAddressBlock:StreetName_Postal_UPPER%",
+            "StreetNumber": "=IF(%PostalAddresses:PostalAddressBlock:LotStreetRadio_Postal% = \"Street Number\",%PostalAddresses:PostalAddressBlock:StreetNumber_Postal_UPPER%, NULL)",
+            "StreetSuffixType": "=%PostalAddresses:PostalAddressBlock:StreetSuffix_Postal%",
+            "StreetTypeDescription": "=%PostalAddresses:PostalAddressBlock:StreetType_Postal%",
+            "UniqueKey": "=%concatAddressNonPhysical_NONValidated:dupCheckResult:concatAddress%",
+            "UnitNumber": "=%PostalAddresses:PostalAddressBlock:Unit_Postal_UPPER%",
+            "UnitType": "=IF (%PostalAddresses:PostalAddressBlock:UnitRadio_Postal% = \"Not Applicable\", NULL, %PostalAddresses:PostalAddressBlock:UnitRadio_Postal%)",
+            "ValidatedByCGIS": "=\"No\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "LocationAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "PostalAddresses:PostalAddressBlock:AddressEntry1  = \"true\" AND SelectPostalAddress:CGISAddress1 = \"No\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "PostalAddressId",
+        "responseJSONPath": "Address__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/AccountPostalAddress_NONValidated"
+}

@@ -1,0 +1,133 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "CheckIfACOAddressComplete_Postal",
+    "OmniProcessId": {
+        "Name": "Aged Care Addresses",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_ACO_Accounts/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "SelectPostalAddress",
+        "OmniProcessId": {
+            "Name": "Aged Care Addresses",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_ACO_Accounts/Create/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_ACO_Accounts/Create/English/SelectPostalAddress",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "SelectPostalAddress",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "hideLabel": true,
+        "label": "CheckIfACOAddressComplete_Postal",
+        "messages": [
+            {
+                "active": false,
+                "text": "",
+                "type": "Success",
+                "value": true
+            },
+            {
+                "active": true,
+                "text": "Please check the address as it is missing Street, City or Postcode",
+                "type": "Requirement",
+                "value": false
+            }
+        ],
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": null,
+                        "field": "SelectPostalAddress:CustomLWC3"
+                    },
+                    {
+                        "group": {
+                            "operator": "OR",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "Bad",
+                                    "field": "CheckCityACO_Postal"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Bad",
+                                    "field": "CheckStreetACO_Postal"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Bad",
+                                    "field": "CheckPostcodeACO_Postal"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "Bad",
+                                    "field": "CheckStateACO_Postal"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Good",
+                                    "field": "CheckStateOT_ACO_Postal"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "validateExpression": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Good",
+                        "field": "CheckCityACO_Postal"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Good",
+                        "field": "CheckStateACO_Postal"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Good",
+                        "field": "CheckStreetACO_Postal"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Good",
+                        "field": "CheckPostcodeACO_Postal"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Good",
+                        "field": "CheckStateOT_ACO_Postal"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "Validation",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_ACO_Accounts/Create/English/CheckIfACOAddressComplete_Postal"
+}

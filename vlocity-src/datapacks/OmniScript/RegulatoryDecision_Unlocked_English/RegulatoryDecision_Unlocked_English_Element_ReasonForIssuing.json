@@ -1,0 +1,64 @@
+{
+    "Description": "RD:ReasonForIssuing",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ReasonForIssuing",
+    "OmniProcessId": {
+        "Name": "SRQI_OS_UnlockedRegulatoryDecision",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RegulatoryDecision/Unlocked/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "DetailedNotesBlock",
+        "OmniProcessId": {
+            "Name": "SRQI_OS_UnlockedRegulatoryDecision",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/RegulatoryDecision/Unlocked/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/RegulatoryDecision/Unlocked/English/DetailedNotesBlock",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "DetailedNotesBlock",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "bStandalone": false,
+        "conditionType": "Optional if False",
+        "controlWidth": 12,
+        "customAttributes": [
+            {
+                "name": "records",
+                "source": "Reason for issuing the regulatory decision"
+            },
+            {
+                "name": "record-Id",
+                "source": "%ContextId%"
+            },
+            {
+                "name": "record",
+                "source": "%UnlockedRegDec:RegulatoryDecisionInfoBlock:Published%"
+            }
+        ],
+        "hide": false,
+        "label": "Reason for issuing the regulatory decision",
+        "lwcName": "sRQI_RegulatoryRichText",
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "\"\"",
+                        "field": "ReasonForIssuing"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "Custom Lightning Web Component",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RegulatoryDecision/Unlocked/English/ReasonForIssuing"
+}

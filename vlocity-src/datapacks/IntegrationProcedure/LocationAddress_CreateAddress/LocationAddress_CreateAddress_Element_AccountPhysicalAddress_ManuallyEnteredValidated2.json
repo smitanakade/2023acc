@@ -1,0 +1,79 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "AccountPhysicalAddress_ManuallyEnteredValidated2",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "PHYSICAL_ONLY",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/PHYSICAL_ONLY",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "PHYSICAL_ONLY",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressEffectiveDate": "=IF(ISNOTBLANK(%PhysicalAddresses:Address:EffectiveDateFormula%, true), %PhysicalAddresses:Address:EffectiveDateFormula%, TODAY())",
+            "AddressId": "=%concatAddress_AccountPhysicalAddress_ManuallyEnteredValidated2:dupCheckResult:recordId%",
+            "AddressType": "=%LocationRecordType%",
+            "BuildingName": "=%PhysicalAddresses:Address:BuildingName_Physical%",
+            "City": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:nbrhd%",
+            "Country": "=\"Australia\"",
+            "CurrentAccountId": "=%CurrentRecordId%",
+            "Latitude": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:latitude%",
+            "LevelNumber": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:level_name%",
+            "LevelType": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:level_type%",
+            "LocationType": "=\"Physical\"",
+            "Longitude": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:longitude%",
+            "LotNumber": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:place_name%",
+            "Postcode": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:postal%",
+            "State": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:region%",
+            "Street": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:st_name%",
+            "StreetNumber": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:add_num%",
+            "StreetSuffixType": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:st_dir%",
+            "StreetTypeDescription": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:st_type%",
+            "UniqueKey": "=%concatAddress_AccountPhysicalAddress_ManuallyEnteredValidated2:dupCheckResult:concatAddress%",
+            "UnitNumber": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:unit_name%",
+            "UnitType": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:unit_type%",
+            "ValidatedByCGIS": "=\"Yes\"",
+            "gnaf_pid": "=%SelectPhysicalAddress:CustomLWC2:SelectedAddress:gnaf_pid%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "LocationAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "%PhysicalAddresses:Address:AddressEntry%  = \"true\" AND %SelectPhysicalAddress:CGISAddress% = \"Yes\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "PhysicalAddressId",
+        "responseJSONPath": "Address__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/AccountPhysicalAddress_ManuallyEnteredValidated2"
+}

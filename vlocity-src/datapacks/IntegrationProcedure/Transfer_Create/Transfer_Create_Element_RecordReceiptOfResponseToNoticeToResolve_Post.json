@@ -1,0 +1,62 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RecordReceiptOfResponseToNoticeToResolve_Post",
+    "OmniProcessId": {
+        "Name": "Transfer",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Transfer/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RecordReceiptOfResponseToNoticeToResolve",
+        "OmniProcessId": {
+            "Name": "Transfer",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Transfer/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Transfer/Create/Procedure/RecordReceiptOfResponseToNoticeToResolve",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RecordReceiptOfResponseToNoticeToResolve",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Comments": "=%Transfer:Comments%",
+            "DateNoticeToResolveReceived": "=%Transfer:DateNoticeToResolveReceived%",
+            "DateOfRequest": "=%Transfer:DateOfRequest%",
+            "DateRequired": "=%Transfer:DateRequired%",
+            "EventId": "=%EventId%",
+            "LinkToDocument": "=%Transfer:LinkToDocument%",
+            "RecordType": "=\"Record_Receipt_of_Response_to_Notice_to_Resolve\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Transfer_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "PerformAction:Action = \"Record Receipt of Response to Notice to Resolve\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction2",
+        "responseJSONNode": "TransferId",
+        "responseJSONPath": "Transfers__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Transfer/Create/Procedure/RecordReceiptOfResponseToNoticeToResolve_Post"
+}

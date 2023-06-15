@@ -1,0 +1,49 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ThirdPartyAttachService",
+    "OmniProcessId": {
+        "Name": "ThirdPartyAttachService",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ThirdParty/AttachService/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AssociatedAccounts": "=%AccountRelationshipId%",
+            "AssociationEndDate": "=%AttachServiceMCOrAO:AssociationEndDate%",
+            "AssociationStartDate": "=%AttachServiceMCOrAO:AssociationStartDate%",
+            "Comments": "=%AttachServiceMCOrAO:Comments%",
+            "Reason": "=%AttachServiceMCOrAO:Reason%",
+            "RecordType": "=IF(%RecordTypeName% = 'Provider_to_Administrative_Organisation', %AOtoServiceRecordTypeId%,IF(%RecordTypeName% = 'Provider_to_Management_Company', %MCtoServiceRecordTypeId%,%SDOtoServiceRecordTypeId%))",
+            "Service": "=IF(%AttachServiceMCOrAO:LinkService% != null, %AttachServiceMCOrAO:LinkService%,%AttachServiceSDO:Service%)",
+            "ServiceContractEndDate": "=%AttachServiceSDO:ServiceContractEndDate%",
+            "ServiceContractStartDate": "=%AttachServiceSDO:ServiceContractStartDate%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ThirdPartyAttachService_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ThirdParty/AttachService/Procedure/ThirdPartyAttachService"
+}

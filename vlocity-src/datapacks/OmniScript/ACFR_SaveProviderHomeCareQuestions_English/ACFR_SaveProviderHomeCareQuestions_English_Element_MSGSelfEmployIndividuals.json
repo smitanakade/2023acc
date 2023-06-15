@@ -1,0 +1,109 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "MSGSelfEmployIndividuals",
+    "OmniProcessId": {
+        "Name": "QFR Viability Questions - Home Care Form - Provider - Validation Errors",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveProviderHomeCareQuestions/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "BLKSelfEmployIndividual",
+        "OmniProcessId": {
+            "Name": "QFR Viability Questions - Home Care Form - Provider - Validation Errors",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveProviderHomeCareQuestions/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveProviderHomeCareQuestions/English/BLKSelfEmployIndividual",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "BLKSelfEmployIndividual",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "hideLabel": true,
+        "label": "MSGSelfEmplyIndividuals",
+        "messages": [
+            {
+                "active": true,
+                "text": "At least one option is required",
+                "type": "Warning",
+                "value": true
+            },
+            {
+                "active": true,
+                "text": "At least one option is required",
+                "type": "Requirement",
+                "value": false
+            }
+        ],
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "CKSelfEmployIndividual"
+                    }
+                ]
+            }
+        },
+        "validateExpression": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "CKSelfEmployIndividualClinicalCare"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "CKSelfEmployIndividualPersonalCare"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "CKSelfEmployIndividualAlliedHealth"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "CKSelfEmployIndividualDiversionalTherapy"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "CKSelfEmployIndividualLifestyleOfficer"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "CKSelfEmployIndividualOther"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "OK",
+                        "field": "SVSelfEmployIndividualFlag"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "NotOK",
+                        "field": "SVSelfEmployIndividualFlag"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "Validation",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveProviderHomeCareQuestions/English/MSGSelfEmployIndividuals"
+}

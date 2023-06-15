@@ -1,0 +1,34 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "EmbeddedOmniScriptKey": "Address_ACO_Accounts|Create|English",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "AgedCareAddresses",
+    "OmniProcessId": {
+        "Name": "ApprovedProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ApprovedProvider/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "Language": "English",
+        "Sub Type": "Create",
+        "Type": "Address_ACO_Accounts",
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Create a new ACO",
+                        "field": "ChooseACO"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "OmniScript",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ApprovedProvider/Create/English/AgedCareAddresses"
+}

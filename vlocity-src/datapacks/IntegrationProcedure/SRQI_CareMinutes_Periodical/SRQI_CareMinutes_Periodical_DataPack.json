@@ -1,0 +1,30 @@
+{
+    "CustomJavaScript": "{}",
+    "Description": "Master Care Minutes Calculation IP called during periodical calculation Edit: Rectifying incorrect RPId reference",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "CareMinutes_MasterIP",
+    "OmniProcessElement": [
+        "SRQI_CareMinutes_Periodical_Element_GetRPId.json",
+        "SRQI_CareMinutes_Periodical_Element_GetCMRecords.json",
+        "SRQI_CareMinutes_Periodical_Element_MergeLateCM.json",
+        "SRQI_CareMinutes_Periodical_Element_LoopCMRecords.json",
+        "SRQI_CareMinutes_Periodical_Element_CalculateCM.json",
+        "SRQI_CareMinutes_Periodical_Element_UpDateRP.json",
+        "SRQI_CareMinutes_Periodical_Element_ResponseAction1.json"
+    ],
+    "OmniProcessKey": "SRQI_CareMinutes_Periodical",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "SRQI_CareMinutes_Periodical_PropertySetConfig.json",
+    "SubType": "CareMinutes_Periodical",
+    "Type": "SRQI",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/SRQI/CareMinutes_Periodical/Procedure",
+    "WebComponentKey": "11e36a45-9fec-cbbc-0e9e-537da3065074"
+}

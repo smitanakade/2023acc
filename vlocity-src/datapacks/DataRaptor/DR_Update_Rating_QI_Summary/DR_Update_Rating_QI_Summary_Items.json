@@ -1,0 +1,201 @@
+[
+    {
+        "FormulaExpression": "IF(QIExempt == true, \"0\", IF(Status == 'Late Submission' || Status == 'Not Submitted', 1, %Score%)",
+        "FormulaResultPath": "Score",
+        "FormulaSequence": 3,
+        "GlobalKey": "DR_Update_Rating_QI_SummaryCustom6684",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Rating_QI_Summary",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Rating_QI_Summary",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Rating_QI_Summary",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(QIExempt == true, true, false)",
+        "FormulaResultPath": "RatingExempt",
+        "FormulaSequence": 2,
+        "GlobalKey": "DR_Update_Rating_QI_SummaryCustom2066",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Rating_QI_Summary",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Rating_QI_Summary",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Rating_QI_Summary",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "NOW()",
+        "FormulaResultPath": "CalculationDate",
+        "FormulaSequence": 1,
+        "GlobalKey": "DR_Update_Rating_QI_SummaryCustom3089",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Rating_QI_Summary",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Rating_QI_Summary",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Rating_QI_Summary",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DR_Update_Rating_QI_SummaryCustom4300",
+        "InputFieldName": "RecordId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "Name": "DR_Update_Rating_QI_Summary",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Rating_QI_Summary",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Rating_QI_Summary",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "DR_Update_Rating_QI_SummaryCustom9015",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "DR_Update_Rating_QI_Summary",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Rating_QI_Summary",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Rating_QI_Summary",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DR_Update_Rating_QI_SummaryCustom6547",
+        "InputFieldName": "Description",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Rating_QI_Summary",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Rating_QI_Summary",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Rating_QI_Summary",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Quality_Indicator_Rating_Label__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "\"\"",
+        "GlobalKey": "DR_Update_Rating_QI_SummaryCustom4631",
+        "InputFieldName": "Score",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Rating_QI_Summary",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Rating_QI_Summary",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Rating_QI_Summary",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Quality_Indicator_Rating__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DR_Update_Rating_QI_SummaryCustom1142",
+        "InputFieldName": "CalculationDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Rating_QI_Summary",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Rating_QI_Summary",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Rating_QI_Summary",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Calc_Date__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DR_Update_Rating_QI_SummaryCustom5326",
+        "InputFieldName": "RatingExempt",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Rating_QI_Summary",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Rating_QI_Summary",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Rating_QI_Summary",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Exemption_Granted__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "\"\"",
+        "GlobalKey": "DR_Update_Rating_QI_SummaryCustom7556",
+        "InputFieldName": "Reason",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DR_Update_Rating_QI_Summary",
+        "OmniDataTransformationId": {
+            "Name": "DR_Update_Rating_QI_Summary",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DR_Update_Rating_QI_Summary",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Exemption_Reason__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

@@ -1,0 +1,522 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "SRHID",
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom6259",
+        "InputFieldName": "Id",
+        "InputObjectName": "STAR_Rating_History__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "SRHSubData",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "\"Send_Email\"",
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom7636",
+        "InputFieldName": "DeveloperName",
+        "InputObjectName": "EmailNotificationSetting__mdt",
+        "InputObjectQuerySequence": 2,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "SREmailMDT",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(SRHSubData:Care_Minutes_Id__r.Care_Minutes_Rating__c == null, true, IF(SRHSubData:Consumer_Experience_Id__r.Consumer_Experience_Rating__c == null, true, IF(SRHSubData:Quality_Indicator_Id__r.Quality_Indicator_Rating__c == null, true, IF(SRHSubData:Service_Compliance_Id__r.Service_Compliance_Rating__c == null, true, false))))",
+        "FormulaResultPath": "MissingRating",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom5098",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(SRHSubData:Care_Minutes_Id__r.Rating_Exemption_Granted__c == true, OR SRHSubData:Quality_Indicator_Id__r.Rating_Exemption_Granted__c == true, OR SRHSubData:Service_Compliance_Id__r.Rating_Exemption_Granted__c == true, OR SRHSubData:Consumer_Experience_Id__r.Rating_Exemption_Granted__c == true, true, false)",
+        "FormulaResultPath": "ExemptionActive",
+        "FormulaSequence": 3,
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom8192",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(SRHSubData:Care_Minutes_Id__r.Rating_Exemption_Granted__c == true, SRHSubData:Care_Minutes_Id__r.Rating_Exemption_Reason__c, IF(SRHSubData:Quality_Indicator_Id__r.Rating_Exemption_Granted__c == true, SRHSubData:Quality_Indicator_Id__r.Rating_Exemption_Reason__c, IF(SRHSubData:Service_Compliance_Id__r.Rating_Exemption_Granted__c == true, SRHSubData:Service_Compliance_Id__r.Rating_Exemption_Reason__c, IF(SRHSubData:Consumer_Experience_Id__r.Rating_Exemption_Granted__c == true, SRHSubData:Consumer_Experience_Id__r.Rating_Exemption_Reason__c, \"none\"))))",
+        "FormulaResultPath": "ExemptionReason",
+        "FormulaSequence": 5,
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom6022",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(SRHSubData:Service_Compliance_Id__r.Service_Compliance_Rating__c == 1, \"none\", IF(SRHSubData:Service_Compliance_Id__r.Service_Compliance_Rating__c == 2, \"none\", ExemptionReason))",
+        "FormulaResultPath": "ExemptionReason",
+        "FormulaSequence": 6,
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom5600",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(SRHSubData:Service_Compliance_Id__r.Service_Compliance_Rating__c == 1, false IF(SRHSubData:Service_Compliance_Id__r.Service_Compliance_Rating__c == 2, false, MissingRating))",
+        "FormulaResultPath": "MissingRating",
+        "FormulaSequence": 2,
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom3182",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(SRHSubData:Service_Compliance_Id__r.Service_Compliance_Rating__c == 1, false, IF(SRHSubData:Service_Compliance_Id__r.Service_Compliance_Rating__c == 2, false, ExemptionActive))",
+        "FormulaResultPath": "ExemptionActive",
+        "FormulaSequence": 4,
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom4609",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom3463",
+        "InputFieldName": "SREmailMDT:EnableRatingBulkEmail__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "EmailSetting:EnableRatingBulkEmail",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom981",
+        "InputFieldName": "SREmailMDT:OWEA__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "EmailSetting:OWEA",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom7233",
+        "InputFieldName": "SRHSubData:SF_Service_Id__r.AccountId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:AccountId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom4462",
+        "InputFieldName": "SRHSubData:Consumer_Experience_Id__r.Rating_Exemption_Granted__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:CERExempt",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "0",
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom1762",
+        "InputFieldName": "SRHSubData:Consumer_Experience_Id__r.Consumer_Experience_Rating__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:CERRating",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom849",
+        "InputFieldName": "SRHSubData:Care_Minutes_Id__r.Rating_Exemption_Granted__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:CMExempt",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "0",
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom2998",
+        "InputFieldName": "SRHSubData:Care_Minutes_Id__r.Care_Minutes_Rating__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:CMRating",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom5235",
+        "InputFieldName": "ExemptionActive",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:ExemptionActive",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom9779",
+        "InputFieldName": "ExemptionReason",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:ExemptionReason",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom3413",
+        "InputFieldName": "SRHSubData:Go_Live_Date__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:GoLiveDate",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom4635",
+        "InputFieldName": "SRHSubData:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:Id",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom4477",
+        "InputFieldName": "MissingRating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:MissingRating",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom1435",
+        "InputFieldName": "SRHSubData:Publish_Date__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:PublishDate",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom3512",
+        "InputFieldName": "SRHSubData:Quality_Indicator_Id__r.Rating_Exemption_Granted__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:QIExempt",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "0",
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom7155",
+        "InputFieldName": "SRHSubData:Quality_Indicator_Id__r.Quality_Indicator_Rating__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:QIRating",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom6290",
+        "InputFieldName": "SRHSubData:Service_Compliance_Id__r.Rating_Exemption_Granted__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:SCRExempt",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "0",
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom8687",
+        "InputFieldName": "SRHSubData:Service_Compliance_Id__r.Service_Compliance_Rating__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:SCRRating",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_ExtractStarRatingSubCategoryCustom4355",
+        "InputFieldName": "SRHSubData:Status__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_ExtractStarRatingSubCategory",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "SRHSubData:Status",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

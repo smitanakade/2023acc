@@ -1,0 +1,56 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ExtractCEIs",
+    "OmniProcessId": {
+        "Name": "CalculateCERData",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/CER/CER/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+        },
+        "additionalOutput": {
+        },
+        "bundle": "SRQI_DR_ExtractServiceCEIsforRP",
+        "chainOnStep": false,
+        "dataRaptor Input Parameters": [
+            {
+                "element": "ServID",
+                "inputParam": "ServID"
+            },
+            {
+                "element": "RPId",
+                "inputParam": "RPId"
+            }
+        ],
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "%listsize% < 1",
+        "failureResponse": {
+            "Success": false,
+            "errorMessage": "Consumer Experience Interview records not found.",
+            "node": "CER_CER:ExtractCEIs",
+            "status": "Error"
+        },
+        "ignoreCache": false,
+        "label": "DataRaptorExtractAction5",
+        "responseJSONNode": "ResponseArray",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": true,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Extract Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/CER/CER/Procedure/ExtractCEIs"
+}

@@ -1,0 +1,23 @@
+{
+    "Description": "Called by the RecalcFromFlow IP, triggered by record updates during the prescribed recalculation window",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RecalculateCM",
+    "OmniProcessId": {
+        "Name": "Calculate Care Minutes",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/CareMinutes/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "ServID == \"Recalculation\" && CMID != null",
+        "isIfElseBlock": false,
+        "label": "ConditionalBlock2",
+        "show": null
+    },
+    "Type": "Conditional Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/CareMinutes/Procedure/RecalculateCM"
+}

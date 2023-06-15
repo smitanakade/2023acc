@@ -1,0 +1,241 @@
+[
+    {
+        "FormulaExpression": "IF(Consent == true, \"1\", IF(Exempt == true, \"0\", CER_Total_Stars_II__Rating))",
+        "FormulaResultPath": "Rating",
+        "FormulaSequence": 2,
+        "GlobalKey": "SRQI_DR_LoadCurrentCERCustom6728",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCurrentCER",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCurrentCER",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCurrentCER",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(Consent == true, \"CER Consent Revoked\", IF(Exempt == true, \"No Data Available-Exemption\", CER_Total_Stars_II__Label))",
+        "FormulaResultPath": "Label",
+        "FormulaSequence": 3,
+        "GlobalKey": "SRQI_DR_LoadCurrentCERCustom6217",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCurrentCER",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCurrentCER",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCurrentCER",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(Exempt == true, true, false)",
+        "FormulaResultPath": "ExGranted",
+        "FormulaSequence": 5,
+        "GlobalKey": "SRQI_DR_LoadCurrentCERCustom3627",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCurrentCER",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCurrentCER",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCurrentCER",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(Label == \"Excellent\", \"Well Above Average\", IF(Label == \"Good\", \"Above Average\", IF(Label == \"Acceptable\", \"Average\", IF(Label == \"Improvement Needed\", \"Below Average\", IF(Label == \"Significant Improvement Needed\", \"Well Below Average\", Label,)))))",
+        "FormulaResultPath": "OldLabel",
+        "FormulaSequence": 4,
+        "GlobalKey": "SRQI_DR_LoadCurrentCERCustom5320",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCurrentCER",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCurrentCER",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCurrentCER",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "NOW()",
+        "FormulaResultPath": "CalcDate",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_LoadCurrentCERCustom9158",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCurrentCER",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCurrentCER",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCurrentCER",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadCurrentCERCustom737",
+        "InputFieldName": "Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCurrentCER",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCurrentCER",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCurrentCER",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Consumer_Experience_Rating__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadCurrentCERCustom1564",
+        "InputFieldName": "RecordId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_LoadCurrentCER",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCurrentCER",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCurrentCER",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_LoadCurrentCERCustom3035",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_LoadCurrentCER",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCurrentCER",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCurrentCER",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadCurrentCERCustom4200",
+        "InputFieldName": "CalcDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCurrentCER",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCurrentCER",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCurrentCER",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Calc_Date__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadCurrentCERCustom4104",
+        "InputFieldName": "ExGranted",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCurrentCER",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCurrentCER",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCurrentCER",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Exemption_Granted__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadCurrentCERCustom4967",
+        "InputFieldName": "Reason",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCurrentCER",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCurrentCER",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCurrentCER",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Exemption_Reason__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadCurrentCERCustom5045",
+        "InputFieldName": "OldLabel",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadCurrentCER",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadCurrentCER",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadCurrentCER",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Total_CER_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

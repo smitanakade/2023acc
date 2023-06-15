@@ -1,0 +1,66 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "STViabiltyQuestionsHomeCarevalidation",
+    "OmniProcessId": {
+        "Name": "QFR Viability Questions - Home Care Form - Provider - Validation Errors",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveProviderHomeCareQuestions/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "CKBrokerageCareServiceValidation": "=IF(%CKBrokerage%==true && %CKBrokerage_ClinicalCare%==false && %CKBrokerage_PersonalCare%==false && %CKBrokerage_AlliedHealth%==false && %CKBrokerage_DiversionalTherapy%==false && %CKBrokerage_LifestyleOfficer%==false && %CKBrokerage_Other%==false, false, true)",
+            "CKBusinessStructureValidation": "=IF(%CKInHouseDelivery%==false && %CKFranchisee%==false && %CKFranchisor%==false && %CKBrokerage%==false && %CKSubcontractor%==false && %CKSelfEmployIndividual%==false && %CKOther%==false, false, true)",
+            "CKFranchisorCareServiceValidation": "=IF(%CKFranchisor%==true && %CKFranchisor_ClinicalCare%==false && %CKFranchisor_PersonalCare%==false && %CKFranchisor_AlliedHealth%==false && %CKFranchisor_DiversionalTherapy%==false && %CKFranchisor_LifestyleOfficer%==false && %CKFranchisor_Other%==false, false, true)",
+            "CKFrnchiseeCareServiceValidation": "=IF(%CKFranchisee%==true && %CKFranchisee_ClinicalCare%==false && %CKFranchisee_PersonalCare%==false && %CKFranchisee_AlliedHealth%==false && %CKFranchisee_DiversionalTherapy%==false && %CKFranchisee_LifestyleOfficer%==false && %CKFranchisee_Other%==false, false, true)",
+            "CKInHouseDeliveryCareServiceValidation": "=IF(%CKInHouseDelivery%==true && %CKInHouseDelivery_ClinicalCare%==false && %CKInHouseDelivery_PersonalCare%==false && %CKInHouseDelivery_AlliedHealth%==false && %CKInHouseDelivery_DiversionalTherapy%==false && %CKInHouseDelivery_LifestyleOfficer%==false && %CKInHouseDelivery_Other%==false, false, true)",
+            "CKOtherCareServiceValidation": "=IF(%CKOther%==true && %CKOther_ClinicalCare%==false && %CKOther_PersonalCare%==false && %CKOther_AlliedHealth%==false && %CKOther_DiversionalTherapy%==false && %CKOther_LifestyleOfficer%==false && %CKOther_Other%==false, false, true)",
+            "CKSelfEmployIndividualCareServiceValidation": "=IF(%CKSelfEmployIndividual%==true && %CKSelfEmployIndividual_ClinicalCare%==false && %CKSelfEmployIndividual_PersonalCare%==false && %CKSelfEmployIndividual_AlliedHealth%==false && %CKSelfEmployIndividual_DiversionalTherapy%==false && %CKSelfEmployIndividual_LifestyleOfficer%==false && %CKSelfEmployIndividual_Other%==false, false, true)",
+            "CKSubcontractorCareServiceValidation": "=IF(%CKSubcontractor%==true && %CKSubcontractor_ClinicalCare%==false && %CKSubcontractor_PersonalCare%==false && %CKSubcontractor_AlliedHealth%==false && %CKSubcontractor_DiversionalTherapy%==false && %CKSubcontractor_LifestyleOfficer%==false && %CKSubcontractor_Other%==false, false, true)",
+            "RDHCBusinessImprovementAdviceValidation": "=IF(%RDHCBusinessImprovementAdvice%==\"No\" || (%RDHCBusinessImprovementAdvice%==\"Yes\" && %RDHCStrategyAlignment%==\"No\") || (%RDHCBusinessImprovementAdvice%==\"Yes\" && %RDHCStrategyAlignment%==\"Yes\" && %TXTAHCStrategyAlignment%!=NULL), true, false)",
+            "RDHCCashFinancialAssetsValidation": "=IF(%RDHCCashFinancialAssets% == \"No\", true, IF(%RDHCCashFinancialAssets% ==\"Yes\", IF(%TXTAHCCashFinancialAssets%!=NULL, true, false), false))",
+            "RDHCChangesToManagementValidation": "=IF(%RDHCChangesToManagement% == \"No\", true, IF(%RDHCChangesToManagement% ==\"Yes\", IF(%TXTAHCChangesToManagement%!=NULL, true, false), false))",
+            "RDHCClosingOrSellingValidation": "=IF(%RDHCClosingOrSelling% == \"No\", true, IF(%RDHCClosingOrSelling% ==\"Yes\", IF(%TXTAHCClosingOrSelling%!=NULL, true, false), false))",
+            "RDHCForecastLossValidation": "=IF(%RDHCForecastLoss% == \"No\", true, IF(%RDHCForecastLoss% ==\"Yes\", IF(%TXTAHCForecastLoss%!=NULL, true, false), false))",
+            "RDHCHomeCareRecipientsValidation": "=IF(%RDHCHomeCareRecipients% == \"No\", true, IF(%RDHCHomeCareRecipients% ==\"Yes\", IF(%TXTAHCHomeCareRecipients%!=NULL, true, false), false))",
+            "RDHCPurchaseAdditionalHomeCareValidation": "=IF(%RDHCPurchaseAdditionalHomeCare% == \"No\", true, IF(%RDHCPurchaseAdditionalHomeCare% ==\"Yes\", IF(%TXTAHCPurchaseAdditionalHomeCare%!=NULL, true, false), false))",
+            "RDHCRetainingStaffValidation": "=IF(%RDHCRetainingStaff% == \"No\", true, IF(%RDHCRetainingStaff% ==\"Yes\", IF(%TXTAHCRetainingStaff%!=NULL, true, false), false))",
+            "RDHCSolvencyConcernValidation": "=IF(%RDHCSolvencyConcern% == \"No\", true, IF(%RDHCSolvencyConcern% ==\"Yes\", IF(%TXTAHCSolvencyConcern%!=NULL, true, false), false))",
+            "RDHCSolvencySixMonthsValidation": "=IF(%RDHCSolvencySixMonths% == \"No\", true, IF(%RDHCSolvencySixMonths% ==\"Yes\", IF(%TXTAHCSolvencySixMonths%!=NULL, true, false), false))",
+            "TXTABrokerageOtherValidation": "=IF(%CKBrokerageOther%==true && %TXTABrokerageOtherExplanation%==NULL, false, true)",
+            "TXTABrokerageValidation": "=IF(%CKBrokerage%==true && %TXTABrokerageAdditionalInformation%==NULL, false, true)",
+            "TXTAFranchiseeOtherValidation": "=IF(%CKFranchiseeOther%==true && %TXTAFranchiseeOtherExplanation%==NULL, false, true)",
+            "TXTAFranchiseeValidation": "=IF(%CKFranchisee%==true && %TXTAFranchiseeAdditionalInformation%==NULL, false, true)",
+            "TXTAFranchisorOtherValidation": "=IF(%CKFranchisorOther%==true && %TXTAFranchisorOtherExplanation%==NULL, false, true)",
+            "TXTAFranchisorValidation": "=IF(%CKFranchisor%==true && %TXTAFranchisorAdditionalInformation%==NULL, false, true)",
+            "TXTAInHouseDeliveryOtherValidation": "=IF(%CKInHouseDeliveryOther%==true && %TXTAInHouseDeliveryOtherExplanation%==NULL, false, true)",
+            "TXTAInHouseDeliveryValidation": "=IF(%CKInHouseDelivery%==true && %TXTAInHouseDeliveryAdditionalInformation%==NULL, false, true)",
+            "TXTAOtherExplanationValidation": "=IF(%CKOther%==true && %TXTAOtherExplanation%==NULL, false, true)",
+            "TXTAOtherOtherValidation": "=IF(%CKOtherOther%==true && %TXTAOtherOtherExplanation%==NULL, false, true)",
+            "TXTAOtherValidation": "=IF(%CKOther%==true && %TXTAOtherAdditionalInformation%==NULL, false, true)",
+            "TXTASelfEmployIndividualOtherValidation": "=IF(%CKSelfEmployIndividualOther%==true && %TXTASelfEmployIndividualOtherExplanation%==NULL, false, true)",
+            "TXTASelfEmployIndividualValidation": "=IF(%CKSelfEmployIndividual%==true && %TXTASelfEmployIndividualAdditionalInformation%==NULL, false, true)",
+            "TXTASubcontractorOtherValidation": "=IF(%CKSubcontractorOther%==true && %TXTASubcontractorOtherExplanation%==NULL, false, true)",
+            "TXTASubcontractorValidation": "=IF(%CKSubcontractor%==true && %TXTASubcontractorAdditionalInformation%==NULL, false, true)"
+        },
+        "label": "STViabiltyQuestionsHomeCarevalidation",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveProviderHomeCareQuestions/English/STViabiltyQuestionsHomeCarevalidation"
+}

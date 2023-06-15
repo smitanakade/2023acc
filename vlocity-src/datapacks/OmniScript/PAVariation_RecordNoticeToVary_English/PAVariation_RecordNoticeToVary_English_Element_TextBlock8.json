@@ -1,0 +1,85 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "TextBlock8",
+    "OmniProcessId": {
+        "Name": "PAVariation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PAVariation/RecordNoticeToVary/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Block",
+        "OmniProcessId": {
+            "Name": "PAVariation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PAVariation/RecordNoticeToVary/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PAVariation/RecordNoticeToVary/English/Block",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Block",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "TextBlock7",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "group": {
+                            "operator": "OR",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "Short-Term Restorative Care (STRC)",
+                                    "field": "ServiceCareSubType"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Residential",
+                                    "field": "ServiceCareSubType"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "S14-1",
+                                    "field": "AllotmentSubType"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Not Applicable",
+                                    "field": "WaiverType"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": null,
+                                    "field": "MarkDocumentsAsSent"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "text": "<ul>\n<li><span class=\"NormalTextRun SCXW138936628 BCX0\">Documents must be marked as sent</span> <span class=\"NormalTextRun SCXW138936628 BCX0\">b</span><span class=\"NormalTextRun SCXW138936628 BCX0\">efore you can create a new event.</span></li>\n</ul>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PAVariation/RecordNoticeToVary/English/TextBlock8"
+}

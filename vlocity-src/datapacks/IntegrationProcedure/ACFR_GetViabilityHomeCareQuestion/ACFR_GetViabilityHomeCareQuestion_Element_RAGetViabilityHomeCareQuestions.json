@@ -1,0 +1,48 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RAGetViabilityHomeCareQuestions",
+    "OmniProcessId": {
+        "Name": "IPGetViabilityHomeCareQuestion",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/GetViabilityHomeCareQuestion/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "additionalOutput": {
+            "BusinessImprovementAdvice": "=%DRGetViabilityHomeCareQuestionBusinessImprovementAdvice:QuestionText%",
+            "CashFinancialAssets": "=%DRGetViabilityHomeCareQuestionCashFinancialAssets:QuestionText%",
+            "ChangesToManagement": "=%DRGetViabilityHomeCareQuestionChangesToManagement:QuestionText%",
+            "ClosingOrSelling": "=%DRGetViabilityHomeCareQuestionClosingOrSelling:QuestionText%",
+            "ForecastLoss": "=%DRGetViabilityHomeCareQuestionForecastLoss:QuestionText%",
+            "HomeCareRecipients": "=%DRGetViabilityHomeCareQuestionHomeCareRecipients:QuestionText%",
+            "PurchaseAdditionalHomeCare": "=%DRGetViabilityHomeCareQuestionPurchaseAdditionalHomeCare:QuestionText%",
+            "RecordTypeIDHomeCare": "=%DRGetRecordTypeID:RecordTypeIDHomeCare%",
+            "RetainingStaff": "=%DRGetViabilityHomeCareQuestionRetainingStaff:QuestionText%",
+            "SolvencyConcern": "=%DRGetViabilityHomeCareQuestionSolvencyConcern:QuestionText%",
+            "SolvencySixMonths": "=%DRGetViabilityHomeCareQuestionSolvencySixMonths:QuestionText%",
+            "StrategyAlignment": "=%DRGetViabilityHomeCareQuestionStrategyAlignment:QuestionText%"
+        },
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "label": "ResponseAction2",
+        "responseDefaultData": {
+        },
+        "responseFormat": "JSON",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnFullDataJSON": false,
+        "returnOnlyAdditionalOutput": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "show": null,
+        "useFormulas": true,
+        "vlcResponseHeaders": {
+        }
+    },
+    "Type": "Response Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/GetViabilityHomeCareQuestion/Procedure/RAGetViabilityHomeCareQuestions"
+}

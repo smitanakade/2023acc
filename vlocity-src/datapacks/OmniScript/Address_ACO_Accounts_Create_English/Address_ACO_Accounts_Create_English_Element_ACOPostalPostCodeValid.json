@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "ACOPostalPostCodeValid",
+    "OmniProcessId": {
+        "Name": "Aged Care Addresses",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_ACO_Accounts/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ACOPostalAddressBlock",
+        "OmniProcessId": {
+            "Name": "Aged Care Addresses",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_ACO_Accounts/Create/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_ACO_Accounts/Create/English/ACOPostalAddressBlock",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ACOPostalAddressBlock",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF (%ACOState_Postal% = 'ACT' & NUMBER(%ACOPostCode_Postal%) >= 200 & NUMBER(%ACOPostCode_Postal%) <=299, 'GOOD' ,IF (%ACOState_Postal% = 'ACT' & NUMBER(%ACOPostCode_Postal%) >= 2600 & NUMBER(%ACOPostCode_Postal%) <=2619, 'GOOD' ,IF (%ACOState_Postal% = 'ACT' & NUMBER(%ACOPostCode_Postal%) >= 2900 & NUMBER(%ACOPostCode_Postal%) <=2920, 'GOOD' ,IF (%ACOState_Postal% = 'NSW' & NUMBER(%ACOPostCode_Postal%) >= 1000 & NUMBER(%ACOPostCode_Postal%) <=2599, 'GOOD' ,IF (%ACOState_Postal% = 'NSW' & NUMBER(%ACOPostCode_Postal%) >= 2620 & NUMBER(%ACOPostCode_Postal%) <=2899, 'GOOD' ,IF (%ACOState_Postal% = 'NSW' & NUMBER(%ACOPostCode_Postal%) >= 2921 & NUMBER(%ACOPostCode_Postal%) <=2999, 'GOOD' ,IF (%ACOState_Postal% = 'VIC' & NUMBER(%ACOPostCode_Postal%) >= 8000 & NUMBER(%ACOPostCode_Postal%) <=8999, 'GOOD' ,IF (%ACOState_Postal% = 'VIC' & NUMBER(%ACOPostCode_Postal%) >= 3000 & NUMBER(%ACOPostCode_Postal%) <=3999, 'GOOD' ,IF (%ACOState_Postal% = 'TAS' & NUMBER(%ACOPostCode_Postal%) >= 7000 & NUMBER(%ACOPostCode_Postal%) <=7999, 'GOOD' ,IF (%ACOState_Postal% = 'SA' & NUMBER(%ACOPostCode_Postal%) >= 5000 & NUMBER(%ACOPostCode_Postal%) <=5999, 'GOOD' ,IF (%ACOState_Postal% = 'WA' & NUMBER(%ACOPostCode_Postal%) >= 6000 & NUMBER(%ACOPostCode_Postal%) <=6999, 'GOOD' ,IF (%ACOState_Postal% = 'NT' & NUMBER(%ACOPostCode_Postal%) >= 800 & NUMBER(%ACOPostCode_Postal%) <=999, 'GOOD' ,IF (%ACOState_Postal% = 'QLD' & NUMBER(%ACOPostCode_Postal%) >= 9000 & NUMBER(%ACOPostCode_Postal%) <=999, 'GOOD' ,IF (%ACOState_Postal% = 'QLD' & NUMBER(%ACOPostCode_Postal%) >= 4000 & NUMBER(%ACOPostCode_Postal%) <=4999, 'GOOD' ,IF(%ACOState_Postal% = 'QLD' & NUMBER(%ACOPostCode_Postal%) >= 9000 & NUMBER(%ACOPostCode_Postal%) <=9999, 'GOOD','BAD')))))))))))))))",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "IsPostcodeValid",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_ACO_Accounts/Create/English/ACOPostalPostCodeValid"
+}

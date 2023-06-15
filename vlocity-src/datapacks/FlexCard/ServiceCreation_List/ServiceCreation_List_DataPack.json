@@ -1,0 +1,41 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "0019r000003DBbrAAG"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "accountId": "{recordId}"
+            },
+            "ipMethod": "ServiceCreation_Extract",
+            "resultVar": "[\"Service\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "ServiceCreation_List",
+    "Namespace": "",
+    "OmniUiCardKey": "ServiceCreation_List/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "ServiceCreation_List.json",
+    "SampleDataSourceResponse": "{\"Service\":[{\"Name\":\"sn1\",\"ServiceCareSubType\":\"NotApplicable\",\"Id\":\"0cE9r0000000KErEAM\",\"IntegrationID\":\"000569\",\"CareType\":\"Home Care\",\"Status\":\"Not Approved (Threshold criteria not met)\"},{\"Name\":\"flex\",\"ServiceCareSubType\":\"Multi-Purpose Service\",\"Id\":\"0cE9r0000000KGTEA2\",\"IntegrationID\":\"000570\",\"CareType\":\"Flexible\",\"Status\":\"Not Approved (Threshold criteria not met)\"}],\"HomeCareCount\":1,\"NATSIFACCareCount\":0,\"FlexibleCareCount\":1,\"RecordType\":\"Approved_Provider\",\"ProviderName\":\"Service Creation Demo\",\"ResidentialCareCount\":0}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/ServiceCreation_List"
+}

@@ -1,0 +1,41 @@
+{
+    "AuthorName": "NASIFACProvider",
+    "ClonedFromOmniUiCardKey": "ServiceCreation_Header/ApprovedProvider/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "0019r000003DBbrAAG"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "accountId": "{recordId}"
+            },
+            "ipMethod": "ServiceCreation_Extract",
+            "resultVar": "",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "The header for Creating a service",
+    "IsTrackingEnabled": false,
+    "Name": "NATSIFACServiceCreation_Header",
+    "Namespace": "",
+    "OmniUiCardKey": "NATSIFACServiceCreation_Header/NASIFACProvider/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "NATSIFACServiceCreation_Header.json",
+    "SampleDataSourceResponse": "{\"APCareTypeCount\":3,\"HomeCareServiceCount\":0,\"Service\":{\"Name\":\"test\",\"Id\":\"0cE9r0000000JsHEAU\",\"IntegrationID\":\"000556\",\"CareType\":\"Home Care\",\"Status\":\"Not Approved (Threshold criteria not met)\"},\"NATSIFACCareCount\":0,\"HomeCareCount\":1,\"ResidentialCareServiceCount\":0,\"FlexibleCareCount\":1,\"RecordType\":\"Approved_Provider\",\"FlexibleCareServiceCount\":0,\"ProviderName\":\"Service Creation Demo\",\"ResidentialCareCount\":1}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/NATSIFACServiceCreation_Header"
+}

@@ -1,0 +1,42 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "PlaceByTargetGroup_Flexible/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "a2f9r0000000ljhAAA"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "AllotmentId": "{recordId}"
+            },
+            "ipMethod": "NATSIFACTargetGroup_NATSIFACTargetGroup",
+            "resultVar": "[\"Total\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "PlaceByTargetGroup_NATSIFAC",
+    "Namespace": "",
+    "OmniUiCardKey": "PlaceByTargetGroup_NATSIFAC/GPMS/2.0",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "PlaceByTargetGroup_NATSIFAC.json",
+    "SampleDataSourceResponse": "{\"TargetGroup\":{\"CareLevelNumber\":\"0\"},\"Total\":{\"NATSIFACSum\":0,\"HomeCareSum\":0,\"CareLevel\":\"Home Care\",\"ResidentialSum\":0,\"CareType\":\"National Aboriginal and Torres Strait Islander Flexible Aged Care Program\"}}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 2,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/PlaceByTargetGroup_NATSIFAC"
+}

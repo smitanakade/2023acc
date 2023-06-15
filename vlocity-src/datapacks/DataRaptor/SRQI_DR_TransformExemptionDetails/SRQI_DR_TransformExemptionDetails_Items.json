@@ -1,0 +1,122 @@
+[
+    {
+        "FormulaExpression": "FILTER(LIST(Exemption),'recordtypename == \"CER Exemption\"')",
+        "FormulaResultPath": "FilterCER",
+        "FormulaSequence": 2,
+        "GlobalKey": "SRQI_DR_TransformExemptionDetailsCustom9739",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformExemptionDetails",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformExemptionDetails",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformExemptionDetails",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "FILTER(LIST(Exemption),'recordtypename == \"CM Exemption\"')",
+        "FormulaResultPath": "FilterCM",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_TransformExemptionDetailsCustom9996",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformExemptionDetails",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformExemptionDetails",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformExemptionDetails",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "FILTER(LIST(Exemption),'recordtypename == \"QI Exemption\"')",
+        "FormulaResultPath": "FilterQI",
+        "FormulaSequence": 3,
+        "GlobalKey": "SRQI_DR_TransformExemptionDetailsCustom4440",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformExemptionDetails",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformExemptionDetails",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformExemptionDetails",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_TransformExemptionDetailsCustom9131",
+        "InputFieldName": "FilterCER:exemptionID",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformExemptionDetails",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformExemptionDetails",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformExemptionDetails",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CERId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_TransformExemptionDetailsCustom1635",
+        "InputFieldName": "FilterCM:exemptionID",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformExemptionDetails",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformExemptionDetails",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformExemptionDetails",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CMId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_TransformExemptionDetailsCustom9138",
+        "InputFieldName": "FilterQI:exemptionID",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_TransformExemptionDetails",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_TransformExemptionDetails",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_TransformExemptionDetails",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "QIId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

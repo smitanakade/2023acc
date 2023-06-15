@@ -1,0 +1,73 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ABNValidation_Post",
+    "OmniProcessId": {
+        "Name": "CreateManagementCompany",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ManagementCompany/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Only_If_We_Need_To_Create_A_New_MC",
+        "OmniProcessId": {
+            "Name": "CreateManagementCompany",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ManagementCompany/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ManagementCompany/Create/Procedure/Only_If_We_Need_To_Create_A_New_MC",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Only_If_We_Need_To_Create_A_New_MC",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "ABNBranch": "=%DisplayABNValidation:ABNBranch%",
+            "ABNName": "=%data:businessEntity202001_main_name_organisation_name%",
+            "ABNNameField": "=SUBSTRING(%data:businessEntity202001_main_name_organisation_name%,0,79)",
+            "ACNCEffectiveTo": "=%data:acncEffectiveTo%",
+            "AccountId": "=%AccountId%",
+            "GREFlag": "=%DisplayABNValidation:GREFlag%",
+            "abn:identifier_value": "=%data:businessEntity202001_abn_identifier_value%",
+            "acnc_registration:effective_from_Load": "=%data:businessEntity202001_acnc_registration_effective_from_Load%",
+            "acnc_registration:status": "=%data:businessEntity202001_acnc_registration_status%",
+            "asic_number": "=%data:businessEntity202001_asic_number%",
+            "entity_status:effective_from_Load": "=%data:businessEntity202001_entity_status_effective_from_Load%",
+            "entity_status:effective_to_Load": "=%data:businessEntity202001_entity_status_effective_to_Load%",
+            "entity_status:entity_status_code": "=%data:businessEntity202001_entity_status_entity_status_code%",
+            "entity_type:entity_description": "=%data:businessEntity202001_entity_type_entity_description%",
+            "main_name:effective_from_Load": "=%data:businessEntity202001_main_name_effective_from_Load%",
+            "main_name:effective_to_Load": "=%data:businessEntity202001_main_name_effective_to_Load%",
+            "main_name:organisation_name": "=%data:businessEntity202001_main_name_organisation_name%",
+            "record_last_updated_date_Load": "=%data:businessEntity202001_record_last_updated_date_Load%",
+            "timeStamp": "=%timeStamp%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ABNValidation_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction9",
+        "responseJSONNode": "RegisteredABNId",
+        "responseJSONPath": "Registered_ABN_Name__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ManagementCompany/Create/Procedure/ABNValidation_Post"
+}

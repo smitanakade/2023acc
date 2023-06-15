@@ -1,0 +1,67 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ACO_Via_POBox",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ACO_ADDRESSES_CREATED_NEW",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ACO_ADDRESSES_CREATED_NEW",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ACO_ADDRESSES_CREATED_NEW",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressEffectiveDate": "=IF(ISNOTBLANK(%ACOPostalAddresses:ACOPostalAddressBlock:ACOEffectiveDateFormula1%, true), %ACOPostalAddresses:ACOPostalAddressBlock:ACOEffectiveDateFormula1%, TODAY())",
+            "AddressType": "=\"Account Address\"",
+            "CareOf": "=%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPostalCareOf1%",
+            "City": "=%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBoxSuburbOrTown_Postal_UPPER%",
+            "Country": "=\"Australia\"",
+            "CurrentAccountId": "=%ACOId%",
+            "LocationType": "=\"Registered Business Address\"",
+            "POBOXType": "=%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBoxType_Postal%",
+            "POBox": "=%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:POBox_Postal_UPPER%",
+            "Postcode": "=%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBoxPostCode_Postal%",
+            "State": "=%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBoxState_Postal%",
+            "ValidatedByCGIS": "=\"No\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "LocationAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxRadio_Postal = \"PO Box\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "ACOAddressId",
+        "responseJSONPath": "Address__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ACO_Via_POBox"
+}

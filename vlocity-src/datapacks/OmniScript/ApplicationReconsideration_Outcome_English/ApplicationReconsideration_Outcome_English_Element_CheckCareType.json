@@ -1,0 +1,36 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CheckCareType",
+    "OmniProcessId": {
+        "Name": "ApplicationReconsideration_Outcome",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ApplicationReconsideration/Outcome/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "Flexible": "=CONTAINS(%Application:CareTypes%, 'Flexible')",
+            "HomeCare": "=CONTAINS(%Application:CareTypes%, 'Home Care')",
+            "Residential": "=CONTAINS(%Application:CareTypes%, 'Residential')",
+            "Type": "=IF(%Application:ReLogItem% = null && %Application:Re% != null, \"outcome\", \"new\")"
+        },
+        "label": "CheckCareType",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ApplicationReconsideration/Outcome/English/CheckCareType"
+}

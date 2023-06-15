@@ -1,0 +1,190 @@
+{
+    "dataSource": {
+        "contextVariables": [
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "Custom",
+        "value": {
+            "body": "[\n        {\n          \"Name\": \"PALT-000008\",\n          \"Id\": \"a2a9r000000EqRlAAK\",\n          \"CareLevel\": \"Home Care\",\n          \"NumberofPlaces\": 90,\n          \"StatusofPlaces\": \"Provisional\",\n          \"CareType\": \"Flexible-MPS\"\n        },\n        {\n          \"Name\": \"PALT-000009\",\n          \"Id\": \"a2a9r000000EqTNAA0\",\n          \"CareLevel\": \"Residential\",\n          \"NumberofPlaces\": 45,\n          \"StatusofPlaces\": \"Provisional\",\n          \"CareType\": \"Flexible-MPS\"\n        }\n      ]",
+            "dsDelay": "",
+            "resultVar": ""
+        }
+    },
+    "enableLwc": true,
+    "isFlex": true,
+    "isRepeatable": false,
+    "lwc": {
+        "DeveloperName": "cfTransferEventAllotmentPlaces_3_GPMS",
+        "Id": "0Rb9r0000003JvlCAE",
+        "ManageableState": "unmanaged",
+        "MasterLabel": "cfTransferEventAllotmentPlaces_3_GPMS",
+        "NamespacePrefix": "c"
+    },
+    "selectableMode": "Multi",
+    "states": [
+        {
+            "actions": [
+            ],
+            "childCards": [
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "flexDatatable",
+                            "elementLabel": "Datatable-0",
+                            "name": "Datatable",
+                            "property": {
+                                "card": "{card}",
+                                "cellLevelEdit": true,
+                                "columns": [
+                                    {
+                                        "fieldName": "Name",
+                                        "label": "Packet Id",
+                                        "searchable": false,
+                                        "sortable": true,
+                                        "type": "text",
+                                        "visible": "false"
+                                    },
+                                    {
+                                        "fieldName": "CareType",
+                                        "label": "Care Type",
+                                        "searchable": false,
+                                        "sortable": true,
+                                        "type": "text"
+                                    },
+                                    {
+                                        "fieldName": "CareLevel",
+                                        "label": "Care Level",
+                                        "searchable": true,
+                                        "sortable": true
+                                    },
+                                    {
+                                        "fieldName": "NumberofPlaces",
+                                        "label": "Number of Places",
+                                        "searchable": true,
+                                        "sortable": true
+                                    },
+                                    {
+                                        "fieldName": "StatusofPlaces",
+                                        "label": "Status of Places",
+                                        "searchable": true,
+                                        "sortable": true
+                                    }
+                                ],
+                                "groupOrder": "asc",
+                                "issearchavailable": false,
+                                "issortavailable": true,
+                                "pagelimit": 3,
+                                "record": "{record}",
+                                "records": "{records}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Active",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "class": "slds-card slds-p-around_x-small slds-m-bottom_x-small",
+                "container": {
+                    "class": "slds-card"
+                },
+                "margin": [
+                    {
+                        "size": "none",
+                        "type": "around"
+                    }
+                ],
+                "padding": [
+                    {
+                        "size": "x-small",
+                        "type": "around"
+                    }
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12"
+            }
+        }
+    ],
+    "theme": "slds",
+    "title": "TransferEventAllotmentPlaces",
+    "xmlJson": [
+        {
+            "@attributes": {
+                "targets": "lightning__AppPage"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "name": "recordId",
+                        "type": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "@attributes": {
+                "targets": "lightning__RecordPage"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                }
+            ]
+        }
+    ],
+    "xmlObject": {
+        "targetConfigs": "PHRhcmdldENvbmZpZyB0YXJnZXRzPSJsaWdodG5pbmdfX0FwcFBhZ2UiPgogICAgICAgICAgICAgICAgICAgICAgPHByb3BlcnR5IG5hbWU9ImRlYnVnIiB0eXBlPSJCb29sZWFuIi8+CiAgICAgICAgICAgICAgICAgICAgICA8cHJvcGVydHkgbmFtZT0icmVjb3JkSWQiIHR5cGU9IlN0cmluZyIvPgogICAgICAgICAgICAgICAgICA8L3RhcmdldENvbmZpZz4KICAgICAgICAgICAgICAgICAgPHRhcmdldENvbmZpZyB0YXJnZXRzPSJsaWdodG5pbmdfX1JlY29yZFBhZ2UiPgogICAgICAgICAgICAgICAgICAgICAgPHByb3BlcnR5IG5hbWU9ImRlYnVnIiB0eXBlPSJCb29sZWFuIi8+CiAgICAgICAgICAgICAgICAgIDwvdGFyZ2V0Q29uZmlnPg==",
+        "targets": {
+            "target": [
+                "lightning__RecordPage",
+                "lightning__AppPage",
+                "lightning__HomePage"
+            ]
+        }
+    }
+}

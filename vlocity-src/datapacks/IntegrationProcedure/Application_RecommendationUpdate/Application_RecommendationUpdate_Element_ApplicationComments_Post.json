@@ -1,0 +1,42 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ApplicationComments_Post",
+    "OmniProcessId": {
+        "Name": "ApplicationRecommendationUpdate",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/RecommendationUpdate/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "ApplicationId": "=%ApplicationId%",
+            "Comment": "=IF(%Step% = \"ProvideAssessment\", %Assessment:UnderAssessmentBlock:Comment%, %UnderReview:UnderReviewComment%)"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "CommentCreation_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "ISNOTBLANK(UnderReview:UnderReviewComment) OR ISNOTBLANK(Assessment:UnderAssessmentBlock:Comment)",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction8",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/RecommendationUpdate/Procedure/ApplicationComments_Post"
+}

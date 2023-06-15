@@ -1,0 +1,56 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetStatusToDraft",
+    "OmniProcessId": {
+        "Name": "QFRFormPayload_IP_Draft",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/QFR/FormPayload_IP_Draft/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "If_Case_Status_Is_New",
+        "OmniProcessId": {
+            "Name": "QFRFormPayload_IP_Draft",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/QFR/FormPayload_IP_Draft/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/QFR/FormPayload_IP_Draft/Procedure/If_Case_Status_Is_New",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "If_Case_Status_Is_New",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "CaseStatus": "Draft",
+            "caseRecordId": "%caseId%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ACFR_UpdateCaseStatusSubmission",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": false,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/QFR/FormPayload_IP_Draft/Procedure/SetStatusToDraft"
+}

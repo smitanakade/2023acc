@@ -1,0 +1,41 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 2,
+                "name": "recordId",
+                "val": "a1t9r000000BEFlAAO"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "ApplicationId": "{recordId}"
+            },
+            "ipMethod": "Application_RecommendationRelatedList",
+            "resultVar": "[\"ApplicationRecommendation_Extract\"][\"Recommendation_All\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "ApplicationCareTypes_List",
+    "Namespace": "",
+    "OmniUiCardKey": "ApplicationCareTypes_List/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "ApplicationCareTypes_List.json",
+    "SampleDataSourceResponse": "{\"ApplicationId\":\"a1t9r000000BEFlAAO\",\"ApplicationRecommendation_Extract\":{\"Recommendation_All\":[{\"Recommendation\":\"Approved\",\"Id\":\"a1u9r000000Uz9JAAS\",\"Care_Type\":\"Flexible\",\"LastModifiedDate\":\"21/6/2022\",\"CareTypeId\":\"a1e9r0000007nQdAAI\"},{\"Recommendation\":\"Approved\",\"Id\":\"a1u9r000000Uz9KAAS\",\"Care_Type\":\"Home Care\",\"LastModifiedDate\":\"21/6/2022\",\"CareTypeId\":\"a1e9r0000007nQcAAI\"},{\"Recommendation\":\"Approved\",\"Id\":\"a1u9r000000Uz9LAAS\",\"Care_Type\":\"Residential\",\"LastModifiedDate\":\"21/6/2022\",\"CareTypeId\":\"a1e9r0000007nQbAAI\"}],\"ApplicationStatus\":\"Under Assessment\",\"ApplicationCreatedDate\":\"21/6/2022\"},\"options\":{\"vlcFilesMap\":null,\"mockHttpResponse\":null,\"ParentInteractionToken\":null,\"useFuture\":false,\"isTestProcedure\":false,\"useQueueable\":false,\"disableMetadataCache\":false,\"resetCache\":false,\"vlcIPData\":null,\"OmniAnalyticsTrackingDebug\":false,\"ignoreCache\":false,\"isDebug\":false,\"queueableChainable\":false,\"useContinuation\":false,\"chainable\":false,\"shouldCommit\":false,\"vlcTestSuiteUniqueKey\":null,\"vlcTestUniqueKey\":null,\"vlcCacheKey\":null,\"useHttpCalloutMock\":false,\"continuationStepResult\":null,\"useQueueableApexRemoting\":false},\"response\":{},\"ApplicationRecommendation_ExtractStatus\":true,\"ResponseActionStatus\":true,\"GetIndividualDetailsStatus\":false}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/ApplicationCareTypes_List"
+}

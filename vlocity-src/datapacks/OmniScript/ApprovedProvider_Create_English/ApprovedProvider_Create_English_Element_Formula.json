@@ -1,0 +1,44 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Formula",
+    "OmniProcessId": {
+        "Name": "ApprovedProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ApprovedProvider/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ACODetail",
+        "OmniProcessId": {
+            "Name": "ApprovedProvider",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ApprovedProvider/Create/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ApprovedProvider/Create/English/ACODetail",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ACODetail",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "NUMBER((NUMBER(NUMBER(SUBSTRING(%IncorporationID%, 0, 1))*8 + NUMBER(SUBSTRING(%IncorporationID%, 1, 2))*7 + NUMBER(SUBSTRING(%IncorporationID%, 2, 3))*6 + NUMBER(SUBSTRING(%IncorporationID%, 3, 4))*5 + NUMBER(SUBSTRING(%IncorporationID%, 4, 5))*4 + NUMBER(SUBSTRING(%IncorporationID%, 5, 6))*3 + NUMBER(SUBSTRING(%IncorporationID%, 6, 7))*2 + NUMBER(SUBSTRING(%IncorporationID%, 7, 8))*1)%10)+NUMBER(SUBSTRING(%IncorporationID%, 8, 9)))",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "Formula",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ApprovedProvider/Create/English/Formula"
+}

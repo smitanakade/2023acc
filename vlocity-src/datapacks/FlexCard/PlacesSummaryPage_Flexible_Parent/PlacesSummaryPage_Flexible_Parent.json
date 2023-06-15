@@ -1,0 +1,592 @@
+{
+    "dataSource": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "a2KBm0000016jjRMAQ"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "AllotmentId": "{recordId}"
+            },
+            "ipMethod": "Summary_Summary",
+            "resultVar": "[\"Allotment\"]",
+            "vlocityAsync": false
+        }
+    },
+    "dynamicCanvasWidth": {
+        "type": "desktop"
+    },
+    "enableLwc": true,
+    "events": [
+        {
+            "actionList": [
+                {
+                    "actionIndex": 0,
+                    "card": "{card}",
+                    "draggable": false,
+                    "isOpen": true,
+                    "key": "1660630429495-df9103vyq",
+                    "label": "Action",
+                    "stateAction": {
+                        "Web Page": {
+                            "targetName": "/apex"
+                        },
+                        "displayName": "Action",
+                        "id": "flex-action-1660689571785",
+                        "message": "{\"type\":\"IntegrationProcedures\",\"value\":{\"dsDelay\":\"\",\"ipMethod\":\"Summary_Summary\",\"vlocityAsync\":false,\"resultVar\":\"\",\"bundleType\":\"Extract\"},\"orderBy\":{\"name\":\"\",\"isReverse\":\"\"},\"contextVariables\":[]}",
+                        "openUrlIn": "Current Window",
+                        "responseNode": "",
+                        "targetType": "Web Page",
+                        "type": "DataAction",
+                        "vlocityIcon": "standard-default"
+                    }
+                }
+            ],
+            "channelname": "PlacesSummary",
+            "displayLabel": "PlacesSummary:data",
+            "element": "action",
+            "eventLabel": "pubsub",
+            "eventname": "data",
+            "eventtype": "pubsub",
+            "key": "event-0",
+            "recordIndex": "0",
+            "showSpinner": "false"
+        }
+    ],
+    "isFlex": true,
+    "isRepeatable": true,
+    "lwc": {
+        "DeveloperName": "cfPlacesSummaryPage_Flexible_Parent_3_GPMS",
+        "Id": "0RbBm0000002eW1KAI",
+        "ManageableState": "unmanaged",
+        "MasterLabel": "cfPlacesSummaryPage_Flexible_Parent_3_GPMS",
+        "NamespacePrefix": "c"
+    },
+    "osSupport": false,
+    "selectableMode": "Multi",
+    "states": [
+        {
+            "actions": [
+            ],
+            "blankCardState": false,
+            "childCards": [
+                "PlacesSummaryPage_MPS_Child"
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "childCardPreview",
+                            "elementLabel": "Flexible Child",
+                            "name": "FlexCard",
+                            "property": {
+                                "cardName": "PlacesSummaryPage_MPS_Child",
+                                "cardNode": "{record}",
+                                "isChildCardTrackingEnabled": false,
+                                "parentAttribute": {
+                                    "Ceased": "{Ceased}",
+                                    "GeneralAccessCeased": "{GeneralAccessCeased}",
+                                    "GeneralAccessOffline": "{GeneralAccessOffline}",
+                                    "GeneralAccessOperational": "{GeneralAccessOperational}",
+                                    "GeneralAccessProvisional": "{GeneralAccessProvisional}",
+                                    "HomeCareCeasedSum": "{HomeCareCeasedSum}",
+                                    "HomeCareOfflineSum": "{HomeCareOfflineSum}",
+                                    "HomeCareOperationalSum": "{HomeCareOperationalSum}",
+                                    "HomeCareProvisionalSum": "{HomeCareProvisionalSum}",
+                                    "NotSpecifiedCeased": "{NotSpecifiedCeased}",
+                                    "NotSpecifiedOffline": "{NotSpecifiedOffline}",
+                                    "NotSpecifiedOperational": "{NotSpecifiedOperational}",
+                                    "NotSpecifiedProvisional": "{NotSpecifiedProvisional}",
+                                    "Offline": "{Offline}",
+                                    "Operational": "{Operational}",
+                                    "Pre1997": "{Pre1997}",
+                                    "Provisional": "{Provisional}",
+                                    "ResidentialCeasedSum": "{ResidentialCeasedSum}",
+                                    "ResidentialOfflineSum": "{ResidentialOfflineSum}",
+                                    "ResidentialOperationalSum": "{ResidentialOperationalSum}",
+                                    "ResidentialProvisionalSum": "{ResidentialProvisionalSum}",
+                                    "SplKeyCeased": "{SplKeyCeased}",
+                                    "SplKeyOffline": "{SplKeyOffline}",
+                                    "SplKeyOperational": "{SplKeyOperational}",
+                                    "SplKeyProvisional": "{SplKeyProvisional}"
+                                },
+                                "recordId": "{recordId}",
+                                "selectedState": "Active"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element",
+                            "userUpdatedElementLabel": true
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                    {
+                        "field": "CareLevel",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-11",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Home Care(MPS)"
+                    },
+                    {
+                        "field": "CareLevel",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-53",
+                        "logicalOperator": "||",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Residential(MPS)"
+                    },
+                    {
+                        "field": "CareLevel",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-69",
+                        "logicalOperator": "||",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Multiple-Purpose Service"
+                    }
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "MPS",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "background": {
+                    "color": "",
+                    "image": "",
+                    "position": "",
+                    "repeat": "",
+                    "size": ""
+                },
+                "border": {
+                    "color": "",
+                    "radius": "",
+                    "style": "",
+                    "type": "",
+                    "width": ""
+                },
+                "class": "slds-theme_shade slds-card slds-m-bottom_x-small ",
+                "container": {
+                    "class": "slds-card"
+                },
+                "elementStyleProperties": {
+                },
+                "inlineStyle": "",
+                "margin": [
+                    {
+                        "label": "bottom:x-small",
+                        "size": "x-small",
+                        "type": "bottom"
+                    }
+                ],
+                "padding": [
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12 ",
+                "style": "      \n         ",
+                "text": {
+                    "align": "",
+                    "color": ""
+                },
+                "theme": "theme_shade"
+            }
+        },
+        {
+            "actions": [
+            ],
+            "childCards": [
+                "PlacesSummaryPage_InnPool_Child"
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "childCardPreview",
+                            "elementLabel": "Innovative Child",
+                            "name": "FlexCard",
+                            "property": {
+                                "cardName": "PlacesSummaryPage_InnPool_Child",
+                                "cardNode": "{record}",
+                                "isChildCardTrackingEnabled": false,
+                                "parentAttribute": {
+                                    "Ceased": "{Ceased}",
+                                    "CommunityCeasedSum": "{CommunityCeasedSum}",
+                                    "CommunityOfflineSum": "{CommunityOfflineSum}",
+                                    "CommunityOperationalSum": "{CommunityOperationalSum}",
+                                    "CommunityProvisionalSum": "{CommunityProvisionalSum}",
+                                    "GeneralAccessCeased": "{GeneralAccessCeased}",
+                                    "GeneralAccessOffline": "{GeneralAccessOffline}",
+                                    "GeneralAccessOperational": "{GeneralAccessOperational}",
+                                    "GeneralAccessProvisional": "{GeneralAccessProvisional}",
+                                    "HighCeasedSum": "{HighCeasedSum}",
+                                    "HighOfflineSum": "{HighOfflineSum}",
+                                    "HighOperationalSum": "{HighOperationalSum}",
+                                    "HighProvisionalSum": "{HighProvisionalSum}",
+                                    "LowCeasedSum": "{LowCeasedSum}",
+                                    "LowOfflineSum": "{LowOfflineSum}",
+                                    "LowOperationalSum": "{LowOperationalSum}",
+                                    "LowProvisionalSum": "{LowProvisionalSum}",
+                                    "NotSpecifiedCeased": "{NotSpecifiedCeased}",
+                                    "NotSpecifiedOffline": "{NotSpecifiedOffline}",
+                                    "NotSpecifiedOperational": "{NotSpecifiedOperational}",
+                                    "NotSpecifiedProvisional": "{NotSpecifiedProvisional}",
+                                    "Offline": "{Offline}",
+                                    "Operational": "{Operational}",
+                                    "Pre1997": "{Pre1997}",
+                                    "Provisional": "{Provisional}",
+                                    "SplKeyCeased": "{SplKeyCeased}",
+                                    "SplKeyOffline": "{SplKeyOffline}",
+                                    "SplKeyOperational": "{SplKeyOperational}",
+                                    "SplKeyProvisional": "{SplKeyProvisional}"
+                                },
+                                "recordId": "{recordId}",
+                                "selectedState": "Active"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 2,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element",
+                            "userUpdatedElementLabel": true
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                    {
+                        "field": "CareLevel",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-38",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Community(Innovative Pool)"
+                    },
+                    {
+                        "field": "CareLevel",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-93",
+                        "logicalOperator": "||",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "High(Innovative Pool)"
+                    },
+                    {
+                        "field": "CareLevel",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-111",
+                        "logicalOperator": "||",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Low(Innovative Pool)"
+                    }
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Innovative Pool",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "background": {
+                    "color": "",
+                    "image": "",
+                    "position": "",
+                    "repeat": "",
+                    "size": ""
+                },
+                "border": {
+                    "color": "",
+                    "radius": "",
+                    "style": "",
+                    "type": "",
+                    "width": ""
+                },
+                "class": "slds-theme_shade slds-card slds-m-bottom_x-small ",
+                "container": {
+                    "class": "slds-card"
+                },
+                "elementStyleProperties": {
+                },
+                "inlineStyle": "",
+                "margin": [
+                    {
+                        "label": "bottom:x-small",
+                        "size": "x-small",
+                        "type": "bottom"
+                    }
+                ],
+                "padding": [
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12 ",
+                "style": "      \n         ",
+                "text": {
+                    "align": "",
+                    "color": ""
+                },
+                "theme": "theme_shade"
+            }
+        },
+        {
+            "actions": [
+            ],
+            "blankCardState": false,
+            "childCards": [
+                "PlacesSummaryPage_FlexibleChild"
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "childCardPreview",
+                            "elementLabel": "Flexible Child",
+                            "name": "FlexCard",
+                            "property": {
+                                "cardName": "PlacesSummaryPage_FlexibleChild",
+                                "cardNode": "{record}",
+                                "isChildCardTrackingEnabled": false,
+                                "parentAttribute": {
+                                    "CareSettingHC_Ceased": "{CareSettingHCCeasedSum}",
+                                    "CareSettingHC_Offline": "{CareSettingHCOfflineSum}",
+                                    "CareSettingHC_Operational": "{CareSettingHCOperationalSum}",
+                                    "CareSettingHC_Provisional": "{CareSettingHCProvisionalSum}",
+                                    "CareSettingMixed_Ceased": "{CareSettingMixedCeasedSum}",
+                                    "CareSettingMixed_Offline": "{CareSettingMixedOfflineSum}",
+                                    "CareSettingMixed_Operational": "{CareSettingMixedOperationalSum}",
+                                    "CareSettingMixed_Provisional": "{CareSettingMixedProvisionalSum}",
+                                    "CareSettingResi_Ceased": "{CareSettingResiCeasedSum}",
+                                    "CareSettingResi_Offline": "{CareSettingResiOfflineSum}",
+                                    "CareSettingResi_Operational": "{CareSettingResiOperationalSum}",
+                                    "CareSettingResi_Provisional": "{CareSettingResiProvisionalSum}",
+                                    "CareSettingTBC_Ceased": "{CareSettingTBCCeasedSum}",
+                                    "CareSettingTBC_Offline": "{CareSettingTBCOfflineSum}",
+                                    "CareSettingTBC_Operational": "{CareSettingTBCOperationalSum}",
+                                    "CareSettingTBC_Provisional": "{CareSettingTBCProvisionalSum}",
+                                    "Ceased": "{Ceased}",
+                                    "GeneralAccessCeased": "{GeneralAccessCeased}",
+                                    "GeneralAccessOffline": "{GeneralAccessOffline}",
+                                    "GeneralAccessOperational": "{GeneralAccessOperational}",
+                                    "GeneralAccessProvisional": "{GeneralAccessProvisional}",
+                                    "NotSpecifiedCeased": "{NotSpecifiedCeased}",
+                                    "NotSpecifiedOffline": "{NotSpecifiedOffline}",
+                                    "NotSpecifiedOperational": "{NotSpecifiedOperational}",
+                                    "NotSpecifiedProvisional": "{NotSpecifiedProvisional}",
+                                    "Offline": "{Offline}",
+                                    "Operational": "{Operational}",
+                                    "Pre1997": "{Pre1997}",
+                                    "Provisional": "{Provisional}",
+                                    "SplKeyCeased": "{SplKeyCeased}",
+                                    "SplKeyOffline": "{SplKeyOffline}",
+                                    "SplKeyOperational": "{SplKeyOperational}",
+                                    "SplKeyProvisional": "{SplKeyProvisional}"
+                                },
+                                "recordId": "{recordId}",
+                                "selectedState": "Active"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 2,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element",
+                            "userUpdatedElementLabel": true
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                    {
+                        "field": "CareLevel",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-0",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Short Term Restorative Care(STRC)"
+                    },
+                    {
+                        "field": "CareLevel",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-7",
+                        "logicalOperator": "||",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Transition"
+                    }
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Default",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "background": {
+                    "color": "",
+                    "image": "",
+                    "position": "",
+                    "repeat": "",
+                    "size": ""
+                },
+                "border": {
+                    "color": "",
+                    "radius": "",
+                    "style": "",
+                    "type": "",
+                    "width": ""
+                },
+                "class": "slds-theme_shade slds-card slds-m-bottom_x-small ",
+                "container": {
+                    "class": "slds-card"
+                },
+                "elementStyleProperties": {
+                },
+                "inlineStyle": "",
+                "margin": [
+                    {
+                        "label": "bottom:x-small",
+                        "size": "x-small",
+                        "type": "bottom"
+                    }
+                ],
+                "padding": [
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12 ",
+                "style": "      \n         ",
+                "text": {
+                    "align": "",
+                    "color": ""
+                },
+                "theme": "theme_shade"
+            }
+        }
+    ],
+    "theme": "slds",
+    "title": "PlacesSummaryPage_Flexible_Parent",
+    "xmlJson": [
+        {
+            "@attributes": {
+                "targets": "lightning__AppPage",
+                "xmlns": "http://soap.sforce.com/2006/04/metadata"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "name": "recordId",
+                        "type": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "@attributes": {
+                "targets": "lightning__RecordPage",
+                "xmlns": "http://soap.sforce.com/2006/04/metadata"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                }
+            ]
+        }
+    ],
+    "xmlObject": {
+        "apiVersion": 56,
+        "isExplicitImport": false,
+        "isExposed": true,
+        "masterLabel": "PlacesSummaryPage_Flexible_Parent",
+        "runtimeNamespace": "%vlocity_namespace%",
+        "targetConfigs": "PHRhcmdldENvbmZpZyB4bWxucz0iaHR0cDovL3NvYXAuc2ZvcmNlLmNvbS8yMDA2LzA0L21ldGFkYXRhIiB0YXJnZXRzPSJsaWdodG5pbmdfX0FwcFBhZ2UiPjxwcm9wZXJ0eSBuYW1lPSJkZWJ1ZyIgdHlwZT0iQm9vbGVhbiIvPjxwcm9wZXJ0eSBuYW1lPSJyZWNvcmRJZCIgdHlwZT0iU3RyaW5nIi8+PC90YXJnZXRDb25maWc+PHRhcmdldENvbmZpZyB4bWxucz0iaHR0cDovL3NvYXAuc2ZvcmNlLmNvbS8yMDA2LzA0L21ldGFkYXRhIiB0YXJnZXRzPSJsaWdodG5pbmdfX1JlY29yZFBhZ2UiPjxwcm9wZXJ0eSBuYW1lPSJkZWJ1ZyIgdHlwZT0iQm9vbGVhbiIvPjwvdGFyZ2V0Q29uZmlnPg==",
+        "targets": {
+            "target": [
+                "lightning__RecordPage",
+                "lightning__AppPage",
+                "lightning__HomePage"
+            ]
+        }
+    }
+}

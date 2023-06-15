@@ -1,0 +1,28 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "LoopForServIds",
+    "OmniProcessId": {
+        "Name": "RecalculationIPMaster",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Recalculation/AllSubdomains/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "label": "LoopBlock1",
+        "loopList": "ServIds",
+        "loopOutput": {
+            "CER": "%CERIP%",
+            "CM": "%CMIP%",
+            "QI": "%QIIP%",
+            "SRH": "%SRHIP%"
+        },
+        "show": null
+    },
+    "Type": "Loop Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Recalculation/AllSubdomains/Procedure/LoopForServIds"
+}

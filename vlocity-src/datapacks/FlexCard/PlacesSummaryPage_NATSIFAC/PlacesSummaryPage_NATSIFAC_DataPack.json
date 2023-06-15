@@ -1,0 +1,42 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "PlacesSummaryPage_Flexi/GPMS/2.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "a2U9r000000HfbREAS"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "AllotmentId": "{recordId}"
+            },
+            "ipMethod": "NATSIFACSummary_NATSIFACSummary",
+            "resultVar": "[\"Allotment\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "PlacesSummaryPage_NATSIFAC",
+    "Namespace": "",
+    "OmniUiCardKey": "PlacesSummaryPage_NATSIFAC/GPMS/3.0",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "PlacesSummaryPage_NATSIFAC.json",
+    "SampleDataSourceResponse": "{\"Allotment\":{\"Id\":\"a2U9r000000HfbREAS\",\"ResidentialInactive\":\"0\",\"ResidentialSuspended\":0,\"CareLevel\":\"Residential\",\"Provisional\":0,\"Offline\":0,\"Pre1997\":\"No\",\"HomeCareNonOperational\":0,\"SubType\":\"NATSIFAC\",\"HomeCareCeased\":0,\"CareType\":\"NATSIFAC\",\"ResidentialOperational\":0,\"NATSIFACNonOperationalSum\":0,\"Inactive\":0,\"Operational\":50,\"HomeCareOperational\":0,\"ResidentialCeased\":0,\"NATSIFAC_SuspendedSum\":0,\"NATSIFACOperationalSum\":0,\"HomeCareSuspended\":0,\"HomeCareInactive\":\"0\",\"CareSetting\":\"Mixed\",\"ResidentialNonOperational\":0,\"NATSIFACInactive\":\"0\",\"NATSIFACCeasedSum\":0,\"Ceased\":\"0\"}}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 3,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/PlacesSummaryPage_NATSIFAC"
+}

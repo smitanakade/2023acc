@@ -1,0 +1,44 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CheckAccountRecordType",
+    "OmniProcessId": {
+        "Name": "AssignNewACORole",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Create/AssociatedAccount/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ACORoleCreation",
+        "OmniProcessId": {
+            "Name": "AssignNewACORole",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Create/AssociatedAccount/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Create/AssociatedAccount/English/ACORoleCreation",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ACORoleCreation",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF(OR (%AccountToRecordType% ='Approved_Provider', %AccountToRecordType% ='Management Company', %AccountToRecordType% ='Administrative Organisation', %AccountToRecordType% ='Service Delivery Organisation',%AccountToRecordType% ='Commonwealth Home Support Programme', %AccountToRecordType% ='National Aboriginal and Torres Strait Islander Flexible Aged Care Program'),\"ACO_to_Account\", NULL)",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "CheckAccountRecordType",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Create/AssociatedAccount/English/CheckAccountRecordType"
+}

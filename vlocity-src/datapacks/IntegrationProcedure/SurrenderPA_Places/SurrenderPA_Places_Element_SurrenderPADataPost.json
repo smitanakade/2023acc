@@ -1,0 +1,52 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SurrenderPADataPost",
+    "OmniProcessId": {
+        "Name": "SurrenderPA",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SurrenderPA/Places/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AllotmentId": "=%AllotmentId%",
+            "ApplicationReceivedDate": "=%NotificationOfSurrenderDetails:NotificationReceivedDate%",
+            "Comments": "=%NotificationOfSurrenderDetails:CommentOnSurrender%",
+            "DateEffectiveFrom": "=%NotificationOfSurrenderDetails:SurrenderEffectiveDate%",
+            "DateOfAllotment": "=%DateOfAllotment%",
+            "EventRecordTypeId": "=\"Surrender\"",
+            "EventStatus": "=IF(NotificationOfSurrenderDetails:SurrenderEffectiveDate <= TODAY(), \"Approved\", \"Pending\")",
+            "EventStatusDate": "=TODAY()",
+            "EventType": "=\"Surrender PA\"",
+            "LinkToDocument": "=%NotificationOfSurrenderDetails:LinkToDocuments%",
+            "ServiceId": "=%ServiceId%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Allotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SurrenderPA/Places/Procedure/SurrenderPADataPost"
+}

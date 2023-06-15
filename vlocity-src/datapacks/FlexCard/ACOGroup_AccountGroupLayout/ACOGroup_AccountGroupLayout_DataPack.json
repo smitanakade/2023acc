@@ -1,0 +1,42 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "ACOGroup_Provider2/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "0019r000003KMvXAAW"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "ApexRemote",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "AccountId": "{recordId}"
+            },
+            "remoteClass": "GPMSRelatedProviderController",
+            "remoteMethod": "fetchAcoGrp",
+            "resultVar": "[\"result\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "Displays the ACO Group into on the account object",
+    "IsTrackingEnabled": false,
+    "Name": "ACOGroup_AccountGroupLayout",
+    "Namespace": "",
+    "OmniUiCardKey": "ACOGroup_AccountGroupLayout/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "ACOGroup_AccountGroupLayout.json",
+    "SampleDataSourceResponse": "{\"result\":[{\"ACOGroupCreatedDate\":\"13/5/2022\",\"ACOGroupCreatedBy\":\"HAG Test User2\",\"ACOGroupCreatedById\":\"0059r000000z2WOAAY\",\"ACOGroupComments\":\"Comment 1\",\"ACOGroupReason\":\"Common controlling interest\",\"ACOGroupId\":\"a1i9r000000KC8HAAW\",\"ACOGroupName\":\"ACO Group 1\"}],\"errorCode\":\"INVOKE-200\",\"error\":\"OK\"}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/ACOGroup_AccountGroupLayout"
+}

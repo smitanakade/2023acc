@@ -1,0 +1,62 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateTheRestOfTheAccountRelationships",
+    "OmniProcessId": {
+        "Name": "CreateNATSIFACProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/NATSIFACProvider/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "ACOId": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\", %SearchExistingACO_NATSIFAC:SearchForExistingACOByName-Block:SearchForExistingACOByNameId%, %ACOId%)",
+            "AccountCareType": "=%NATSIFACCareTypeApprovalStatus:NATSIFACCareType:CareType%",
+            "AccountEffectiveDate": "=%NATSIFACCareTypeApprovalStatus:NATSIFACCareType:EffectiveDate%",
+            "AccountId": "=%AccountId%",
+            "AccountProviderStatus": "=%NATSIFACCareTypeApprovalStatus:NATSIFACCareType:ProviderStatus%",
+            "Account_State": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\", %SearchExistingACO_NATSIFAC:SearchForExistingACOByName-Block:SearchForExistingACOByProviderState%, %RegisteredBusinessAddress:RegisterAddress:StateDisplay_ACO%)",
+            "CareTypeRecordId": "=\"NATSIFAC_CT\"",
+            "EntityType": "=\"NATSIFAC Provider\"",
+            "Incorporation_ARBN": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_NATSIFAC:SearchForExistingACOByName-Block:SearchForExistingACOByNameARBN%, %AgedCareOrganisation:ACODetail:ARBN%)",
+            "Incorporation_ID": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_NATSIFAC:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationID%, %AgedCareOrganisation:ACODetail:IncorporationID%)",
+            "Incorporation_IDType": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_NATSIFAC:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationIDType%,%AgedCareOrganisation:ACODetail:IncorporationIDType%)",
+            "Incorporation_Name": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_NATSIFAC:SearchForExistingACOByName-Block:SearchForExistingACOByNameName%,%AgedCareOrganisation:ACODetail:ACOName%)",
+            "Incorporation_Status": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_NATSIFAC:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationStatus%, %AgedCareOrganisation:ACODetail:IncorporationStatus%)",
+            "Incorporation_Status_Date": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_NATSIFAC:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationStatusDate_LoadFormat%, %AgedCareOrganisation:ACODetail:IncorporationStatusDate%)",
+            "Incorporation_Type": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_NATSIFAC:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationType%, %AgedCareOrganisation:ACODetail:IncorporationType%)",
+            "Incorporation_Under": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_NATSIFAC:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporatedUnder%, %AgedCareOrganisation:ACODetail:IncorporatedUnder%)",
+            "OrganisationType": "=%NATSIFACProvider:NATSIFACProviderDetails:OrganisationType%",
+            "ProspectiveProvider": "=%NATSIFACProvider:NATSIFACProviderDetails:ProspectiveProvider%",
+            "Purpose": "=%NATSIFACProvider:NATSIFACProviderDetails:OrganisationPurpose%",
+            "RecordTypeId_contact": "=\"Non_Individual_Contact_CR\"",
+            "RecortTypeId_accRel": "=\"ACO_to_Account\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "AccountGeneric_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction3",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/NATSIFACProvider/Create/Procedure/CreateTheRestOfTheAccountRelationships"
+}

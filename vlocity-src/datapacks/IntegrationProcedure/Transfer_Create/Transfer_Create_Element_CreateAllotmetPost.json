@@ -1,0 +1,66 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateAllotmetPost",
+    "OmniProcessId": {
+        "Name": "Transfer",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Transfer/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CreateAllotment",
+        "OmniProcessId": {
+            "Name": "Transfer",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Transfer/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Transfer/Create/Procedure/CreateAllotment",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CreateAllotment",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AllotmentType": "=\"Transfer\"",
+            "DateOfAllotment": "=%RecordNoticeOfTransferDetails:ProposedTransferDay%",
+            "EndDateOfAllotment": "=%SelectAllotmentToTransfer:CustomLWC1:SelectedAllotment:EndDateOfAllotment%",
+            "LinkToDocument": "=%SelectAllotmentToTransfer:CustomLWC1:SelectedAllotment:LinkToDocument%",
+            "OriginalDateOfAllotment": "=%SelectAllotmentToTransfer:CustomLWC1:SelectedAllotment:OriginalDateOfAllotment%",
+            "PAPeriodEndDate": "=%SelectAllotmentToTransfer:CustomLWC1:SelectedAllotment:PAPeriodEndDate%",
+            "ParentAllotment": "=%SelectAllotmentToTransfer:CustomLWC1:SelectedAllotment:AllotmentId%",
+            "RecordTypeId": "=%SelectAllotmentToTransfer:CustomLWC1:SelectedAllotment:RecordTypeId%",
+            "ServiceId": "=%VariationService:NewService%",
+            "TransferredFrom": "=%ServiceId%",
+            "VariationEventId": "=%EventId%",
+            "WaiverType": "=%SelectAllotmentToTransfer:CustomLWC1:SelectedAllotment:WaiverType%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "PAVariationAllotmentCreate_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "%RelocationService:ChangeService% = \"Yes\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction34",
+        "responseJSONNode": "NewAllotmentId",
+        "responseJSONPath": "Allotment__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Transfer/Create/Procedure/CreateAllotmetPost"
+}

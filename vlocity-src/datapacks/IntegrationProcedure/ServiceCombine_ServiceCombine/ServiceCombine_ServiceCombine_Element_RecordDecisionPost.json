@@ -1,0 +1,65 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RecordDecisionPost",
+    "OmniProcessId": {
+        "Name": "ServiceCombine",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceCombine/ServiceCombine/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RecordDecision",
+        "OmniProcessId": {
+            "Name": "ServiceCombine",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceCombine/ServiceCombine/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceCombine/ServiceCombine/Procedure/RecordDecision",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RecordDecision",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "CheckBoxIfActing": "=%RecordDecisionStep:ActingRecord%",
+            "Comments": "=%RecordDecisionStep:CommentsRecord%",
+            "Decision": "=%RecordDecisionStep:DecisionRecord%",
+            "DecisionDate": "=%RecordDecisionStep:DecisionDateRecord%",
+            "DelegateName": "=%RecordDecisionStep:DelegateNameRecord%",
+            "DelegatePosition": "=%RecordDecisionStep:DelegatePositionRecord%",
+            "DelegateState": "=%RecordDecisionStep:DelegateStateRecord%",
+            "EventId": "=%EventId%",
+            "LinkToDocuments": "=%RecordDecisionStep:LinkToDocumentRecord%",
+            "RecordType": "=\"Record_Decision_SC\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ServiceCombine_History_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "PerformAction:Action = \"Record Decision\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction3",
+        "responseJSONNode": "ServiceCombineId",
+        "responseJSONPath": "GPMS_Service_Combine_History__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceCombine/ServiceCombine/Procedure/RecordDecisionPost"
+}

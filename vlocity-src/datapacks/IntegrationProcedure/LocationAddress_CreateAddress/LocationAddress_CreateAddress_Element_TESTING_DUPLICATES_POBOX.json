@@ -1,0 +1,64 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "TESTING_DUPLICATES_POBOX",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ALL_NON_PHYSICAL_ADDRESSES",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ALL_NON_PHYSICAL_ADDRESSES",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ALL_NON_PHYSICAL_ADDRESSES",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressEffectiveDate": "=IF(ISNOTBLANK(%PostalAddresses:PostalAddressBlock:EffectiveDateFormula1%, true), %PostalAddresses:PostalAddressBlock:EffectiveDateFormula1%, TODAY()",
+            "AddressId": "=%EXISTING_ADDRESS_CHECK:DuplicateAddress:Id%",
+            "AddressType": "=IF (%LocationRecordType% = \"Contact Address\", \"ContactAddress\", IF (%LocationRecordType% = \"Account Address\", \"AccountAddress\", \"ServiceAddress\"))",
+            "CareOf": "=%PostalAddresses:PostalAddressBlock:POBoxBlock:PostalCareOf1%",
+            "ContactId": "=IF(%OtherAddressRecordType% = \"Residential Address\", %CurrentRecordId%, NULL)\r\n\r\n",
+            "CurrentAccountId": "=IF(%LocationRecordType% = \"Account Address\", %CurrentRecordId%, NULL)",
+            "CurrentContactRelationshipId": "=IF(%OtherAddressRecordType% = \"Administrator/Liquidator Company Address\", %CurrentRecordId%, NULL)",
+            "CurrentServiceId": "=IF(%Origin% = \"Service Account FlexCard\", %CurrentRecordId%, NULL)",
+            "LocationType": "=%PostalAddresses:PostalAddressBlock:LocationTypeFormula%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "LocationAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "PostalAddresses:PostalAddressBlock:POBoxRadio_Postal = \"PO Box\" AND EXISTING_ADDRESS_CHECK:DuplicateAddressCount > 0",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "PostalAddressId",
+        "responseJSONPath": "Address__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/TESTING_DUPLICATES_POBOX"
+}

@@ -1,0 +1,57 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ContactRelationship_KP_Post",
+    "OmniProcessId": {
+        "Name": "CreateApprovedProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ApprovedProvider/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "loading KP",
+        "additionalInput": {
+            "AccountId": "=%AccountId%",
+            "ContactId": "=%AccountKeyPersonnel:KeyPersonnel:ContactKPInformation-Block:ContactId%",
+            "EffectOnSuitability_KP": "=%AccountKeyPersonnel:KeyPersonnel:EffectOnSuitability_KP%",
+            "Email_KP": "=%AccountKeyPersonnel:KeyPersonnel:Email_KP%",
+            "Employer_Account": "=%AccountKeyPersonnel:KeyPersonnel:APEmployer_KP%",
+            "Employer_KP": "=%AccountKeyPersonnel:KeyPersonnel:Employer_KP%",
+            "EmploymentEndDate_KP": "=%AccountKeyPersonnel:KeyPersonnel:EmploymentEndDate_KP%",
+            "EmploymentStartDate_KP": "=%AccountKeyPersonnel:KeyPersonnel:EmploymentStartDate_KP%",
+            "EmploymentType_KP": "=%AccountKeyPersonnel:KeyPersonnel:EmploymentType_KP%",
+            "EndDate_KP": "=%AccountKeyPersonnel:KeyPersonnel:EndDate_KP%",
+            "Mobile_KP": "=%AccountKeyPersonnel:KeyPersonnel:Mobile_KP%",
+            "Phone_KP": "=%AccountKeyPersonnel:KeyPersonnel:Phone_KP%",
+            "PositionTitle_KP": "=%AccountKeyPersonnel:KeyPersonnel:PositionTitle_KP%",
+            "ReasonForDeparture_KP": "=%AccountKeyPersonnel:KeyPersonnel:ReasonForDeparture_KP%",
+            "RecordTypeId_KP": "=\"Key_Personnel_CR\"",
+            "Role_KP": "=%AccountKeyPersonnel:KeyPersonnel:Role_KP%",
+            "StartDate_KP": "=%AccountKeyPersonnel:KeyPersonnel:StartDate_KP%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ContactRelationship_KP_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction6",
+        "responseJSONNode": "KPContactRelationship",
+        "responseJSONPath": "Contact_Relationship__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ApprovedProvider/Create/Procedure/ContactRelationship_KP_Post"
+}

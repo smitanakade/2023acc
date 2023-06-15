@@ -1,0 +1,48 @@
+{
+    "Description": "Note the IsRecalc Loop Output. If the Provider Preview changes are not live, this will override the IsRecalc value sent by the RecalcFromFlow IP and change it to flase so that the date behaviour remains unchanged",
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "LoopSelectedSRH",
+    "OmniProcessId": {
+        "Name": "SRHCalculation_New",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/StarRatingCalculation/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ServID_NotNull",
+        "OmniProcessId": {
+            "Name": "SRHCalculation_New",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/StarRatingCalculation/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/StarRatingCalculation/Procedure/ServID_NotNull",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ServID_NotNull",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "label": "LoopBlock1",
+        "loopList": "SRHDataTransformed",
+        "loopOutput": {
+            "ExemptReason": "%SRHDataTransformed:ExemptionReason%",
+            "IsExempt": "%SRHDataTransformed:ExemptionActive%",
+            "IsRecalc": "%IsRecalc%",
+            "MissingRating": "%SRHDataTransformed:MissingRating%",
+            "PublishDates": "%PublishDates:PublishDates%",
+            "RecordId": "%CalculateOverallSR:output:calculationResults:RecordId%",
+            "SCRRating": "%SRHDataTransformed:SCRRating%",
+            "StarRatingNumber": "%CalculateOverallSR:output:calculationResults:StarRatingNumber%"
+        },
+        "show": null
+    },
+    "Type": "Loop Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/StarRatingCalculation/Procedure/LoopSelectedSRH"
+}

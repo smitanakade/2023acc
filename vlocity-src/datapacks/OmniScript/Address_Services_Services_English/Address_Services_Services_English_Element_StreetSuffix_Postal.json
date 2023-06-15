@@ -1,0 +1,122 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "StreetSuffix_Postal",
+    "OmniProcessId": {
+        "Name": "Address_Services",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "NonPOBoxBlock",
+        "OmniProcessId": {
+            "Name": "Address_Services",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/NonPOBoxBlock",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "NonPOBoxBlock",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 6,
+        "controllingField": {
+            "element": "",
+            "source": "",
+            "type": ""
+        },
+        "defaultValue": null,
+        "disOnTplt": false,
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "inputWidth": 12,
+        "label": "Street Suffix",
+        "optionSource": {
+            "source": "",
+            "type": ""
+        },
+        "options": [
+            {
+                "autoAdv": null,
+                "name": "Central",
+                "value": "Central"
+            },
+            {
+                "autoAdv": null,
+                "name": "East",
+                "value": "East"
+            },
+            {
+                "autoAdv": null,
+                "name": "Extension",
+                "value": "Extension"
+            },
+            {
+                "autoAdv": null,
+                "name": "Lower",
+                "value": "Lower"
+            },
+            {
+                "autoAdv": null,
+                "name": "North",
+                "value": "North"
+            },
+            {
+                "autoAdv": null,
+                "name": "North East",
+                "value": "North East"
+            },
+            {
+                "autoAdv": null,
+                "name": "North West",
+                "value": "North West"
+            },
+            {
+                "autoAdv": null,
+                "name": "South",
+                "value": "South"
+            },
+            {
+                "autoAdv": null,
+                "name": "South East",
+                "value": "South East"
+            },
+            {
+                "autoAdv": null,
+                "name": "South West",
+                "value": "South West"
+            },
+            {
+                "autoAdv": null,
+                "name": "Upper",
+                "value": "Upper"
+            },
+            {
+                "autoAdv": null,
+                "name": "West",
+                "value": "West"
+            }
+        ],
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": false,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Select",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/StreetSuffix_Postal"
+}

@@ -1,0 +1,61 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "UseExistingAddress",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ServiceGEOCodedAddresses_Flexcard",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ServiceGEOCodedAddresses_Flexcard",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ServiceGEOCodedAddresses_Flexcard",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressEffectiveDate": "=TODAY()",
+            "AddressId": "=%GNAFCount:Existing_AddressId%",
+            "AddressType": "=%SelectAddress:CustomLWC2:SelectedAddress:LocationRecordType%",
+            "CurrentServiceId": "=IF(%SelectAddress:CGISAddress% = \"Yes\",%SelectAddress:CustomLWC2:SelectedAddress:CurrentServiceId%, %CurrentRecordId%)",
+            "LocationType": "=IF(%NeedMultiAddress% == \"Yes\", %ServiceAddresses:FlexibleCareSelect%, %AddressRecordType%)",
+            "gnaf_pid": "=%SelectAddress:CustomLWC2:SelectedAddress:gnaf_pid%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "LocationAddresses_SamePostalPhysical",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "%GNAFCount:Existing_AddressId% <> \"NotApplicable\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "AddressId",
+        "responseJSONPath": "Address__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/UseExistingAddress"
+}

@@ -1,0 +1,36 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetValues2",
+    "OmniProcessId": {
+        "Name": "CreateAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Create/Allotment/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "FlexTest": "=%PlacesBelongingToAllotmentFlexible:ProvisionalCheckFlexible%",
+            "PAPeriodEndDate": "=IF(%PlacesBelongingToAllotmentResidential:ProvisionalCheckResi% = \"Yes\" || %PlacesBelongingToAllotmentFlexible:ProvisionalCheckFlexible% = \"Yes\", %AllotmentDetails:PAPeriodEndDate%, NULL)",
+            "ResiTest": "=%PlacesBelongingToAllotmentResidential:ProvisionalCheckResi%"
+        },
+        "label": "SetValues2",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Create/Allotment/English/SetValues2"
+}

@@ -1,0 +1,40 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetSummaryValues",
+    "OmniProcessId": {
+        "Name": "ServiceCombine",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceCombine/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "SummaryPage": {
+                "ContinuingService": "%SelectContinuingService:Continuing:ContinuingService:ContinuingService%",
+                "DecisionDueBy": "%ApplicationDetails:DecisionDueByLoad%",
+                "DiscontinuingService": "%SelectDiscontinuingService:Discontinuing:DiscontinuingService:DiscontinuingService%",
+                "ProposedDate": "%ApplicationDetails:ProposedDate%",
+                "ReceivedDate": "%ApplicationDetails:ReceivedDate%"
+            }
+        },
+        "label": "SetSummaryValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceCombine/Create/English/SetSummaryValues"
+}

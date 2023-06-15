@@ -1,0 +1,64 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RecordDecisionOnRequestForReconsideration_Post",
+    "OmniProcessId": {
+        "Name": "Variation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RecordDecisionOnRequestForReconsideration",
+        "OmniProcessId": {
+            "Name": "Variation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/Create/Procedure/RecordDecisionOnRequestForReconsideration",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RecordDecisionOnRequestForReconsideration",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Comments": "=%RecordDecisionOnRequestForReconsiderationStep:Comments%",
+            "Decision": "=%RecordDecisionOnRequestForReconsiderationStep:Decision%",
+            "DecisionDate": "=%RecordDecisionOnRequestForReconsiderationStep:DecisionDate%",
+            "DelegateName": "=%RecordDecisionOnRequestForReconsiderationStep:DelegateName%",
+            "DelegatePosition": "=%RecordDecisionOnRequestForReconsiderationStep:DelegatePosition%",
+            "EventId": "=%EventId%",
+            "IsActingInPosition": "=%RecordDecisionOnRequestForReconsiderationStep:IsActingInPosition%",
+            "LinkToDocument": "=%RecordDecisionOnRequestForReconsiderationStep:LinktoDocuments%",
+            "RecordType": "=\"Record_Decision_on_Request_For_Reconsideration\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Variation_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "PerformAction:Action = \"Record Decision On Request For Reconsideration\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "VariationId",
+        "responseJSONPath": "GPMS_Variation_History__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/Create/Procedure/RecordDecisionOnRequestForReconsideration_Post"
+}

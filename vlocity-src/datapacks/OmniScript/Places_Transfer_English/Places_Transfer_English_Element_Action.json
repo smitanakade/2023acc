@@ -1,0 +1,44 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Action",
+    "OmniProcessId": {
+        "Name": "PlacesTransfer",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Places/Transfer/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "PerformAction",
+        "OmniProcessId": {
+            "Name": "PlacesTransfer",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Places/Transfer/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Places/Transfer/English/PerformAction",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "PerformAction",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 2,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF(%Select1% <> NULL, %Select1%, IF (%Select2% <> NULL, %Select2%,IF (%Select3% <> NULL, %Select3%,IF (%Select4% <> NULL, %Select4%,IF (%Select5% <> NULL, %Select5%,IF (%Select6% <> NULL, %Select6%,IF (%Select7% <> NULL, %Select7%,IF (%Select8% <> NULL, %Select8%,IF (%Select9% <> NULL, %Select9%,IF (%Selection1% = 'Cancel Transfer', 'Cancel',IF (%Selection1% = 'Change Transfer Date', 'Change Transfer Date',IF (%Selection2% = 'Cancel Transfer', 'Cancel',IF (%Selection2% = 'Change Transfer Date', 'Change Transfer Date',IF (%Selection3% = 'Change Transfer Date', 'Change Transfer Date',IF (%CancelBtn% = 'Cancel Transfer', 'Cancel',IF (%Selection1% = 'Correct', 'Correct'))))))))))))))))",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "Action",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Places/Transfer/English/Action"
+}

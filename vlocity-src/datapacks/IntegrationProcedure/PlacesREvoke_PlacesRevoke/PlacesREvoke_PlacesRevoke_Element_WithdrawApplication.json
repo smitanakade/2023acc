@@ -1,0 +1,68 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "WithdrawApplication",
+    "OmniProcessId": {
+        "Name": "Revoke",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesREvoke/PlacesRevoke/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Withdraw",
+        "OmniProcessId": {
+            "Name": "Revoke",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesREvoke/PlacesRevoke/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesREvoke/PlacesRevoke/Procedure/Withdraw",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Withdraw",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Comments": "=%Revoke:Comments%",
+            "Decision": "=%Revoke:Decision4%",
+            "DecisionDate": "=%Revoke:DecisionDate1%",
+            "DelegateName": "=%Revoke:DelegateName%",
+            "DelegatePosition": "=%Revoke:DelegatePosition%",
+            "EventId": "=%EventId%",
+            "IsActing": "=%Revoke:IsActing%",
+            "LatestSubmissionReceivedDate": "=%Revoke:LatestSubmissionReceivedDate%",
+            "LinktoDocument": "=%Revoke:LinktoDocument%",
+            "NoticeOfDecisionSent": "=%Revoke:NoticeOfDecisionSent%",
+            "RecordType": "=\"Withdrawn_Revoke\"",
+            "RevocationEffectiveDate": "=%Revoke:RevocationEffectiveDate%",
+            "SubmissionComments": "=%Revoke:SubmissionComments%",
+            "SubmissionReceivedPriorToDueByDate": "=%Revoke:SubmissionReceivedPriorToDueByDate%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Revoke_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction4",
+        "responseJSONNode": "RecordId",
+        "responseJSONPath": "GPMS_Revocation_History__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesREvoke/PlacesRevoke/Procedure/WithdrawApplication"
+}

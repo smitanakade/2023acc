@@ -1,0 +1,61 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ARBN_DuplicateCheckSetErrors",
+    "OmniProcessId": {
+        "Name": "AdministrativeOrganisation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/AdministrativeOrganisation/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementErrorMap": {
+            "ARBN": "This ARBN number is already in GPMS"
+        },
+        "label": "ARBN_DuplicateCheckSetErrors",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "NotOk",
+                        "field": "ARBNIncIdErrorCheck"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "IAN",
+                        "field": "IncorporationIDType"
+                    },
+                    {
+                        "condition": "<>",
+                        "data": "Use this one",
+                        "field": "ChooseACO"
+                    },
+                    {
+                        "condition": "<>",
+                        "data": "Null",
+                        "field": "ARBN"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "validationRequired": "Step",
+        "wpm": false
+    },
+    "Type": "Set Errors",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/AdministrativeOrganisation/Create/English/ARBN_DuplicateCheckSetErrors"
+}

@@ -1,0 +1,35 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "ResidentialProviderFinancialPerformanceSurveyIsComplete",
+    "OmniProcessId": {
+        "Name": "QFR Viability Questions - Residential Care Form - Provider - Validation Errors",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/ACFR/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "ResidentialProviderFinancialPerformanceSurveyIsComplete": "=IF(%SolvencyConcernvalidation%==true && %RDSolvencySixMonthsValidation%==true && %RDForecastLossValidation%==true && %RDCashFinancialAssetsValidation%==true && %RDClosingOrSellingValidation%==true && %RDPurchaseAdditionalHomeCareValidation%==true && %RDCurrentOccupancyValidation%==true && %RDRefundableAccomodationDepositsValidation%==true && %RDCurrentBusinessImprovementStrategyValidation%==true && %RDChangesToManagementValidation%==true && %RDRetainingStaffValidation%==true && %RDCapitalWorksUnderwayValidation%==true && %RDCapitalWorksDelayValidation%==true, true, false)"
+        },
+        "label": "IsComplete",
+        "message": {
+            "qfr_navigate_next": "true"
+        },
+        "pubsub": true,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/ACFR/English/ResidentialProviderFinancialPerformanceSurveyIsComplete"
+}

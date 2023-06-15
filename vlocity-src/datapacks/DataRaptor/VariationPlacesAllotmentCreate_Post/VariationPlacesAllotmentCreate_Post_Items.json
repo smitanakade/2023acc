@@ -1,0 +1,79 @@
+[
+    {
+        "FormulaSequence": 1,
+        "GlobalKey": "VariationPlacesAllotmentCreate_PostCustom1350",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "VariationPlacesAllotmentCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "VariationPlacesAllotmentCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/VariationPlacesAllotmentCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "VariationPlacesAllotmentCreate_PostCustom1829",
+        "InputFieldName": "RemainingPlaces:VariationNumber",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "VariationPlacesAllotmentCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "VariationPlacesAllotmentCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/VariationPlacesAllotmentCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "GPMS_Number_of_Variation__c",
+        "OutputObjectName": "Places_Allotment__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "VariationPlacesAllotmentCreate_PostCustom9190",
+        "InputFieldName": "RemainingPlaces:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": true,
+        "Name": "VariationPlacesAllotmentCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "VariationPlacesAllotmentCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/VariationPlacesAllotmentCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Places_Allotment__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "VariationPlacesAllotmentCreate_PostCustom0jI9r0000000DLREA2Item0",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "VariationPlacesAllotmentCreate_Post",
+        "OmniDataTransformationId": {
+            "Name": "VariationPlacesAllotmentCreate_Post",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/VariationPlacesAllotmentCreate_Post",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Places_Allotment__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

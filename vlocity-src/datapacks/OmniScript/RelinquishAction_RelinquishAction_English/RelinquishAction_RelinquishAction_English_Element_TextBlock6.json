@@ -1,0 +1,51 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "TextBlock6",
+    "OmniProcessId": {
+        "Name": "RelinquishPlacesAction",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RelinquishAction/RelinquishAction/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RelinquishPlaces",
+        "OmniProcessId": {
+            "Name": "RelinquishPlacesAction",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/RelinquishAction/RelinquishAction/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/RelinquishAction/RelinquishAction/English/RelinquishPlaces",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RelinquishPlaces",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 6,
+        "dataJSON": false,
+        "label": "TextBlock1",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "Cancel",
+                        "field": "PerformAction:Action"
+                    }
+                ]
+            }
+        },
+        "text": "<table style=\"border-collapse: collapse; width: 99.5591%; height: 237px;\" border=\"1\">\n<tbody>\n<tr style=\"height: 22px;\">\n<td style=\"width: 48.7076%; height: 22px;\"><strong>Event Type:&nbsp;</strong></td>\n<td style=\"width: 48.7076%; height: 22px;\"><span class=\"TextRun SCXO95346451 BCX0\" lang=\"EN-US\" xml:lang=\"EN-US\" data-contrast=\"auto\"><span class=\"NormalTextRun SCXO95346451 BCX0\">Relinquish Places </span></span><span class=\"EOP SCXO95346451 BCX0\">&nbsp;</span></td>\n</tr>\n<tr style=\"height: 22px;\">\n<td style=\"width: 48.7076%; height: 22px;\"><span class=\"EOP SCXO95346451 BCX0\"><span class=\"TextRun SCXO14493451 BCX0\" lang=\"EN-US\" xml:lang=\"EN-US\" data-contrast=\"auto\"><span class=\"NormalTextRun SCXO14493451 BCX0\"><strong>Relinquishment Effective Date:</strong></span></span></span></td>\n<td style=\"width: 48.7076%; height: 22px;\"><span class=\"EOP SCXO95346451 BCX0\">%EffectiveDate%</span></td>\n</tr>\n<tr style=\"height: 22px;\">\n<td style=\"width: 48.7076%; height: 22px;\"><span class=\"EOP SCXO95346451 BCX0\"><span class=\"TextRun SCXO14493451 BCX0\" lang=\"EN-US\" xml:lang=\"EN-US\" data-contrast=\"auto\"><span class=\"NormalTextRun SCXO14493451 BCX0\"><strong><span class=\"TextRun SCXO40108636 BCX0\" lang=\"EN-US\" xml:lang=\"EN-US\" data-contrast=\"auto\"><span class=\"NormalTextRun SCXO40108636 BCX0\">Application Received Date:</span></span></strong></span></span></span></td>\n<td style=\"width: 48.7076%; height: 22px;\"><span class=\"EOP SCXO95346451 BCX0\">%ApplicationReceivedDate%</span></td>\n</tr>\n<tr style=\"height: 22px;\">\n<td style=\"width: 48.7076%; height: 22px;\"><span class=\"EOP SCXO95346451 BCX0\"><span class=\"TextRun SCXO14493451 BCX0\" lang=\"EN-US\" xml:lang=\"EN-US\" data-contrast=\"auto\"><span class=\"NormalTextRun SCXO14493451 BCX0\"><strong><span class=\"TextRun SCXO40108636 BCX0\" lang=\"EN-US\" xml:lang=\"EN-US\" data-contrast=\"auto\"><span class=\"NormalTextRun SCXO40108636 BCX0\"><span class=\"TextRun  BCX0 SCXO10139630\" lang=\"EN-US\" xml:lang=\"EN-US\" data-contrast=\"auto\"><span class=\"NormalTextRun  BCX0 SCXO10139630\">Decision Due Date:</span></span></span></span></strong></span></span></span></td>\n<td style=\"width: 48.7076%; height: 22px;\"><span class=\"EOP SCXO95346451 BCX0\">%DecisionDueDate%</span></td>\n</tr>\n</tbody>\n</table>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RelinquishAction/RelinquishAction/English/TextBlock6"
+}

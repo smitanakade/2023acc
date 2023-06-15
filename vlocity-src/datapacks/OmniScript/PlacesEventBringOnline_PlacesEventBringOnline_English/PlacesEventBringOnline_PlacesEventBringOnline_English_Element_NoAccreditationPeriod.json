@@ -1,0 +1,56 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "NoAccreditationPeriod",
+    "OmniProcessId": {
+        "Name": "PlacesEventBringOnline",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlacesEventBringOnline/PlacesEventBringOnline/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementErrorMap": {
+            "DatebecomeOperational": "=\"Must be within a current accreditation period\""
+        },
+        "label": "NoAccreditationPeriod",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "NoAC",
+                        "field": "AccreditationCertification:Check"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Residential",
+                        "field": "ServiceCareType"
+                    },
+                    {
+                        "condition": ">",
+                        "data": "0",
+                        "field": "AccreditationCount"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "validationRequired": "Step",
+        "wpm": false
+    },
+    "Type": "Set Errors",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlacesEventBringOnline/PlacesEventBringOnline/English/NoAccreditationPeriod"
+}

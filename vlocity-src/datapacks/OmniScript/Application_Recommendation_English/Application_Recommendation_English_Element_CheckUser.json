@@ -1,0 +1,35 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CheckUser",
+    "OmniProcessId": {
+        "Name": "Application_Recommendation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/Recommendation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "Assessor": "=IF(%Application:ApplicationStatus% = \"Under Formal Assessment\", \"$Vlocity.UserId\", IF(%HasRe% = \"yes\", %Application:ReAssessor%, %Application:Assessor%))",
+            "Delegate": "=IF(%Application:ApplicationStatus% = \"Delegate's Decision\", \"$Vlocity.UserId\", IF(%HasRe% = \"yes\", %Application:ReDelegate%, %Application:Delegate%))",
+            "Reviewer": "=IF(%Application:ApplicationStatus% = \"Under Quality Review\", \"$Vlocity.UserId\", IF(%HasRe% = \"yes\", %Application:ReReviewer%, %Application:Reviewer%))"
+        },
+        "label": "SetValues1",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/Recommendation/English/CheckUser"
+}

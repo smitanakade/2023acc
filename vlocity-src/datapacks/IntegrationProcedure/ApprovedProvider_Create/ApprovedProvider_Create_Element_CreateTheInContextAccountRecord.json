@@ -1,0 +1,46 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateTheInContextAccountRecord",
+    "OmniProcessId": {
+        "Name": "CreateApprovedProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ApprovedProvider/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "Parent Created",
+        "additionalChainableResponse": {
+            "AccountId": "=%AccountId%"
+        },
+        "additionalInput": {
+            "EntityType": "=\"Approved Provider\"",
+            "Name": "=%ApprovedProvider:ApprovedProviderDetails:ApprovedProviderName%",
+            "RecordTypeId": "=\"Approved_Provider\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "AccountGenericParentRecord_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction3",
+        "responseJSONNode": "AccountId",
+        "responseJSONPath": "Account_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ApprovedProvider/Create/Procedure/CreateTheInContextAccountRecord"
+}

@@ -1,0 +1,41 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "ServiceAddresses_Header/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 22,
+                "name": "recordId",
+                "val": "a1t9r000000AtUfAAK"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "ApplicationId": "{recordId}"
+            },
+            "ipMethod": "Application_RecommendationRelatedList",
+            "resultVar": "[\"ApplicationRecommendation_Extract\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "Header for Application Care Types",
+    "IsTrackingEnabled": false,
+    "Name": "ApplicationCareTypes_Header",
+    "Namespace": "",
+    "OmniUiCardKey": "ApplicationCareTypes_Header/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "ApplicationCareTypes_Header.json",
+    "SampleDataSourceResponse": "{\"ApplicationId\":\"a1t9r000000AtUfAAK\",\"ApplicationRecommendation_Extract\":{\"Recommendation_All\":[{\"Id\":\"a1u9r000000TdXRAA0\",\"LastModifiedDate\":\"14/6/2022\"},{\"Id\":\"a1u9r000000UjZCAA0\",\"LastModifiedDate\":\"20/6/2022\"},{\"Id\":\"a1u9r000000UjZDAA0\",\"LastModifiedDate\":\"20/6/2022\"}],\"ApplicationStatus\":\"Closed\",\"ApplicationCreatedDate\":\"9/6/2022\"},\"options\":{\"vlcFilesMap\":null,\"mockHttpResponse\":null,\"ParentInteractionToken\":null,\"useFuture\":false,\"isTestProcedure\":false,\"useQueueable\":false,\"disableMetadataCache\":false,\"resetCache\":false,\"vlcIPData\":null,\"OmniAnalyticsTrackingDebug\":false,\"ignoreCache\":false,\"isDebug\":false,\"queueableChainable\":false,\"useContinuation\":false,\"chainable\":false,\"shouldCommit\":false,\"vlcTestSuiteUniqueKey\":null,\"vlcTestUniqueKey\":null,\"vlcCacheKey\":null,\"useHttpCalloutMock\":false,\"continuationStepResult\":null,\"useQueueableApexRemoting\":false},\"response\":{},\"ApplicationRecommendation_ExtractStatus\":true,\"ResponseActionStatus\":true,\"GetIndividualDetailsStatus\":false}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/ApplicationCareTypes_Header"
+}

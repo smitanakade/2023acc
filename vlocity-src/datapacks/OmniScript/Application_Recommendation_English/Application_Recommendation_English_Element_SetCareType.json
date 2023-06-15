@@ -1,0 +1,48 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetCareType",
+    "OmniProcessId": {
+        "Name": "Application_Recommendation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/Recommendation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "ApplicationOwner": "=IF(%Application:ApplicationStatus% = \"Under Formal Assessment\",%Reviewer%,IF(%Application:ApplicationStatus% = \"Under Quality Review\",IF(%UnderReview:UnderReviewRecommendation%=\"Send Back To Assessor\",%Assessor%,%Delegate%),IF(%DelegatesDecision:DelegatesDecisionDecision%=\"Record Decision\",%Delegate%,%Assessor%)))",
+            "ApplicationStatus": "=IF(%Application:ApplicationStatus% = \"Under Formal Assessment\",IF(%Reviewer% != null,\"Under Quality Review\",\"For Quality Review\"),IF(%Application:ApplicationStatus% = \"Under Quality Review\",IF(%UnderReview:UnderReviewRecommendation%=\"Send Back To Assessor\",\"Under Formal Assessment\",IF(%Application:Delegate% != null,\"For Delegate's Decision\",\"Delegate's Decision\")),IF(%DelegatesDecision:DelegatesDecisionDecision%=\"Record Decision\",\"Finalise\",\"Under Formal Assessment\")))",
+            "Comment": "=IF(%Application:ApplicationStatus% = \"Under Formal Assessment\",%Assessment:UnderAssessmentComment%,IF(%Application:ApplicationStatus% = \"Under Quality Review\",IF(%UnderReview:UnderReviewRecommendation%=\"Approve Recommendation\",%UnderReview:UnderReviewComment%,%UnderReview:UnderReviewCommentM%),IF(%DelegatesDecision:DelegatesDecisionDecision%=\"Record Decision\",%DelegatesDecision:DelegateComment%,%DelegatesDecision:DelegateCommentM%)))",
+            "Confirm": "=IF(%UnderReview:UnderReviewRecommendation% = \"Approve Recommendation\" || %Application:ApplicationStatus% = \"For Delegate's Decision\", true, false)",
+            "FlexibleDecision": "=IF(%Application:ApplicationStatus% = \"Under Formal Assessment\", %Assessment:FlexibleUnderAssessment:FlexibleRecommendation%,IF(%Application:ApplicationStatus% = \"Delegate's Decision\", %DelegatesDecision:FlexibleDelegateDecision:FlexibleDecisionDecision%, \"\"))",
+            "FlexibleDecisionType": "=IF(%Application:ApplicationStatus%=\"Under Quality Review\",%UnderReview:UnderReviewRecommendation%,IF(%Application:ApplicationStatus%=\"Delegate's Decision\",%DelegatesDecision:DelegatesDecisionDecision%,\"\"))",
+            "FlexibleDependencies": "=%DelegatesDecision:FlexibleDelegateDecision:FlexibleDecisionDependencies%",
+            "FlexibleDue": "=%DelegatesDecision:FlexibleDelegateDecision:FlexibleDueDate%",
+            "HomeCareDecision": "=IF(%Application:ApplicationStatus% = \"Under Formal Assessment\", %Assessment:HomeCareUnderAssessment:HomeCareRecommendation%, IF(%Application:ApplicationStatus% = \"Delegate's Decision\", %DelegatesDecision:HomeCareDelegateDecision:HomeCareDecisionDecision%, \"\"))",
+            "HomeCareDecisionType": "=IF(%Application:ApplicationStatus%=\"Under Quality Review\",%UnderReview:UnderReviewRecommendation%,IF(%Application:ApplicationStatus%=\"Delegate's Decision\",%DelegatesDecision:DelegatesDecisionDecision%,\"\"))",
+            "HomeCareDependencies": "=%DelegatesDecision:HomeCareDelegateDecision:HomeCareDecisionDependencies%",
+            "HomeCareDue": "=%DelegatesDecision:HomeCareDelegateDecision:HomeCareDueDate%",
+            "ResidentialDecision": "=IF(%Application:ApplicationStatus% = \"Under Formal Assessment\", %Assessment:ResidentialUnderAssessment:ResidentialRecommendation%, IF(%Application:ApplicationStatus% = \"Delegate's Decision\", %DelegatesDecision:ResidentialDelegateDecision:ResidentialDecisionDecision%, \"\"))",
+            "ResidentialDecisionType": "=IF(%Application:ApplicationStatus%=\"Under Quality Review\",%UnderReview:UnderReviewRecommendation%,IF(%Application:ApplicationStatus%=\"Delegate's Decision\",%DelegatesDecision:DelegatesDecisionDecision%,\"\"))",
+            "ResidentialDependencies": "=%DelegatesDecision:ResidentialDelegateDecision:ResidentialDecisionDependencies%",
+            "ResidentialDue": "=%DelegatesDecision:ResidentialDelegateDecision:ResidentialDueDate%"
+        },
+        "label": "SetCareType",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/Recommendation/English/SetCareType"
+}

@@ -1,0 +1,50 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "TextBlock7",
+    "OmniProcessId": {
+        "Name": "ServiceDeliveryOrganisation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceDeliveryOrganisation/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "SearchExistingACO_SDO",
+        "OmniProcessId": {
+            "Name": "ServiceDeliveryOrganisation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ServiceDeliveryOrganisation/Create/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceDeliveryOrganisation/Create/English/SearchExistingACO_SDO",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "SearchExistingACO_SDO",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "TextBlock7",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": null,
+                        "field": "SearchForExistingACOByName-Block:SearchForExistingACOByNameSearchString"
+                    }
+                ]
+            }
+        },
+        "text": "<table id=\"vertical-1\" style=\"border-collapse: collapse; width: auto;\" border=\"1px\">\n<tbody>\n<tr style=\"height: 22px;\">\n<th style=\"border-style: dotted; border-width: 1px; text-align: left; height: 22px;\"><span style=\"color: #52386b;\">ACO Name</span></th>\n<td style=\"border-style: dotted; border-width: 1px; height: 22px;\"><span style=\"color: #52386b;\">%SearchExistingACO_SDO:SearchForExistingACOByName-Block:SearchForExistingACOByNameName%</span></td>\n</tr>\n<tr style=\"height: 22px;\">\n<th style=\"border-style: dotted; border-width: 1px; text-align: left; height: 22px;\"><span style=\"color: #52386b;\">ACO ID</span></th>\n<td style=\"border-style: dotted; border-width: 1px; height: 22px;\"><span style=\"color: #52386b;\">%SearchExistingACO_SDO:SearchForExistingACOByName-Block:SearchForExistingACOByNameAccountNumber%</span></td>\n</tr>\n<tr style=\"height: 22px;\">\n<th style=\"border-style: dotted; border-width: 1px; text-align: left; height: 22px;\"><span style=\"color: #52386b;\">Incorporation ID Type</span></th>\n<td style=\"border-style: dotted; border-width: 1px; height: 22px;\"><span style=\"color: #52386b;\">%SearchExistingACO_SDO:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationIDType%</span></td>\n</tr>\n<tr style=\"height: 22px;\">\n<th style=\"border-style: dotted; border-width: 1px; text-align: left; height: 22px;\"><span style=\"color: #52386b;\">Incorporation ID</span></th>\n<td style=\"border-style: dotted; border-width: 1px; height: 22px;\"><span style=\"color: #52386b;\">%SearchExistingACO_SDO:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationID%</span></td>\n</tr>\n<tr style=\"height: 22px;\">\n<th style=\"border-style: dotted; border-width: 1px; text-align: left; height: 22px;\"><span style=\"color: #52386b;\">ARBN</span></th>\n<td style=\"border-style: dotted; border-width: 1px; height: 22px;\"><span style=\"color: #52386b;\">%SearchExistingACO_SDO:SearchForExistingACOByName-Block:SearchForExistingACOByNameARBN%</span></td>\n</tr>\n<tr style=\"height: 22px;\">\n<th style=\"border-style: dotted; border-width: 1px; text-align: left; height: 22px;\"><span style=\"color: #52386b;\">Incorporated Under</span></th>\n<td style=\"border-style: dotted; border-width: 1px; height: 22px;\"><span style=\"color: #52386b;\">%SearchExistingACO_SDO:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporatedUnder%</span></td>\n</tr>\n<tr style=\"height: 22px;\">\n<th style=\"border-style: dotted; border-width: 1px; text-align: left; height: 22px;\"><span style=\"color: #52386b;\">Incorporation Status</span></th>\n<td style=\"border-style: dotted; border-width: 1px; height: 22px;\"><span style=\"color: #52386b;\">%SearchExistingACO_SDO:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationStatus%</span></td>\n</tr>\n<tr style=\"height: 44px;\">\n<th style=\"border-style: dotted; border-width: 1px; text-align: left; height: 44px;\"><span style=\"color: #52386b;\">Incorporation Status Date</span></th>\n<td style=\"border-style: dotted; border-width: 1px; height: 44px;\"><span style=\"color: #52386b;\">%SearchExistingACO_SDO:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationStatusDate%</span></td>\n</tr>\n<tr style=\"height: 22px;\">\n<th style=\"border-style: dotted; border-width: 1px; text-align: left; height: 22px;\"><span style=\"color: #52386b;\">Incorporation Type</span></th>\n<td style=\"border-style: dotted; border-width: 1px; height: 22px;\"><span style=\"color: #52386b;\">%SearchExistingACO_SDO:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationType%</span></td>\n</tr>\n</tbody>\n</table>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ServiceDeliveryOrganisation/Create/English/TextBlock7"
+}

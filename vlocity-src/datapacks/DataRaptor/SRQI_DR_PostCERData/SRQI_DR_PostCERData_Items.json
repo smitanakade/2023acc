@@ -1,0 +1,1906 @@
+[
+    {
+        "FormulaExpression": "IF(DomainPercentages:Consent == true, \"1\", IF(DomainPercentages:Exempt == true, \"0\", DomainRatings:CER_Total_Stars_II__Rating))",
+        "FormulaResultPath": "OverallRating",
+        "FormulaSequence": 2,
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8988",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(DomainPercentages:Consent == true, \"CER Consent Revoked\", IF(DomainPercentages:Exempt == true, \"No Data Available-Exemption\", DomainRatings:CER_Total_Stars_II__Label))",
+        "FormulaResultPath": "OverallLabel",
+        "FormulaSequence": 3,
+        "GlobalKey": "SRQI_DR_PostCERDataCustom2286",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(DomainPercentages:Exempt == true, true, false)",
+        "FormulaResultPath": "Exemption",
+        "FormulaSequence": 5,
+        "GlobalKey": "SRQI_DR_PostCERDataCustom1326",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(OverallLabel == \"Excellent\", \"Well Above Average\", IF(OverallLabel == \"Good\", \"Above Average\", IF(OverallLabel == \"Acceptable\", \"Average\", IF(OverallLabel == \"Improvement Needed\", \"Below Average\", IF(OverallLabel == \"Significant Improvement Needed\", \"Well Below Average\", OverallLabel,)))))",
+        "FormulaResultPath": "OldOverallLabel",
+        "FormulaSequence": 4,
+        "GlobalKey": "SRQI_DR_PostCERDataCustom5779",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "NOW()",
+        "FormulaResultPath": "CalcDate",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_PostCERDataCustom4148",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom7539",
+        "InputFieldName": "DomainPercentages:CNAPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Care_Need_Always__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom4123",
+        "InputFieldName": "DomainRatings:CER_Domain_CareNeed__Label",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Care_Need_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom4134",
+        "InputFieldName": "DomainPercentages:CNMoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Care_Need_Most_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom2648",
+        "InputFieldName": "DomainPercentages:CNNPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Care_Need_Never__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8081",
+        "InputFieldName": "DomainRatings:CER_Domain_CareNeed__Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Care_Need_Rating_Desc__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom3374",
+        "InputFieldName": "DomainScores:CareNeedScore",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Care_Need_Score__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom6773",
+        "InputFieldName": "DomainPercentages:CNSoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Care_Need_Some_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom1843",
+        "InputFieldName": "DomainPercentages:CarAPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Caring_Always__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom2540",
+        "InputFieldName": "DomainRatings:CER_Domain_Caring__Label",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Caring_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom1944",
+        "InputFieldName": "DomainPercentages:CarMoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Caring_Most_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom7053",
+        "InputFieldName": "DomainPercentages:CarNPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Caring_Never__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8175",
+        "InputFieldName": "DomainRatings:CER_Domain_Caring__Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Caring_Rating_Desc__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom9864",
+        "InputFieldName": "DomainScores:CaringScore",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Caring_Score__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom1727",
+        "InputFieldName": "DomainPercentages:CarSoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Caring_Some_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom9512",
+        "InputFieldName": "DomainPercentages:CompAPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Competent_Always__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom3704",
+        "InputFieldName": "DomainRatings:CER_Domain_Competent__Label",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Competent_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8722",
+        "InputFieldName": "DomainPercentages:CompMoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Competent_Most_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom9784",
+        "InputFieldName": "DomainPercentages:CompNPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Competent_Never__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom606",
+        "InputFieldName": "DomainRatings:CER_Domain_Competent__Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Competent_Rating_Desc__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8905",
+        "InputFieldName": "DomainScores:CompetentScore",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Competent_Score__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom1079",
+        "InputFieldName": "DomainPercentages:CompSoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Competent_Some_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom1613",
+        "InputFieldName": "OverallRating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Consumer_Experience_Rating__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom168",
+        "InputFieldName": "DomainPercentages:ExplAPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Explain_Always__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom1647",
+        "InputFieldName": "DomainRatings:CER_Domain_Explain__Label",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Explain_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom7925",
+        "InputFieldName": "DomainPercentages:ExplMoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Explain_Most_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8022",
+        "InputFieldName": "DomainPercentages:ExplNPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Explain_Never__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom2745",
+        "InputFieldName": "DomainRatings:CER_Domain_Explain__Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Explain_Rating_Desc__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom4645",
+        "InputFieldName": "DomainScores:ExplainScore",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Explain_Score__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom5303",
+        "InputFieldName": "DomainPercentages:ExplSoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Explain_Some_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom5778",
+        "InputFieldName": "DomainPercentages:FupAPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Follow_Up_Always__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8229",
+        "InputFieldName": "DomainRatings:CER_Domain_FollowUp__Label",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Follow_Up_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8672",
+        "InputFieldName": "DomainPercentages:FupMoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Follow_Up_Most_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom4393",
+        "InputFieldName": "DomainPercentages:FupNPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Follow_Up_Never__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom2843",
+        "InputFieldName": "DomainRatings:CER_Domain_FollowUp__Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Follow_Up_Rating_Desc__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom3839",
+        "InputFieldName": "DomainScores:FollowUpScore",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Follow_Up_Score__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom2713",
+        "InputFieldName": "DomainPercentages:FupSoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Follow_Up_Some_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom1913",
+        "InputFieldName": "DomainPercentages:FoodAPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Food_Always__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom1404",
+        "InputFieldName": "DomainRatings:CER_Domain_Food__Label",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Food_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom9877",
+        "InputFieldName": "DomainPercentages:FoodMoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Food_Most_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom6470",
+        "InputFieldName": "DomainPercentages:FoodNPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Food_Never__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom6634",
+        "InputFieldName": "DomainRatings:CER_Domain_Food__Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Food_Rating_Desc__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom2759",
+        "InputFieldName": "DomainScores:FoodScore",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Food_Score__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom9342",
+        "InputFieldName": "DomainPercentages:FoodSoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Food_Some_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom172",
+        "InputFieldName": "DomainPercentages:HomAPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Home_Always__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom2338",
+        "InputFieldName": "DomainRatings:CER_Domain_Home__Label",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Home_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom5969",
+        "InputFieldName": "DomainPercentages:HomMoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Home_Most_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom129",
+        "InputFieldName": "DomainPercentages:HomNPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Home_Never__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom5812",
+        "InputFieldName": "DomainRatings:CER_Domain_Home__Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Home_Rating_Desc__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom3081",
+        "InputFieldName": "DomainScores:HomeScore",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Home_Score__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom2658",
+        "InputFieldName": "DomainPercentages:HomSoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Home_Some_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom9157",
+        "InputFieldName": "DomainPercentages:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_PostCERDataCustom9928",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom4842",
+        "InputFieldName": "DomainPercentages:IndAPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Independent_Always__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom9802",
+        "InputFieldName": "DomainRatings:CER_Domain_Independent__Label",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Independent_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom7818",
+        "InputFieldName": "DomainPercentages:IndMoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Independent_Most_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom7963",
+        "InputFieldName": "DomainPercentages:IndNPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Independent_Never__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8569",
+        "InputFieldName": "DomainRatings:CER_Domain_Independent__Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Independent_Rating_Desc__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom182",
+        "InputFieldName": "DomainScores:IndependentScore",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Independent_Score__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8044",
+        "InputFieldName": "DomainPercentages:IndSoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Independent_Some_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom6880",
+        "InputFieldName": "DomainPercentages:OpAPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Operation_Always__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom3167",
+        "InputFieldName": "DomainRatings:CER_Domain_Operation__Label",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Operation_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom7802",
+        "InputFieldName": "DomainPercentages:OpMoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Operation_Most_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom4825",
+        "InputFieldName": "DomainPercentages:OpNPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Operation_Never__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8401",
+        "InputFieldName": "DomainRatings:CER_Domain_Operation__Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Operation_Rating_Desc__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom6338",
+        "InputFieldName": "DomainScores:OperationScore",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Operation_Score__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom7268",
+        "InputFieldName": "DomainPercentages:OpSoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Operation_Some_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom9213",
+        "InputFieldName": "CalcDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Calc_Date__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom557",
+        "InputFieldName": "DomainPercentages:Exempt",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Exemption_Granted__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8724",
+        "InputFieldName": "DomainPercentages:Reason",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Exemption_Reason__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8763",
+        "InputFieldName": "DomainPercentages:RespAPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Respect_Always__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom4144",
+        "InputFieldName": "DomainRatings:CER_Domain_Respect__Label",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Respect_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom7911",
+        "InputFieldName": "DomainPercentages:RespMoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Respect_Most_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom6592",
+        "InputFieldName": "DomainPercentages:RespNPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Respect_Never__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom3777",
+        "InputFieldName": "DomainRatings:CER_Domain_Respect__Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Respect_Rating_Desc__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom4808",
+        "InputFieldName": "DomainScores:RespectScore",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Respect_Score__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom648",
+        "InputFieldName": "DomainPercentages:RespSoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Respect_Some_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom1243",
+        "InputFieldName": "DomainPercentages:SafeAPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Safety_Always__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom5381",
+        "InputFieldName": "DomainRatings:CER_Domain_Safety__Label",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Safety_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom437",
+        "InputFieldName": "DomainPercentages:SafeMoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Safety_Most_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom22",
+        "InputFieldName": "DomainPercentages:SafeNPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Safety_Never__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom9782",
+        "InputFieldName": "DomainRatings:CER_Domain_Safety__Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Safety_Rating_Desc__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom4830",
+        "InputFieldName": "DomainScores:SafetyScore",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Safety_Score__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom6611",
+        "InputFieldName": "DomainPercentages:SafeSoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Safety_Some_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom4515",
+        "InputFieldName": "OldOverallLabel",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Total_CER_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom6048",
+        "InputFieldName": "DomainScores:Score",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Total_CER_Stars__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "TransformValueMappings": "{}",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom3947",
+        "InputFieldName": "DomainPercentages:VoAPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Voice_Always__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom3908",
+        "InputFieldName": "DomainRatings:CER_Domain_Voice__Label",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Voice_Label__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom4398",
+        "InputFieldName": "DomainPercentages:VoMoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Voice_Most_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom9279",
+        "InputFieldName": "DomainPercentages:VoNPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Voice_Never__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom6544",
+        "InputFieldName": "DomainRatings:CER_Domain_Voice__Rating",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Voice_Rating_Desc__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom8873",
+        "InputFieldName": "DomainScores:VoiceScore",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Voice_Score__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostCERDataCustom9064",
+        "InputFieldName": "DomainPercentages:VoSoTPercent",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostCERData",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostCERData",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostCERData",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "Number(2)",
+        "OutputFieldName": "Voice_Some_of_the_time__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

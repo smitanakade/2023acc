@@ -1,0 +1,81 @@
+[
+    {
+        "FormulaExpression": "IF(SelectedCM == true, true, IF(ReleaseCM == true, false, true))",
+        "FormulaResultPath": "CMUnderReview",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_UpdateCMUnderReviewCustom0jI9h0000000CFhEAMItem0",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_UpdateCMUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_UpdateCMUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_UpdateCMUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_UpdateCMUnderReviewCustom0jI9h0000000CFhEAMItem3",
+        "InputFieldName": "CMId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_UpdateCMUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_UpdateCMUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_UpdateCMUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_UpdateCMUnderReviewCustom0jI9h0000000CFhEAMItem1",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_UpdateCMUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_UpdateCMUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_UpdateCMUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_UpdateCMUnderReviewCustom0jI9h0000000CFhEAMItem2",
+        "InputFieldName": "CMUnderReview",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_UpdateCMUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_UpdateCMUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_UpdateCMUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Under_Review__c",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

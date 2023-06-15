@@ -1,0 +1,182 @@
+{
+    "dataSource": {
+        "contextVariables": [
+            {
+                "id": 3,
+                "name": "Parent.FormName",
+                "val": "Residential Labour Costs and Hours"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "FormName": "{Parent.FormName}"
+            },
+            "ipMethod": "ACFR_GetFormInformation",
+            "resultVar": "",
+            "vlocityAsync": false
+        }
+    },
+    "enableLwc": true,
+    "globalCSS": true,
+    "isFlex": true,
+    "listenToWidthResize": true,
+    "lwc": {
+        "DeveloperName": "cfACFR_ResidentialLabourCostHoursAboutSection_2_Carla",
+        "Id": "0Rb9h00000038sHCAQ",
+        "ManageableState": "unmanaged",
+        "MasterLabel": "cfACFR_ResidentialLabourCostHoursAboutSection_2_Carla",
+        "NamespacePrefix": "c"
+    },
+    "osSupport": true,
+    "selectableMode": "Multi",
+    "states": [
+        {
+            "actions": [
+            ],
+            "blankCardState": false,
+            "childCards": [
+                "ACFR_FormNameAndInformation"
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "nds-col ",
+                            "element": "childCardPreview",
+                            "elementLabel": "FlexCard-0",
+                            "name": "FlexCard",
+                            "property": {
+                                "cardName": "ACFR_FormNameAndInformation",
+                                "cardNode": "",
+                                "isChildCardTrackingEnabled": false,
+                                "parentAttribute": {
+                                    "FormName": "Residential Labour Costs and Hours"
+                                },
+                                "recordId": "{recordId}",
+                                "selectedState": "Active"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "nds-size_12-of-12"
+                            },
+                            "type": "element"
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Active",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "background": {
+                    "color": "#fff",
+                    "image": "",
+                    "position": "",
+                    "repeat": "repeat",
+                    "size": ""
+                },
+                "border": {
+                    "color": "",
+                    "radius": "",
+                    "style": "",
+                    "type": "",
+                    "width": ""
+                },
+                "class": "nds-theme_default nds-p-around_x-small nds-m-bottom_x-small ",
+                "container": {
+                    "class": ""
+                },
+                "elementStyleProperties": {
+                },
+                "inlineStyle": "",
+                "margin": [
+                    {
+                        "label": "bottom:x-small",
+                        "size": "x-small",
+                        "type": "bottom"
+                    }
+                ],
+                "padding": [
+                    {
+                        "label": "around:x-small",
+                        "size": "x-small",
+                        "type": "around"
+                    }
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "nds-size_12-of-12 ",
+                "style": "background-color:#fff;  background-repeat:repeat;    \n        color:#000; ",
+                "text": {
+                    "align": "",
+                    "color": "#000"
+                },
+                "theme": "theme_default"
+            }
+        }
+    ],
+    "theme": "nds",
+    "title": "ACFR_ResidentialLabourCostHoursAboutSection",
+    "xmlJson": [
+        {
+            "@attributes": {
+                "targets": "lightningCommunity__Default",
+                "xmlns": "http://soap.sforce.com/2006/04/metadata"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "recordId",
+                        "type": "String"
+                    }
+                }
+            ]
+        }
+    ],
+    "xmlObject": {
+        "apiVersion": 51,
+        "isExplicitImport": false,
+        "isExposed": true,
+        "masterLabel": "ACFR_ResidentialLabourCostHoursAboutSection",
+        "runtimeNamespace": "%vlocity_namespace%",
+        "targetConfigs": "PHRhcmdldENvbmZpZyB4bWxucz0iaHR0cDovL3NvYXAuc2ZvcmNlLmNvbS8yMDA2LzA0L21ldGFkYXRhIiB0YXJnZXRzPSJsaWdodG5pbmdDb21tdW5pdHlfX0RlZmF1bHQiPjxwcm9wZXJ0eSBuYW1lPSJyZWNvcmRJZCIgdHlwZT0iU3RyaW5nIi8+PC90YXJnZXRDb25maWc+",
+        "targets": {
+            "target": [
+                "lightning__AppPage",
+                "lightning__HomePage",
+                "lightning__RecordPage",
+                "lightningCommunity__Page",
+                "lightningCommunity__Default"
+            ]
+        }
+    }
+}

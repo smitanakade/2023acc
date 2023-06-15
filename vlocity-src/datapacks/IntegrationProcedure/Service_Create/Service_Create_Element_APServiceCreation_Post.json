@@ -1,0 +1,66 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "APServiceCreation_Post",
+    "OmniProcessId": {
+        "Name": "ServiceCreation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "APServiceCondition",
+        "OmniProcessId": {
+            "Name": "ServiceCreation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Create/Procedure/APServiceCondition",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "APServiceCondition",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AccountId": "=%accountId%",
+            "AssociationStartDate": "=%ServiceDetails:ServiceInformation:AssociationStartDate1%",
+            "CareType": "=%ServiceDetails:ServiceInformation:SelectedCareType%",
+            "EffectiveDate": "=%ServiceDetails:ServiceInformation:AssociationStartDate%",
+            "ProviderID": "=%accountId%",
+            "RecordType": "=\"Provider_to_Service_Read_Only\"",
+            "RecordTypeId": "=\"Approved_Provider_Service\"",
+            "ServiceNameEffectiveDate": "=TODAY()",
+            "Service_Name": "=%ServiceDetails:ServiceInformation:ServiceName%",
+            "Status": "=\"Inactive\"",
+            "SubType": "=%CareSubType:CareSubType%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ServiceCreation_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction6",
+        "responseJSONNode": "BusinessLicenseId",
+        "responseJSONPath": "BusinessLicense_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Create/Procedure/APServiceCreation_Post"
+}

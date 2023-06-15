@@ -1,0 +1,41 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "AllAddresses/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 2,
+                "name": "recordId",
+                "val": "0cE9r000000010vEAA"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "ServiceId": "{recordId}"
+            },
+            "ipMethod": "ServiceAddress_RelatedList",
+            "resultVar": "[\"ServiceAddress\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "Related List for Services Addresses",
+    "IsTrackingEnabled": false,
+    "Name": "ServicesAddresses",
+    "Namespace": "",
+    "OmniUiCardKey": "ServicesAddresses/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "ServicesAddresses.json",
+    "SampleDataSourceResponse": "{\"Params\":{\"ServiceRecordType\":\"Approved Provider Service\",\"CareType\":\"Residential Care\"},\"ServiceAddress\":[{\"ServiceId\":\"0cE9r000000010vEAA\",\"AddressId\":\"a1o9r000000ZNjRAAW\",\"AddressType\":\"Physical\",\"CareOf\":\"NotApplicable\",\"ServiceType\":\"Approved Provider Service\",\"AddressString\":\"180 La Trobe St, Melbourne, VIC, 3000\",\"ServiceAddressId\":\"a1p9r0000003CW5AAM\",\"POBox\":\"NotApplicable\",\"AddressName\":\"ADR-0000118\"},{\"ServiceId\":\"0cE9r000000010vEAA\",\"AddressId\":\"a1o9r000000ZO2fAAG\",\"AddressType\":\"Postal\",\"CareOf\":\"The Admin\",\"ServiceType\":\"Approved Provider Service\",\"AddressString\":\"800 Bourke St,Docklands, Melbourne, VIC, 3008\",\"ServiceAddressId\":\"a1p9r0000003CXhAAM\",\"POBox\":\"NotApplicable\",\"AddressName\":\"ADR-0000117\"},{\"ServiceId\":\"0cE9r000000010vEAA\",\"AddressId\":\"a1o9r000000ZNubAAG\",\"AddressType\":\"Additional Campus\",\"CareOf\":\"NotApplicable\",\"ServiceType\":\"Approved Provider Service\",\"AddressString\":\"100 Bourke St,Bulleen, Melbourne, VIC, 3105\",\"ServiceAddressId\":\"a1p9r0000003CcXAAU\",\"POBox\":\"NotApplicable\",\"AddressName\":\"ADR-0000113\"}]}",
+    "StylingConfiguration": "",
+    "UniqueName": "ServicesAddresses_GPMS_1",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/ServicesAddresses"
+}

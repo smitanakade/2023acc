@@ -1,0 +1,109 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "Radio2",
+    "OmniProcessId": {
+        "Name": "VariationNewAllotmentCondition",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/NewVariation/Condition/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "NewAllotmentConditions",
+        "OmniProcessId": {
+            "Name": "VariationNewAllotmentCondition",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/NewVariation/Condition/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/NewVariation/Condition/English/NewAllotmentConditions",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "NewAllotmentConditions",
+    "ParentElementType": "Edit Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 9,
+        "controllingField": {
+            "element": "",
+            "source": "",
+            "type": ""
+        },
+        "defaultValue": null,
+        "disOnTplt": false,
+        "enableCaption": true,
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "horizontalMode": false,
+        "imageCountInRow": 3,
+        "label": "",
+        "lwcComponentOverride": "",
+        "optionHeight": 100,
+        "optionSource": {
+            "source": "",
+            "type": ""
+        },
+        "optionWidth": 100,
+        "options": [
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "In its application for NATSIFAC places in the Aged Care Approvals Round",
+                "value": "In its application for NATSIFAC places in the Aged Care Approvals Round"
+            },
+            {
+                "autoAdv": null,
+                "developerName": null,
+                "name": "On Page [X] of its application for NATSIFAC places in the Aged Care Approvals Round",
+                "value": "On Page [X] of its application for NATSIFAC places in the Aged Care Approvals Round"
+            }
+        ],
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": true,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "InAccordanceWithUndertaking2|n"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Target Group",
+                        "field": "NewRecordTypeName|n"
+                    },
+                    {
+                        "condition": "=",
+                        "data": null,
+                        "field": "NewName|n"
+                    },
+                    {
+                        "condition": "<>",
+                        "data": "General Access",
+                        "field": "TargetGroup2|n"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "NATSIFAC",
+                        "field": "CareType|n"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "Radio",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/NewVariation/Condition/English/Radio2"
+}

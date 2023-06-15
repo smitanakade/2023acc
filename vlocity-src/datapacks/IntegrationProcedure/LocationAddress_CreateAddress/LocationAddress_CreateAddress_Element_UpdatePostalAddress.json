@@ -1,0 +1,68 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "UpdatePostalAddress",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RegularAddresses",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/RegularAddresses",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RegularAddresses",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressEffectiveDate": "=TODAY()",
+            "AddressType": "=%LocationRecordType%",
+            "BuildingName": "=%ServiceAddressesPostal:PostalAddressBlock:NonPOBoxBlock:BuildingName_Postal%",
+            "CareOf": "=%ServiceAddressesPostal:PostalAddressBlock:CareOfBlock:PostalCareOf%",
+            "City": "=%ServiceAddressesPostal:PostalAddressBlock:SuburbOrTown_UPPER_Postal%",
+            "Country": "=%ServiceAddressesPostal:PostalAddressBlock:Country_Postal%",
+            "CurrentServiceId": "=%CurrentRecordId%",
+            "LocationType": "=\"Postal\"",
+            "Postcode": "=%ServiceAddressesPostal:PostalAddressBlock:NonPOBoxBlock:PostCode_Postal%",
+            "State": "=%ServiceAddressesPostal:PostalAddressBlock:NonPOBoxBlock:State_Postal%",
+            "Street": "=%ServiceAddressesPostal:PostalAddressBlock:SingleLine_UPPER_Postal%",
+            "Sub_addr": "=%ServiceAddressesPostal:PostalAddressBlock:SingleLine2_UPPER_Postal%",
+            "ValidatedByCGIS": "No"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "LocationAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "PostalAddressId",
+        "responseJSONPath": "Address__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/UpdatePostalAddress"
+}

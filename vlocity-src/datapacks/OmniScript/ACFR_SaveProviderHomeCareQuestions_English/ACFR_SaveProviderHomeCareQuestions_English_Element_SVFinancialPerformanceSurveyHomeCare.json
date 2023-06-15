@@ -1,0 +1,52 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "SVFinancialPerformanceSurveyHomeCare",
+    "OmniProcessId": {
+        "Name": "QFR Viability Questions - Home Care Form - Provider - Validation Errors",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveProviderHomeCareQuestions/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "SVHCBrokerageFlag": "=IF(%TXTABrokerageAdditionalInformation% == NULL || (%CKBrokerageClinicalCare% == false && %CKBrokeragePersonalCare% == false && %CKBrokerageAlliedHealth% == false && %CKBrokerageDiversionalTherapy% == false && %CKBrokerageLifestyleOfficer% == false && %CKBrokerageOther% == false) || (%CKBrokerageOther% == true && %TXTABrokerageOtherExplanation% == NULL), \"NotOK\", \"OK\")",
+            "SVHCBusinessImprovementAdviceFlag": "=IF(OR(%RDHCBusinessImprovementAdvice% == NULL, AND(%RDHCBusinessImprovementAdvice% == \"Yes\", %TXTAHCBusinessImprovementAdvice% == NULL)), \"NotOK\", \"OK\")",
+            "SVHCBusinessStructureFlag": "=IF(%CKInHouseDelivery% == false && %CKFranchisee% == false && %CKFranchisor% == false && %CKBrokerage% == false && %CKSubcontractor% == false && %CKSelfEmployIndividual% == false && %CKOther% == false, \"NotOK\", \"OK\")",
+            "SVHCCashFinancialAssetsFlag": "=IF(OR(%RDHCCashFinancialAssets% == NULL, AND(%RDHCCashFinancialAssets% == \"Yes\", %TXTAHCCashFinancialAssets% == NULL)), \"NotOK\", \"OK\")",
+            "SVHCChangesToManagementFlag": "=IF(OR(%RDHCChangesToManagement% == NULL, AND(%RDHCChangesToManagement% == \"Yes\", %TXTAHCChangesToManagement% == NULL)), \"NotOK\", \"OK\")",
+            "SVHCClosingOrSellingFlag": "=IF(OR(%RDHCClosingOrSelling% == NULL, AND(%RDHCClosingOrSelling% == \"Yes\", %TXTAHCClosingOrSelling% == NULL)), \"NotOK\", \"OK\")",
+            "SVHCForecastLossFlag": "=IF(OR(%RDHCForecastLoss% == NULL, AND(%RDHCForecastLoss% == \"Yes\", %TXTAHCForecastLoss% == NULL)), \"NotOK\", \"OK\")",
+            "SVHCFranchiseeFlag": "=IF(%TXTAFranchiseeAdditionalInformation% == NULL || (%CKFranchiseeClinicalCare% == false && %CKFranchiseePersonalCare% == false && %CKFranchiseeAlliedHealth% == false && %CKFranchiseeDiversionalTherapy% == false && %CKFranchiseeLifestyleOfficer% == false && %CKFranchiseeOther% == false) || (%CKFranchiseeOther% == true && %TXTAFranchiseeOtherExplanation% == NULL), \"NotOK\", \"OK\")",
+            "SVHCFranchisorFlag": "=IF(%TXTAFranchisorAdditionalInformation% == NULL || (%CKFranchisorClinicalCare% == false && %CKFranchisorPersonalCare% == false && %CKFranchisorAlliedHealth% == false && %CKFranchisorDiversionalTherapy% == false && %CKFranchisorLifestyleOfficer% == false && %CKFranchisorOther% == false) || (%CKFranchisorOther% == true && %TXTAFranchisorOtherExplanation% == NULL), \"NotOK\", \"OK\")",
+            "SVHCHomeCareRecipientsFlag": "=IF(OR(%RDHCHomeCareRecipients% == NULL, AND(%RDHCHomeCareRecipients% == \"Yes\", %TXTAHCHomeCareRecipients% == NULL)), \"NotOK\", \"OK\")",
+            "SVHCInHouseDeliveryFlag": "=IF(%TXTAInHouseDeliveryAdditionalInformation% == NULL || (%CKInHouseDeliveryClinicalCare% == false && %CKInHouseDeliveryPersonalCare% == false && %CKInHouseDeliveryAlliedHealth% == false && %CKInHouseDeliveryDiversionalTherapy% == false && %CKInHouseDeliveryLifestyleOfficer% == false && %CKInHouseDeliveryOther% == false) || (%CKInHouseDeliveryOther% == true && %TXTAInHouseDeliveryOtherExplanation% == NULL), \"NotOK\", \"OK\")",
+            "SVHCOtherFlag": "=IF(%TXTAOtherAdditionalInformation% == NULL || (%CKOtherClinicalCare% == false && %CKOtherPersonalCare% == false && %CKOtherAlliedHealth% == false && %CKOtherDiversionalTherapy% == false && %CKOtherLifestyleOfficer% == false && %CKOtherOther% == false) || (%CKOtherOther% == true && %TXTAOtherOtherExplanation% == NULL) || (%TXTAOtherExplanation% == NULL), \"NotOK\", \"OK\")",
+            "SVHCPurchaseAdditionalHomeCareFlag": "=IF(OR(%RDHCPurchaseAdditionalHomeCare% == NULL, AND(%RDHCPurchaseAdditionalHomeCare% == \"Yes\", %TXTAHCPurchaseAdditionalHomeCare% == NULL)), \"NotOK\", \"OK\")",
+            "SVHCRetainingStaffFlag": "=IF(OR(%RDHCRetainingStaff% == NULL, AND(%RDHCRetainingStaff% == \"Yes\", %TXTAHCRetainingStaff% == NULL)), \"NotOK\", \"OK\")",
+            "SVHCSelfEmployIndividualFlag": "=IF(%TXTASelfEmployIndividualAdditionalInformation% == NULL || (%CKSelfEmployIndividualClinicalCare% == false && %CKSelfEmployIndividualPersonalCare% == false && %CKSelfEmployIndividualAlliedHealth% == false && %CKSelfEmployIndividualDiversionalTherapy% == false && %CKSelfEmployIndividualLifestyleOfficer% == false && %CKSelfEmployIndividualOther% == false) || (%CKSelfEmployIndividualOther% == true && %TXTASelfEmployIndividualOtherExplanation% == NULL), \"NotOK\", \"OK\")",
+            "SVHCSolvencyConcernFlag": "=IF(OR(%RDHCSolvencyConcern% == NULL, AND(%RDHCSolvencyConcern% == \"Yes\", %TXTAHCSolvencyConcern% == NULL)), \"NotOK\", \"OK\")",
+            "SVHCSolvencySixMonthsFlag": "=IF(OR(%RDHCSolvencySixMonths% == NULL, AND(%RDHCSolvencySixMonths% == \"Yes\", %TXTAHCSolvencySixMonths% == NULL)), \"NotOK\", \"OK\")",
+            "SVHCStrategyAlignmentFlag": "=IF(OR(%RDHCStrategyAlignment% != NULL && %RDHCBusinessImprovementAdvice% == \"Yes\", %RDHCBusinessImprovementAdvice% == \"No\"), \"OK\", \"NotOK\")",
+            "SVHCSubcontractorFlag": "=IF(%TXTASubcontractorAdditionalInformation% == NULL || (%CKSubcontractorClinicalCare% == false && %CKSubcontractorPersonalCare% == false && %CKSubcontractorAlliedHealth% == false && %CKSubcontractorDiversionalTherapy% == false && %CKSubcontractorLifestyleOfficer% == false && %CKSubcontractorOther% == false) || (%CKSubcontractorOther% == true && %TXTASubcontractorOtherExplanation% == NULL), \"NotOK\", \"OK\")"
+        },
+        "label": "SVFinancialPerformanceSurveyHomeCare",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveProviderHomeCareQuestions/English/SVFinancialPerformanceSurveyHomeCare"
+}

@@ -1,0 +1,33 @@
+{
+    "EmbeddedOmniScriptKey": "Address_Accounts|Update|English",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Addresses",
+    "OmniProcessId": {
+        "Name": "ManagementCompany",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ManagementCompany/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "Language": "English",
+        "Sub Type": "Update",
+        "Type": "Address_Accounts",
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "Use this one",
+                        "field": "ChooseMC"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "OmniScript",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ManagementCompany/Create/English/Addresses"
+}

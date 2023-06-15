@@ -1,0 +1,75 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateTheRestOfTheAccountRelationships",
+    "OmniProcessId": {
+        "Name": "CreateAdministrativeOrganisation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/AdministrativeOrganisation/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Only_If_We_Need_To_Create_A_New_AO",
+        "OmniProcessId": {
+            "Name": "CreateAdministrativeOrganisation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/AdministrativeOrganisation/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/AdministrativeOrganisation/Create/Procedure/Only_If_We_Need_To_Create_A_New_AO",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Only_If_We_Need_To_Create_A_New_AO",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "ACOId": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\", %SearchExistingACO_AO:SearchForExistingACOByName-Block:SearchForExistingACOByNameId%, %ACOId%)",
+            "AccountId": "=%AccountId%",
+            "Account_State": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\", %SearchExistingACO_AO:SearchForExistingACOByName-Block:SearchForExistingACOByProviderState%, %RegisteredBusinessAddress:RegisterAddress:StateDisplay_ACO%)",
+            "CareOf": "=%PostalAddress:PostAddress:PostAddress_CareOf%",
+            "Email": "=%AdministrativeOrganisationContactInformation:AOContactDetails:Email_CON%",
+            "Fax": "=%AdministrativeOrganisationContactInformation:AOContactDetails:Fax_CON%",
+            "Incorporation_ARBN": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_AO:SearchForExistingACOByName-Block:SearchForExistingACOByNameARBN%, %AgedCareOrganisation:ACODetail:ARBN%)",
+            "Incorporation_ID": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_AO:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationID%, %AgedCareOrganisation:ACODetail:IncorporationID%)",
+            "Incorporation_IDType": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_AO:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationIDType%,%AgedCareOrganisation:ACODetail:IncorporationIDType%)",
+            "Incorporation_Name": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%LinkToACO:SearchForExistingACO:SearchForExistingACOByName-Block:SearchForExistingACOByNameName%,%AgedCareOrganisation:ACODetail:ACOName%)",
+            "Incorporation_Status": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_AO:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationStatus%, %AgedCareOrganisation:ACODetail:IncorporationStatus%)",
+            "Incorporation_Status_Date": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_AO:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationStatusDate_LoadFormat%, %AgedCareOrganisation:ACODetail:IncorporationStatusDate%)",
+            "Incorporation_Type": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_AO:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationType%, %AgedCareOrganisation:ACODetail:IncorporationType%)",
+            "Incorporation_Under": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_AO:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporatedUnder%, %AgedCareOrganisation:ACODetail:IncorporatedUnder%)",
+            "OrganisationContactType": "=%AdministrativeOrganisationContactInformation:AOContactDetails:OrganisationContactType_CON%",
+            "OtherContactType": "=%AdministrativeOrganisationContactInformation:AOContactDetails:EnterNameOfBranch_CON%",
+            "Phone": "=%AdministrativeOrganisationContactInformation:AOContactDetails:Phone_CON%",
+            "PostOfficeBox": "=%PostalAddress:PostAddress:PostAddress_POBox%",
+            "RecordTypeId_contact": "=\"Non_Individual_Contact_CR\"",
+            "RecortTypeId_accRel": "=\"ACO_to_Account\"",
+            "Website": "=%AdministrativeOrganisationContactInformation:AOContactDetails:Website_CON%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "AccountGeneric_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction2",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/AdministrativeOrganisation/Create/Procedure/CreateTheRestOfTheAccountRelationships"
+}

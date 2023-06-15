@@ -1,0 +1,77 @@
+{
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ACO_Via_TypeAhead1",
+    "OmniProcessId": {
+        "Name": "CreateApprovedProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ApprovedProvider/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Only_If_We_Need_To_Create_A_New_ACO",
+        "OmniProcessId": {
+            "Name": "CreateApprovedProvider",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ApprovedProvider/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ApprovedProvider/Create/Procedure/Only_If_We_Need_To_Create_A_New_ACO",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Only_If_We_Need_To_Create_A_New_ACO",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressEffectiveDate": "=IF(ISNOTBLANK(%ACOPostalAddresses:ACOPostalAddressBlock:ACOEffectiveDateFormula1%, true), %ACOPostalAddresses:ACOPostalAddressBlock:ACOEffectiveDateFormula1%, TODAY()",
+            "AddressType": "=\"AccountAddress\"",
+            "BuildingName": "=%ACO_Candidates:add_bldg%",
+            "CareOf": "=%PostalAddresses:PostalAddressBlock:PostalCareOf2%",
+            "City": "=%ACO_Candidates:nbrhd%",
+            "Country": "=\"Australia\"",
+            "CurrentAccountId": "=%ACOId%",
+            "Latitude": "=%ACO_Candidates:latitude%",
+            "LevelNumber": "=%ACO_Candidates:level_name%",
+            "LevelType": "=%ACO_Candidates:level_type%",
+            "LocationType": "=\"Registered Business Address\"",
+            "Longitude": "=%ACO_Candidates:longitude%",
+            "LotNumber": "=%ACO_Candidates:place_name%",
+            "Postcode": "=%ACO_Candidates:postal%",
+            "State": "=IF(%ACO_Candidates:region% = \"OT\", \"NSW\", %ACO_Candidates:region%)",
+            "Street": "=%ACO_Candidates:st_name%",
+            "StreetNumber": "=%ACO_Candidates:add_num%",
+            "StreetSuffixType": "=%ACO_Candidates:st_dir%",
+            "StreetTypeDescription": "=%ACO_Candidates:st_type%",
+            "UnitNumber": "=%ACO_Candidates:unit_name%",
+            "UnitType": "=%ACO_Candidates:unit_type%",
+            "ValidatedByCGIS": "=\"Yes\"",
+            "gnaf_pid": "=%ACO_Candidates:gnaf_pid%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "LocationAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 = \"false\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "ACOAddressId",
+        "responseJSONPath": "Address__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ApprovedProvider/Create/Procedure/ACO_Via_TypeAhead1"
+}

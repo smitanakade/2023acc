@@ -1,0 +1,46 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "SetReductionValue",
+    "OmniProcessId": {
+        "Name": "VariationReduction",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/Reduction/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "Place": "=IF(%VariationReductionStep:HasReduction%=\"Yes\", %VariationReductionStep:CustomLWC1:places%, %Place%)",
+            "RemainingPlaces": "=IF(%VariationReductionStep:HasReduction%=\"Yes\", %VariationReductionStep:CustomLWC1:remainingTotal%, %RemainingPlaces%)"
+        },
+        "label": "SetReductionValue",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Yes",
+                        "field": "VariationReductionStep:HasReduction"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/Reduction/English/SetReductionValue"
+}

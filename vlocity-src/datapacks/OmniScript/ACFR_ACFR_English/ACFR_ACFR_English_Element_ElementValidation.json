@@ -1,0 +1,46 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "ElementValidation",
+    "OmniProcessId": {
+        "Name": "QFR Viability Questions - Residential Care Form - Provider - Validation Errors",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/ACFR/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "RDCapitalWorksDelayValidation": "=IF(%RDCapitalWorksDelay% == \"No\", true, IF(%RDCapitalWorksDelay% ==\"Yes\", IF(%TXTACapitalWorksDelay%!=NULL, true, false), false)) ",
+            "RDCapitalWorksUnderwayValidation": "=IF(%RDCapitalWorksUnderway% == \"No\", true, IF(%RDCapitalWorksUnderway% ==\"Yes\", IF(%TXTACapitalWorksUnderway%!=NULL, true, false), false))",
+            "RDCashFinancialAssetsValidation": "=IF(%RDCashFinancialAssets% == \"No\", true, IF(%RDCashFinancialAssets% ==\"Yes\", IF(%TXTACashFinancialAssets%!=NULL, true, false), false))",
+            "RDChangesToManagementValidation": "=IF(%RDChangesToManagement% == \"No\", true, IF(%RDChangesToManagement% ==\"Yes\", IF(%TXTAChangeToManagement%!=NULL, true, false), false))",
+            "RDClosingOrSellingValidation": "=IF(%RDClosingOrSelling% == \"No\", true, IF(%RDClosingOrSelling% ==\"Yes\", IF(%TXTAClosingOrSelling%!=NULL, true, false), false))",
+            "RDCurrentBusinessImprovementStrategyValidation": "=IF(%RDCurrentBusinessImprovementStrategy% == \"No\", true, IF(%RDBusinessImprovementAdvice% ==\"Yes\", IF(%TXTABusinessImprovementAdviceAusGovBusinessAdvisoryService%!=NULL, true, false), IF(%RDBusinessImprovementAdvice% == \"No\", true,  false)))",
+            "RDCurrentOccupancyValidation": "=IF(%RDCurrentOccupancy% == \"No\", true, IF(%RDCurrentOccupancy% ==\"Yes\", IF(%TXTACurrentOccupancy%!=NULL, true, false), false))",
+            "RDForecastLossValidation": "=IF(%RDForecastLoss% == \"No\", true, IF(%RDForecastLoss% ==\"Yes\", IF(%TXTAForecastLoss%!=NULL, true, false), false))",
+            "RDPurchaseAdditionalHomeCareValidation": "=IF(%RDPurchaseAdditionalHomeCare% == \"No\", true, IF(%RDPurchaseAdditionalHomeCare% ==\"Yes\", IF(%TXTAPurchaseAdditionalHomeCare%!=NULL, true, false), false))",
+            "RDRefundableAccomodationDepositsValidation": "=IF(%RDRefundableAccomodationDeposits% == \"No\" || (%RDRefundableAccomodationDeposits% ==\"Yes\" && %TXTARefundableAccomodationDeposits%!=NULL), true, false)",
+            "RDRetainingStaffValidation": "=IF(%RDRetainingStaff% == \"No\", true, IF(%RDRetainingStaff% ==\"Yes\", IF(%TXTARetainingStaff%!=NULL, true, false), false))",
+            "RDSolvencySixMonthsValidation": "=IF(%RDSolvencySixMonths% == \"No\", true, IF(%RDSolvencySixMonths% ==\"Yes\", IF(%TXTASolvencySixMonths%!=NULL, true, false), false))",
+            "SolvencyConcernvalidation": "= IF(%RDSolvencyConcern% == \"No\", true, IF(%RDSolvencyConcern% ==\"Yes\", IF(%TXTASolvencyConcern%!=NULL, true, false), false))"
+        },
+        "label": "elementValidation",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/ACFR/English/ElementValidation"
+}

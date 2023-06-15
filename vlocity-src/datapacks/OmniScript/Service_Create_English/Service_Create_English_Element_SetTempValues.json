@@ -1,0 +1,39 @@
+{
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetTempValues",
+    "OmniProcessId": {
+        "Name": "CreateService",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Service/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "FlexibleCareCount": "=0",
+            "HomeCareCount": "=0",
+            "NATSIFACCareCount": "=1",
+            "ProviderName": "=\"Service Creation Demo\"",
+            "RecordType": "National_Aboriginal_and_Torres_Strait_Islander_Flexible_Aged_Care",
+            "ResidentialCareCount": "=1",
+            "accountId": "=\"0019r000003oy0rAAA\""
+        },
+        "label": "SetTempValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Service/Create/English/SetTempValues"
+}

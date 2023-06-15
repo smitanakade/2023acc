@@ -1,0 +1,28 @@
+{
+    "CustomJavaScript": "Integration_ABNValidation_SampleInput.json",
+    "Description": "Integration between SF-Mulesoft-ABR",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "ABNValidationWithABR",
+    "OmniProcessElement": [
+        "Integration_ABNValidation_Element_TryCatchBlock.json",
+        "Integration_ABNValidation_Element_HTTPAction.json",
+        "Integration_ABNValidation_Element_ABNResponseTransformJSONToJSON.json",
+        "Integration_ABNValidation_Element_ResponseABNValidation.json"
+    ],
+    "OmniProcessKey": "Integration_ABNValidation",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "Integration_ABNValidation_PropertySetConfig.json",
+    "SubType": "ABNValidation",
+    "Type": "Integration",
+    "UniqueName": "Integration_ABNValidation_Procedure_3",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/Integration/ABNValidation/Procedure",
+    "WebComponentKey": "c1cfdf89-0501-c018-ba28-88ac2d5afa9d"
+}

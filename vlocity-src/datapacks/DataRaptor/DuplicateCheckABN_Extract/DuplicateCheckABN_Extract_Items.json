@@ -1,0 +1,305 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom8910",
+        "InputFieldName": "Id",
+        "InputObjectName": "Account",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "ABNDuplicateCheck",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "COUNTQUERY ( \"SELECT COUNT() FROM Account WHERE ABN__c = '{0}'\" , ABN )",
+        "FormulaResultPath": "ABNDuplicateCheck:CountABN",
+        "FormulaSequence": 1,
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom6894",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (RecordTypeName = 'Administrative Organisation',(COUNTQUERY ( \"SELECT COUNT() FROM Account WHERE RecordType.DeveloperName = 'Administrative_Organisation' and ABN__c = '{0}'\" , ABN ),'')",
+        "FormulaResultPath": "ABNDuplicateCheck:CountAOABN",
+        "FormulaSequence": 7,
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom7051",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (RecordTypeName = 'Approved Provider',(COUNTQUERY ( \"SELECT COUNT() FROM Account WHERE RecordType.DeveloperName = 'Approved_Provider' and ABN__c = '{0}'\" , ABN ),'')",
+        "FormulaResultPath": "ABNDuplicateCheck:CountAPABN",
+        "FormulaSequence": 2,
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom5806",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (RecordTypeName = 'CHSP',(COUNTQUERY ( \"SELECT COUNT() FROM Account WHERE RecordType.DeveloperName = 'Commonwealth_Home_Support_Programme' and ABN__c = '{0}'\" , ABN ),'')",
+        "FormulaResultPath": "ABNDuplicateCheck:CountCHSPABN",
+        "FormulaSequence": 3,
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom9394",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (RecordTypeName = 'Management Company',(COUNTQUERY ( \"SELECT COUNT() FROM Account WHERE RecordType.DeveloperName = 'Management_Company' and ABN__c = '{0}'\" , ABN ),'')",
+        "FormulaResultPath": "ABNDuplicateCheck:CountMCABN",
+        "FormulaSequence": 4,
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom1409",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (RecordTypeName = 'NATSIFAC',(COUNTQUERY ( \"SELECT COUNT() FROM Account WHERE RecordType.DeveloperName = 'National_Aboriginal_and_Torres_Strait_Islander_Flexible_Aged_Care' and ABN__c = '{0}'\" , ABN ),'')",
+        "FormulaResultPath": "ABNDuplicateCheck:CountNATSIFACABN",
+        "FormulaSequence": 5,
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom1644",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (RecordTypeName = 'Service Delivery Organisation',(COUNTQUERY ( \"SELECT COUNT() FROM Account WHERE RecordType.DeveloperName = 'Service_Delivery_Organisation' and ABN__c = '{0}'\" , ABN ),'')",
+        "FormulaResultPath": "ABNDuplicateCheck:CountSDOABN",
+        "FormulaSequence": 6,
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom1557",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom9041",
+        "InputFieldName": "ABNDuplicateCheck:CountABN",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ABNDuplicateCheck:CountABN",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom3726",
+        "InputFieldName": "ABNDuplicateCheck:CountAOABN",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ABNDuplicateCheck:CountAOABN",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom4998",
+        "InputFieldName": "ABNDuplicateCheck:CountAPABN",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ABNDuplicateCheck:CountAPABN",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom1692",
+        "InputFieldName": "ABNDuplicateCheck:CountCHSPABN",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ABNDuplicateCheck:CountCHSPABN",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom429",
+        "InputFieldName": "ABNDuplicateCheck:CountMCABN",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ABNDuplicateCheck:CountMCABN",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom3929",
+        "InputFieldName": "ABNDuplicateCheck:CountNATSIFACABN",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ABNDuplicateCheck:CountNATSIFACABN",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicateCheckABN_ExtractCustom7316",
+        "InputFieldName": "ABNDuplicateCheck:CountSDOABN",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicateCheckABN_Extract",
+        "OmniDataTransformationId": {
+            "Name": "DuplicateCheckABN_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicateCheckABN_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ABNDuplicateCheck:CountSDOABN",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

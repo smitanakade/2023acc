@@ -1,0 +1,623 @@
+{
+    "dataSource": {
+        "contextVariables": [
+            {
+                "id": 10,
+                "name": "recordId",
+                "val": "0cE9r0000000MF3EAM"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "ServiceId": "{recordId}"
+            },
+            "ipMethod": "ServicePlaces_ServicePlaces",
+            "resultVar": "",
+            "vlocityAsync": false
+        }
+    },
+    "enableLwc": true,
+    "isFlex": true,
+    "lwc": {
+        "DeveloperName": "cfApprovedProviderServicePlaces_Parent_1_GPMS",
+        "Id": "0RbBm0000003LJFKA2",
+        "ManageableState": "unmanaged",
+        "MasterLabel": "cfApprovedProviderServicePlaces_Parent_1_GPMS",
+        "NamespacePrefix": "c"
+    },
+    "osSupport": false,
+    "selectableMode": "Multi",
+    "states": [
+        {
+            "actions": [
+            ],
+            "blankCardState": false,
+            "childCards": [
+                "ApprovedProviderServicePlaces_MPS_Child"
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "childCardPreview",
+                            "elementLabel": "FlexCard-0",
+                            "name": "FlexCard",
+                            "property": {
+                                "cardName": "ApprovedProviderServicePlaces_MPS_Child",
+                                "cardNode": "{record}",
+                                "isChildCardTrackingEnabled": false,
+                                "parentAttribute": {
+                                    "Ceased": "{Ceased}",
+                                    "Ceased_Allocation": "{Ceased_Allocation}",
+                                    "Ceased_HomeCare": "{Ceased_HomeCare}",
+                                    "Ceased_Pre1997": "{Ceased_Pre1997}",
+                                    "Ceased_Residential": "{Ceased_Residential}",
+                                    "Ceased_Specified": "{Ceased_Specified}",
+                                    "Ceased_Transfer": "{Ceased_Transfer}",
+                                    "Ceased_Variation": "{Ceased_Variation}",
+                                    "Offline": "{Offline}",
+                                    "Offline_Allocation": "{Offline_Allocation}",
+                                    "Offline_HomeCare": "{Offline_HomeCare}",
+                                    "Offline_Pre1997": "{Offline_Pre1997}",
+                                    "Offline_Residential": "{Offline_Residential}",
+                                    "Offline_Specified": "{Offline_Specified}",
+                                    "Offline_Transfer": "{Offline_Transfer}",
+                                    "Offline_Variation": "{Offline_Variation}",
+                                    "Operational": "{Operational}",
+                                    "Operational_Allocation": "{Operational_Allocation}",
+                                    "Operational_HomeCare": "{Operational_HomeCare}",
+                                    "Operational_Pre1997": "{Operational_Pre1997}",
+                                    "Operational_Residential": "{Operational_Residential}",
+                                    "Operational_Specified": "{Operational_Specified}",
+                                    "Operational_Transfer": "{Operational_Transfer}",
+                                    "Operational_Variation": "{Operational_Variation}",
+                                    "Provisional": "{Provisional}",
+                                    "Provisional_Allocation": "{Provisional_Allocation}",
+                                    "Provisional_HomeCare": "{Provisional_HomeCare}",
+                                    "Provisional_Pre1997": "{Provisional_Pre1997}",
+                                    "Provisional_Residential": "{Provisional_Residential}",
+                                    "Provisional_Specified": "{Provisional_Specified}",
+                                    "Provisional_Transfer": "{Provisional_Transfer}",
+                                    "Provisional_Variation": "{Provisional_Variation}"
+                                },
+                                "recordId": "{recordId}",
+                                "selectedState": "Active"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                    {
+                        "field": "CareSubType",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-8",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Multi-Purpose Service"
+                    }
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "MPS",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "background": {
+                    "color": "",
+                    "image": "",
+                    "position": "",
+                    "repeat": "",
+                    "size": ""
+                },
+                "border": {
+                    "color": "",
+                    "radius": "",
+                    "style": "",
+                    "type": "",
+                    "width": ""
+                },
+                "class": "slds-card ",
+                "container": {
+                    "class": "slds-card"
+                },
+                "elementStyleProperties": {
+                },
+                "inlineStyle": "",
+                "margin": [
+                ],
+                "padding": [
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12 ",
+                "style": "      \n         ",
+                "text": {
+                    "align": "",
+                    "color": ""
+                }
+            }
+        },
+        {
+            "actions": [
+            ],
+            "blankCardState": false,
+            "childCards": [
+                "ApprovedProviderServicePlaces_InnPool_Child"
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "childCardPreview",
+                            "elementLabel": "FlexCard-0",
+                            "name": "FlexCard",
+                            "property": {
+                                "cardName": "ApprovedProviderServicePlaces_InnPool_Child",
+                                "cardNode": "{record}",
+                                "isChildCardTrackingEnabled": false,
+                                "parentAttribute": {
+                                    "Ceased": "{Ceased}",
+                                    "Ceased_Allocation": "{Ceased_Allocation}",
+                                    "Ceased_Community": "{Ceased_Community}",
+                                    "Ceased_High": "{Ceased_High}",
+                                    "Ceased_Low": "{Ceased_Low}",
+                                    "Ceased_Pre1997": "{Ceased_Pre1997}",
+                                    "Ceased_Specified": "{Ceased_Specified}",
+                                    "Ceased_Transfer": "{Ceased_Transfer}",
+                                    "Ceased_Variation": "{Ceased_Variation}",
+                                    "Offline": "{Offline}",
+                                    "Offline_Allocation": "{Offline_Allocation}",
+                                    "Offline_Community": "{Offline_Community}",
+                                    "Offline_High": "{Offline_High}",
+                                    "Offline_Low": "{Offline_Low}",
+                                    "Offline_Pre1997": "{Offline_Pre1997}",
+                                    "Offline_Specified": "{Offline_Specified}",
+                                    "Offline_Transfer": "{Offline_Transfer}",
+                                    "Offline_Variation": "{Offline_Variation}",
+                                    "Operational": "{Operational}",
+                                    "Operational_Allocation": "{Operational_Allocation}",
+                                    "Operational_Community": "{Operational_Community}",
+                                    "Operational_High": "{Operational_High}",
+                                    "Operational_Low": "{Operational_Low}",
+                                    "Operational_Pre1997": "{Operational_Pre1997}",
+                                    "Operational_Specified": "{Operational_Specified}",
+                                    "Operational_Transfer": "{Operational_Transfer}",
+                                    "Operational_Variation": "{Operational_Variation}",
+                                    "Provisional": "{Provisional}",
+                                    "Provisional_Allocation": "{Provisional_Allocation}",
+                                    "Provisional_Community": "{Provisional_Community}",
+                                    "Provisional_High": "{Provisional_High}",
+                                    "Provisional_Low": "{Provisional_Low}",
+                                    "Provisional_Pre1997": "{Provisional_Pre1997}",
+                                    "Provisional_Specified": "{Provisional_Specified}",
+                                    "Provisional_Transfer": "{Provisional_Transfer}",
+                                    "Provisional_Variation": "{Provisional_Variation}"
+                                },
+                                "recordId": "{recordId}",
+                                "selectedState": "Innovative Pool"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 1,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                    {
+                        "field": "CareSubType",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-8",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Innovative Pool"
+                    }
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Innovative Pool",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "background": {
+                    "color": "",
+                    "image": "",
+                    "position": "",
+                    "repeat": "",
+                    "size": ""
+                },
+                "border": {
+                    "color": "",
+                    "radius": "",
+                    "style": "",
+                    "type": "",
+                    "width": ""
+                },
+                "class": "slds-card ",
+                "container": {
+                    "class": "slds-card"
+                },
+                "elementStyleProperties": {
+                },
+                "inlineStyle": "",
+                "margin": [
+                ],
+                "padding": [
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12 ",
+                "style": "      \n         ",
+                "text": {
+                    "align": "",
+                    "color": ""
+                }
+            }
+        },
+        {
+            "actions": [
+            ],
+            "blankCardState": false,
+            "childCards": [
+                "ApprovedProviderServicePlaces_Flexible_Child"
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "childCardPreview",
+                            "elementLabel": "FlexCard-0",
+                            "name": "FlexCard",
+                            "property": {
+                                "cardName": "ApprovedProviderServicePlaces_Flexible_Child",
+                                "cardNode": "{record}",
+                                "isChildCardTrackingEnabled": false,
+                                "parentAttribute": {
+                                    "CareSubType": "{CareSubType}",
+                                    "Ceased": "{Ceased}",
+                                    "Ceased_Allocation": "{Ceased_Allocation}",
+                                    "Ceased_CareSettingHC": "{Ceased_CareSettingHC}",
+                                    "Ceased_CareSettingMixed": "{Ceased_CareSettingMixed}",
+                                    "Ceased_CareSettingResi": "{Ceased_CareSettingResi}",
+                                    "Ceased_CareSettingTBC": "{Ceased_CareSettingTBC}",
+                                    "Ceased_Pre1997": "{Ceased_Pre1997}",
+                                    "Ceased_Specified": "{Ceased_Specified}",
+                                    "Ceased_Transfer": "{Ceased_Transfer}",
+                                    "Ceased_Variation": "{Ceased_Variation}",
+                                    "Offline": "{Offline}",
+                                    "Offline_Allocation": "{Offline_Allocation}",
+                                    "Offline_CareSettingHC": "{Offline_CareSettingHC}",
+                                    "Offline_CareSettingMixed": "{Offline_CareSettingMixed}",
+                                    "Offline_CareSettingResi": "{Offline_CareSettingResi}",
+                                    "Offline_CareSettingTBC": "{Offline_CareSettingTBC}",
+                                    "Offline_Pre1997": "{Offline_Pre1997}",
+                                    "Offline_Specified": "{Offline_Specified}",
+                                    "Offline_Transfer": "{Offline_Transfer}",
+                                    "Offline_Variation": "{Offline_Variation}",
+                                    "Operational": "{Operational}",
+                                    "Operational_Allocation": "{Operational_Allocation}",
+                                    "Operational_CareSettingHC": "{Operational_CareSettingHC}",
+                                    "Operational_CareSettingMixed": "{Operational_CareSettingMixed}",
+                                    "Operational_CareSettingResi": "{Operational_CareSettingResi}",
+                                    "Operational_CareSettingTBC": "{Operational_CareSettingTBC}",
+                                    "Operational_Pre1997": "{Operational_Pre1997}",
+                                    "Operational_Specified": "{Operational_Specified}",
+                                    "Operational_Transfer": "{Operational_Transfer}",
+                                    "Operational_Variation": "{Operational_Variation}",
+                                    "Provisional": "{Provisional}",
+                                    "Provisional_Allocation": "{Provisional_Allocation}",
+                                    "Provisional_CareSettingHC": "{Provisional_CareSettingHC}",
+                                    "Provisional_CareSettingMixed": "{Provisional_CareSettingMixed}",
+                                    "Provisional_CareSettingResi": "{Provisional_CareSettingResi}",
+                                    "Provisional_CareSettingTBC": "{Provisional_CareSettingTBC}",
+                                    "Provisional_Pre1997": "{Provisional_Pre1997}",
+                                    "Provisional_Specified": "{Provisional_Specified}",
+                                    "Provisional_Transfer": "{Provisional_Transfer}",
+                                    "Provisional_Variation": "{Provisional_Variation}"
+                                },
+                                "recordId": "{recordId}",
+                                "selectedState": "Active"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 2,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                    {
+                        "field": "CareSubType",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-8",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Short-Term Restorative Care (STRC)"
+                    },
+                    {
+                        "field": "CareSubType",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-6",
+                        "logicalOperator": "||",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Transition Care"
+                    }
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Transition/STRC",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "background": {
+                    "color": "",
+                    "image": "",
+                    "position": "",
+                    "repeat": "",
+                    "size": ""
+                },
+                "border": {
+                    "color": "",
+                    "radius": "",
+                    "style": "",
+                    "type": "",
+                    "width": ""
+                },
+                "class": "slds-card ",
+                "container": {
+                    "class": "slds-card"
+                },
+                "elementStyleProperties": {
+                },
+                "inlineStyle": "",
+                "margin": [
+                ],
+                "padding": [
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12 ",
+                "style": "      \n         ",
+                "text": {
+                    "align": "",
+                    "color": ""
+                }
+            }
+        },
+        {
+            "actions": [
+            ],
+            "blankCardState": false,
+            "childCards": [
+                "ApprovedProviderServicePlaces_Residential_Child"
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "childCardPreview",
+                            "elementLabel": "FlexCard-0",
+                            "name": "FlexCard",
+                            "property": {
+                                "cardName": "ApprovedProviderServicePlaces_Residential_Child",
+                                "cardNode": "{record}",
+                                "isChildCardTrackingEnabled": false,
+                                "parentAttribute": {
+                                    "Ceased": "{Ceased}",
+                                    "Ceased_Allocation": "{Ceased_Allocation}",
+                                    "Ceased_Pre1997": "{Ceased_Pre1997}",
+                                    "Ceased_Specified": "{Ceased_Specified}",
+                                    "Ceased_Transfer": "{Ceased_Transfer}",
+                                    "Ceased_Variation": "{Ceased_Variation}",
+                                    "Offline": "{Offline}",
+                                    "Offline_Allocation": "{Offline_Allocation}",
+                                    "Offline_Pre1997": "{Offline_Pre1997}",
+                                    "Offline_Specified": "{Offline_Specified}",
+                                    "Offline_Transfer": "{Offline_Transfer}",
+                                    "Offline_Variation": "{Offline_Variation}",
+                                    "Operational": "{Operational}",
+                                    "Operational_Allocation": "{Operational_Allocation}",
+                                    "Operational_Pre1997": "{Operational_Pre1997}",
+                                    "Operational_Specified": "{Operational_Specified}",
+                                    "Operational_Transfer": "{Operational_Transfer}",
+                                    "Operational_Variation": "{Operational_Variation}",
+                                    "Provisional": "{Provisional}",
+                                    "Provisional_Allocation": "{Provisional_Allocation}",
+                                    "Provisional_Pre1997": "{Provisional_Pre1997}",
+                                    "Provisional_Specified": "{Provisional_Specified}",
+                                    "Provisional_Transfer": "{Provisional_Transfer}",
+                                    "Provisional_Variation": "{Provisional_Variation}"
+                                },
+                                "recordId": "{recordId}",
+                                "selectedState": "Residential"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                    {
+                        "field": "CareType",
+                        "hasMergeField": false,
+                        "id": "state-new-condition-8",
+                        "operator": "==",
+                        "type": "custom",
+                        "value": "Residential"
+                    }
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Residential",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "background": {
+                    "color": "",
+                    "image": "",
+                    "position": "",
+                    "repeat": "",
+                    "size": ""
+                },
+                "border": {
+                    "color": "",
+                    "radius": "",
+                    "style": "",
+                    "type": "",
+                    "width": ""
+                },
+                "class": "slds-card ",
+                "container": {
+                    "class": "slds-card"
+                },
+                "elementStyleProperties": {
+                },
+                "inlineStyle": "",
+                "margin": [
+                ],
+                "padding": [
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12 ",
+                "style": "      \n         ",
+                "text": {
+                    "align": "",
+                    "color": ""
+                }
+            }
+        }
+    ],
+    "theme": "slds",
+    "title": "ApprovedProviderServicePlaces_Parent",
+    "xmlJson": [
+        {
+            "@attributes": {
+                "targets": "lightning__AppPage"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "name": "recordId",
+                        "type": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "@attributes": {
+                "targets": "lightning__RecordPage"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                }
+            ]
+        }
+    ],
+    "xmlObject": {
+        "masterLabel": "ApprovedProviderServicePlaces_Parent",
+        "targetConfigs": "PHRhcmdldENvbmZpZyB0YXJnZXRzPSJsaWdodG5pbmdfX0FwcFBhZ2UiPgogICAgICAgICAgICAgICAgICAgICAgPHByb3BlcnR5IG5hbWU9ImRlYnVnIiB0eXBlPSJCb29sZWFuIi8+CiAgICAgICAgICAgICAgICAgICAgICA8cHJvcGVydHkgbmFtZT0icmVjb3JkSWQiIHR5cGU9IlN0cmluZyIvPgogICAgICAgICAgICAgICAgICA8L3RhcmdldENvbmZpZz4KICAgICAgICAgICAgICAgICAgPHRhcmdldENvbmZpZyB0YXJnZXRzPSJsaWdodG5pbmdfX1JlY29yZFBhZ2UiPgogICAgICAgICAgICAgICAgICAgICAgPHByb3BlcnR5IG5hbWU9ImRlYnVnIiB0eXBlPSJCb29sZWFuIi8+CiAgICAgICAgICAgICAgICAgIDwvdGFyZ2V0Q29uZmlnPg==",
+        "targets": {
+            "target": [
+                "lightning__RecordPage",
+                "lightning__AppPage",
+                "lightning__HomePage"
+            ]
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "HomeCareProviderFinancialPerformanceSurveyIsComplete  - carla test",
+    "OmniProcessId": {
+        "Name": "QFR Viability Questions - Home Care Form - Provider - Validation Errors",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveProviderHomeCareQuestions/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "STViabiltyQuestionsHomeCareProviderIsComplete": "=IF(%RDHCSolvencyConcernValidation%==true, IF(%RDHCSolvencySixMonthsValidation%==true, IF(%RDHCForecastLossValidation%==true, IF(%RDHCCashFinancialAssetsValidation%==true, IF(%RDHCClosingOrSellingValidation%==true, IF(%RDHCPurchaseAdditionalHomeCareValidation%==true, IF(%RDHCStrategyAlignmentValidation%==true, IF(%RDHCChangesToManagementValidation%==true, IF(%RDHCRetainingStaffValidation%==true,true, false), false), false), false), false), false), false), false), false)"
+        },
+        "label": "STViabiltyQuestionsHomeCareProviderComplete",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveProviderHomeCareQuestions/English/HomeCareProviderFinancialPerformanceSurveyIsComplete  - carla test"
+}

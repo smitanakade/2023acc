@@ -1,0 +1,47 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "LocationServiceAddresses/GPMS/3.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 2,
+                "name": "recordId",
+                "val": "0cE9r0000000KmjEAE"
+            },
+            {
+                "id": 5,
+                "name": "User.userId",
+                "val": "0059r000000yR6z"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "RecordId": "{recordId}",
+                "userId": "{User.userId}"
+            },
+            "ipMethod": "LocationAddress_RelatedList",
+            "resultVar": "[\"LocationAddress\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "Related List for Location Service Addresses History",
+    "IsTrackingEnabled": false,
+    "Name": "LocationServiceAddressesHistory",
+    "Namespace": "",
+    "OmniUiCardKey": "LocationServiceAddressesHistory/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "LocationServiceAddressesHistory.json",
+    "SampleDataSourceResponse": "{\"LocationAddress\":[{\"AccountRecordType\":\"NotApplicable\",\"AddressId\":\"a1o9r000000gEjJAAU\",\"AddressType\":\"Postal\",\"ServiceType\":\"Approved Provider Service\",\"AddressEffectiveDate\":\"26/8/2022\",\"AddressName\":\"ADR-0000869\",\"ContactRelRecordType\":\"NotApplicable\",\"ServiceId\":\"0cE9r0000000KmjEAE\",\"ValidatedByCGIS\":\"Yes\",\"ContactRelId\":\"NotApplicable\",\"MaxAdditionalCampus\":0,\"CareOf\":\"NotApplicable\",\"LocationId\":\"a1p9r0000007EmEAAU\",\"BuildingName\":\"NAB\",\"AddressIneffectiveDate\":\"NotApplicable\",\"AddressString\":\"800 BOURKE STREET, UNIT 1 LEVEL 2, DOCKLANDS, VIC, 3008\",\"AccountId\":\"NotApplicable\",\"allowedProfileDevName\":\"ASCQSC_Super_Users\",\"POBox\":\"NotApplicable\"},{\"AccountRecordType\":\"NotApplicable\",\"AddressId\":\"a1o9r000000gEjJAAU\",\"AddressType\":\"Physical\",\"ServiceType\":\"Approved Provider Service\",\"AddressEffectiveDate\":\"26/8/2022\",\"AddressName\":\"ADR-0000869\",\"ContactRelRecordType\":\"NotApplicable\",\"ServiceId\":\"0cE9r0000000KmjEAE\",\"ValidatedByCGIS\":\"Yes\",\"ContactRelId\":\"NotApplicable\",\"MaxAdditionalCampus\":0,\"CareOf\":\"NotApplicable\",\"LocationId\":\"a1p9r0000007EmDAAU\",\"BuildingName\":\"NAB\",\"AddressIneffectiveDate\":\"NotApplicable\",\"AddressString\":\"800 BOURKE STREET, UNIT 1 LEVEL 2, DOCKLANDS, VIC, 3008\",\"AccountId\":\"NotApplicable\",\"allowedProfileDevName\":\"ASCQSC_Super_Users\",\"POBox\":\"NotApplicable\"}],\"AccountParams\":{\"ContactRelRecordType\":\"NotApplicable\",\"AccountRecordType\":\"NotApplicable\",\"AdminLiquidatorCount\":0,\"ContactCount\":0},\"ServiceParams\":{\"ServiceRecordType\":\"Approved Provider Service\",\"MaxAdditionalCampus\":0,\"ServicePostalAddressCount\":1,\"ServicePhysicalAddressCount\":1,\"allowedProfileDevName\":\"ASCQSC_Super_Users\",\"CareType\":\"Home Care\"}}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/LocationServiceAddressesHistory"
+}

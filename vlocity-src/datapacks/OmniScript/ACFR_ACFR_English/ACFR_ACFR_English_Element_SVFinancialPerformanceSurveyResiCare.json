@@ -1,0 +1,47 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "SVFinancialPerformanceSurveyResiCare",
+    "OmniProcessId": {
+        "Name": "QFR Viability Questions - Residential Care Form - Provider - Validation Errors",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/ACFR/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "SVBuildingDelayFlag": "IF(OR(%RDCapitalWorksDelay% == NULL, AND(%RDCapitalWorksDelay% == \"Yes\", %TXTACapitalWorksDelay% == NULL)), \"NotOK\", \"OK\")",
+            "SVBusinessAdvisoryServiceFlag": "=IF(OR(%RDBusinessImprovementAdvice% == NULL, AND(%RDBusinessImprovementAdvice% == \"Yes\", %TXTABusinessImprovementAdvice% == NULL)), \"NotOK\", \"OK\")",
+            "SVBusinessImprovementAdviceFlag": "=IF(OR(%RDBusinessImprovementAdvice% == NULL, AND(%RDBusinessImprovementAdvice% == \"Yes\", %TXTABusinessImprovementAdvice% == NULL)), \"NotOK\", \"OK\")",
+            "SVCapitalWorksFlag": "=IF(OR(%RDCapitalWorksUnder% == NULL, AND(%RDCapitalWorksUnderway% == \"Yes\", %TXTACapitalWorksUnderway% == NULL)), \"NotOK\", \"OK\")",
+            "SVCashFinancialAssetsFlag": "=IF(OR(%RDCashFinancialAssets% == NULL, AND(%RDCashFinancialAssets% == \"Yes\", %TXTACashFinancialAssets% == NULL)), \"NotOK\", \"OK\")",
+            "SVChangesToManagementFlag": "=IF(OR(%RDChangesToManagement% == NULL, AND(%RDChangesToManagement% == \"Yes\", %TXTAChangeToManagement% == NULL)), \"NotOK\", \"OK\")",
+            "SVClosingOrSellingFlag": "=IF(OR(%RDClosingOrSelling% == NULL, AND(%RDClosingOrSelling% == \"Yes\", %TXTAClosingOrSelling% == NULL)), \"NotOK\", \"OK\")",
+            "SVCurrentOccupancyFlag": "=IF(OR(%RDCurrentOccupancy% == NULL, AND(%RDCurrentOccupancy% == \"Yes\", %TXTACurrentOccupancy% == NULL)), \"NotOK\", \"OK\")",
+            "SVForecastLossFlag": "=IF(OR(%RDForecastLoss% == NULL, AND(%RDForecastLoss% == \"Yes\", %TXTAForecastLoss% == NULL)), \"NotOK\", \"OK\")",
+            "SVPurchaseAdditionalResiCareFlag": "=IF(OR(%RDPurchaseAdditionalHomeCare% == NULL, AND(%RDPurchaseAdditionalHomeCare% == \"Yes\", %TXTAPurchaseAdditionalHomeCare% == NULL)), \"NotOK\", \"OK\")",
+            "SVRefundableAccomodationDepositsFlag": "=IF(OR(%RDRefundableAccomodationDeposits% == NULL, AND(%RDRefundableAccomodationDeposits% == \"Yes\", %TXTARefundableAccomodationDeposits% == NULL)), \"NotOK\", \"OK\")",
+            "SVRetainingStaffFlag": "=IF(OR(%RDRetainingStaff% == NULL, AND(%RDRetainingStaff% == \"Yes\", %TXTARetainingStaff% == NULL)), \"NotOK\", \"OK\")",
+            "SVSolvencyConcernFlag": "=IF(OR(%RDSolvencyConcern% == NULL, AND(%RDSolvencyConcern% == \"Yes\", %TXTASolvencyConcern% == NULL)), \"NotOK\", \"OK\")",
+            "SVSolvencySixMonthsFlag": "=IF(OR(%RDSolvencySixMonths% == NULL, AND(%RDSolvencySixMonths% == \"Yes\", %TXTASolvencySixMonths% == NULL)), \"NotOK\", \"OK\")"
+        },
+        "label": "SVFinancialPerformanceSurveyResiCare",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/ACFR/English/SVFinancialPerformanceSurveyResiCare"
+}

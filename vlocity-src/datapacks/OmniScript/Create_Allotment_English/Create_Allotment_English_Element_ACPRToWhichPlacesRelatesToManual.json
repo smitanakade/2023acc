@@ -1,0 +1,131 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ACPRToWhichPlacesRelatesToManual",
+    "OmniProcessId": {
+        "Name": "CreateAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Create/Allotment/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ServiceToWhichAllotmentRelates",
+        "OmniProcessId": {
+            "Name": "CreateAllotment",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Create/Allotment/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Create/Allotment/English/ServiceToWhichAllotmentRelates",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ServiceToWhichAllotmentRelates",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "clearValue": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 6,
+        "dataSource": {
+            "mapItems": {
+                "inputParameters": [
+                    {
+                        "element": "ServiceToWhichAllotmentRelates:CreateAllotmentAddresses:AllotmentAddress|1:AddressState",
+                        "inputParam": "ACPRState"
+                    },
+                    {
+                        "element": "ACPRId",
+                        "inputParam": "ACPRId"
+                    }
+                ],
+                "phase1MapItems": [
+                    {
+                        "DomainObjectFieldAPIName__c": "ACPR",
+                        "FilterOperator__c": "=",
+                        "FilterValue__c": "ACPRState",
+                        "InterfaceFieldAPIName__c": "ACPR_State__c",
+                        "InterfaceObjectLookupOrder__c": 1,
+                        "InterfaceObjectName__c": "Aged_Care_Planning_Region__c"
+                    },
+                    {
+                        "DomainObjectFieldAPIName__c": "ACPR",
+                        "FilterOperator__c": "=",
+                        "FilterValue__c": "ACPRId",
+                        "InterfaceFieldAPIName__c": "Geospatial_Information_Layer_Version__c",
+                        "InterfaceObjectLookupOrder__c": 1,
+                        "InterfaceObjectName__c": "Aged_Care_Planning_Region__c"
+                    }
+                ],
+                "phase2MapItems": [
+                    {
+                        "DomainObjectAPIName__c": "JSON",
+                        "DomainObjectCreationOrder__c": 1,
+                        "DomainObjectFieldAPIName__c": "name",
+                        "InterfaceFieldAPIName__c": "ACPR:Id"
+                    },
+                    {
+                        "DomainObjectAPIName__c": "JSON",
+                        "DomainObjectCreationOrder__c": 1,
+                        "DomainObjectFieldAPIName__c": "value",
+                        "InterfaceFieldAPIName__c": "ACPR:Name"
+                    }
+                ]
+            },
+            "type": "SObject"
+        },
+        "defaultValue": null,
+        "disOnTplt": false,
+        "errorMessage": {
+            "custom": [
+            ],
+            "default": null
+        },
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "inputWidth": 12,
+        "label": "Aged Care Planning Region to which places relate:",
+        "placeholder": "",
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": true,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Residential",
+                        "field": "ServiceCareType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Approved_Provider_Service",
+                        "field": "RecordTypeDeveloperName"
+                    },
+                    {
+                        "condition": "<>",
+                        "data": null,
+                        "field": "ServiceToWhichAllotmentRelates:CreateAllotmentAddresses:AllotmentAddress"
+                    },
+                    {
+                        "condition": "=",
+                        "data": null,
+                        "field": "ServiceToWhichAllotmentRelates:CreateAllotmentAddresses:AllotmentAddress|1:GI"
+                    }
+                ]
+            }
+        },
+        "showInputWidth": false
+    },
+    "Type": "Lookup",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Create/Allotment/English/ACPRToWhichPlacesRelatesToManual"
+}

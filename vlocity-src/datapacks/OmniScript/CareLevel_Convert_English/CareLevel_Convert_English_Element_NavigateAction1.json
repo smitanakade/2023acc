@@ -1,0 +1,81 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "NavigateAction1",
+    "OmniProcessId": {
+        "Name": "ConvertCareLevelMix",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/CareLevel/Convert/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "businessCategory": "",
+        "businessEvent": "",
+        "controlWidth": 12,
+        "iconName": "",
+        "iconPosition": "left",
+        "iconVariant": "",
+        "label": "NavigateAction1",
+        "loginAction": "login",
+        "message": {
+        },
+        "objectAction": "home",
+        "pubsub": false,
+        "recordAction": "view",
+        "replace": true,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Not Applicable",
+                        "field": "WaiverType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "S14-1",
+                        "field": "AllotmentSubType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": null,
+                        "field": "MarkDocumentsAsSent"
+                    },
+                    {
+                        "group": {
+                            "operator": "OR",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "Residential",
+                                    "field": "ServiceCareSubType"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Short-Term Restorative Care (STRC)",
+                                    "field": "ServiceCareSubType"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "ssm": false,
+        "targetFilter": "Recent",
+        "targetId": "%AllotmentId%",
+        "targetLWCLayout": "lightning",
+        "targetName": "Allotment__c",
+        "targetType": "Record",
+        "validationRequired": "Submit",
+        "variant": "brand",
+        "wpm": false
+    },
+    "Type": "Navigate Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/CareLevel/Convert/English/NavigateAction1"
+}

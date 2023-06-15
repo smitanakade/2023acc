@@ -1,0 +1,80 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ACO_Via_Manual",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ACO_ADDRESSES_CREATED_NEW",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ACO_ADDRESSES_CREATED_NEW",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ACO_ADDRESSES_CREATED_NEW",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AddressEffectiveDate": "=IF(ISNOTBLANK(%ACOPostalAddresses:ACOPostalAddressBlock:ACOEffectiveDateFormula1%, true), %ACOPostalAddresses:ACOPostalAddressBlock:ACOEffectiveDateFormula1%, TODAY())",
+            "AddressId": "=%contactAddressACO:dupCheckResult:recordId%",
+            "AddressType": "=\"Account Address\"",
+            "BuildingName": "=%ACOPostalAddresses:ACOPostalAddressBlock:ACOBuildingName_Postal%",
+            "CareOf": "=%ACOPostalAddresses:ACOPostalAddressBlock:ACOPostalCareOf2%",
+            "City": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:nbrhd%",
+            "Country": "=\"Australia\"",
+            "CurrentAccountId": "=%ACOId%",
+            "Latitude": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:latitude%",
+            "LevelNumber": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:level_name%",
+            "LevelType": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:level_type%",
+            "LocationType": "=\"Registered Business Address\"",
+            "Longitude": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:longitude%",
+            "LotNumber": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:place_name%",
+            "Postcode": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:postal%",
+            "State": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:region%",
+            "Street": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:st_name%",
+            "StreetNumber": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:add_num%",
+            "StreetSuffixType": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:st_dir%",
+            "StreetTypeDescription": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:st_type%",
+            "UniqueKey": "=%contactAddressACO:dupCheckResult:concatAddress%",
+            "UnitNumber": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:unit_name%",
+            "UnitType": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:unit_type%",
+            "ValidatedByCGIS": "=\"Yes\"",
+            "gnaf_pid": "=%SelectPostalAddress:CustomLWC3:SelectedAddress:gnaf_pid%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "LocationAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1 =  \"true\" AND SelectPostalAddress:ACOCGISAddress1 = \"Yes\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "ACOAddressId",
+        "responseJSONPath": "Address__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ACO_Via_Manual"
+}

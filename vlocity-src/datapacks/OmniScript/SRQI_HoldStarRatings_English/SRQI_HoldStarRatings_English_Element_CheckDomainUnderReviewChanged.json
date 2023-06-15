@@ -1,0 +1,38 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CheckDomainUnderReviewChanged",
+    "OmniProcessId": {
+        "Name": "SRQI_OS_HoldStarRatings",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/HoldStarRatings/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "CERChangedToHold": "=%Service:CER_UnderReview% == false && %UpdatedDomains:CER_UnderReview% == true",
+            "CERChangedToRelease": "=%Service:CER_UnderReview% == true && %UpdatedDomains:CER_UnderReview% == false",
+            "CMChangedToHold": "=%Service:CM_UnderReview% == false && %UpdatedDomains:CM_UnderReview% == true",
+            "CMChangedToRelease": "=%Service:CM_UnderReview% == true && %UpdatedDomains:CM_UnderReview% == false",
+            "QIChangedToHold": "=%Service:QI_UnderReview% == false && %UpdatedDomains:QI_UnderReview% == true",
+            "QIChangedToRelease": "=%Service:QI_UnderReview% == true && %UpdatedDomains:QI_UnderReview% == false"
+        },
+        "label": "CheckDomainUnderReviewChanged",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/HoldStarRatings/English/CheckDomainUnderReviewChanged"
+}

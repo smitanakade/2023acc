@@ -1,0 +1,37 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "SetServiceId",
+    "OmniProcessId": {
+        "Name": "VariationServiceLocation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Variation/ServiceLocation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "ACPRName": "=IF(%ACPRName% = NULL, %VariationACPR:NewServiceACPRNew%, %ACPRName%)",
+            "NewAllotmentId": "=IF(%VariationServiceStep:ToAnotherServiceOrLocation% = \"No\", %VariationServiceId%, NULL)",
+            "RelocateServiceAddress": "=IF(%VariationService:ServicePlacesRelateAfterVariation% != null, %NewRelatedServiceFullAddress%, %FullAddress%)",
+            "RelocateServiceId": "=IF(%VariationService:ServicePlacesRelateAfterVariation% != null, %VariationService:ServicePlacesRelateAfterVariation%, %ServiceId%)",
+            "RelocateServiceName": "=IF(%VariationService:ServicePlacesRelateAfterVariation% != null, %NewRelatedServiceName%, %ServiceName%)"
+        },
+        "label": "SetServiceId",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Variation/ServiceLocation/English/SetServiceId"
+}

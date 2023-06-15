@@ -1,0 +1,52 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "NoCurrentAccreditationError",
+    "OmniProcessId": {
+        "Name": "CreateAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Create/Allotment/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementErrorMap": {
+            "StatusReasonS14-1": "The following issue(s) need to be fixed before you can create a new event: Residential service must have a current accreditation.",
+            "StatusReasonS14-9": "The following issue(s) need to be fixed before you can create a new event: Residential service must have a current accreditation."
+        },
+        "label": "No Current Accreditation Error",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "No",
+                        "field": "PlacesBelongingToAllotmentResidential:ProvisionalCheckResi"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "false",
+                        "field": "ServiceAddressNode:HasCurrentAccreditation"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "validationRequired": "Step",
+        "wpm": false
+    },
+    "Type": "Set Errors",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Create/Allotment/English/NoCurrentAccreditationError"
+}

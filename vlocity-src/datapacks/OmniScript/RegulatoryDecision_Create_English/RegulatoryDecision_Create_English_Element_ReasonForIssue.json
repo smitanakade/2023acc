@@ -1,0 +1,45 @@
+{
+    "Description": "ReasonForIssue",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ReasonForIssue",
+    "OmniProcessId": {
+        "Name": "SRQI_OS_RegulatoryDecision",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RegulatoryDecision/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RegulatoryDecision",
+        "OmniProcessId": {
+            "Name": "SRQI_OS_RegulatoryDecision",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/RegulatoryDecision/Create/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/RegulatoryDecision/Create/English/RegulatoryDecision",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RegulatoryDecision",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "bStandalone": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "customAttributes": [
+            {
+                "name": "records",
+                "source": "Reason for issuing the regulatory decision"
+            }
+        ],
+        "hide": false,
+        "label": "Reason for issuing the regulatory decision",
+        "lwcName": "sRQI_RegulatoryRichText",
+        "show": null
+    },
+    "Type": "Custom Lightning Web Component",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RegulatoryDecision/Create/English/ReasonForIssue"
+}

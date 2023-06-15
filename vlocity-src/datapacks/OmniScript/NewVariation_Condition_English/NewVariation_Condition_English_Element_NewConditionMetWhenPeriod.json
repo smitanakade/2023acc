@@ -1,0 +1,137 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "NewConditionMetWhenPeriod",
+    "OmniProcessId": {
+        "Name": "VariationNewAllotmentCondition",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/NewVariation/Condition/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "NewAllotmentConditions",
+        "OmniProcessId": {
+            "Name": "VariationNewAllotmentCondition",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/NewVariation/Condition/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/NewVariation/Condition/English/NewAllotmentConditions",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "NewAllotmentConditions",
+    "ParentElementType": "Edit Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "conditionType": "Hide if False",
+        "controlWidth": 9,
+        "controllingField": {
+            "element": "",
+            "source": "",
+            "type": ""
+        },
+        "defaultValue": null,
+        "disOnTplt": false,
+        "help": false,
+        "helpText": "",
+        "helpTextPos": "",
+        "hide": false,
+        "inputWidth": 12,
+        "label": "Within Period",
+        "optionSource": {
+            "source": "",
+            "type": ""
+        },
+        "options": [
+            {
+                "autoAdv": null,
+                "name": "Period",
+                "value": "Period"
+            },
+            {
+                "autoAdv": null,
+                "name": "Day(s)",
+                "value": "Day(s)"
+            },
+            {
+                "autoAdv": null,
+                "name": "Week(s)",
+                "value": "Week(s)"
+            },
+            {
+                "autoAdv": null,
+                "name": "Month(s)",
+                "value": "Month(s)"
+            },
+            {
+                "autoAdv": null,
+                "name": "Year(s)",
+                "value": "Year(s)"
+            }
+        ],
+        "readOnly": false,
+        "repeat": false,
+        "repeatClone": false,
+        "repeatLimit": null,
+        "required": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "group": {
+                            "operator": "OR",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "Target Group",
+                                    "field": "NewRecordTypeName|n"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Demonstrated Links",
+                                    "field": "NewRecordTypeName|n"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Residential Respite Care",
+                                    "field": "NewRecordTypeName|n"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Professional Planning of the Aged Care Service",
+                                    "field": "NewRecordTypeName|n"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "group": {
+                            "operator": "OR",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "Within [x] [period] after determination has been made under section 15-1 that the Approved Provider is ready to provide care",
+                                    "field": "NewConditionMetOptions|n"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "By a date [x] [period] after the date this allocation takes effect",
+                                    "field": "NewConditionMetOptions|n"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "showInputWidth": false
+    },
+    "Type": "Select",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/NewVariation/Condition/English/NewConditionMetWhenPeriod"
+}

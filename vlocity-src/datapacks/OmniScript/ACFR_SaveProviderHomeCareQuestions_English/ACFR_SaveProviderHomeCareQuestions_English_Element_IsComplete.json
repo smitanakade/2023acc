@@ -1,0 +1,34 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "IsComplete",
+    "OmniProcessId": {
+        "Name": "QFR Viability Questions - Home Care Form - Provider - Validation Errors",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/SaveProviderHomeCareQuestions/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "IsComplete": "=IF((%SVHCSolvencyConcernFlag% == \"OK\") && (%SVHCSolvencySixMonthsFlag% == \"OK\") && (%SVHCForecastLossFlag% == \"OK\") && (%SVHCCashFinancialAssetsFlag% == \"OK\") && (%SVHCClosingOrSellingFlag% == \"OK\") && (%SVHCPurchaseAdditionalHomeCareFlag% == \"OK\") && (%SVHCHomeCareRecipientsFlag% == \"OK\") && (%SVHCBusinessImprovementAdviceFlag% == \"OK\") && (%SVHCStrategyAlignmentFlag% == \"OK\") && (%SVHCChangesToManagementFlag% == \"OK\") && (%SVHCRetainingStaffFlag% == \"OK\"), true, false)"
+        },
+        "label": "IsComplete",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/SaveProviderHomeCareQuestions/English/IsComplete"
+}

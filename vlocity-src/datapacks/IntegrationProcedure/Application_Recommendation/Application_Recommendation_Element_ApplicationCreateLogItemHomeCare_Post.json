@@ -1,0 +1,62 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ApplicationCreateLogItemHomeCare_Post",
+    "OmniProcessId": {
+        "Name": "ApplicationRecommendationOutcome",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/Recommendation/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "NotDecision",
+        "OmniProcessId": {
+            "Name": "ApplicationRecommendationOutcome",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Application/Recommendation/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Application/Recommendation/Procedure/NotDecision",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "NotDecision",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "ApprovalStatus": "=%HomeCareStatus%",
+            "CareTypeDependencies": "=%HomeCareDep%",
+            "CareTypeId": "=%Application:HomeCare%",
+            "Confirm": "=%Confirm%",
+            "Decision": "=%HomeCareDecision%",
+            "DecisionType": "=%HomeCareDecisionType%",
+            "Dependencies": "=%HomeCareDependencies%",
+            "RecommendationItem": "=%RecommendationItem%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ApplicationCreateItem_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "HomeCare == \"true\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction6",
+        "responseJSONNode": "HomeCareItem",
+        "responseJSONPath": "Recommendation_Item_Care_Type__c_2:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/Recommendation/Procedure/ApplicationCreateLogItemHomeCare_Post"
+}

@@ -1,0 +1,79 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateNewAddress",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ServiceGEOCodedAddresses_Flexcard",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ServiceGEOCodedAddresses_Flexcard",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ServiceGEOCodedAddresses_Flexcard",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AdditionalCampus": "=IF(%AddressRecordType% = \"Additional Campus\", %MaxAdditionalCampus% + 1, NULL)",
+            "AddressEffectiveDate": "=TODAY()",
+            "AddressType": "=\"ServiceAddress\"",
+            "BuildingName": "=%ServiceAddresses:Address:BuildingName_Physical%",
+            "CGISOverride": "=IF(%SelectAddress:ManualCGISOverride% = \"Manual CGIS Override\" OR %SelectAddress:CGISAddress% = \"No\", \"true\", \"false\")",
+            "City": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:City% , %ServiceAddresses:Address:SuburbOrTown_Physical_UPPER%)",
+            "Country": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:Country%, %ServiceAddresses:Address:Country_Physical%)",
+            "CurrentServiceId": "=IF(%CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL,%SelectAddress:CustomLWC2:SelectedAddress:CurrentServiceId%, %CurrentRecordId%)",
+            "Latitude": "=%SelectAddress:LatitudeOveride%",
+            "LevelNumber": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:level_name%, %ServiceAddresses:Address:LevelFloor_Physical%)",
+            "LevelType": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:level_type%, IF (%ServiceAddresses:Address:LevelFloorRadio_Physical% <> \"'Not Applicable\", %ServiceAddresses:Address:LevelFloorRadio_Physical%))",
+            "LocationType": "=IF(%NeedMultiAddress% == \"Yes\", %ServiceAddresses:FlexibleCareSelect%, %AddressRecordType%)",
+            "Longitude": "=%SelectAddress:LongitudeOverride%",
+            "LotNumber": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:place_name%, IF(%ServiceAddresses:Address:LotStreetRadio_Physical% = \"Lot/Section Number\", %ServiceAddresses:Address:StreetNumber_Physical%))",
+            "Postcode": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:Postcode%, %ServiceAddresses:Address:PostCode_Physical%)",
+            "State": "=IF(%CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL,%SelectAddress:CGISState%, %ServiceAddresses:Address:State_Physical%)",
+            "Street": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:st_name%, %ServiceAddresses:Address:StreetName_Physical_UPPER%)",
+            "StreetNumber": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:add_num%, IF(%ServiceAddresses:Address:LotStreetRadio_Physical% = \"Street Number\", %ServiceAddresses:Address:StreetNumber_Physical%))",
+            "StreetSuffixType": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:st_dir%, %ServiceAddresses:Address:StreetSuffix_Physical%)",
+            "StreetTypeDescription": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:st_type%, %ServiceAddresses:Address:StreetType_Physical%)",
+            "UnitNumber": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:unit_name%, %ServiceAddresses:Address:Unit_Physical%)",
+            "UnitType": "=IF(%SelectAddress:CGISAddress% = \"Yes\" OR %SelectAddress:CGISAddress% = NULL, %SelectAddress:CustomLWC2:SelectedAddress:unit_type%, IF %ServiceAddresses:Address:UnitRadio_Physical% <> 'Not Applicable, '%ServiceAddresses:Address:UnitRadio_Physical%))",
+            "ValidatedByCGIS": "=IF(%SelectAddress:CustomLWC2:SelectedAddress:gnaf_pid% = NULL OR %SelectAddress:CGISAddress% = \"No\" , \"No\", \"Yes\")",
+            "gnaf_pid": "=%SelectAddress:CustomLWC2:SelectedAddress:gnaf_pid%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "LocationAddresses_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "%GNAFCount:Existing_AddressId% = \"NotApplicable\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "AddressId",
+        "responseJSONPath": "Address__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/CreateNewAddress"
+}

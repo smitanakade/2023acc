@@ -1,0 +1,241 @@
+[
+    {
+        "FormulaExpression": "IF(ExemptReason == \"none\", null, ExemptReason)",
+        "FormulaResultPath": "ExemptionReason",
+        "FormulaSequence": 5,
+        "GlobalKey": "SRQI_DR_LoadStarRatingSubCatCustom291",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadStarRatingSubCat",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadStarRatingSubCat",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadStarRatingSubCat",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(MissingRating == true, OR IsExempt == true, 0, StarRatingNumber)",
+        "FormulaResultPath": "StarRatingNumber",
+        "FormulaSequence": 2,
+        "GlobalKey": "SRQI_DR_LoadStarRatingSubCatCustom6685",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadStarRatingSubCat",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadStarRatingSubCat",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadStarRatingSubCat",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF(SCRRating == \"1\", OR SCRRating == \"2\", SCRRating, StarRatingNumber)",
+        "FormulaResultPath": "StarRatingNumber",
+        "FormulaSequence": 3,
+        "GlobalKey": "SRQI_DR_LoadStarRatingSubCatCustom4471",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadStarRatingSubCat",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadStarRatingSubCat",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadStarRatingSubCat",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "NOW()",
+        "FormulaResultPath": "CalculationDate",
+        "FormulaSequence": 4,
+        "GlobalKey": "SRQI_DR_LoadStarRatingSubCatCustom8369",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadStarRatingSubCat",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadStarRatingSubCat",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadStarRatingSubCat",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "ROUND(StarRatingNumber,0)",
+        "FormulaResultPath": "StarRatingNumber",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_LoadStarRatingSubCatCustom9193",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadStarRatingSubCat",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadStarRatingSubCat",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadStarRatingSubCat",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadStarRatingSubCatCustom3496",
+        "InputFieldName": "SRHDescription",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadStarRatingSubCat",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadStarRatingSubCat",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadStarRatingSubCat",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Description__c",
+        "OutputObjectName": "STAR_Rating_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadStarRatingSubCatCustom2736",
+        "InputFieldName": "RecordId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_LoadStarRatingSubCat",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadStarRatingSubCat",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadStarRatingSubCat",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "STAR_Rating_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_LoadStarRatingSubCatCustom1396",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_LoadStarRatingSubCat",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadStarRatingSubCat",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadStarRatingSubCat",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "STAR_Rating_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadStarRatingSubCatCustom4086",
+        "InputFieldName": "CalculationDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadStarRatingSubCat",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadStarRatingSubCat",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadStarRatingSubCat",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Calc_Date__c",
+        "OutputObjectName": "STAR_Rating_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadStarRatingSubCatCustom6725",
+        "InputFieldName": "IsExempt",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadStarRatingSubCat",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadStarRatingSubCat",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadStarRatingSubCat",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Exemption_Granted__c",
+        "OutputObjectName": "STAR_Rating_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadStarRatingSubCatCustom1811",
+        "InputFieldName": "ExemptionReason",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadStarRatingSubCat",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadStarRatingSubCat",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadStarRatingSubCat",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Rating_Exemption_Reason__c",
+        "OutputObjectName": "STAR_Rating_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_LoadStarRatingSubCatCustom5275",
+        "InputFieldName": "StarRatingNumber",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_LoadStarRatingSubCat",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_LoadStarRatingSubCat",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_LoadStarRatingSubCat",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "STAR_Rating_Calculation__c",
+        "OutputObjectName": "STAR_Rating_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

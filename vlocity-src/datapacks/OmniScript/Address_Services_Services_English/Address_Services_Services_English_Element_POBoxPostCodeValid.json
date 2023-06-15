@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "POBoxPostCodeValid",
+    "OmniProcessId": {
+        "Name": "Address_Services",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "POBoxBlock",
+        "OmniProcessId": {
+            "Name": "Address_Services",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Services/Services/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/POBoxBlock",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "POBoxBlock",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF (%POBoxState_Postal% = 'ACT' & NUMBER(%POBoxPostCode_Postal%) >= 200 & NUMBER(%POBoxPostCode_Postal%) <=299, 'GOOD' ,IF (%POBoxState_Postal% = 'ACT' & NUMBER(%POBoxPostCode_Postal%) >= 2600 & NUMBER(%POBoxPostCode_Postal%) <=2619, 'GOOD' ,IF (%POBoxState_Postal% = 'ACT' & NUMBER(%POBoxPostCode_Postal%) >= 2900 & NUMBER(%POBoxPostCode_Postal%) <=2920, 'GOOD' ,IF (%POBoxState_Postal% = 'NSW' & NUMBER(%POBoxPostCode_Postal%) >= 1000 & NUMBER(%POBoxPostCode_Postal%) <=2599, 'GOOD' ,IF (%POBoxState_Postal% = 'NSW' & NUMBER(%POBoxPostCode_Postal%) >= 2620 & NUMBER(%POBoxPostCode_Postal%) <=2899, 'GOOD' ,IF (%POBoxState_Postal% = 'NSW' & NUMBER(%POBoxPostCode_Postal%) >= 2921 & NUMBER(%POBoxPostCode_Postal%) <=2999, 'GOOD' ,IF (%POBoxState_Postal% = 'VIC' & NUMBER(%POBoxPostCode_Postal%) >= 8000 & NUMBER(%POBoxPostCode_Postal%) <=8999, 'GOOD' ,IF (%POBoxState_Postal% = 'VIC' & NUMBER(%POBoxPostCode_Postal%) >= 3000 & NUMBER(%POBoxPostCode_Postal%) <=3999, 'GOOD' ,IF (%POBoxState_Postal% = 'TAS' & NUMBER(%POBoxPostCode_Postal%) >= 7000 & NUMBER(%POBoxPostCode_Postal%) <=7999, 'GOOD' ,IF (%POBoxState_Postal% = 'SA' & NUMBER(%POBoxPostCode_Postal%) >= 5000 & NUMBER(%POBoxPostCode_Postal%) <=5999, 'GOOD' ,IF (%POBoxState_Postal% = 'WA' & NUMBER(%POBoxPostCode_Postal%) >= 6000 & NUMBER(%POBoxPostCode_Postal%) <=6999, 'GOOD' ,IF (%POBoxState_Postal% = 'NT' & NUMBER(%POBoxPostCode_Postal%) >= 800 & NUMBER(%POBoxPostCode_Postal%) <=999, 'GOOD' ,IF (%POBoxState_Postal% = 'QLD' & NUMBER(%POBoxPostCode_Postal%) >= 9000 & NUMBER(%POBoxPostCode_Postal%) <=999, 'GOOD' ,IF(%POBoxState_Postal% = 'QLD' & NUMBER(%POBoxPostCode_Postal%) >= 4000 & NUMBER(%POBoxPostCode_Postal%) <=4999, 'GOOD' ,IF (%POBoxState_Postal% = 'QLD' & NUMBER(%POBoxPostCode_Postal%) >= 9000 & NUMBER(%POBoxPostCode_Postal%) <=9999, 'GOOD','BAD')))))))))))))))",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "IsPostcodeValid",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Services/Services/English/POBoxPostCodeValid"
+}

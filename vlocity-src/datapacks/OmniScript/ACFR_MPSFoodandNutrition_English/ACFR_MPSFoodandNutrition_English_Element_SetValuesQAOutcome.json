@@ -1,0 +1,33 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "SetValuesQAOutcome",
+    "OmniProcessId": {
+        "Name": "MPSFoodandNutrition",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ACFR/MPSFoodandNutrition/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "MPSFoodandNutrition_QAOutcome": "IF(%GetFormData_DR:MPSFoodandNutritionReporting:QA_Outcome__c%==\"Re-Issue\",true,false)"
+        },
+        "label": "SetValuesQAOutcome",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ACFR/MPSFoodandNutrition/English/SetValuesQAOutcome"
+}

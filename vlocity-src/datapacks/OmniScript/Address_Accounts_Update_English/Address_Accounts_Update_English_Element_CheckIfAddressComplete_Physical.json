@@ -1,0 +1,133 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": true,
+    "Name": "CheckIfAddressComplete_Physical",
+    "OmniProcessId": {
+        "Name": "Addresses",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Accounts/Update/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "SelectPhysicalAddress",
+        "OmniProcessId": {
+            "Name": "Addresses",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Address_Accounts/Update/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Accounts/Update/English/SelectPhysicalAddress",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "SelectPhysicalAddress",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 11,
+        "hideLabel": true,
+        "label": "Messaging7",
+        "messages": [
+            {
+                "active": false,
+                "text": "",
+                "type": "Success",
+                "value": true
+            },
+            {
+                "active": true,
+                "text": "Please check the address as it is missing Street, City or Postcode",
+                "type": "Requirement",
+                "value": false
+            }
+        ],
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": null,
+                        "field": "SelectPhysicalAddress:CustomLWC2"
+                    },
+                    {
+                        "group": {
+                            "operator": "OR",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "Bad",
+                                    "field": "CheckCity_Physical"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Bad",
+                                    "field": "CheckStreet_Physical"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Bad",
+                                    "field": "CheckPostcode_Physical"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "Bad",
+                                    "field": "CheckState_Physical"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "Good",
+                                    "field": "CheckStateOT_Physical"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "validateExpression": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Good",
+                        "field": "CheckStreet_Physical"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Good",
+                        "field": "CheckCity_Physical"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Good",
+                        "field": "CheckState_Physical"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Good",
+                        "field": "CheckPostcode_Physical"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Good",
+                        "field": "CheckStateOT_Physical"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "Validation",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Address_Accounts/Update/English/CheckIfAddressComplete_Physical"
+}

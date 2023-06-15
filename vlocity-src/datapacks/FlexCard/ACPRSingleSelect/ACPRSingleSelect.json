@@ -1,0 +1,371 @@
+{
+    "dataSource": {
+        "contextVariables": [
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "Custom",
+        "value": {
+            "body": "[{\n  \"State\": \"NSW\",\n  \"places\": \"\",\n  \"ACPRId\": \"a2p9r0000000QVZAA2\",\n  \"ACPR\": \"Central Coast\",\n  \"SA2Id\": \"\",\n  \"SA2\": \"\"\n}]",
+            "dsDelay": "",
+            "resultVar": ""
+        }
+    },
+    "enableLwc": true,
+    "events": [
+        {
+            "actionList": [
+                {
+                    "actionIndex": 0,
+                    "card": "{card}",
+                    "draggable": false,
+                    "isOpen": true,
+                    "key": "1663223564685-0ugiy7a87",
+                    "label": "Action",
+                    "stateAction": {
+                        "Web Page": {
+                            "targetName": "/apex"
+                        },
+                        "displayName": "Action",
+                        "id": "flex-action-1663223841614",
+                        "openUrlIn": "Current Window",
+                        "targetType": "Web Page",
+                        "type": "Custom",
+                        "vlocityIcon": "standard-default"
+                    }
+                }
+            ],
+            "channelname": "ACPRSingleSelect",
+            "displayLabel": "ACPRSingleSelect:data",
+            "element": "action",
+            "eventLabel": "pubsub",
+            "eventname": "data",
+            "eventtype": "pubsub",
+            "key": "event-0",
+            "recordIndex": "0",
+            "showSpinner": "false"
+        },
+        {
+            "actionList": [
+                {
+                    "actionIndex": 0,
+                    "card": "{card}",
+                    "draggable": false,
+                    "isOpen": true,
+                    "key": "1663223950563-47km7i54d",
+                    "label": "Action",
+                    "stateAction": {
+                        "displayName": "Action",
+                        "elementId": "selectResult",
+                        "extraParams": {
+                            "selectedcard": "{selectedcard}"
+                        },
+                        "hasExtraParams": true,
+                        "id": "flex-action-1663225529283",
+                        "openUrlIn": "Current Window",
+                        "type": "updateOmniScript",
+                        "vlocityIcon": "standard-default"
+                    }
+                }
+            ],
+            "channelname": "ACPRSingleSelect",
+            "displayLabel": "selectcards_selectedcard",
+            "element": "action",
+            "eventLabel": "custom event",
+            "eventname": "selectcards_selectedcard",
+            "eventtype": "event",
+            "key": "event-1",
+            "recordIndex": "0",
+            "showSpinner": "false"
+        }
+    ],
+    "isFlex": true,
+    "lwc": {
+        "DeveloperName": "cfACPRSingleSelect_1_GPMS",
+        "Id": "0Rb9r0000002UZtCAM",
+        "ManageableState": "unmanaged",
+        "MasterLabel": "cfACPRSingleSelect_1_GPMS",
+        "NamespacePrefix": "c"
+    },
+    "selectableField": "",
+    "selectableMode": "Multi",
+    "selectedCardsLabel": "selectedcard",
+    "states": [
+        {
+            "actions": [
+            ],
+            "childCards": [
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "action",
+                            "elementLabel": "Action-1",
+                            "name": "Action",
+                            "property": {
+                                "actionList": [
+                                    {
+                                        "actionIndex": 0,
+                                        "draggable": true,
+                                        "isOpen": false,
+                                        "key": "1663222613742-9hcrlnlny",
+                                        "label": "Action",
+                                        "stateAction": {
+                                            "Web Page": {
+                                                "targetName": "/apex"
+                                            },
+                                            "eventName": "selectcards",
+                                            "id": "flex-action-1663222769484",
+                                            "openUrlIn": "Current Window",
+                                            "targetType": "Web Page",
+                                            "type": "cardAction"
+                                        }
+                                    }
+                                ],
+                                "card": "{card}",
+                                "data-conditions": {
+                                    "group": [
+                                    ],
+                                    "id": "state-condition-object",
+                                    "isParent": true
+                                },
+                                "flyoutDetails": {
+                                },
+                                "iconName": "standard-default",
+                                "label": "\\{ACPR} - {State}",
+                                "record": "{record}",
+                                "showSpinner": "false",
+                                "stateObj": "{record}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "background": {
+                                    "color": "",
+                                    "image": "",
+                                    "position": "",
+                                    "repeat": "",
+                                    "size": ""
+                                },
+                                "border": {
+                                    "color": "",
+                                    "radius": "",
+                                    "style": "",
+                                    "type": "",
+                                    "width": ""
+                                },
+                                "class": "slds-p-top_xxx-small slds-m-bottom_xxx-small slds-m-top_xxx-small slds-m-top_xx-small ",
+                                "container": {
+                                    "class": ""
+                                },
+                                "elementStyleProperties": {
+                                },
+                                "height": "20px",
+                                "inlineStyle": "",
+                                "margin": [
+                                    {
+                                        "label": "bottom:xxx-small",
+                                        "size": "xxx-small",
+                                        "type": "bottom"
+                                    },
+                                    {
+                                        "label": "top:xxx-small",
+                                        "size": "xxx-small",
+                                        "type": "top"
+                                    },
+                                    {
+                                        "label": "top:xx-small",
+                                        "size": "xx-small",
+                                        "type": "top"
+                                    }
+                                ],
+                                "padding": [
+                                    {
+                                        "label": "top:xxx-small",
+                                        "size": "xxx-small",
+                                        "type": "top"
+                                    }
+                                ],
+                                "size": {
+                                    "default": "12",
+                                    "isResponsive": false
+                                },
+                                "sizeClass": "slds-size_12-of-12 ",
+                                "style": "      \n     height:20px;    ",
+                                "text": {
+                                    "align": "",
+                                    "color": ""
+                                }
+                            },
+                            "styleObjects": [
+                                {
+                                    "conditionString": "",
+                                    "conditions": "default",
+                                    "draggable": false,
+                                    "key": 0,
+                                    "label": "Default",
+                                    "name": "Default",
+                                    "styleObject": {
+                                        "background": {
+                                            "color": "",
+                                            "image": "",
+                                            "position": "",
+                                            "repeat": "",
+                                            "size": ""
+                                        },
+                                        "border": {
+                                            "color": "",
+                                            "radius": "",
+                                            "style": "",
+                                            "type": "",
+                                            "width": ""
+                                        },
+                                        "class": "slds-p-top_xxx-small slds-m-bottom_xxx-small slds-m-top_xxx-small slds-m-top_xx-small ",
+                                        "container": {
+                                            "class": ""
+                                        },
+                                        "elementStyleProperties": {
+                                        },
+                                        "height": "20px",
+                                        "inlineStyle": "",
+                                        "margin": [
+                                            {
+                                                "label": "bottom:xxx-small",
+                                                "size": "xxx-small",
+                                                "type": "bottom"
+                                            },
+                                            {
+                                                "label": "top:xxx-small",
+                                                "size": "xxx-small",
+                                                "type": "top"
+                                            },
+                                            {
+                                                "label": "top:xx-small",
+                                                "size": "xx-small",
+                                                "type": "top"
+                                            }
+                                        ],
+                                        "padding": [
+                                            {
+                                                "label": "top:xxx-small",
+                                                "size": "xxx-small",
+                                                "type": "top"
+                                            }
+                                        ],
+                                        "size": {
+                                            "default": "12",
+                                            "isResponsive": false
+                                        },
+                                        "sizeClass": "slds-size_12-of-12 ",
+                                        "style": "      \n     height:20px;    ",
+                                        "text": {
+                                            "align": "",
+                                            "color": ""
+                                        }
+                                    }
+                                }
+                            ],
+                            "type": "element"
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Active",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "class": "slds-card slds-p-around_x-small slds-m-bottom_x-small",
+                "container": {
+                    "class": "slds-card"
+                },
+                "margin": [
+                    {
+                        "size": "none",
+                        "type": "around"
+                    }
+                ],
+                "padding": [
+                    {
+                        "size": "x-small",
+                        "type": "around"
+                    }
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12"
+            }
+        }
+    ],
+    "theme": "slds",
+    "title": "ACPRSingleSelect",
+    "xmlJson": [
+        {
+            "@attributes": {
+                "targets": "lightning__AppPage"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                },
+                {
+                    "@attributes": {
+                        "name": "recordId",
+                        "type": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "@attributes": {
+                "targets": "lightning__RecordPage"
+            },
+            "property": [
+                {
+                    "@attributes": {
+                        "name": "debug",
+                        "type": "Boolean"
+                    }
+                }
+            ]
+        }
+    ],
+    "xmlObject": {
+        "targetConfigs": "PHRhcmdldENvbmZpZyB0YXJnZXRzPSJsaWdodG5pbmdfX0FwcFBhZ2UiPgogICAgICAgICAgICAgICAgICAgICAgPHByb3BlcnR5IG5hbWU9ImRlYnVnIiB0eXBlPSJCb29sZWFuIi8+CiAgICAgICAgICAgICAgICAgICAgICA8cHJvcGVydHkgbmFtZT0icmVjb3JkSWQiIHR5cGU9IlN0cmluZyIvPgogICAgICAgICAgICAgICAgICA8L3RhcmdldENvbmZpZz4KICAgICAgICAgICAgICAgICAgPHRhcmdldENvbmZpZyB0YXJnZXRzPSJsaWdodG5pbmdfX1JlY29yZFBhZ2UiPgogICAgICAgICAgICAgICAgICAgICAgPHByb3BlcnR5IG5hbWU9ImRlYnVnIiB0eXBlPSJCb29sZWFuIi8+CiAgICAgICAgICAgICAgICAgIDwvdGFyZ2V0Q29uZmlnPg==",
+        "targets": {
+            "target": [
+                "lightning__RecordPage",
+                "lightning__AppPage",
+                "lightning__HomePage"
+            ]
+        }
+    }
+}

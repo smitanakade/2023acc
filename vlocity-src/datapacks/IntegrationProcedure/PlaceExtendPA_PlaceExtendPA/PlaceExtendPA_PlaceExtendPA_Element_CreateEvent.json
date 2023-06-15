@@ -1,0 +1,73 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateEvent",
+    "OmniProcessId": {
+        "Name": "PlaceExtendPA",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "Event",
+        "OmniProcessId": {
+            "Name": "PlaceExtendPA",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure/Event",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "Event",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AllotmentId": "=%AllotmentId%",
+            "ApplicationDecisionDate": "=%ExtendPAPeriodDetails:ApplicationDecisionDate%",
+            "ApplicationNeedExtension": "=%ExtendPAPeriodDetails:ReasonNeedsForTheExtension%",
+            "ApplicationReceivedDate": "=%ExtendPAPeriodDetails:ApplicationReceivedDate1%",
+            "Comments": "=%ExtendPAPeriodDetails:Comments%",
+            "CurrentPAPeriodEndDate": "=%PAPeriodEndDate%",
+            "EventRecordTypeId": "=\"Extend_PA_Period\"",
+            "EventStatus": "=\"Pending\"",
+            "EventStatusDate": "=%CurrentDateText%",
+            "EventType": "=\"Extend PA Period\"",
+            "ExpectedExtendedPAPeriodEndDate": "=%ExtendPAPeriodDetails:ExpectedExtendedPAEndDateLoad%",
+            "ExpectedOutcomePremisesBuilt": "=%ExtendPAPeriodDetails:ExpectedOutcomePremisesBuilt%",
+            "ExtensionApprovedPreviously": "=%ExtendPAPeriodDetails:ExtensionsPreviouslyBeenApproved%",
+            "ExtensionPeriod": "=\"12 months\"",
+            "IsPremisesBuilt": "=%ExtendPAPeriodDetails:PremisesBeingBuilt%",
+            "OriginalPAPeriodEndDate": "=%OriginalPAPeriodEndDate%",
+            "PAPeriodEndDate": "=%PAPeriodEndDate%",
+            "ServiceId": "=%ServiceId%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Allotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": false,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction2",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PlaceExtendPA/PlaceExtendPA/Procedure/CreateEvent"
+}

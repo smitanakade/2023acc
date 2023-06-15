@@ -1,0 +1,41 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "ACOGroup/GPMS/3.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "a1i9r000000KC8HAAW"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "Id": "{recordId}"
+            },
+            "ipMethod": "ACOGroup_RelatedList",
+            "resultVar": "[\"Group\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "ACO Group Member Providers List",
+    "IsTrackingEnabled": false,
+    "Name": "ACOGroupMemberProviders_List",
+    "Namespace": "",
+    "OmniUiCardKey": "ACOGroupMemberProviders_List/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "ACOGroupMemberProviders_List.json",
+    "SampleDataSourceResponse": "{\"Group\":[{\"AccountName\":\"ACO1\",\"GroupMemberName\":\"ACGM-00001\",\"AccountType\":\"Approved Provider\",\"Id\":\"a1j9r0000005VmLAAU\",\"AccountId\":\"0019r000003MVReAAO\",\"ToAccountId\":\"0019r000003MUCHAA4\",\"ToAccountName\":\"ACO1 - AP1\"},{\"AccountName\":\"ACO1\",\"GroupMemberName\":\"ACGM-00001\",\"AccountType\":\"Approved Provider\",\"Id\":\"a1j9r0000005VmLAAU\",\"AccountId\":\"0019r000003MVReAAO\",\"ToAccountId\":\"0019r000003O96rAAC\",\"ToAccountName\":\"AOC1 - AP2\"},{\"AccountName\":\"ACO 4\",\"GroupMemberName\":\"ACGM-00004\",\"AccountType\":\"Approved Provider\",\"Id\":\"a1j9r0000005VrBAAU\",\"AccountId\":\"0019r000003MRKoAAO\",\"ToAccountId\":\"0019r000003O6AdAAK\",\"ToAccountName\":\"ACO4-AP1\"}]}",
+    "StylingConfiguration": "",
+    "UniqueName": "ACOGroupMemberProviders_List_GPMS_1",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/ACOGroupMemberProviders_List"
+}

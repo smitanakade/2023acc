@@ -1,0 +1,45 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SubmissionsDueByNoLaterThanDatePlacesTakenEffectLoad",
+    "OmniProcessId": {
+        "Name": "RevocationPlaces",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RevocationPlaces/RevocationPlaces/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "RevokeDetailsPlacesTakenEffect",
+        "OmniProcessId": {
+            "Name": "RevocationPlaces",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/RevocationPlaces/RevocationPlaces/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/RevocationPlaces/RevocationPlaces/English/RevokeDetailsPlacesTakenEffect",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "RevokeDetailsPlacesTakenEffect",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 3,
+        "dataType": null,
+        "dateFormat": "MM-dd-yyyy",
+        "disOnTplt": false,
+        "expression": "IF((%NoticeTypePlacesTakenEffect% = 'Places ceased under s18-1(c)' || %NoticeTypePlacesTakenEffect% = 'Revocation of Places [S66- 1(D)]'), YEAR(MOMENT(%NoticeOfIntentionDatePlacesTakenEffect%).add(14, 'days')) + '-' + MONTH(MOMENT(%NoticeOfIntentionDatePlacesTakenEffect%).add(14, 'days'))  + '-' + DAYOFMONTH(MOMENT(%NoticeOfIntentionDatePlacesTakenEffect%).add(14, 'days')), YEAR(MOMENT(%NoticeOfIntentionDatePlacesTakenEffect%).add(28, 'days')) + '-' + MONTH(MOMENT(%NoticeOfIntentionDatePlacesTakenEffect%).add(28, 'days'))  + '-' + DAYOFMONTH(MOMENT(%NoticeOfIntentionDatePlacesTakenEffect%).add(28, 'days')))",
+        "hide": true,
+        "hideGroupSep": false,
+        "inputWidth": 12,
+        "label": "Submissions Due By No Later Than Date Load",
+        "mask": null,
+        "show": null,
+        "showInputWidth": false
+    },
+    "Type": "Formula",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RevocationPlaces/RevocationPlaces/English/SubmissionsDueByNoLaterThanDatePlacesTakenEffectLoad"
+}

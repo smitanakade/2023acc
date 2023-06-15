@@ -1,0 +1,325 @@
+[
+    {
+        "FormulaExpression": "CONCAT(\"Rating\", SRHStatus, \": \", RemOrLive:ReasonForRelease)",
+        "FormulaResultPath": "comments",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom8706",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom5677",
+        "InputFieldName": "StarRatingHistory:SRHId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "STAR_Rating_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom1446",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "STAR_Rating_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom9117",
+        "InputFieldName": "SRHStatus",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Status__c",
+        "OutputObjectName": "STAR_Rating_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom3883",
+        "InputFieldName": "CMStatus",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "Availability_Status__c",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom5053",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom8861",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "LinkedFieldName": "Care_Minutes_Id__c",
+        "LinkedObjectSequence": 1,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Care_Minutes_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom2558",
+        "InputFieldName": "CERStatus",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 3,
+        "OutputFieldName": "Availability_Status__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom2465",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "LinkedFieldName": "Consumer_Experience_Id__c",
+        "LinkedObjectSequence": 1,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 3,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom4491",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 3,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom4714",
+        "InputFieldName": "QIStatus",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 4,
+        "OutputFieldName": "Availability_Status__c",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom3151",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "LinkedFieldName": "Quality_Indicator_Id__c",
+        "LinkedObjectSequence": 1,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 4,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom7562",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 4,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Quality_Indicator_Summary__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom4438",
+        "InputFieldName": "SCRStatus",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 5,
+        "OutputFieldName": "Availability_Status__c",
+        "OutputObjectName": "Service_Compliance_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom1152",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "LinkedFieldName": "Service_Compliance_Id__c",
+        "LinkedObjectSequence": 1,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 5,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Service_Compliance_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_PostRatingRemoveLiveCustom4697",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_PostRatingRemoveLive",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_PostRatingRemoveLive",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_PostRatingRemoveLive",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 5,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "Service_Compliance_History__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

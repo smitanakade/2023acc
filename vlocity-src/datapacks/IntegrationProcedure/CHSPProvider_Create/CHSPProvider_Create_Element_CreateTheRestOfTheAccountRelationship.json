@@ -1,0 +1,63 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateTheRestOfTheAccountRelationship",
+    "OmniProcessId": {
+        "Name": "CreateCHSPProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/CHSPProvider/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "ACOId": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\", %SearchExistingACO_CHSP:SearchForExistingACOByName-Block:SearchForExistingACOByNameId%, %ACOId%)",
+            "AccountCareType": "=\"Commonwealth Home Support Programme\"",
+            "AccountId": "=%AccountId%",
+            "AccountProviderType": "=%CHSPProvider:CHSPProviderDetails:TypeofCHSPProvider%",
+            "Account_State": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\", %SearchExistingACO_CHSP:SearchForExistingACOByName-Block:SearchForExistingACOByProviderState%, %RegisteredBusinessAddress:RegisterAddress:StateDisplay_ACO%)",
+            "CareTypeRecordId": "=\"CHSP_CT\"",
+            "EntityType": "=\"CHSP Provider\"",
+            "Incorporation_ARBN": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_CHSP:SearchForExistingACOByName-Block:SearchForExistingACOByNameARBN%, %AgedCareOrganisation:ACODetail:ARBN%)",
+            "Incorporation_ID": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_CHSP:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationID%, %AgedCareOrganisation:ACODetail:IncorporationID%)",
+            "Incorporation_IDType": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_CHSP:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationIDType%,%AgedCareOrganisation:ACODetail:IncorporationIDType%)",
+            "Incorporation_Name": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_CHSP:SearchForExistingACOByName-Block:SearchForExistingACOByNameName%,%AgedCareOrganisation:ACODetail:ACOName%)",
+            "Incorporation_Status": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_CHSP:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationStatus%, %AgedCareOrganisation:ACODetail:IncorporationStatus%)",
+            "Incorporation_Status_Date": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_CHSP:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationStatusDate_LoadFormat%, %AgedCareOrganisation:ACODetail:IncorporationStatusDate_LoadFormat%)",
+            "Incorporation_Type": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_CHSP:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporationType%, %AgedCareOrganisation:ACODetail:IncorporationType%)",
+            "Incorporation_Under": "=IF(%LinkToACO:SearchForExistingACO:ChooseACO% = \"Use this one\",%SearchExistingACO_CHSP:SearchForExistingACOByName-Block:SearchForExistingACOByNameIncorporatedUnder%, %AgedCareOrganisation:ACODetail:IncorporatedUnder%)",
+            "OrganisationType": "=%CHSPProvider:CHSPProviderDetails:OrganisationType%",
+            "PartyID": "==%CHSPProvider:CHSPProviderDetails:PartyID%",
+            "ProspectiveProvider": "=%CHSPProvider:CHSPProviderDetails:ProspectiveProvider%",
+            "Purpose": "=%CHSPProvider:CHSPProviderDetails:OrganisationPurpose%",
+            "RecordTypeId_contact": "=\"Non_Individual_Contact_CR\"",
+            "RecortTypeId_accRel": "=\"ACO_to_Account\"",
+            "TypeofCHSPProvider": "=%CHSPProvider:CHSPProviderDetails:TypeofCHSPProvider%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "AccountGeneric_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction3",
+        "responseJSONNode": "AccountId",
+        "responseJSONPath": "Account_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/CHSPProvider/Create/Procedure/CreateTheRestOfTheAccountRelationship"
+}

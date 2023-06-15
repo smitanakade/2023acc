@@ -1,0 +1,43 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ResponseAction",
+    "OmniProcessId": {
+        "Name": "AddressValidationWithCGIS_FullString",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/CGISValidateAddress/Address/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "additionalOutput": {
+            "AddressRecordType": "=%AddressRecordType%",
+            "CurrentRecordId": "=%CurrentRecordId%",
+            "LocationId": "=%LocationId%",
+            "LocationRecordType": "=%LocationRecordType%",
+            "OriginalInput": "=IF(%MagicKey% <> null, %MagicKey%, %SingleLine%)",
+            "OriginalInputSingleLine": "%SingleLine%",
+            "ValidAddress": "=IF(%HTTPAction:long_label% <> null, \"Valid\", \"Invalid\")",
+            "success": "=%HTTPActionInfo:status%"
+        },
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "label": "ResponseAction1",
+        "responseDefaultData": {
+        },
+        "responseFormat": "JSON",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnFullDataJSON": false,
+        "returnOnlyAdditionalOutput": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "HTTPAction",
+        "show": null,
+        "useFormulas": true,
+        "vlcResponseHeaders": {
+        }
+    },
+    "Type": "Response Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/CGISValidateAddress/Address/Procedure/ResponseAction"
+}

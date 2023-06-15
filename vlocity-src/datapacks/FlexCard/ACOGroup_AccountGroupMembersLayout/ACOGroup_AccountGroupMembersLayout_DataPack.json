@@ -1,0 +1,42 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "ACOGroup_Child2/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 2,
+                "name": "Parent.ACOGroupId",
+                "val": "a1i9r000000MpLdAAK"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "ApexRemote",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "AccountId": "{Parent.ACOGroupId}"
+            },
+            "remoteClass": "GPMSRelatedProviderController",
+            "remoteMethod": "fetchSingleAcoGrpMember",
+            "resultVar": "[\"result\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "Displays the ACO Group details on the Account object",
+    "IsTrackingEnabled": false,
+    "Name": "ACOGroup_AccountGroupMembersLayout",
+    "Namespace": "",
+    "OmniUiCardKey": "ACOGroup_AccountGroupMembersLayout/GPMS/1.0",
+    "OmniUiCardType": "Child",
+    "PropertySetConfig": "ACOGroup_AccountGroupMembersLayout.json",
+    "SampleDataSourceResponse": "{\"result\":[{\"ACOGroupCreatedDate\":\"23/5/2022\",\"ACOGroupCreatedBy\":\"Integration USER\",\"ACOGroupCreatedById\":\"0059r000000z3U6AAI\",\"ACOGroupACOId\":\"0019r000002yjVwAAI\",\"ACOGroupACOName\":\"ACO A\",\"ACOGroupProviderName\":\"Provider A\",\"ACOGroupProviderId\":\"0019r000003KMvXAAW\",\"ACOGroupProvider\":\"Provider A (ACO A)\",\"ACOGroupComments\":\"Comments Test\",\"ACOGroupReason\":\"Common controlling interest\",\"ACOGroupId\":\"a1i9r000000MpLdAAK\",\"ACOGroupName\":\"Yike Test\"},{\"ACOGroupCreatedDate\":\"23/5/2022\",\"ACOGroupCreatedBy\":\"Integration USER\",\"ACOGroupCreatedById\":\"0059r000000z3U6AAI\",\"ACOGroupACOId\":\"0019r000002yjVwAAI\",\"ACOGroupACOName\":\"ACO A\",\"ACOGroupProviderName\":\"Yuan's Approved Provider 00020\",\"ACOGroupProviderId\":\"0019r000003SGg1AAG\",\"ACOGroupProvider\":\"Yuan's Approved Provider 00020 (ACO A)\",\"ACOGroupComments\":\"Comments Test\",\"ACOGroupReason\":\"Common controlling interest\",\"ACOGroupId\":\"a1i9r000000MpLdAAK\",\"ACOGroupName\":\"Yike Test\"},{\"ACOGroupCreatedDate\":\"23/5/2022\",\"ACOGroupCreatedBy\":\"Integration USER\",\"ACOGroupCreatedById\":\"0059r000000z3U6AAI\",\"ACOGroupACOId\":\"0019r000003DXyvAAG\",\"ACOGroupACOName\":\"ACO C\",\"ACOGroupProviderName\":\"Provider D\",\"ACOGroupProviderId\":\"0019r0000030XtVAAU\",\"ACOGroupProvider\":\"Provider D (ACO C)\",\"ACOGroupComments\":\"Comments Test\",\"ACOGroupReason\":\"Common controlling interest\",\"ACOGroupId\":\"a1i9r000000MpLdAAK\",\"ACOGroupName\":\"Yike Test\"},{\"ACOGroupCreatedDate\":\"23/5/2022\",\"ACOGroupCreatedBy\":\"Integration USER\",\"ACOGroupCreatedById\":\"0059r000000z3U6AAI\",\"ACOGroupACOId\":\"0019r000003DXyvAAG\",\"ACOGroupACOName\":\"ACO C\",\"ACOGroupProviderName\":\"Provider E\",\"ACOGroupProviderId\":\"0019r000003MUnJAAW\",\"ACOGroupProvider\":\"Provider E (ACO C)\",\"ACOGroupComments\":\"Comments Test\",\"ACOGroupReason\":\"Common controlling interest\",\"ACOGroupId\":\"a1i9r000000MpLdAAK\",\"ACOGroupName\":\"Yike Test\"},{\"ACOGroupCreatedDate\":\"23/5/2022\",\"ACOGroupCreatedBy\":\"Integration USER\",\"ACOGroupCreatedById\":\"0059r000000z3U6AAI\",\"ACOGroupACOId\":\"0019r000003O5bAAAS\",\"ACOGroupACOName\":\"Bella's ACO\",\"ACOGroupProviderName\":\"Bella's AP\",\"ACOGroupProviderId\":\"0019r000003O5bBAAS\",\"ACOGroupProvider\":\"Bella's AP (Bella's ACO)\",\"ACOGroupComments\":\"Comments Test\",\"ACOGroupReason\":\"Common controlling interest\",\"ACOGroupId\":\"a1i9r000000MpLdAAK\",\"ACOGroupName\":\"Yike Test\"}],\"errorCode\":\"INVOKE-200\",\"error\":\"OK\"}",
+    "StylingConfiguration": "",
+    "UniqueName": "ACOGroup_AccountGroupMembersLayout_GPMS_1",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/ACOGroup_AccountGroupMembersLayout"
+}

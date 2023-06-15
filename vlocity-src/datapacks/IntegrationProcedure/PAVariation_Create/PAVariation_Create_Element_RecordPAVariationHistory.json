@@ -1,0 +1,77 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RecordPAVariationHistory",
+    "OmniProcessId": {
+        "Name": "PAVariation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/PAVariation/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "PAVariationAction",
+        "OmniProcessId": {
+            "Name": "PAVariation",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/PAVariation/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/PAVariation/Create/Procedure/PAVariationAction",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "PAVariationAction",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AATReview": "=%EventAATReview%",
+            "Comments": "=%Comments%",
+            "DateDecisionRequestBy": "=%RequestStep:DecisionRequiredBy%",
+            "Decision": "=%DecisionStep:Decision%",
+            "DecisionComment": "=%DecisionStep:CommentsDecision%",
+            "DecisionDate": "=%DecisionStep:DecisionDate%",
+            "DecisionDueDate": "=%RequestStep:DecisionDueDate%",
+            "DelegateName": "=%DecisionStep:DelegateName%",
+            "DelegatePosition": "=%DecisionStep:RequestDelegatePosition%",
+            "DelegateState": "=%DecisionStep:DelegateState%",
+            "EventId": "=%EventId%",
+            "IsActingInPosition": "=%DecisionStep:IsActingInPosition%",
+            "LinkToDocument": "=%LinkToDocument%",
+            "PreviousPage": "=%PerformAction:Action%",
+            "RecordType": "=%PerformAction:HistoryRecordType%",
+            "RequestDate": "=%RequestStep:RequestDateofRequest%",
+            "RequestType": "=%RequestStep:RequestType%",
+            "Review": "=%EventReview%",
+            "Status": "=%EventNextStatus%",
+            "StatusEffectiveDate": "=%CurrentDateText%",
+            "SummaryRequeset": "=%RequestStep:RequestSummaryRequest%",
+            "VariationDaySought": "=%RequestStep:VariationDaySought%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "PAVariation_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "PAVariationId",
+        "responseJSONPath": "GPMS_PA_Variation_History__c_2:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/PAVariation/Create/Procedure/RecordPAVariationHistory"
+}

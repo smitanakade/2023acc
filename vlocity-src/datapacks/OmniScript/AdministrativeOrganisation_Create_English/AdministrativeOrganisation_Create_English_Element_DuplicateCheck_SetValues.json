@@ -1,0 +1,70 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DuplicateCheck_SetValues",
+    "OmniProcessId": {
+        "Name": "AdministrativeOrganisation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/AdministrativeOrganisation/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "ACNErrorCheck": "=IF (%DuplicateCheck:ACNCOUNT% >0, 'NotOk', 'OK')",
+            "ARBNErrorCheck": "=IF (%DuplicateCheck:ARBNCOUNT% >0, 'NotOk', 'OK')",
+            "ARBNIncIdErrorCheck": "=IF (%DuplicateCheck:ARBN_IncId_COUNT% >0, 'NotOk', 'OK')",
+            "IANErrorCheck": "=IF (%DuplicateCheck:IANCOUNT% >0, 'NotOk', 'OK')",
+            "ICNErrorCheck": "=IF (%DuplicateCheck:ICNCOUNT% >0, 'NotOk', 'OK')",
+            "OtherErrorCheck": "=IF (%DuplicateCheck:OtherCOUNT% >0, 'NotOk', 'OK')"
+        },
+        "label": "DuplicateCheck_SetValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "ACN",
+                        "field": "IncorporationIDType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "ARBN",
+                        "field": "IncorporationIDType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "IAN",
+                        "field": "IncorporationIDType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "ICN",
+                        "field": "IncorporationIDType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Other",
+                        "field": "IncorporationIDType"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/AdministrativeOrganisation/Create/English/DuplicateCheck_SetValues"
+}

@@ -1,0 +1,444 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "AccountId",
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom0jI9h0000000ACHEA2Item0",
+        "InputFieldName": "Account__c",
+        "InputObjectName": "Form__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Form",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "\"QFR\"",
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom238",
+        "InputFieldName": "RecordType.Name",
+        "InputObjectName": "Form__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Form",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "<=",
+        "FilterValue": "'$Vlocity.TODAY'",
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom6151",
+        "InputFieldName": "ReportOpenDate__c",
+        "InputObjectName": "Form__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Form",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": ">=",
+        "FilterValue": "'$Vlocity.N_DAYS_FROM_NOW:-360'",
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom5772",
+        "InputFieldName": "ReportOpenDate__c",
+        "InputObjectName": "Form__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Form",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "ORDER BY",
+        "FilterValue": "Reporting_Period__r.QFR_Due_Date__c desc",
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom7109",
+        "InputObjectName": "Form__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Form",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaSequence": 1,
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom8256",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom4391",
+        "InputFieldName": "Form:Account__r.Name",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "AccountName",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom7664",
+        "InputFieldName": "Form:Case__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "CaseId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom8412",
+        "InputFieldName": "Form:Reporting_Period__r.Report_Due_Date__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "DueDate",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom3640",
+        "InputFieldName": "Form:Reporting_Period__r.End_Date__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "EndDate",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom9912",
+        "InputFieldName": "Form:First_Submission_Date__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "FirstSubmissionDate",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom0jI9h0000000ACHEA2Item3",
+        "InputFieldName": "Form:Type__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "FormType",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom0jI9h0000000ACHEA2Item4",
+        "InputFieldName": "Form:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom727",
+        "InputFieldName": "Form:Account__r.Integration_ID__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "NAPSId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom9449",
+        "InputFieldName": "Form:Reporting_Period__r.Current_Reporting_Period__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "NotOverdueReport",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom0jI9h0000000ACHEA2Item2",
+        "InputFieldName": "Form:QA_Outcome__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "QA_Outcome",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom7273",
+        "InputFieldName": "Form:Reporting_Period__r.type__C",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ReportType",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom8580",
+        "InputFieldName": "Form:Service_Account_Relationship__r.Service_Name__r.Integration_ID__C",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ServiceIntegrationId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom3547",
+        "InputFieldName": "Form:Service_Account_Relationship__r.Service_Name__r.Name",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "ServiceName",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom3040",
+        "InputFieldName": "Form:ReportOpenDate__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "StartDate",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom2729",
+        "InputFieldName": "Form:Case__r.Status",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Status",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "ACFR_GetAccountFinancialReportWithFormStatusCustom0jI9h0000000ACHEA2Item1",
+        "InputFieldName": "Form:Account__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+        "OmniDataTransformationId": {
+            "Name": "ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/ACFR_GetAccountFinancialReportWithFormStatus",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "account",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

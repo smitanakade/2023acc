@@ -1,0 +1,59 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ApplicationCareType_Post_HomeCare",
+    "OmniProcessId": {
+        "Name": "ApplicationRecommendationUpdate",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/RecommendationUpdate/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "CreateRecommenations",
+        "OmniProcessId": {
+            "Name": "ApplicationRecommendationUpdate",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Application/RecommendationUpdate/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Application/RecommendationUpdate/Procedure/CreateRecommenations",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "CreateRecommenations",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Recommendation:CareType": "=%Assessment:HomeCareBlock:HomeCare_Id%",
+            "Recommendation:Comments": "=%Assessment:UnderAssessmentBlock:Comment%",
+            "Recommendation:DateCreated": "=TODAY()",
+            "Recommendation:Id": "=%HomeCare:CareTypes:RecommendationId%",
+            "Recommendation:Recommendation": "=%Assessment:HomeCareBlock:HomeCareRecommendation%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ApplicationRecommendation_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/RecommendationUpdate/Procedure/ApplicationCareType_Post_HomeCare"
+}

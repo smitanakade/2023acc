@@ -1,0 +1,46 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateCareTypes",
+    "OmniProcessId": {
+        "Name": "CreateNATSIFACProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/NATSIFACProvider/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AccountCareType": "=%NATSIFACCareTypeApprovalStatus:NATSIFACCareType:CareType%",
+            "AccountEffectiveDate": "=%NATSIFACCareTypeApprovalStatus:NATSIFACCareType:EffectiveDate%",
+            "AccountId": "=%AccountId%",
+            "AccountProviderStatus": "=%NATSIFACCareTypeApprovalStatus:NATSIFACCareType:ProviderStatus%",
+            "CareTypeRecordId": "=\"NATSIFAC_CT\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "AccountCareTypes_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction9",
+        "responseJSONNode": "CareTypesId",
+        "responseJSONPath": "Care_Type__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/NATSIFACProvider/Create/Procedure/CreateCareTypes"
+}

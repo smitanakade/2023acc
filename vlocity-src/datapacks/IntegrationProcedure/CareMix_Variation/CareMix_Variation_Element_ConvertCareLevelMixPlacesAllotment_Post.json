@@ -1,0 +1,45 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ConvertCareLevelMixPlacesAllotment_Post",
+    "OmniProcessId": {
+        "Name": "ConvertCareLevelMix",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/CareMix/Variation/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AllotmentId": "=%AllotmentId%",
+            "EventId": "=%DeedofVariationEvent_Post:Event__c_1:Id%",
+            "NewCareLevelPlace": "=%ConvertCareLevelMix:CustomLWC1:Places%",
+            "NewPacketCurrent": "=%ConvertCareLevelMix:NewPacketCurrentValue%",
+            "OldPacketCurrent": "=%ConvertCareLevelMix:OldPacketCurrentValue%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ConvertCareLevelMixPlacesAllotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction2",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/CareMix/Variation/Procedure/ConvertCareLevelMixPlacesAllotment_Post"
+}

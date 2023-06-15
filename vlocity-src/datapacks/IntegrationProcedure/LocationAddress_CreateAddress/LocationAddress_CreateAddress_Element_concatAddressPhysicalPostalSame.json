@@ -1,0 +1,76 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "concatAddressPhysicalPostalSame",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "PHYSICAL_AND_POSTAL_SAME",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/PHYSICAL_AND_POSTAL_SAME",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "PHYSICAL_AND_POSTAL_SAME",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "LevelNumber": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\",%Physical_Candidates:level_name%,\"\")",
+            "buildingName": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\",%Physical_Candidates:add_bldg%,\"\")",
+            "city": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\",%Physical_Candidates:nbrhd%,\"\")",
+            "country": "=\"Australia\"",
+            "latitude": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\",%Physical_Candidates:latitude%,\"\")",
+            "longitude": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\",%Physical_Candidates:longitude%,\"\")",
+            "lotNumber": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\",%Physical_Candidates:place_name%,\"\")",
+            "poBoxType": "=\"\"",
+            "postOfficeBox": "=\"\"",
+            "stateProvince": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\", %Physical_Candidates:region%,\"\")",
+            "street1": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\",%Physical_Candidates:st_name%,\"\")",
+            "streetNumber1": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\",%Physical_Candidates:add_num%,\"\")",
+            "streetSuffixTypeDescription": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\",%Physical_Candidates:st_dir%,\"\")",
+            "streetTypeDescription": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\",%Physical_Candidates:st_type%,\"\")",
+            "unitNumber": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\",%Physical_Candidates:unit_name%,\"\")",
+            "zipPostalCode": "=IF(%PhysicalAddresses:Address:AddressEntry%  = \"false\",%Physical_Candidates:postal%,\"\")"
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "%PhysicalAddresses:Address:AddressEntry%  = \"false\"",
+        "failOnStepError": false,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "RemoteAction1",
+        "remoteClass": "UniqueAddressesController",
+        "remoteMethod": "CheckExistingAddress",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "Remote Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/concatAddressPhysicalPostalSame"
+}

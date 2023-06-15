@@ -1,0 +1,346 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "GlobalKey": "DuplicationCheck_Account6494363231429803",
+        "InputFieldName": "Id",
+        "InputObjectName": "Account",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "DuplicateCheck",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "COUNTQUERY ( \"SELECT Name FROM Account WHERE RecordType.DeveloperName = 'Aged_Care_Organisation' and Name = '{0}' \" , ACOName )",
+        "FormulaResultPath": "DuplicateCheck:ACOName",
+        "FormulaSequence": 8,
+        "GlobalKey": "DuplicationCheck_AccountCustom6477",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (IncorporationIDType = 'ACN',(COUNTQUERY ( \"SELECT COUNT()  FROM Account WHERE RecordType.DeveloperName = 'Aged_Care_Organisation' and Incorporation_ID_Type__c ='ACN' and Incorporation_ID__c = '{0}'\" , IncorporationID),'')",
+        "FormulaResultPath": "DuplicateCheck:ACNCOUNT",
+        "FormulaSequence": 2,
+        "GlobalKey": "DuplicationCheck_Account2480957876407397",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (IncorporationIDType = 'ARBN',COUNTQUERY ( \"SELECT COUNT()  FROM Account WHERE RecordType.DeveloperName = 'Aged_Care_Organisation' and Incorporation_ID_Type__c ='ARBN' and Incorporation_ID__c = '{0}'\" , IncorporationID) ,'')",
+        "FormulaResultPath": "DuplicateCheck:ARBNCOUNT",
+        "FormulaSequence": 3,
+        "GlobalKey": "DuplicationCheck_Account8770287082831147",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (IncorporationIDType = 'IAN',(COUNTQUERY ( \"SELECT COUNT()  FROM Account WHERE RecordType.DeveloperName = 'Aged_Care_Organisation' and Incorporation_ID_Type__c ='IAN' and ARBN__c = '{0}'\" , ARBN ),'')",
+        "FormulaResultPath": "DuplicateCheck:ARBN_IncId_COUNT",
+        "FormulaSequence": 1,
+        "GlobalKey": "DuplicationCheck_Account8392776888156279",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (IncorporationIDType = 'IAN',(COUNTQUERY ( \"SELECT COUNT()  FROM Account WHERE RecordType.DeveloperName = 'Aged_Care_Organisation' and Incorporation_ID_Type__c ='IAN' and Incorporation_ID_Type__c = '{0}'\" , IncorporationID ),'')",
+        "FormulaResultPath": "DuplicateCheck:IANCOUNT",
+        "FormulaSequence": 6,
+        "GlobalKey": "DuplicationCheck_AccountCustom1031",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (IncorporationIDType = 'ICN',COUNTQUERY ( \"SELECT COUNT()  FROM Account WHERE RecordType.DeveloperName = 'Aged_Care_Organisation' and Incorporation_ID_Type__c ='ICN' and Incorporation_ID__c = '{0}'\" , IncorporationID) ,'')",
+        "FormulaResultPath": "DuplicateCheck:ICNCOUNT",
+        "FormulaSequence": 5,
+        "GlobalKey": "DuplicationCheck_Account4402111185351141",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (IncorporationIDType = 'Other',COUNTQUERY ( \"SELECT COUNT()  FROM Account WHERE RecordType.DeveloperName = 'Aged_Care_Organisation' and Incorporation_ID_Type__c ='Other' and Incorporation_ID__c = '{0}'\" , IncorporationID) ,'')",
+        "FormulaResultPath": "DuplicateCheck:OtherCOUNT",
+        "FormulaSequence": 4,
+        "GlobalKey": "DuplicationCheck_Account0724783900848156",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "IF (IncorporationIDType = \"Taken to be Incorporated\",COUNTQUERY ( \"SELECT COUNT()  FROM Account WHERE RecordType.DeveloperName = 'Aged_Care_Organisation' and Incorporation_ID_Type__c ='Taken to be Incorporated'  and Incorporation_ID__c = '{0}'\" ,IncorporationID) ,'')",
+        "FormulaResultPath": "DuplicateCheck:GovCOUNT",
+        "FormulaSequence": 7,
+        "GlobalKey": "DuplicationCheck_AccountCustom9568",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicationCheck_Account09530735264527479",
+        "InputFieldName": "DuplicateCheck:ACNCOUNT",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "DuplicateCheck:ACNCOUNT",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicationCheck_AccountCustom9098",
+        "InputFieldName": "DuplicateCheck:ACOName",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "DuplicateCheck:ACOName",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicationCheck_Account9798656597844044",
+        "InputFieldName": "DuplicateCheck:ARBNCOUNT",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "DuplicateCheck:ARBNCOUNT",
+        "OutputObjectName": "json",
+        "TransformValueMappings": "{}",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicationCheck_Account39047908866289727",
+        "InputFieldName": "DuplicateCheck:ARBN_IncId_COUNT",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "DuplicateCheck:ARBN_IncId_COUNT",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicationCheck_AccountCustom5976",
+        "InputFieldName": "DuplicateCheck:GovCOUNT",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "DuplicateCheck:GovCOUNT",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicationCheck_AccountCustom6503",
+        "InputFieldName": "DuplicateCheck:IANCOUNT",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "DuplicateCheck:IANCOUNT",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicationCheck_Account9059050673515792",
+        "InputFieldName": "DuplicateCheck:ICNCOUNT",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "DuplicateCheck:ICNCOUNT",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "DuplicationCheck_Account6996788143027122",
+        "InputFieldName": "DuplicateCheck:OtherCOUNT",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "DuplicationCheck_Account",
+        "OmniDataTransformationId": {
+            "Name": "DuplicationCheck_Account",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/DuplicationCheck_Account",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "DuplicateCheck:OtherCOUNT",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

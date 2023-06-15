@@ -1,0 +1,23 @@
+{
+    "Description": "Conditional block runs if user selected to hold one of the domain on the omniscript. Updates the Under Review on the selected domain's record page, and Reason for hold on Star Rating History and Comments on Case",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "HoldProcess",
+    "OmniProcessId": {
+        "Name": "SRQI_IP_HoldStarRatings",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/HoldStarRatings/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "%DRTransformServiceDetails:HoldQI% == \"true\" OR %DRTransformServiceDetails:HoldCM% == \"true\" OR %DRTransformServiceDetails:HoldCER% == \"true\"",
+        "isIfElseBlock": false,
+        "label": "ConditionalBlock4",
+        "show": null
+    },
+    "Type": "Conditional Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/HoldStarRatings/Procedure/HoldProcess"
+}

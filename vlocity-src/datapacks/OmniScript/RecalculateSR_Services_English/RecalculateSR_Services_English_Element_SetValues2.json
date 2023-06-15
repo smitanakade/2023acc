@@ -1,0 +1,35 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetValues2",
+    "OmniProcessId": {
+        "Name": "SRQI_RecalculateDomains_Services",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/RecalculateSR/Services/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "RunCERforAll": "=IF(%Step1_Services:Block1:ForAll% = true && %Step1_Services:Block2:SetDomain% = \"callCER\", true, false)",
+            "RunForAllServices": "=IF(%Step1_Services:Block1:ForAll% = null, false, %Step1_Services:Block1:ForAll%)",
+            "recordId": "=IF(%recordId% = null, %Step1_Services:Block1:SetServ-Block:Id%, %recordId%)"
+        },
+        "label": "SetValues1",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/RecalculateSR/Services/English/SetValues2"
+}

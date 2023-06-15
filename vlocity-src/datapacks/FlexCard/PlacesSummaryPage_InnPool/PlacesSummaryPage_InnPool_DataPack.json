@@ -1,0 +1,41 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "PlacesSummaryPage/GPMS/2.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "a2f9r0000000fHhAAI"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "AllotmentId": "{recordId}"
+            },
+            "ipMethod": "Summary_Summary",
+            "resultVar": "[\"Allotment\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "PlacesSummaryPage_InnPool",
+    "Namespace": "",
+    "OmniUiCardKey": "PlacesSummaryPage_InnPool/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "PlacesSummaryPage_InnPool.json",
+    "SampleDataSourceResponse": "{\"Allotment\":{\"SplNeedsKeyIssuesProvisional\":10,\"Id\":\"a2f9r0000000fHhAAI\",\"OfflineSum\":22,\"HighCeased\":3,\"NotSpecifiedCeased\":0,\"CareLevel\":\"High(Innovative Pool)\",\"Provisional\":17,\"LowProvisional\":0,\"GeneralAccessCeased\":0,\"Offline\":9,\"ProvisionalSum\":15,\"NotSpecifiedOffine\":0,\"Pre1997\":\"Yes\",\"SubType\":\"S14-1\",\"SplNeedsKeyIssuesOperational\":10,\"CommunityOffline\":0,\"CareType\":\"Flexible\",\"LowOffline\":0,\"LowOperational\":0,\"HighOffline\":9,\"GeneralAccessOffline\":0,\"CommunityOperational\":0,\"SplNeedsKeyIssuesOffline\":22,\"Operational\":12,\"SplNeedsKeyIssuesCeased\":7,\"CeasedSum\":7,\"LowCeased\":0,\"OperationalSum\":12,\"GeneralAccessOperational\":2,\"CommunityCeased\":0,\"CareSetting\":\"Mixed\",\"NotSpecifiedOperational\":0,\"GeneralAccessProvisional\":5,\"HighOperational\":12,\"HighProvisional\":17,\"Ceased\":3,\"CommunityProvisional\":0,\"NotSpecifiedProvisional\":0}}",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/PlacesSummaryPage_InnPool"
+}

@@ -1,0 +1,47 @@
+{
+    "Description": "Sends each returned array to the Expression Set to calculate the Overal Star Rating then passes the Loop Output above to the DR Post action to upsert",
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "LoopAllSRH",
+    "OmniProcessId": {
+        "Name": "SRHCalculation_New",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/StarRatingCalculation/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ServID_Null",
+        "OmniProcessId": {
+            "Name": "SRHCalculation_New",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/StarRatingCalculation/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/StarRatingCalculation/Procedure/ServID_Null",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ServID_Null",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "label": "LoopBlock1",
+        "loopList": "SRHData",
+        "loopOutput": {
+            "ExemptReason": "%SRHData:ExemptionReason%",
+            "IsExempt": "%SRHData:ExemptionActive%",
+            "MissingRating": "%SRHData:MissingRating%",
+            "PublishDates": "%PublishDates:PublishDates%",
+            "RecordId": "%CalculateAllOverallSR:output:calculationResults:RecordId%",
+            "SCRRating": "%SRHData:SCRRating%",
+            "StarRatingNumber": "%CalculateAllOverallSR:output:calculationResults:StarRatingNumber%"
+        },
+        "show": null
+    },
+    "Type": "Loop Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/StarRatingCalculation/Procedure/LoopAllSRH"
+}

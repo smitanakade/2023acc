@@ -1,0 +1,241 @@
+{
+    "dataSource": {
+        "contextVariables": [
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "Custom",
+        "value": {
+            "body": "[\n    {\n      \"Name\": \"Harley Jones\",\n      \"Contact\": \"003Bm000004wCBPIA2\",\n      \"Salutation\": \"Mr\",\n      \"Id\": \"a2TBm0000006vmnMAA\",\n      \"LastName\": \"Jones\",\n      \"IntegrationId\": \"CRL-126452\",\n      \"Birthday\": \"14/2/1973\",\n      \"CRType\": \"Point of Contact\",\n      \"FirstName\": \"Harley\",\n      \"Position\": \"rre\",\n      \"Role\": \"Primary Contact\",\n      \"StartDate\": \"2023-04-19\"\n    },\n    {\n      \"Name\": \"Harley Jones\",\n      \"Contact\": \"003Bm000004wCBPIA2\",\n      \"Salutation\": \"Mr\",\n      \"Id\": \"a2TBm0000006wR7MAI\",\n      \"LastName\": \"Jones\",\n      \"IntegrationId\": \"CRL-126456\",\n      \"Birthday\": \"14/2/1973\",\n      \"CRType\": \"Point of Contact\",\n      \"FirstName\": \"Harley\",\n      \"Position\": \"sdfsdf\",\n      \"Role\": \"Primary Contact\",\n      \"StartDate\": \"2023-04-18\"\n    },\n    {\n      \"Name\": \"Hellboy Test User\",\n      \"Contact\": \"003Bm000005W0wTIAS\",\n      \"Salutation\": \"Brother\",\n      \"Id\": \"a2TBm0000006wSjMAI\",\n      \"LastName\": \"Test User\",\n      \"IntegrationId\": \"CRL-126457\",\n      \"Birthday\": \"30/3/2001\",\n      \"CRType\": \"Point of Contact\",\n      \"FirstName\": \"Hellboy\",\n      \"Position\": \"sdfsdf\",\n      \"Role\": \"Assessment Service Liaison\",\n      \"StartDate\": \"2023-03-26\"\n    }\n  ]",
+            "dsDelay": "",
+            "resultVar": ""
+        }
+    },
+    "enableLwc": true,
+    "isFlex": true,
+    "isRepeatable": false,
+    "listenToWidthResize": true,
+    "lwc": {
+        "DeveloperName": "cfServiceCombine_ServiceContactSummary_1_GPMS",
+        "Id": "0RbBm0000003p4PKAQ",
+        "ManageableState": "unmanaged",
+        "MasterLabel": "cfServiceCombine_ServiceContactSummary_1_GPMS",
+        "NamespacePrefix": "c"
+    },
+    "osSupport": true,
+    "selectableMode": "Multi",
+    "states": [
+        {
+            "actions": [
+            ],
+            "blankCardState": false,
+            "childCards": [
+            ],
+            "components": {
+                "layer-0": {
+                    "children": [
+                        {
+                            "class": "slds-col ",
+                            "element": "flexDatatable",
+                            "elementLabel": "Datatable-0",
+                            "name": "Datatable",
+                            "property": {
+                                "card": "{card}",
+                                "cellLevelEdit": true,
+                                "columns": [
+                                ],
+                                "groupOrder": "asc",
+                                "issearchavailable": false,
+                                "issortavailable": true,
+                                "pagelimit": 3,
+                                "record": "{record}",
+                                "records": "{records}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "flexDatatable",
+                            "elementLabel": "Datatable-1",
+                            "name": "Datatable",
+                            "property": {
+                                "card": "{card}",
+                                "columns": [
+                                ],
+                                "issearchavailable": "false",
+                                "issortavailable": "true",
+                                "record": "{record}",
+                                "records": "{records}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "flexDatatable",
+                            "elementLabel": "Datatable-2",
+                            "name": "Datatable",
+                            "property": {
+                                "card": "{card}",
+                                "cellLevelEdit": true,
+                                "columns": [
+                                ],
+                                "groupOrder": "asc",
+                                "issearchavailable": false,
+                                "issortavailable": true,
+                                "pagelimit": 3,
+                                "record": "{record}",
+                                "records": "{records}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        },
+                        {
+                            "class": "slds-col ",
+                            "element": "flexDatatable",
+                            "elementLabel": "Datatable-3-clone-0",
+                            "name": "Datatable",
+                            "property": {
+                                "card": "{card}",
+                                "cellLevelEdit": false,
+                                "columns": [
+                                    {
+                                        "fieldName": "Name",
+                                        "label": "Name",
+                                        "searchable": true,
+                                        "sortable": true
+                                    },
+                                    {
+                                        "fieldName": "IntegrationId",
+                                        "label": "Integration ID",
+                                        "searchable": true,
+                                        "sortable": true
+                                    },
+                                    {
+                                        "fieldName": "Role",
+                                        "label": "Role",
+                                        "searchable": true,
+                                        "sortable": true
+                                    },
+                                    {
+                                        "fieldName": "Position",
+                                        "label": "Position Title",
+                                        "searchable": true,
+                                        "sortable": true
+                                    },
+                                    {
+                                        "fieldName": "StartDate",
+                                        "format": "D/M/YYYY",
+                                        "label": "Start Date",
+                                        "searchable": true,
+                                        "sortable": true,
+                                        "type": "date"
+                                    },
+                                    {
+                                        "fieldName": "CRType",
+                                        "label": "Contact Relationship Type",
+                                        "searchable": true,
+                                        "sortable": true
+                                    }
+                                ],
+                                "groupOrder": "asc",
+                                "issearchavailable": false,
+                                "issortavailable": true,
+                                "pagelimit": 3,
+                                "record": "{record}",
+                                "records": "{records}"
+                            },
+                            "size": {
+                                "default": "12",
+                                "isResponsive": false
+                            },
+                            "stateIndex": 0,
+                            "styleObject": {
+                                "sizeClass": "slds-size_12-of-12"
+                            },
+                            "type": "element"
+                        }
+                    ]
+                }
+            },
+            "conditions": {
+                "group": [
+                ],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "definedActions": {
+                "actions": [
+                ]
+            },
+            "documents": [
+            ],
+            "fields": [
+            ],
+            "isSmartAction": false,
+            "name": "Active",
+            "omniscripts": [
+            ],
+            "smartAction": {
+            },
+            "styleObject": {
+                "class": "slds-card slds-p-around_x-small slds-m-bottom_x-small",
+                "container": {
+                    "class": "slds-card"
+                },
+                "margin": [
+                    {
+                        "size": "x-small",
+                        "type": "bottom"
+                    }
+                ],
+                "padding": [
+                    {
+                        "size": "x-small",
+                        "type": "around"
+                    }
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12"
+            }
+        }
+    ],
+    "theme": "slds",
+    "title": "ServiceCombine_ServiceContactSummary",
+    "xmlJson": [
+    ],
+    "xmlObject": {
+        "apiVersion": 51,
+        "isExplicitImport": false,
+        "isExposed": true,
+        "masterLabel": "ServiceCombine_ServiceContactSummary",
+        "runtimeNamespace": "%vlocity_namespace%"
+    }
+}

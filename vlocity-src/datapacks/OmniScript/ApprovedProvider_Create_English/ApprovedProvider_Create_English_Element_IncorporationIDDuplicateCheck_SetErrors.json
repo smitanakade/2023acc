@@ -1,0 +1,138 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "IncorporationIDDuplicateCheck_SetErrors",
+    "OmniProcessId": {
+        "Name": "ApprovedProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ApprovedProvider/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementErrorMap": {
+            "IncorporationID": "This Incorporation ID is already in GPMS"
+        },
+        "label": "IncorporationIDDuplicateCheck_SetErrors",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": "Use this one",
+                        "field": "ChooseACO"
+                    },
+                    {
+                        "group": {
+                            "operator": "OR",
+                            "rules": [
+                                {
+                                    "group": {
+                                        "operator": "AND",
+                                        "rules": [
+                                            {
+                                                "condition": "=",
+                                                "data": "NotOk",
+                                                "field": "IANErrorCheck"
+                                            },
+                                            {
+                                                "condition": "=",
+                                                "data": "IAN",
+                                                "field": "IncorporationIDType"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "group": {
+                                        "operator": "AND",
+                                        "rules": [
+                                            {
+                                                "condition": "=",
+                                                "data": "ICN",
+                                                "field": "IncorporationIDType"
+                                            },
+                                            {
+                                                "condition": "=",
+                                                "data": "NotOk",
+                                                "field": "ICNErrorCheck"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "group": {
+                                        "operator": "AND",
+                                        "rules": [
+                                            {
+                                                "condition": "=",
+                                                "data": "ACN",
+                                                "field": "IncorporationIDType"
+                                            },
+                                            {
+                                                "condition": "=",
+                                                "data": "NotOk",
+                                                "field": "ACNErrorCheck"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "group": {
+                                        "operator": "AND",
+                                        "rules": [
+                                            {
+                                                "condition": "=",
+                                                "data": "Other",
+                                                "field": "IncorporationIDType"
+                                            },
+                                            {
+                                                "condition": "=",
+                                                "data": "NotOk",
+                                                "field": "OtherErrorCheck"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "group": {
+                                        "operator": "AND",
+                                        "rules": [
+                                            {
+                                                "condition": "=",
+                                                "data": "ARBN",
+                                                "field": "IncorporationIDType"
+                                            },
+                                            {
+                                                "condition": "=",
+                                                "data": "NotOk",
+                                                "field": "ARBNErrorCheck"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "validationRequired": "Step",
+        "wpm": false
+    },
+    "Type": "Set Errors",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ApprovedProvider/Create/English/IncorporationIDDuplicateCheck_SetErrors"
+}

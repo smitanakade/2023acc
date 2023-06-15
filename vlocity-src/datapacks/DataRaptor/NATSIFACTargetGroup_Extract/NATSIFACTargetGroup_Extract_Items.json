@@ -1,0 +1,259 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "AllotmentId",
+        "GlobalKey": "NATSIFACTargetGroup_ExtractCustom0jI9r0000000A0zEAEItem0",
+        "InputFieldName": "Allotment__c",
+        "InputObjectName": "AllotmentConditions__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "NATSIFACTargetGroup_Extract",
+        "OmniDataTransformationId": {
+            "Name": "NATSIFACTargetGroup_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/NATSIFACTargetGroup_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "TargetGroup",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "INCLUDES",
+        "FilterValue": "'People from Aboriginal and Torres Strait Islander communities'",
+        "GlobalKey": "NATSIFACTargetGroup_ExtractCustom5981",
+        "InputFieldName": "GPMS_Special_Needs__c",
+        "InputObjectName": "AllotmentConditions__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "NATSIFACTargetGroup_Extract",
+        "OmniDataTransformationId": {
+            "Name": "NATSIFACTargetGroup_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/NATSIFACTargetGroup_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "TargetGroup",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "'GPMS_Target_Group'",
+        "GlobalKey": "NATSIFACTargetGroup_ExtractCustom4134",
+        "InputFieldName": "RecordType.DeveloperName",
+        "InputObjectName": "AllotmentConditions__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "NATSIFACTargetGroup_Extract",
+        "OmniDataTransformationId": {
+            "Name": "NATSIFACTargetGroup_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/NATSIFACTargetGroup_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "TargetGroup",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "AllotmentId",
+        "GlobalKey": "NATSIFACTargetGroup_ExtractCustom0jI9r0000000A0zEAEItem1",
+        "InputFieldName": "Id",
+        "InputObjectName": "Allotment__c",
+        "InputObjectQuerySequence": 2,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "NATSIFACTargetGroup_Extract",
+        "OmniDataTransformationId": {
+            "Name": "NATSIFACTargetGroup_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/NATSIFACTargetGroup_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Allotment",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "Allotment:GPMS_Care_Level_Community__c + Allotment:GPMS_Care_Level_Residential__c",
+        "FormulaResultPath": "NATSIFACSum",
+        "FormulaSequence": 3,
+        "GlobalKey": "NATSIFACTargetGroup_ExtractCustom0jI9r0000000A0zEAEItem8",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "NATSIFACTargetGroup_Extract",
+        "OmniDataTransformationId": {
+            "Name": "NATSIFACTargetGroup_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/NATSIFACTargetGroup_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "ROUND((SUM(%TargetGroup:GPMS_Percentage_of_Places__c%)/100) * %Allotment:GPMS_Care_Level_Community__c%,0)",
+        "FormulaResultPath": "Community",
+        "FormulaSequence": 2,
+        "GlobalKey": "NATSIFACTargetGroup_ExtractCustom7185",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "NATSIFACTargetGroup_Extract",
+        "OmniDataTransformationId": {
+            "Name": "NATSIFACTargetGroup_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/NATSIFACTargetGroup_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "ROUND((SUM(%TargetGroup:GPMS_Percentage_of_Places__c%)/100) * %Allotment:GPMS_Care_Level_Residential__c%,0)",
+        "FormulaResultPath": "Residential",
+        "FormulaSequence": 1,
+        "GlobalKey": "NATSIFACTargetGroup_ExtractCustom2233",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "NATSIFACTargetGroup_Extract",
+        "OmniDataTransformationId": {
+            "Name": "NATSIFACTargetGroup_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/NATSIFACTargetGroup_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "NATSIFACTargetGroup_ExtractCustom0jI9r0000000A0zEAEItem19",
+        "InputFieldName": "Allotment:Care_Level__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "NATSIFACTargetGroup_Extract",
+        "OmniDataTransformationId": {
+            "Name": "NATSIFACTargetGroup_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/NATSIFACTargetGroup_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Total:CareLevel",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "NATSIFACTargetGroup_ExtractCustom0jI9r0000000A0zEAEItem32",
+        "InputFieldName": "Allotment:Care_Type__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "NATSIFACTargetGroup_Extract",
+        "OmniDataTransformationId": {
+            "Name": "NATSIFACTargetGroup_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/NATSIFACTargetGroup_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Total:CareType",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "0",
+        "GlobalKey": "NATSIFACTargetGroup_ExtractCustom1797",
+        "InputFieldName": "Allotment:GPMS_Care_Level_Community__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "NATSIFACTargetGroup_Extract",
+        "OmniDataTransformationId": {
+            "Name": "NATSIFACTargetGroup_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/NATSIFACTargetGroup_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Total:Community",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "0",
+        "GlobalKey": "NATSIFACTargetGroup_ExtractCustom2504",
+        "InputFieldName": "Allotment:Number_of_Places__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "NATSIFACTargetGroup_Extract",
+        "OmniDataTransformationId": {
+            "Name": "NATSIFACTargetGroup_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/NATSIFACTargetGroup_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Total:NATSIFACSum",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "DefaultValue": "0",
+        "GlobalKey": "NATSIFACTargetGroup_ExtractCustom3488",
+        "InputFieldName": "Allotment:GPMS_Care_Level_Residential__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "NATSIFACTargetGroup_Extract",
+        "OmniDataTransformationId": {
+            "Name": "NATSIFACTargetGroup_Extract",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/NATSIFACTargetGroup_Extract",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Total:Residential",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

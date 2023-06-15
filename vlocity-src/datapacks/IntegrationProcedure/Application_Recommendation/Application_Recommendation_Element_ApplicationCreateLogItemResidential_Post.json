@@ -1,0 +1,62 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ApplicationCreateLogItemResidential_Post",
+    "OmniProcessId": {
+        "Name": "ApplicationRecommendationOutcome",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/Recommendation/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "NotDecision",
+        "OmniProcessId": {
+            "Name": "ApplicationRecommendationOutcome",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Application/Recommendation/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Application/Recommendation/Procedure/NotDecision",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "NotDecision",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "ApprovalStatus": "=%ResidentialStatus%",
+            "CareTypeDependencies": "=%ResidentialDep%",
+            "CareTypeId": "=%Application:Residential%",
+            "Confirm": "=%Confirm%",
+            "Decision": "=%ResidentialDecision%",
+            "DecisionType": "=%ResidentialDecisionType%",
+            "Dependencies": "=%ResidentialDependencies%",
+            "RecommendationItem": "=%RecommendationItem%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ApplicationCreateItem_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "Residential == \"true\"",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction7",
+        "responseJSONNode": "ResidentialItem",
+        "responseJSONPath": "Recommendation_Item_Care_Type__c_2:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/Recommendation/Procedure/ApplicationCreateLogItemResidential_Post"
+}

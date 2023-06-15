@@ -1,0 +1,41 @@
+{
+    "AuthorName": "STARS",
+    "ClonedFromOmniUiCardKey": "OmniEmbed/STARS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 2,
+                "name": "recordId",
+                "val": "0cE9h000000077xEAA"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "DataRaptor",
+        "value": {
+            "bundle": "SRQI_DR_ExtractServiceDetails",
+            "bundleType": "",
+            "dsDelay": "",
+            "inputMap": {
+                "recordId": "{recordId}"
+            },
+            "resultVar": "[0]['Exempt']"
+        }
+    },
+    "Description": "Displays Exemption records on the Recalculate Star Rating Omniscript screen",
+    "IsTrackingEnabled": false,
+    "Name": "SRQI_FC_ExemptionRecords",
+    "Namespace": "",
+    "OmniUiCardKey": "SRQI_FC_ExemptionRecords/STARS/1.0",
+    "OmniUiCardType": "Child",
+    "PropertySetConfig": "SRQI_FC_ExemptionRecords.json",
+    "SampleDataSourceResponse": "[{\"Name\":\"Audrey's Service 2\",\"HasExemption\":\"exemption\",\"CMExempt\":false,\"CERExempt\":true,\"QIExempt\":false,\"Exempt\":[{\"EndDate\":\"2022-09-14\",\"Id\":\"a2z9h0000001ESLAA2\",\"Type\":\"CM Exemption\"},{\"EndDate\":\"2022-09-14\",\"Id\":\"a2z9h0000001EQjAAM\",\"Type\":\"CM Exemption\"},{\"EndDate\":\"2022-09-13\",\"Id\":\"a2z9h0000001ENVAA2\",\"Type\":\"CM Exemption\"},{\"EndDate\":\"2022-09-11\",\"Id\":\"a2z9h0000001EKHAA2\",\"Type\":\"CM Exemption\"},{\"EndDate\":\"2022-09-11\",\"Id\":\"a2z9h0000001ELtAAM\",\"Type\":\"CM Exemption\"},{\"EndDate\":\"2022-09-10\",\"Id\":\"a2z9h0000001EFRAA2\",\"Type\":\"CM Exemption\"},{\"EndDate\":\"2022-09-10\",\"Id\":\"a2z9h0000001EDpAAM\",\"Type\":\"CM Exemption\"},{\"EndDate\":\"2022-09-10\",\"Id\":\"a2z9h0000001EH3AAM\",\"Type\":\"CM Exemption\"},{\"EndDate\":\"2022-09-10\",\"Id\":\"a2z9h0000001EIfAAM\",\"Type\":\"CM Exemption\"},{\"EndDate\":\"2022-09-09\",\"Id\":\"a2z9h0000001GcDAAU\",\"Type\":\"QI Exemption\"},{\"EndDate\":\"2022-09-09\",\"Id\":\"a2z9h0000001G2jAAE\",\"Type\":\"QI Exemption\"},{\"EndDate\":\"2022-09-09\",\"Id\":\"a2z9h0000001GCPAA2\",\"Type\":\"QI Exemption\"},{\"EndDate\":\"2022-09-09\",\"Id\":\"a2z9h0000001GYzAAM\",\"Type\":\"CM Exemption\"},{\"EndDate\":\"2022-09-09\",\"Id\":\"a2z9h0000001E7NAAU\",\"Type\":\"CM Exemption\"}],\"SCRExempt\":false,\"Status\":\"Operational\"}]",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/SRQI_FC_ExemptionRecords"
+}

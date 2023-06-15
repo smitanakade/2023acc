@@ -1,0 +1,69 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CreateNewEvent",
+    "OmniProcessId": {
+        "Name": "Transfer",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Transfer/Create/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "TransferWithVariation",
+        "OmniProcessId": {
+            "Name": "Transfer",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Transfer/Create/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Transfer/Create/Procedure/TransferWithVariation",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "TransferWithVariation",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "DecisionDueDate": "=%NoticeOfTransfer:NoticeOfTransferForm:VetoDecisionDueDate%",
+            "EventType": "=\"Transfer - S16-13/S16-1\"",
+            "LinkToDocument": "=%NoticeOfTransfer:NoticeOfTransferForm:LinkToDocument%",
+            "NoticeOfTransferReceivedDate": "=%NoticeOfTransfer:NoticeOfTransferForm:NoticeOfTransferReceivedDate%",
+            "PreviousPage": "=\"Notice of Transfer\"",
+            "ProposedTransferDate": "=%NoticeOfTransfer:NoticeOfTransferForm:ProposedTransferDate%",
+            "RecordType": "=\"Transfer\"",
+            "Service": "=%ServiceId%",
+            "Status": "=\"Inactive\"",
+            "StatusEffectiveDate": "=%CurrentDateText%",
+            "TransferType": "=%TransferType:SelectTransferType%",
+            "Transferee": "=%NoticeOfTransfer:NoticeOfTransferForm:Transferee-Block:ApprovedProviderId%",
+            "Transferor": "=%ProviderId%",
+            "VetoDecisionDueDate": "=%NoticeOfTransfer:NoticeOfTransferForm:VetoDecisionDueDate%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "TransferEventCreate_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "%EventId% = null",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "EventId",
+        "responseJSONPath": "Event__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Transfer/Create/Procedure/CreateNewEvent"
+}

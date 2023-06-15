@@ -1,0 +1,76 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "concatAddressNonPhysical",
+    "OmniProcessId": {
+        "Name": "LocationAddress_Create",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ALL_NON_PHYSICAL_ADDRESSES",
+        "OmniProcessId": {
+            "Name": "LocationAddress_Create",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/LocationAddress/CreateAddress/Procedure",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/ALL_NON_PHYSICAL_ADDRESSES",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ALL_NON_PHYSICAL_ADDRESSES",
+    "ParentElementType": "Conditional Block",
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "LevelNumber": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\",%Postal_Candidates:level_name%,\"\")",
+            "buildingName": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\" ,%Postal_Candidates:add_bldg%,\"\")",
+            "city": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\" ,%Postal_Candidates:nbrhd%,\"\")",
+            "country": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\" ,\"Australia\",\"\")",
+            "latitude": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\" ,%Postal_Candidates:latitude%,\"\")",
+            "longitude": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\" ,%Postal_Candidates:longitude%,\"\")",
+            "lotNumber": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\" ,%Postal_Candidates:place_name%,\"\")",
+            "poBoxType": "=\"\"",
+            "postOfficeBox": "=\"\"",
+            "stateProvince": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\", %Postal_Candidates:region%,\"\")",
+            "street1": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\" ,%Postal_Candidates:st_name%,\"\")",
+            "streetNumber1": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\",%Postal_Candidates:add_num%,\"\")",
+            "streetSuffixTypeDescription": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\" ,%Postal_Candidates:st_dir%,\"\")",
+            "streetTypeDescription": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\" ,%Postal_Candidates:st_type%,\"\")",
+            "unitNumber": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\" ,%Postal_Candidates:unit_name%,\"\")",
+            "zipPostalCode": "=IF(PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\" ,%Postal_Candidates:postal%,\"\")"
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "PostalAddresses:PostalAddressBlock:AddressEntry1  = \"false\"",
+        "failOnStepError": false,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "RemoteAction1",
+        "remoteClass": "UniqueAddressesController",
+        "remoteMethod": "CheckExistingAddress",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "Remote Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/LocationAddress/CreateAddress/Procedure/concatAddressNonPhysical"
+}

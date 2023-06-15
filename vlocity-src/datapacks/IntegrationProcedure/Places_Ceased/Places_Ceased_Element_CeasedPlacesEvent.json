@@ -1,0 +1,53 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CeasedPlacesEvent",
+    "OmniProcessId": {
+        "Name": "CeasePlacesS14-9",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Places/Ceased/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "AllotmentId": "=%AllotmentId%",
+            "ApplicationReceivedDate": "=%CeasePlaces:NoticeReceivedDate%",
+            "CessationEffectiveDate": "=%CeasePlaces:CessationEffectiveDate%",
+            "CessationReason": "=\"Expired under S14-9(4)\"",
+            "Comments": "=%CeasePlaces:Comments%",
+            "DateOfAllotment": "=%DateOfAllotment%",
+            "EventRecordTypeId": "=\"GPMS_Cease_S14_9_Places\"",
+            "EventStatus": "=%CeasePlaces:CeasePlacesStatus%",
+            "EventStatusDate": "=%CurrentDateText%",
+            "EventType": "=\"Cease S14-9 Places\"",
+            "LinkToDocument": "=%CeasePlaces:LinktoDocuments%",
+            "ServiceId": "=%ServiceId%",
+            "StatusReason": "=\"Expired under S14-9(4)\""
+        },
+        "additionalOutput": {
+        },
+        "bundle": "Allotment_Post",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "EventId",
+        "responseJSONPath": "Event__c_1:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Places/Ceased/Procedure/CeasedPlacesEvent"
+}

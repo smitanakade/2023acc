@@ -1,0 +1,81 @@
+[
+    {
+        "FormulaExpression": "IF(SelectedCER == true, true, IF(ReleaseCER == true, false, true))",
+        "FormulaResultPath": "CERUnderReview",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_UpdateCERUnderReviewCustom9737",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_UpdateCERUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_UpdateCERUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_UpdateCERUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_UpdateCERUnderReviewCustom6265",
+        "InputFieldName": "CERId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": true,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_UpdateCERUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_UpdateCERUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_UpdateCERUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_UpdateCERUnderReviewCustom8557",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_UpdateCERUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_UpdateCERUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_UpdateCERUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_UpdateCERUnderReviewCustom5897",
+        "InputFieldName": "CERUnderReview",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_UpdateCERUnderReview",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_UpdateCERUnderReview",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_UpdateCERUnderReview",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Under_Review__c",
+        "OutputObjectName": "SRQI_CER__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

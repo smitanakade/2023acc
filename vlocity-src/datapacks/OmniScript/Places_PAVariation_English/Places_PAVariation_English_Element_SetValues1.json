@@ -1,0 +1,40 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetValues1",
+    "OmniProcessId": {
+        "Name": "PlacesPAVariation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Places/PAVariation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "Comments": "=IF(%DecisionStep:DecisionComments% <> NULL, %DecisionStep:DecisionComments%, IF(%RequestStep:RequestComments% <> NULL, %RequestStep:RequestComments%,IF(%CancelStep:CancelComments% <> NULL, %CancelStep:CancelComments%,\"\" ) ))",
+            "CurrentDateText": "=YEAR(TODAY())+\"-\"+MONTH(TODAY())+\"-\"+DAYOFMONTH(TODAY())",
+            "EventAATReview": "=IF(%PerformAction:Action% = 'Record Request for Reconsideration by the AAT', 'Outstanding',IF(%PerformAction:Action% = 'Record AAT Decision' && %DecisionStep:DecisionReconsideration%='Uphold Decision', 'Confirm',IF(%PerformAction:Action% = 'Record AAT Decision' && %DecisionStep:DecisionReconsideration%='Set Aside Decision and Substitute New Decision','Vary',%AATReview%)))",
+            "EventNextStatus": "=IF(%RequestStep:RequestStatus% <> NULL, %RequestStep:RequestStatus%,IF(%DecisionStep:DecisionStatus% <> NULL, %DecisionStep:DecisionStatus%,IF(%PerformAction:Action% = \"Cancel\", \"Cancelled\",\"\")))",
+            "EventReview": "=IF(%PerformAction:Action% = 'Record Request for Reconsideration','Outstanding',IF(%PerformAction:Action%= 'Record a Decision on Request for Reconsideration' && %DecisionStep:DecisionReconsideration%='Uphold Decision','Confirm',IF(%PerformAction:Action%= 'Record a Decision on Request for Reconsideration' && %DecisionStep:DecisionReconsideration%='Set Aside Decision and Substitute New Decision','Vary',%Review%)))",
+            "LinkToDocument": "=IF(%DecisionStep:LinkToDocumentDecision% <> NULL, %DecisionStep:LinkToDocumentDecision% , IF(%RequestStep:LinkToDocumentRequest% <> NULL, %RequestStep:LinkToDocumentRequest% , \"\"))",
+            "Type": "Action"
+        },
+        "label": "SetValues1",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Places/PAVariation/English/SetValues1"
+}

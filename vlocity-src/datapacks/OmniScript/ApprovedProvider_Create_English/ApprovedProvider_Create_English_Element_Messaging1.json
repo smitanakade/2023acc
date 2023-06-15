@@ -1,0 +1,167 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Messaging1",
+    "OmniProcessId": {
+        "Name": "ApprovedProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ApprovedProvider/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "ACODetail",
+        "OmniProcessId": {
+            "Name": "ApprovedProvider",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/ApprovedProvider/Create/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/ApprovedProvider/Create/English/ACODetail",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "ACODetail",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "hideLabel": true,
+        "label": "Messaging6",
+        "messages": [
+            {
+                "active": false,
+                "text": "",
+                "type": "Success",
+                "value": true
+            },
+            {
+                "active": true,
+                "text": "Incorporation ID is not in the correct 9 digit sequence",
+                "type": "Requirement",
+                "value": false
+            }
+        ],
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "<>",
+                        "data": null,
+                        "field": "IncorporationID"
+                    },
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "ARBN",
+                                    "field": "IncorporationIDType"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "False",
+                                    "field": "Formula1"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "False",
+                                    "field": "Formula1"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "ACN",
+                                    "field": "IncorporationIDType"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "validateExpression": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "True",
+                                    "field": "Formula1"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "ACN",
+                                    "field": "IncorporationIDType"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "10",
+                                    "field": "Formula"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "group": {
+                            "operator": "AND",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "True",
+                                    "field": "Formula1"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "ARBN",
+                                    "field": "IncorporationIDType"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "10",
+                                    "field": "Formula"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "condition": "=",
+                        "data": "IAN",
+                        "field": "IncorporationIDType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "ICN",
+                        "field": "IncorporationIDType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Other",
+                        "field": "IncorporationIDType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Taken to be Incorporated",
+                        "field": "IncorporationIDType"
+                    }
+                ]
+            }
+        }
+    },
+    "Type": "Validation",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ApprovedProvider/Create/English/Messaging1"
+}

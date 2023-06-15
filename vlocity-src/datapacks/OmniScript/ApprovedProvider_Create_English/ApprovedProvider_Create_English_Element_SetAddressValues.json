@@ -1,0 +1,39 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetAddressValues",
+    "OmniProcessId": {
+        "Name": "ApprovedProvider",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/ApprovedProvider/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "FinalACOCareOf": "=IF(%ACOPostalAddresses:ACOPostalAddressBlock:ACOPostalCareOf2% <> NULL, %ACOPostalAddresses:ACOPostalAddressBlock:ACOPostalCareOf2%, '')+ ''+ IF(%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPostalCareOf1% <> NULL, %ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPostalCareOf1%, '')",
+            "FinalACOPostalAddress": "=IF(%ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1% = false, %ACO_Candidates:place_addr%, IF(%ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1% = true & %SelectPostalAddress:ACOCGISAddress1% = 'Yes', %SelectPostalAddress:CustomLWC3:SelectedAddress:SingleLineAddress%,IF(%ACOPostalAddresses:ACOPostalAddressBlock:ACOAddressEntry1% = true & %SelectPostalAddress:ACOCGISAddress1% = 'No', %SelectPostalAddress:ACOSingleLineInput1%,IF(%ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxRadio_Postal% = \"PO Box\", %ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBoxType_Postal% + ' ' + %ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBox_Postal_UPPER% + ' ' + %ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBoxSuburbOrTown_Postal_UPPER% + ' ' + %ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBoxState_Postal% + ' ' + %ACOPostalAddresses:ACOPostalAddressBlock:ACOPOBoxBlock:ACOPOBoxPostCode_Postal%,\"NotApplicable\"))))",
+            "FinalCareOf": "=IF(%PostalAddresses:PostalAddressBlock:PostalCareOf2% <> NULL, %PostalAddresses:PostalAddressBlock:PostalCareOf2%, '')+ ''+ IF(%PostalAddresses:PostalAddressBlock:POBoxBlock:PostalCareOf1% <> NULL, %PostalAddresses:PostalAddressBlock:POBoxBlock:PostalCareOf1%, '')",
+            "FinalPOBox": "=IF(%PhysicalAddresses:Address:SameAddress% = false & %PostalAddresses:PostalAddressBlock:POBoxRadio_Postal% = \"PO Box\", %PostalAddresses:POBoxBlock:POBoxType_Postal% + ' ' + %PostalAddresses:POBoxBlock:POBox_Postal_UPPER% + ' ' + %PostalAddresses:POBoxBlock:POBoxSuburbOrTown_Postal_UPPER% + ' ' + %PostalAddresses:POBoxBlock:POBoxState_Postal% + ' ' + %PostalAddresses:POBoxBlock:POBoxPostCode_Postal%, IF(%PhysicalAddresses:Address:SameAddress1% = false & %PostalAddresses:PostalAddressBlock:POBoxRadio_Postal% = \"PO Box\", %PostalAddresses:POBoxBlock:POBoxType_Postal% + ' ' + %PostalAddresses:POBoxBlock:POBox_Postal_UPPER% + ' ' + %PostalAddresses:POBoxBlock:POBoxSuburbOrTown_Postal_UPPER% + ' ' + %PostalAddresses:POBoxBlock:POBoxState_Postal% + ' ' + %PostalAddresses:POBoxBlock:POBoxPostCode_Postal%,\"NotApplicable\"))",
+            "FinalPhysicalAddress": "=IF(%PhysicalAddresses:Address:AddressEntry% = false, %Physical_Candidates:place_addr%, IF(%SelectPhysicalAddress:CGISAddress% = 'Yes', %SelectPhysicalAddress:CustomLWC2:SelectedAddress:SingleLineAddress%, IF(%SelectPhysicalAddress:CGISAddress% = 'No', %SingleLine_Physical%)))",
+            "FinalPostalAddress": "=IF(%PhysicalAddresses:Address:SameAddress% = true & %PhysicalAddresses:Address:AddressEntry%  = false, %Physical_Candidates:place_addr%, IF(%SelectPhysicalAddress:CGISAddress% = 'Yes' & %PhysicalAddresses:Address:SameAddress1% = true, %SelectPhysicalAddress:CustomLWC2:SelectedAddress:SingleLineAddress%, IF(%SelectPhysicalAddress:CGISAddress% = 'No' & %PhysicalAddresses:Address:SameAddress1% = true, %SingleLine_Physical%, IF(%PhysicalAddresses:Address:SameAddress% = false & %PostalAddresses:PostalAddressBlock:AddressEntry1% = false, %Postal_Candidates:place_addr%,IF(%PhysicalAddresses:Address:SameAddress1% = false & %PostalAddresses:PostalAddressBlock:AddressEntry1% = false, %Postal_Candidates:place_addr%,IF(%PhysicalAddresses:Address:SameAddress% = false & %PostalAddresses:PostalAddressBlock:AddressEntry1% = true & %SelectPostalAddress:CGISAddress1% = 'Yes', %SelectPostalAddress:CustomLWC1:SelectedAddress:SingleLineAddress%, IF(%PhysicalAddresses:Address:SameAddress1% = false & %PostalAddresses:PostalAddressBlock:AddressEntry1% = true & %SelectPostalAddress:CGISAddress1% = 'Yes', %SelectPostalAddress:CustomLWC1:SelectedAddress:SingleLineAddress%, IF(%PhysicalAddresses:Address:SameAddress% = false & %PostalAddresses:PostalAddressBlock:AddressEntry1% = true & %SelectPostalAddress:CGISAddress1% = 'No', %SelectPostalAddress:SingleLineInput1%,IF(%PhysicalAddresses:Address:SameAddress1% = false & %PostalAddresses:PostalAddressBlock:AddressEntry1% = true & %SelectPostalAddress:CGISAddress1% = 'No', %SelectPostalAddress:SingleLineInput1%,IF(%PhysicalAddresses:Address:SameAddress% = false & %PostalAddresses:PostalAddressBlock:POBoxRadio_Postal% = \"PO Box\", %PostalAddresses:PostalAddressBlock:POBoxBlock:POBoxType_Postal% + ' ' + %PostalAddresses:PostalAddressBlock:POBoxBlock:POBox_Postal_UPPER% + ' ' + %PostalAddresses:PostalAddressBlock:POBoxBlock:POBoxSuburbOrTown_Postal_UPPER% + ' ' + %PostalAddresses:PostalAddressBlock:POBoxBlock:POBoxState_Postal% + ' ' + %PostalAddresses:PostalAddressBlock:PostalAddressBlock:POBoxBlock:POBoxPostCode_Postal%,IF(%PhysicalAddresses:Address:SameAddress1% = false & %PostalAddresses:PostalAddressBlock:POBoxRadio_Postal% = \"PO Box\", %PostalAddresses:PostalAddressBlock:POBoxBlock:POBoxType_Postal% + ' ' + %PostalAddresses:PostalAddressBlock:POBoxBlock:POBox_Postal_UPPER% + ' ' + %PostalAddresses:PostalAddressBlock:POBoxBlock:POBoxSuburbOrTown_Postal_UPPER% + ' ' + %PostalAddresses:PostalAddressBlock:POBoxBlock:POBoxState_Postal% + ' ' + %PostalAddresses:PostalAddressBlock:POBoxBlock:POBoxPostCode_Postal%,\"NotApplicable\")))))))))))"
+        },
+        "label": "SetAddressValues",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/ApprovedProvider/Create/English/SetAddressValues"
+}

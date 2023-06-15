@@ -1,0 +1,38 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CheckCareType",
+    "OmniProcessId": {
+        "Name": "Application_Recommendation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/Recommendation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "ApplicationLog": "=IF(%Application:Re% != %Application:ReLogRe%, null, %Application:Log%)",
+            "Flexible": "=CONTAINS(%Application:CareTypes%, 'Flexible')",
+            "FutureDate": "=TODAY()+1",
+            "HasRe": "=IF(%Application:Re% != null, \"yes\",\"no\")",
+            "HomeCare": "=CONTAINS(%Application:CareTypes%, 'Home Care')",
+            "Residential": "=CONTAINS(%Application:CareTypes%, 'Residential') "
+        },
+        "label": "CheckCareType",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/Recommendation/English/CheckCareType"
+}

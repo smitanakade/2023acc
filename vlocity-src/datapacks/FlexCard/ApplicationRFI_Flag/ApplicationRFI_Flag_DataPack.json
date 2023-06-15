@@ -1,0 +1,41 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 1,
+                "name": "recordId",
+                "val": "a1t9r000000At01AAC"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "DataRaptor",
+        "value": {
+            "bundle": "ApplicationRFI_Extract",
+            "bundleType": "",
+            "dsDelay": "",
+            "inputMap": {
+                "applicationId": "{recordId}"
+            },
+            "resultVar": ""
+        }
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "ApplicationRFI_Flag",
+    "Namespace": "",
+    "OmniUiCardKey": "ApplicationRFI_Flag/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "ApplicationRFI_Flag.json",
+    "SampleDataSourceResponse": "[{\"Application__c\":\"a1t9r000000At01AAC\",\"RecordType.Name\":\"Request_for_Information\",\"Case_Link__c\":\"<a href=\\\"/5009r000000oWj4\\\" target=\\\"_blank\\\">00001098</a>\",\"Payment_Due_Date__c\":\"07/04/2022\",\"RFI_Payment_Flag__c\":\"RFI Payment overdue by 1 days\",\"Status\":\"Fee Payment Pending\"},{\"RFI_Response_Flag__c\":\"RFI Response due in 8 days\",\"Application__c\":\"a1t9r000000At01AAC\",\"RecordType.Name\":\"Request_for_Information\",\"RFI_Due_Date__c\":\"07/13/2022\",\"Case_Link__c\":\"<a href=\\\"/5009r000000fzHF\\\" target=\\\"_blank\\\">00001062</a>\",\"Payment_Due_Date__c\":\"07/06/2022\",\"Status\":\"RFI Issued\"}]",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/ApplicationRFI_Flag"
+}

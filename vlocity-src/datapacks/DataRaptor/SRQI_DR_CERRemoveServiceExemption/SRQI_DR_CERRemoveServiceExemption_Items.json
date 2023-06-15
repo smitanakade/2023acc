@@ -1,0 +1,217 @@
+[
+    {
+        "FormulaExpression": "FORMATDATETIME(NOW(),\"yyyy-MM-dd'T'HH:mm:ss.SSSZ\",\"Australia/Sydney\")",
+        "FormulaResultPath": "TodayDate",
+        "FormulaSequence": 1,
+        "GlobalKey": "SRQI_DR_CERRemoveServiceExemption06446780915853823",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CERRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CERRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CERRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "\"false\"",
+        "FormulaResultPath": "False",
+        "FormulaSequence": 2,
+        "GlobalKey": "SRQI_DR_CERRemoveServiceExemption4998013372107808",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CERRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CERRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CERRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CERRemoveServiceExemption8061232021141858",
+        "InputFieldName": "TodayDate",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CERRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CERRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CERRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Exemption_Finish__c",
+        "OutputObjectName": "SRQI_Exemption__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CERRemoveServiceExemption9813665128260936",
+        "InputFieldName": "CERId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_CERRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CERRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CERRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "SRQI_Exemption__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_CERRemoveServiceExemption17541480984528546",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_CERRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CERRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CERRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "SRQI_Exemption__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CERRemoveServiceExemptionCustom1674",
+        "InputFieldName": "RemDet",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CERRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CERRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CERRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Removal_Reason__c",
+        "OutputObjectName": "SRQI_Exemption__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CERRemoveServiceExemptionCustom2968",
+        "InputFieldName": "Remv",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CERRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CERRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CERRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Remover__c",
+        "OutputObjectName": "SRQI_Exemption__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CERRemoveServiceExemptionCustom6556",
+        "InputFieldName": "ServID",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CERRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CERRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CERRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Service__c",
+        "OutputObjectName": "SRQI_Exemption__c",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CERRemoveServiceExemption07139907438632953",
+        "InputFieldName": "False",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "SRQI_DR_CERRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CERRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CERRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "CER_Exempt__c",
+        "OutputObjectName": "BusinessLicense",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "SRQI_DR_CERRemoveServiceExemption2665211670754932",
+        "InputFieldName": "ServID",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": true,
+        "Name": "SRQI_DR_CERRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CERRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CERRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "BusinessLicense",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterOperator": "=",
+        "GlobalKey": "SRQI_DR_CERRemoveServiceExemption06876489812533548",
+        "IsDisabled": true,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "MigrationValue": "FAKEMAPPING",
+        "Name": "SRQI_DR_CERRemoveServiceExemption",
+        "OmniDataTransformationId": {
+            "Name": "SRQI_DR_CERRemoveServiceExemption",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/SRQI_DR_CERRemoveServiceExemption",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 2,
+        "OutputFieldName": "Id",
+        "OutputObjectName": "BusinessLicense",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

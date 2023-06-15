@@ -1,0 +1,50 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ApplicationRecommendationLogUpdate_POST",
+    "OmniProcessId": {
+        "Name": "ApplicationRecommendationOutcome",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/Recommendation/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "Application:ApplicationStatus": "=%Application:ApplicationStatus%",
+            "Application:Id": "=%ApplicationId%",
+            "Application:Re": "=%Application:Re%",
+            "ApplicationLog": "=%ApplicationLog%",
+            "ApplicationOwner": "=%ApplicationOwner%",
+            "ApplicationStatus": "=%ApplicationStatus%",
+            "Assessor": "=%Assessor%",
+            "Comment": "=%Comment%",
+            "Delegate": "=%Delegate%",
+            "Reviewer": "=%Reviewer%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "ApplicationRecommendationLogUpdate_POST",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "RecommendationItem",
+        "responseJSONPath": "Recommendation_Item__c_3:Id",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/Recommendation/Procedure/ApplicationRecommendationLogUpdate_POST"
+}

@@ -1,0 +1,116 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DomainAlreadyOnHoldOrReleasedError",
+    "OmniProcessId": {
+        "Name": "SRQI_OS_HoldStarRatings",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/SRQI/HoldStarRatings/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "allowSaveForLater": false,
+        "businessCategory": "",
+        "businessEvent": "",
+        "cancelLabel": "Cancel",
+        "cancelMessage": "Are you sure?",
+        "chartLabel": null,
+        "completeLabel": "Complete",
+        "completeMessage": "Are you sure you want to complete the script?",
+        "conditionType": "Hide if False",
+        "errorMessage": {
+            "custom": [
+            ],
+            "default": null
+        },
+        "instruction": "",
+        "instructionKey": "",
+        "knowledgeOptions": {
+            "dataCategoryCriteria": "",
+            "keyword": "",
+            "language": "English",
+            "publishStatus": "Online",
+            "remoteTimeout": 30000,
+            "typeFilter": ""
+        },
+        "label": "Error",
+        "message": {
+        },
+        "nextLabel": "Next",
+        "nextWidth": "0",
+        "previousLabel": "Previous",
+        "previousWidth": 3,
+        "pubsub": false,
+        "remoteClass": "",
+        "remoteMethod": "",
+        "remoteOptions": {
+        },
+        "remoteTimeout": 30000,
+        "saveLabel": "Save for later",
+        "saveMessage": "Are you sure you want to save it for later?",
+        "show": {
+            "group": {
+                "operator": "OR",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Consumer Experience Report",
+                        "field": "HeldCER"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Care Minutes",
+                        "field": "HeldCM"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Quality Indicator",
+                        "field": "HeldQI"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Consumer Experience Report",
+                        "field": "ReleasedCER"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Quality Indicator",
+                        "field": "ReleasedQI"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Care Minutes",
+                        "field": "ReleasedCM"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "LIVE_QI"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "LIVE_CER"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "LIVE_CM"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "validationRequired": true,
+        "wpm": false
+    },
+    "Type": "Step",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/SRQI/HoldStarRatings/English/DomainAlreadyOnHoldOrReleasedError"
+}

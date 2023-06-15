@@ -1,0 +1,41 @@
+{
+    "AuthorName": "GPMS",
+    "ClonedFromOmniUiCardKey": "ACOGroupMemberProviders_Header/GPMS/1.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 22,
+                "name": "recordId",
+                "val": "0cE9r000000003FEAQ"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "IntegrationProcedures",
+        "value": {
+            "dsDelay": "",
+            "inputMap": {
+                "ServiceId": "{recordId}"
+            },
+            "ipMethod": "ServiceAddress_RelatedList",
+            "resultVar": "[\"Params\"]",
+            "vlocityAsync": false
+        }
+    },
+    "Description": "Header for Service Addresses",
+    "IsTrackingEnabled": false,
+    "Name": "ServiceAddresses_Header",
+    "Namespace": "",
+    "OmniUiCardKey": "ServiceAddresses_Header/GPMS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "ServiceAddresses_Header.json",
+    "SampleDataSourceResponse": "{\"Params\":{\"ServiceRecordType\":\"NATSIFAC Service\",\"CareType\":\"National Aboriginal and Torres Strait Island Flexible Aged Care Program\"},\"ServiceAddress\":[{\"AddressId\":\"a1o9r000000Z4GrAAK\",\"AddressType\":\"Physical\",\"CareOf\":\"NotApplicable\",\"ServiceType\":\"NATSIFAC Service\",\"AddressString\":\"100 Gold Coast Drive Carrickalinga,100 Gold Coast Dr, Carrickalinga, SA, 5204\",\"ServiceAddressId\":\"a1p9r0000003BdFAAU\",\"POBox\":\"NotApplicable\",\"AddressName\":\"ADR-0000083\"},{\"AddressId\":\"a1o9r000000Z4GsAAK\",\"AddressType\":\"Postal\",\"CareOf\":\"NotApplicable\",\"ServiceType\":\"NATSIFAC Service\",\"AddressString\":\"100 Antill Street, Downer, ACT, 2602\",\"ServiceAddressId\":\"a1p9r0000003BdGAAU\",\"POBox\":\"NotApplicable\",\"AddressName\":\"ADR-0000084\"}]}",
+    "StylingConfiguration": "",
+    "UniqueName": "ServiceAddresses_Header_GPMS_1",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/ServiceAddresses_Header"
+}

@@ -1,0 +1,68 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "TextBlock7",
+    "OmniProcessId": {
+        "Name": "CreateAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Create/Allotment/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "PlaceInformationResidential",
+        "OmniProcessId": {
+            "Name": "CreateAllotment",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/Create/Allotment/English",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/Create/Allotment/English/PlaceInformationResidential",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "PlaceInformationResidential",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": null,
+        "dataJSON": false,
+        "label": "TextBlock7",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "false",
+                        "field": "ConditionNode:HasCurrentAccreditation"
+                    },
+                    {
+                        "group": {
+                            "operator": "OR",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "S15-1 Determined to be in effect at time of allocation (Operational)",
+                                    "field": "StatusReasonS14-1|n"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "S15-1 Determined to be in effect at time of allocation (Operational)",
+                                    "field": "StatusReasonS14-9|n"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "text": "<p><span lang=\"EN-AU\" style=\"color: #e03e2d;\">The following issue(s) need to be fixed before you can create a new event:&nbsp;</span></p>\n<ol>\n<li><strong><span style=\"color: #e03e2d;\">Residential service record must have a current physical and postal address;</span></strong></li>\n<li><strong><span style=\"color: #e03e2d;\">Current certification, fire and safety compliance, privacy and space compliance;</span></strong></li>\n<li><strong><span style=\"color: #e03e2d;\">At least 1 current point of contact; and&nbsp;</span></strong></li>\n<li><strong><span style=\"color: #e03e2d;\">Current accreditation recorded.\"</span></strong></li>\n</ol>",
+        "textKey": ""
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Create/Allotment/English/TextBlock7"
+}

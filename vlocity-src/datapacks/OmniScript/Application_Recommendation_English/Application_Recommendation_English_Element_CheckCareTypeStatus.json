@@ -1,0 +1,38 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CheckCareTypeStatus",
+    "OmniProcessId": {
+        "Name": "Application_Recommendation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Application/Recommendation/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "FlexibleDep": "=IF(%DelegatesDecision:DelegatesDecisionDecision%=\"Record Decision\", %DelegatesDecision:FlexibleDelegateDecision:FlexibleDecisionDependencies%, %Application:FlexibleDep%)",
+            "FlexibleStatus": "=IF(%ApplicationStatus%=\"Finalise\", %FlexibleDecision%, %Application:FlexibleStatus%)",
+            "HomeCareDep": "=IF(%DelegatesDecision:DelegatesDecisionDecision%=\"Record Decision\", %DelegatesDecision:HomeCareDelegateDecision:HomeCareDecisionDependencies%, %Application:HomeCareDep%)",
+            "HomeCareStatus": "=IF(%ApplicationStatus%=\"Finalise\", %HomeCareDecision%, %Application:HomeCareStatus%)",
+            "ResidentialDep": "=IF(%DelegatesDecision:DelegatesDecisionDecision%=\"Record Decision\", %DelegatesDecision:ResidentialDelegateDecision:ResidentialDecisionDependencies%, %Application:ResidentialDep%)",
+            "ResidentialStatus": "=IF(%ApplicationStatus%=\"Finalise\", %ResidentialDecision% , %Application:ResidentialStatus%)"
+        },
+        "label": "SetCareType",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Application/Recommendation/English/CheckCareTypeStatus"
+}

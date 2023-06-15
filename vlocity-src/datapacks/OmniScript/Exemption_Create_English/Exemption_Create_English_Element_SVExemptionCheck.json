@@ -1,0 +1,36 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SVExemptionCheck",
+    "OmniProcessId": {
+        "Name": "Create Exemption",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Exemption/Create/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "SVALLExemptionCheck": "=IF(%Step2:SelectDomain:SetDomain% == \"exemptStarRating\" && (%GetServiceExemptions|1:CER_Exempt__c% == true|| %GetServiceExemptions|1:CM_Exempt__c% == true|| %GetServiceExemptions|1:QI_Exempt__c% == true), \"oneExemptionExists\", \"noExemptionExists\")",
+            "SVCERExemptionCheck": "=IF(%Step2:SelectDomain:SetDomain% == \"exemptCER\" && %GetServiceExemptions|1:CER_Exempt__c% == true, \"CERExemptionExist\", \"CERExemptionDoesNotExist\")",
+            "SVCMExemptionCheck": "=IF(%Step2:SelectDomain:SetDomain% == \"exemptCM\" && %GetServiceExemptions|1:CM_Exempt__c% == true, \"CMExemptionExist\", \"CMExemptionDoesNotExist\")",
+            "SVQIExemptionCheck": "=IF(%Step2:SelectDomain:SetDomain% == \"exemptQI\" && %GetServiceExemptions|1:QI_Exempt__c% == true, \"QIExemptionExist\", \"QIExemptionDoesNotExist\")"
+        },
+        "label": "SVExemptionCheck",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Exemption/Create/English/SVExemptionCheck"
+}

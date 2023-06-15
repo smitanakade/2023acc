@@ -1,0 +1,41 @@
+{
+    "AuthorName": "STARS",
+    "ClonedFromOmniUiCardKey": "OmniEmbed/STARS/2.0",
+    "DataSourceConfig": {
+        "contextVariables": [
+            {
+                "id": 2,
+                "name": "recordId",
+                "val": "0cE9h000000077xEAA"
+            }
+        ],
+        "orderBy": {
+            "isReverse": "",
+            "name": ""
+        },
+        "type": "DataRaptor",
+        "value": {
+            "bundle": "SRQI_DR_GetSRHDetails_Simplified",
+            "bundleType": "",
+            "dsDelay": "",
+            "inputMap": {
+                "ServID": "{recordId}"
+            },
+            "resultVar": "[0][\"StarRatingHistory\"]"
+        }
+    },
+    "Description": "Displays SRH Child records and their current availability",
+    "IsTrackingEnabled": false,
+    "Name": "SRQI_FC_LiveRemoved",
+    "Namespace": "",
+    "OmniUiCardKey": "SRQI_FC_LiveRemoved/STARS/1.0",
+    "OmniUiCardType": "Parent",
+    "PropertySetConfig": "SRQI_FC_LiveRemoved.json",
+    "SampleDataSourceResponse": "[{\"StarRatingHistory\":{\"SCRId\":\"a2i9h0000008CX3AAM\",\"CERAvailability\":\"LIVE\",\"CERId\":\"a2a9h0000001AbdAAE\",\"CMId\":\"a2m9h0000002BtpAAE\",\"SRHStatus\":\"Published\",\"QIAvailability\":\"Removed\",\"QIId\":\"a2V9h0000001mNZEAY\",\"ServiceName\":\"Audrey's Service 2\",\"CMAvailability\":\"LIVE\",\"SRHId\":\"a2k9h0000002OHZAA2\",\"ProviderName\":\"Bupa Provider\",\"ProviderId\":\"0019h000002hhtNAAQ\"}}]",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/SRQI_FC_LiveRemoved"
+}

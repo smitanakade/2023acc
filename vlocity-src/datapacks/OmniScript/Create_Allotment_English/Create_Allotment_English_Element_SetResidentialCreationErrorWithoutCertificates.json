@@ -1,0 +1,74 @@
+{
+    "DiscoveryFrameworkUsageType": "Default",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "SetResidentialCreationErrorWithoutCertificates",
+    "OmniProcessId": {
+        "Name": "CreateAllotment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/Create/Allotment/English",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementErrorMap": {
+            "StatusReasonS14-1": "Error:",
+            "StatusReasonS14-9": "Error:"
+        },
+        "label": "SetResidentialCreationErrorWithoutCertificates",
+        "message": {
+        },
+        "pubsub": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "Residential",
+                        "field": "ServiceCareType"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "Approved_Provider_Service",
+                        "field": "RecordTypeDeveloperName"
+                    },
+                    {
+                        "group": {
+                            "operator": "OR",
+                            "rules": [
+                                {
+                                    "condition": "=",
+                                    "data": "S15-1 Determined to be in effect at time of allocation (Operational)",
+                                    "field": "StatusReasonS14-1|n"
+                                },
+                                {
+                                    "condition": "=",
+                                    "data": "S15-1 Determined to be in effect at time of allocation (Operational)",
+                                    "field": "StatusReasonS14-9|n"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "condition": "=",
+                        "data": "false",
+                        "field": "ConditionNode:HasCurrentAccreditation"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "validationRequired": "Step",
+        "wpm": false
+    },
+    "Type": "Set Errors",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/Create/Allotment/English/SetResidentialCreationErrorWithoutCertificates"
+}
