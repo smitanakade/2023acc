@@ -1,0 +1,12 @@
+<template>
+    <div class="exampleHolder">
+        <template if:false={error}>
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </template>
+        <template if:true={error}>
+            <div>
+                <p>{error}</p>
+            </div>
+        </template>
+    </div>
+</template>

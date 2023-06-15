@@ -1,0 +1,16 @@
+<template>
+  <lightning-layout
+    class="slds-box slds-theme_shade slds-var-m-bottom_x-small slds-p-around_none"
+    horizontal-align="spread"
+    vertical-align="center"
+  >
+    <lightning-layout-item padding="around-medium" flexibility="auto">
+      <p>
+        <strong>Download an empty {formType} spreadsheet</strong>
+      </p>
+    </lightning-layout-item>
+    <lightning-layout-item padding="around-medium" flexibility="auto, no-shrink">
+      <a class="slds-text-link" onclick={download}>Download</a>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

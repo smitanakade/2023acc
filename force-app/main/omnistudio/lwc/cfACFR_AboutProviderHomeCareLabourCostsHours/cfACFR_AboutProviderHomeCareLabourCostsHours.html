@@ -1,0 +1,83 @@
+<template>
+            <div class="nds-grid nds-wrap nds-is-relative containersize">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <omnistudio-toast class="flexcard-toast-element" theme="nds" title="" message="" styletype=""> </omnistudio-toast>
+</div>
+            <div if:true={showLoader} class="nds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <omnistudio-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="small"
+      theme="nds"
+      ></omnistudio-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state nds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="nds-grid nds-wrap nds-theme_default nds-p-around_x-small nds-m-bottom_x-small " style="background-color:#fff;  background-repeat:repeat;    
+        color:#000; ">
+          <div data-style-id="state0element0" class="nds-col   nds-border_top nds-border_right nds-border_bottom nds-border_left nds-p-around_small nds-p-top_medium nds-m-top_x-small  nds-size_12-of-12  " data-rindex={rindex} style="background-color:#F7FCFD;  background-repeat:initial;   border-top: #E8F4F9 1px solid;border-right: #E8F4F9 1px solid;border-bottom: #E8F4F9 1px solid;border-left: #E8F4F9 1px solid; 
+    border-radius:2px;     " >
+    <omnistudio-block data-style-id="state0element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label=""  theme="nds"  ><div class="nds-grid nds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col   slds-size_1-of-12  " data-rindex={rindex} style="      
+         width:30px ;" ><omnistudio-flex-icon data-style-id="state0element0block_element0_child"   record={record}  card={card}  color="#04819C"  extraclass=""  icon-name="utility:info"  icon-type="Salesforce SVG"  imgsrc=""  size="small"  variant="default"  theme="nds"  ></omnistudio-flex-icon>
+      </div><div data-style-id="state0element0block_element1" class="nds-col   nds-text-align_left nds-p-bottom_xxx-small  nds-size_11-of-12  " data-rindex={rindex} style="      
+         " >
+    <omnistudio-block data-style-id="state0element0block_element1_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="true"  label="About This Section"  styles='\{"label":{"color":"#000","fontFamily":"","fontSize":"20px"}}'  theme="nds"  ><div class="nds-grid nds-wrap">
+          <div data-style-id="state0element0block_element1block_element0" class="nds-col   nds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element0block_element1block_element0_child"   record={record}  card={card}  merge-field="%3Cdiv%3EFor%20each%20of%20the%20aged%20care%20planning%20regions%20listed%20in%20the%20table%20below,%20please%20enter%20the%20following%20home%20care%20expense%20and%20labour%20hour%20information%20for%20the%20period&nbsp;%7BRP%7D,%20ensuring%20the%20following:%3C/div%3E%0A%3Cdiv%3E&nbsp;%3C/div%3E"  theme="nds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element1block_element1" class="nds-col    nds-size_12-of-12  " data-rindex={rindex} style="background-color:#F7FCFD;      
+         " ><omnistudio-output-field data-style-id="state0element0block_element1block_element1_child"   record={record}  card={card}  merge-field="%3Cul%3E%0A%3Cli%3EPlease%20enter%20all%20data%20for%20the&nbsp;%3Cstrong%3E%3Cu%3Equarter%20only%3C/u%3E%3C/strong%3E&nbsp;and%20not%20on%20a%20financial%20year%20to%20date%20basis.%3C/li%3E%0A%3Cli%3EEach%20currency%20line-item%20recorded%20should%20be%20GST%20exclusive,%20accounted%20for%20using%20the%20accrual%20basis,%20and%20expressed%20in%20whole%20dollars.%3C/li%3E%0A%3Cli%3EEach%20hour's%20line-item%20recorded%20should%20be%20to%202%20decimal%20places.%20For%20example,%202%20hours%20and%2015%20minutes%20should%20be%20entered%20as%202.25%20hours.%3C/li%3E%0A%3C/ul%3E"  theme="nds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element1block_element2" class="nds-col   nds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element0block_element1block_element2_child"   record={record}  card={card}  merge-field="%3Cdiv%3E&nbsp;%3C/div%3E%0A%3Cdiv%3EPlease%20note%20that%20you%20are%20required%20to%20provide%20an%20answer%20for%20all%20line%20items.f%20any%20of%20the%20following%20are%20not%20applicable%20to%20your%20organisation,%20simply%20enter%200%20in%20the%20space%20provided.%20If%20you%20encounter%20any%20difficulties%20or%20require%20further%20information,%20please%20contact%20Forms%20Administration%20on%20(02)%204403%200640.%3C/div%3E"  theme="nds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <omnistudio-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state nds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="nds-grid nds-wrap nds-theme_default nds-p-around_x-small nds-m-bottom_x-small " style="background-color:#fff;  background-repeat:repeat;    
+        color:#000; ">
+          <div data-style-id="state0element0" class="nds-col   nds-border_top nds-border_right nds-border_bottom nds-border_left nds-p-around_small nds-p-top_medium nds-m-top_x-small  nds-size_12-of-12  " data-rindex={rindex} style="background-color:#F7FCFD;  background-repeat:initial;   border-top: #E8F4F9 1px solid;border-right: #E8F4F9 1px solid;border-bottom: #E8F4F9 1px solid;border-left: #E8F4F9 1px solid; 
+    border-radius:2px;     " >
+    <omnistudio-block data-style-id="state0element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label=""  theme="nds"  ><div class="nds-grid nds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col   slds-size_1-of-12  " data-rindex={rindex} style="      
+         width:30px ;" ><omnistudio-flex-icon data-style-id="state0element0block_element0_child"   record={record}  card={card}  color="#04819C"  extraclass=""  icon-name="utility:info"  icon-type="Salesforce SVG"  imgsrc=""  size="small"  variant="default"  theme="nds"  ></omnistudio-flex-icon>
+      </div><div data-style-id="state0element0block_element1" class="nds-col   nds-text-align_left nds-p-bottom_xxx-small  nds-size_11-of-12  " data-rindex={rindex} style="      
+         " >
+    <omnistudio-block data-style-id="state0element0block_element1_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="true"  label="About This Section"  styles='\{"label":{"color":"#000","fontFamily":"","fontSize":"20px"}}'  theme="nds"  ><div class="nds-grid nds-wrap">
+          <div data-style-id="state0element0block_element1block_element0" class="nds-col   nds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element0block_element1block_element0_child"   record={record}  card={card}  merge-field="%3Cdiv%3EFor%20each%20of%20the%20aged%20care%20planning%20regions%20listed%20in%20the%20table%20below,%20please%20enter%20the%20following%20home%20care%20expense%20and%20labour%20hour%20information%20for%20the%20period&nbsp;%7BRP%7D,%20ensuring%20the%20following:%3C/div%3E%0A%3Cdiv%3E&nbsp;%3C/div%3E"  theme="nds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element1block_element1" class="nds-col    nds-size_12-of-12  " data-rindex={rindex} style="background-color:#F7FCFD;      
+         " ><omnistudio-output-field data-style-id="state0element0block_element1block_element1_child"   record={record}  card={card}  merge-field="%3Cul%3E%0A%3Cli%3EPlease%20enter%20all%20data%20for%20the&nbsp;%3Cstrong%3E%3Cu%3Equarter%20only%3C/u%3E%3C/strong%3E&nbsp;and%20not%20on%20a%20financial%20year%20to%20date%20basis.%3C/li%3E%0A%3Cli%3EEach%20currency%20line-item%20recorded%20should%20be%20GST%20exclusive,%20accounted%20for%20using%20the%20accrual%20basis,%20and%20expressed%20in%20whole%20dollars.%3C/li%3E%0A%3Cli%3EEach%20hour's%20line-item%20recorded%20should%20be%20to%202%20decimal%20places.%20For%20example,%202%20hours%20and%2015%20minutes%20should%20be%20entered%20as%202.25%20hours.%3C/li%3E%0A%3C/ul%3E"  theme="nds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element1block_element2" class="nds-col   nds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element0block_element1block_element2_child"   record={record}  card={card}  merge-field="%3Cdiv%3E&nbsp;%3C/div%3E%0A%3Cdiv%3EPlease%20note%20that%20you%20are%20required%20to%20provide%20an%20answer%20for%20all%20line%20items.f%20any%20of%20the%20following%20are%20not%20applicable%20to%20your%20organisation,%20simply%20enter%200%20in%20the%20space%20provided.%20If%20you%20encounter%20any%20difficulties%20or%20require%20further%20information,%20please%20contact%20Forms%20Administration%20on%20(02)%204403%200640.%3C/div%3E"  theme="nds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <omnistudio-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </omnistudio-action>
+  
+            <omnistudio-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </omnistudio-action>
+            </div>
+          </template>

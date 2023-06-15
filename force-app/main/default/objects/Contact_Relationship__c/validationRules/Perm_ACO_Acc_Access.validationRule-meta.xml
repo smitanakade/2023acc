@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perm_ACO_Acc_Access</fullName>
+    <active>true</active>
+    <description>Validation to restrict access to Account records which ACO user has CRU access.</description>
+    <errorConditionFormula>AND(
+OR(ISNEW(),
+NOT(ISNEW()
+)),
+AND(
+Account__r.RecordType.DeveloperName = &apos;Aged_Care_Organisation&apos;,
+NOT(
+OR(
+$Permission.GPMS_System_Administrator,
+$Permission.GPMS_CHSP,
+$Permission.GPMS_NATSIFAC,
+$Permission.GPMS_ACQSC_User,
+$Permission.System_Administrator
+))))</errorConditionFormula>
+    <errorMessage>You do not have access to create/edit Aged Care Organisation related records</errorMessage>
+</ValidationRule>

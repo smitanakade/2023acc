@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>CareType_Updaate_Error_Log</name>
+        <label>CareType Updaate Error Log</label>
+        <locationX>1276</locationX>
+        <locationY>582</locationY>
+        <actionName>dohagedcare__Logger</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>methodName</name>
+            <value>
+                <stringValue>Error</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sourceApplication</name>
+            <value>
+                <stringValue>GPMS</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Test_flow_errors</name>
+        <label>Test flow errors</label>
+        <locationX>1216</locationX>
+        <locationY>1679</locationY>
+        <actionName>dohagedcare__Logger</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>methodName</name>
+            <value>
+                <stringValue>error</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sourceApplication</name>
+            <value>
+                <stringValue>GPMS</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>CheckApplicaitonStatus</name>
+        <label>CheckApplicaitonStatus</label>
+        <locationX>776</locationX>
+        <locationY>383</locationY>
+        <defaultConnector>
+            <targetReference>CheckUpdateOwner</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ApplicationStatus</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.NewStatus__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Finalise</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.NewStatus__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>IsApplicationNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_UpdateCareType</targetReference>
+            </connector>
+            <label>ApplicationStatus</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CheckUpdateOwner</name>
+        <label>CheckUpdateOwner</label>
+        <locationX>782</locationX>
+        <locationY>990</locationY>
+        <defaultConnector>
+            <targetReference>GetApplicationRecordType</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ToUpdateOwner</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4) OR  (5 AND 6) OR  (7 AND 8) OR  (9 AND 10)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.NewStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>For Formal Assessment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.NewStatus__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>For Formal Assessment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.NewStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>For Quality Review</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.NewStatus__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>For Quality Review</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.NewStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>For Delegate&apos;s Decision</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.NewStatus__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>For Delegate&apos;s Decision</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.NewStatus__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>For fee waiver</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.NewStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>For fee waiver</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.NewStatus__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>For Initial Assessment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.NewStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>For Initial Assessment</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetGroupId_0</targetReference>
+            </connector>
+            <label>ToUpdateOwner</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>ApplicationRecordTypeName</name>
+        <dataType>String</dataType>
+        <expression>CASE({!$Record.NewStatus__c},
+&quot;Application Submission Receipt&quot;,&quot;CaretypeApplicationSubmitted&quot;,
+&quot;Application Submitted – Fee payment pending&quot;,&quot;CaretypeApplicationSubmitted&quot;,
+&quot;Application not required – already approved&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Assessment not required – taken to be approved &quot;,&quot;CaretypeApplicationNotRequiredTakenToBeApproved&quot;,
+&quot;Initial Assessment RFI – Fee payment pending&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;Initial Assessment RFI Response Pending&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;For Formal Assessment&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;For Initial Assessment&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;Under Initial Assessment&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;Under Formal Assessment&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;Formal Assessment RFI – Fee payment pending&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;Formal Assessment RFI Response Pending&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;For Quality Review&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;For Delegate’s Decision&quot;,&quot;CaretypeApplicationDelgatedecision&quot;,
+&quot;Delegate’s Decision&quot;,&quot;CaretypeApplicationDelgatedecision&quot;,
+&quot;Closed&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Finalise&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Withdrawn – By Applicant&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Withdrawn – Under 63C&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Obsolete&quot;,&quot;CaretypeApplicationClosedlockedInactive&quot;,
+&quot;Applicant applied to AAT&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Application invalid – not accepted&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Fee waiver decision&quot;,&quot;CaretypeApplicationSubmitted&quot;,
+&quot;Fee waiver review&quot;,&quot;CaretypeApplicationSubmitted&quot;,
+&quot;For Fee Waiver&quot;,&quot;CaretypeApplicationSubmitted&quot;,
+&quot;Reconsideration Assessment&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Reconsideration Decision&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Reconsideration request review&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Reconsideration requested &quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;RFI Approval&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;RFI Extension Decision&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;RFI Extension Request&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;CaretypeApplicationSubmitted&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>CareTypeStatus</name>
+        <dataType>String</dataType>
+        <expression>CASE({!$Record.Status},
+&quot;Application Submission Receipt&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Application Submitted - Fee Payment Pending&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Application Not Required - Already Approved&quot;, &quot;Approved&quot;,
+&quot;Application Not Required - Taken To Be Approved&quot;, &quot;Taken to be approved&quot;,
+&quot;For Formal Assessment&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Under Formal Assessment&quot;, &quot;Approval Decision Pending&quot;,
+&quot;For Formal Review&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Under Formal Review&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Application Submitted - RFI&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Assessment RFI - Response Pending&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Withdrawn - By Applicant&quot;, &quot;Application Withdrawn&quot;,
+&quot;Withdrawn - Under 63&quot;,&quot;Application Withdrawn&quot;,
+&quot;Application Invalid - Not Accepted&quot;, &quot;Application Threshold Not Met&quot;,
+&quot;Recommendation to Delegate&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Delegate&apos;s Decision&quot;, &quot;Approval Decision Pending&quot;,
+&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>GroupName</name>
+        <dataType>String</dataType>
+        <expression>CASE({!$Record.NewStatus__c},
+&quot;For Formal Assessment&quot;,&quot;Assessor&quot;,
+&quot;For Initial Assessment&quot;,&quot;Admin_Officer&quot;,
+&quot;For fee waiver&quot;,&quot;Assessor&quot;,
+&quot;For Quality Review&quot;,&quot;Reviewer&quot;,
+&quot;For Delegate&apos;s Decision&quot;,&quot;Delegate&quot;,
+&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>IsApplicationNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>OwnerId</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK({!GroupId}),{!$Record.OwnerId},{!GroupId})</expression>
+    </formulas>
+    <interviewLabel>Application: Update Status {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Application: Update Status</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_History</name>
+        <label>Create History</label>
+        <locationX>604</locationX>
+        <locationY>1638</locationY>
+        <faultConnector>
+            <targetReference>Test_flow_errors</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>ApplicationId__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Application_Status__c</field>
+            <value>
+                <elementReference>$Record.NewStatus__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status_Effective_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <object>GPMS_Application_History__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>GetApplicationRecordType</name>
+        <label>GetApplicationRecordType</label>
+        <locationX>479</locationX>
+        <locationY>1276</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>UpdateApplication</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BusinessLicenseApplication</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ApplicationRecordTypeName</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>GetGroupId_0</name>
+        <label>GetGroupId</label>
+        <locationX>1114</locationX>
+        <locationY>1085</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GetApplicationRecordType</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GroupName</elementReference>
+            </value>
+        </filters>
+        <object>Group</object>
+        <outputAssignments>
+            <assignToReference>GroupId</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>Copy_1_of_UpdateCareType</name>
+        <label>Copy 1 of UpdateCareType</label>
+        <locationX>589</locationX>
+        <locationY>655</locationY>
+        <connector>
+            <targetReference>CheckUpdateOwner</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>CareType_Updaate_Error_Log</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ApplicationId__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Current_Approval_Status__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>CareTypeStatus</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Current_Approval_Status__c</field>
+            <value>
+                <elementReference>CareTypeStatus</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Care_Type__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>UpdateApplication</name>
+        <label>UpdateApplication</label>
+        <locationX>928</locationX>
+        <locationY>1235</locationY>
+        <connector>
+            <targetReference>Create_History</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Test_flow_errors</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>ApplicationStatusEffectiveDate__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>GetApplicationRecordType.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>650</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>CheckApplicaitonStatus</targetReference>
+        </connector>
+        <object>BusinessLicenseApplication</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>GroupId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

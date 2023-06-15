@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>ACQSC_ACO_Group_Members</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Edit access for ACQSC users</description>
+        <label>ACQSC ACO Group Members</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CHSP_ACO_Group_Members</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Edit access for CHSP users</description>
+        <label>CHSP ACO Group Members</label>
+        <sharedTo>
+            <group>GPMS_CHSP_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>GPMS_System_Admin_ACO_Group_Members</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Edit access for GPMS System Admin users</description>
+        <label>GPMS System Admin ACO Group Members</label>
+        <sharedTo>
+            <group>GPMS_System_Administrator</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>NATSIFAC_ACO_Group_Members</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Edit access for  NATSIFAC users</description>
+        <label>NATSIFAC ACO Group Members</label>
+        <sharedTo>
+            <group>GPMS_NATSIFAC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>STO_ACO_Group_Members</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Edit access for STO users</description>
+        <label>STO ACO Group Members</label>
+        <sharedTo>
+            <group>GPMS_STO_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

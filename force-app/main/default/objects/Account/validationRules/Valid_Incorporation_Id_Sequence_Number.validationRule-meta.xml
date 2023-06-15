@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Incorporation_Id_Sequence_Number</fullName>
+    <active>true</active>
+    <description>Please enter the valid Incorporation ID</description>
+    <errorConditionFormula>AND (NOT($Setup.BypassTriggers__c.BypassValidationRules__c),OR(TEXT(Incorporation_ID_Type__c) = &apos;ACN&apos;,TEXT(Incorporation_ID_Type__c) = &apos;ARBN&apos;, TEXT(Incorporation_ID_Type__c) = &apos;ARSN&apos;), 
+Value(Right(TEXT(Value(Mid(TRIM(Incorporation_ID__c),1,1))*8+Value(Mid(TRIM(Incorporation_ID__c),2,1))*7+Value(Mid(TRIM(Incorporation_ID__c),3,1))*6+Value(Mid(TRIM(Incorporation_ID__c),4,1))*5+Value(Mid(TRIM(Incorporation_ID__c),5,1))*4+Value(Mid(TRIM(Incorporation_ID__c),6,1))*3+Value(Mid(TRIM(Incorporation_ID__c),7,1))*2+Value(Mid(TRIM(Incorporation_ID__c),8,1))*1),1))+Value(Mid(TRIM(Incorporation_ID__c),9,1))&lt;&gt;10
+)</errorConditionFormula>
+    <errorDisplayField>Incorporation_ID__c</errorDisplayField>
+    <errorMessage>Please enter the valid Incorporation ID</errorMessage>
+</ValidationRule>

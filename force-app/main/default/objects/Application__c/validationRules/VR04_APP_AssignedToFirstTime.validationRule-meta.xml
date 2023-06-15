@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR04_APP_AssignedToFirstTime</fullName>
+    <active>false</active>
+    <description>Validate if the application is assigned to same person who is creating that application</description>
+    <errorConditionFormula>AND(  ISBLANK(PRIORVALUE(CreatedById)),Assigned_To__r.Id &lt;&gt; CreatedById)</errorConditionFormula>
+    <errorDisplayField>Assigned_To__c</errorDisplayField>
+    <errorMessage>Assigned To must be the same person who is creating this application</errorMessage>
+</ValidationRule>

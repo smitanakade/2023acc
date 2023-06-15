@@ -1,0 +1,227 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"); */
+c-qfr-button + c-qfr-button {
+	margin-left: 8px;
+}
+.qfr-button {
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	min-height: 50px;
+	max-height: 50px;
+	box-sizing: border-box;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 16px 24px;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	outline: none;
+	transition: 0.3s ease-in-out;
+	overflow: hidden;
+	position: relative;
+}
+.qfr-button span {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.qfr-button.is-management {
+	font-size: 14px;
+	height: 48px;
+}
+.qfr-button.is-input.is-management {
+	border-radius: 2px;
+}
+.qfr-button.is-fullwidth {
+	width: 100%;
+}
+.qfr-button.has-icon-left {
+	padding-left: 1rem;
+}
+.qfr-button.has-icon-right {
+	padding-right: 1rem;
+}
+.qfr-button.is-disabled,
+.qfr-button[disabled] {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.qfr-button.qfr-button-brand {
+	background-color: #51376b;
+	color: #ffffff;
+}
+.qfr-button.qfr-button-brand:hover {
+	background-color: #261040;
+}
+.qfr-button.qfr-button-brand:focus,
+.qfr-button.qfr-button-brand.is-focus {
+	background-color: #261040;
+	box-shadow: 0px 0px 7px rgba(176, 99, 251, 0.75);
+}
+.qfr-button.qfr-button-brand:active,
+.qfr-button.qfr-button-brand.is-active {
+	background-color: #7e6299;
+	box-shadow: none;
+}
+
+.qfr-button.qfr-button-brand .qfr-icon * {
+	fill: #ffffff;
+}
+
+.qfr-button.qfr-button-outline-brand {
+	background-color: #ffffff;
+	color: #261040;
+	border-color: #261040;
+}
+.qfr-button.qfr-button.qfr-button-outline-brand.is-management {
+	border-color: #888888;
+}
+.qfr-button.qfr-button-outline-brand:hover {
+	background-color: #f8f6fb;
+}
+.qfr-button.qfr-button-outline-brand:focus,
+.qfr-button.qfr-button-outline-brand.is-focus {
+	background-color: #f8f6fb;
+	box-shadow: 0px 0px 7px rgba(176, 99, 251, 0.75), 0 0 0 1px #261040;
+}
+.qfr-button.qfr-button-outline-brand:active,
+.qfr-button.qfr-button-outline-brand.is-active {
+	background-color: #e7e1ed;
+	box-shadow: none;
+	border-color: #e7e1ed;
+}
+
+.qfr-button.qfr-button-destructive {
+	background-color: #e91e63;
+	color: #000000;
+}
+.qfr-button.qfr-button-destructive:hover {
+	background-color: #970a3a;
+	color: #ffffff;
+}
+.qfr-button.qfr-button-destructive:focus,
+.qfr-button.qfr-button-destructive.is-focus {
+	background-color: #970a3a;
+	color: #ffffff;
+	box-shadow: 0px 0px 7px rgba(176, 99, 251, 0.75);
+}
+.qfr-button.qfr-button-destructive:active,
+.qfr-button.qfr-button-destructive.is-active {
+	background-color: #f082a7;
+	color: #000000;
+	box-shadow: none;
+}
+
+.qfr-button.qfr-button-text-destructive {
+	background-color: #ffffff;
+	color: #970a3a;
+	border-color: #970a3a;
+}
+.qfr-button.qfr-button-text-destructive:hover {
+	background-color: #fde9ef;
+}
+.qfr-button.qfr-button-text-destructive:focus,
+.qfr-button.qfr-button-text-destructive.is-focus {
+	box-shadow: 0px 0px 7px rgba(176, 99, 251, 0.75), 0 0 0 1px #970a3a;
+}
+.qfr-button.qfr-button-text-destructive:active,
+.qfr-button.qfr-button-text-destructive.is-active {
+	background-color: #fde9ef;
+	color: #970a3a;
+	box-shadow: none;
+	border-color: transparent;
+}
+
+.qfr-button.qfr-button-success {
+	background-color: #4d8144;
+	color: #ffffff;
+}
+.qfr-button.qfr-button-success:hover {
+	background-color: #216515;
+}
+.qfr-button.qfr-button-success:focus,
+.qfr-button.qfr-button-success.is-focus {
+	box-shadow: 0px 0px 7px rgba(176, 99, 251, 0.75);
+}
+.qfr-button.qfr-button-success:active,
+.qfr-button.qfr-button-success.is-active {
+	background-color: #cad9c7;
+	color: #000000;
+	box-shadow: none;
+}
+
+.qfr-button.qfr-button-neutral {
+	background-color: #ffffff;
+	border-color: #dbdbdb;
+	color: #51376b;
+}
+.qfr-button.is-loading span {
+	opacity: 0;
+}
+
+.qfr-button .loader {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 40px;
+	height: 8px;
+	transform: translate(-50%, -50%);
+}
+.qfr-button .loader div {
+	position: absolute;
+	top: 0;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #261040;
+	transform: translateY(-50%);
+	animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.qfr-button.qfr-button-brand .loader div {
+	background-color: #fff;
+}
+.qfr-button .loader div:nth-child(1) {
+	left: 0;
+	animation: loader1 0.6s infinite;
+}
+.qfr-button .loader div:nth-child(2) {
+	left: 0;
+	animation: loader2 0.6s infinite;
+}
+.qfr-button .loader div:nth-child(3) {
+	left: 16px;
+	animation: loader2 0.6s infinite;
+}
+.qfr-button .loader div:nth-child(4) {
+	left: 32px;
+	animation: loader3 0.6s infinite;
+}
+@keyframes loader1 {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes loader3 {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+@keyframes loader2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(16px, 0);
+	}
+}

@@ -1,0 +1,134 @@
+.slds-form-element__label {
+    color: #000;
+    font-size: 1rem;
+}
+
+.slds-input,
+.slds-input_faux {
+    border-color: #777;
+    border-radius: 2px;
+    font-size: 18px;
+    line-height: 26px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.slds-input:focus,
+.slds-combobox__input:focus {
+    border-color: #04819C;
+    box-shadow: 0px 0px 0 2px #04819c, 0px 0px 5px 0px #04819c;
+}
+
+.slds-input[readonly] {
+    --slds-c-input-spacing-horizontal-start: initial;
+    --slds-c-input-color-border: inherit;
+    --slds-c-input-color-background: transparent;
+    background-color: var(--lwc-colorBackgroundInputDisabled,rgb(243, 243, 243));
+    color: var(--gpmsColGrey6);
+    cursor: not-allowed;
+    font-size: inherit;
+}
+
+.slds-dropdown {
+    font-size: 16px;
+}
+
+.slds-form-element__help {
+    font-size: 14px;
+}
+
+/* Buttons */
+
+.slds-button_brand,
+.slds-button_neutral {
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 18px;
+    min-width: 170px;
+    padding: 16px 24px;
+}
+
+.slds-button_brand {
+    background: #51376B;
+}
+
+.slds-button_neutral {
+    border-color: #51376B;
+}
+
+.gpms-remove-button .slds-button {
+    color: #EA001E;
+}
+
+/* Checkbox and checkbox group */
+
+.slds-checkbox:not(:first-child) {
+    margin-top: var(--spacing-small);
+}
+
+.slds-checkbox .slds-checkbox_faux {
+    border-width: 2px;
+    border-color: var(--gpmsColGrey8);
+}
+
+.slds-checkbox [type=checkbox]:checked+.slds-checkbox__label .slds-checkbox_faux {
+    background-color: var(--gpmsColGrey7);
+    border-color: var(--gpmsColGrey7);
+}
+
+.slds-checkbox [type=checkbox]:checked+.slds-checkbox__label .slds-checkbox_faux:after,
+.slds-has-error .slds-checkbox [type=checkbox]:checked+.slds-checkbox__label .slds-checkbox_faux:after {
+    border-color: var(--gpmsColGrey0);
+    margin-top: -1px;
+}
+
+.slds-checkbox .slds-checkbox__label .slds-form-element__label {
+    font-size: var(--font-size-paragraph-plus1);
+}
+
+.slds-checkbox [type=checkbox][disabled]+.slds-checkbox__label {
+    cursor: not-allowed;
+}
+
+.slds-checkbox [type=checkbox][disabled]+.slds-checkbox__label .slds-checkbox_faux {
+    background: var(--gpmsColGrey8);
+    border-color: var(--gpmsColGrey8);
+}
+
+.slds-checkbox [type=checkbox][disabled]+.slds-checkbox__label .slds-form-element__label {
+    color: var(--gpmsColGrey6);
+}
+
+/* Scoped Notitifications */
+.slds-scoped-notification {
+    background: #F7FCFD;
+    border-radius: 2px;
+    border: 1px solid #E8F4F9;
+    color: #000;
+    font-size: 16px;
+    margin-top: 28px;
+}
+
+/* Icons */
+.slds-icon {
+    fill: currentColor;
+}
+
+.gmps-date .slds-input-has-icon .slds-input__icon {
+    margin-top: -11px;
+}
+
+.gpms-remove-button .slds-button__icon_left {
+    margin-bottom: 2px;
+}
+
+/* Tooltip */
+
+lightning-helptext {
+    display: inline-block;
+}
+
+lightning-helptext .slds-form-element__icon {
+    margin-top: 2px;
+    padding-top: 0;
+}

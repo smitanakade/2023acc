@@ -1,0 +1,357 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "5ce0934e-35a9-43d1-baf5-9144683b987a",
+  "label" : "GPMS Home OLD Back up",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "11a232a5-4b63-4e27-81cd-d41c6697d355",
+          "columns" : [ {
+            "UUID" : "93eb9ff7-6b88-4042-8b1b-7f4e88003566",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "11a232a5-4b63-4e27-81cd-d41c6697d355",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<table background=\"{!contentAsset.Main_Banner.1}\" style=\"color:white\" height=\"350px\"> \n<tr>\n    <th>&nbsp;</th>\n    </tr>\n                 <tr>\n    <th>&nbsp;</th>\n    </tr>\n    \n            <tr>\n    <th>&nbsp;</th>\n    </tr>\n     \n            <tr>\n    <th>&nbsp;</th>\n    </tr>\n\n    <th></th>\n    <tr>\n    <tr>   \n        <th><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hi {!CurrentUser.firstName}</h3></th>\n        </tr>\n    <tr>\n        <!╌ {!CurrentUser.effectiveAccountId} -->\n           <th><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bupa </h1></th>\n              </tr>\n    <tr>\n    <th>&nbsp;</th>\n    <tr>\n        <tr><tr>\n    <th>&nbsp;</th>\n    <tr>\n        <tr>\n            <tr>\n    <th>&nbsp;</th>\n    <tr>\n        <tr><tr>\n    <th>&nbsp;</th>\n    <tr>\n        <tr><tr>\n    <th>&nbsp;</th>\n    <tr>\n        <tr><tr>\n    <th>&nbsp;</th>\n    <tr>\n        <tr><tr>\n    <th>&nbsp;</th>\n    <tr>\n        <tr>\n         \n</table>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "6d1828f0-0b64-4bc3-8803-39f0e074c795",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "93eb9ff7-6b88-4042-8b1b-7f4e88003566",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "303f5ad9-3ca4-4d45-9acc-2d78e74aa5c6",
+          "columns" : [ {
+            "UUID" : "a41684ea-0681-403e-a9bb-abfda72bdfc5",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "814b1d28-59bb-48d7-a71b-0639c22986e3",
+            "columnKey" : "d716d",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "ca5361d6-ea99-4d29-8e43-db35c46f5ac1",
+            "columnKey" : "f8938",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "303f5ad9-3ca4-4d45-9acc-2d78e74aa5c6",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a href=\"#\" class=\"gpmsHomeCard gpmsHomeCardWidth3col pullLeft\">\n                    <div class=\"gpmsHomeCardRowTop\">\n                        <div class=\"gpmsHomeCardIcon\">\n                            <img src=\"{!contentAsset.About_your_organization.1}\">\n                            </div>\n                         <br>\n                         <br>\n                    <div class=\"gpmsHomeCardRowContent\">\n                        <h1 class=\"gpmsHeadingPlus1\"><b>About your organisation</b></h1>\n                        <ul class=\"gpmsParPlus1\">\n                            <br>\n                              <br>\n                             <li>View and manage org details such as contact info and third party orgs</li>\n                            <li>Initiate notifications of material changes for key personnel, financial status and other information</li>\n                             <br>\n                        </ul>\n                           \n                    </div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "bbbbad60-2b39-4ebe-ae45-21520b076a14",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a41684ea-0681-403e-a9bb-abfda72bdfc5",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a href=\"#\" class=\"gpmsHomeCard gpmsHomeCardWidth3col pullLeft\">\n                    <div class=\"gpmsHomeCardRowTop\">\n                        <div class=\"gpmsHomeCardIcon\">\n                         <img src=\"{!contentAsset.Icon_group.1}\">\n                        </div>\n                    </div>\n    <br>\n    <br>\n                           <div class=\"gpmsHomeCardRowContent\">\n                        <h1 class=\"gpmsHeadingPlus1\"><b>Care types</b></h1>\n                        <ul class=\"gpmsParPlus1\">\n                                <br>\n                        \n                            <li>Care types you're approved to provide</li>\n                            <li>Apply to provide additional care types</li>\n                            <li>Manage your applications</li>\n                        </ul>\n                    </div>\n                </a>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "52dc2fab-ae78-4810-a321-f6fca6537a02",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "814b1d28-59bb-48d7-a71b-0639c22986e3",
+        "regionLabel" : "Column 2",
+        "regionName" : "d716d",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a href=\"#\" class=\"gpmsHomeCard gpmsHomeCardWidth3col pullLeft\">\n                    <div class=\"gpmsHomeCardRowTop\">\n                        <div class=\"gpmsHomeCardIcon\">\n                            <img src=\"{!contentAsset.Icon_group.1}\">\n                            </div>\n                         <br>\n                         <br>\n                    <div class=\"gpmsHomeCardRowContent\">\n                        <h1 class=\"gpmsHeadingPlus1\"><b>Financial reporting</b></h1>\n                        <ul class=\"gpmsParPlus1\">\n                            <br>\n                              <br>\n                             <li>Manage, view and complete annual and quarterly financial reports</li>\n                            <li>View due dates and other critical information to help you with your reporting</li>\n                             <br>\n                        </ul>\n                           \n                    </div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "387e0af1-793d-42fe-bb51-0aed8eee1ce5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ca5361d6-ea99-4d29-8e43-db35c46f5ac1",
+        "regionLabel" : "Column 3",
+        "regionName" : "f8938",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "cea54fe6-a588-4317-96ef-94121611b838",
+          "columns" : [ {
+            "UUID" : "b09943de-a505-4c1e-a375-b7070d91a578",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "a704c2f7-08c6-41d2-bd43-46c42e52db25",
+            "columnKey" : "af884",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "cea54fe6-a588-4317-96ef-94121611b838",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a href=\"#\" class=\"gpmsHomeCard gpmsHomeCardWidth2col pullLeft\">\n                    <div class=\"gpmsHomeCardRowTop\">\n                        <div class=\"starrating\">\n                            <img src=\"{!contentAsset.Score.1}\">\n                            </div>\n                         <br>\n                         <br>\n                    <div class=\"gpmsHomeCardRowContent\">\n                        <h1 class=\"gpmsHeadingPlus1\"><b>Your organisation’s rating</b></h1>\n                        <ul class=\"gpmsParPlus1\">\n                            <br>\n                              <br>\n                             <li> Learn about the quality indicators used to calculate your score</li>\n                            <li>Learn how to improve your organisation’s rating</li>\n                             <br>\n                        </ul>\n                           \n                    </div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "ebc77323-af9a-4cd8-9920-e212d1b2b6dd",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b09943de-a505-4c1e-a375-b7070d91a578",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a href=\"#\" class=\"gpmsHomeCard gpmsHomeCardWidth2col pullLeft\">\n                    <div class=\"gpmsHomeCardRowTop\">\n                        <div class=\"gpmsHomeCardIcon cardIconPurple\">\n                                <img src=\"{!contentAsset.Looking_for_something_else.1}\">\n                        </div>\n                    </div>\n     <br>\n                         <br>\n                    <div class=\"gpmsHomeCardOutboundSpecial\">\n                        <h1 class=\"gpmsHeadingPlus1\"><b>Looking for something else?</b></h1>\n                             <br>\n                         <br>\n                        <p class=\"gpmsParPlus1\">Sign in to myAgedCare Service & Support portal</p>\n                             <br>\n                         <br>\n                        <ul class=\"gpmsParPlus1\">\n                            <li>Referrals</li>\n                            <li>Clients</li>\n                            <li>Outlets</li>\n                        </ul>\n                        <ul class=\"gpmsParPlus1\">\n                            <li>Staff</li>\n                            <li>Incidents</li>\n                            <li>Frms & Reports</li>\n                        </ul>\n                    </div>\n                </a>\n                \n\n            </div>\n        </div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "67ddb9fd-6408-4cf4-b70e-4f45c4a6cb1f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a704c2f7-08c6-41d2-bd43-46c42e52db25",
+        "regionLabel" : "Column 2",
+        "regionName" : "af884",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "1e181206-39b2-4c12-b064-e8015fd230b0",
+          "columns" : [ {
+            "UUID" : "8a68c9dc-e87d-4a25-ba4d-0e91f453a25d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "dd8ef494-a80a-499f-9afa-b7dee7b2a228",
+            "columnKey" : "dd8ed",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 294
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1e181206-39b2-4c12-b064-e8015fd230b0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a href=\"#\" class=\"gpmsHomeCard gpmsHomeCardWidth2col pullLeft\">\n                    <div class=\"gpmsHomeCardRowTop\">\n                        <div class=\"gpmsHomeCardIcon\">\n                            <img src=\"{!contentAsset.About_your_organization.1}\">\n                            </div>\n                         <br>\n                         <br>\n                    <div class=\"gpmsHomeCardRowContent\">\n                        <h1 class=\"gpmsHeadingPlus1\"><b>About your organisation</b></h1>\n                        <ul class=\"gpmsParPlus1\">\n                            <br>\n                              <br>\n                             <li>View and manage org details such as contact info and third party orgs</li>\n                                                     \n                        </ul>\n                           \n                    </div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "db7103b3-2143-47c2-be6c-25e0e8550fc2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8a68c9dc-e87d-4a25-ba4d-0e91f453a25d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a href=\"#\" class=\"gpmsHomeCard gpmsHomeCardWidth2col pullLeft\">\n                    <div class=\"gpmsHomeCardRowTop\">\n                        <div class=\"gpmsHomeCardIcon\">\n                            <img src=\"{!contentAsset.Caretypespng.1}\">\n                            </div>\n                         <br>\n                         <br>\n                    <div class=\"gpmsHomeCardRowContent\">\n                        <h1 class=\"gpmsHeadingPlus1\"><b>Care types</b></h1>\n                        <ul class=\"gpmsParPlus1\">\n                            <br>\n                              <br>\n                             <li>Care types you're approved to provide</li>\n                                                     \n                        </ul>\n                           \n                    </div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "bdf2cb7e-8c8d-4fd4-91bc-c733499ecc40",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "dd8ef494-a80a-499f-9afa-b7dee7b2a228",
+        "regionLabel" : "Column 2",
+        "regionName" : "dd8ed",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "2dbf37cd-eccb-4f6d-9663-219130a66469",
+          "columns" : [ {
+            "UUID" : "91ea815d-1593-417a-95a1-5e777acf9999",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "e7169d9f-712f-4694-8214-ed1ee362394e",
+            "columnKey" : "86837",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "cbc99131-4c61-4472-9ff8-0eb868d40ca4",
+            "columnKey" : "69c26",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 176
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2dbf37cd-eccb-4f6d-9663-219130a66469",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a href=\"#\" class=\"gpmsHomeCard gpmsHomeCardWidth3col pullLeft\">\n                    <div class=\"gpmsHomeCardRowTop\">\n                        <div class=\"gpmsHomeCardIcon\">\n                            <img src=\"{!contentAsset.About_your_organization.1}\">\n                            </div>\n                         <br>\n                         <br>\n                    <div class=\"gpmsHomeCardRowContent\">\n                        <h1 class=\"gpmsHeadingPlus1\"><b>About your organisation</b></h1>\n                        <ul class=\"gpmsParPlus1\">\n                            <br>\n                              <br>\n                             <li>View and manage org details such as contact info and third party orgs</li>\n                                                     \n                        </ul>\n                           \n                    </div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "ec191973-0666-4f98-8d0d-c70bc3021abc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "91ea815d-1593-417a-95a1-5e777acf9999",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a href=\"#\" class=\"gpmsHomeCard gpmsHomeCardWidth3col pullLeft\">\n                    <div class=\"gpmsHomeCardRowTop\">\n                        <div class=\"gpmsHomeCardIcon\">\n                            <img src=\"{!contentAsset.Caretypespng.1}\">\n                            </div>\n                         <br>\n                         <br>\n                    <div class=\"gpmsHomeCardRowContent\">\n                        <h1 class=\"gpmsHeadingPlus1\"><b>Care types</b></h1>\n                        <ul class=\"gpmsParPlus1\">\n                            <br>\n                              <br>\n                             <li>Care types you're approved to provide</li>\n                                                     \n                        </ul>\n                           \n                    </div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "460dbf42-604d-47bc-85bc-9b3c638ff51f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e7169d9f-712f-4694-8214-ed1ee362394e",
+        "regionLabel" : "Column 2",
+        "regionName" : "86837",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a href=\"#\" class=\"gpmsHomeCard gpmsHomeCardWidth3col pullLeft\">\n                    <div class=\"gpmsHomeCardRowTop\">\n                        <div class=\"gpmsHomeCardIcon\">\n                            <img src=\"{!contentAsset.Icon_group.1}\">\n                            </div>\n                         <br>\n                         <br>\n                    <div class=\"gpmsHomeCardRowContent\">\n                        <h1 class=\"gpmsHeadingPlus1\"><b>Financial reporting</b></h1>\n                        <ul class=\"gpmsParPlus1\">\n                            <br>\n                              <br>\n                             <li>Manage, view and complete annual and quarterly financial reports</li>\n                            <li>View due dates and other critical information to help you with your reporting</li>\n                             <br>\n                        </ul>\n                           \n                    </div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "3cb10417-56c1-4617-b32b-a0ec8e68fc45",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "cbc99131-4c61-4472-9ff8-0eb868d40ca4",
+        "regionLabel" : "Column 3",
+        "regionName" : "69c26",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5024b49f-6b31-4159-b232-3fb54d0590e3",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "eafa1e46-7acf-431e-9b5a-48647b9ad10f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "055db82c-1fa9-4352-953c-89b7f5cbd2f1",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}

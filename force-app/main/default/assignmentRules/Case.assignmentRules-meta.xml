@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>DOHCaseAssignmentRule</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>STAR_Rating_Requests</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3 OR 4)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Dispute Management</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Domain__c</field>
+                <operation>equals</operation>
+                <value>Quality Indicator</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Domain__c</field>
+                <operation>equals</operation>
+                <value>Care Minutes</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Domain__c</field>
+                <operation>equals</operation>
+                <value>Consumer Experience Report</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>STAR_Rating_Requests</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3 OR 4 OR 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Star Rating Error</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Domain__c</field>
+                <operation>equals</operation>
+                <value>Consumer Experience Report</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Domain__c</field>
+                <operation>equals</operation>
+                <value>Quality Indicator</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Domain__c</field>
+                <operation>equals</operation>
+                <value>Care Minutes</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Domain__c</field>
+                <operation>equals</operation>
+                <value>Service Compliance</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Assessor</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Request_for_Information</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Send to Assessor</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Reviewer</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Request_for_Information</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Send to Reviewer</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Delegate</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Request_for_Information</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Send to Delegate</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

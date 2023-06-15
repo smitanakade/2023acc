@@ -1,0 +1,8 @@
+<template>
+	<div class={divClass}>
+		<p class={status} style={getWidth} onclick={handleStepClick}>{label}</p>
+		<template if:true={errorMessage}>
+			<p class="error-message" style={getWidth}>{errorMessage}</p>
+		</template>
+	</div>
+</template>

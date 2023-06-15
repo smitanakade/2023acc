@@ -1,0 +1,24 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div if:true={dataTable}>
+        <c-srqi-custom-data-table
+            class="slds-max-medium-table_stacked srqi-rating-details-table"
+            columns={dataTableColumns}
+            data={visibleDataTable}
+            hide-checkbox-column="true"
+            onrowaction={viewRecord}
+            key-field="Id"
+            sorted-by={sortedBy}
+            sorted-direction={sortedDirection}
+            onsort={onSortData}
+        ></c-srqi-custom-data-table>
+    </div>
+    <br>
+    <!--The Lightning Datatable Pagination control being demonstrated-->
+    <c-srqi-data-table-pagination-star-rating
+        records={dataTable}
+        onupdate={updateDataTableHandler}
+        show-results
+    >
+    </c-srqi-data-table-pagination-star-rating>
+</template>

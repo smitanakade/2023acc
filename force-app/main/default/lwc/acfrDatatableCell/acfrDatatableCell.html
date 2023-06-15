@@ -1,0 +1,127 @@
+<template lwc:render-mode="light">
+	<div
+		class={containerClass}
+		id={recordId}
+		data-cell-id={recordId}
+		data-col={colIndexValue}
+	>
+		<template if:false={isHidden}>
+			<template if:false={isPicklist}>
+				<span class="prefix">{prefix}</span>
+				<input
+					data-record-id={recordId}
+					class="value"
+					step="1"
+					min="0"
+					pattern="^\d+(\.\d+)?$"
+					value={cellValue}
+					placeholder="-"
+					disabled={isReadOnly}
+				/>
+			</template>
+			<template if:true={isPicklist}>
+				<template if:false={isReadOnly}>
+					<div class="navigate-focus" tabindex="0" data-record-id={recordId}>
+						<lightning-combobox
+							data-record-id={recordId}
+							name="foodprep"
+							disabled={isReadOnly}
+							value={cellValue}
+							label={label}
+							placeholder="Select prep model"
+							options={picklistOptions}
+							onchange={handlePickChange}
+							tabindex="-1"
+						></lightning-combobox>
+					</div>
+				</template>
+				<template if:true={isReadOnly}>
+					<div class="navigate-focus" tabindex="-1" data-record-id={recordId}>
+						<lightning-combobox
+							data-record-id={recordId}
+							name="foodprep"
+							disabled={isReadOnly}
+							value={cellValue}
+							label={label}
+							placeholder="Select prep model"
+							options={picklistOptions}
+							onchange={handlePickChange}
+							tabindex="-1"
+						></lightning-combobox>
+					</div>
+				</template>
+			</template>
+
+			<template if:false={isPicklist}>
+				<template if:true={showErrorExplanation}>
+					<template if:false={isValid}>
+						<template lwc:if={providerExplanation}>
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								class="comment-icon cursor-pointer"
+								onclick={toggleWhyModal}
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g clip-path="url(#clip0_4192_18507)">
+									<path
+										d="M21.99 4C21.99 2.9 21.1 2 20 2H4C2.9 2 2 2.9 2 4V16C2 17.1 2.9 18 4 18H18L22 22L21.99 4ZM18 14H6V12H18V14ZM18 11H6V9H18V11ZM18 8H6V6H18V8Z"
+										fill="#51376B"
+									/>
+								</g>
+								<defs>
+									<clipPath id="clip0_4192_18507">
+										<rect width="24" height="24" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</template>
+						<template lwc:else>
+							<span
+								class="error-container cursor-pointer"
+								onclick={toggleWhyModal}
+							>
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="none"
+									class="slds-m-right_xx-small slds-m-bottom_xxx-small"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<g clip-path="url(#clip0_4192_14004)">
+										<path
+											d="M1 21H23L12 2L1 21ZM13 18H11V16H13V18ZM13 14H11V10H13V14Z"
+											fill="#970a3a"
+										/>
+									</g>
+									<defs>
+										<clipPath>
+											<rect width="24" height="24" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+								<div class="error-message-container">
+									<p class="slds-text-body_small user-select-none">
+										<a class="slds-text-color_error underline">Why?</a>
+									</p>
+								</div>
+							</span>
+						</template>
+					</template>
+					<c-qfr-qa-outcome-error-modal
+						modal-is-open={whyModalIsOpened}
+						error-message={errorMessage}
+						hide-explanation-option={hideExplanationOption}
+						explanation={providerExplanation}
+						qa-comment={qaComments}
+						onclose={closeModal}
+						record-id={recordId}
+						onsubmit={submit}
+					></c-qfr-qa-outcome-error-modal>
+				</template>
+			</template>
+		</template>
+	</div>
+</template>

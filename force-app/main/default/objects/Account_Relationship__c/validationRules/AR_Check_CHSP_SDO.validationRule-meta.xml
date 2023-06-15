@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AR_Check_CHSP_SDO</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Account_From_Id__r.RecordType.DeveloperName =&quot;Commonwealth_Home_Support_Programme&quot; , RecordType.DeveloperName!=&apos;Provider_to_Service_Delivery_Organisation&apos;)</errorConditionFormula>
+    <errorMessage>CHSP can only link to Service Delivery Organisations</errorMessage>
+</ValidationRule>

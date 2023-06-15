@@ -1,0 +1,77 @@
+<template>
+    <c-srqi-portal-banner></c-srqi-portal-banner>
+    <!-- Loading Spinner -->
+    <div lwc:if={isLoading} class="srqi-loading-container">
+        <lightning-spinner class="srqi-loading-spinner" variant="brand" size="large"></lightning-spinner>
+    </div>
+    <!-- Filter section -->
+    <div class="slds-m-top_xx-large slds-m-bottom_x-large slds-p-bottom_small slds-p-horizontal_small"
+         style="background-color: var(--gpmsColSecondaryLight2);">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item class="slds-m-top_small slds-m-right_small">
+                <c-multi-select-combobox
+                    label="Quarter"
+                    data-id="reportingPeriodCombobox"
+                    name="reportingPeriod"
+                    options={reportingPeriodOptions}
+                    onchange={handleFilterValueChange}
+                    placeholder='All quarters'>
+                </c-multi-select-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-m-top_small slds-m-right_small">
+                <c-multi-select-combobox
+                    label="Status"
+                    name="status"
+                    options={statusOptions}
+                    onchange={handleFilterValueChange}
+                    placeholder='All statuses'>
+                </c-multi-select-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-m-top_small slds-m-right_small">
+                <c-multi-select-combobox
+                    label="Rating Type"
+                    name="ratingType"
+                    options={ratingTypeOptions}
+                    onchange={handleFilterValueChange}
+                    placeholder='All rating types'>
+                </c-multi-select-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-m-top_small slds-m-right_small">
+                <c-multi-select-combobox
+                    label="Overall Star Rating"
+                    name="rating"
+                    options={ratingOptions}
+                    onchange={handleFilterValueChange}
+                    placeholder='All overall ratings'>
+                </c-multi-select-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item size=9 large-device-size=9 medium-device-size=12 small-device-size=12>
+                <lightning-input
+                    type="search"
+                    name="serviceNamesOrIds"
+                    data-name="searchBox"
+                    class="search-box slds-m-right_x-small slds-m-top_x-small "
+                    label="Search by service name or ID"
+                    placeholder="Search by service names or IDs, separated by comma, e.g. Quality Aged Care, SRV-12345, …"
+                    onchange={handleFilterValueChange}
+                ></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item alignment-bump="top">
+                <div class="slds-m-top_x-small">
+                    <lightning-button
+                        variant="brand"
+                        class="slds-m-right_small slds-m-top_x-small filter-button"
+                        label="Apply Filters"
+                        title="Click to get table data"
+                        onclick={handleFilterClick}></lightning-button>
+                    <a class="srqi-link" onclick={handleClearClick}>Clear Filters</a>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+    <!-- Search result data table section -->
+    <div class="slds-m-horizontal_x-small">
+        <c-srqi-search-data-table-star-rating></c-srqi-search-data-table-star-rating>
+    </div>
+    <br/>
+</template>

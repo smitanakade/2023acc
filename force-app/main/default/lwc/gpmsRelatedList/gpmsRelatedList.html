@@ -1,0 +1,63 @@
+<template>
+    <article class="slds-card slds-card_boundary">
+        <div class="slds-card__header slds-grid slds-border_bottom slds-p-bottom_x-small slds-theme_shade">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name={icon} size="small"></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <span>{relatedListTitle} ({count})</span>
+                    </h2>
+                </div>
+                <div class="slds-no-flex">
+                    <template if:true={displayNewButton}>
+                        <template if:false={reportURL.data}>
+                            No create new permission.
+                        </template>
+                        <template if:true={reportURL.data}>
+                            <a class="slds-button slds-button_neutral" href={newbuttonurl.data}>New</a>
+                        </template>
+                    </template>
+                </div>
+            </header>
+        </div>
+        <template if:true={showViewAll}>
+            <div class="slds-card__body slds-card__body_inner slds-truncate">
+                <ul class="slds-has-dividers_bottom-space">
+                    <template for:each={relatedLists} for:item="record">
+                        <lightning-tile  label={record.Name} href={record.targetId} key = {record.Id} actions={record.actions} onactiontriggered={handleAction}>
+                            <dl class="slds-dl_horizontal">
+                                <template for:each={record.lists} for:item="row">
+                                    <dt class="slds-dl_horizontal__label" key={row.Field_Api__c}>
+                                        <p class="slds-truncate">{row.title}:</p>
+                                    </dt>
+                                    <template if:true={row.lookup}>
+                                        <dd class="slds-dl_horizontal__detail slds-tile__meta" key={row.Field_Api__c}>
+                                            <a class="slds-truncate" href={row.target}>{row.value}</a>
+                                        </dd>
+                                    </template>
+                                    <template if:false={row.lookup}>
+                                        <dd class="slds-dl_horizontal__detail slds-tile__meta" key={row.Field_Api__c}>
+                                            <p class="slds-truncate">{row.value}</p>
+                                        </dd>
+                                    </template>
+                                </template>
+                            </dl>
+                        </lightning-tile>
+                    </template>
+                </ul>
+            </div>
+            <footer class="slds-card__footer">
+                <template if:false={reportURL.data}>
+                    No related list report.
+                </template>
+                <template if:true={reportURL.data}>
+                    <a class="slds-card__footer-action" href={reportURL.data}>View All</a>
+                </template>
+            </footer>
+
+        </template>
+        
+    </article>
+</template>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Status Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>S15-1 Provisional allocation (Provisional)</fullName>
+                <default>false</default>
+                <label>S15-1 Provisional allocation (Provisional)</label>
+            </value>
+            <value>
+                <fullName>S15-1 Determined to be in effect at time of allocation (Operational)</fullName>
+                <default>false</default>
+                <label>S15-1 Determined to be in effect at time of allocation (Operational)</label>
+            </value>
+            <value>
+                <fullName>Funding agreement signed (operational)</fullName>
+                <default>false</default>
+                <label>Funding agreement signed (operational)</label>
+            </value>
+            <value>
+                <fullName>Expired under S14-9(4)</fullName>
+                <default>false</default>
+                <label>Expired under S14-9(4)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

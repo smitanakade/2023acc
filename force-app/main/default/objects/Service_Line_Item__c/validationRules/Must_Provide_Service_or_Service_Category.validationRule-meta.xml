@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_Provide_Service_or_Service_Category</fullName>
+    <active>true</active>
+    <description>Cannot create a service line item without one of the two fields being populated</description>
+    <errorConditionFormula>AND(ISBLANK( TEXT(Service_Category__c)),ISBLANK( Service_Region__c), ISBLANK(Service__c))</errorConditionFormula>
+    <errorMessage>You must provide either a service or a service category or a service region</errorMessage>
+</ValidationRule>

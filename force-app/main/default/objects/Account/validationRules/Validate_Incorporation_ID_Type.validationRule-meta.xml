@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Incorporation_ID_Type</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Incorporation_ID_Type__c, &apos;Taken to be Incorporated&apos;),
+NOT(ISPICKVAL(Purpose__c, &apos;Government&apos;)),OR(RecordType.DeveloperName=&apos;Approved_Provider&apos;,RecordType.DeveloperName=&apos;National_Aboriginal_and_Torres_Strait_Islander_Flexible_Aged_Care&apos;,RecordType.DeveloperName=&apos;Commonwealth_Home_Support_Programme&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>Incorporation_ID_Type__c</errorDisplayField>
+    <errorMessage>Please update Organisation Purpose</errorMessage>
+</ValidationRule>

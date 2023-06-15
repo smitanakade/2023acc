@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reconsideration_Outcome_Check</fullName>
+    <active>true</active>
+    <description>Checks if reconsideration outcome recorded before closing the application.</description>
+    <errorConditionFormula>Reconsideration_Outcome_Not_Recorded__c == true</errorConditionFormula>
+    <errorMessage>Please record &apos;Reconsideration Outcome&apos; before closing the application.</errorMessage>
+</ValidationRule>

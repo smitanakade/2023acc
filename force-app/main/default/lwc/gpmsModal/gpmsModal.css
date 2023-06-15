@@ -1,0 +1,45 @@
+.slds-modal__container {
+    margin: 0 auto;
+    max-width: 30rem;
+    min-width: 20rem;
+    width: 50%;
+}
+
+.slds-modal__header {
+    border-radius: 0;
+    border: 0;
+    padding: 72px 24px 0;
+}
+
+.slds-modal__header .slds-modal__close {
+    bottom: 0;
+    margin-left: 0;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+}
+
+.slds-modal__content {
+    color: #333;
+    font-size: 16px;
+    max-height: 100vh;
+    overflow: auto;
+    text-align: center;
+}
+
+.slds-modal__footer {
+    border-radius: 0;
+    border: 0;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.slds-modal__footer .slds-button+.slds-button {
+    margin-left: 0;
+}
+
+.slds-backdrop {
+    background: rgba(0, 0, 0, 0.7);
+}

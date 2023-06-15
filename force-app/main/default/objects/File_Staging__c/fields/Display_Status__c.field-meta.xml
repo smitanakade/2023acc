@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_Status__c</fullName>
+    <description>User-friendly status for display to business users</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    AND(
+        ISPICKVAL(Status__c, &quot;Processed&quot;), 
+        Total_Records__c = Success_Records__c
+    ), 
+    &quot;Submitted&quot;,
+    IF(
+        OR(
+            AND(
+                ISPICKVAL(Status__c, &quot;Processed&quot;), 
+                Success_Records__c = 0
+            ),
+            ISPICKVAL(Status__c, &quot;Failed&quot;),
+            AND(
+                ISPICKVAL(Status__c, &quot;Ready to Publish&quot;), 
+                TODAY() - DATEVALUE(LastModifiedDate) &gt; $CustomMetadata.Quality_Indicator_Settings__mdt.Quality_Indicator_File_Staging.File_Staging_Failed_Days_Ago__c
+            )
+        ), 
+        &quot;Failed&quot;,
+        IF(
+            OR(
+                ISPICKVAL(Status__c, &quot;New&quot;), 
+                ISPICKVAL(Status__c, &quot;Ready to Publish&quot;)
+            ), 
+            &quot;Pending&quot;,
+            IF(
+                AND(
+                    ISPICKVAL(Status__c, &quot;Processed&quot;), 
+                    Total_Records__c &gt; Success_Records__c
+                ), 
+                &quot;Partial&quot;, 
+                &quot;Invalid&quot;
+            )
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>User-friendly status for display to business users</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

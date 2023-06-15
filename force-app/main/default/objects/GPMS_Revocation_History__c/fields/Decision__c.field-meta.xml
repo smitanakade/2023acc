@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decision__c</fullName>
+    <description>Record Delegate Decision</description>
+    <externalId>false</externalId>
+    <label>Decision</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Decision to Revoke</fullName>
+                <default>false</default>
+                <label>Decision to Revoke</label>
+            </value>
+            <value>
+                <fullName>Decision not to Revoke</fullName>
+                <default>false</default>
+                <label>Decision not to Revoke</label>
+            </value>
+            <value>
+                <fullName>Withdraw</fullName>
+                <default>false</default>
+                <label>Withdraw</label>
+            </value>
+            <value>
+                <fullName>Intention Withdrawn</fullName>
+                <default>false</default>
+                <label>Intention Withdrawn</label>
+            </value>
+            <value>
+                <fullName>Uphold Decision</fullName>
+                <default>false</default>
+                <label>Uphold Decision</label>
+            </value>
+            <value>
+                <fullName>Set Aside Decision and Substitute New Decision</fullName>
+                <default>false</default>
+                <label>Set Aside Decision and Substitute New Decision</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

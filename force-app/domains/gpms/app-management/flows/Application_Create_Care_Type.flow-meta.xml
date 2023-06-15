@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Update_Application</name>
+        <label>Update Application</label>
+        <locationX>578</locationX>
+        <locationY>1079</locationY>
+        <actionName>dohagedcare__Logger</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>methodName</name>
+            <value>
+                <stringValue>error</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sourceApplication</name>
+            <value>
+                <stringValue>GPMS</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <assignments>
+        <name>AssignAllCareTypeRecordCollection</name>
+        <label>AssignAllCareTypeRecordCollection</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>AllCareTypeRecordCollection</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>NewCareType</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AllAddedCareTypes</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>CurrentCareTypeFormat</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>NeedAddMoreCareType</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>AssignNewCareType</name>
+        <label>AssignNewCareType</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>NewCareType.ApplicationId__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewCareType.Care_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CurrentCareType</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewCareType.Current_Approval_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CareTypeStatus</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewCareType.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewCareType.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CareTypeId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>AssignAllCareTypeRecordCollection</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>NeedAddMoreCareType</name>
+        <label>NeedAddMoreCareType</label>
+        <locationX>842</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>CreateCareType</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>NeedAddMore</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AllAddedCareTypes</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>AllSelectedCareTypes</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignNewCareType</targetReference>
+            </connector>
+            <label>NeedAddMore</label>
+        </rules>
+        <rules>
+            <name>Application_Status_Not_Required_Taken_to_Be_Approved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.NewStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Application Not Required - Taken To Be Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Home_Care_Type</targetReference>
+            </connector>
+            <label>Application Status Not Required Taken to Be Approved</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>AllSelectedCareTypes</name>
+        <dataType>String</dataType>
+        <expression>{!AppCareTypes}</expression>
+    </formulas>
+    <formulas>
+        <name>ApplicationRTName</name>
+        <dataType>String</dataType>
+        <expression>CASE({!$Record.NewStatus__c},
+&quot;Application Submission Receipt&quot;,&quot;CaretypeApplicationSubmitted&quot;,
+&quot;Application Submitted – Fee payment pending&quot;,&quot;CaretypeApplicationSubmitted&quot;,
+&quot;Application not required – already approved&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Assessment not required – taken to be approved &quot;,&quot;CaretypeApplicationNotRequiredTakenToBeApproved&quot;,
+&quot;Initial Assessment RFI – Fee payment pending&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;Initial Assessment RFI Response Pending&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;For Formal Assessment&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;For Initial Assessment&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;Under Initial Assessment&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;Under Formal Assessment&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;Formal Assessment RFI – Fee payment pending&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;Formal Assessment RFI Response Pending&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;For Quality Review&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;For Delegate’s Decision&quot;,&quot;CaretypeApplicationDelgatedecision&quot;,
+&quot;Delegate’s Decision&quot;,&quot;CaretypeApplicationDelgatedecision&quot;,
+&quot;Closed&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Finalise&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Withdrawn – By Applicant&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Withdrawn – Under 63C&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Obsolete&quot;,&quot;CaretypeApplicationClosedlockedInactive&quot;,
+&quot;Applicant applied to AAT&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Application invalid – not accepted&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Fee waiver decision&quot;,&quot;CaretypeApplicationSubmitted&quot;,
+&quot;Fee waiver review&quot;,&quot;CaretypeApplicationSubmitted&quot;,
+&quot;For Fee Waiver&quot;,&quot;CaretypeApplicationSubmitted&quot;,
+&quot;Reconsideration Assessment&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Reconsideration Decision&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Reconsideration request review&quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;Reconsideration requested &quot;,&quot;CaretypeApplicationClosed&quot;,
+&quot;RFI Approval&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;RFI Extension Decision&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;RFI Extension Request&quot;,&quot;CaretypeApplicationAssessmentAndReview&quot;,
+&quot;CaretypeApplicationSubmitted&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>CareTypeStatus</name>
+        <dataType>String</dataType>
+        <expression>CASE({!$Record.NewStatus__c},
+&quot;Application submission receipt&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Application Submitted - Fee Payment Pending&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Application Not Required - Already Approved&quot;, &quot;Approved &quot;,
+&quot;Assessment not required - taken to be approved&quot;, &quot;Taken to be approved&quot;,
+&quot;For Formal Assessment&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Under Formal Assessment&quot;, &quot;Approval Decision Pending&quot;,
+&quot;For Quality Review&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Under Quality Review&quot;, &quot;Approval Decision Pending&quot;,
+&quot;RFI Approval&quot;, &quot;Approval Decision Pending&quot;,
+&quot;RFI Extension Decision&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Withdrawn – By Applicant&quot;, &quot;Application Withdrawn&quot;,
+&quot;Withdrawn – Under 63C&quot;,&quot;Application Withdrawn&quot;,
+&quot;Application invalid - not accepted&quot;, &quot;Application Threshold Not Met&quot;,
+&quot;For Delegate&apos;s Decision&quot;, &quot;Approval Decision Pending&quot;,
+&quot;Delegate&apos;s Decision&quot;, &quot;Approval Decision Pending&quot;,
+&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>CurrentCareType</name>
+        <dataType>String</dataType>
+        <expression>if(CONTAINS(RIGHT({!AllSelectedCareTypes},LEN({!AllSelectedCareTypes})-if(LEN({!AllAddedCareTypes})=0,0,LEN({!AllAddedCareTypes})+1)),&quot;;&quot;),LEFT(RIGHT({!AllSelectedCareTypes},LEN({!AllSelectedCareTypes})-if(LEN({!AllAddedCareTypes})=0,0,LEN({!AllAddedCareTypes})+1)),FIND(&quot;;&quot;,RIGHT({!AllSelectedCareTypes},LEN({!AllSelectedCareTypes})-if(LEN({!AllAddedCareTypes})=0,0,LEN({!AllAddedCareTypes})+1)))-1),RIGHT({!AllSelectedCareTypes},LEN({!AllSelectedCareTypes})-if(LEN({!AllAddedCareTypes})=0,0,LEN({!AllAddedCareTypes})+1)))</expression>
+    </formulas>
+    <formulas>
+        <name>CurrentCareTypeFormat</name>
+        <dataType>String</dataType>
+        <expression>if(IsBlank({!AllAddedCareTypes}),{!CurrentCareType},&quot;;&quot;+{!CurrentCareType})</expression>
+    </formulas>
+    <formulas>
+        <name>CurrentFY</name>
+        <dataType>String</dataType>
+        <expression>IF(MONTH({!$Record.ApplicationDateReceived__c})&lt;7,RIGHT(TEXT(YEAR({!$Record.ApplicationDateReceived__c})-1),2)+&quot;/&quot;+RIGHT(TEXT(YEAR({!$Record.ApplicationDateReceived__c})),2),RIGHT(TEXT(YEAR({!$Record.ApplicationDateReceived__c})),2)+&quot;/&quot;+RIGHT(TEXT(YEAR({!$Record.ApplicationDateReceived__c})+1),2))</expression>
+    </formulas>
+    <formulas>
+        <name>NewReferenceNumber</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK({!ReferenceNumber}) || (!ISNUMBER({!ReferenceNumber})),&quot;001&quot;,TEXT(VALUE({!ReferenceNumber})+1))</expression>
+    </formulas>
+    <interviewLabel>Application: Create Care Type {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Application: Create Care Type</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Flexible_Care_Type</name>
+        <label>Create Flexible Care Type</label>
+        <locationX>314</locationX>
+        <locationY>863</locationY>
+        <connector>
+            <targetReference>Update_Application_for_Application_Not_Required_Taken_To_Be_Approved</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Update_Application</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Account__c</field>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ApplicationId__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Care_Type__c</field>
+            <value>
+                <stringValue>Flexible</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Current_Approval_Status__c</field>
+            <value>
+                <stringValue>Taken to be approved</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>CareTypeId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Care_Type__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Home_Care_Type</name>
+        <label>Create Home Care Type</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>Create_Residential_Care_Type</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Update_Application</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Account__c</field>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ApplicationId__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Care_Type__c</field>
+            <value>
+                <stringValue>Home Care</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Current_Approval_Status__c</field>
+            <value>
+                <stringValue>Taken to be approved</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>CareTypeId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Care_Type__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Residential_Care_Type</name>
+        <label>Create Residential Care Type</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <connector>
+            <targetReference>Create_Flexible_Care_Type</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Update_Application</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Account__c</field>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ApplicationId__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Care_Type__c</field>
+            <value>
+                <stringValue>Residential</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Current_Approval_Status__c</field>
+            <value>
+                <stringValue>Taken to be approved</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>CareTypeId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Care_Type__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>CreateCareType</name>
+        <label>CreateCareType</label>
+        <locationX>1634</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>UpdateApplication</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Update_Application</targetReference>
+        </faultConnector>
+        <inputReference>AllCareTypeRecordCollection</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <name>GetAppRecordType</name>
+        <label>GetAppRecordType</label>
+        <locationX>842</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>NeedAddMoreCareType</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ApplicationRTName</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BusinessLicenseApplication</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>ApplicationID</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <name>GetCTRecordType</name>
+        <label>GetCTRecordType</label>
+        <locationX>842</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GetAppRecordType</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Approved_Provider_CT</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Care_Type__c</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>CareTypeId</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Application_for_Application_Not_Required_Taken_To_Be_Approved</name>
+        <label>Update Application for Application Not Required- Taken To Be Approved</label>
+        <locationX>314</locationX>
+        <locationY>971</locationY>
+        <faultConnector>
+            <targetReference>Update_Application</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>CareTypes__c</field>
+            <value>
+                <elementReference>GovernmentCareTypes</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>ApplicationID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ReferenceNumber__c</field>
+            <value>
+                <stringValue>d9b38f0b-b54b-49ed-9c3b-70ad085aee8c</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>UpdateApplication</name>
+        <label>UpdateApplication</label>
+        <locationX>1634</locationX>
+        <locationY>755</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Update_Application</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>ApplicationID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ReferenceNumber__c</field>
+            <value>
+                <elementReference>ReferenceNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>716</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetCTRecordType</targetReference>
+        </connector>
+        <filterFormula>!{!$Setup.BypassTriggers__c.BypassValidationRules__c}</filterFormula>
+        <object>BusinessLicenseApplication</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>AllAddedCareTypes</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>AllCareTypeRecordCollection</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Care_Type__c</objectType>
+    </variables>
+    <variables>
+        <name>AppCareTypes</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Record.CareTypes__c</elementReference>
+        </value>
+    </variables>
+    <variables>
+        <name>ApplicationDateRecieved</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ApplicationID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>CareTypeId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>GovernmentCareTypes</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>Home Care;Flexible;Residential</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>NewCareType</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Care_Type__c</objectType>
+    </variables>
+    <variables>
+        <name>ReferenceNumber</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

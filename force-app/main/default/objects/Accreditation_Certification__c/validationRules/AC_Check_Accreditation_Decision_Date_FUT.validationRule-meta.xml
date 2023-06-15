@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AC_Check_Accreditation_Decision_Date_FUT</fullName>
+    <active>true</active>
+    <description>Accreditation Decision Date is mandatory except for Record Commencing Service Accreditation.</description>
+    <errorConditionFormula>Decision_Date__c&gt;Today()</errorConditionFormula>
+    <errorDisplayField>Decision_Date__c</errorDisplayField>
+    <errorMessage>Accreditation Decision Date Cannot be future date</errorMessage>
+</ValidationRule>

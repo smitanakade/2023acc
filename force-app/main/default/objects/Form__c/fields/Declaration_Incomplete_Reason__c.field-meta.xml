@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Declaration_Incomplete_Reason__c</fullName>
+    <description>Reason Declaration was incomplete</description>
+    <externalId>false</externalId>
+    <label>Declaration Incomplete Reason</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Declaration is a blank document</fullName>
+                <default>false</default>
+                <label>Declaration is a blank document</label>
+            </value>
+            <value>
+                <fullName>You must submit an approved Declaration</fullName>
+                <default>false</default>
+                <label>You must submit an approved Declaration</label>
+            </value>
+            <value>
+                <fullName>Declaration is for a prior quarter</fullName>
+                <default>false</default>
+                <label>Declaration is for a prior quarter</label>
+            </value>
+            <value>
+                <fullName>A new declaration must be submitted</fullName>
+                <default>false</default>
+                <label>A new declaration must be submitted</label>
+            </value>
+            <value>
+                <fullName>Signatory is not an authorised person</fullName>
+                <default>false</default>
+                <label>Signatory is not an authorised person</label>
+            </value>
+            <value>
+                <fullName>Signature is missing</fullName>
+                <default>false</default>
+                <label>Signature is missing</label>
+            </value>
+            <value>
+                <fullName>Name is missing</fullName>
+                <default>false</default>
+                <label>Name is missing</label>
+            </value>
+            <value>
+                <fullName>Position is missing</fullName>
+                <default>false</default>
+                <label>Position is missing</label>
+            </value>
+            <value>
+                <fullName>Date is missing</fullName>
+                <default>false</default>
+                <label>Date is missing</label>
+            </value>
+            <value>
+                <fullName>Declaration is dated into the future</fullName>
+                <default>false</default>
+                <label>Declaration is dated into the future</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

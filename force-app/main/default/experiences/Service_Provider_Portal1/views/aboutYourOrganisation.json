@@ -1,0 +1,503 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "cdaec671-19fe-4c02-a811-7711f7ddf773",
+  "label" : "About your Organisation",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(231,225,237)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "115fe255-31be-479a-9cc7-43860a7f88eb",
+          "columns" : [ {
+            "UUID" : "5da0ccf9-6e44-45fe-9360-256ac8552f76",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "115fe255-31be-479a-9cc7-43860a7f88eb",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "forceCommunity:recordDetail",
+          "id" : "92fccfb9-03b4-4ee8-833f-20d9080f3c41",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5da0ccf9-6e44-45fe-9360-256ac8552f76",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgb(248,248,248)",
+        "backgroundOverlay" : "rgb(248, 248, 248)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "8fcca00d-6ed7-4594-a72c-788dbaac3c70",
+          "columns" : [ {
+            "UUID" : "d03ba6b5-da1f-4e55-8def-0ac78bfe0fcd",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "8fcca00d-6ed7-4594-a72c-788dbaac3c70",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p><br></p><p><strong style=\"font-size: 20px;\">View or modify your organisation’s details</strong></p><p><span style=\"color: rgb(187, 187, 187);\">__________________________________________________________________________________________________________________________________________________________________________________________________________________</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "cc069800-ac14-44e9-a0da-217277f06dfe",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d03ba6b5-da1f-4e55-8def-0ac78bfe0fcd",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgb(248,248,248)",
+        "backgroundOverlay" : "rgba(0, 0, 0, 0)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "9d05b881-5161-4cf9-b3a7-ec8bfb499ee7",
+          "columns" : [ {
+            "UUID" : "a9df6927-5ae2-4be1-b739-df697a879bb6",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "7721dcc7-2299-4a45-aec8-2313cdd5cb89",
+            "columnKey" : "b8260",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 215
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9d05b881-5161-4cf9-b3a7-ec8bfb499ee7",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong>&nbsp;&nbsp;</strong></p>\n<p>&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Organization_Group.1}\"></p>\n<p><br></p>\n<h3><strong>&nbsp;&nbsp;Organisation details</strong></h3>\n<p><br></p>\n<p>&nbsp;&nbsp;View and modify your organisation details, including lorem ipsum and adipiscing dates.</p>\n<p>&nbsp;&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "2bd5753c-0d15-4c38-82f3-4f2424115503",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a9df6927-5ae2-4be1-b739-df697a879bb6",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p>\n<p>&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Third_party_orgaization.1}\"></p>\n<p><br></p>\n<h3><strong>&nbsp;&nbsp;Third part<span class=\"ql-cursor\">﻿</span>y organisations</strong></h3>\n<p><br></p>\n<p>&nbsp;&nbsp;View and modify your third party organisations including elit, structures and sit dates.</p>\n<p>&nbsp;&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "09771a40-be68-4570-9c95-1611d9af545d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7721dcc7-2299-4a45-aec8-2313cdd5cb89",
+        "regionLabel" : "Column 2",
+        "regionName" : "b8260",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgb(248,248,248)",
+        "backgroundOverlay" : "rgba(0, 0, 0, 0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e12770b3-1ba5-45d4-8994-43327587ad69",
+          "columns" : [ {
+            "UUID" : "ce853c51-2f70-4d01-90ef-49622b4259b1",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "12fab1f1-9984-4f2b-bf7d-4f5dc86fd9c7",
+            "columnKey" : "fa014",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 215
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e12770b3-1ba5-45d4-8994-43327587ad69",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p>\n<p>&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Key_personnel_and_contacts.1}\"></p>\n<p><br></p>\n<h3><strong>&nbsp;&nbsp;Key personnel and contacts</strong></h3>\n<p><br></p>\n<p>&nbsp;&nbsp;View and modify your key personnel and contacts including status, elit and dates.</p>\n<p>&nbsp;&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "2bc14ea2-43f3-46b7-b627-13973277d67b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ce853c51-2f70-4d01-90ef-49622b4259b1",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p>&nbsp;&nbsp;</p>\n<p>&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Users.1}\"></p>\n<p><br></p>\n<h3><strong>&nbsp;&nbsp;Users</strong></h3>\n<p><br></p>\n<p>&nbsp;&nbsp;&nbsp;View and modify your key personnel and contacts including status, elit and dates.</p>\n<p>&nbsp;&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "74d4c372-7f3d-4271-b3a0-46a32d0e144a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "12fab1f1-9984-4f2b-bf7d-4f5dc86fd9c7",
+        "regionLabel" : "Column 2",
+        "regionName" : "fa014",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgb(248,248,248)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "fb4b42b7-ea4b-4e77-a5d5-819b4bcfc921",
+          "columns" : [ {
+            "UUID" : "cd4d2b9c-7412-46b5-adeb-ef2b06a12ed1",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "fb4b42b7-ea4b-4e77-a5d5-819b4bcfc921",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><br></h3><h3><br></h3><h3><strong>Notify the department</strong></h3><p><span style=\"color: rgb(187, 187, 187);\">__________________________________________________________________________________________________________________________________________________________________________________________________________________</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "25f0ad54-98e2-45ba-b16f-64bf3c403fbd",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "cd4d2b9c-7412-46b5-adeb-ef2b06a12ed1",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgb(248,248,248)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "6886ce4c-32f0-40e5-814d-7c18f692b8c2",
+          "columns" : [ {
+            "UUID" : "c181fb57-50bf-426f-bf4c-e51d7bdedf69",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "2245c34b-f363-494d-be85-9ba52777b42a",
+            "columnKey" : "0b22a",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "9ac31728-3b03-4fdd-a003-1144359203d6",
+            "columnKey" : "8b26d",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 61
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6886ce4c-32f0-40e5-814d-7c18f692b8c2",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong>Initiate</strong><strong style=\"background-color: rgb(255, 255, 255);\"><span class=\"ql-cursor\">﻿</span></strong></p><h4>Notification of Material Change\t&gt;</h4><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "1f41de71-5050-4197-a52b-ca939cb182f9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c181fb57-50bf-426f-bf4c-e51d7bdedf69",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong>Initiate</strong></p><h4>Change to your financial status\t&gt;</h4><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "65555feb-7ab9-46c2-8741-313e34531797",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2245c34b-f363-494d-be85-9ba52777b42a",
+        "regionLabel" : "Column 2",
+        "regionName" : "0b22a",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "9ac31728-3b03-4fdd-a003-1144359203d6",
+        "regionLabel" : "Column 3",
+        "regionName" : "8b26d",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgb(248,248,248)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "c3c1b226-8887-4e66-85ed-189668db6b08",
+          "columns" : [ {
+            "UUID" : "24d9cf5e-c755-4d86-8c11-883681342013",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c3c1b226-8887-4e66-85ed-189668db6b08",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><br></h3><h3><br></h3><h3><strong>Notifications Requiring Approval</strong></h3><p><span style=\"color: rgb(187, 187, 187);\">__________________________________________________________________________________________________________________________________________________________________________________________________________________</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "8a1ce798-ceb9-45cb-801a-858407b12a8d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "24d9cf5e-c755-4d86-8c11-883681342013",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "1497bcc6-d31e-44e5-9726-89ed08054c5e",
+          "columns" : [ {
+            "UUID" : "297274eb-3017-4e55-9782-92a4052cdd67",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "59193bc3-b85e-49ec-a185-c1ba88783360",
+            "columnKey" : "be15a",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1c337fc6-a42a-4eea-bed9-c83985918915",
+            "columnKey" : "120b6",
+            "columnName" : "Column 3",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 50
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1497bcc6-d31e-44e5-9726-89ed08054c5e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\">&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.info_24px.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "a17b29fc-fb90-4f45-8bc1-2dda1c9ae656",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e6e74920-56f6-4200-8c02-142627321467",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "297274eb-3017-4e55-9782-92a4052cdd67",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong>Speed up your material change</strong></p><p>In order for your organisation’s suitability to be promptly assessed based on information as a whole, you are strongly advised to select and endorse all relevant pending notifications in ONE submission</p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ff7724eb-3df8-498c-bc9b-dc4b4f2c89ff",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "59193bc3-b85e-49ec-a185-c1ba88783360",
+        "regionLabel" : "Column 2",
+        "regionName" : "be15a",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "1c337fc6-a42a-4eea-bed9-c83985918915",
+        "regionLabel" : "Column 3",
+        "regionName" : "120b6",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "477db069-9bb8-491e-abee-5ea722208b21",
+          "columns" : [ {
+            "UUID" : "bd33a497-fb27-41fd-8498-54f2ebe3322e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 171
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "477db069-9bb8-491e-abee-5ea722208b21",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "recordId" : "{!recordId}",
+            "width" : "SMALL"
+          },
+          "componentName" : "forceCommunity:relatedRecords",
+          "id" : "4595aee6-7514-46ca-a06a-b4ff1d76a9ef",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "bd33a497-fb27-41fd-8498-54f2ebe3322e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "dd2c7bbc-ae3c-4986-8a26-255f8a4949b2",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "About your Organisation"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "17969349-fae2-4f8c-82d4-61f36eb95358",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "418077db-71fb-4bc3-b1d3-1f8dbce57ccf",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-about-your-organisation"
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>Convert Birthdate to Text</description>
+    <formulas>
+        <description>Convert birthdate to a text</description>
+        <name>ConvertBirthdateToText</name>
+        <dataType>String</dataType>
+        <expression>TEXT(DAY({!$Record.Birthdate}))+&quot;/&quot; +TEXT(MONTH({!$Record.Birthdate}))+&quot;/&quot; +TEXT(YEAR({!$Record.Birthdate}))</expression>
+    </formulas>
+    <interviewLabel>Convert Birthdate to Text {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Convert Birthdate to Text</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Set_Birthdate_to_BirthdateText_field</name>
+        <label>Set Birthdate to BirthdateText field</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>BirthdateText__c</field>
+            <value>
+                <elementReference>ConvertBirthdateToText</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Birthdate_to_BirthdateText_field</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Birthdate</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

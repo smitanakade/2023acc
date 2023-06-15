@@ -1,0 +1,16 @@
+<template>
+    <template if:true={showOfflineIcon}>
+        <button class="button-class"  onclick={handleClick}  label={buttonName} title={buttonName} name={buttonName} data-id={buttonName}>
+            <span ><img class="img-class" src={lock_icon}></span>
+            {buttonName} 
+        </button>
+
+    </template>
+
+    <template if:false={showOfflineIcon}>
+        <button class="button-class"  onclick={handleClick}  label={buttonName} title={buttonName} name={buttonName} data-id={buttonName}>
+            {buttonName} 
+        </button>
+    </template>
+    
+</template>

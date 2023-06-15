@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALT_Mark_Documents_as_Sent</fullName>
+    <active>true</active>
+    <description>Mark Documents as Sent cannot be future date and Must be on or after the date of allotment.</description>
+    <errorConditionFormula>OR(GPMS_Mark_Documents_as_Sent__c &gt; Today(), GPMS_Mark_Documents_as_Sent__c &lt;  Original_Date_of_Allotment__c)</errorConditionFormula>
+    <errorDisplayField>GPMS_Mark_Documents_as_Sent__c</errorDisplayField>
+    <errorMessage>Mark Documents as Sent cannot be future date and must be on or after the date of allotment</errorMessage>
+</ValidationRule>

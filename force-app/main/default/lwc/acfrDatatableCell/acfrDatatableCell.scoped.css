@@ -1,0 +1,198 @@
+/* @import "c/cssUtils"; */
+/* Not allowed to import in scoped css file, copied in */
+.display-inline {
+	display: inline;
+}
+
+.display-inline-block {
+	display: inline-block;
+}
+
+.display-flex {
+	display: flex;
+}
+
+.f-a-items-center {
+	align-items: center;
+}
+
+.f-j-content-center {
+	justify-content: center;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.underline {
+	text-decoration-line: underline;
+}
+
+.line-through {
+	text-decoration-line: line-through;
+}
+
+.no-underline {
+	text-decoration-line: none;
+}
+
+.user-select-none {
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.darken-hover:hover {
+	filter: brightness(85%);
+}
+
+.lighten-hover:hover {
+	filter: brightness(115%);
+}
+
+.flex-justify-self-end {
+	justify-self: flex-end;
+}
+
+.cell-container {
+	display: flex;
+	padding: 3px 12px;
+	align-items: center;
+	height: 100%;
+
+	overflow: visible;
+}
+
+.cell-container-error {
+	background-color: rgba(243, 0, 43, 0.05);
+}
+
+.cell-container:focus-within {
+	/* border: 0px 2px 2px 0px solid #000; */
+	box-shadow: var(--lwc-brandAccessibleActive, rgb(1, 68, 134)) -1px -1px 0 1px
+		inset;
+}
+
+.cell-container-read-only {
+	font-weight: bold;
+	background-color: #f8f8f8;
+}
+
+.cell-container-hidden {
+	background-color: #f3f3f3;
+}
+
+.prefix {
+	flex: 1 0;
+	opacity: 85%;
+}
+
+.value {
+	flex: 2 1 0;
+	text-align: right;
+	margin: 0 5px;
+}
+
+input {
+	border: none;
+	background: transparent;
+	height: 100%;
+}
+
+input:focus {
+	outline: none;
+	border: none;
+}
+
+p {
+	white-space: normal;
+}
+
+.comment-icon {
+	height: 20px;
+	width: 20px;
+	margin-top: 2px;
+	margin-left: 10px;
+}
+
+.error-container {
+	flex: 1 0;
+}
+
+.error-message-container {
+	position: relative;
+	align-self: flex-end;
+	display: inline-block;
+	align-items: center;
+}
+
+.error-message {
+	position: absolute;
+	bottom: 100%;
+	right: 0.25rem;
+	border-radius: 0.25rem;
+	height: fit-content;
+	padding: 8px 16px;
+	user-select: none;
+	-webkit-user-select: none;
+
+	/* slds dark blue background color */
+	background: var(--color-background-alt-inverse, rgb(3, 45, 96));
+	color: white;
+
+	opacity: 100%;
+}
+
+.error-message-fade {
+	opacity: 0%;
+	/* change second timeout delay to match delay + transition duration */
+	transition: opacity 0.2s ease-out;
+}
+
+.not-valid {
+	transition: 0.5s;
+	background-color: var(--gpmColErrorLight2, #fde9ef);
+	box-shadow: var(--gpmColError, #e91e63) -1px -1px 0 1px inset,
+		var(--gpmColError, #e91e63) 1px 1px 0 0;
+}
+
+.single-loader {
+	width: 20px;
+	height: 20px;
+	position: relative;
+}
+.single-loader:before {
+	content: "";
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	width: 20%;
+	height: 20%;
+	border-radius: 50%;
+	background-color: #bbbbbb;
+	-webkit-animation: fade 1s infinite;
+	animation: fade 1s infinite;
+}
+
+@-webkit-keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

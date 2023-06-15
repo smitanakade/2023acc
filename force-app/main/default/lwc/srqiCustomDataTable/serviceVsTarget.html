@@ -1,0 +1,63 @@
+<template>
+    <div class="slds-grid slds-p-vertical_medium">
+        <div>
+            <template lwc:if={typeAttributes.isAbove}>
+                <h1 class="slds-p-right_medium">
+                    <div class="slds-grid">
+                        <div class="srqi-indicator-icon-container">
+                            <lightning-icon icon-name="utility:arrowup" class="srqi-qi-rating-indicator-icon"
+                                            size="small"></lightning-icon>
+                        </div>
+                        <div>
+                            <lightning-formatted-number
+                                value={typeAttributes.compareToTarget}
+                                format-style="decimal"
+                                maximum-fraction-digits="0"
+                            >
+                            </lightning-formatted-number>
+                            %
+                        </div>
+                    </div>
+
+                </h1>
+            </template>
+            <template lwc:if={typeAttributes.isBelow}>
+                <h1 class="slds-p-right_medium">
+                    <div class="slds-grid">
+                        <div class="srqi-indicator-icon-container">
+                            <lightning-icon icon-name="utility:arrowdown" class="srqi-qi-rating-indicator-icon"
+                                            size="small"></lightning-icon>
+                        </div>
+                        <div>
+                            <lightning-formatted-number
+                                value={typeAttributes.compareToTarget}
+                                format-style="decimal"
+                                maximum-fraction-digits="0"
+                            >
+                            </lightning-formatted-number>
+                            %
+                        </div>
+                    </div>
+                </h1>
+            </template>
+            <template lwc:if={typeAttributes.isEqual}>
+                <h1 class="slds-p-right_medium">
+                    <div class="srqi-indicator-icon-container">
+                        <lightning-icon icon-name="utility:assignment" class="srqi-qi-rating-indicator-icon"
+                                        size="small"></lightning-icon>
+                    </div>
+                </h1>
+            </template>
+        </div>
+        <div>
+            <div class="srqi-rating-details-table-cell">
+                <p>
+                    <template lwc:if={typeAttributes.isAbove}>above</template>
+                    <template lwc:if={typeAttributes.isBelow}>below</template>
+                    <template lwc:if={typeAttributes.isEqual}>Equal to</template>
+                    &nbsp;the {typeAttributes.description}
+                </p>
+            </div>
+        </div>
+    </div>
+</template>

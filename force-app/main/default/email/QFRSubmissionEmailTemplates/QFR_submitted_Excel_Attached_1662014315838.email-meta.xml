@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>QFR Submitted: Send when provider submits the QFR – OPTION 1: excel attached</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>QFR submitted - Excel Attached</name>
+    <relatedEntityType>Case</relatedEntityType>
+    <style>none</style>
+    <subject>QFR {{!Case.Reporting_Period__r. QFR_Reporting Period __c }} submitted - {provider ID}</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

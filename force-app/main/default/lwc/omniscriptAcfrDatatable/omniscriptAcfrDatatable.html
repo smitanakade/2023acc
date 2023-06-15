@@ -1,0 +1,74 @@
+<template>
+  <template if:true={initComplete}>
+    <div class={datatableContainerClass}>
+
+      <div if:false={errorMessage} class="table-container">
+        <table class="datatable">
+          <thead>
+            <tr class="table-row-element">
+              <template iterator:col={displayCols}>
+                <th class="table-header-cell slds-text-heading_small slds-text-align_center" key={col.value.id} scope="col">
+                  <div class="display-flex">
+                    <span class="slds-var-m-horizontal_small">{col.value.name}</span>
+                </div>
+                </th>
+              </template>
+            </tr>
+          </thead>
+
+          <template for:each={categories} for:item="category" for:index="categoryIndex">
+            <tbody class="table-body" key={category.name}>
+              <tr class="table-row-element slds-var-p-around_small">
+                <th>
+                  <div class="table-body-header display-flex">
+                    <span class="display-flex f-a-items-center cursor-pointer user-select-none"
+                    data-category-index={categoryIndex} onclick={handleCategoryClick}>
+                      <template if:true={category.isExpanded}>
+                        <lightning-icon class="category-icon slds-var-m-right_x-small" icon-name="utility:chevrondown"
+                          size="xx-small" alternative-text="Indicates category is expanded"></lightning-icon>
+                      </template>
+                      <template if:false={category.isExpanded}>
+                        <lightning-icon class="category-icon slds-var-m-right_x-small" icon-name="utility:chevronright"
+                          size="xx-small" alternative-text="Indicates category is collapsed"></lightning-icon>
+                      </template>
+                      <h2 class="category-label slds-text-heading_medium">
+                        {category.name}
+                      </h2>
+                    </span>
+                    <c-tooltip-user-guide-link-datatable></c-tooltip-user-guide-link-datatable>
+                  </div>
+                </th>
+              </tr>
+            </tbody>
+
+            <template if:true={category.isExpanded}>
+              <tbody class="table-body" key={category.name}>
+                <template for:each={category.rows} for:item="rowItem">
+                  <tr class="table-row-element" key={rowItem.id} onchange={handleCellChange}
+                    onkeydown={handleCellKeyDown}>
+                    <th class="slds-text-title_bold" style={rowItem.inlineStyle} scope="row">
+                      <div class="table-body-header">{rowItem.name}</div>
+                    </th>
+                    <template for:each={rowItem.entries} for:item="cell">
+                      <td key={cell.cellId}>
+                        <c-acfr-datatable-cell record-id={cell.cellId} cell-value={cell.value} type={cell.type}
+                          error={cell.error} show-errors={cell.showErrors} is-read-only={cell.isReadOnly} is-hidden={cell.isHidden}>
+                        </c-acfr-datatable-cell>
+                      </td>
+                    </template>
+                  </tr>
+                </template>
+              </tbody>
+            </template>
+          </template>
+        </table>
+      </div>
+    </div>
+  </template>
+  <template if:false={initComplete}>
+    <div class="table-container">
+      <lightning-spinner variant="base" alternative-text="Loading table, please wait..."
+        class="slds-align_absolute-center"></lightning-spinner>
+    </div>
+  </template>
+</template>

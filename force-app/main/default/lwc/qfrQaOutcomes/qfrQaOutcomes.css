@@ -1,0 +1,81 @@
+.qfr-management-table {
+	display: block;
+	border: 1px solid #c9c9c9;
+	border-radius: 0.25rem;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+	min-width: 100%;
+	overflow: hidden;
+	font-size: 0.875rem;
+}
+.qfr-management-table div.header {
+	padding: 16px;
+	background-color: #f3f2f2;
+	border-bottom: 1px solid #dddbda;
+}
+.qfr-management-table div.header > div:first-child {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.qfr-management-table div.header .capitalise {
+	/* text-transform: uppercase; */
+	/* display: inline-block; */
+}
+.qfr-management-table div.header h4 {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.qfr-management-table table thead {
+	background-color: #f3f2f2;
+	border-bottom: 1px solid #dddbda;
+}
+.qfr-management-table table thead th {
+	border-right: 1px solid #dddbda;
+	font-weight: 500;
+	position: relative;
+}
+.qfr-management-table table thead th > * {
+	display: block;
+	padding: 18px 16px;
+}
+.qfr-management-table table thead th:hover {
+	background-color: #fff;
+}
+.qfr-management-table table thead th a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.qfr-management-table table thead th:last-child {
+	border-right: none;
+	width: 1%;
+}
+
+.qfr-management-table table tbody {
+	background-color: #fff;
+}
+.qfr-management-table table tbody tr {
+	border-bottom: 1px solid #dddbda;
+}
+.qfr-management-table table tbody tr:hover {
+	background-color: #eeeeee;
+}
+
+.qfr-management-table table td {
+	padding: 16px;
+	font-weight: 400;
+}
+.qfr-management-table table td:last-child {
+	width: 50px;
+}
+
+.qfr-management-table table tfoot {
+	background-color: #fff;
+}
+.qfr-management-table table tfoot td {
+	text-align: center;
+}

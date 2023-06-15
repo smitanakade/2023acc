@@ -1,0 +1,46 @@
+<template>
+
+    <lightning-combobox name="progress" label="Select Action" value={value} options={options} onchange={updateAction} ></lightning-combobox>
+
+    <div class="slds-scrollable_x">
+    <table class="slds-table slds-table_bordered slds-table_col-bordered slds-m-top_large">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col"><div class="slds-truncate">Care Type</div></th>
+                <th class="" scope="col"><div class="slds-truncate">Care Level</div></th>
+                <th class="" scope="col"><div class="slds-truncate">Care Setting</div></th>
+                <th class="" scope="col"><div class="slds-truncate">Number of Places</div></th>
+                <th class="" scope="col"><div class="slds-truncate">Status of Places</div></th>
+                <th class="" scope="col"><div class="slds-truncate">Reduce Number of Places By</div></th>
+                <th class="" scope="col"><div class="slds-truncate">Number of Places after Reduction</div></th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            
+            <template for:each={allotment} for:item="place" for:index="index">
+                <tr class="slds-hint-parent" key={place.Id}>
+                    <td><div class="slds-truncate">{place.CareType}</div></td>
+                    <td><div class="slds-truncate">{place.CareLevel}</div></td>
+                    <td><div class="slds-truncate">{place.CareSetting}</div></td>
+                    <td><div class="slds-truncate">{place.NumberOfPlaces}</div></td>
+                    <td><div class="slds-truncate">{place.StatusChangeTo}</div></td>
+                    <td>
+                        <template if:true={isRead}>
+                            <div class="slds-truncate">{place.NumberOfChanges}</div>
+                        </template>
+                        <template if:false={isRead}>
+                            <div class="slds-truncate">
+                                <lightning-input type="number" name={place.Id} value={place.NumberOfChanges} max={place.NumberOfPlaces} min="0" step="1" onchange={updateNumberOfCeased}></lightning-input>
+                            </div>
+                        </template>
+                    </td>
+                    <td><div class="slds-truncate">{place.numberOfAfterCeased}</div></td>
+                </tr>
+            </template>
+            
+        </tbody>
+    </table>
+    </div>
+        
+</template>

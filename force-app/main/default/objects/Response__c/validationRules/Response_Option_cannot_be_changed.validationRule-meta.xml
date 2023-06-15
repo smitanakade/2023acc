@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Response_Option_cannot_be_changed</fullName>
+    <active>true</active>
+    <description>Response Options cannot be changed/updated</description>
+    <errorConditionFormula>AND
+(ISPICKVAL($Profile.UserType,&apos;Standard&apos;),
+(NOT(ISBLANK(PRIORVALUE(Response_Options__c)))),ISCHANGED(Response_Options__c))</errorConditionFormula>
+    <errorDisplayField>Response_Options__c</errorDisplayField>
+    <errorMessage>You cannot change Provider&apos;s response.</errorMessage>
+</ValidationRule>

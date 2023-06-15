@@ -1,0 +1,64 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "a44434f7-0342-46f7-a028-ff55a3082985",
+  "label" : "Account Contact Relationship Detail",
+  "regions" : [ {
+    "id" : "5dad562e-9195-4b58-a439-2a0384620b61",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordHeadline",
+      "id" : "1ddc39da-4093-4434-ace6-dfa488178baa",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "detailsTabLabel" : "Details",
+        "discussionsTabLabel" : "Feed",
+        "recordId" : "{!recordId}",
+        "relatedTabLabel" : "Related",
+        "tab1Type" : "details",
+        "tab2Type" : "related",
+        "tab3Type" : "chatter",
+        "tab4Type" : "none",
+        "timelineTabLabel" : "Activity"
+      },
+      "componentName" : "forceCommunity:recordHomeTabs",
+      "id" : "bf1b641c-02b7-49bf-9fa1-3906baf23334",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f15aff76-eb55-47f1-8306-ccb55eb7c919",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "c3e7cd6b-ed68-40ec-94e7-57a64a807c7f",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "8f2df6ff-c02b-47b5-960a-d0d35f2a6a7c",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b63b8b3f-90f9-46d9-859c-9f1e16873f9b",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-07k"
+}

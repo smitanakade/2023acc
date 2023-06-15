@@ -1,0 +1,68 @@
+<template>
+	<c-form-omni-step lwc:if={beforeYouStart}>
+		<c-a-c-f-r-before-you-start-english
+			prefill={sharedDataJson}
+			layout="lightning"
+		></c-a-c-f-r-before-you-start-english>
+	</c-form-omni-step>
+	<c-form-omni-step lwc:elseif={providerContactActive}>
+		<c-a-c-f-r-provider-contact-english
+			prefill={sharedDataJson}
+			layout="lightning"
+		></c-a-c-f-r-provider-contact-english>
+	</c-form-omni-step>
+	<c-form-omni-step lwc:elseif={resiViabilityActive}>
+		<c-a-c-f-r-a-c-f-r-english
+			prefill={sharedDataJson}
+			layout="lightning"
+		></c-a-c-f-r-a-c-f-r-english>
+	</c-form-omni-step>
+	<c-form-omni-step lwc:elseif={homeCareViabilityActive}>
+		<c-a-c-f-r-save-provider-home-care-questions-english
+			prefill={sharedDataJson}
+			layout="lightning"
+		></c-a-c-f-r-save-provider-home-care-questions-english>
+	</c-form-omni-step>
+	<c-form-omni-step lwc:elseif={approvedProviderQFSActive}>
+		<c-a-c-f-r-s-t-approved-provider-quarterly-financial-statements-english
+			prefill={sharedDataJson}
+			layout="lightning"
+		></c-a-c-f-r-s-t-approved-provider-quarterly-financial-statements-english>
+	</c-form-omni-step>
+	<c-form-omni-step lwc:elseif={homeCareLabourCostsActive}>
+		<c-a-c-f-r-provider-_-home-_-care-_-labour-_-costs-_-hours-english
+			prefill={sharedDataJson}
+			layout="lightning"
+		></c-a-c-f-r-provider-_-home-_-care-_-labour-_-costs-_-hours-english>
+	</c-form-omni-step>
+	<c-form-omni-step lwc:elseif={resiLabourCostsActive}>
+		<c-a-c-f-r-s-t-residential-labour-costsand-hours-english
+			prefill={sharedDataJson}
+			layout="lightning"
+		></c-a-c-f-r-s-t-residential-labour-costsand-hours-english>
+	</c-form-omni-step>
+	<c-form-omni-step lwc:elseif={resifoodAndNutritionActive}>
+		<c-a-c-f-r-s-t-foodand-nutrition-reporting-english
+			prefill={sharedDataJson}
+			layout="lightning"
+		></c-a-c-f-r-s-t-foodand-nutrition-reporting-english>
+	</c-form-omni-step>
+	<c-form-omni-step lwc:elseif={natsifacqFoodAndNutritionActive}>
+		<c-a-c-f-r-n-a-t-s-i-f-a-c-foodand-nutrition-english
+			prefill={sharedDataJson}
+			layout="lightning"
+		></c-a-c-f-r-n-a-t-s-i-f-a-c-foodand-nutrition-english>
+	</c-form-omni-step>
+	<c-form-omni-step lwc:elseif={mpsFoodAndNutritionActive}>
+		<c-a-c-f-r-m-p-s-foodand-nutrition-english
+			prefill={sharedDataJson}
+			layout="lightning"
+		></c-a-c-f-r-m-p-s-foodand-nutrition-english>
+	</c-form-omni-step>
+	<c-form-omni-step lwc:elseif={declarationActive}>
+		<c-a-c-f-r-declaration-submission-english
+			prefill={sharedDataJson}
+			layout="lightning"
+		></c-a-c-f-r-declaration-submission-english>
+	</c-form-omni-step>
+</template>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_explanation_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED( Declaration_Incomplete_Reason__c ),INCLUDES( Declaration_Incomplete_Reason__c ,&quot;Other&quot;), ISBLANK( Other__c ))</errorConditionFormula>
+    <errorDisplayField>Other__c</errorDisplayField>
+    <errorMessage>Complete this field</errorMessage>
+</ValidationRule>

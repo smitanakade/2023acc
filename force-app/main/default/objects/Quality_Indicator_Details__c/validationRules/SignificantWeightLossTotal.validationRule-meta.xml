@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SignificantWeightLossTotal</fullName>
+    <active>true</active>
+    <description>Number of care recipients with significant unplanned weight loss should not be greater than number of care recipients assessed.</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    BLANKVALUE(Unplanned_Sig_Weight_Loss__c, 0) &gt; BLANKVALUE(No_CR_Assessed__c, 0)
+)</errorConditionFormula>
+    <errorDisplayField>Unplanned_Sig_Weight_Loss__c</errorDisplayField>
+    <errorMessage>Number cannot be higher than the total number of care recipients assessed.</errorMessage>
+</ValidationRule>

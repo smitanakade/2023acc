@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PersonalCareStaffTotal</fullName>
+    <active>true</active>
+    <description>Number of personal care staff who ceased work should not be greater than number of personal care staff employed at start of quarter</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    BLANKVALUE(No_staff_stopped_personal_care_workers__c, 0) &gt; BLANKVALUE(No_of_staff_PCW_start_quarter__c, 0)
+)</errorConditionFormula>
+    <errorDisplayField>No_staff_stopped_personal_care_workers__c</errorDisplayField>
+    <errorMessage>Number of staff employed as personal care staff or assistants in nursing who stopped working during the quarter cannot exceed number of staff employed as personal care staff or assistants in nursing at the start of the quarter.</errorMessage>
+</ValidationRule>

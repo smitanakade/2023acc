@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InvalidZipPostalCode</fullName>
+    <active>true</active>
+    <description>Enter the valid postal code</description>
+    <errorConditionFormula>AND(NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+AND(NOT(ISBLANK(Zip_Postal_Code__c)),OR(LEN(Zip_Postal_Code__c) &lt;&gt;4,NOT(REGEX(Zip_Postal_Code__c, &quot;(0[2][0-9][0-9])|(2[6][0-1][0-9])|(2[9][0-1][0-9])|(2[9][2][0])&quot;))),  TEXT(State_Province__c ) = &quot;ACT&quot;)||(AND(NOT(ISBLANK( Zip_Postal_Code__c )),OR(LEN(Zip_Postal_Code__c) &lt;&gt;4,NOT(REGEX(Zip_Postal_Code__c, &quot;([1-2][0-5][0-9][0-9])|(2[6-8][2-9][0-9])|(2[9][3-9][0-9])|(2[9][2][0-9])&quot;))),TEXT(State_Province__c ) = &quot;NSW&quot;))||(AND(NOT(ISBLANK( Zip_Postal_Code__c )),OR(LEN(Zip_Postal_Code__c) &lt;&gt;4,NOT(REGEX(Zip_Postal_Code__c, &quot;(0[8-9][0-9][0-9])&quot;))),  TEXT(State_Province__c ) = &quot;NT&quot;))||(AND(NOT(ISBLANK( Zip_Postal_Code__c )),OR(LEN(Zip_Postal_Code__c) &lt;&gt;4,NOT(REGEX(Zip_Postal_Code__c, &quot;(4[0-9][0-9][0-9])|(9[0-9][0-9][0-9])&quot;))),  TEXT(State_Province__c ) = &quot;QLD&quot;))||(AND(NOT(ISBLANK( Zip_Postal_Code__c )),OR(LEN(Zip_Postal_Code__c) &lt;&gt;4,NOT(REGEX(Zip_Postal_Code__c, &quot;(5[0-9][0-9][0-9])&quot;))),  TEXT(State_Province__c ) = &quot;SA&quot;))||(AND(NOT(ISBLANK( Zip_Postal_Code__c )),OR(LEN(Zip_Postal_Code__c) &lt;&gt;4,NOT(REGEX(Zip_Postal_Code__c, &quot;(7[0-9][0-9][0-9])&quot;))),  TEXT(State_Province__c ) = &quot;TAS&quot;))||(AND(NOT(ISBLANK( Zip_Postal_Code__c )),OR(LEN(Zip_Postal_Code__c) &lt;&gt;4,NOT(REGEX(Zip_Postal_Code__c, &quot;(8[0-9][0-9][0-9])|(3[0-9][0-9][0-9])&quot;))),  TEXT(State_Province__c ) = &quot;VIC&quot;))||
+(AND(NOT(ISBLANK( Zip_Postal_Code__c )),OR(LEN(Zip_Postal_Code__c) &lt;&gt;4,NOT(REGEX(Zip_Postal_Code__c, &quot;(6[0-9][0-9][0-9])&quot;))), TEXT(State_Province__c ) = &quot;WA&quot;)))</errorConditionFormula>
+    <errorDisplayField>Zip_Postal_Code__c</errorDisplayField>
+    <errorMessage>Please enter the valid postal code</errorMessage>
+</ValidationRule>

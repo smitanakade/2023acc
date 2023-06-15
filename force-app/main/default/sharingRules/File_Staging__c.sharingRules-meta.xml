@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>CEI_STAR_Rating_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CEI STAR Rating Users</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CEI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Contact_Centre_File_Staging</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Contact Centre File Staging</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>QI,CEI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>File_Staging_Quality_Indicator_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Grant Read/Write access to all &apos;File Staging&apos; records for Health staff users</description>
+        <label>File Staging Quality Indicator Users Read Write</label>
+        <sharedTo>
+            <group>Quality_Indicator_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>QI</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules> 

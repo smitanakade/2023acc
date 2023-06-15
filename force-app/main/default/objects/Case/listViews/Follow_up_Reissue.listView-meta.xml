@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_up_Reissue</fullName>
+    <columns>OWNER_NAME</columns>
+    <columns>Follow_Up_Status__c</columns>
+    <columns>Expected_Resubmission_Date__c</columns>
+    <columns>Comments__c</columns>
+    <columns>NAPSID__c</columns>
+    <columns>Provider_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Follow_Up_Status__c</field>
+        <operation>equals</operation>
+        <value>Provider unavailable,Incomplete email sent,In progress,RC reissue,Referred,Waiting Follow Up</value>
+    </filters>
+    <filters>
+        <field>Follow_Up_Status__c</field>
+        <operation>equals</operation>
+        <value>Provider unavailable</value>
+    </filters>
+    <label>Follow Up Reissue</label>
+</ListView>

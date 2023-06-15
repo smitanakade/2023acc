@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_QA_Outcome_Rejected_must_Comment</fullName>
+    <active>true</active>
+    <description>If a viability response has been &apos;Rejected&apos;, must populate QA Comment box</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(QA__c, &apos;Reject&apos;),
+ISBLANK(QA_Comments__c)
+)</errorConditionFormula>
+    <errorMessage>If a response has been &apos;Rejected&apos;, the QA Comment field must be populated</errorMessage>
+</ValidationRule>

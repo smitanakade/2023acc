@@ -1,0 +1,78 @@
+:host {
+    --slds-c-card-header-spacing-inline-start: 1.5rem;
+    --slds-c-card-body-spacing-inline-start: 1.5rem;
+    --slds-c-card-sizing-border: 0;
+}
+
+:host .srqi-input {
+    --lwc-colorTextError: rgb(151,10,58);
+    --lwc-colorBorderError: rgb(237,65,123);
+    --lwc-colorTextPlaceholder: rgb(148,148,148);
+    --slds-c-input-color-border: rgb(135,135,135);
+    --slds-c-input-radius-border: 0.15rem;
+}
+
+:host .srqi-input.error-border {
+    --slds-c-input-color-border: var(--lwc-colorBorderError);
+    --slds-c-input-shadow: var(--lwc-colorBorderError) 0px 0px 0px 1px inset;
+}
+
+:host .srqi-input.warning-border {
+    --slds-c-input-color-border: orange;
+    --slds-c-input-shadow: orange 0px 0px 0px 1px inset;
+}
+
+.question-container {
+    max-width: 80%;
+}
+
+.question-label {
+    font-size: 0.9rem;
+}
+
+.question-label-small {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.required-asterisk {
+    color: var(--lwc-colorTextError);
+}
+
+.question-number-container {
+    min-width: 2rem;
+}
+
+.question-number {
+    display: inline-block;
+    padding: 0.05rem 0.4rem;
+    background-color: rgb(232,244,249);
+    border-radius: 0.15rem;
+    font-size: 0.7rem;
+}
+
+hr {
+    border: 2px solid rgb(64,16,117);
+}
+
+.errorMessage {
+    background-color: #E13B5C;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+}
+
+.warning-text {
+    color: orange;
+    font-size: 0.75rem;
+}
+
+.error-text {
+    color: rgb(151,10,58);
+    font-size: 0.75rem;
+}
+
+.success-message {
+    background-color: rgb(130 206 145);
+    margin-bottom: 15px;
+    padding: 10px 15px;
+}

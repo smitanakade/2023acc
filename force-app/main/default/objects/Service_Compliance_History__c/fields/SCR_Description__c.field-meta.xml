@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SCR_Description__c</fullName>
+    <description>Text description of SCR Rating</description>
+    <externalId>false</externalId>
+    <formula>IF(Service_Compliance_Rating__c = 0 &amp;&amp; Rating_Exemption_Granted__c = true, &quot;No rating available&quot;,
+IF(Service_Compliance_Rating__c = 1, &quot;Significant Improvement Needed&quot;,
+IF(Service_Compliance_Rating__c = 2, &quot;Improvement Needed&quot;,
+IF(Service_Compliance_Rating__c = 3, &quot;Acceptable&quot;,
+IF(Service_Compliance_Rating__c = 4, &quot;Good&quot;,
+IF(Service_Compliance_Rating__c = 5, &quot;Excellent&quot;,
+&quot;No rating available&quot;
+))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Service Compliance Rating Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

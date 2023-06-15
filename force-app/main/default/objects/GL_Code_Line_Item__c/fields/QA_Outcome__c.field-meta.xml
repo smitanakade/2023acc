@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QA_Outcome__c</fullName>
+    <description>QA outcome for QA Assessors to select on each provider explanation they review</description>
+    <externalId>false</externalId>
+    <label>QA Outcome</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Approve</fullName>
+                <default>false</default>
+                <label>Approve</label>
+            </value>
+            <value>
+                <fullName>Review</fullName>
+                <default>false</default>
+                <label>Review</label>
+            </value>
+            <value>
+                <fullName>Reject - Low Percentage of Non-Care Wages</fullName>
+                <default>false</default>
+                <label>Reject - Low Percentage of Non-Care Wages</label>
+            </value>
+            <value>
+                <fullName>Reject - Only 3 Months of Data</fullName>
+                <default>false</default>
+                <label>Reject - Only 3 Months of Data</label>
+            </value>
+            <value>
+                <fullName>Reject - Pay Periods</fullName>
+                <default>false</default>
+                <label>Reject - Pay Periods</label>
+            </value>
+            <value>
+                <fullName>Reject - Agency Staff not Included as Wages in QFS</fullName>
+                <default>false</default>
+                <label>Reject - Agency Staff not Included as Wages in QFS</label>
+            </value>
+            <value>
+                <fullName>Reject - Total and Care Wages are Equal</fullName>
+                <default>false</default>
+                <label>Reject - Total and Care Wages are Equal</label>
+            </value>
+            <value>
+                <fullName>Reject - YTD Wages are less than QTR Wages</fullName>
+                <default>false</default>
+                <label>Reject - YTD Wages are less than QTR Wages</label>
+            </value>
+            <value>
+                <fullName>Reject - Alternative EOFY</fullName>
+                <default>false</default>
+                <label>Reject - Alternative EOFY</label>
+            </value>
+            <value>
+                <fullName>Reject - Care Wages are Greater than Total Wages</fullName>
+                <default>false</default>
+                <label>Reject - Care Wages are Greater than Total Wages</label>
+            </value>
+            <value>
+                <fullName>Reject - Higher than Usual RN Hours</fullName>
+                <default>false</default>
+                <label>Reject - Higher than Usual RN Hours</label>
+            </value>
+            <value>
+                <fullName>Reject - Zero PCW Hours</fullName>
+                <default>false</default>
+                <label>Reject - Zero PCW Hours</label>
+            </value>
+            <value>
+                <fullName>Reject - No Reference to Sick or Annual Leave</fullName>
+                <default>false</default>
+                <label>Reject - No Reference to Sick or Annual Leave</label>
+            </value>
+            <value>
+                <fullName>Reject - Other</fullName>
+                <default>false</default>
+                <label>Reject - Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

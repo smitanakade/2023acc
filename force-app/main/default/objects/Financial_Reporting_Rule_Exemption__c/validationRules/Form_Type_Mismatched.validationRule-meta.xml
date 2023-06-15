@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Form_Type_Mismatched</fullName>
+    <active>true</active>
+    <errorConditionFormula>TEXT(Form__r.Type__c) &lt;&gt;  TEXT(Financial_Reporting_Rule__r.Form_Type__c)</errorConditionFormula>
+    <errorDisplayField>Financial_Reporting_Rule__c</errorDisplayField>
+    <errorMessage>Not a valid rule for this form type.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,67 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "4e5f72a5-b0a9-4a60-a240-29dd35e3fb53",
+  "label" : "Your Organisations Rating",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "ce58ecb0-66e6-43b0-b526-d911eea9507f",
+          "columns" : [ {
+            "UUID" : "121547ce-5012-4265-b431-00f26b6ed897",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ce58ecb0-66e6-43b0-b526-d911eea9507f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:srqiFilterStarRating",
+          "id" : "6bda5ab6-9b54-4209-bb14-63a4906c8a81",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "121547ce-5012-4265-b431-00f26b6ed897",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e91cb41e-ee9a-482a-bd7a-b7c485f46b60",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Your Organisations Rating"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "897547e6-6243-4c19-8973-8365b4239a55",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "56bc9b92-9f34-4028-8ea7-b9313ba11e13",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-your-organisations-rating"
+}

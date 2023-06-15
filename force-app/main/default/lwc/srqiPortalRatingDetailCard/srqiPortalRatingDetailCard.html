@@ -1,0 +1,41 @@
+<template>
+    <div class={cssClass}>
+        <lightning-card class="srqi-card slds-card_boundary">
+            <div slot="title">
+                <h2 class="srqi-card-title">{cardTitle}</h2>
+            </div>
+            <div class="srqi-card-section-padding slds-p-bottom_small">
+                <slot name="subTitle">
+                    <p class="srqi-card-sub-title">{cardSubTitle}</p>
+                </slot>
+            </div>
+            <hr class="slds-m-vertical_medium srqi-hr">
+            <div class="srqi-card-section-padding">
+                <slot name="section1">Section 1</slot>
+            </div>
+            <hr class="slds-m-vertical_medium srqi-hr">
+            <div class="srqi-card-section-padding">
+                <slot name="section2">Section 2</slot>
+            </div>
+            <template lwc:if={showLastSection}>
+                <hr class="slds-m-vertical_medium srqi-hr">
+                <div class="srqi-card-section-padding">
+                    <template lwc:if={showRatingDetails}>
+                        <div class="srqi-text-link slds-var-p-bottom_large" onclick={toggleShowRatingDetails}>
+                            Show less details
+                            <lightning-icon icon-name="utility:chevronup" size="x-small"
+                                            class="slds-p-left_small srqi-link-icon"></lightning-icon>
+                        </div>
+                        <slot name="lastSection"></slot>
+                    </template>
+                    <template lwc:else>
+                        <div class="srqi-text-link" onclick={toggleShowRatingDetails}>Show more details
+                            <lightning-icon icon-name="utility:chevrondown" size="x-small"
+                                            class="slds-p-left_small srqi-link-icon"></lightning-icon>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </lightning-card>
+    </div>
+</template>

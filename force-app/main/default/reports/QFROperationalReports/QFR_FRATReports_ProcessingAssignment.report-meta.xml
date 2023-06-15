@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Count (by Assigned to)</description>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>Case$Owner</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Count (by Assigned to)</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <field>Case$Follow_Up_Status__c</field>
+    </columns>
+    <columns>
+        <field>Case$QFR_Care_Type__c</field>
+    </columns>
+    <columns>
+        <field>Case$NAPSID__c</field>
+    </columns>
+    <columns>
+        <field>Case$Provider_Name__c</field>
+    </columns>
+    <columns>
+        <field>Case.Forms__r.Service_Line_Items__r$Service__c.Integration_ID__c</field>
+    </columns>
+    <columns>
+        <field>Case.Forms__r.Service_Line_Items__r$Service_Label__c</field>
+    </columns>
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case.Forms__r$Declaration_Incomplete_Reason__c</field>
+    </columns>
+    <columns>
+        <field>Case$Account.Organisation_Type__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case$Submission_Count__c</field>
+    </columns>
+    <description>Report for &apos;Processing Assignment&apos; with the Report Type &apos;Cases with Forms and Service Line Item&apos;</description>
+    <filter>
+        <criteriaItems>
+            <column>Case$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.QFR</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Processing Assignment</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Case_with_Forms_and_Service_Line_Items__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Case$QFR_Submission_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

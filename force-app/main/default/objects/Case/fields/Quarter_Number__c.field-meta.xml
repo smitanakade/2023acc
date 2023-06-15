@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quarter_Number__c</fullName>
+    <description>Returns a number between 1 to 4 indicating the quarter number for the current month.</description>
+    <externalId>false</externalId>
+    <formula>IF( MONTH(Reporting_Period__r.Start_Date__c) &gt;= 1 &amp;&amp; MONTH(Reporting_Period__r.End_Date__c) &lt;= 3, 3,
+IF( MONTH(Reporting_Period__r.Start_Date__c) &gt;= 4 &amp;&amp; MONTH(Reporting_Period__r.End_Date__c) &lt;= 6, 4,
+IF( MONTH(Reporting_Period__r.Start_Date__c) &gt;= 7 &amp;&amp; MONTH(Reporting_Period__r.End_Date__c) &lt;= 9, 1,
+IF( MONTH(Reporting_Period__r.Start_Date__c) &gt;= 10 &amp;&amp; MONTH(Reporting_Period__r.End_Date__c) &lt;= 12, 2, null)
+) ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Returns a number between 1 to 4 indicating the quarter number for the current month.</inlineHelpText>
+    <label>Quarter Number</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

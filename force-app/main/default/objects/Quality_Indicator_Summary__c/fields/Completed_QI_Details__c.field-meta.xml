@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_QI_Details__c</fullName>
+    <externalId>false</externalId>
+    <label>Completed QI Domains</label>
+    <summaryFilterItems>
+        <field>Quality_Indicator_Details__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Completed</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Quality_Indicator_Details__c.QI_Summary_Id__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

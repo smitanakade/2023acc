@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Previous_Reporting_Period__c</fullName>
+    <description>Displays true if dates match previous reporting period</description>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL (Reporting_Period_Type__c, &quot;Quarter&quot;), 
+IF( ADDMONTHS( TODAY( ), -3 ) &gt;= Start_Date__c &amp;&amp; ADDMONTHS( TODAY( ), -3 ) &lt;= End_Date__c, True, False ),
+IF( ADDMONTHS( TODAY( ), -12 ) &gt;= Start_Date__c &amp;&amp; ADDMONTHS( TODAY( ), -12 ) &lt;= End_Date__c, True, False )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Previous Reporting Period</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

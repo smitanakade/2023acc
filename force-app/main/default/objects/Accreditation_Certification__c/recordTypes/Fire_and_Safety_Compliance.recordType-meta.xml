@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fire_and_Safety_Compliance</fullName>
+    <active>true</active>
+    <description>Fire and Safety Compliance</description>
+    <label>Fire and Safety Compliance</label>
+    <picklistValues>
+        <picklist>Accreditation_Status__c</picklist>
+        <values>
+            <fullName>Accredited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Accredited</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Decision_Type__c</picklist>
+        <values>
+            <fullName>Continue without adding Accreditation details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extend Accreditation Period</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Record Commencing Service Accreditation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Record a Decision not to Accredit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Record a Decision to Accredit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Record a Decision to Accredit due to Determination of Exceptional Circumstances by the Secretary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Record a Decision to Revoke</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Record a Decision to Vary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Compliant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-compliant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,28 @@
+<template>
+    <div class="container">
+        <lightning-layout horizontal-align="spread" vertical-align="center" class="height-100">
+            <lightning-layout-item padding="around-small">
+                <lightning-button
+                    variant="brand-outline"
+                    class="back-button"
+                    label="Back"
+                    icon-name="utility:chevronleft"
+                    onclick={handleBack}
+                ></lightning-button>
+                <p class="title slds-text-heading_large slds-m-top_small">{title}</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <template if:false={hideViewHistoryButton}>
+                    <button class="slds-button slds-button_outline-brand view-history-button action-button slds-m-right_small" title="View History" onclick={handleViewHistory}>                       
+                        <img src={view_history}/>
+                        <span>View Upload History</span>
+                    </button>
+                </template>  
+                <button class="slds-button slds-button_brand upload-button action-button" title="Upload for multiple services" onclick={handleUpload}>
+                    <img src={upload_file}/>
+                    <span>Upload File</span>
+                </button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

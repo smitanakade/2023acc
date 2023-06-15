@@ -1,0 +1,252 @@
+<template>
+    <div>
+        <c-qi-file-upload-banner
+            from-parent
+            title-name="QI Program file upload"
+        ></c-qi-file-upload-banner>
+    </div>
+
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-1">
+            <div class="header margin-top-40">{headerTitle}</div>
+            <div class="slds-border_top margin-top-32"></div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12">
+                <div
+                    class="slds-notify slds-notify_alert slds-alert_warning margin-top-40 alert-div"
+                    style={recordData.alertInlineStyle}
+                >
+                    <div class="flex-row">
+                        <div class="slds-icon slds-icon_large">
+                            <img src={recordData.alertIcon} />
+                        </div>
+                        <template lwc:if={isSuccess}>
+                            <div class="flex-column margin-left-20">
+                                <div class="paragraph-heading-success flex-row">
+                                    {recordData.alertHeader}
+                                </div>
+                                <div
+                                    class="paragraph-text-success flex-row margin-top-5"
+                                >
+                                    {recordData.alertMessage}
+                                </div>
+                            </div>
+                        </template>
+                        <template lwc:if={isNotSuccess}>
+                            <div class="flex-column margin-left-20">
+                                <div class="paragraph-heading flex-row">
+                                    {recordData.alertHeader}
+                                </div>
+                                <div
+                                    class="paragraph-text flex-row margin-top-5"
+                                >
+                                    {recordData.alertMessage}
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <div class="slds-card margin-top-50 margin-left-20">
+                    <div class="slds-card__body slds-card__body_inner">
+                        <div class="flex-column margin-top-20">
+                            <div class="box-header">
+                                {recordData.reportingPeriod}
+                                {recordData.quarterType}
+                            </div>
+                            <div class="flex-row margin-top-32">
+                                <div
+                                    class="slds-col slds-size_1-of-3 slds-large-size_4-of-12 box-subHeaders"
+                                >
+                                    ID
+                                </div>
+                                <div
+                                    class="slds-col slds-size_2-of-3 slds-large-size_8-of-12 box-text"
+                                >
+                                    {recordData.name}
+                                </div>
+                            </div>
+                            <div class="flex-row margin-top-20">
+                                <div
+                                    class="slds-col slds-size_1-of-3 slds-large-size_4-of-12 box-subHeaders"
+                                >
+                                    Uploaded by
+                                </div>
+                                <div
+                                    class="slds-col slds-size_2-of-3 slds-large-size_8-of-12 box-text"
+                                >
+                                    {recordData.submittedBy}
+                                </div>
+                            </div>
+                            <div class="flex-row margin-top-20">
+                                <div
+                                    class="slds-col slds-size_1-of-3 slds-large-size_4-of-12 box-subHeaders"
+                                >
+                                    File name
+                                </div>
+                                <div
+                                    class="slds-col slds-size_2-of-3 slds-large-size_8-of-12 box-text"
+                                >
+                                    {recordData.fileName}
+                                </div>
+                            </div>
+                            <div class="flex-row margin-top-20">
+                                <div
+                                    class="slds-col slds-size_1-of-3 slds-large-size_4-of-12 box-subHeaders"
+                                >
+                                    Total number of rows
+                                </div>
+                                <div
+                                    class="slds-col slds-size_2-of-3 slds-large-size_8-of-12 box-text"
+                                >
+                                    {recordData.totalRows}
+                                </div>
+                            </div>
+                            <div class="flex-row margin-top-20">
+                                <div
+                                    class="slds-col slds-size_1-of-3 slds-large-size_4-of-12 box-subHeaders"
+                                >
+                                    Number submitted
+                                </div>
+                                <div
+                                    class="slds-col slds-size_2-of-3 slds-large-size_8-of-12 box-text"
+                                >
+                                    {recordData.numberSubmitted}
+                                </div>
+                            </div>
+                            <div class="flex-row margin-top-20">
+                                <div
+                                    class="slds-col slds-size_1-of-3 slds-large-size_4-of-12 box-subHeaders"
+                                >
+                                    Number Failed
+                                </div>
+                                <div
+                                    class="slds-col slds-size_2-of-3 slds-large-size_8-of-12 box-text"
+                                >
+                                    {recordData.failedRecords}
+                                </div>
+                            </div>
+                            <div class="flex-row margin-top-20">
+                                <div
+                                    class="slds-col slds-size_1-of-3 slds-large-size_4-of-12 box-subHeaders"
+                                >
+                                    Date submitted
+                                </div>
+                                <div
+                                    class="slds-col slds-size_2-of-3 slds-large-size_8-of-12 box-text"
+                                >
+                                    {recordData.dateSubmitted}
+                                    <template
+                                        lwc:if={recordData.showOriginalFileLink}
+                                    >
+                                        <button
+                                            class="button-link"
+                                            data-fileid={recordData.fileId}
+                                            data-recordid={recordData.id}
+                                            data-type="Original"
+                                            onclick={getFilePreviewLink}
+                                        >
+                                            Original File
+                                        </button>
+                                    </template>
+                                </div>
+                            </div>
+                            <div class="flex-row margin-top-20">
+                                <div
+                                    class="slds-col slds-size_1-of-3 slds-large-size_4-of-12 box-subHeaders"
+                                >
+                                    Status
+                                </div>
+                                <div
+                                    class="slds-col slds-size_2-of-3 slds-large-size_8-of-12 box-text"
+                                >
+                                    <span
+                                        class="slds-badge slds-theme_warning pillColor"
+                                        style={recordData.pillInlineStyle}
+                                        >{recordData.displayStatus}</span
+                                    >
+                                    <template
+                                        lwc:if={recordData.showErrorFileLink}
+                                    >
+                                        <button
+                                            class="button-link"
+                                            data-fileid={recordData.errorFileId}
+                                            data-recordid={recordData.id}
+                                            data-type="Error"
+                                            onclick={getFilePreviewLink}
+                                        >
+                                            Download error file
+                                        </button>
+                                    </template>
+                                </div>
+                            </div>
+                            <div
+                                class="slds-col slds-size_1-of-1 box-text slds-scoped-notification slds-media slds-media_center slds-theme_info info-div"
+                                style={recordData.infoInlineStyle}
+                            >
+                                <div class="flex-row">
+                                    <div>
+                                        <span
+                                            class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_xx-small"
+                                        >
+                                            <img src={recordData.infoIcon} />
+                                        </span>
+                                    </div>
+                                    <template lwc:if={isSuccess}>
+                                        <div
+                                            class="box-text-info margin-left-5"
+                                        >
+                                            <span
+                                                >{recordData.infoMessage}</span
+                                            >
+                                        </div>
+                                    </template>
+                                    <template lwc:if={isNotSuccess}>
+                                        <div class="box-text margin-left-5">
+                                            <span
+                                                >{recordData.infoMessage}</span
+                                            >
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-border_bottom margin-top-20 border-color"></div>
+            <div class="align-right margin-top-40">
+                <template lwc:if={recordData.showPendingButton}>
+                    <button
+                        class="slds-button slds-button_neutral button-color"
+                        value={recordData.id}
+                    >
+                        <img src={lock_icon} class="image-height-15px" />
+                        Re-upload
+                    </button>
+                </template>
+
+                <template lwc:if={recordData.showReuploadButton}>
+                    <button
+                        class="slds-button slds-button_neutral button-color"
+                        value={recordData.id}
+                        onclick={clickHandler}
+                    >
+                        Re-upload
+                    </button>
+                </template>
+                <template lwc:if={recordData.showSuccessButton}>
+                    <button
+                        class="slds-button slds-button_neutral button-color"
+                        value={recordData.id}
+                        onclick={redirectToMainPage}
+                    >
+                        Back to main page
+                    </button>
+                </template>
+            </div>
+        </div>
+    </div>
+    <template lwc:if={isLoaded} class="slds-is-relative">
+        <lightning-spinner alternative-text="Loading..." variant="brand">
+        </lightning-spinner>
+    </template>
+</template>

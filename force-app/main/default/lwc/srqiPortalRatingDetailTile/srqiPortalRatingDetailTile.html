@@ -1,0 +1,70 @@
+<template>
+    <div class="slds-var-p-vertical_medium">
+        <slot name="topMessage"></slot>
+        <template lwc:if={hideAllTiles}></template>
+        <template lwc:else>
+            <lightning-layout multiple-rows>
+                <lightning-layout-item lwc:if={showFirstTile} size="12" large-device-size="6" medium-device-size="6"
+                                       small-device-size="12" class="first-tile tile-with-right-border">
+                    <div class="slds-grid">
+                        <div><img class="slds-p-right_medium slds-p-top_xx-small" src={iconCurrentRating} alt=""/></div>
+                        <div><h4 class="slds-var-m-bottom_large">{firstTileTitle}</h4></div>
+                    </div>
+                    <slot name="leftMessage"></slot>
+                    <template lwc:if={showFirstTileBody}>
+                        <div class="slds-box srqi-rating-box slds-var-m-bottom_x-large">
+                            <img src={firstTileRatingImage} alt=""/>
+                            <h5 class="slds-m-top_large slds-var-m-left_xxx-small">{firstTileRatingLabel}</h5>
+                        </div>
+                    </template>
+                        <lightning-layout>
+                            <lightning-layout-item size="6" class="first-date">
+                                <h6>RATING CALCULATED</h6>
+                                <h5>
+                                    <lightning-formatted-date-time
+                                        value={firstTileDateLeft}></lightning-formatted-date-time>
+                                </h5>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" class="slds-m-left_large">
+                                <h6>PUBLICLY AVAILABLE</h6>
+                                <h5>
+                                    <lightning-formatted-date-time
+                                        value={firstTileDateRight}></lightning-formatted-date-time>
+                                </h5>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                </lightning-layout-item>
+                <lightning-layout-item lwc:if={showSecondTile} size="12" large-device-size="6" medium-device-size="6"
+                                       small-device-size="12" class={secondTileCssClass}>
+                    <div class="slds-grid">
+                        <div><img class="slds-p-right_medium slds-p-top_xx-small" src={iconNewRating} alt=""/></div>
+                        <div><h4 class="slds-var-m-bottom_large">{secondTileTitle}</h4></div>
+                    </div>
+                    <slot name="rightMessage"></slot>
+                    <template lwc:if={showSecondTileBody}>
+                        <div class="slds-box srqi-rating-box slds-var-m-bottom_large">
+                            <img src={secondTileRatingImage} alt=""/>
+                            <h5 class="slds-m-top_large slds-var-m-left_xxx-small">{secondTileRatingLabel}</h5>
+                        </div>
+                    </template>
+                        <lightning-layout>
+                            <lightning-layout-item size="6" class="first-date">
+                                <h6>RATING CALCULATED</h6>
+                                <h5>
+                                    <lightning-formatted-date-time
+                                        value={secondTileDateLeft}></lightning-formatted-date-time>
+                                </h5>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" class="slds-m-left_large">
+                                <h6>PUBLICLY AVAILABLE</h6>
+                                <h5>
+                                    <lightning-formatted-date-time
+                                        value={secondTileDateRight}></lightning-formatted-date-time>
+                                </h5>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                </lightning-layout-item>
+            </lightning-layout>
+        </template>
+    </div>
+</template>

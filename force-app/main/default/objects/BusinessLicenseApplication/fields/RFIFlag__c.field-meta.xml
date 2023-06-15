@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFIFlag__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(
+ISPICKVAL( NewStatus__c , &apos;Under Quality Review&apos;),
+ISPICKVAL( NewStatus__c , &apos;For Quality Review&apos;),
+ISPICKVAL( NewStatus__c ,&apos;Formal Assessment RFI - Fee payment pending&apos; ),
+ISPICKVAL( NewStatus__c , &apos;Formal Assessment RFI Response Pending&apos;),
+ISPICKVAL( NewStatus__c , &apos;RFI Extension Request&apos;),
+ISPICKVAL( NewStatus__c , &apos;Under Formal Assessment&apos;),
+ISPICKVAL( NewStatus__c , &apos;Under Initial Assessment&apos;),
+ISPICKVAL( NewStatus__c ,&apos;RFI Approval&apos;),
+ISPICKVAL( NewStatus__c ,&apos;Under Formal Assessment&apos;),
+TEXT(NewStatus__c)= &quot;Delegate&apos;s Decision&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>RFI Flag</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

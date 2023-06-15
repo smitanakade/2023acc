@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AC_Check_StartDate</fullName>
+    <active>true</active>
+    <description>Start date and decision date are mandatory for accreditation and certificate records</description>
+    <errorConditionFormula>AND(NOT($Setup.BypassTriggers__c.BypassValidationRules__c), ISBLANK( Start_Date__c ), OR(RecordType.DeveloperName = &quot;Certification&quot;, AND(RecordType.DeveloperName = &quot;Accreditation&quot;,NOT(ISPICKVAL(Decision_Type__c,&apos;Record a Decision not to Accredit&apos;)))) )</errorConditionFormula>
+    <errorDisplayField>Start_Date__c</errorDisplayField>
+    <errorMessage>Start Date is mandatory</errorMessage>
+</ValidationRule>

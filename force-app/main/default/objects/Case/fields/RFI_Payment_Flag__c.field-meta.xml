@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFI_Payment_Flag__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(RecordType.DeveloperName == &quot;Request_for_Information&quot; &amp;&amp; ISPICKVAL(Status, &quot;Fee Payment Pending&quot;) &amp;&amp; Today() &lt; RFI_Due_Date__c, &apos;RFI Payment due in&apos; +&apos; &apos;+ Text(RFI_Due_Date__c-Today()) +&apos; &apos;+ &apos;days&apos;,
+IF(RecordType.DeveloperName == &quot;Request_for_Information&quot; &amp;&amp; ISPICKVAL(Status, &quot;Fee Payment Pending&quot;) &amp;&amp; RFI_Due_Date__c &lt; Today(),&apos;RFI Payment overdue by&apos; +&apos; &apos;+ Text(Today()-RFI_Due_Date__c) +&apos; &apos;+ &apos;days&apos;,null))</formula>
+    <label>RFI Payment Flag</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

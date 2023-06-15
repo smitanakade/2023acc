@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR03APPStatusUnderAssessment</fullName>
+    <active>true</active>
+    <description>Owner must be changed to a user before status is changed to &apos;Under Assessment&apos;</description>
+    <errorConditionFormula>AND(ISBLANK(Owner:User.Id),TEXT(NewStatus__c)=&quot;Under Formal Assessment&quot;)</errorConditionFormula>
+    <errorMessage>Owner must be changed to a user before status is changed to &apos;Under Formal Assessment&apos;.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Service Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Care_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Operational</fullName>
+                <default>false</default>
+                <label>Operational</label>
+            </value>
+            <value>
+                <fullName>Pre-operational</fullName>
+                <default>false</default>
+                <label>Pre-operational</label>
+            </value>
+            <value>
+                <fullName>Offline</fullName>
+                <default>false</default>
+                <label>Offline</label>
+            </value>
+            <value>
+                <fullName>Offline-Temporary Closure of Facility</fullName>
+                <default>false</default>
+                <label>Offline - Temporary closure of facility</label>
+            </value>
+            <value>
+                <fullName>Offline-Permanent Closure of Facility</fullName>
+                <default>false</default>
+                <label>Offline - Permanent closure of facility</label>
+            </value>
+            <value>
+                <fullName>Service Record Closed</fullName>
+                <default>false</default>
+                <label>Service Record Closed</label>
+            </value>
+            <value>
+                <fullName>Closed-Combined</fullName>
+                <default>false</default>
+                <label>Closed - Combined</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Non-Operational</fullName>
+                <default>false</default>
+                <label>Non-Operational</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Opened</fullName>
+                <default>false</default>
+                <label>Opened</label>
+            </value>
+            <value>
+                <fullName>Pre-Operational End</fullName>
+                <default>false</default>
+                <label>Pre-Operational End</label>
+            </value>
+            <value>
+                <fullName>Pre-Operational Start</fullName>
+                <default>false</default>
+                <label>Pre-Operational Start</label>
+            </value>
+            <value>
+                <fullName>Offline - Permanent Closure of Facility</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Offline - Permanent Closure of Facility</label>
+            </value>
+            <value>
+                <fullName>Offline - Temporary Closure of Facility</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Offline - Temporary Closure of Facility</label>
+            </value>
+            <value>
+                <fullName>Suspended</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Suspended</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Home Care</controllingFieldValue>
+            <controllingFieldValue>Flexible</controllingFieldValue>
+            <controllingFieldValue>Residential</controllingFieldValue>
+            <controllingFieldValue>Commonwealth Home Support Programme</controllingFieldValue>
+            <controllingFieldValue>National Aboriginal and Torres Strait Islander Flexible Aged Care Program</controllingFieldValue>
+            <valueName>Operational</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Home Care</controllingFieldValue>
+            <controllingFieldValue>Flexible</controllingFieldValue>
+            <controllingFieldValue>Residential</controllingFieldValue>
+            <controllingFieldValue>Commonwealth Home Support Programme</controllingFieldValue>
+            <controllingFieldValue>National Aboriginal and Torres Strait Islander Flexible Aged Care Program</controllingFieldValue>
+            <valueName>Inactive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Home Care</controllingFieldValue>
+            <controllingFieldValue>Flexible</controllingFieldValue>
+            <controllingFieldValue>Residential</controllingFieldValue>
+            <controllingFieldValue>National Aboriginal and Torres Strait Islander Flexible Aged Care Program</controllingFieldValue>
+            <valueName>Non-Operational</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Home Care</controllingFieldValue>
+            <valueName>Closed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flexible</controllingFieldValue>
+            <controllingFieldValue>Residential</controllingFieldValue>
+            <controllingFieldValue>Commonwealth Home Support Programme</controllingFieldValue>
+            <valueName>Pre-operational</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flexible</controllingFieldValue>
+            <controllingFieldValue>Residential</controllingFieldValue>
+            <controllingFieldValue>Commonwealth Home Support Programme</controllingFieldValue>
+            <valueName>Offline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flexible</controllingFieldValue>
+            <controllingFieldValue>Residential</controllingFieldValue>
+            <controllingFieldValue>Commonwealth Home Support Programme</controllingFieldValue>
+            <valueName>Offline-Temporary Closure of Facility</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flexible</controllingFieldValue>
+            <controllingFieldValue>Residential</controllingFieldValue>
+            <controllingFieldValue>Commonwealth Home Support Programme</controllingFieldValue>
+            <valueName>Offline-Permanent Closure of Facility</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flexible</controllingFieldValue>
+            <controllingFieldValue>Residential</controllingFieldValue>
+            <controllingFieldValue>Commonwealth Home Support Programme</controllingFieldValue>
+            <valueName>Service Record Closed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flexible</controllingFieldValue>
+            <controllingFieldValue>Residential</controllingFieldValue>
+            <controllingFieldValue>Commonwealth Home Support Programme</controllingFieldValue>
+            <valueName>Closed-Combined</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flexible</controllingFieldValue>
+            <controllingFieldValue>Residential</controllingFieldValue>
+            <valueName>Pre-Operational Start</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Residential</controllingFieldValue>
+            <valueName>Pre-Operational End</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

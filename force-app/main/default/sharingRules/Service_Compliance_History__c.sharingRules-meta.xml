@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>SCH_with_Contact_Centre_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>SCH with Contact Centre Users</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>CreatedById</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SCH_with_GPMS_ACQSC_Read_Only_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>SCH with GPMS ACQSC Read Only Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>CreatedById</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SCH_with_GPMS_ACQSC_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>SCH with GPMS ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>CreatedById</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>SCH_with_STAR_Rating_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>SCH with STAR Rating Users</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>CreatedById</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>STAR_Service_Compliance_History</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>STAR Service Compliance History</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Service_Compliance_GPMS_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Service Compliance GPMS ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Service_Compliance_GPMS_ACQSC_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Service Compliance GPMS ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Service_Compliance_History_GPMS_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Service Compliance History GPMS ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Service_Compliance_History_GPMS_ACQSC_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Service Compliance History GPMS ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Service_Compliance_History_with_Contact_Centre_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Service Compliance History with Contact Centre User</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Service_Compliance_History_with_Star_Rating_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Service Compliance History with Star Rating User</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Service_Compliance_Star_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Service Compliance Star Users</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

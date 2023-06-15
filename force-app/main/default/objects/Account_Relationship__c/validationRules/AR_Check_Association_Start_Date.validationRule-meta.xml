@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AR_Check_Association_Start_Date</fullName>
+    <active>true</active>
+    <description>Can be future dated to no more than 3 months in advance. From 1997</description>
+    <errorConditionFormula>AND(NOT($Setup.BypassTriggers__c.BypassValidationRules__c),Not(ISBLANK(Association_Start_Date__c)),OR(Year(Association_Start_Date__c)&lt;1997,Association_Start_Date__c&gt; ADDMONTHS(TODAY(), 3)))</errorConditionFormula>
+    <errorDisplayField>Association_Start_Date__c</errorDisplayField>
+    <errorMessage>Can be future dated to no more than 3 months in advance.
+From 1997</errorMessage>
+</ValidationRule>

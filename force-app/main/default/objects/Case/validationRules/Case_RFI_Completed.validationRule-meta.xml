@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_RFI_Completed</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISNEW()),RecordType.DeveloperName=&quot;Request_for_Information&quot;,ISPICKVAL(PRIORVALUE(Status),&quot;RFI Completed&quot;))</errorConditionFormula>
+    <errorMessage>RFI case cannot be edited once RFI completed</errorMessage>
+</ValidationRule>

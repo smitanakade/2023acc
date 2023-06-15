@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk_Adjusted_FMI_Display__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Risk_Adjusted_Falls_with_Major_injury__c), 
+    NULL,
+    IF(Risk_Adjusted_Falls_with_Major_injury__c &gt; 1, 
+        1, 
+        IF(Risk_Adjusted_Falls_with_Major_injury__c &lt; 0, 0, Risk_Adjusted_Falls_with_Major_injury__c) 
+    )
+)</formula>
+    <label>Risk Adjusted FMI Display</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

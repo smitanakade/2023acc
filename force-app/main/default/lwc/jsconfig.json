@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "checkJs": true,
+        "target": "ESNext",
+        "lib": "ESNext",
+        "baseUrl": "./",
+        "paths": {
+            "c/*": [
+                "*/"
+            ]
+        },
+        "moduleResolution": "node"
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts",
+        "../../../../types/**/*.d.ts"
+    ],
+    "exclude": [
+        "cf**/*",
+        "node_modules"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    },
+    "paths": {
+        "c/*": [
+            "*"
+        ]
+    }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GPMS_Check_No__c</fullName>
+    <description>Checking No status from places</description>
+    <externalId>false</externalId>
+    <label>GPMS Check No</label>
+    <summaryFilterItems>
+        <field>Places_Allotment__c.Current__c</field>
+        <operation>notEqual</operation>
+        <value>No</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Places_Allotment__c.Allotment__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

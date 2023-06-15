@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AC_Decision_Not_To_Accredit</fullName>
+    <active>true</active>
+    <description>Start date must be the end date of the previous accreditation period.</description>
+    <errorConditionFormula>AND(
+NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+ISPICKVAL(Decision_Type__c,&apos;Record a Decision not to Accredit&apos;),
+OR(ISCHANGED(Start_Date__c),Proceed_of_latest_Accreditation__c))</errorConditionFormula>
+    <errorDisplayField>Start_Date__c</errorDisplayField>
+    <errorMessage>Start date must be the end date of the previous accreditation period.</errorMessage>
+</ValidationRule>

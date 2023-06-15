@@ -1,0 +1,57 @@
+<template>
+    <section class="gpmsCardHomeRow">
+        <div class="gpmsHomeCard" if:true={tileAboutOrg}>
+            <c-gpms-portal-landing-page-tile
+                icon-filename="gpmsIconAbout.svg"
+                link-url="about-your-organisation"
+                tile-content={aboutYourOrganisation}
+            ></c-gpms-portal-landing-page-tile>
+        </div>
+        <div class="gpmsHomeCard" if:true={tileWhatYouProvide}>
+            <c-gpms-portal-landing-page-tile
+                icon-filename="gpmsIconCareTypes.svg"
+                link-url="what-you-provide"
+                tile-content={careTypes}
+            ></c-gpms-portal-landing-page-tile>
+        </div>
+        <div class="gpmsHomeCard" if:true={tileFinancialReporting}>
+            <c-gpms-portal-landing-page-tile
+                icon-filename="gpmsIconFinancialReporting.svg"
+                link-url="financial-reporting"
+                tile-content={financialReporting}
+            ></c-gpms-portal-landing-page-tile>
+        </div>
+        <div class="gpmsHomeCard" if:true={tileQI}>
+            <c-gpms-portal-landing-page-tile
+                icon-filename="gpmsIconQI.svg"
+                link-url="quality-indicators"
+                tile-content={qualityIndicator}
+            ></c-gpms-portal-landing-page-tile>
+        </div>
+        <div class="gpmsHomeCard" if:true={tileBenchmarker}>
+            <c-gpms-portal-landing-page-tile
+                icon-filename="gpmsIconQI.svg"
+                link-url="qi-file-upload-history"
+                tile-content={qualityIndicator}
+            ></c-gpms-portal-landing-page-tile>
+        </div>
+        <div class="gpmsHomeCard" if:true={tileStarRatings}>
+            <c-gpms-portal-landing-page-tile
+                icon-filename="gpms-icon-star-on.svg"
+                link-url="your-organisations-rating"
+                tile-content={organisationRating}
+            ></c-gpms-portal-landing-page-tile>
+        </div>
+        <div class="gpmsHomeCard" if:true={tileLookingForSomething}>
+            <c-gpms-portal-landing-page-tile
+                has-columns="true"
+                icon-alternative-color="true"
+                icon-filename="gpmsIconMore.svg"
+                link-external="true"
+                link-new-window="true"
+                link-url="https://www.health.gov.au/resources/apps-and-tools/my-aged-care-service-provider-portal"
+                tile-content={somethingElse}
+            ></c-gpms-portal-landing-page-tile>
+        </div>
+    </section>
+</template>

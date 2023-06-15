@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>SDO_Contract_Service__c.Service_Contract_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>SDO_Contract_Service__c.Service_Contract_End_Date__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>SDO_Contract_Service__c.Report_Filter_ID__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>SDO_Contract_Service__c.SDO_Contract_to_Service</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>SDO Contracts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$SDO_Contract_Service__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>SDO_Contract_Service__c.Association_End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

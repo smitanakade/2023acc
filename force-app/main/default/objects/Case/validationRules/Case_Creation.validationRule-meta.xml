@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Creation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISNEW(),TEXT(Application__r.Application_Status__c)!=&quot;Closed&quot;, !ISNULL(Application__c),RecordType.DeveloperName=&quot;Request_for_Reconsideration&quot;)</errorConditionFormula>
+    <errorMessage>Application must be Closed before a Reconsideration is Requested.</errorMessage>
+</ValidationRule>

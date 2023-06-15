@@ -1,0 +1,113 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "bdbcfcbe-1d5c-4652-95ba-0a46e021b8df",
+  "label" : "GPMS Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "fc99d9ae-e8a6-442a-b233-11c2998f3869",
+          "columns" : [ {
+            "UUID" : "8636f095-7b30-42fa-a888-bfd7cd0eeb29",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "fc99d9ae-e8a6-442a-b233-11c2998f3869",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "greeting" : "Hi"
+          },
+          "componentName" : "c:gpmsPortalLandingPageBanner",
+          "id" : "8daac5c3-ad53-41ea-aa2e-54310ab6ad7f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8636f095-7b30-42fa-a888-bfd7cd0eeb29",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "24e89ac4-178f-4dc8-a25d-375bf370e593",
+          "columns" : [ {
+            "UUID" : "70358132-c10c-4cd1-adfb-6bae2c1416ae",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "24e89ac4-178f-4dc8-a25d-375bf370e593",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "toggleTileAboutOrg" : true,
+            "toggleTileFinancialReporting" : true,
+            "toggleTileQI" : true,
+            "toggleTileStarRatings" : true,
+            "toggleTileWhatYouProvide" : true
+          },
+          "componentName" : "c:gpmsPortalLandingPageContainer",
+          "id" : "ecbe887e-f7c0-4f3f-9d95-eddfe68352b2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "70358132-c10c-4cd1-adfb-6bae2c1416ae",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "12367fa8-c206-41b1-bee3-885dc608dadc",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "07465474-b1ab-481b-a291-481922376352",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "be1e445f-79d8-4ea4-8607-8b02b6eaab50",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}

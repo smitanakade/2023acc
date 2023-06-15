@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Effective_Date_Req_All</fullName>
+    <active>true</active>
+    <description>Status Effective Date is Mandatory.</description>
+    <errorConditionFormula>AND(ISBLANK(Status_Date__c),(ISPICKVAL(Care_Type__c,&apos;Home Care&apos;)))</errorConditionFormula>
+    <errorDisplayField>Status_Date__c</errorDisplayField>
+    <errorMessage>Status Effective Date Should not be blank</errorMessage>
+</ValidationRule>

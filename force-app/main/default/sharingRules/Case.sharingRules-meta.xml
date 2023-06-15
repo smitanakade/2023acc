@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Case_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Case_ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Star Rating Error,Request_for_Reconsideration,Dispute Management,Request_for_Information</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_ACQSC_Read_Write</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Case_ACQSC Read Write</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Request_for_Information,Request_for_Reconsideration</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_GPMS_ACQSC_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Case GPMS ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Dispute Management,Star Rating Error</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_GPMS_Sys_Adm</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Case_GPMS Sys Adm</label>
+        <sharedTo>
+            <group>GPMS_System_Administrator</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Request_for_Information,Request_for_Reconsideration</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Case_GPMS_Tier_2_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Case GPMS Tier 2 Admin</label>
+        <sharedTo>
+            <group>GPMS_Internal_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Star Rating Error,Request_for_Reconsideration,QFR,Dispute Management,Request_for_Information</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Cases_with_Star_Rating_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Cases with Star Rating User</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Dispute Management,Star Rating Error</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>QFR_Internal_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>QFR Internal Read Only</label>
+        <sharedTo>
+            <group>QFR_Internal_Read_Only</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>QFR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>QFR_Sharing_Internal_Role</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>QFR Sharing Internal Role</label>
+        <sharedTo>
+            <group>QFR_Internal_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>QFR</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

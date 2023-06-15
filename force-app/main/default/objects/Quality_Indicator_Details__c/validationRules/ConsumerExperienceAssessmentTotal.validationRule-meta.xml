@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ConsumerExperienceAssessmentTotal</fullName>
+    <active>true</active>
+    <description>Number of care recipients offered a consumer experience assessment should be equal to number of care recipients who reported through self-completion, interviewer-facilitated completion or proxy-facilitated completion.</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    (
+        BLANKVALUE(No_CR_Self_CE_completion_Excellent__c, 0) +
+		BLANKVALUE(No_CR_Self_CE_completion_Good__c, 0) +
+        BLANKVALUE(No_CR_Self_CE_completion_Moderate__c, 0) +
+        BLANKVALUE(No_CR_Self_CE_completion_Poor__c, 0) +
+        BLANKVALUE(No_CR_Self_CE_completion_VeryPoor__c, 0)
+    ) + 
+    (
+        BLANKVALUE(No_CR_interviewer_admin_CE_Excellent__c, 0) +
+        BLANKVALUE(No_CR_interviewer_admin_CE_Good__c, 0) +
+        BLANKVALUE(No_CR_interviewer_admin_CE_Moderate__c, 0) +
+        BLANKVALUE(No_CR_interviewer_admin_CE_Poor__c, 0) + 
+        BLANKVALUE(No_CR_interviewer_admin_CE_VeryPoor__c, 0)
+    ) + 
+    (
+        BLANKVALUE(No_CR_proxy_completion_CE_Excellent__c, 0) +
+        BLANKVALUE(No_CR_proxy_completion_CE_Good__c, 0) + 
+        BLANKVALUE(No_CR_proxy_completion_CE_Moderate__c, 0) + 
+        BLANKVALUE(No_CR_proxy_completion_CE_Poor__c, 0) + 
+        BLANKVALUE(No_CR_proxy_completion_CE_VeryPoor__c, 0)  
+    ) != BLANKVALUE(No_care_recipients_offered_QCE_ACC__c, 0)
+)</errorConditionFormula>
+    <errorDisplayField>No_care_recipients_offered_QCE_ACC__c</errorDisplayField>
+    <errorMessage>All results need to be recorded for care recipients offered a consumer experience assessment, unless exclusions apply.</errorMessage>
+</ValidationRule>

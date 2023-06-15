@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Change_Trading_Name</fullName>
+    <active>true</active>
+    <description>User can not change trading name when a trading name is inactive.</description>
+    <errorConditionFormula>AND(
+ ISCHANGED( Name ) ,
+ RecordType.DeveloperName = &apos;Inactive&apos;
+
+)</errorConditionFormula>
+    <errorMessage>You can not modify trading name when it is inactive.</errorMessage>
+</ValidationRule>

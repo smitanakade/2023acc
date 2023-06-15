@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR22_CONREL_Check_PercentageOwnedOver100</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(Percentage_Owned__c&gt;1,!ISBLANK(Percentage_Owned__c))</errorConditionFormula>
+    <errorDisplayField>Percentage_Owned__c</errorDisplayField>
+    <errorMessage>The Percentage Owner is greater than 100%. Please enter a different Percentage Owned for this owner.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,59 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12">
+            <lightning-vertical-navigation
+                onselect={handleSelectQuestionSection}
+                selected-item={selectedQuestionSectionType}
+            >
+            <ul>
+                <lightning-vertical-navigation-section label="Reports" class="qfr-step-tracker cssoverwrite"  >
+                    <template
+                        for:each={questionSections}
+                        for:item="questionSection"
+                    >
+                        <lightning-vertical-navigation-item
+                            key={questionSection.Type__c}
+                            label={questionSection.formattedLabel}
+                            name={questionSection.Type__c}
+                            class={questionSection.Status__c}
+                            data-id={questionSection.id}
+                        >
+                        </lightning-vertical-navigation-item>
+                    </template>
+                    <template if:false={isReadOnly}>
+                        <lightning-vertical-navigation-item
+                            label="Submission"
+                            name="Submission"
+                        >
+                        </lightning-vertical-navigation-item>
+                    </template>
+                </lightning-vertical-navigation-section>
+            </ul>
+            </lightning-vertical-navigation>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12">
+            <template if:true={selectedQuestionSectionType}>
+                <c-srqi-question-list
+                    validation-error-setting={validationErrorSetting}
+                    question-section-type-index={selectedQuestionSectionTypeIndex}
+                    question-section-type={selectedQuestionSectionType}
+                    question-category={questionCategory}
+                    question-section-length={questionSectionLength}
+                    qi-summary-id={qiSummaryId}
+                    qi-summary-version-id={qiSummaryVersionId}
+                    is-draft-version-required={isDraftVersionRequired}
+                    is-read-only={isReadOnly}
+                    onnavigation={handleNavigation}
+                    oncssremove={handlecssremove}
+                ></c-srqi-question-list>
+            </template>
+            <template if:true={isSubmission}>
+                <c-srqi-submission
+                    question-section-length={questionSectionLength}
+                    qisv-id={qiSummaryVersionId}
+                    onnavigation={handleNavigation}
+                ></c-srqi-submission>
+            </template>
+        </div>
+    </div>
+</template>

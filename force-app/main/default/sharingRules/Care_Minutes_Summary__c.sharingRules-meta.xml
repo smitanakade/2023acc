@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>CM_GPMS_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CM GPMS ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CM_GPMS_ACQSC_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CM GPMS ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Care_Minutes_GPMS_ACQSC_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Care Minutes GPMS ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Care_Minutes_Star_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Care Minutes Star Users</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Care_Minutes_Summary_GPMS_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Care Minutes Summary GPMS ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Care_Minutes_Summary_STAR_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Care Minutes Summary STAR Users</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Care_Minutes_Summary_with_Contact_Centre_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Care Minutes Summary with Contact Centre User</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Care_Minutes_Summary_with_Star_Rating_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Care Minutes Summary with Star Rating User</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

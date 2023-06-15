@@ -1,0 +1,32 @@
+<template>
+   <template if:true={isUpdatedAfterButton}>
+    <div>
+        <button class="custom-button" style={buttonStyle} name={buttonStatus}>
+            <span>{statusFirstText}</span></br>
+            <span>{statusLastText}</span>
+            
+        </button>
+
+    </div>
+    
+
+   </template> 
+   <template if:false={isUpdatedAfterButton}>
+    <button class="custom-button" style={buttonStyle} name={buttonStatus}>
+        <span>{buttonStatus}</span></br>
+     </button>
+
+   </template> 
+    
+    
+   
+   <template if:true={checkDateRendering}>
+     
+        <div class="custom-date">
+            {submittedDate}
+
+         </div>
+   </template> 
+   
+    
+</template>

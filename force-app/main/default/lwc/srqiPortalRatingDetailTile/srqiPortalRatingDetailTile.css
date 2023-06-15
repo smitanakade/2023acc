@@ -1,0 +1,57 @@
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--gpmsColsecondaryDark);
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--gpmsColsecondaryDark);
+}
+
+h6 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gpmsColGrey8);
+}
+
+.srqi-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.srqi-rating-box {
+    border-radius: 8px;
+    background-color: var(--gpmsColGrey1);
+}
+
+.first-tile {
+    padding-right: 32px;
+    padding-top: var(--spacing-medium);
+    padding-bottom: var(--spacing-medium);
+    min-height: 300px;
+}
+
+.second-tile {
+    padding-top: var(--spacing-medium);
+    padding-bottom: var(--spacing-medium);
+    min-height: 300px;
+}
+
+.first-date {
+    border-right: solid 1px var(--gpmsColGrey3);
+}
+
+/* Viewport >= 768 */
+@media (min-width: 48em) {
+    .tile-with-right-border {
+        padding-right: 32px;
+        padding-left: 0 !important;
+        border-right: solid 1px var(--gpmsColGrey3);
+    }
+
+    .second-tile {
+        padding-left: 32px;
+    }
+}

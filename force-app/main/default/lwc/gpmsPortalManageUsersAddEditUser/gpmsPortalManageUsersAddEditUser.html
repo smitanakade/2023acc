@@ -1,0 +1,203 @@
+<template>
+    <div class=fields-container>
+
+        <template if:true={isManageMode}>
+            <div class="slds-scoped-notification slds-media slds-media_center slds-theme_info slds-medium-size_8-of-12 slds-m-top_none" role="status" if:false={isLoggedIn}>
+                <div class="slds-media__figure slds-align-top">
+                    <span class="slds-icon_container slds-icon-utility-info" title="info">
+                        <img src={iconinfo} alt="" />
+                        <span class="slds-assistive-text">info</span>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h3 class="in-scoped-notification slds-var-m-bottom_xx-small">Invitation pending</h3>
+                    <p>This user has been invited to your organisation, but has not yet registered to the Government Provider Management System portal. Their user roles information can still be updated on this page.</p>
+                </div>
+            </div>
+        </template>
+
+        <h3 class="slds-var-m-top_xx-large">User details</h3>
+
+        <template if:false={isManageMode}>
+            <p class="slds-var-m-top_x-small">Please enter the new user's Company Email Address.</p>
+            <lightning-input
+                class="gpms-input slds-medium-size_8-of-12 validate"
+                field-level-help="Please enter the work email address of the new user here. This email address should not be shared with another user."
+                type="email"
+                label="Email"
+                message-when-value-missing="Please enter the new user's Company Email Address."
+                name="email"
+                onchange={handleChange}
+                read-only={isDisabled}
+                required
+            ></lightning-input>
+        </template>
+
+        <template if:true={isManageMode}>
+            <h4 class="slds-var-m-top_x-large">Company Email Address</h4>
+            <p>{userDetailsParent.userDetails.email}</p>
+
+            <!-- Display ACO roles under Providers -->
+            <h4 class="slds-var-m-top_x-large" if:true={hasAcoRoles}>The user already has the following roles</h4>
+            <ul class="slds-list_dotted" if:true={hasAcoRoles}>
+                <template for:each={acoRolesValue} for:item="acoRole">
+                    <li key={acoRole}>{acoRole}</li>
+                </template>
+            </ul>
+        </template>
+
+        <template if:true={isEmailVerified}>
+            <!-- TODO: create a Scoped Notitifications LWC -->
+            <div class="slds-scoped-notification slds-media slds-media_center slds-theme_info slds-medium-size_8-of-12" role="status" if:true={showInfoBox}>
+                <div class="slds-media__figure slds-align-top">
+                    <span class="slds-icon_container slds-icon-utility-info" title="info">
+                        <img src={iconinfo} alt="" />
+                        <span class="slds-assistive-text">info</span>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <p if:false={contactExists}>The email entered does not exist in the system. To create a new contact, please complete the additional details below.</p>
+                    <p if:true={acrExists}>User roles for this email already exist at this level in your organisation. Go back to the previous page to manage this user or add another email.</p>
+                </div>
+            </div>
+
+            <!-- New Contact fields -->
+            <template if:false={contactExists}>
+                <lightning-combobox
+                    class="gpms-combobox slds-medium-size_4-of-12 validate"
+                    label="Salutation"
+                    name="salutation"
+                    onchange={handleChange}
+                    options={salutationOptions}
+                    placeholder="Select"
+                    required
+                    value=""
+                ></lightning-combobox>
+                <lightning-input
+                    class="gpms-input slds-medium-size_8-of-12 validate"
+                    label="First name"
+                    max-length="40"
+                    message-when-pattern-mismatch="Please enter a valid first name. A valid first name must not include special characters nor start or end with a blank space. Hyphens (-) and apostrophes (') are permitted."
+                    name="firstName"
+                    onchange={handleChange}
+                    pattern={label.validationPatternName}
+                    required
+                    type="text"
+                ></lightning-input>
+                <lightning-input
+                    class="gpms-input slds-medium-size_8-of-12 validate"
+                    label="Surname"
+                    max-length="80"
+                    message-when-pattern-mismatch="Please enter a valid surname. A valid surname must not include special characters nor start or end with a blank space. Hyphens (-) and apostrophes (') are permitted."
+                    name="lastName"
+                    pattern={label.validationPatternName}
+                    onchange={handleChange}
+                    required
+                    type="text"
+                ></lightning-input>
+                <lightning-input
+                    class="gpms-input gmps-date slds-medium-size_4-of-12 validate"
+                    date-style="short"
+                    label="Date of birth"
+                    max={dateOfBirthMax}
+                    message-when-bad-input="Dates must be in the DD/MM/YYYY format."
+                    message-when-range-overflow="A contact must be over 18."
+                    name="dateOfBirth"
+                    onchange={handleChange}
+                    required
+                    type="date"
+                ></lightning-input>
+            </template>
+        </template>
+
+        <!-- Roles -->
+        <template if:true={showRoles}>
+            <h3 class="slds-var-m-top_xx-large slds-var-p-top_xx-large">User roles</h3>
+            <p class="slds-var-m-top_x-small slds-var-m-bottom_large">Please select at least one role.</p>
+
+            <!-- All roles -->
+            <lightning-checkbox-group
+                class="validate"
+                label="Available roles"
+                message-when-value-missing={rolesRequiredMessage}
+                name="roles"
+                onchange={handleRolesChange}
+                options={roleOptions}
+                required
+                value={rolesValue}
+                variant="label-hidden"
+            ></lightning-checkbox-group>
+
+            <!-- Services -->
+            <template if:true={isServiceRole}>
+                <div class="role-services-container slds-var-m-top_x-large slds-medium-size_8-of-12">
+                    <template for:each={serviceRolesAndRelatedServices} for:item="role">
+                        <div key={role.value} >
+                            <h4 class="slds-var-p-top_small">{role.label}</h4>
+                            <p>Please select at least one service.</p>
+                            <div class="role-services slds-var-m-bottom_large slds-var-m-top_medium">
+                                <lightning-input
+                                    class="has-divider"
+                                    data-element="select-all-checkbox"
+                                    label="All services"
+                                    onchange={handleSelectAll}
+                                    type="checkbox"
+                                    data-id={role.value}
+                                ></lightning-input>
+                                <lightning-checkbox-group
+                                    class="validate"
+                                    label="Available services"
+                                    message-when-value-missing="Please select at least one service."
+                                    name="services"
+                                    onchange={handleServicesChange}
+                                    options={role.relatedServices}
+                                    required
+                                    value={role.selectedServices}
+                                    variant="label-hidden"
+                                    data-id={role.value}
+                                ></lightning-checkbox-group>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                <div if:true={showServiceValidationError}>
+                    <div class="slds-form-element__help slds-var-m-top_small slds-text-color_error" role="alert" if:false={isManageMode}>Please complete all required fields.</div>
+                    <div class="slds-form-element__help slds-var-m-top_small slds-text-color_error" role="alert" if:true={isManageMode}>Please select at least one service.</div>
+                </div>
+            </template>
+        </template>
+
+        <div class="buttons">
+            <div class="gpms-remove-button" if:true={isManageMode}>
+                <lightning-button
+                    class="remove-button"
+                    icon-name="utility:delete"
+                    label="Remove user"
+                    onclick={handleRemove}
+                    title="Remove all access to this organisation"
+                    variant="base"
+                ></lightning-button>
+            </div>
+            <lightning-button
+                label="Cancel"
+                onclick={handleCancel}
+                title="Go back to view users within this organisation"
+                variant="neutral"
+            ></lightning-button>
+            <lightning-button
+                if:false={isManageMode}
+                label={ctaLabel}
+                onclick={handleCTA}
+                title={ctaTitle}
+                variant="brand"
+            ></lightning-button>
+            <lightning-button
+                if:true={isManageMode}
+                label="Save"
+                onclick={handleUpdate}
+                title="Update the roles for this user"
+                variant="brand"
+            ></lightning-button>
+        </div>
+    </div>
+</template>

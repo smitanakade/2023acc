@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AC_Check_Decision_Type</fullName>
+    <active>true</active>
+    <description>If the decision type equals &quot;Extend Accreditation Period&quot; and previous accreditation record doesn&apos;t exist prevent the record from creation.</description>
+    <errorConditionFormula>AND
+(GPMS_Accreditation_Check__c,ISPICKVAL( Decision_Type__c , &apos;Extend Accreditation Period&apos; ),NOT($Setup.BypassTriggers__c.BypassValidationRules__c) )</errorConditionFormula>
+    <errorDisplayField>Decision_Type__c</errorDisplayField>
+    <errorMessage>A new accreditation can&apos;t be extended without a previous accreditation existing.</errorMessage>
+</ValidationRule>

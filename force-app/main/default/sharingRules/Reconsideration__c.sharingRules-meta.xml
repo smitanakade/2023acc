@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Reconideration_ACQSC</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Used to provide edit access to ACQSC users</description>
+        <label>Reconideration ACQSC</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Reconsideration</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Reconsideration_Tier_3_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Reconsideration  Tier 3 Admin</label>
+        <sharedTo>
+            <group>GPMS_System_Administrator</group>
+        </sharedTo>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Reconsideration</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

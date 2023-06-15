@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Override_Reason__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(Status__c, &apos;Removed&apos;) , &apos;Ratings have been removed&apos;,
+IF(Under_Review__c = true, &apos;Rating is Under Review&apos;,
+IF(ISNULL(STAR_Rating_Calculation__c), &apos;No rating available&apos;,
+TEXT(STAR_Rating_Calculation__c) ) ) )</formula>
+    <label>Override Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

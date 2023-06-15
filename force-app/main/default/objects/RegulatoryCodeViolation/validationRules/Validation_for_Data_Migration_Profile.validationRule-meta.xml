@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_for_Data_Migration_Profile</fullName>
+    <active>true</active>
+    <description>For Data Migration Profile 
+1.Date Decision Applied is Required
+2.If status is Non-Current then Date Decision Ends should not be blank 
+3.Decision Details is Not Null 
+4.Reason for issuing regulatory decision is required
+5.Violationtypeid is not null</description>
+    <errorConditionFormula>AND( OR( ISNULL( Date_Decision_Applied__c ), AND(  ISPICKVAL(Status, &apos;Non-Current&apos;) ,ISNULL( Date_Decision_Ends__c ) ), ISNULL( Decision_Details__c ) , ISNULL( Reason_for_issuing_Regulatory_Decision__c ), ISNULL( Regulatory_Decision_Type__r.Id )  ),  $Profile.Name = &apos;Data Migration&apos;)</errorConditionFormula>
+    <errorMessage>1.Date Decision Applied is required
+2.If status is Non-Current then Date Decision Ends should not be blank 
+3.Decision Details is mandatory 
+4.Reason for issuing Regulatory Decision is required 
+5.Violationtypeid is required</errorMessage>
+</ValidationRule>

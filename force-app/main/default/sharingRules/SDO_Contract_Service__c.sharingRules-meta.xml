@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Attached_Services_GPMS_Tier_3_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>SDO Contract Service</description>
+        <label>Attached Services GPMS Tier 3 Admin</label>
+        <sharedTo>
+            <group>GPMS_System_Administrator</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>SDO Contract to Service,Management Company to Service,Administration Organisation to Service</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

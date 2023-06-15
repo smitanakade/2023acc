@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Delegate</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>GPMS_ACQSC_Read_Only</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Application__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BusinessLicenseApplication</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

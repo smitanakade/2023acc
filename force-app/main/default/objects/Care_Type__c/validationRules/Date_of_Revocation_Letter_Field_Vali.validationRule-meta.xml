@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_Revocation_Letter_Field_Vali</fullName>
+    <active>true</active>
+    <description>Applicable if “Change Approval Status to” = Revoked by Provider. Greyed out otherwise.</description>
+    <errorConditionFormula>AND(
+    NOT(ISPICKVAL(Current_Approval_Status__c, &apos;Revoked by Provider&apos;)),
+    NOT(ISBLANK(Date_of_Revocation_Letter__c))
+)</errorConditionFormula>
+    <errorDisplayField>Date_of_Revocation_Letter__c</errorDisplayField>
+    <errorMessage>Date of Revocation Letter must have no value due to Current Approval Status.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>GPMS Landing Page Tiles</masterLabel>
+    <targets>
+        <target>lightningCommunity__Default</target>
+        <target>lightningCommunity__Page</target>
+    </targets>
+    <targetConfigs>  
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="toggleTileAboutOrg" label="Toggle the 'About your organisation' tile" type="Boolean" default="true" description="Tiles visibility is driven by Permissions. Use this toggle to force-hide this tile."></property>
+            <property name="toggleTileWhatYouProvide" label="Toggle the 'What you provide' tile" type="Boolean" default="true" description="Tiles visibility is driven by Permissions. Use this toggle to force-hide this tile."></property>
+            <property name="toggleTileFinancialReporting" label="Toggle the 'Financial reporting' tile?" type="Boolean" default="true" description="Tiles visibility is driven by Permissions. Use this toggle to force-hide this tile."></property>
+            <property name="toggleTileQI" label="Toggle the 'Quality Indicators' tile?" type="Boolean" default="true" description="Tiles visibility is driven by Permissions. Use this toggle to force-hide this tile."></property>
+            <property name="toggleTileStarRatings" label="Toggle the 'Star ratings' tile" type="Boolean" default="true" description="Tiles visibility is driven by Permissions. Use this toggle to force-hide this tile."></property>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

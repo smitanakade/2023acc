@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Case_GPMS_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Case GPMS ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Status</field>
+            <operation>equals</operation>
+            <value>Removed,Inactive,Current,Non-Current</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Regulatory_Code_Violation_GPMS_ACQSC_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Regulatory Code Violation GPMS ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Status</field>
+            <operation>equals</operation>
+            <value>Removed,Inactive,Current,Non-Current</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Regulatory_Decisions_Contact_Centre_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Regulatory Decisions Contact Centre Users</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Status</field>
+            <operation>equals</operation>
+            <value>Current,Non-Current,Removed</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Regulatory_Decisions_Star_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Regulatory Decisions Star Users</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Status</field>
+            <operation>equals</operation>
+            <value>Current,Non-Current,Removed</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -1,0 +1,59 @@
+<template>    
+    <!-- <div class="slds-card__body slds-card__body_inner"> -->
+    <div style="overflow-x:auto;">
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large">
+            <thead>
+                <tr>
+                    <th>Allotment</th>
+                    <th>Places belonging to this Allotment</th>
+                </tr>
+            </thead>
+        
+            
+            <tbody>
+                <template for:each={allotments} for:item="allotment">
+                    <tr key={allotment.AllotmentId}>
+                        <td>
+                            <input type="radio" name="allotmentId" class="allotmentId" value={allotment.AllotmentId} onclick={updateSelection} />
+                            <label>{allotment.Name}</label>
+                        </td>
+                        <td>
+                            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large">
+                                <thead>
+                                    <tr>
+                                        <th>Allotment Date</th>
+                                        <th>Care Type</th>
+                                        <th>Care Level</th>
+                                        <th>Care Setting</th>
+                                        <th>Care Setting Effective Date</th>
+                                        <th>Number of Places</th>
+                                        <th>Status of Places</th>
+                                        <th>Status Effective Date</th>
+                                        <th>First Brought into Effect Date</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <template for:each={allotment.Place} for:item="place">
+                                        <tr key={place.Id}>
+                                            <td>{allotment.DateOfAllotment}</td>
+                                            <td>{place.CareType}</td>
+                                            <td>{place.CareLevel}</td>
+                                            <td>{place.CareSetting}</td>
+                                            <td>{place.CareSettingEffectiveDate}</td>
+                                            <td>{place.NumberofPlaces}</td>
+                                            <td>{place.StatusofPlaces}</td>
+                                            <td>{place.StatusEffectiveDate}</td>
+                                            <td>{place.FirstBroughtintoEffectDate}</td>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr> 
+                </template>
+            </tbody>
+        </table>
+    </div>
+    <!-- </div> -->
+</template>

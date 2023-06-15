@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Assessor</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>GPMS_ACQSC_Read_Only</publicGroup>
+        </publicGroups>
+        <roleAndSubordinates>
+            <roleAndSubordinate>Health_Staff</roleAndSubordinate>
+        </roleAndSubordinates>
+        <roleAndSubordinatesInternal>
+            <roleAndSubordinateInternal>Health_Staff</roleAndSubordinateInternal>
+        </roleAndSubordinatesInternal>
+        <roles>
+            <role>Health_Staff</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Application__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>BusinessLicenseApplication</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>IndividualApplication</sobjectType>
+    </queueSobject>
+</Queue>

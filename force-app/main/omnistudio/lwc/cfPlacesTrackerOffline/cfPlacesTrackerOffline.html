@@ -1,0 +1,69 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative ">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <omnistudio-toast class="flexcard-toast-element" theme="slds" title="" message="" styletype=""> </omnistudio-toast>
+</div>
+            <div if:true={showLoader} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <omnistudio-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></omnistudio-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                      <omnistudio-flex-card-state   data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-theme_shade slds-card slds-border_top slds-border_right slds-border_bottom slds-border_left " style="     border-top: #cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid;border-left: #cccccc 1px solid; 
+         ">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col  slds-p-left_xx-small slds-p-bottom_xx-small  slds-size_1-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-flex-icon data-style-id="state0element0block_element0_child"   record={record}  card={card}  extraclass="slds-icon_container slds-icon-standard-visits "  icon-name="standard:visits"  icon-type="Salesforce SVG"  imgsrc=""  size="small"  variant="inverse"  theme="slds"  ></omnistudio-flex-icon>
+      </div><div data-style-id="state0element0block_element1" class="slds-col   slds-size_11-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element1_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cstrong%3E%3Cspan%20style=%22font-size:%2010pt;%22%3EOffline%20Places%3C/span%3E%3C/strong%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element2" class="slds-col  slds-theme_default  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-flex-datatable data-style-id="state0element0block_element2_child"   record={record}  card={card}  active-groups="false"  cell-level-edit="true"  group-by=""  group-name-wrapper-class=""  group-order="desc"  hide-extra-column="false"  issearchavailable="false"  issortavailable="true"  pagelimit="3"  row-delete="false"  sort-across-groups="false"  styles='\{"cellBorderColor":"","cellBorderType":["border_left","border_top","border_bottom","border_right"],"cellBorderWidth":"","cellBoxShadow":"","cellMargin":[],"cellPadding":[],"headFontFamily":"","headFontWeight":"bold","headTextDecoration":"","tableBorderColor":"","tableBorderType":[],"tableBorderWidth":""}'  columns='\[{"fieldName":"DateofAllotment","label":"Allotment Date","searchable":false,"sortable":true,"type":"text"},{"fieldName":"DateofNotification","label":"Date of Notification","searchable":false,"sortable":true,"type":"text"},{"fieldName":"OfflineStartDate","label":"Offline Start Date","searchable":false,"sortable":true,"type":"text"},{"fieldName":"GPMSExpectedEndDate","label":"Expected End Date","searchable":false,"sortable":true,"type":"text"},{"fieldName":"GPMSOfflineEndDate","label":"Offline End Date","searchable":false,"sortable":true,"type":"text"},{"fieldName":"PrimaryReason","label":"Primary Reason","searchable":false,"sortable":true,"type":"text"},{"fieldName":"CareType","label":"Care Type","searchable":false,"sortable":true,"type":"text"},{"fieldName":"GPMSGeneralAccess","label":"Target Group: General Access","searchable":false,"sortable":true,"type":"text"},{"fieldName":"GPMSSpecialNeedsandKeyIssues","label":"Target Group: Special Needs & Key Issues","searchable":false,"sortable":true,"type":"text"},{"fieldName":"GPMSNotSpecified","label":"Target Group: Not Specified","searchable":false,"sortable":true,"type":"text"}]'  records={records}  theme="slds"  ></omnistudio-flex-datatable>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                </template>
+                <template if:false={hasRecords}>
+                      <omnistudio-flex-card-state   data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-theme_shade slds-card slds-border_top slds-border_right slds-border_bottom slds-border_left " style="     border-top: #cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid;border-left: #cccccc 1px solid; 
+         ">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col  slds-p-left_xx-small slds-p-bottom_xx-small  slds-size_1-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-flex-icon data-style-id="state0element0block_element0_child"   record={record}  card={card}  extraclass="slds-icon_container slds-icon-standard-visits "  icon-name="standard:visits"  icon-type="Salesforce SVG"  imgsrc=""  size="small"  variant="inverse"  theme="slds"  ></omnistudio-flex-icon>
+      </div><div data-style-id="state0element0block_element1" class="slds-col   slds-size_11-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element1_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cstrong%3E%3Cspan%20style=%22font-size:%2010pt;%22%3EOffline%20Places%3C/span%3E%3C/strong%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element2" class="slds-col  slds-theme_default  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-flex-datatable data-style-id="state0element0block_element2_child"   record={record}  card={card}  active-groups="false"  cell-level-edit="true"  group-by=""  group-name-wrapper-class=""  group-order="desc"  hide-extra-column="false"  issearchavailable="false"  issortavailable="true"  pagelimit="3"  row-delete="false"  sort-across-groups="false"  styles='\{"cellBorderColor":"","cellBorderType":["border_left","border_top","border_bottom","border_right"],"cellBorderWidth":"","cellBoxShadow":"","cellMargin":[],"cellPadding":[],"headFontFamily":"","headFontWeight":"bold","headTextDecoration":"","tableBorderColor":"","tableBorderType":[],"tableBorderWidth":""}'  columns='\[{"fieldName":"DateofAllotment","label":"Allotment Date","searchable":false,"sortable":true,"type":"text"},{"fieldName":"DateofNotification","label":"Date of Notification","searchable":false,"sortable":true,"type":"text"},{"fieldName":"OfflineStartDate","label":"Offline Start Date","searchable":false,"sortable":true,"type":"text"},{"fieldName":"GPMSExpectedEndDate","label":"Expected End Date","searchable":false,"sortable":true,"type":"text"},{"fieldName":"GPMSOfflineEndDate","label":"Offline End Date","searchable":false,"sortable":true,"type":"text"},{"fieldName":"PrimaryReason","label":"Primary Reason","searchable":false,"sortable":true,"type":"text"},{"fieldName":"CareType","label":"Care Type","searchable":false,"sortable":true,"type":"text"},{"fieldName":"GPMSGeneralAccess","label":"Target Group: General Access","searchable":false,"sortable":true,"type":"text"},{"fieldName":"GPMSSpecialNeedsandKeyIssues","label":"Target Group: Special Needs & Key Issues","searchable":false,"sortable":true,"type":"text"},{"fieldName":"GPMSNotSpecified","label":"Target Group: Not Specified","searchable":false,"sortable":true,"type":"text"}]'  records={records}  theme="slds"  ></omnistudio-flex-datatable>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <omnistudio-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </omnistudio-action>
+  
+            <omnistudio-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </omnistudio-action>
+            </div>
+          </template>

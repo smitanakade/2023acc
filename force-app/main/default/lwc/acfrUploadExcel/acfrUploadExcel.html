@@ -1,0 +1,33 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 09-30-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+  <lightning-layout
+    class="slds-box slds-theme_shade slds-p-around_none"
+    horizontal-align="spread"
+  >
+    <lightning-layout-item padding="around-medium" flexibility="auto">
+      <p>
+        <strong>Upload a completed spreadsheet</strong>
+      </p>
+      <p class="">Please upload the completed spreadsheet, making sure you have read and understood all guidelines listed above. 
+      Files can be uploaded using the upload button, or by dragging and dropping in the space provided below.</p>
+
+      <c-qfr-checkbox onchange={handleCheckbox}>{checkboxLabel}</c-qfr-checkbox>
+
+      <lightning-input
+        accept=".xlsx"
+        class="qfr-file-upload"
+        disabled={isCheckboxNotSelected}
+        label="Upload file"
+        onchange={handleUploadFinished}
+        type="file"
+        variant="label-hidden"
+      ></lightning-input>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

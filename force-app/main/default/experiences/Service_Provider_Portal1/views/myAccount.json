@@ -1,0 +1,69 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "048a5b8b-6dad-49ce-805f-71ac9ac24c54",
+  "label" : "My Account",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "c2d77013-9752-49c1-9673-474d06c5a900",
+          "columns" : [ {
+            "UUID" : "eacc17f2-9e13-4634-9efa-27fb2f06471c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c2d77013-9752-49c1-9673-474d06c5a900",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><strong style=\"font-size: 72px;\">COMING SOON</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d7d4205a-9faa-4838-8f97-f157574adc52",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "eacc17f2-9e13-4634-9efa-27fb2f06471c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "195455f9-f231-4ecf-b643-149cd8b6c763",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Account"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "51d38110-7893-4478-9b09-4ad3b773d08e",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4e2aa674-56ea-4bac-8d66-898492a201e4",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-my-account"
+}

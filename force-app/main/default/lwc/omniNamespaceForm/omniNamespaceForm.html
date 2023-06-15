@@ -1,0 +1,55 @@
+<template>
+	<template lwc:if={initialised}>
+		<p style="display: none">{activeStep}</p>
+		<lightning-layout class={containerClass}>
+			<lightning-layout-item lwc:ref="nav" class="nav">
+				<slot name="sidebar">
+					<c-omni-form-navigation-menu
+						width={sideNavWidth}
+						steps={steps}
+						onsidenavchange={sideNavCheck}
+						onstepchange={handleStepChange}
+					></c-omni-form-navigation-menu>
+				</slot>
+			</lightning-layout-item>
+			<lightning-layout-item class="form">
+				<slot name="form">
+					<c-qfr-omni-provider-form
+						steps={steps}
+						shared-data-json={sharedDataJson}
+						ondatajsonchange={handleDataJsonChange}
+					></c-qfr-omni-provider-form>
+				</slot>
+				<div class="button-container">
+					<template lwc:if={notFirstStep}>
+						<lightning-button
+							variant="brand-outline"
+							onclick={handlePreviousClick}
+							label="Previous"
+							class="slds-m-around_xsmall button-previous"
+							title="Goes back one step"
+						></lightning-button>
+					</template>
+					<template lwc:if={isNextAllowed}>
+						<lightning-button
+							variant="brand"
+							onclick={handleNextClick}
+							class="slds-m-around_xsmall button-next"
+							label={nextLabel}
+							title="Navigate to next step"
+						></lightning-button>
+					</template>
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</template>
+	<template lwc:else>
+		<div class="slds-is-relative" style="min-height: 200px">
+			<lightning-spinner
+				variant="brand"
+				alternative-text="Loading, please wait..."
+				class="slds-align_absolute-center"
+			></lightning-spinner>
+		</div>
+	</template>
+</template>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Improvement_At_This_Service_Validation</fullName>
+    <active>true</active>
+    <description>Confirm Field is not null</description>
+    <errorConditionFormula>OR(ISNULL(Improvement_At_This_Service__c), ISBLANK(Improvement_At_This_Service__c) )</errorConditionFormula>
+    <errorDisplayField>Improvement_At_This_Service__c</errorDisplayField>
+    <errorMessage>Improvement At This Service should not be empty</errorMessage>
+</ValidationRule>

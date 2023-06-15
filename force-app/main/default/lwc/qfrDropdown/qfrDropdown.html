@@ -1,0 +1,45 @@
+<template>
+	<div class={dropdownClass}>
+		<c-qfr-button
+			variant="brand-outline"
+			icon="chevron-down"
+			icon-position="right"
+			onclick={toggleDropdown}
+			is-management={isManagement}
+			is-input="true"
+			disabled={disabled}
+		>
+			{dropdownLabel}
+		</c-qfr-button>
+		<template if:true={isOpened}>
+			<ul class="qfr-dropdown-list">
+				<template for:each={list} for:item="item">
+					<template if:true={item.disabled}>
+						<li key={item.label} class="list-item is-disabled">
+							<a>
+								<span> {item.label} </span>
+							</a>
+						</li>
+					</template>
+					<template if:false={item.disabled}>
+						<li key={item.label} class="list-item">
+							<a
+								onclick={handleSelected}
+								data-label={item.label}
+								data-value={item.value}
+							>
+								<span
+									onclick={handleSelected}
+									data-label={item.label}
+									data-value={item.value}
+								>
+									{item.label}
+								</span>
+							</a>
+						</li>
+					</template>
+				</template>
+			</ul>
+		</template>
+	</div>
+</template>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Link Service with Service Funding records</description>
+    <externalId>false</externalId>
+    <label>Service</label>
+    <referenceTo>BusinessLicense</referenceTo>
+    <relationshipLabel>Service Funding</relationshipLabel>
+    <relationshipName>Service_Funding</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

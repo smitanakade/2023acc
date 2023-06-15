@@ -1,0 +1,51 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "8e430128-79dd-4374-88fd-c77e59422ea3",
+  "label" : "User Profile",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h1><span style=\"color: #2D2D2D;font-size: 21px;\">My Profile</span>   </h1>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "d4be37e2-41f3-4763-a37e-4cd04e43951d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "id" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:userProfileDetail",
+      "id" : "7290d431-a032-47b0-828e-687f1da54b90",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2ad188a1-81a6-4b09-8f82-e88ec032296c",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p><a href=\"/serviceproviderportal/s/\" rel=\"noopener noreferrer\" target=\"_self\">Go back to the home page</a></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "a1e7e59b-abfe-462f-9ebd-ebeb5ff01dda",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d837a8d6-cc1c-4b10-8725-52afe45d55e8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "98535171-6abc-4d6a-8ccb-561a7e14d1ec",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-005"
+}

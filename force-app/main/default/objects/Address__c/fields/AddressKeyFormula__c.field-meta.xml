@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AddressKeyFormula__c</fullName>
+    <description>This is the fieldlist that is used in the AddressUniqueKey field.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL( PO_BOX_Type__c , &quot;&quot;) = FALSE, TEXT(PO_BOX_Type__c), &quot;&quot;) &amp; &quot;;&quot;
+&amp; Post_Office_Box__c &amp; &quot;;&quot;
+&amp; Unit_Number__c   &amp; &quot;;&quot;
+&amp; Level_Number__c   &amp; &quot;;&quot;
+&amp; Building_Name__c &amp; &quot;;&quot;
+&amp; Lot_Number__c &amp; &quot;;&quot;
+&amp; Street_Number_1__c &amp; &quot;;&quot;
+&amp; Street__c &amp; &quot;;&quot;
+&amp; IF(ISPICKVAL( Street_Type_Description__c, &quot;&quot;) = FALSE, TEXT (Street_Type_Description__c),&quot;&quot;) &amp; &quot;;&quot;
+&amp; IF(ISPICKVAL( Street_Suffix_Type_Description__c , &quot;&quot;) = FALSE, TEXT (Street_Suffix_Type_Description__c ),&quot;&quot;) &amp; &quot;;&quot;
+&amp; City__c &amp; &quot;;&quot;
+&amp; IF(ISPICKVAL( State_Province__c , &quot;&quot;) = FALSE, TEXT (State_Province__c ),&quot;&quot;) &amp; &quot;;&quot;
+&amp; Zip_Postal_Code__c &amp; &quot;;&quot;
+&amp; IF(ISPICKVAL( Country__c , &quot;&quot;) = FALSE, TEXT (Country__c ),&quot;&quot;) &amp; &quot;;&quot;
+&amp;  TEXT(FLOOR(Latitude_Longitude__Latitude__s *100000)/100000 ) &amp; &quot;;&quot;
+&amp; TEXT(FLOOR(Latitude_Longitude__Longitude__s * 100000)/100000)</formula>
+    <label>AddressKeyFormula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

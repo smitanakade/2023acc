@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NewStatusCheck</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISNEW(),
+NOT(ISPICKVAL( NewStatus__c , &apos;Application submission receipt&apos;)),
+ISPICKVAL( CurrentStatus__c , &apos;Application submission receipt&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>NewStatus__c</errorDisplayField>
+    <errorMessage>Please select  &apos;Application submission receipt&apos; as new status at this stage.</errorMessage>
+</ValidationRule>

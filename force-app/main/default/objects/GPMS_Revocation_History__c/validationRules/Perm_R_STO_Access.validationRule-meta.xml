@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perm_R_STO_Access</fullName>
+    <active>true</active>
+    <description>STO record access</description>
+    <errorConditionFormula>AND(
+NOT(ISNEW()),
+AND(
+OR(
+ISCHANGED(Decision__c),
+ISCHANGED(Event__c),
+ISCHANGED(Revocation_Effective_Date__c)),
+$Permission.GPMS_STO
+))</errorConditionFormula>
+    <errorMessage>You do not have access to edit Decision, Event and Effective Date. Please exit from editing mode.</errorMessage>
+</ValidationRule>

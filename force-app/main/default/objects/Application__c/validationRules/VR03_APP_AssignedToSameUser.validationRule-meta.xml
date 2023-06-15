@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR03_APP_AssignedToSameUser</fullName>
+    <active>false</active>
+    <description>Validate that application is not getting assigned to same user</description>
+    <errorConditionFormula>AND(
+Reconsideration__c=&apos;Yes&apos;,
+PRIORVALUE(OwnerId) = OwnerId
+)</errorConditionFormula>
+    <errorMessage>This application cannot be assigned to same person again</errorMessage>
+</ValidationRule>

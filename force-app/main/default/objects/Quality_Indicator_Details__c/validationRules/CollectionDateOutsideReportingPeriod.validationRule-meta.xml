@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CollectionDateOutsideReportingPeriod</fullName>
+    <active>true</active>
+    <description>Collection date should be within the date range of the reporting period</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    OR(
+        Date_Of_Collection__c &lt; QI_Summary_Id__r.REPORTING_PERIOD__r.Start_Date__c,
+        Date_Of_Collection__c &gt; QI_Summary_Id__r.REPORTING_PERIOD__r.End_Date__c
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Date_Of_Collection__c</errorDisplayField>
+    <errorMessage>Date falls outside of reporting period.</errorMessage>
+</ValidationRule>

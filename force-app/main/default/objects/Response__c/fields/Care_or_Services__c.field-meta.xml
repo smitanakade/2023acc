@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Care_or_Services__c</fullName>
+    <description>What kind of care or service/s are contracted to the organisation under the business structure.</description>
+    <externalId>false</externalId>
+    <label>Care or Services</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Clinical Care</fullName>
+                <default>false</default>
+                <label>Clinical Care</label>
+            </value>
+            <value>
+                <fullName>Personal Care</fullName>
+                <default>false</default>
+                <label>Personal Care</label>
+            </value>
+            <value>
+                <fullName>Allied Health</fullName>
+                <default>false</default>
+                <label>Allied Health</label>
+            </value>
+            <value>
+                <fullName>Diversional Therapy</fullName>
+                <default>false</default>
+                <label>Diversional Therapy</label>
+            </value>
+            <value>
+                <fullName>Lifestyle/Recreation/Activities Officer</fullName>
+                <default>false</default>
+                <label>Lifestyle/Recreation/Activities Officer</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

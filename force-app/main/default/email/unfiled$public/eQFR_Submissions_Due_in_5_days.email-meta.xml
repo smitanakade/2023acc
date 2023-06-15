@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Report reminder - send 5 days before the due date to providers who haven&apos;t submitted yet</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>QFR_DoH_Aged_Care_Letterhead</letterhead>
+    <name>QFR Submissions Due in 5 days</name>
+    <style>freeForm</style>
+    <subject>QFR submissions due in 5 days {!Case.Reporting_Due_Date__c} [SEC=OFFICIAL]</subject>
+    <textOnly>Dear {!Case.Provider_Name__c},
+
+
+RE: Quarterly Financial Report for {!Case.NAPSID__c} {!Case.Account}
+
+We are sending this email because you have not yet submitted your Quarterly Financial Report (QFR) for the period ending {!Case.Reporting_Period_End_Date__c}. The due date for the QFR is in 5 days ({!Case.Reporting_Due_Date__c}), please submit your QFR by this date. Late submissions will result in care minutes data not being accepted for Star Rating purposes and potential regulatory action.
+
+A data collection helpdesk run by Forms Administration is available to assist providers completing or submitting the QFR. You can call the helpdesk on (02) 4403 0640 or email enquiries to health@formsadministration.com.au.
+
+If you have already submitted your QFR and have received confirmation, please ignore this email.
+
+For more information about the QFR, please click here .
+
+
+
+Regards,
+
+Department of Health and Aged Care
+
+
+
+
+
+The Department of Health and Aged Care acknowledges First Nations peoples as the Traditional Owners of Country throughout Australia, and their continuing connection to land, sea and community. We pay our respects to them and their cultures, and to all Elders both past and present.
+
+THIS IS AN AUTOMATED MESSAGE – PLEASE DO NOT REPLY DIRECTLY TO THIS EMAIL.
+
+
+IMPORTANT: You are receiving this email because you provide aged care services, funded by the Australian Government under the Commonwealth Aged Care Act 1997 or via a Commonwealth Home Support Programme grant agreement. If you are unsubscribing from this service, the Department of Health and Aged Care requests that you supply an alternate email address, for example a group mailbox, to continue receiving important information for your organisation.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

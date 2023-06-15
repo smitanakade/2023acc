@@ -1,0 +1,65 @@
+<template>
+    <h1>{heading}</h1>
+    <div class="page-container">
+        <aside class="slds-show_large">
+            <c-gpms-portal-manage-users-navigation
+                account-info={accountInfo}
+                onloading={handleLoading}
+                onnavclick={handleNavClick}
+            ></c-gpms-portal-manage-users-navigation>
+        </aside>
+        <main>
+            <section class="container-header">
+                <h2>{subHeading}</h2>
+                <lightning-button
+                    class="slds-no-flex"
+                    icon-name="utility:add"
+                    if:false={isAddMode}
+                    label="Add New User"
+                    onclick={handleAddUserMode}
+                    title="Add a new user to your organisation"
+                    variant="brand"
+                ></lightning-button>
+            </section>
+            <c-gpms-portal-manage-users-add-edit-user
+                account-id={selectedAccountId}
+                account-type={accountType}
+                if:true={isAddMode}
+                oncancelclick={handleCancelCTA}
+                onctaclick={handleNextAddCTA}
+                onsaveclick={handleManageUser}
+                onloading={handleLoading}
+                onremoveclick={handleRemoveCTA}
+                user-details-parent={userFullDetails}
+                manage-details-parent={manageDetails}
+            ></c-gpms-portal-manage-users-add-edit-user>
+            <c-gpms-portal-manage-users-list
+                contacts-list={contactsList}
+                if:false={isAddMode}
+                onloading={handleLoading}
+                onmanageclick={handleManageButton}
+            ></c-gpms-portal-manage-users-list>
+        </main>
+    </div>
+    <!-- Loading spinner -->
+    <div class="slds-spinner_container page-spinner" if:false={loaded}>
+        <div role="status" class="slds-spinner slds-spinner_medium slds-spinner--brand">
+            <span class="slds-assistive-text">Loading. Please wait.</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+        </div>
+    </div>
+    <!-- Modal wrapper -->
+    <c-gpms-modal
+        button-label={modalButtonLabel}
+        hide-cancel-button={modalHideCancelButton}
+        hide-save-button={modalHideSaveButton}
+        modal-heading={modalHeading}
+        oncancelclick={handleModalCancel}
+        onsaveclick={handleModalAction}
+    >
+        <div slot="modalContent" class="modalContent slds-modal__content slds-var-p-around_medium">
+            <p>{modalContent}</p>
+        </div>
+    </c-gpms-modal>
+</template>

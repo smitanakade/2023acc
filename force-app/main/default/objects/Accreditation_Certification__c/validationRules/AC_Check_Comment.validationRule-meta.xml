@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AC_Check_Comment</fullName>
+    <active>false</active>
+    <description>Comment is mandatory for Decision to Accredit</description>
+    <errorConditionFormula>AND(
+NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+ISPICKVAL(Decision_Type__c,&quot;Record a Decision to Accredit&quot;),
+ADDMONTHS(Start_Date__c,36)&gt;End_Date__c,
+ISBLANK(Comment__c)
+)</errorConditionFormula>
+    <errorDisplayField>Comment__c</errorDisplayField>
+    <errorMessage>Comment is mandatory.</errorMessage>
+</ValidationRule>

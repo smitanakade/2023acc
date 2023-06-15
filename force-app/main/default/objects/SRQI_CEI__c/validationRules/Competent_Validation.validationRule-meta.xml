@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competent_Validation</fullName>
+    <active>true</active>
+    <description>Confirm picklist not set to None</description>
+    <errorConditionFormula>ISPICKVAL(Competent__c, &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>Competent__c</errorDisplayField>
+    <errorMessage>Competent should be set to valid value other than None</errorMessage>
+</ValidationRule>

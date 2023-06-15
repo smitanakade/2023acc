@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR06_CONREL_EffectonSuitability</fullName>
+    <active>true</active>
+    <description>Capture impact key personnel leaving has on organisation&apos;s suitability to be a provider</description>
+    <errorConditionFormula>AND(
+NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+NOT(Account__r.RecordType.DeveloperName = &apos;National_Aboriginal_and_Torres_Strait_Islander_Flexible_Aged_Care&apos;),
+NOT(Service__r.RecordType.DeveloperName = &apos;NATSIFAC_Service&apos;),
+OR(
+AND(
+!ISBLANK(End_Date__c),
+ISBLANK(Effect_on_Suitability__c),
+OR(
+RecordType.DeveloperName =&apos;Key_Personnel_CR&apos;,
+RecordType.DeveloperName =&apos;Service_Key_Personnel_CR&apos;),
+OR(
+Account__r.RecordType.DeveloperName = &apos;Aged_Care_Organisation&apos;,
+Account__r.RecordType.DeveloperName = &apos;Approved_Provider&apos;,
+Account__r.RecordType.DeveloperName = &apos;Administrative_Organisation&apos;,
+Account__r.RecordType.DeveloperName = &apos;Management_Company&apos;,
+Account__r.RecordType.DeveloperName = &apos;Service_Delivery_Organisation&apos;,
+Service__r.RecordType.DeveloperName = &apos;Approved_Provider_Service&apos;)
+),
+AND(
+ISBLANK(End_Date__c),
+!ISBLANK(Effect_on_Suitability__c),
+OR(
+RecordType.DeveloperName =&apos;Key_Personnel_CR&apos;,
+RecordType.DeveloperName =&apos;Service_Key_Personnel_CR&apos;),
+OR(
+Account__r.RecordType.DeveloperName = &apos;Aged_Care_Organisation&apos;,
+Account__r.RecordType.DeveloperName = &apos;Approved_Provider&apos;,
+Account__r.RecordType.DeveloperName = &apos;Administrative_Organisation&apos;,
+Account__r.RecordType.DeveloperName = &apos;Management_Company&apos;,
+Account__r.RecordType.DeveloperName = &apos;Service_Delivery_Organisation&apos;,
+Service__r.RecordType.DeveloperName = &apos;Approved_Provider_Service&apos;)
+)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Effect_on_Suitability__c</errorDisplayField>
+    <errorMessage>Effect on suitability is mandatory when end date is entered</errorMessage>
+</ValidationRule>

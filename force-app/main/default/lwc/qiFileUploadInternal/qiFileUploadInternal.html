@@ -1,0 +1,96 @@
+<template>
+    <template if:true={showContent}>
+        <!-- Initial screen -->
+        <template if:false={showFileUploadComponent}>
+            <!-- Loading Spinner -->
+            <template if:true={isLoading}>
+                <lightning-spinner variant="brand" size="large" alternative-text="Loading"></lightning-spinner>
+            </template>
+
+            <div class="form-container slds-m-top_x-large">
+                <!-- Header -->
+                <h1 class="slds-text-heading_large slds-text-align_center slds-p-bottom_x-large">Upload your quality indicator data</h1>
+                <h2 class="slds-text-heading_medium slds-p-bottom_large">Provider/Benchmarker Information</h2>
+        
+                <!-- Form -->
+                <lightning-record-edit-form object-api-name={fileStagingObject} onsubmit={handleSubmit}>
+                    <!-- Errors -->
+                    <lightning-messages></lightning-messages>
+        
+                    <!-- Fields -->
+                    <div class="slds-grid slds-grid_vertical-align-center slds-p-bottom_large">
+                        <label class="slds-col slds-size_1-of-3">
+                            Provider/Organisation Name
+                            <span class="slds-text-color_destructive">*</span>
+                        </label>
+                        <lightning-input-field
+                            data-id="provider"
+                            field-name={providerField}
+                            value={fileStagingRecord.provider}
+                            required="true"
+                            variant="label-hidden"
+                            class="hide-help-text slds-col slds-size_2-of-3 provider"
+                            onchange={handleProviderChange}
+                            disabled={isReupload}
+                        ></lightning-input-field>
+                    </div>
+                    
+                    <div class="slds-grid slds-grid_vertical-align-center slds-p-bottom_large">
+                        <label class="slds-col slds-size_1-of-3">
+                            Requested by
+                            <span class="slds-text-color_destructive">*</span>
+                        </label>
+                        <lightning-combobox
+                            data-id="submissionRequestedBy"
+                            value={fileStagingRecord.submissionRequestedBy}
+                            required="true"
+                            placeholder="--None--"
+                            variant="label-hidden"
+                            options={providerContactOptions}
+                            class="width-100"
+                            disabled={isProviderContactOptionsEmpty}
+                        ></lightning-combobox>
+                    </div>
+        
+                    <div class="slds-grid slds-grid_vertical-align-center">
+                        <label class="slds-col slds-size_1-of-3">
+                            Date received on
+                            <span class="slds-text-color_destructive">*</span>
+                        </label>
+                        <lightning-input-field
+                            data-id="requestReceivedDate"
+                            field-name={requestReceivedDateField}
+                            value={fileStagingRecord.requestReceivedDate}
+                            required="true"
+                            variant="label-hidden"
+                            class="hide-help-text slds-col slds-size_2-of-3"
+                        ></lightning-input-field>
+                    </div>
+        
+                    <!-- Divider -->
+                    <hr>
+        
+                    <!-- Button -->
+                    <div class="slds-grid">
+                        <lightning-button
+                            label="Next"
+                            variant="brand"
+                            type="submit"
+                            class="slds-col_bump-left"
+                            onclick={reportSubmissionRequestedByValidity}
+                        ></lightning-button>
+                    </div>
+                </lightning-record-edit-form>
+            </div>
+        </template>
+
+        <!-- Screen shown after clicking "Next" -->
+        <template if:true={showFileUploadComponent}>
+            <div class="upload-container">
+                <c-qi-file-upload-instructions
+                    staging-id={newFileStagingRecordId}
+                ></c-qi-file-upload-instructions>
+            </div>
+        </template>
+    </template>
+</template>

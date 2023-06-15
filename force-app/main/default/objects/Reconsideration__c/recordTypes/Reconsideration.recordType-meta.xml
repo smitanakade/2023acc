@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reconsideration</fullName>
+    <active>true</active>
+    <label>Reconsideration</label>
+    <picklistValues>
+        <picklist>Type_of_Reconsideration_Outcome__c</picklist>
+        <values>
+            <fullName>Affirm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set Aside Decision and Substitute a New Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Reconsideration_Request__c</picklist>
+        <values>
+            <fullName>Reconsideration conducted due to a request by the Commission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration conducted due to request by Applicant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

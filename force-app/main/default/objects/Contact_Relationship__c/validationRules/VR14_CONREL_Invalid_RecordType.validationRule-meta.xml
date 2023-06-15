@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR14_CONREL_Invalid_RecordType</fullName>
+    <active>true</active>
+    <description>Contact relationship record type is not valid for this account record type</description>
+    <errorConditionFormula>AND(NOT($Setup.BypassTriggers__c.BypassValidationRules__c),(Account__r.RecordType.DeveloperName = &apos;Commonwealth_Home_Support_Programme&apos;),( RecordType.DeveloperName =&apos;Key_Personnel_CR&apos;))</errorConditionFormula>
+    <errorMessage>This type of Contact Relationship is not valid for this Account</errorMessage>
+</ValidationRule>

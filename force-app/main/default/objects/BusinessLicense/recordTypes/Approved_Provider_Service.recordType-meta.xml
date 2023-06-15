@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_Provider_Service</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Approved_Provider_Service</compactLayoutAssignment>
+    <label>Approved Provider Service</label>
+    <picklistValues>
+        <picklist>ACMPS_Notified__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>JurisdictionType</picklist>
+        <values>
+            <fullName>COUNTRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COUNTY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROVINCE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Approval Ceased</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intention to Revoke</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Approved %28Threshold criteria not met%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operational</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Revoked by Dept</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revoked by Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taken to be approved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed-Combined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offline-Permanent Closure of Facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offline-Temporary Closure of Facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operational</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pre-operational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Record Closed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VerificationStatus</picklist>
+        <values>
+            <fullName>Authorized</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

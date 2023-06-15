@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perm_ACO_to_Account_Pro_SDO_Access</fullName>
+    <active>true</active>
+    <description>ACO to Account and Provider to Service Delivery Organisation record access</description>
+    <errorConditionFormula>AND(
+OR(ISNEW(),
+NOT(ISNEW()
+)),
+AND(
+OR(
+RecordType.DeveloperName = &apos;ACO_to_Account&apos;,
+RecordType.DeveloperName = &apos;Provider_to_Service_Delivery_Organisation&apos;),
+NOT(
+OR(
+$Permission.GPMS_System_Administrator,
+$Permission.GPMS_CHSP,
+$Permission.GPMS_NATSIFAC,
+$Permission.GPMS_ACQSC_User,
+$Permission.System_Administrator
+))))</errorConditionFormula>
+    <errorMessage>You do not have access to edit this record</errorMessage>
+</ValidationRule>

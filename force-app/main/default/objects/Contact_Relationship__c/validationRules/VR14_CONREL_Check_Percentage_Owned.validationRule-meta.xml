@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR14_CONREL_Check_Percentage_Owned</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT($Setup.BypassTriggers__c.BypassValidationRules__c),OR(
+Percentage_Owned__c&lt;0.01,Percentage_Owned__c&gt;1,
+Percentage_Owned__c*100-FLOOR(Percentage_Owned__c*100)&lt;&gt;0,
+Account_Total_Percentage__c&gt;100
+))</errorConditionFormula>
+    <errorDisplayField>Percentage_Owned__c</errorDisplayField>
+    <errorMessage>Please enter a whole number between 1 and 100 and ensure Total Percentage Ownership &lt;=100.</errorMessage>
+</ValidationRule>

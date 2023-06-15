@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applications_For_Assessment</fullName>
+    <columns>NAME</columns>
+    <columns>Application_Reference_Number_F__c</columns>
+    <columns>Application_Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Application_Status__c</field>
+        <operation>equals</operation>
+        <value>For Assessment</value>
+    </filters>
+    <label>Applications For Assessment</label>
+</ListView>

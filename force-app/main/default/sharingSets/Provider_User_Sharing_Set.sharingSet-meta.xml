@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>Account</object>
+        <objectField>Id</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Application__c</object>
+        <objectField>Account__c</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>BusinessLicense</object>
+        <objectField>Continuing_Service__c.Account</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>Care_Type__c</object>
+        <objectField>Account__c</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Case</object>
+        <objectField>Account</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>Contact_Relationship__c</object>
+        <objectField>Contact__c</objectField>
+        <userField>Contact</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>File_Staging__c</object>
+        <objectField>Provider__c</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Form__c</object>
+        <objectField>Account__c</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <description>Provider user sharing set</description>
+    <name>Provider User Sharing Set</name>
+    <profiles>org admin</profiles>
+    <profiles>provider user</profiles>
+</SharingSet>

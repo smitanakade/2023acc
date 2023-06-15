@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Address_Location_GPMS_Tier_2_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Address Location GPMS Tier 2 Admin</label>
+        <sharedTo>
+            <group>GPMS_Internal_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Account Address,Contact Address,Service Address</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_All_Address_Location_Records_To_ACQSC_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share All Address Location Records To ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Account Address,Service Address,Contact Address</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_All_Address_Location_Records_To_CHSP_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share All Address Location Records To CHSP Users</label>
+        <sharedTo>
+            <group>GPMS_CHSP_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Account Address,Service Address,Contact Address</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_All_Address_Location_Records_To_GPMS_System_Admin_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share All Address Location Records To GPMS System Admin Users</label>
+        <sharedTo>
+            <group>GPMS_System_Administrator</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Account Address,Contact Address,Service Address</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_All_Address_Location_Records_To_NATSIFAC_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share All Address Location Records To NATSIFAC Users</label>
+        <sharedTo>
+            <group>GPMS_NATSIFAC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Account Address,Service Address,Contact Address</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Non_Residential_Address_To_Partner_Government_Org_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Non-Residential Address To Partner Government Org Users</label>
+        <sharedTo>
+            <group>GPMS_Partnered_Government_Org_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Location_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Residential Address</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Service_Postal_Records_To_Central_Office_Staff_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Service Postal Records To Central Office Staff Users</label>
+        <sharedTo>
+            <group>GPMS_Central_Office_Staff_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Service Address</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Location_Type__c</field>
+            <operation>equals</operation>
+            <value>Postal</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Service_Records_To_STO_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Service Records To STO Users</label>
+        <sharedTo>
+            <group>GPMS_STO_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Service Address</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_with_Portal_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share with Portal User</label>
+        <sharedTo>
+            <allCustomerPortalUsers></allCustomerPortalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>CreatedById</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

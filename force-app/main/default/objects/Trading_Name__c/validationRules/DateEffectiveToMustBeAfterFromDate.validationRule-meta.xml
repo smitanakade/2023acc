@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DateEffectiveToMustBeAfterFromDate</fullName>
+    <active>true</active>
+    <description>Date Effective To must be after Date Effective From Date</description>
+    <errorConditionFormula>AND(NOT(ISBLANK(Date_Effective_To__c)),Date_Effective_To__c&lt;Date_Effective_From__c )</errorConditionFormula>
+    <errorDisplayField>Date_Effective_To__c</errorDisplayField>
+    <errorMessage>Date Effective To  date must be after Date Effective From date</errorMessage>
+</ValidationRule>

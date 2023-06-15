@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NATSIFAC_Service</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>NATSIFAC_Service</compactLayoutAssignment>
+    <description>Used to record NATSIFAC Services</description>
+    <label>NATSIFAC Service</label>
+    <picklistValues>
+        <picklist>JurisdictionType</picklist>
+        <values>
+            <fullName>COUNTRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COUNTY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROVINCE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Funded</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Not Funded</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Non-Operational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opened</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Operational End</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Operational Start</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VerificationStatus</picklist>
+        <values>
+            <fullName>Authorized</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

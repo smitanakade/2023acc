@@ -1,0 +1,52 @@
+<template>
+    <div class="filter-search-layout">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item padding="around-small">
+                <lightning-input
+                    name="search"
+                    type="search"
+                    label="Search by upload ID or file name"
+                    placeholder="Search upload ID or file name"
+                    class="lightning-input_input"
+                    onchange={handleTextChange}
+                ></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <c-multi-select-combobox
+                    name="reportingQuarters"
+                    label="Reporting quarter"
+                    placeholder="All periods"
+                    options={reportingQuarterOptions}
+                    onchange={handleMultiSelectChange}
+                ></c-multi-select-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <c-multi-select-combobox
+                    name="statuses"
+                    label="Status"
+                    placeholder="All statuses"
+                    options={statusOptions}
+                    onchange={handleMultiSelectChange}
+                ></c-multi-select-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item alignment-bump="top" padding="around-small">
+                <div class="slds-m-top_x-small">
+                    <lightning-button
+                        variant="brand"
+                        label="Apply Filters"
+                        title="Apply Filters"
+                        class="filter-button slds-m-left_x-small slds-m-top_x-small"
+                        onclick={handleFilterClick}
+                    ></lightning-button>
+                    <lightning-button
+                        variant="base"
+                        label="Clear Filters"
+                        title="Clear Filters"
+                        class="filter-button-clear slds-m-left_x-small"
+                        onclick={handleClearClick}
+                    ></lightning-button>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

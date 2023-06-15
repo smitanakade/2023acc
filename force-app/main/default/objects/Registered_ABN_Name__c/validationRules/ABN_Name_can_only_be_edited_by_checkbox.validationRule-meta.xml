@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ABN_Name_can_only_be_edited_by_checkbox</fullName>
+    <active>true</active>
+    <description>ABN details can only be edited by Update ABN function</description>
+    <errorConditionFormula>AND(
+NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+NOT(ISNEW()), NOT(IsUpdateABNFunction__c), NOT(PRIORVALUE(IsUpdateABNFunction__c))
+)</errorConditionFormula>
+    <errorMessage>ABN details can only be edited by Update ABN function</errorMessage>
+</ValidationRule>

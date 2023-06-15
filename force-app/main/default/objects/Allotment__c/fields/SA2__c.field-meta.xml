@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA2__c</fullName>
+    <externalId>false</externalId>
+    <label>SA2</label>
+    <summarizedField>Service_Delivery_Area__c.Number_of_Places__c</summarizedField>
+    <summaryFilterItems>
+        <field>Service_Delivery_Area__c.Type__c</field>
+        <operation>equals</operation>
+        <value>SA2</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Service_Delivery_Area__c.Allotment__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

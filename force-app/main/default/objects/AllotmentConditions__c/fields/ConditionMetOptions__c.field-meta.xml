@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ConditionMetOptions__c</fullName>
+    <description>Condition must be met options</description>
+    <externalId>false</externalId>
+    <label>Condition Met Options</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>By a date [x] [period] after the date this allocation takes effect</fullName>
+                <default>false</default>
+                <label>By a date [x] [period] after the date this allocation takes effect</label>
+            </value>
+            <value>
+                <fullName>Within [x] [period] after determination has been made under section 15-1 that the Approved Provider is ready to provide care</fullName>
+                <default>false</default>
+                <label>Within [x] [period] after determination has been made under section 15-1 that the Approved Provider is ready to provide care</label>
+            </value>
+            <value>
+                <fullName>By [DATE]</fullName>
+                <default>false</default>
+                <label>By [DATE]</label>
+            </value>
+            <value>
+                <fullName>Before determination can be made under section that 15-1 that the Approved Provider is ready to provide care</fullName>
+                <default>false</default>
+                <label>Before determination can be made under section that 15-1 that the Approved Provider is ready to provide care</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

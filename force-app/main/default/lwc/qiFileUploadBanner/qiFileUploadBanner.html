@@ -1,0 +1,21 @@
+<template>
+    <div class="container">
+        <lightning-layout horizontal-align="spread" vertical-align="center" class="height-100">
+            <lightning-layout-item padding="around-small">
+                <lightning-badge label={orgName} class="name-badge"></lightning-badge>
+                <p class="title slds-text-heading_large slds-m-top_x-small">
+                    {titleName}
+                </p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">            
+                <lightning-button
+                    variant="neutral"
+                    class="close-button"
+                    label="Close"
+                    icon-name="utility:close"
+                    onclick={handleBack}
+                ></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

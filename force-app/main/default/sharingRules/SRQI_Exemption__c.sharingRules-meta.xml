@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Exemption_GPMS_ACQSC_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Exemption GPMS ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CM Exemption,CER Exemption,QI Exemption,SCR Exemption</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Exemption_with_Star_Rating_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Exemption with Star Rating User</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CM Exemption,CER Exemption,QI Exemption,SCR Exemption</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Exemptions_GPMS_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Exemptions GPMS ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CM Exemption,CER Exemption,QI Exemption,SCR Exemption</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

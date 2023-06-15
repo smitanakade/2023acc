@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExpiryDate_before_EffectiveDate</fullName>
+    <active>true</active>
+    <errorConditionFormula>Decision_Type_Expiry_Date__c &lt; Decision_Type_Effective_Date__c</errorConditionFormula>
+    <errorDisplayField>Decision_Type_Expiry_Date__c</errorDisplayField>
+    <errorMessage>Decision Type Expiry Date cannot be earlier than the Decision Type Effective Date</errorMessage>
+</ValidationRule>

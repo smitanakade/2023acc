@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GPMS_Percentage_of_Places__c</fullName>
+    <description>Convert number of places to percentage</description>
+    <externalId>false</externalId>
+    <formula>IF(OR(ISBlANK(GPMS_of_Places__c),GPMS_of_Places__c == 0), IF(OR(ISBlANK(GPMS_PercentageMinimumPlaces__c), GPMS_PercentageMinimumPlaces__c==0), IF(OR(ISBlANK(GPMS_MinimumNumberOfPlaces__c), GPMS_MinimumNumberOfPlaces__c==0), (GPMS_Number_of_Places__c/ Allotment__r.Number_of_Places__c), (GPMS_MinimumNumberOfPlaces__c/ Allotment__r.Number_of_Places__c)), GPMS_PercentageMinimumPlaces__c), GPMS_of_Places__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Percentage of Places</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

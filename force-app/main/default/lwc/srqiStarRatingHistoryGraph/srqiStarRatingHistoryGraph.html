@@ -1,0 +1,14 @@
+<template>
+    <lightning-card class="chart-box">
+        <div class="slds-grid slds-wrap slds-grid_pull-padded">
+            <div if:true={isChartJsInitialized} class="slds-col_padded slds-size_1-of-1">
+                <canvas class="line-chart" lwc:dom="manual"></canvas>
+            </div>
+            <div if:false={isChartJsInitialized} class="slds-col_padded slds-size_1-of-1">
+                <lightning-spinner alternative-text="Loading" size="medium" variant="base"></lightning-spinner>
+            </div>
+            <div class="slds-col_padded slds-size_1-of-1">
+            </div>
+        </div>
+    </lightning-card>
+</template>

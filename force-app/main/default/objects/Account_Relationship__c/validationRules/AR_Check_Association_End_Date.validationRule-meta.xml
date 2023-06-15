@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AR_Check_Association_End_Date</fullName>
+    <active>true</active>
+    <description>Can be future dated up to 5 years in advance. From 1997.</description>
+    <errorConditionFormula>AND(NOT($Setup.BypassTriggers__c.BypassValidationRules__c),Not(ISBLANK(Association_End_Date__c)),OR(Year(Association_End_Date__c)&lt;1997,Association_End_Date__c&gt; ADDMONTHS(TODAY(), 60),Association_End_Date__c&lt;Association_Start_Date__c))</errorConditionFormula>
+    <errorDisplayField>Association_End_Date__c</errorDisplayField>
+    <errorMessage>Can be future dated up to 5 years in advance. From 1997. Association End Date should be after Association Start Date.</errorMessage>
+</ValidationRule>

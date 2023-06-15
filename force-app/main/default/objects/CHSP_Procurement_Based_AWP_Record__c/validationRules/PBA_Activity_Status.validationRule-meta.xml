@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PBA_Activity_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>!(ISPICKVAL(Activity_Status__c,&apos;Inactive&apos;)||ISPICKVAL( Activity_Status__c,&apos;Approved&apos;))</errorConditionFormula>
+    <errorDisplayField>Activity_Status__c</errorDisplayField>
+    <errorMessage>The activity status is not valid, Please check the line item.</errorMessage>
+</ValidationRule>

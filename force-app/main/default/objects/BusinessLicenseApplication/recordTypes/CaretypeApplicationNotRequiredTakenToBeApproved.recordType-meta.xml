@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CaretypeApplicationNotRequiredTakenToBeApproved</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Application</compactLayoutAssignment>
+    <description>Caretype Application - Not Required - Taken To Be Approved</description>
+    <label>Caretype Application - Not Required - Taken To Be Approved</label>
+    <picklistValues>
+        <picklist>ApplicationCategory</picklist>
+        <values>
+            <fullName>Basic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ApplicationType</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CareTypes__c</picklist>
+        <values>
+            <fullName>Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flexible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category</picklist>
+        <values>
+            <fullName>License</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CurrentStatus__c</picklist>
+        <values>
+            <fullName>Applicant applied to AAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Submitted - Fee payment pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application invalid - not accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application not required - already approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application submission receipt</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Assessment not required - taken to be approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delegate%27s Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fee Waiver Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fee waiver review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finalise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>For Delegate%27s Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>For Formal Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>For Initial Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>For Quality Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>For fee waiver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formal Assessment RFI - Fee payment pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formal Assessment RFI Response Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Assessment RFI - Fee payment pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Assessment RFI Response Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obsolete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFI Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFI Extension Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFI Extension Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration Decisions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration Request Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Formal Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Initial Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Quality Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn %E2%80%93 By Applicant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn %E2%80%93 Under 63C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NewStatus__c</picklist>
+        <values>
+            <fullName>Applicant applied to AAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application invalid - not accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application not required - already approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application submission receipt</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Application submitted - Fee payment pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assessment not required - taken to be approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delegate%27s Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fee waiver decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fee waiver review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finalise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>For Delegate%27s Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>For Formal Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>For Initial Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>For Quality Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>For fee waiver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formal Assessment RFI - Fee payment pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formal Assessment RFI Response Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Assessment RFI - Fee payment pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Assessment RFI Response pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obsolete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFI Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFI Extension Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFI Extension Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration Decisions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration request review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Formal Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Initial Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Quality Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn %E2%80%93 By Applicant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn %E2%80%93 Under 63C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

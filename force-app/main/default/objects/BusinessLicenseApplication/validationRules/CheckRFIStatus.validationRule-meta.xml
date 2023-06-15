@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckRFIStatus</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( 
+NOT(RFISentToReviewerOrDelegate__c),
+NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+OR(
+ISPICKVAL(NewStatus__c , &apos;Initial Assessment RFI - Fee payment pending&apos;),
+ISPICKVAL(NewStatus__c , &apos;Initial Assessment RFI Response pending&apos;),
+ISPICKVAL(NewStatus__c , &apos;Formal Assessment RFI - Fee payment pending&apos;),
+ISPICKVAL(NewStatus__c , &apos;Formal Assessment RFI Response Pending&apos;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>NewStatus__c</errorDisplayField>
+    <errorMessage>You Can&apos;t change application status to  &apos;Initial Assessment RFI - Fee payment pending&apos; or &apos;Formal Assessment RFI Response Pending&apos; unless RFI status has previously been in either of &apos;Send to Reviewer&apos; or &apos;Send to Delegate&apos;</errorMessage>
+</ValidationRule>

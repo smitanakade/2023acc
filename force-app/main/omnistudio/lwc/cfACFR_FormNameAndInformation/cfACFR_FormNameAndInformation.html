@@ -1,0 +1,103 @@
+<template>
+            <div class="nds-grid nds-wrap nds-is-relative containersize">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <omnistudio-toast class="flexcard-toast-element" theme="nds" title="" message="" styletype=""> </omnistudio-toast>
+</div>
+            <div if:true={showLoader} class="nds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <omnistudio-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="small"
+      theme="nds"
+      ></omnistudio-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state nds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="nds-grid nds-wrap nds-theme_default nds-p-around_x-small nds-m-bottom_x-small " style="background-color:#fff;  background-repeat:repeat;    
+        color:#000; ">
+          <div data-style-id="state0element0" class="nds-col   nds-p-around_x-small  nds-size_12-of-12  " data-rindex={rindex} style="background-color:#fff;      
+         " >
+    <omnistudio-block data-style-id="state0element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="BKNHeader"  theme="nds"  ><div class="nds-grid nds-wrap">
+          <div data-style-id="state0element0block_element0" class="nds-col   nds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element0_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-size:%2024pt;%22%3E%3Cstrong%3E%3Cspan%20class=%22%22%20style=%22font-family:%20'Salesforce%20Sans',%20Arial,%20sans-serif;%22%3E%7BForm_Name%7D%3C/span%3E%3C/strong%3E%3C/span%3E%3C/div%3E"  theme="nds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element1" class="nds-col   nds-border_top nds-border_right nds-border_bottom nds-border_left nds-p-around_small nds-p-top_medium nds-m-top_x-small  nds-size_12-of-12  " data-rindex={rindex} style="background-color:#F7FCFD;  background-repeat:initial;   border-top: #E8F4F9 1px solid;border-right: #E8F4F9 1px solid;border-bottom: #E8F4F9 1px solid;border-left: #E8F4F9 1px solid; 
+    border-radius:2px;     " >
+    <omnistudio-block data-style-id="state0element1_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label=""  theme="nds"  ><div class="nds-grid nds-wrap">
+          <div data-style-id="state0element1block_element0" class="slds-col   slds-size_1-of-12  " data-rindex={rindex} style="      
+         width:30px ;" ><omnistudio-flex-icon data-style-id="state0element1block_element0_child"   record={record}  card={card}  color="#04819C"  extraclass=""  icon-name="utility:info"  icon-type="Salesforce SVG"  imgsrc=""  size="small"  variant="default"  theme="nds"  ></omnistudio-flex-icon>
+      </div><div data-style-id="state0element1block_element1" class="nds-col   nds-text-align_left nds-p-bottom_xxx-small  nds-size_11-of-12  " data-rindex={rindex} style="      
+         " >
+    <omnistudio-block data-style-id="state0element1block_element1_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="true"  label="\{Form_Subject}"  styles='\{"label":{"color":"#000","fontFamily":"","fontSize":"20px"}}'  theme="nds"  ><div class="nds-grid nds-wrap">
+          <div data-style-id="state0element1block_element1block_element0" class="nds-col   nds-p-left_small nds-p-left_medium  nds-size_12-of-12  " data-rindex={rindex} style="      
+         " >
+    <omnistudio-block data-style-id="state0element1block_element1block_element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="nds"  ><div class="nds-grid nds-wrap">
+          <div data-style-id="state0element1block_element1block_element0block_element0" class="nds-col    nds-size_12-of-12  " data-rindex={rindex} style="background-color:#F7FCFD;      
+         " ><omnistudio-output-field data-style-id="state0element1block_element1block_element0block_element0_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-family:%20'Salesforce%20Sans',%20Arial,%20sans-serif;%20font-size:%2014pt;%20color:%20#333333;%22%3E%7BAbout_This_Form%7D%3C/span%3E%3C/div%3E"  theme="nds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <omnistudio-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state nds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="nds-grid nds-wrap nds-theme_default nds-p-around_x-small nds-m-bottom_x-small " style="background-color:#fff;  background-repeat:repeat;    
+        color:#000; ">
+          <div data-style-id="state0element0" class="nds-col   nds-p-around_x-small  nds-size_12-of-12  " data-rindex={rindex} style="background-color:#fff;      
+         " >
+    <omnistudio-block data-style-id="state0element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="BKNHeader"  theme="nds"  ><div class="nds-grid nds-wrap">
+          <div data-style-id="state0element0block_element0" class="nds-col   nds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element0_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-size:%2024pt;%22%3E%3Cstrong%3E%3Cspan%20class=%22%22%20style=%22font-family:%20'Salesforce%20Sans',%20Arial,%20sans-serif;%22%3E%7BForm_Name%7D%3C/span%3E%3C/strong%3E%3C/span%3E%3C/div%3E"  theme="nds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element1" class="nds-col   nds-border_top nds-border_right nds-border_bottom nds-border_left nds-p-around_small nds-p-top_medium nds-m-top_x-small  nds-size_12-of-12  " data-rindex={rindex} style="background-color:#F7FCFD;  background-repeat:initial;   border-top: #E8F4F9 1px solid;border-right: #E8F4F9 1px solid;border-bottom: #E8F4F9 1px solid;border-left: #E8F4F9 1px solid; 
+    border-radius:2px;     " >
+    <omnistudio-block data-style-id="state0element1_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label=""  theme="nds"  ><div class="nds-grid nds-wrap">
+          <div data-style-id="state0element1block_element0" class="slds-col   slds-size_1-of-12  " data-rindex={rindex} style="      
+         width:30px ;" ><omnistudio-flex-icon data-style-id="state0element1block_element0_child"   record={record}  card={card}  color="#04819C"  extraclass=""  icon-name="utility:info"  icon-type="Salesforce SVG"  imgsrc=""  size="small"  variant="default"  theme="nds"  ></omnistudio-flex-icon>
+      </div><div data-style-id="state0element1block_element1" class="nds-col   nds-text-align_left nds-p-bottom_xxx-small  nds-size_11-of-12  " data-rindex={rindex} style="      
+         " >
+    <omnistudio-block data-style-id="state0element1block_element1_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="true"  label="\{Form_Subject}"  styles='\{"label":{"color":"#000","fontFamily":"","fontSize":"20px"}}'  theme="nds"  ><div class="nds-grid nds-wrap">
+          <div data-style-id="state0element1block_element1block_element0" class="nds-col   nds-p-left_small nds-p-left_medium  nds-size_12-of-12  " data-rindex={rindex} style="      
+         " >
+    <omnistudio-block data-style-id="state0element1block_element1block_element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="nds"  ><div class="nds-grid nds-wrap">
+          <div data-style-id="state0element1block_element1block_element0block_element0" class="nds-col    nds-size_12-of-12  " data-rindex={rindex} style="background-color:#F7FCFD;      
+         " ><omnistudio-output-field data-style-id="state0element1block_element1block_element0block_element0_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-family:%20'Salesforce%20Sans',%20Arial,%20sans-serif;%20font-size:%2014pt;%20color:%20#333333;%22%3E%7BAbout_This_Form%7D%3C/span%3E%3C/div%3E"  theme="nds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <omnistudio-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </omnistudio-action>
+  
+            <omnistudio-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </omnistudio-action>
+            </div>
+          </template>

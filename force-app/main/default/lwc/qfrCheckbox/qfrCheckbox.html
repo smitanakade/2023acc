@@ -1,0 +1,27 @@
+<template>
+  <div class='qfr-checkbox'>
+    <input type="checkbox" id="test1" 
+      value={value} 
+      disabled={disabled}
+      readonly={readOnly}
+      onchange={handleChange}
+      required={required}/>
+    <label for="test1">
+      <slot>{label}</slot>
+      <p>{additionalInfo}</p>
+      <template if:true={error}>
+        <p class="error">
+          <svg fill="none" height="16" width="16" viewBox="0 0 24 24">
+            <clipPath id="a">
+              <path d="m0 0h24v24h-24z"/>
+            </clipPath>
+            <g clip-path="url(#a)">
+              <path d="m1 21h22l-11-19zm12-3h-2v-2h2zm0-4h-2v-4h2z" fill="#970A3A"/>
+            </g>
+          </svg>
+          {getError}
+        </p>
+      </template>
+    </label>
+  </div>
+</template>

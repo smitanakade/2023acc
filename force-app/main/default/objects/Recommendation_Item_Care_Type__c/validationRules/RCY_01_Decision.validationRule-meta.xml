@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RCY_01_Decision</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(TEXT(Decision_Type__c)=&quot;Set aside the decision and substitute a new decision&quot;||TEXT(Decision_Type__c)=&quot;Vary&quot;,ISBLANK(TEXT(Decision__c)))</errorConditionFormula>
+    <errorDisplayField>Decision__c</errorDisplayField>
+    <errorMessage>Decision is mandatory.</errorMessage>
+</ValidationRule>

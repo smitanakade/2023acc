@@ -1,0 +1,68 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "0fa6ebf4-f166-4a50-80ca-d31da1fb620a",
+  "label" : "QFR Report Download",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "79cd6e23-5a3f-4432-a49d-aaacab622278",
+          "columns" : [ {
+            "UUID" : "268da063-a19f-4987-b3a9-e2d2186f8dfd",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "79cd6e23-5a3f-4432-a49d-aaacab622278",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:qfrDraftDownload",
+          "id" : "7534c48a-8608-4218-ae47-3737ad6075ce",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "268da063-a19f-4987-b3a9-e2d2186f8dfd",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8877b30d-28f5-48ef-bb0e-e3e9b98341aa",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "QFR Report Download"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "2b2d4c4e-ef00-40bf-b8fc-44d07ce6bd40",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "bfb1ea4e-ad43-4751-9934-00a54c3e6213",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-qfr-report-download"
+}

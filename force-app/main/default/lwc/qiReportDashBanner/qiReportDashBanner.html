@@ -1,0 +1,37 @@
+<template>
+    <lightning-layout multiple-rows class="container">
+        <lightning-layout-item
+            size="12"
+            flexibility="auto"
+            padding="horizontal-small"
+        >
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="4" padding="around-small">
+                    <button
+                        onclick={handleBack}
+                        class="slds-button"
+                        label="Back"
+                        title="Back"
+                    >
+                        <lightning-icon
+                            icon-name="utility:chevronleft"
+                            alternative-text="chevronleft"
+                            size="x-small"
+                            class="icon1"
+                            title="back"
+                        ></lightning-icon>
+                        <p class="align">Back</p>
+                    </button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-layout-item>
+        <lightning-layout-item
+            size="12"
+            flexibility="auto"
+            padding="around-medium"
+            class="slds-text-align_left title"
+        >
+            <p>Quality Indicator Reporting Dashboard</p>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

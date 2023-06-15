@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk_Adjusted_National_PI__c</fullName>
+    <externalId>false</externalId>
+    <formula>(Risk_Adjusted_National_PI_Stage2__c + Risk_Adjusted_National_PI_Stage3__c + Risk_Adjusted_National_PI_Stage4__c + Risk_Adjusted_National_PI_Unstageable__c + Risk_Adjusted_National_PI_DT__c)/5</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Risk Adjusted National PI</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

@@ -1,0 +1,40 @@
+<template>
+    <h3>What the responses mean</h3>
+    <hr class="srqi-hr slds-m-bottom_large slds-m-top_small">
+    <lightning-layout multiple-rows>
+        <lightning-layout-item>
+            <div class="slds-grid">
+                <div><img class="slds-p-right_small slds-p-top_xx-small" src={iconFaceAlways} alt=""/></div>
+                <div><h4 class="face-label">Always</h4></div>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <div class="slds-grid">
+                <div><img class="slds-p-right_medium slds-p-top_xx-small" src={iconFaceMostOfTheTime} alt=""/></div>
+                <div><h4 class="face-label">Most of the Time</h4></div>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <div class="slds-grid">
+                <div><img class="slds-p-right_medium slds-p-top_xx-small" src={iconFaceSomeOfTheTime} alt=""/></div>
+                <div><h4 class="face-label">Some of the Time</h4></div>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <div class="slds-grid">
+                <div><img class="slds-p-right_medium slds-p-top_xx-small" src={iconFaceNever} alt=""/></div>
+                <div><h4 class="slds-var-m-top_small slds-var-m-bottom_large">Never</h4></div>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+    <h3 class="slds-m-top_xx-large">Resident Survey Results</h3>
+    <hr class="slds-m-top_medium slds-m-bottom_xx-large srqi-hr">
+    <c-srqi-custom-data-table
+        class="slds-max-medium-table_stacked srqi-rating-details-table"
+        columns={dataTableColumns}
+        column-widths-mode="auto"
+        data={ratingDetails}
+        hide-checkbox-column="true"
+        key-field="Id"
+    ></c-srqi-custom-data-table>
+</template>

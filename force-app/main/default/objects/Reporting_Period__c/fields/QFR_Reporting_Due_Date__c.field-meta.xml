@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QFR_Reporting_Due_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+BEGINS(QFR_Reporting_Period__c, &apos;Q1&apos;),  (End_Date__c + $CustomMetadata.QFR_Due_Date__mdt.Q1.Number_Of_Days__c), 
+If(BEGINS(QFR_Reporting_Period__c, &apos;Q2&apos;),  (End_Date__c + $CustomMetadata.QFR_Due_Date__mdt.Q2.Number_Of_Days__c),
+If(BEGINS(QFR_Reporting_Period__c, &apos;Q3&apos;),  (End_Date__c + $CustomMetadata.QFR_Due_Date__mdt.Q3.Number_Of_Days__c), 
+If(BEGINS(QFR_Reporting_Period__c, &apos;Q4&apos;),  (End_Date__c + $CustomMetadata.QFR_Due_Date__mdt.Q4.Number_Of_Days__c),  End_Date__c ))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>QFR Due Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

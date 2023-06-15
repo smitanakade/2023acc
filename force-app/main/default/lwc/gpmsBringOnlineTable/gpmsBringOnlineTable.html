@@ -1,0 +1,43 @@
+<template>
+
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Packet ID</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Care Type</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Care Level</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Care Setting</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Care Setting Effective Date</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Number of Places</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Current Status</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Status Effective Date</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Number of places to take effect</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Number of Places to remain Provisional</div></th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            
+            <template for:each={allotment} for:item="place">
+                <tr class="slds-hint-parent" key={place.Id}>
+                    <td><div class="slds-truncate slds-line-clamp"><lightning-formatted-url label={place.PacketId} value={place.PacketUrl} target="_blank"></lightning-formatted-url></div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.CareType}</div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.CareLevel}</div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.CareSetting}</div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.CareSettingEffectiveDate}</div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.NumberofPlaces}</div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.StatusofPlaces}</div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{operationalDate}</div></td>
+                    <td>
+                        <div class="slds-truncate">
+                            <lightning-input type="number" name={place.Id} value={place.NumberOfChanges} required max={place.NumberofPlaces} min="0" step="1" message-when-step-mismatch="Invalid Number" message-when-range-overflow="Number exceeds allocation" onchange={updateNumerOfCeased}></lightning-input>
+                        </div>
+                    </td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.numberOfAfterBringOnline}</div></td>
+                </tr>
+            </template>
+            
+        </tbody>
+    </table>
+        
+</template>

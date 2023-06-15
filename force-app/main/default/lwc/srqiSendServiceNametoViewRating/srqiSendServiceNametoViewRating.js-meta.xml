@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property
+                    label="Show QI sub-category rating details"
+                    name="showQIRatingDetails"
+                    type="Boolean"
+                    default="true"
+            >
+            </property>
+            <property
+                    label="Show CM sub-category rating details"
+                    name="showCMRatingDetails"
+                    type="Boolean"
+                    default="true"
+            >
+            </property>
+            <property
+                    label="Show SCR sub-category rating details"
+                    name="showSCRRatingDetails"
+                    type="Boolean"
+                    default="true"
+            >
+            </property>
+            <property
+                    label="Show CER sub-category rating details"
+                    name="showCERRatingDetails"
+                    type="Boolean"
+                    default="true"
+            >
+            </property>
+            <property
+                    label="JSON for QI rating details data table field mapping"
+                    name="qiDatatableFieldMappingJSON"
+                    type="String"
+                    default="[]"
+            >
+            </property>
+            <property
+                    label="JSON for CM rating details data table field mapping"
+                    name="cmDatatableFieldMappingJSON"
+                    type="String"
+                    default="[]"
+            >
+            </property>
+            <property
+                    label="JSON for CER rating details data table field mapping"
+                    name="cerDatatableFieldMappingJSON"
+                    type="String"
+                    default="[]"
+            >
+            </property>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

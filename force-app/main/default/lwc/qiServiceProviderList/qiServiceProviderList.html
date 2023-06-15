@@ -1,0 +1,35 @@
+<!--
+  @description       : Service provider list
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-03-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+
+<template>
+    <template if:false={showSpinner}>
+        <div if:true={dataTable}>
+              <c-srqi-custom-data-table
+                  class="slds-max-medium-table_stacked"
+                  columns={dataTableColumns}
+                  data={visibleDataTable}
+                  hide-checkbox-column="true"
+                  key-field="serviceIDAndRPEndDate"       
+                  sorted-by={sortedBy}
+                  sorted-direction={sortedDirection}
+                  onsort={onSortData}
+                  onbuttonmethod={handleButtonMethod}
+              ></c-srqi-custom-data-table>
+          </div>
+          <hr class="slds-m-top_small slds-m-bottom_xxx-small"/>
+          <!--The Lightning Datatable Pagination control being demonstrated-->
+          <c-srqi-Data-Table-Pagination-Star-Rating records={dataTable} onupdate={updateDataTableHandler} show-results=true>
+          </c-srqi-Data-Table-Pagination-Star-Rating>
+          <hr class="slds-m-top_small slds-m-bottom_medium"/>
+    </template>
+    <template if:true={showSpinner}>
+      <div  class="slds-is-relative">
+        <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+      </div>
+    </template>
+</template>

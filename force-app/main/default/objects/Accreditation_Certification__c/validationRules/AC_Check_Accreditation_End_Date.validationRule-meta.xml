@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AC_Check_Accreditation_End_Date</fullName>
+    <active>true</active>
+    <description>Accreditation End Date should be after Accreditation Start Date.</description>
+    <errorConditionFormula>AND(NOT($Setup.BypassTriggers__c.BypassValidationRules__c),!ISBLANK(End_Date__c),End_Date__c&lt;Start_Date__c)</errorConditionFormula>
+    <errorMessage>End Date should be after Start Date.</errorMessage>
+</ValidationRule>

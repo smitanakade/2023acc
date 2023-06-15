@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Org_URL__c</fullName>
+    <description>custom meta data types</description>
+    <externalId>false</externalId>
+    <formula>IF($Organization.Id = &apos;00D9h0000009Mfd&apos;, $CustomMetadata.URL_Metadata__mdt.Dev_Org_URL.URL__c, IF($Organization.Id = &apos;00D9p000000gCj7&apos;, $CustomMetadata.URL_Metadata__mdt.Dit_Org_URL.URL__c,$CustomMetadata.URL_Metadata__mdt.Prod_Org_URL.URL__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Org URL</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

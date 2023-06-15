@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR01_CONREL_EndDate</fullName>
+    <active>true</active>
+    <description>Employment End date should be after Employment Start Date</description>
+    <errorConditionFormula>AND(!ISBLANK(Employment_End_Date__c),Employment_End_Date__c&lt;Employment_Start_Date__c )</errorConditionFormula>
+    <errorDisplayField>Employment_End_Date__c</errorDisplayField>
+    <errorMessage>Employment End date should be after Employment Start Date</errorMessage>
+</ValidationRule>

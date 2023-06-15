@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GPMS_Care_Level_Community__c</fullName>
+    <description>Count number of Community care type from places</description>
+    <externalId>false</externalId>
+    <label>Care Level: Community</label>
+    <summarizedField>Places_Allotment__c.Number_of_Places__c</summarizedField>
+    <summaryFilterItems>
+        <field>Places_Allotment__c.Care_Level__c</field>
+        <operation>equals</operation>
+        <value>Community</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Places_Allotment__c.Current__c</field>
+        <operation>equals</operation>
+        <value>Yes</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Places_Allotment__c.Allotment__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage1PressureInjuryOutsideTotal</fullName>
+    <active>true</active>
+    <description>Validate the number of care recipients with stage 1 pressure injuries acquired outside of the service is not greater than the number of care recipients with stage 1 pressure injuries.</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    BLANKVALUE(No_CR_One_More_PI_AcqStage1__c, 0) &gt; BLANKVALUE(No_CR_One_More_PI_Stage1__c, 0)
+)</errorConditionFormula>
+    <errorDisplayField>No_CR_One_More_PI_AcqStage1__c</errorDisplayField>
+    <errorMessage>Number of stage 1 pressure injuries acquired outside of the service cannot be higher than the total number of stage 1 pressure injuries.</errorMessage>
+</ValidationRule>

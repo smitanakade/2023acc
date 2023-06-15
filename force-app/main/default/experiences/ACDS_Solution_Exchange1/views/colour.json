@@ -1,0 +1,135 @@
+{
+  "appPageId" : "57e9e222-6b9e-43ba-bf54-9d4c062f85f5",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "00d4e0a2-a991-456f-baf8-c033688f5125",
+  "label" : "Colour",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "c8a1f68b-1861-4431-ba5f-05c7c852adc9",
+          "columns" : [ {
+            "UUID" : "72cdf3a6-4e82-47ed-9543-5805fbfb4dd0",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c8a1f68b-1861-4431-ba5f-05c7c852adc9",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a href=\"/solutionexchange/s/\" style=\"color: var(--color-secondary);\">Home</a>\n<a href=\"/solutionexchange/s/branding/typography\" style=\"color: var(--color-secondary);\">Branding</a>\n<span style=\"color: var(--color-secondary);\">Brand Colours</span>\n\n<br>\n<div>\n  <br>\n  <p class=\"heading-large slds-p-bottom_medium\">Brand Colours</p>\n    <p>\n        <span>Colour helps distinguish the Aged Care brand and delivers a consistent user experience across our various digital products.</span>\n        <span><img src=\"/sfsites/c/resource/solutionExchange/images/page_color_icon_s.png\" alt=\"page_layout_icon_s\"></span>\n    </p>\n \t<hr>\n    \n    <p class=\"heading-small slds-p-bottom_small\">Colour\n        <p>We use a combination of whitespace and colour to aid usability and deliver clean experiences to end users. These colours have been accessibility tested to ensure they are right for digital use. \n \t</p>\n    </p>\n\t<br/>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "21c71f2f-63d5-4770-909a-ea26500c53b6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "72cdf3a6-4e82-47ed-9543-5805fbfb4dd0",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "c1a8b843-d6bb-4917-9bed-2e7ca6c6830b",
+          "columns" : [ {
+            "UUID" : "6024bfa8-a22c-4046-95e2-e6fa3870625a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c1a8b843-d6bb-4917-9bed-2e7ca6c6830b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3>Core Palette</h3>\n<p><br></p>\n<p>These are the primary colours that should be used in all designs and serve to distinguish digital assets associated with our brand.</p>\n<p><br></p>\n<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.page_color_core.1}\"></p>\n<p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ca318bdf-14ef-48aa-9ece-7c310c274534",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<h3>Secondary Palette</h3>\n<p><br></p>\n<p>The secondary palette is a collection of lighter colours that complement our primary palette. It is used to create a more inviting experience by softening elements of the page that may be dominated by the bold primary brand colours. </p>\n<p><br></p>\n<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.page_color_secondary.1}\" alt=\"\"></p>\n<p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ee9791cb-1c83-452d-a921-4e6ab4a31a32",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<h3>Neutral Palette</h3>\n<p><br></p>\n<p>In some cases, our brand colours may not be suitable for all situations. For these situations, the colour palette includes a range of accessible neutral tones to create depth on a page. These tones may also be used for non-critical visual elements like container borders, page dividers. zebra-striping table rows, or otherwise to group or separate blocks of content. </p>\n<p><br></p>\n<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.page_color_neutral.1}\" alt=\"\"></p>\n<p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "a688c4c1-2cb6-4494-b330-f4c435f48f82",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<h3>Functional Palette</h3>\n<p><br></p>\n<p>These colours have semantic meanings, and should be reserved for functional elements or messaging, such as indicating the outcome of an action or highlighting success or failure of a task or interaction. They should be used sparingly so as not to risk confusing their meaning. While these colours carry semantic meaning, for accessibility purposes, they should not be relied on to communicate intent. You must ensure your iconography, content and placement of any messaging carries enough meaning that the colour only supplies added visual reinforcement of its intent.&nbsp;&nbsp;</p>\n<p><br></p>\n<p>Success Green</p>\n<p><br></p>\n<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.page_color_success.1}\"></p>\n<p><br></p>\n<p>Warning Yellow</p>\n<p><br></p>\n<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.page_color_yellow.1}\"></p>\n<p><br></p>\n<p>Error Red</p>\n<p><br></p>\n<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.page_color_error.1}\"></p>\n<p><br></p>\n<p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "7e634b97-8206-4e64-b1c7-18370f6ffb55",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6024bfa8-a22c-4046-95e2-e6fa3870625a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "016c6708-8b30-4877-93f7-2c662d7f6a62",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Colour | Aged Care Design System"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "d72e5c46-57b6-411b-889c-b45df3452324",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c576d656-2e16-42ea-958d-9cf2781fc5a7",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "XSr059NCM8WMoPPEHYyhva4HEamlwb",
+  "type" : "view",
+  "viewType" : "custom-colour"
+}

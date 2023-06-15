@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR08APPAppStatusCheck</fullName>
+    <active>true</active>
+    <description>Application Status cannot be set to &apos;For Assessment&apos; or &apos;Under Review&apos; if &apos;Payment Reference Number&apos; isn&apos;t provided</description>
+    <errorConditionFormula>AND(NOT($Setup.BypassTriggers__c.BypassValidationRules__c),ISBLANK(PaymentReferenceNumber__c),ISPICKVAL(NewStatus__c, &apos;Application submission receipt&apos;), NOT(ISPICKVAL(Account.Purpose__c, &apos;Government&apos;)))</errorConditionFormula>
+    <errorMessage>&apos;Payment Reference Number&apos; must be entered in &apos;Application Submission Receipt&apos; Status</errorMessage>
+</ValidationRule>

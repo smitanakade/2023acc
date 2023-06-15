@@ -1,0 +1,43 @@
+<template>
+
+    <div class="slds-section slds-is-open">
+        <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small" title="Section Title">
+                Reduce number of places
+            </span>
+        </h3>
+        <div aria-hidden="false" class="slds-section__content">
+
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Care Type</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Care Level</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Number of Places</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Reduce Number of Places By</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Number of Places after Reduction</div></th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            
+            <template for:each={allPlaces} for:item="place">
+                <tr class="slds-hint-parent" key={place.Id}>
+                    <td><div class="slds-truncate slds-line-clamp">{place.CareType}</div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.CareLevel}</div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.numberOfPlaces}</div></td>
+                    <td>
+                        <div class="slds-truncate">
+                            <lightning-input type="number" name={place.Id} value={place.NumberOfChanges} required max={place.numberOfPlaces} min="0" step="1" onchange={updateNumberOfReduction}></lightning-input>
+                        </div>
+                    </td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.NumberOfRemaining}</div></td>
+                </tr>
+            </template>
+            
+        </tbody>
+    </table>
+    </div>
+    </div>
+        
+</template>

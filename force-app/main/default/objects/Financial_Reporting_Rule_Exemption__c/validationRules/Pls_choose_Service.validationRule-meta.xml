@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pls_choose_Service</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Financial_Reporting_Rule__r.Name &lt;&gt; &apos;Net assets equals equity&apos;, ISBLANK( Service__c ))</errorConditionFormula>
+    <errorDisplayField>Service__c</errorDisplayField>
+    <errorMessage>You must provide service for this rule as this rule is applicable for services.</errorMessage>
+</ValidationRule>

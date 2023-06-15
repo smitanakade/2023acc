@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GPMS_Layer_Version__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The linked layer version table of bulk refresh</description>
+    <externalId>false</externalId>
+    <label>Geospatial Layer</label>
+    <referenceTo>GPMS_Geospatial_Information_LayerVersion__c</referenceTo>
+    <relationshipLabel>Refresh History</relationshipLabel>
+    <relationshipName>Refresh_History</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

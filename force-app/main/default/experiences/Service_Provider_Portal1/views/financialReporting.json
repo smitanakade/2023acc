@@ -1,0 +1,173 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "5b60fffc-c521-4470-a8d2-b91dcd4f4317",
+  "label" : "Financial Reporting",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "da4c20d9-621a-4914-a797-229c6a40eb55",
+          "columns" : [ {
+            "UUID" : "e5b5513b-1bb5-40f9-a349-e42ef508b863",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "da4c20d9-621a-4914-a797-229c6a40eb55",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "tabsetConfig" : {
+              "UUID" : "485a34a0-78f9-4077-870f-5f6df119f147",
+              "activeTab" : "",
+              "tabs" : [ {
+                "UUID" : "72afd13f-9e82-4933-ab71-1ee875174697",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "1",
+                "tabName" : "What's New"
+              }, {
+                "UUID" : "9aa087cb-27b6-468a-8425-eb3435344bd1",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "2",
+                "tabName" : "Reporting Due Dates"
+              }, {
+                "UUID" : "dbf8d447-5246-4022-a7b2-422c8ae98166",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "3",
+                "tabName" : "Guides & FAQs"
+              } ],
+              "useOverflowMenu" : false
+            }
+          },
+          "componentName" : "forceCommunity:tabset",
+          "id" : "485a34a0-78f9-4077-870f-5f6df119f147",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : { },
+              "componentName" : "c:cfACFR_WhatIsNew",
+              "id" : "58dc35e9-4ecb-4223-9ca7-ebd08659b111",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "72afd13f-9e82-4933-ab71-1ee875174697",
+            "regionLabel" : "What's New",
+            "regionName" : "1",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : { },
+              "componentName" : "c:cfACFR_ReportDueDates",
+              "id" : "953668e0-f166-4b2c-9ff8-0d927b750168",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "9aa087cb-27b6-468a-8425-eb3435344bd1",
+            "regionLabel" : "Reporting Due Dates",
+            "regionName" : "2",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : { },
+              "componentName" : "c:cfACFR_GuidedFAQVersion2",
+              "id" : "f94b2b71-38d8-4fe0-9694-209f1a066075",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "dbf8d447-5246-4022-a7b2-422c8ae98166",
+            "regionLabel" : "Guides & FAQs",
+            "regionName" : "3",
+            "renditionMap" : { },
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e5b5513b-1bb5-40f9-a349-e42ef508b863",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "ffec03e6-1eb7-4d94-8109-3282ca49cf5d",
+          "columns" : [ {
+            "UUID" : "3e9ecd00-be54-4a23-b099-eb85da006947",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ffec03e6-1eb7-4d94-8109-3282ca49cf5d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:cfACFR_FinancialReportTableHeader",
+          "id" : "c297d4c9-ae66-43d9-9249-23f58b3f7919",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3e9ecd00-be54-4a23-b099-eb85da006947",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d9be5583-0fb5-4f1f-8b12-3c77ec7e98c7",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Financial Reporting"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "3e3982b6-c988-43e4-ae26-b89f6e5cb29a",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6618fba0-e391-4b2d-8c84-e74320a292cd",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-financial-reporting"
+}

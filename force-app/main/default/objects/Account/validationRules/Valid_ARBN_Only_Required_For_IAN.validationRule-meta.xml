@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_ARBN_Only_Required_For_IAN</fullName>
+    <active>true</active>
+    <description>ARBN can only have values, when Incorporation ID Type equals IAN.</description>
+    <errorConditionFormula>AND(NOT($Setup.BypassTriggers__c.BypassValidationRules__c),TEXT(Incorporation_ID_Type__c)!=&apos;IAN&apos;,NOT(ISBLANK( ARBN__c)))</errorConditionFormula>
+    <errorDisplayField>ARBN__c</errorDisplayField>
+    <errorMessage>ARBN can only have values, when Incorporation ID Type equals IAN.</errorMessage>
+</ValidationRule>

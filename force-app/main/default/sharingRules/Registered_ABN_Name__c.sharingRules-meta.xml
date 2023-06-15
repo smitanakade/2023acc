@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>GPMS_ABN_Sharing_Rule</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>GPMS ABN Sharing Rule</label>
+        <sharedTo>
+            <group>GPMS_Internal_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>ABN_Number__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Registered_ABN_Name_GPMS_Tier_3_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Registered ABN Name GPMS Tier 3 Admin</label>
+        <sharedTo>
+            <group>GPMS_System_Administrator</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

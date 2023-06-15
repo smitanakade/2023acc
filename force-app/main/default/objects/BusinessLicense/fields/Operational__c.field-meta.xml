@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Operational__c</fullName>
+    <description>Roll up field from Allotment record.</description>
+    <externalId>false</externalId>
+    <label>Operational</label>
+    <summarizedField>Allotment__c.GPMS_Operational__c</summarizedField>
+    <summaryForeignKey>Allotment__c.Service_Name__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

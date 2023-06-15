@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perm_NATSIFAC_Field_Edit_Access</fullName>
+    <active>true</active>
+    <description>NATSIFAC field edit access</description>
+    <errorConditionFormula>AND(
+NOT(ISNEW()),
+AND(
+OR(
+ISPICKVAL(Event_Type__c, &quot;NATSIFAC Reinstate Places&quot;),
+ISPICKVAL(Event_Type__c, &quot;NATSIFAC Cease Places&quot;)),
+ISCHANGED(Status_Date__c)
+),
+$Permission.GPMS_NATSIFAC
+)</errorConditionFormula>
+    <errorMessage>You do not have access to edit this field</errorMessage>
+</ValidationRule>

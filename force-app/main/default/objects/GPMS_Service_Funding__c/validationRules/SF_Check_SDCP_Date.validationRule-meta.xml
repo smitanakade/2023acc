@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SF_Check_SDCP_Date</fullName>
+    <active>true</active>
+    <description>Year must be between 2019-2027 for SDCP</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName=&quot;Specialist_Dementia_Care_Program_Funding&quot;,
+OR(
+Start_Date__c &lt;  DATE(2019,1,1) ,
+Start_Date__c &gt;  DATE(2027,12,31)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Start_Date__c</errorDisplayField>
+    <errorMessage>Year must be between 2019-2027</errorMessage>
+</ValidationRule>

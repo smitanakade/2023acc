@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QFR_Must_Provide_Reasonableness_ResiLabr</fullName>
+    <active>true</active>
+    <description>Residential Labour Costs and Hours requires reasonableness check to be completed before marking as accepted.</description>
+    <errorConditionFormula>AND(ISPICKVAL(Type__c, &apos;Residential Labour Costs and Hours&apos;),ISBLANK(TEXT(Reasonableness_Check_Outcome__c)), ISPICKVAL(QA_Outcome__c, &apos;Accepted&apos;))</errorConditionFormula>
+    <errorDisplayField>QA_Outcome__c</errorDisplayField>
+    <errorMessage>You must complete the reasonableness check before selecting Accepted.</errorMessage>
+</ValidationRule>

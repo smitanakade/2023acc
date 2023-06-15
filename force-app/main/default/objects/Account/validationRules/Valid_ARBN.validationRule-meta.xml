@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_ARBN</fullName>
+    <active>true</active>
+    <description>ARBN is mandatary for IAN Incorporate ID Type</description>
+    <errorConditionFormula>AND(NOT($Setup.BypassTriggers__c.BypassValidationRules__c),TEXT(Incorporation_ID_Type__c)=&apos;IAN&apos;,
+AND(
+OR(LEN(ARBN__c)&lt;&gt;9,!IsNumber(ARBN__c)), 
+!ISBLANK(ARBN__c) 
+))</errorConditionFormula>
+    <errorDisplayField>ARBN__c</errorDisplayField>
+    <errorMessage>ARBN must be 9 digits</errorMessage>
+</ValidationRule>

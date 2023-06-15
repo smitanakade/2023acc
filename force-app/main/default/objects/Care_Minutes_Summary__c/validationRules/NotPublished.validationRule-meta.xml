@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NotPublished</fullName>
+    <active>true</active>
+    <description>If Availability Status &lt;&gt; Published and Under Review = true, then error. A user must not be able to place a star rating on hold if it is not published on the provider portal.</description>
+    <errorConditionFormula>AND( NOT(ISPICKVAL( Availability_Status__c , &quot;Published&quot;) ), Under_Review__c =true,  ISCHANGED(Under_Review__c))</errorConditionFormula>
+    <errorDisplayField>Under_Review__c</errorDisplayField>
+    <errorMessage>Cannot place care minutes summary star rating on hold when it is not published</errorMessage>
+</ValidationRule>

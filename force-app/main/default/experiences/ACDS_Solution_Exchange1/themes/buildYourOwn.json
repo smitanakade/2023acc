@@ -1,0 +1,288 @@
+{
+  "activeBrandingSetId" : "ca77cdb6-f6db-4aa0-9333-bf265b3fc312",
+  "customCSS" : "",
+  "developerName" : "starter",
+  "id" : "6c8215db-c7ee-4ac4-b8cc-eeda45a0356b",
+  "label" : "Build Your Own",
+  "layouts" : {
+    "Inner" : "bea7b34e-9696-41b7-ba3c-4eb333229f0c",
+    "Login" : "f804a291-046a-4c95-89f6-f347acf319c5",
+    "ServiceNotAvailable" : "ee33d1c6-e1df-4322-8885-de163298fcbf",
+    "XSr059NCM8WMoPPEHYyhva4HEamlwb" : "0f8c495e-aa02-438a-8da2-be8f13eccf75"
+  },
+  "type" : "theme",
+  "views" : [ {
+    "componentAttributes" : { },
+    "componentName" : "salesforceIdentity:loginBody2",
+    "id" : "f804a291-046a-4c95-89f6-f347acf319c5",
+    "label" : "Login",
+    "regions" : [ {
+      "id" : "5e3d68c2-0574-4d6b-a0b3-373fb905fe31",
+      "regionName" : "header",
+      "type" : "region"
+    }, {
+      "id" : "01de8a6b-ce88-4d48-98ee-0e8415855fd4",
+      "regionName" : "content",
+      "type" : "region"
+    }, {
+      "id" : "4c3c5d97-d597-490c-a53d-8ea52fbb05a2",
+      "regionName" : "footer",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "dohagedcare:ACDSThemeLayoutBasic",
+    "id" : "bea7b34e-9696-41b7-ba3c-4eb333229f0c",
+    "label" : "Default",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "maxAutoCompleteResults" : 5,
+          "searchLabel" : "Search...",
+          "searchObjects" : [ {
+            "isPublic" : true,
+            "name" : "Account"
+          } ]
+        },
+        "componentName" : "forceCommunity:globalSearchInput",
+        "id" : "df578926-6dbc-492c-a029-03224a3d5ebe",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "d5b5ebd7-d6de-49b0-a985-4dca87b706d2",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : true,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "4a59ee5d-d5b4-498c-a960-62abde8d5d59",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "3b07ccd0-1dc3-4add-a7c2-feac3231c6c5",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : true,
+          "hideHomeText" : true
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "34b78a97-60cc-4399-a9d6-068d78055235",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "e3a528a4-112d-45de-b8d6-e911fb5e9d10",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "includeActionsBar" : false,
+          "includeSearchBar" : false,
+          "title" : "Aged Care"
+        },
+        "componentName" : "dohagedcare:acdsHeader",
+        "id" : "366aece0-484c-4288-948f-85dcbc2b6dc7",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "b816102c-098e-4917-ab83-081c1db63e4b",
+      "regionName" : "siteHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountMenuLabel" : "My Account",
+          "homeLabel" : "Home",
+          "homepageUrl" : "/solutionexchange/s/",
+          "includeAccount" : false,
+          "mainMenuList" : "[   {     \"label\": \"About Us\",     \"name\": \"Aboutus\",     \"href\": \"/solutionexchange/s/about-us\"   },   {     \"label\": \"Governance\",     \"name\": \"GOV\",     \"href\": \"/solutionexchange/s/governance\",     \"expanded\": false,     \"items\": [       {         \"label\": \"ACDS Govemance\",         \"name\": \"GOV-1\",         \"href\": \"/solutionexchange/s/governance/acds-gov\"       },       {         \"label\": \"Roadmap\",         \"name\": \"GOV-2\",         \"href\": \"/solutionexchange/s/governance/roadmap\"       },       {         \"label\": \"ACDS Forum\",         \"name\": \"GOV-3\",         \"href\": \"/solutionexchange/s/governance/acds-forum\"       }     ]   },   {     \"label\": \"Branding\",     \"name\": \"BRA\",     \"href\": \"/solutionexchange/s/branding/colour\",     \"expanded\": false,     \"items\": [       {         \"label\": \"Colour\",         \"name\": \"BRA-1\",         \"href\": \"/solutionexchange/s/branding/colour\"       },       {         \"label\": \"Typography\",         \"name\": \"BRA-2\",         \"href\": \"/solutionexchange/s/branding/typography\"       },       {         \"label\": \"Logo Usage\",         \"name\": \"BRA-3\",         \"href\": \"/solutionexchange/s/branding/logo\"       }     ]   },   {     \"label\": \"Layout Guide\",     \"name\": \"LAY\",     \"href\": \"/solutionexchange/s/layout/layout-grid\",     \"expanded\": false,     \"items\": [       {         \"label\": \"Layout Grid\",         \"name\": \"LAY-1\",         \"href\": \"/solutionexchange/s/layout/layout-grid\"       }     ]   },   {     \"label\": \"Components\",     \"name\": \"M1\",     \"href\": \"/solutionexchange/s/components\",     \"expanded\": true,     \"items\": [       {         \"label\": \"ACDS LWC\",         \"name\": \"MC-1\",         \"href\": \"/solutionexchange/s/components\",         \"expanded\": true,         \"items\": [           {             \"label\": \"ACDS Header\",             \"name\": \"c-header\",             \"href\": \"/solutionexchange/s/components/header\"           },           {             \"label\": \"ACDS Navigation\",             \"name\": \"c-mainnav\",             \"href\": \"/solutionexchange/s/components/navigation\"           },           {             \"label\": \"ACDS Footer\",             \"name\": \"c-footer\",             \"href\": \"/solutionexchange/s/components/footer\"           },           {             \"label\": \"ACDS Theme Layout\",             \"name\": \"c-layout\",             \"href\": \"/solutionexchange/s/components/theme-layout\"           }         ]       },       {         \"label\": \"Standard LWC\",         \"name\": \"MC-2\",         \"href\": \"/solutionexchange/s/components\",         \"expanded\": true,         \"items\": [           {             \"label\": \"Accordion\",             \"name\": \"comp-acco\",             \"href\": \"/solutionexchange/s/component-details?type=accordion\"           },           {             \"label\": \"Alert - Model\",             \"name\": \"comp-acp\",             \"href\": \"/solutionexchange/s/component-details?type=alert\"           },           {             \"label\": \"Badge\",             \"name\": \"comp-bad\",             \"href\": \"/solutionexchange/s/component-details?type=badge\"           },           {             \"label\": \"Breadcrumbs\",             \"name\": \"comp-bre\",             \"href\": \"/solutionexchange/s/component-details?type=breadcrumbs\"           },           {             \"label\": \"Button\",             \"name\": \"comp-but\",             \"href\": \"/solutionexchange/s/component-details?type=button\"           },           {             \"label\": \"Button Group\",             \"name\": \"comp-but2\",             \"href\": \"/solutionexchange/s/component-details?type=button-group\"           },           {             \"label\": \"Button Icon\",             \"name\": \"comp-but3\",             \"href\": \"/solutionexchange/s/component-details?type=button-icon\"           },           {             \"label\": \"Button Icon Stateful\",             \"name\": \"comp-but4\",             \"href\": \"/solutionexchange/s/component-details?type=button-icon-stateful\"           },           {             \"label\": \"Button Menu\",             \"name\": \"comp-but5\",             \"href\": \"/solutionexchange/s/component-details?type=button-menu\"           },           {             \"label\": \"Button Stateful\",             \"name\": \"comp-but\",             \"href\": \"/solutionexchange/s/component-details?type=button-stateful\"           },           {             \"label\": \"Card\",             \"name\": \"comp-car\",             \"href\": \"/solutionexchange/s/component-details?type=card\"           },           {             \"label\": \"Carousel\",             \"name\": \"comp-caro\",             \"href\": \"/solutionexchange/s/component-details?type=carousel\"           },           {             \"label\": \"Checkbox Group\",             \"name\": \"comp-checkg\",             \"href\": \"/solutionexchange/s/component-details?type=checkbox-group\"           },           {             \"label\": \"Combobox\",             \"name\": \"comp-combo\",             \"href\": \"/solutionexchange/s/component-details?type=combobox\"           },           {             \"label\": \"Confirm - Model\",             \"name\": \"comp-acp2\",             \"href\": \"/solutionexchange/s/component-details?type=confirm\"           },           {             \"label\": \"Datatable\",             \"name\": \"comp-datatable\",             \"href\": \"/solutionexchange/s/component-details?type=datatable\"           },           {             \"label\": \"Dual Listbox\",             \"name\": \"comp-dlistbox\",             \"href\": \"/solutionexchange/s/component-details?type=dual-Listbox\"           },           {             \"label\": \"File Upload\",             \"name\": \"comp-fil\",             \"href\": \"/solutionexchange/s/component-details?type=file-upload\"           },           {             \"label\": \"Helptext (Tooltips)\",             \"name\": \"comp-help\",             \"href\": \"/solutionexchange/s/component-details?type=helptext\"           },           {             \"label\": \"Icon\",             \"name\": \"comp-icon\",             \"href\": \"/solutionexchange/s/component-details?type=icon\"           },           {             \"label\": \"Input\",             \"name\": \"comp-inp\",             \"href\": \"/solutionexchange/s/component-details?type=input\"           },           {             \"label\": \"Input Address\",             \"name\": \"comp-addr\",             \"href\": \"/solutionexchange/s/component-details?type=input-address\"           },           {             \"label\": \"Input Location\",             \"name\": \"comp-inp-loc\",             \"href\": \"/solutionexchange/s/component-details?type=input-location\"           },           {             \"label\": \"Input Name\",             \"name\": \"comp-inp-name\",             \"href\": \"/solutionexchange/s/component-details?type=input-name\"           },           {             \"label\": \"Pill\",             \"name\": \"comp-pill\",             \"href\": \"/solutionexchange/s/component-details?type=pill\"           },           {             \"label\": \"Platform Show Toast Event\",             \"name\": \"comp-toa\",             \"href\": \"/solutionexchange/s/component-details?type=platform-show-toast-event\"           },           {             \"label\": \"Progress Bar\",             \"name\": \"comp-progb\",             \"href\": \"/solutionexchange/s/component-details?type=progress-bar\"           },           {             \"label\": \"Progress Indicator\",             \"name\": \"comp-progi\",             \"href\": \"/solutionexchange/s/component-details?type=progress-indicator\"           },           {             \"label\": \"Progress Ring\",             \"name\": \"comp-ring\",             \"href\": \"/solutionexchange/s/component-details?type=progress-ring\"           },           {             \"label\": \"Prompt - Model\",             \"name\": \"comp-acp3\",             \"href\": \"/solutionexchange/s/component-details?type=prompt\"           },           {             \"label\": \"Quick Action Panel\",             \"name\": \"comp-qap\",             \"href\": \"/solutionexchange/s/component-details?type=action-panel\"           },           {             \"label\": \"Radio Group\",             \"name\": \"comp-radiog\",             \"href\": \"/solutionexchange/s/component-details?type=radio-group\"           },           {             \"label\": \"Slider\",             \"name\": \"comp-slider\",             \"href\": \"/solutionexchange/s/component-details?type=slider\"           },           {             \"label\": \"Spinner\",             \"name\": \"comp-spi\",             \"href\": \"/solutionexchange/s/component-details?type=spinner\"           },           {             \"label\": \"Tabset\",             \"name\": \"comp-tab\",             \"href\": \"/solutionexchange/s/component-details?type=tabset\"           },           {             \"label\": \"Textarea\",             \"name\": \"comp-text\",             \"href\": \"/solutionexchange/s/component-details?type=textarea\"           },           {             \"label\": \"Tree\",             \"name\": \"comp-tree\",             \"href\": \"/solutionexchange/s/component-details?type=tree\"           },           {             \"label\": \"Tree Grid\",             \"name\": \"comp-treegrid\",             \"href\": \"/solutionexchange/s/component-details?type=tree-grid\"           },           {             \"label\": \"Vertical Navigation\",             \"name\": \"comp-vnav\",             \"href\": \"/solutionexchange/s/component-details?type=vertical-navigation\"           }         ]       }     ]   },   {     \"label\": \"How to Install\",     \"name\": \"MC-3\",     \"href\": \"/solutionexchange/s/install\"   },   {     \"label\": \"Release Summary\",     \"name\": \"MC-4\",     \"href\": \"/solutionexchange/s/release-summary\"   } ]"
+        },
+        "componentName" : "dohagedcare:acdsNavigation",
+        "id" : "177e6aa3-9cdf-4a34-8441-03c535e2e68a",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "1c141fcb-c141-4e22-9ccc-912cac5e9e5e",
+      "regionName" : "siteNavigation",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "contactInfo1" : "1300 xxx xxx",
+          "contactInfo2" : "Mon-Fri 8am-8pm, Sat 10am-2pm",
+          "copyrightText" : "© Commonwealth of Australia | Department of Health and Aged Care",
+          "logoUrl" : "/sfsites/c/resource/acds/images/DHAC_inline_reverse.png"
+        },
+        "componentName" : "dohagedcare:acdsFooter",
+        "id" : "1bac468e-97fb-4b00-af17-594933f35f56",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "381879ae-c902-4c49-a513-4d2b1632ed93",
+      "regionName" : "siteFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1170,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "ee33d1c6-e1df-4322-8885-de163298fcbf",
+    "label" : "ServiceNotAvailable",
+    "regions" : [ {
+      "id" : "b9964d59-9ddb-49cb-9be5-d9cbf7dd1890",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "id" : "fd8c01f8-07eb-4845-bc86-ac8d1d5f5eda",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "dohagedcare:ACDSThemeLayoutBasic",
+    "id" : "0f8c495e-aa02-438a-8da2-be8f13eccf75",
+    "label" : "ACDS Theme Layout",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "maxAutoCompleteResults" : 5,
+          "searchLabel" : "Search...",
+          "searchObjects" : [ {
+            "isPublic" : true,
+            "name" : "Account"
+          } ]
+        },
+        "componentName" : "forceCommunity:globalSearchInput",
+        "id" : "c5f90b8f-c5b2-4d70-81be-e18ff407752c",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "d56fea7e-9684-4e9f-86d6-56c918c0fa36",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : true,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "21db2c76-ce62-4363-bdd2-608f5359f5aa",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "e1cd65a2-e140-4ba9-9dde-f631fa02cd05",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : true,
+          "hideHomeText" : true
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "3ad9a8b0-b493-4664-a97f-a6b0a57c7144",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "fe09c09a-76b8-4d4d-b61e-b26a0885c583",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "includeActionsBar" : false,
+          "includeSearchBar" : false,
+          "title" : "Aged Care"
+        },
+        "componentName" : "dohagedcare:acdsHeader",
+        "id" : "fafa15db-b85a-48a7-b083-c3bad8b1df94",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "867be2dc-da66-4c0d-be3e-8e49b158b07e",
+      "regionName" : "siteHeader",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountMenuLabel" : "My Account",
+          "homeLabel" : "Home",
+          "homepageUrl" : "/solutionexchange/s/home",
+          "includeAccount" : false,
+          "mainMenuList" : "[   {     \"label\": \"About Us\",     \"name\": \"Aboutus\",     \"href\": \"/solutionexchange/s/about-us\"   },   {     \"label\": \"Governance\",     \"name\": \"GOV\",     \"href\": \"/solutionexchange/s/governance\",     \"expanded\": false,     \"items\": [       {         \"label\": \"ACDS Govemance\",         \"name\": \"GOV-1\",         \"href\": \"/solutionexchange/s/governance/acds-gov\"       },       {         \"label\": \"Roadmap\",         \"name\": \"GOV-2\",         \"href\": \"/solutionexchange/s/governance/roadmap\"       },       {         \"label\": \"ACDS Forum\",         \"name\": \"GOV-3\",         \"href\": \"/solutionexchange/s/governance/acds-forum\"       }     ]   },   {     \"label\": \"Branding\",     \"name\": \"BRA\",     \"href\": \"/solutionexchange/s/branding/colour\",     \"expanded\": false,     \"items\": [       {         \"label\": \"Colour\",         \"name\": \"BRA-1\",         \"href\": \"/solutionexchange/s/branding/colour\"       },       {         \"label\": \"Typography\",         \"name\": \"BRA-2\",         \"href\": \"/solutionexchange/s/branding/typography\"       },       {         \"label\": \"Logo Usage\",         \"name\": \"BRA-3\",         \"href\": \"/solutionexchange/s/branding/logo\"       }     ]   },   {     \"label\": \"Layout Guide\",     \"name\": \"LAY\",     \"href\": \"/solutionexchange/s/layout/layout-grid\",     \"expanded\": false,     \"items\": [       {         \"label\": \"Layout Grid\",         \"name\": \"LAY-1\",         \"href\": \"/solutionexchange/s/layout/layout-grid\"       }     ]   },   {     \"label\": \"Components\",     \"name\": \"M1\",     \"href\": \"/solutionexchange/s/components\",     \"expanded\": true,     \"items\": [       {         \"label\": \"ACDS LWC\",         \"name\": \"MC-1\",         \"href\": \"/solutionexchange/s/components\",         \"expanded\": true,         \"items\": [           {             \"label\": \"ACDS Header\",             \"name\": \"c-header\",             \"href\": \"/solutionexchange/s/components/header\"           },           {             \"label\": \"ACDS Navigation\",             \"name\": \"c-mainnav\",             \"href\": \"/solutionexchange/s/components/navigation\"           },           {             \"label\": \"ACDS Footer\",             \"name\": \"c-footer\",             \"href\": \"/solutionexchange/s/components/footer\"           },           {             \"label\": \"ACDS Theme Layout\",             \"name\": \"c-layout\",             \"href\": \"/solutionexchange/s/components/theme-layout\"           }         ]       },       {         \"label\": \"Standard LWC\",         \"name\": \"MC-2\",         \"href\": \"/solutionexchange/s/components\",         \"expanded\": true,         \"items\": [           {             \"label\": \"Accordion\",             \"name\": \"comp-acco\",             \"href\": \"/solutionexchange/s/component-details?type=accordion\"           },           {             \"label\": \"Alert - Model\",             \"name\": \"comp-acp\",             \"href\": \"/solutionexchange/s/component-details?type=alert\"           },           {             \"label\": \"Badge\",             \"name\": \"comp-bad\",             \"href\": \"/solutionexchange/s/component-details?type=badge\"           },           {             \"label\": \"Breadcrumbs\",             \"name\": \"comp-bre\",             \"href\": \"/solutionexchange/s/component-details?type=breadcrumbs\"           },           {             \"label\": \"Button\",             \"name\": \"comp-but\",             \"href\": \"/solutionexchange/s/component-details?type=button\"           },           {             \"label\": \"Button Group\",             \"name\": \"comp-but2\",             \"href\": \"/solutionexchange/s/component-details?type=button-group\"           },           {             \"label\": \"Button Icon\",             \"name\": \"comp-but3\",             \"href\": \"/solutionexchange/s/component-details?type=button-icon\"           },           {             \"label\": \"Button Icon Stateful\",             \"name\": \"comp-but4\",             \"href\": \"/solutionexchange/s/component-details?type=button-icon-stateful\"           },           {             \"label\": \"Button Menu\",             \"name\": \"comp-but5\",             \"href\": \"/solutionexchange/s/component-details?type=button-menu\"           },           {             \"label\": \"Button Stateful\",             \"name\": \"comp-but\",             \"href\": \"/solutionexchange/s/component-details?type=button-stateful\"           },           {             \"label\": \"Card\",             \"name\": \"comp-car\",             \"href\": \"/solutionexchange/s/component-details?type=card\"           },           {             \"label\": \"Carousel\",             \"name\": \"comp-caro\",             \"href\": \"/solutionexchange/s/component-details?type=carousel\"           },           {             \"label\": \"Checkbox Group\",             \"name\": \"comp-checkg\",             \"href\": \"/solutionexchange/s/component-details?type=checkbox-group\"           },           {             \"label\": \"Combobox\",             \"name\": \"comp-combo\",             \"href\": \"/solutionexchange/s/component-details?type=combobox\"           },           {             \"label\": \"Confirm - Model\",             \"name\": \"comp-acp2\",             \"href\": \"/solutionexchange/s/component-details?type=confirm\"           },           {             \"label\": \"Datatable\",             \"name\": \"comp-datatable\",             \"href\": \"/solutionexchange/s/component-details?type=datatable\"           },           {             \"label\": \"Dual Listbox\",             \"name\": \"comp-dlistbox\",             \"href\": \"/solutionexchange/s/component-details?type=dual-Listbox\"           },           {             \"label\": \"File Upload\",             \"name\": \"comp-fil\",             \"href\": \"/solutionexchange/s/component-details?type=file-upload\"           },           {             \"label\": \"Helptext (Tooltips)\",             \"name\": \"comp-help\",             \"href\": \"/solutionexchange/s/component-details?type=helptext\"           },           {             \"label\": \"Icon\",             \"name\": \"comp-icon\",             \"href\": \"/solutionexchange/s/component-details?type=icon\"           },           {             \"label\": \"Input\",             \"name\": \"comp-inp\",             \"href\": \"/solutionexchange/s/component-details?type=input\"           },           {             \"label\": \"Input Address\",             \"name\": \"comp-addr\",             \"href\": \"/solutionexchange/s/component-details?type=input-address\"           },           {             \"label\": \"Input Location\",             \"name\": \"comp-inp-loc\",             \"href\": \"/solutionexchange/s/component-details?type=input-location\"           },           {             \"label\": \"Input Name\",             \"name\": \"comp-inp-name\",             \"href\": \"/solutionexchange/s/component-details?type=input-name\"           },           {             \"label\": \"Pill\",             \"name\": \"comp-pill\",             \"href\": \"/solutionexchange/s/component-details?type=pill\"           },           {             \"label\": \"Platform Show Toast Event\",             \"name\": \"comp-toa\",             \"href\": \"/solutionexchange/s/component-details?type=platform-show-toast-event\"           },           {             \"label\": \"Progress Bar\",             \"name\": \"comp-progb\",             \"href\": \"/solutionexchange/s/component-details?type=progress-bar\"           },           {             \"label\": \"Progress Indicator\",             \"name\": \"comp-progi\",             \"href\": \"/solutionexchange/s/component-details?type=progress-indicator\"           },           {             \"label\": \"Progress Ring\",             \"name\": \"comp-ring\",             \"href\": \"/solutionexchange/s/component-details?type=progress-ring\"           },           {             \"label\": \"Prompt - Model\",             \"name\": \"comp-acp3\",             \"href\": \"/solutionexchange/s/component-details?type=prompt\"           },           {             \"label\": \"Quick Action Panel\",             \"name\": \"comp-qap\",             \"href\": \"/solutionexchange/s/component-details?type=action-panel\"           },           {             \"label\": \"Radio Group\",             \"name\": \"comp-radiog\",             \"href\": \"/solutionexchange/s/component-details?type=radio-group\"           },           {             \"label\": \"Slider\",             \"name\": \"comp-slider\",             \"href\": \"/solutionexchange/s/component-details?type=slider\"           },           {             \"label\": \"Spinner\",             \"name\": \"comp-spi\",             \"href\": \"/solutionexchange/s/component-details?type=spinner\"           },           {             \"label\": \"Tabset\",             \"name\": \"comp-tab\",             \"href\": \"/solutionexchange/s/component-details?type=tabset\"           },           {             \"label\": \"Textarea\",             \"name\": \"comp-text\",             \"href\": \"/solutionexchange/s/component-details?type=textarea\"           },           {             \"label\": \"Tree\",             \"name\": \"comp-tree\",             \"href\": \"/solutionexchange/s/component-details?type=tree\"           },           {             \"label\": \"Tree Grid\",             \"name\": \"comp-treegrid\",             \"href\": \"/solutionexchange/s/component-details?type=tree-grid\"           },           {             \"label\": \"Vertical Navigation\",             \"name\": \"comp-vnav\",             \"href\": \"/solutionexchange/s/component-details?type=vertical-navigation\"           }         ]       }     ]   },   {     \"label\": \"How to Install\",     \"name\": \"MC-3\",     \"href\": \"/solutionexchange/s/install\"   },   {     \"label\": \"Release Summary\",     \"name\": \"MC-4\",     \"href\": \"/solutionexchange/s/release-summary\"   } ]"
+        },
+        "componentName" : "dohagedcare:acdsNavigation",
+        "id" : "3aa1a6a1-e9b8-4ab6-8f81-0d9a1b95f0a2",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "9edb0747-1574-4dc7-9c22-a188c7a10fe7",
+      "regionName" : "siteNavigation",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "contactInfo1" : "",
+          "contactInfo2" : "",
+          "copyrightText" : "Copyright © Commonwealth of Australia ABN 36 342 015 855",
+          "linkList" : "[]",
+          "logoUrl" : "/sfsites/c/resource/dohagedcare__acds/images/DHAC_inline_reverse.png"
+        },
+        "componentName" : "dohagedcare:acdsFooter",
+        "id" : "26c74c53-6b1b-4653-b11a-877d89de2740",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "d66f6c2b-cfaf-49f0-bc5f-0ff255be63ec",
+      "regionName" : "siteFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  } ]
+}

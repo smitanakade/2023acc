@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Full_Address__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL( PO_BOX_Type__c , &quot;&quot;) = FALSE, TEXT(PO_BOX_Type__c) + &quot; &quot; +  Post_Office_Box__c &amp; &apos;, &apos;, &quot;&quot;) &amp;&apos;&apos;&amp;
+IF(ISPICKVAL(Unit_Type_Description__c, &quot;&quot;) = FALSE, TEXT(Unit_Type_Description__c) + &quot; &quot; + Unit_Number__c &amp; &apos;, &apos;, &quot;&quot;) &amp;&apos;&apos;&amp;
+IF(ISPICKVAL(Level_Type_Description__c, &quot;&quot;) = FALSE, TEXT(Level_Type_Description__c) + &quot; &quot; + Level_Number__c &amp; &apos;, &apos;, &quot;&quot;) &amp;&apos;&apos;&amp;
+IF(ISBLANK(Building_Name__c) = FALSE, Building_Name__c &amp; &apos;, &apos;, &quot;&quot;)&amp;&apos;&apos;&amp;
+IF(ISBLANK(Lot_Number__c) = FALSE, Lot_Number__c&amp; &apos;, &apos;, &quot;&quot;)&amp;&apos;&apos;&amp;
+IF(ISBLANK( Street_Number_1__c ) = FALSE, Street_Number_1__c &amp; &apos; &apos;, &quot;&quot;)&amp;&apos;&apos;&amp;
+IF(ISBLANK( Street__c ) = FALSE, Street__c &amp; &apos; &apos;, &quot;&quot;)&amp;&apos;&apos;&amp;
+IF(ISPICKVAL( Street_Type_Description__c , &quot;&quot;) = FALSE, TEXT(Street_Type_Description__c ), &quot;&quot;)&amp;&apos;&apos;&amp;
+IF(ISPICKVAL( Street_Suffix_Type_Description__c , &quot;&quot;) = FALSE, &apos; &apos; &amp; TEXT(Street_Suffix_Type_Description__c ) &amp; &apos;, &apos;, &quot;, &quot;)&amp;&apos;&apos;&amp;
+IF(ISBLANK(  City__c ) = FALSE, City__c &amp; &apos;, &apos;, &quot;,&quot;)&amp;&apos;&apos;&amp;
+IF(ISPICKVAL(  State_Province__c , &quot;&quot;) = FALSE, TEXT(State_Province__c ) &amp; &apos;, &apos;, &quot;,&quot;)&amp;&apos;&apos;&amp;
+IF(ISBLANK(   Zip_Postal_Code__c ) = FALSE, Zip_Postal_Code__c, &quot;&quot;)</formula>
+    <label>Full Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

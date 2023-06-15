@@ -1,0 +1,129 @@
+<template>
+
+  <div class="hero-image">
+  
+     <div class ="hero-text slds-align_absolute-center slds-small-size_10-of-12 slds-medium-size_10-of-12 slds-large-size_10-of-12">
+      <hr>
+     </div>
+    <div
+      class="hero-text slds-align_absolute-center slds-small-size_10-of-12 slds-medium-size_10-of-12 slds-large-size_10-of-12">
+      Welcome to the Aged Care Design System
+  
+    </div>
+    <div
+      class=" hero-sub-text slds-align_absolute-center slds-small_12-of-12 slds-medium-size_8-of-12 slds-large-size_8-of-12 slds-p-bottom_large ">
+      The current iteration of the Design System uses Salesforce Lightning Web Components as its foundation and
+      provides
+      a set of building blocks that can be used to build government products and services more easily.
+      Get Started
+  
+    </div>
+  
+  
+    <div class="button-style">
+      <button class="slds-button slds-button_neutral slds-align_absolute-center">Get Start</button>
+    </div>
+  </div>
+
+
+  <hr>
+  <div>
+    <div class="heading-medium slds-p-bottom_large">Quick Guide</div>
+    <div class="slds-grid slds-wrap slds-gutters_x-small slds-grid_vertical-stretch">
+      <div
+        class="slds-p-bottom_large slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_3-of-12 slds-p-bottom_small ">
+        <p>The Aged Care Design System allows designers and developers to provide a unified experience for users of our
+          products and services. The current iteration of the Design System uses Salesforce Lightning Web Components as
+          its foundation and provides a set of building blocks that can be used to build government products and
+          services more easily.</p>
+        <br />
+        <p>The Design System incorporates the highest usability and accessibility standards and helps deliver a
+          consistent experience for all users, in line with the Digital Service Standard.</p>
+      </div>
+      <template for:each={quickGuides} for:item="item">
+        <div key={item.name}
+          class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_3-of-12 slds-p-bottom_small">
+          <c-sx-component-card name={item.name} icon-url={item.iconUrl} icon-id={item.iconId}
+            description={item.description} page-url={item.pageUrl}></c-sx-component-card>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <hr>
+  <div>
+    <div class="heading-medium slds-p-bottom_large slds-align_absolute-center">Design Principles</div>
+    <div class="slds-p-bottom_large slds-align_absolute-center">These principles are to be used as a guide for project
+      design, and to achieve the vision for user experience in Australian Aged Care.</div>
+    <div class="slds-grid slds-wrap slds-gutters_x-small slds-grid_vertical-stretch">
+      <template for:each={designPrinciples} for:item="item">
+        <div key={item.name}
+          class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_3-of-12 slds-p-bottom_small">
+          <c-sx-component-card name={item.name} icon-url={item.iconUrl} icon-id={item.iconId}
+            description={item.description}></c-sx-component-card>
+        </div>
+      </template>
+    </div>
+  </div>
+  <hr>
+  <div>
+    <div class="heading-medium slds-p-bottom_large slds-align_absolute-center"><span class="slds-border_bottom">Contact
+        the Platform Team</span> </div>
+    <div class="slds-grid slds-wrap slds-gutters_x-small slds-grid_vertical-stretch">
+      <div class="slds-col slds-size_8-of-12 slds-border_right">
+        <div>Contact the Platform Team for the further information and we will get back to you as soon as possible</div>
+        <div class="slds-col slds-size_5-of-8">
+          <div class="slds-m-top_medium">
+            <lightning-input type="text" label="Name" variant="label-hidden" placeholder="Name" required="true">
+            </lightning-input>
+          </div>
+          <div class="slds-m-top_medium">
+            <lightning-input type="email" label="Email" variant="label-hidden" placeholder="Email" required="true">
+            </lightning-input>
+          </div>
+          <div class="slds-m-top_medium">
+            <lightning-textarea type="text" label="Enquiry" variant="label-hidden" placeholder="Enquiry"
+              required="true">
+            </lightning-textarea>
+          </div>
+          <div class="slds-m-top_medium">
+            <p>Your enquiry is covered by our <span class="slds-text-link">Privacy policy.</span><br>Please do not
+              include any personal or financial informatiom.</p>
+          </div>
+          <div class="slds-m-top_medium">
+            <button class="slds-button slds-button_brand">Contact Us</button>
+          </div>
+        </div>
+      </div>
+      <div class="slds-col slds-size_4-of-12">
+        <div class="slds-m-left_xx-large">
+          <div class="slds-m-top_large">
+            <span style="color:purple">
+              <lightning-icon icon-name="utility:call"> </lightning-icon>
+
+            </span>
+            Contact us
+            <br>(480) 555-0103
+          </div>
+          <div class="slds-m-top_large">
+            <span style="color:purple">
+              <lightning-icon icon-name="utility:checkin"> </lightning-icon>
+
+            </span>
+            Location<br>
+            Canberra, Australia
+          </div>
+
+          <div class="slds-m-top_large">
+            <span style="color:purple">
+              <lightning-icon icon-name="utility:email"> </lightning-icon>
+
+            </span>
+            Mail us<br>
+            Michelle.rivera@example.com
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,26 @@
+<template>
+  <!-- <div class="sx-component-card"> -->
+  <div class={selectedClass} onclick={handleClick} onmouseover={handleMouseOver} onmouseleave={handleMouseLeave}> <!-- ernie -->  
+    <div class="card-img slds-align_absolute-center">
+      <template if:true={showIcon}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+          <use xlink:href={icon}></use>
+        </svg>
+      </template>
+      <template if:false={showIcon}>
+        <img class="sx-component_image" src={imageUrl} alt={imageUrl}/>
+      </template>
+    </div>
+    <div class="slds-text-align_center slds-p-top_x-small">
+      <template if:true={allowRedirect}>
+        <a href={url} class="card-title">{name}</a>
+      </template>
+      <template if:false={allowRedirect}>
+        <div class="card-title">{name}</div>
+      </template>
+    </div>
+    <div class="slds-text-align_center slds-p-top_x-small slds-p-bottom_medium"> 
+      <div class="card-content">{description}</div>
+    </div>
+  </div>
+</template>

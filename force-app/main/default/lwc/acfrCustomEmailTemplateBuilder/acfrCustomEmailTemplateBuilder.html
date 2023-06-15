@@ -1,0 +1,40 @@
+<template>
+  <template if:true={isSent}>
+    <center>
+      <div class="slds-align_absolute-center; font-color:green">{emailResult}</div>
+    </center>
+  </template>
+  <template if:false={isSent}>
+    <template if:true={editable}>
+      <div class="slds-align_absolute-center" style="height:5rem">
+        <lightning-button class="slds-p-right_x-small" variant="brand" label="Send" title="Click to Send" onclick={handleSend}></lightning-button>
+        <lightning-button variant="brand" label="Preview" title="Click to Preview" onclick={handlePreview}></lightning-button>
+      </div>
+      <lightning-input onchange={handleEmailAdd} data-ersatz-aura-id="emailAddress" disabled="true" type="text" label="To:" name="emailAddress" placeholder="Input email addresses separated by ;" required="true" value={emailAdd}></lightning-input>
+      <lightning-input onchange={handleEmailAddCC} data-ersatz-aura-id="emailAddressCC" type="text" label="CC:" name="emailAddressCC" placeholder="Input email addresses separated by ;" value={emailAddCC}></lightning-input>
+      <lightning-input onchange={handleEmailSubject} data-ersatz-aura-id="emailSubject" type="text" label="Subject" name="emailSubject" placeholder="Input subject here..." value={emailSubject}></lightning-input>
+      <br></br>
+      <lightning-input-rich-text value={emailBody} placeholder="" onchange={handleEmailBody}></lightning-input-rich-text>
+      <div class="slds-align_absolute-center" style="height:5rem">
+        <lightning-button class="slds-p-right_x-small" variant="brand" label="Send" title="Click to Send" onclick={handleSend}></lightning-button>
+        <lightning-button variant="brand" label="Preview" title="Click to Preview" onclick={handlePreview}></lightning-button>
+      </div>
+    </template>
+    <template if:false={editable}>
+      <div class="slds-align_absolute-center" style="height:5rem">
+        <lightning-button class="slds-p-right_x-small" variant="brand" label="Send" title="Click to Send" onclick={handleSend}></lightning-button>
+        <lightning-button variant="brand" label="Edit" title="Click to Edit" onclick={handleEdit}></lightning-button>
+      </div>
+      <lightning-input class="slds-p-bottom_x-small" data-ersatz-aura-id="emailAddress" disabled="true" type="text" label="To:" name="emailAddress" placeholder="Input email addresses separated by ;" required="true" value={emailAdd}></lightning-input>
+      <lightning-input class="slds-p-bottom_x-small" data-ersatz-aura-id="emailAddressCC" type="text" label="CC:" name="emailAddressCC" placeholder="Input email addresses separated by ;" value={emailAddCC}></lightning-input>
+      <lightning-input class="slds-p-bottom_x-small" data-ersatz-aura-id="emailSubject" type="text" label="Subject" name="emailSubject" placeholder="Input subject here..." value={emailSubject}></lightning-input>
+      <div data-ersatz-aura-id="output" class="slds-box editor slds-text-longform">
+        <lightning-formatted-rich-text value={emailBody}></lightning-formatted-rich-text>
+      </div>
+      <div class="slds-align_absolute-center" style="height:5rem">
+        <lightning-button class="slds-p-right_x-small" variant="brand" label="Send" title="Click to Send" onclick={handleSend}></lightning-button>
+        <lightning-button variant="brand" label="Edit" title="Click to Edit" onclick={handleEdit}></lightning-button>
+      </div>
+    </template>
+  </template>
+</template>

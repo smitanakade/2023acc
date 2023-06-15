@@ -1,0 +1,133 @@
+<template>
+    
+    <lightning-card  title="Select places" class="slds-scrollable">
+        <div>
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Packet Id</th>
+                        <th>Care Type</th>
+                        <th>Care Level</th>
+                        <th>Number of Places</th>
+                        <th>Current Status</th>
+                        <th>Status effective date</th>
+                        <th>First brought into effect</th>
+                        <th>Number of places to remain at this status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <template for:each={places} for:item="place">
+                        <tr key={place.Id}>
+                            <td>
+                                <input type="radio" name="placeId" class="placeId" value={place.Id} onclick={handleSelection} />
+                            </td>
+                            <td><lightning-formatted-url label={place.PacketId} value={place.PacketUrl} target="_blank"></lightning-formatted-url></td>
+                            <td>{place.CareType}</td>
+                            <td>{place.CareLevel}</td>
+                            <td>{place.NumberOfPlaces}</td>
+                            <td>{place.StatusOfPlaces}</td>
+                            <td>{place.OriginalStatusEffectiveDate}</td>
+                            <td>{place.FirstBroughtIntoEffectDate}</td>
+                            <td>{place.NumberOfRemaining}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+ 
+    
+    <div style="overflow-x:auto;padding-bottom: 550px; margin-bottom: -550px;">
+        <template if:true={editDetails}>
+            <lightning-card title="Enter details and add to summary">
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large">
+                    <thead>
+                        <tr>
+                            <th>Packet Id</th>
+                            <th>Care Type</th>
+                            <th>Care Level</th>
+                            <th>Number of Places</th>
+                            <th>Number of Places Remain</th>
+                            <th>Status of Places</th>
+                            <th>Status Effective Date</th>
+                            <th style="min-width:325px">Primary Reason</th>
+                            <th>Expected offline end date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+                        <tr key={selectedPlace.Id}>
+                            <td><lightning-formatted-url label={selectedPlace.PacketId} value={selectedPlace.PacketUrl} target="_blank"></lightning-formatted-url></td>
+                            <td>{selectedPlace.CareType}</td>
+                            <td>{selectedPlace.CareLevel}</td>
+                            <td>
+                                <lightning-input type="number" variant="label-hidden" value={placeOfChange} name="placeOfChange" onchange={updateRemainingPlaces} max={selectedPlace.NumberOfRemaining} 
+                                min="0" step="1" message-when-step-mismatch="Invalid Number" message-when-range-overflow="Number exceeds allocation" message-when-range-underflow="Number cannot be negative"></lightning-input>
+                            </td>
+                            <td>{selectedPlace.NumberOfAfter}</td>
+                            <td>{selectedPlace.StatusChangeTo}</td>
+                            <td>
+                                <lightning-input type="date" variant="label-hidden" name="effectiveDate" value={statusEffectiveDate} min={minDateOfEffectiveDate} 
+                                onchange={handleDateChanges} required message-when-range-underflow="Status effective date shall be after original Status effective date."></lightning-input>
+                            </td>
+                            <td>
+                                <lightning-combobox variant="label-hidden" name="StatusReason" value={StatusReason} options={StatusReasonOptions} onchange={handlePicklistChange} disabled={picklistDisabled} required></lightning-combobox>
+                            </td>
+                            <td>
+                                <lightning-input type="date" variant="label-hidden" name="offlineEndDate" value={offlineEndDate} min={minDateOfOfflineDate} onchange={handleDateChanges} 
+                                disabled={dateDisabled} required message-when-range-underflow="Expected offline end date shall be after Status effective date."></lightning-input>
+                            </td>
+                            <td>
+                                <lightning-button label="Add" name={selectedPlace.Id} onclick={handleButtonClick} disabled={buttonDisabled}></lightning-button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </lightning-card>
+        </template>
+    </div>
+
+    <div class="slds-scrollable">
+        <lightning-card  title="Summary">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large">
+                <thead>
+                    <tr>
+                        <th>From Packet Id</th>
+                        <th>Action</th>
+                        <th>Care Type</th>
+                        <th>Care Level</th>
+                        <th>Number of Places</th>
+                        <th>Status of places</th>
+                        <th>First brought into effect</th>
+                        <th>Primary Reason</th>
+                        <th>Expected Offline End Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <template for:each={summaryPlaces} for:item="place" for:index="index">
+                        <tr key={place.Id}>
+                            <td><lightning-formatted-url label={place.PacketId} value={place.PacketUrl} target="_blank"></lightning-formatted-url></td>
+                            <td>
+                                <lightning-button-group>
+                                    <lightning-button label="Edit" name={place.Id} value={index} onclick={handleButtonClick}></lightning-button>
+                                    <lightning-button variant="destructive" label="Remove" name={place.Id} value={index} onclick={handleButtonClick}></lightning-button>
+                                </lightning-button-group>
+                            </td>
+                            <td>{place.CareType}</td>
+                            <td>{place.CareLevel}</td>
+                            <td>{place.NumberOfChanges}</td>
+                            <td>{place.StatusChangeTo}</td>
+                            <td>{place.FirstBroughtIntoEffectDate}</td>
+                            <td>{place.StatusReason}</td>
+                            <td>{place.ExpectedOfflineEndDateDisplay}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </lightning-card>
+    </div>
+</template>

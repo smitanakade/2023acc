@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALT_Mark_Document_As_Sent_Not_Applicable</fullName>
+    <active>true</active>
+    <description>Mark Document As Sent can only be completed from Residential and STRC allotments where allotment sub type = S14-1 and waiver type = not applicable.</description>
+    <errorConditionFormula>OR(AND(OR(ISPICKVAL(Service_Name__r.Service_Care_Sub_Type__c, &apos;Residential&apos;),		ISPICKVAL(Service_Name__r.Service_Care_Sub_Type__c,&apos;Short-Term Restorative Care (STRC)&apos;)),	ISCHANGED(GPMS_Mark_Documents_as_Sent__c),	OR(NOT(ISPICKVAL(Allotment_Sub_Type__c, &apos;S14-1&apos;)),NOT(ISPICKVAL(Waiver_Type__c,&apos;Not Applicable&apos;)),ISPICKVAL(Allotment_Sub_Type__c, &apos;S14-9&apos;))),
+AND(NOT(ISPICKVAL(Service_Name__r.Service_Care_Sub_Type__c, &apos;Residential&apos;)),  	NOT(ISPICKVAL(Service_Name__r.Service_Care_Sub_Type__c,&apos;Short-Term Restorative Care (STRC)&apos;)),ISCHANGED(GPMS_Mark_Documents_as_Sent__c)))</errorConditionFormula>
+    <errorDisplayField>GPMS_Mark_Documents_as_Sent__c</errorDisplayField>
+    <errorMessage>This field can only be completed from Residential and STRC allotments where allotment sub type = S14-1 and waiver type = Not Applicable.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Status_Restrictions</fullName>
+    <active>true</active>
+    <description>Case Status restrictions for Help desk user</description>
+    <errorConditionFormula>AND(
+ISPICKVAL($Profile.UserType,&apos;Standard&apos;)
+,
+OR (
+
+AND(RecordType.Name=&apos;QFR&apos;,ISPICKVAL(PRIORVALUE(Status),&quot;Submitted&quot;),OR(ISPICKVAL(Status , &apos;New&apos;),ISPICKVAL(Status , &apos;Not Required&apos;))),
+
+AND(RecordType.Name=&apos;QFR&apos;,ISPICKVAL(PRIORVALUE(Status),&quot;Reissued&quot;),OR(ISPICKVAL(Status , &apos;New&apos;),ISPICKVAL(Status , &apos;Draft&apos;),ISPICKVAL(Status , &apos;Not Required&apos;),ISPICKVAL(Status , &apos;Submitted&apos;))),
+
+AND(RecordType.Name=&apos;QFR&apos;,ISPICKVAL(PRIORVALUE(Status),&quot;New&quot;),OR(ISPICKVAL(Status , &apos;Draft&apos;),ISPICKVAL(Status , &apos;Reissued&apos;),ISPICKVAL(Status , &apos;Submitted&apos;))),
+
+AND(RecordType.Name=&apos;QFR&apos;,ISPICKVAL(PRIORVALUE(Status),&quot;Draft&quot;),OR(ISPICKVAL(Status , &apos;New&apos;),ISPICKVAL(Status , &apos;Reissued&apos;),ISPICKVAL(Status , &apos;Submitted&apos;))),
+
+AND(RecordType.Name=&apos;QFR&apos;,ISPICKVAL(PRIORVALUE(Status),&quot;Not Required&quot;),OR(ISPICKVAL(Status , &apos;Draft&apos;),ISPICKVAL(Status , &apos;Reissued&apos;),ISPICKVAL(Status , &apos;Submitted&apos;))),
+
+AND(RecordType.Name=&apos;QFR&apos;,ISPICKVAL(Status,&quot;Closed&quot;))
+
+))</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Status changes can only be made from New or Draft to Not Required, Submitted to Reissued, or Not Required to New.</errorMessage>
+</ValidationRule>

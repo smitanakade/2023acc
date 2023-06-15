@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BO_ServiceCombineLock</fullName>
+    <active>true</active>
+    <description>This used to lock the record during the service combine process.</description>
+    <errorConditionFormula>Event__r.Service__r.GPMS_CombineLock__c</errorConditionFormula>
+    <errorMessage>This service is being combined. Related records cannot be changed.</errorMessage>
+</ValidationRule>

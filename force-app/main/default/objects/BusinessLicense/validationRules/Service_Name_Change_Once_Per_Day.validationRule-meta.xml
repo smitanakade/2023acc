@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Name_Change_Once_Per_Day</fullName>
+    <active>true</active>
+    <description>Service name should only be able to be updated once per day.</description>
+    <errorConditionFormula>AND(
+  NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+  ISCHANGED( Name ),
+  NOT(ISCHANGED( Service_Name_Effective_Date__c )),
+  Service_Name_Effective_Date__c = TODAY()
+)</errorConditionFormula>
+    <errorMessage>Service Name can only be updated once per day</errorMessage>
+</ValidationRule>

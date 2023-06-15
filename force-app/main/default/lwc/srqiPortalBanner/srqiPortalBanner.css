@@ -1,0 +1,64 @@
+.banner-container {
+    color: var(--gpmsColBrandLight2);
+    height: 124px;
+    position: relative;
+    padding: 0;
+}
+
+.banner-container::before {
+    background: var(--gpmsColBrandLight2);
+    content: "";
+    height: 124px;
+    margin-top: -1rem;
+    margin-left: -1rem;
+    max-width: calc(100vw);
+    position: absolute;
+    top: 0;
+    width: calc(100% + 2rem);
+    z-index: 0;
+}
+
+.srqi-banner-text-link {
+    font-size: var(--font-size-heading-minus1);
+    font-weight: 500;
+    color: var(--gpmsColBrandDark);
+    cursor: pointer;
+    position: relative;
+}
+
+.srqi-banner-link-icon {
+    --sds-c-icon-color-foreground-default: var(--gpmsColBrandDark);
+    position: relative;
+}
+
+h1.srqi-banner-title {
+    font-size: var(--font-size-heading-plus3);
+    font-weight: 500;
+    color: var(--gpmsColGrey7);
+    position: relative;
+}
+
+.srqi-back-label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Breakpoints */
+
+/* Viewport >= 1024 */
+@media (min-width: 64em) {
+
+    .banner-container::before {
+        margin-left: -1rem;
+        width: calc(100% + 2rem);
+    }
+}
+
+/* Viewport >= 1440 */
+@media (min-width: 90em) {
+
+    .banner-container::before {
+        margin-left: -5rem;
+        width: calc(100% + 10rem);
+    }
+}

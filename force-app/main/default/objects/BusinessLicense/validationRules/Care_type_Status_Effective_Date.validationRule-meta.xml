@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Care_type_Status_Effective_Date</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(ISCHANGED(Status_Date__c), 
+ NOT(ISCHANGED(Status__c)), NOT(ISPICKVAL(Care_Type__c,&apos;Home Care&apos;)))</errorConditionFormula>
+    <errorDisplayField>Status_Date__c</errorDisplayField>
+    <errorMessage>Status Effective Date can be changed only for Home Care - Care Type</errorMessage>
+</ValidationRule>

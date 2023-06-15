@@ -1,0 +1,32 @@
+<template>
+    <div class="slds-p-vertical_small">
+      <lightning-input name="filter" label="Filter" type="search" onchange={handleSearch}></lightning-input>
+    </div>
+    <div class="slds-p-vertical_small">
+    <div class="heading-medium slds-p-bottom_large"></div>
+    <div class="heading-medium slds-p-bottom_large">Actions</div>
+      <div class="slds-grid slds-wrap slds-gutters_x-small slds-grid_vertical-stretch">
+        <template for:each={filteredComponentsActions} for:item="comp">
+          <div key={comp.name} class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-large-size_4-of-12 slds-p-bottom_large">
+            <c-sx-component-card name={comp.name} description={comp.description} page-url={comp.pageUrl} thumbnail-url={comp.thumbnailImg}></c-sx-component-card>
+          </div>
+        </template>
+      </div>  
+      <div class="heading-medium slds-p-bottom_large">Structure</div>
+      <div class="slds-grid slds-wrap slds-gutters_x-small slds-grid_vertical-stretch">
+        <template for:each={filteredComponentsStructure} for:item="comp">
+          <div key={comp.name} class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-large-size_4-of-12 slds-p-bottom_large">
+            <c-sx-component-card name={comp.name} description={comp.description} page-url={comp.pageUrl} thumbnail-url={comp.thumbnailImg}></c-sx-component-card>
+          </div>
+        </template>
+      </div>  
+      <div class="heading-medium slds-p-bottom_large">Forms</div>
+      <div class="slds-grid slds-wrap slds-gutters_x-small slds-grid_vertical-stretch">
+        <template for:each={filteredComponentsForms} for:item="comp">
+          <div key={comp.name} class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-large-size_4-of-12 slds-p-bottom_large">
+            <c-sx-component-card name={comp.name} description={comp.description} page-url={comp.pageUrl} thumbnail-url={comp.thumbnailImg}></c-sx-component-card>
+          </div>
+        </template>
+      </div>  
+    </div>
+  </template>

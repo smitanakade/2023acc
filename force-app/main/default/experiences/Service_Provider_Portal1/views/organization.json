@@ -1,0 +1,213 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "467eff1a-6a4c-4b2b-bce3-ed8f349fe082",
+  "label" : "Organization",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "1baede49-7070-4b0f-a0db-5b388ca1d0ac",
+          "columns" : [ {
+            "UUID" : "b376d899-6a3f-4452-92fd-6c89f09f3207",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1baede49-7070-4b0f-a0db-5b388ca1d0ac",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.Organization1.1}\" alt=\"\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "0ce041d3-ecc7-4265-a5bb-5f7a2712250e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b376d899-6a3f-4452-92fd-6c89f09f3207",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "0d341005-465b-43f1-ba45-8503d149df46",
+          "columns" : [ {
+            "UUID" : "6ab5cf16-b35a-4d2b-957f-38f5f9505d01",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "3c7a66d8-b961-46f2-a20e-108ed9c49658",
+            "columnKey" : "24d25",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "8e1a43bf-f782-40d0-ad92-d6e3fb893a5e",
+            "columnKey" : "d1557",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0d341005-465b-43f1-ba45-8503d149df46",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p>\n<p>&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.About_your_organization.1}\"></p>\n<p><br></p>\n<h3><strong>&nbsp;&nbsp;About your organisation</strong></h3>\n<p><br></p>\n<ul>\n <li>View and manage org details such as contact info and third party orgs</li>\n</ul>\n<p><br></p>\n<ul>\n <li>Initiate notifications of material changes for key personnel, financial status and other information</li>\n</ul>\n<p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "3f2ca942-3d1c-40b4-a038-bb319ee128ff",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6ab5cf16-b35a-4d2b-957f-38f5f9505d01",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p>\n<p>&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Care_Types2.1}\"></p>\n<p><br></p>\n<h3><strong>&nbsp;&nbsp;Care Types</strong></h3>\n<p><br></p>\n<ul>\n <li>Care types you're approved to provide</li>\n</ul>\n<p><br></p>\n<ul>\n <li>Apply to provide additional care types</li>\n</ul>\n<p><br></p>\n<ul>\n <li>Manage your applications</li>\n</ul>\n<p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "108b005c-f333-4b09-9e1a-c365e84140ef",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3c7a66d8-b961-46f2-a20e-108ed9c49658",
+        "regionLabel" : "Column 2",
+        "regionName" : "24d25",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p>\n<p>&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Care_Types1.1}\"></p>\n<p><br></p>\n<h3><strong>&nbsp;Financial reporting</strong></h3>\n<p><br></p>\n<ul>\n <li>Manage, view and complete annual and quarterly financial reports</li>\n</ul>\n<p><br></p>\n<ul>\n <li>View due dates and other critical information to help you with your reporting</li>\n</ul>\n<p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "8cfe5855-d049-4ff1-97df-06f891a0547b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8e1a43bf-f782-40d0-ad92-d6e3fb893a5e",
+        "regionLabel" : "Column 3",
+        "regionName" : "d1557",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "9660d1a8-9e82-4e7a-a4bb-cf23107fa684",
+          "columns" : [ {
+            "UUID" : "8d2ee65e-3c64-4d83-ab41-52ec55179361",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "2fcef39b-0eb1-4088-b93f-3b3b53991ba1",
+            "columnKey" : "f84dc",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9660d1a8-9e82-4e7a-a4bb-cf23107fa684",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p>\n<p>&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Score1.1}\">.</p>\n<p><br></p>\n<h3><strong>&nbsp;&nbsp;&nbsp;Your organisation’s rating</strong></h3>\n<p><br></p>\n<ul>\n <li>&nbsp;Learn about the quality indicators used to calculate your score</li>\n</ul>\n<p><br></p>\n<ul>\n <li>Learn how to improve your organisation’s rating</li>\n</ul>\n<p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "3fdeb5e8-d391-484b-92fa-39a1c1a601b2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8d2ee65e-3c64-4d83-ab41-52ec55179361",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p>\n<p>&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Looking_for_something_else.1}\"></p>\n<p><br></p>\n<h3><strong>&nbsp;&nbsp;Looking for something else?</strong></h3>\n<p><br></p>\n<p>&nbsp;&nbsp;Sign in to myAgedCare Service &amp; Support portal</p>\n<p><br></p>\n<ul>\n <li>Referrals&nbsp;&nbsp;&nbsp;</li>\n <li>Clients&nbsp;&nbsp;&nbsp;</li>\n <li>Outlets</li>\n <li>Staff</li>\n <li>Incidents</li>\n <li>Forms &amp; Reports&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>\n</ul>\n<p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "df5675da-0164-4c96-90ff-59034f399c6d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2fcef39b-0eb1-4088-b93f-3b3b53991ba1",
+        "regionLabel" : "Column 2",
+        "regionName" : "f84dc",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "905d5dbd-78c5-487b-8abd-1a4cb07e1688",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Organization"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "6d381d75-3a66-4702-aaf0-50ca0e381993",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a3b8b2e0-c191-422d-8c93-2de84e6b6425",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-organization"
+}

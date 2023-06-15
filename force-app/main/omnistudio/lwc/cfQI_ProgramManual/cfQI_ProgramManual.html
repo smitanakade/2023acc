@@ -1,0 +1,127 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative ">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <omnistudio-toast class="flexcard-toast-element" theme="slds" title="" message="" styletype=""> </omnistudio-toast>
+</div>
+            <div if:true={showLoader} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <omnistudio-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></omnistudio-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card background slds-p-around_x-small slds-m-around_none " style="      
+         ">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col   slds-p-around_x-small slds-size_6-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0block_element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element0block_element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0block_element0block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element0block_element0block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element0block_element0block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element0block_element0block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action4"   state-obj={record}  record={record}  card={card}  action-list='\[{"actionIndex":0,"draggable":false,"isOpen":true,"key":"1666924850301-9fev8w7mg","label":"Action","stateAction":{"Web Page":{"targetName":"https://www.health.gov.au/sites/default/files/2023-03/national-aged-care-mandatory-quality-indicator-program-manual-3-0-part-a_1.pdf"},"id":"flex-action-1679618639265","openUrlIn":"Current Window","targetType":"Web Page","type":"Custom"}}]'  flyout-details='\{}'  icon-name="doctype:pdf"  label="National Aged Care Mandatory Quality Indicator Program Manual - 2.0 Part A (Final version)"  styles='\{"label":{"textDecoration":""}}'  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element0block_element0block_element0block_element1" class="slds-col  subtext  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element0block_element0block_element1_child"   record={record}  card={card}  merge-field="%3Cul%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2010pt;%22%3EProvides%20an%20overview%20of%20the%20National%20Aged%20Care%20Mandatory%20Quality%20Indicator%20Program%3C/span%3E%3C/li%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2010pt;%22%3EDefines%20and%20describes%20the%205%20indicators%20in%20the%20program%3C/span%3E%3C/li%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2010pt;%22%3EDetails%20the%20data%20collection%20requirement%20for%20each%20of%20the%20quality%20indicators%3C/span%3E%3C/li%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2010pt;%22%3EExplains%20how%20to%20submit%20QI%20data%3C/span%3E%3C/li%3E%0A%3C/ul%3E%0A%3Cdiv%3E&nbsp;%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element0block_element1" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element0block_element1_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element0block_element2" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element0block_element2_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element0block_element3" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element0block_element3_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element0block_element4" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element0block_element4_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0block_element4block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element0block_element4block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element0block_element4block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element0block_element4block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action5"   state-obj={record}  record={record}  card={card}  action-list='\[{"actionIndex":0,"draggable":false,"isOpen":true,"key":"1666924913079-6zehsweez","label":"Action","stateAction":{"Web Page":{"targetName":"https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.health.gov.au%2Fsites%2Fdefault%2Ffiles%2F2023-03%2Fnational-aged-care-mandatory-quality-indicator-program-manual-3-0-part-a_1.docx&wdOrigin=BROWSELINK"},"id":"flex-action-1679618707630","openUrlIn":"Current Window","targetType":"Web Page","type":"Custom"}}]'  flyout-details='\{}'  icon-name="doctype:word"  label="National Aged Care Mandatory Quality Indicator Program Manual - 2.0 Part A (Final version)"  styles='\{"label":{"textDecoration":""}}'  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element0block_element0block_element4block_element1" class="slds-col  subtext  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element0block_element4block_element1_child"   record={record}  card={card}  merge-field="%3Cul%3E%0A%3Cli%3EProvides%20an%20overview%20of%20the%20National%20Aged%20Care%20Mandatory%20Quality%20Indicator%20Program%3C/li%3E%0A%3Cli%3EDefines%20and%20describes%20the%205%20indicators%20in%20the%20program%3C/li%3E%0A%3Cli%3EDetails%20the%20data%20collection%20requirement%20for%20each%20of%20the%20quality%20indicators%3C/li%3E%0A%3Cli%3EExplains%20how%20to%20submit%20QI%20data%3C/li%3E%0A%3C/ul%3E%0A%3Cdiv%3E&nbsp;%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <omnistudio-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card background slds-p-around_x-small slds-m-around_none " style="      
+         ">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col   slds-p-around_x-small slds-size_6-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0block_element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element0block_element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0block_element0block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element0block_element0block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element0block_element0block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element0block_element0block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action4"   state-obj={record}  record={record}  card={card}  action-list='\[{"actionIndex":0,"draggable":false,"isOpen":true,"key":"1666924850301-9fev8w7mg","label":"Action","stateAction":{"Web Page":{"targetName":"https://www.health.gov.au/sites/default/files/2023-03/national-aged-care-mandatory-quality-indicator-program-manual-3-0-part-a_1.pdf"},"id":"flex-action-1679618639265","openUrlIn":"Current Window","targetType":"Web Page","type":"Custom"}}]'  flyout-details='\{}'  icon-name="doctype:pdf"  label="National Aged Care Mandatory Quality Indicator Program Manual - 2.0 Part A (Final version)"  styles='\{"label":{"textDecoration":""}}'  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element0block_element0block_element0block_element1" class="slds-col  subtext  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element0block_element0block_element1_child"   record={record}  card={card}  merge-field="%3Cul%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2010pt;%22%3EProvides%20an%20overview%20of%20the%20National%20Aged%20Care%20Mandatory%20Quality%20Indicator%20Program%3C/span%3E%3C/li%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2010pt;%22%3EDefines%20and%20describes%20the%205%20indicators%20in%20the%20program%3C/span%3E%3C/li%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2010pt;%22%3EDetails%20the%20data%20collection%20requirement%20for%20each%20of%20the%20quality%20indicators%3C/span%3E%3C/li%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2010pt;%22%3EExplains%20how%20to%20submit%20QI%20data%3C/span%3E%3C/li%3E%0A%3C/ul%3E%0A%3Cdiv%3E&nbsp;%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element0block_element1" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element0block_element1_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element0block_element2" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element0block_element2_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element0block_element3" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element0block_element3_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element0block_element4" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element0block_element4_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0block_element4block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element0block_element4block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element0block_element4block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element0block_element4block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action5"   state-obj={record}  record={record}  card={card}  action-list='\[{"actionIndex":0,"draggable":false,"isOpen":true,"key":"1666924913079-6zehsweez","label":"Action","stateAction":{"Web Page":{"targetName":"https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.health.gov.au%2Fsites%2Fdefault%2Ffiles%2F2023-03%2Fnational-aged-care-mandatory-quality-indicator-program-manual-3-0-part-a_1.docx&wdOrigin=BROWSELINK"},"id":"flex-action-1679618707630","openUrlIn":"Current Window","targetType":"Web Page","type":"Custom"}}]'  flyout-details='\{}'  icon-name="doctype:word"  label="National Aged Care Mandatory Quality Indicator Program Manual - 2.0 Part A (Final version)"  styles='\{"label":{"textDecoration":""}}'  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element0block_element0block_element4block_element1" class="slds-col  subtext  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element0block_element4block_element1_child"   record={record}  card={card}  merge-field="%3Cul%3E%0A%3Cli%3EProvides%20an%20overview%20of%20the%20National%20Aged%20Care%20Mandatory%20Quality%20Indicator%20Program%3C/li%3E%0A%3Cli%3EDefines%20and%20describes%20the%205%20indicators%20in%20the%20program%3C/li%3E%0A%3Cli%3EDetails%20the%20data%20collection%20requirement%20for%20each%20of%20the%20quality%20indicators%3C/li%3E%0A%3Cli%3EExplains%20how%20to%20submit%20QI%20data%3C/li%3E%0A%3C/ul%3E%0A%3Cdiv%3E&nbsp;%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <omnistudio-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </omnistudio-action>
+  
+            <omnistudio-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </omnistudio-action>
+            </div>
+          </template>

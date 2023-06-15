@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Completion_Date_Greater_QFR_Due</fullName>
+    <active>true</active>
+    <description>Expected Completion Date must be greater than QFR Due Date</description>
+    <errorConditionFormula>(Reporting_Due_Date__c) &gt;= (Expected_Completion_Date__c)</errorConditionFormula>
+    <errorMessage>Expected Completion Date must be greater than QFR Due Date</errorMessage>
+</ValidationRule>

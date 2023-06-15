@@ -1,0 +1,78 @@
+.fields-container {
+    font-size: var(--font-size-paragraph-plus1);
+    color: var(--gpmsColGrey6);
+    margin: 0 0 calc(2.5 * var(--spacing-x-large));
+    width: 100%;
+}
+
+h3 {
+    color: var(--gpmsColGrey7);
+    font-size: var(--font-size-heading-normal);
+    font-weight: 500;
+}
+
+h3:not(.in-scoped-notification) {
+    border-bottom: 1px solid var(--gpmsColSecondary);
+}
+
+h4 {
+    color: var(--gpmsColGrey8);
+    font-size: var(--font-size-heading-minus2);
+    font-weight: 500;
+}
+
+.gpms-input:not(:first-child),
+.gpms-combobox {
+    margin-top: 1.75rem;
+}
+
+.role-services-container {
+    background: var(--gpmsColSecondaryLight2);
+    padding: var(--spacing-small) var(--spacing-large) 0;
+    border: 1.5px solid var(--gpmsColsecondaryDark);
+}
+
+.role-services-container h4 {
+    font-size: var(--font-size-heading-minus1);
+    color: var(--gpmsColGrey7);
+    font-weight: 500;
+}
+
+.role-services {
+    background-color: var(--gpmsColGrey0);
+    border: 1px solid var(--gpmsColGrey8);
+    max-height: 240px;
+    overflow: auto;
+    padding: var(--spacing-medium);
+}
+
+.has-divider {
+    border-bottom: 1px solid var(--gpmsColSecondaryLight1);
+    padding-bottom: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+}
+
+.buttons {
+    align-items: center;
+    border-top: 4px solid var(--gpmsColSecondary);
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--spacing-large);
+    justify-content: flex-end;
+    margin-top: calc(5 * var(--spacing-medium));
+    padding-top: calc(2.5 * var(--spacing-medium));
+}
+
+.gpms-remove-button {
+    flex: 1;
+}
+
+/* Breakpoints */
+
+/* Viewport >= 1024 */
+@media (min-width: 64em) {
+    .buttons {
+        flex-direction: row;
+        gap: var(--spacing-medium);
+    }
+}

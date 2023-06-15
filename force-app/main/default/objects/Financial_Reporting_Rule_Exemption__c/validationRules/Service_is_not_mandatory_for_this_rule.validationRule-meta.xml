@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_is_not_mandatory_for_this_rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Financial_Reporting_Rule__r.Name =&apos;Net assets equals equity&apos;, NOT(ISBLANK( Service__c )))</errorConditionFormula>
+    <errorDisplayField>Service__c</errorDisplayField>
+    <errorMessage>Please remove service value as this rule is applicable regardless of services.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<template>
+
+    <div class="row">
+    <span  style="color:gray">
+        <slot style="color:red;">{asterisk}</slot>{records}
+     </span>
+         <p class="validation-message" if:true={showValidation} style="color:red"> {records} {text} </p>
+        <lightning-input-rich-text name="input" disabled={disable} onfocus={handlefocus}  class="richText" required value={output} onblur={handleBlur}  maxlength="8000"></lightning-input-rich-text>  
+    </div>
+</template>

@@ -1,0 +1,41 @@
+<template>
+	<button
+		class={buttonClass}
+		disabled={disabled}
+		name={name}
+		accesskey={computedAccessKey}
+		title={computedTitle}
+		type={normalizedType}
+		value={value}
+		onfocus={handleButtonFocus}
+		onblur={handleButtonBlur}
+	>
+		<span>
+			<template if:true={showIconLeft}>
+				<c-qfr-icon
+					size="20"
+					variant={variant}
+					icon={icon}
+					class="slds-m-right_x-small"
+				></c-qfr-icon>
+			</template>
+			<slot> {label} </slot>
+			<template if:true={showIconRight}>
+				<c-qfr-icon
+					size="20"
+					variant={variant}
+					icon={icon}
+					class="slds-m-left_x-small"
+				></c-qfr-icon>
+			</template>
+		</span>
+		<template if:true={isLoading}>
+			<div class="loader">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</template>
+	</button>
+</template>

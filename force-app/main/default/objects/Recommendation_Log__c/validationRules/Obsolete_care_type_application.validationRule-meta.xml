@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Obsolete_care_type_application</fullName>
+    <active>true</active>
+    <description>The care type record will be locked when care type application is obsolete.</description>
+    <errorConditionFormula>AND(ApplicationId__r.RecordType.DeveloperName = &apos;Caretype_Application_Closed_locked_Inactive&apos;,
+   NOT( $Setup.BypassTriggers__c.BypassValidationRules__c ))</errorConditionFormula>
+    <errorMessage>The care type application is obsolete, you cannot make any changes.</errorMessage>
+</ValidationRule>

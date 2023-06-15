@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Extant__c</fullName>
+    <description>Indicates if cer record is the latest one for the service for the quarterly reporting period record is linked to. If consent is revoked and cer record was loaded in previous reporting period, then this field should be false as the periodical apex will create a shell record for the service.</description>
+    <externalId>false</externalId>
+    <formula>IF(AND(  Service__r.CER_Consent_Revoked__c = true, DATEVALUE(CreatedDate) &lt;  Quarterly_RP__r.CER_Calc_Date__c), false, IF (Service_Account__r.Most_Recent_CER__c = CASESAFEID(Id) , true, false))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Extant</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provider_Portal_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    AND(ISPICKVAL(Status__c, &quot;LIVE&quot;), NOT(Under_Review__c)),
+    &quot;Publicly available&quot;,
+    IF(
+        AND(ISPICKVAL(Status__c, &quot;Published&quot;), NOT(Under_Review__c)),
+        &quot;Preview&quot;,
+        IF(
+            OR(ISPICKVAL(Status__c, &quot;Published&quot;), ISPICKVAL(Status__c, &quot;LIVE&quot;)),
+            &quot;Under review&quot;,
+            &quot;&quot;
+        )
+    )
+)</formula>
+    <label>Provider Portal Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

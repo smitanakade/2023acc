@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Geospatial_Information_Layer_Version_GPMS_Internal_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Geospatial Information Layer Version GPMS Internal User</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Layer Version,Refresh Layer Version,Refresh Error</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Geospatial_Information_Layer_Version_GPMS_Tier_3_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Geospatial Information Layer Version GPMS Tier 3 Admin</label>
+        <sharedTo>
+            <group>GPMS_System_Administrator</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Layer Version,Refresh Layer Version,Refresh Error</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

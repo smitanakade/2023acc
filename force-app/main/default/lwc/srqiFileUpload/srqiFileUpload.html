@@ -1,0 +1,49 @@
+<template>
+    <article class="slds-card file-upload-container">
+        <br/>
+        <lightning-button
+            variant="brand"
+            label="File Staging"
+            onclick={navigateToFileStaging}
+            icon-name="action:back"
+            class="slds-m-left_x-small">
+        </lightning-button>
+        <lightning-card
+            icon-name="action:record"
+            class="custom-card slds-card__body_inner"
+            title=' Details: '>
+            <p>
+                <b> Reporting period: </b>
+            </p>
+            <div>
+                <br>
+                <div class="slds-text-title_caps">{valueRP}</div>
+                <br>
+                <lightning-input
+                    type="text"
+                    label="HDP File Ref#"
+                    onchange={handleInputChange}
+                    required>
+                </lightning-input>
+            </div>
+        </lightning-card>
+        <lightning-card
+            icon-name="action:upload"
+            title='Upload File'
+            class="custom-card slds-card__body_inner">
+            <p><b> Pre-fill this section</b></p>
+            <div>
+                <lightning-file-upload
+                    accept={acceptedCSVFormats}
+                    label="Upload your File to  pre-fill this section with your data."
+                    onuploadfinished={handleUpdateStagingFile}
+                    record-id={recordId}>
+                </lightning-file-upload>
+            </div>
+            <br/>
+            <div if:true={sfData}>
+                <c-srqi-Read-File sf-data={sfData}></c-srqi-Read-File>
+            </div>
+        </lightning-card>
+    </article>
+</template>

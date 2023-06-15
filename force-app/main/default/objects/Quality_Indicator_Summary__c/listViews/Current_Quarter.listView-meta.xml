@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Quarter</fullName>
+    <columns>NAME</columns>
+    <columns>Service__c</columns>
+    <columns>REPORTING_PERIOD__c</columns>
+    <columns>Availability_Status__c</columns>
+    <columns>Status__c</columns>
+    <columns>Rating_Type__c</columns>
+    <columns>Quality_Indicator_Rating_Stars__c</columns>
+    <columns>Under_Review__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Current_Quarter__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Current Quarter</label>
+</ListView>

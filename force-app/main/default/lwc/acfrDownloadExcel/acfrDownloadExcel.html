@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-05-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+  <lightning-layout
+    class="slds-box slds-theme_shade slds-var-m-horizontal_large slds-var-m-bottom_medium slds-p-around_none"
+    horizontal-align="spread"
+    vertical-align="center"
+  >
+    <lightning-layout-item padding="around-small" flexibility="auto, no-shrink">
+      <h4>Download an empty {formType} spreadsheet</h4>
+    </lightning-layout-item>
+    <lightning-layout-item padding="around-small" flexibility="auto, no-shrink">
+      <lightning-button class="slds-button"
+        label="Download"
+        onclick={download}
+        variant="neutral"
+      ></lightning-button>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

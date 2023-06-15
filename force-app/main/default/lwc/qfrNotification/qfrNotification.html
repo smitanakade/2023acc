@@ -1,0 +1,97 @@
+<template>
+  <div class={getVariantClass}>
+
+    <div class="slds-m-right_small">
+      <template if:true={isSuccess}>
+        <svg fill="none" height="24" viewBox="0 0 24 24" width="24">
+          <path d="m12 2.00012c-5.52 0-10 4.48-10 9.99998 0 5.52 4.48 10 10 10s10-4.48 10-10c0-5.51998-4.48-9.99998-10-9.99998z" fill="#ffffff"></path>
+          <path d="m9.94686 15.7559-2.72486-2.9964c-.14213-.1559-.222-.3676-.222-.5884s.07987-.4325.222-.5884c.29602-.3255.7742-.3255 1.07021 0l2.19359 2.4037 5.222-5.74227c.296-.32551.7742-.32551 1.0702 0s.296.85133 0 1.17684l-5.7609 6.33493c-.2885.3255-.7742.3255-1.07024 0z" fill="#4d8144"></path>
+        </svg>
+      </template>
+      <template if:true={isWarning}>
+        <svg fill="none" height="24" viewBox="0 0 24 24" width="24">
+          <clipPath id="w">
+            <path d="m0 0h24v24h-24z"></path>
+          </clipPath>
+          <g clip-path="url(#w)">
+            <path d="m1 21h22l-11-19zm12-3h-2v-2h2zm0-4h-2v-4h2z" fill="#323232"></path>
+          </g>
+        </svg>
+      </template>
+      <template if:true={isError}>
+        <svg fill="none" height="24" viewBox="0 0 24 24" width="24">
+          <clipPath id="e">
+            <path d="m0 0h24v24h-24z"></path>
+          </clipPath>
+          <g clip-path="url(#e)">
+            <path d="m15.73 3h-7.46l-5.27 5.27v7.46l5.27 5.27h7.46l5.27-5.27v-7.46zm1.27 12.74-1.26 1.26-3.74-3.74-3.74 3.74-1.26-1.26 3.74-3.74-3.74-3.74 1.26-1.26 3.74 3.74 3.74-3.74 1.26 1.26-3.74 3.74z" fill="#323232"></path>
+          </g>
+        </svg>
+      </template>
+      <template if:true={isInfo}>
+        <svg fill="none" height="24" viewBox="0 0 24 24" width="24">
+          <path d="m12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10z" fill="#00546e"></path>
+          <g fill="#f7fcfd">
+            <path d="m12 17c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1s1 .45 1 1v4c0 .55-.45 1-1 1z"></path>
+            <path d="m13 8c0 .55228-.4477 1-1 1s-1-.44772-1-1 .4477-1 1-1 1 .44772 1 1z"></path>
+          </g>
+        </svg>
+      </template>
+      <template if:true={isDefault}>
+        <svg fill="none" height="24" viewBox="0 0 24 24" width="24">
+          <path d="m12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10z" fill="#261040"></path>
+          <g fill="#ffffff">
+            <path d="m12 17c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1s1 .45 1 1v4c0 .55-.45 1-1 1z"></path>
+            <path d="m13 8c0 .55228-.4477 1-1 1s-1-.44772-1-1 .4477-1 1-1 1 .44772 1 1z"></path>
+          </g>
+        </svg>
+      </template>
+    </div>
+
+    <div class="qfr-notification_content slds-clearfix">
+      <div class="slds-float_right">
+        <template if:true={showCollapsible}>
+          <template if:false={isOpen}>
+            <svg fill="none" height="24" viewBox="0 0 24 24" width="24" class='has-pointer' onclick={toggleCollapse}>
+              <clipPath id="dc">
+                <path d="m0 0h24v24h-24z"></path>
+              </clipPath>
+              <g clip-path="url(#dc)">
+                <path d="m7.41 8.59003 4.59 4.57997 4.59-4.57997 1.41 1.40997-6 6-6-6z" fill={getToggleArrowColor}></path>
+              </g>
+            </svg>
+          </template>
+          <template if:true={isOpen}>
+            <svg fill="none" height="24" viewBox="0 0 24 24" width="24" class='has-pointer' onclick={toggleCollapse}>
+              <clipPath id="dco">
+                <path d="m0 0h24v24h-24z"></path>
+              </clipPath>
+              <g clip-path="url(#dco)">
+                <path d="m7.41 15.41 4.59-4.58 4.59 4.58 1.41-1.41-6-6-6 6z" fill={getToggleArrowColor}></path>
+              </g>
+            </svg>
+          </template>
+        </template>
+        <template if:true={handleClose}>
+          <svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="slds-m-left_small has-pointer" onclick={handleClose}>
+            <clipPath id="d">
+              <path d="m0 0h24v24h-24z"></path>
+            </clipPath>
+            <g clip-path="url(#d)">
+              <path d="m19 6.41-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z" fill="#323232"></path>
+            </g>
+          </svg>
+        </template>
+      </div>
+      <p class="qfr-notification_title">{ title }</p>
+      <div class={getCollapseClasses}>
+        <template if:true={hasHtml}>
+          <lightning-formatted-rich-text value={value}></lightning-formatted-rich-text>
+        </template>
+        <template if:false={hasHtml}>
+          <slot>{value}</slot>
+        </template>
+      </div>
+    </div>
+  </div>
+</template>

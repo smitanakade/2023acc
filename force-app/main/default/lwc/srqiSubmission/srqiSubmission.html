@@ -1,0 +1,79 @@
+<template>
+    <lightning-card>
+        <!-- Loading Spinner -->
+        <template if:true={isLoading}>
+            <lightning-spinner variant="brand" size="large">
+            </lightning-spinner>
+        </template>
+        <!-- Title -->
+        <div class="slds-text-heading_large">{submissionTitle}</div>
+
+        <!-- Content -->
+        <template if:true={isCompleteText}>
+            <div class="slds-p-bottom_large normal-text">
+                <p>The Quality Indicators data has been submitted already.</p>
+            </div>
+        </template>
+        <template if:true={isSubmitText}>
+            <div class="slds-text-longform slds-p-bottom_large normal-text">
+                <p>By submitting Quality indicators data you:</p>
+                <ul>
+                    <li>
+                        Confirm that you have collected, and are reporting, the
+                        quality indicator data in accordance with National Aged
+                        Care Mandatory Quality Indicator Program Manual 3.0 and
+                        all applicable laws, in accordance with the Aged Care
+                        Act (1997), Records Principles (2014), and
+                        Accountability Principles.
+                    </li>
+                    <li>
+                        Confirm that any information you have provided does not
+                        contain any personal information as defined under
+                        Privacy Act 1988 (Cth).
+                    </li>
+                </ul>
+                <p>{concludingText}</p>
+            </div>
+        </template>
+        <tempate if:true={isMissingText}>
+            <div class="slds-text-longform slds-p-bottom_large normal-text">
+                <p>
+                    Please complete the following domains before you can submit:
+                </p>
+                <ul class="slds-m-around_medium">
+                    <template
+                        for:each={uncompletedDomains}
+                        for:item="uncompletedDomain"
+                    >
+                        <li key={uncompletedDomain.domainName}>
+                            {uncompletedDomain.domainName}
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </tempate>
+
+        <hr />
+
+        <!-- Button to go back and submit QIS -->
+        <div class="slds-float_right">
+            <lightning-button
+                label="Back"
+                icon-name="utility:chevronleft"
+                variant="brand-outline"
+                class="slds-m-right_medium slds-col_bump-left"
+                onclick={handleBack}
+            >
+            </lightning-button>
+            <lightning-button
+                label="Save and Finish"
+                icon-name="utility:chevronright"
+                icon-position="right"
+                variant="brand"
+                onclick={handleClick}
+                disabled={disableButton}
+            >
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

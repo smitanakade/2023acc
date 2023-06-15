@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Credential_Records_ACQSC</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Access to credential records to ACQSC users</description>
+        <label>Credential Records ACQSC</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Qualification,Unsuitability Details,Police Record Check,Certification</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Credential_Records_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Credential Records ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Qualification,Unsuitability Details,Police Record Check,Certification</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Credential_Records_Aged_Care_Accrediation</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Access to credential records to Aged Care Accrediation users</description>
+        <label>Credential Records Aged Care Accrediation</label>
+        <sharedTo>
+            <group>GPMS_Aged_Care_Accreditation_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Police Record Check,Certification,Qualification</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Credential_Records_CHSP</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Access to credential records to CHSP users</description>
+        <label>Credential Records CHSP</label>
+        <sharedTo>
+            <group>GPMS_CHSP_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Police Record Check,Certification,Qualification</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Credential_Records_Central_Office_Staff</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Access to credential records to Central Office Staff users</description>
+        <label>Credential Records Central Office Staff</label>
+        <sharedTo>
+            <group>GPMS_Central_Office_Staff_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Police Record Check,Certification,Qualification</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Credential_Records_GPMS_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Credential Records GPMS Admin</label>
+        <sharedTo>
+            <group>GPMS_System_Administrator</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Qualification,Unsuitability Details,Police Record Check,Certification</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Credential_Records_NATSIFAC</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Access to credential records to NATSIFAC users</description>
+        <label>Credential Records NATSIFAC</label>
+        <sharedTo>
+            <group>GPMS_NATSIFAC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Police Record Check,Certification,Qualification</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Credential_Records_Partnered_Government_Organisation</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Access to credential records to Partnered Government Organisation users</description>
+        <label>Credential Records Partnered Government Organisation</label>
+        <sharedTo>
+            <group>GPMS_Partnered_Government_Org_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Police Record Check,Certification,Qualification</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Credential_Records_STO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Access to credential records to STO users</description>
+        <label>Credential Records STO</label>
+        <sharedTo>
+            <group>GPMS_STO_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Police Record Check,Certification,Qualification</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

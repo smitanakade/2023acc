@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR25_CONREL_Check_Owned_Over100</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(OR(
+AND(ISNEW(), Account__r.Total_Percentage__c +Percentage_Owned__c&gt;1,Account__r.Total_Percentage__c&lt;&gt;1),
+AND(!ISNEW(), Account__r.Total_Percentage__c +Percentage_Owned__c- PRIORVALUE(Percentage_Owned__c)&gt;1)),
+OR(Percentage_Owned__c=1,Percentage_Owned__c&lt;=0.99),
+OR(ISBLANK(End_Date__c),End_Date__c&gt;=Today()))</errorConditionFormula>
+    <errorDisplayField>Percentage_Owned__c</errorDisplayField>
+    <errorMessage>The Percentage Owned is over 100%. Please enter a different Percentage Owned for this owner.</errorMessage>
+</ValidationRule>

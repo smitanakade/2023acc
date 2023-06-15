@@ -1,0 +1,54 @@
+<template>
+	<lightning-card class="slds-card__body_inner" title="Declaration Upload">
+		<div
+			class="slds-p-horizontal_small slds-p-vertical_x-small"
+			style="background-color: #eeeeee"
+			if:false={fileCheck}
+		>
+			<p>
+				<lightning-icon
+					icon-name="utility:info"
+					alternative-text="Info"
+					title="Info"
+					size="x-small"
+				></lightning-icon>
+				&ensp;If you need to make changes before submitting the report then
+				remove the declaration first.
+			</p>
+		</div>
+		<div class="slds-p-horizontal_small" if:true={fileCheck}>
+			<lightning-file-upload
+				label="Upload file"
+				name="fileUploader"
+				disabled={disableButton}
+				accept={acceptedFormats}
+				record-id={recordId}
+				onuploadfinished={handleActionFinished}
+				single
+			>
+			</lightning-file-upload>
+		</div>
+		<div class="file-list">
+			<c-omni-files-list
+				files={files}
+				onfiledelete={handleActionFinished}
+				style="margin-top: 20%"
+			></c-omni-files-list>
+		</div>
+		<div
+			class="slds-p-horizontal_small slds-theme_success"
+			if:false={fileCheck}
+		>
+			<p class="slds-p-horizontal_small slds-p-vertical_small">
+				<lightning-icon
+					icon-name="utility:check"
+					alternative-text="Check"
+					title="Check"
+					size="x-small"
+					variant="inverse"
+				></lightning-icon>
+				&ensp;Almost done! Just click submit below to complete this QFR
+			</p>
+		</div>
+	</lightning-card>
+</template>

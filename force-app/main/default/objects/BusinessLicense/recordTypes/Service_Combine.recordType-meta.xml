@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Combine</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Service_Combine</compactLayoutAssignment>
+    <label>Service Combine</label>
+    <picklistValues>
+        <picklist>ACMPS_Notified__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Application_Status__c</picklist>
+        <values>
+            <fullName>Finalise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Received</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Care_Type__c</picklist>
+        <values>
+            <fullName>Commonwealth Home Support Programme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flexible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National Aboriginal and Torres Strait Islander Flexible Aged Care Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GPMS_Extra_Service_Status__c</picklist>
+        <values>
+            <fullName>Distinct Part</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whole Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>JurisdictionType</picklist>
+        <values>
+            <fullName>COUNTRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COUNTY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROVINCE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Service_Care_Sub_Type__c</picklist>
+        <values>
+            <fullName>Assistance with Care and Housing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Care Relationship and Carer Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community and Home Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EACH Dementia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extended Aged Care at Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Care Packages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innovative Pool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innovative Pool - CDC High Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innovative Pool - CDC High Care Dementia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innovative Pool - CDC Low Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multi-Purpose Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National Aboriginal and Torres Strait Islander Flexible Aged Care Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retirement Villages Care Pilot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service System Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Short-Term Restorative Care %28STRC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transition Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Approval Ceased</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intention to Revoke</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Approved %28Threshold criteria not met%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Funded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revoked by Dept</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revoked by Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taken to be approved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Reason__c</picklist>
+        <values>
+            <fullName>Funding approved and commenced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funding not approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HCP Conversion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Has Authorised Grant%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Has Completed Grant%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Has Executed Grant%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Has No Grants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Has Rejected Grant%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Has Suspended Grant%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Has Terminated Grant%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Has Unapproved Grant%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No current activities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Closed-Combined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Operational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offline-Permanent Closure of Facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offline-Temporary Closure of Facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opened</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Operational End</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Operational Start</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-operational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Record Closed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VerificationStatus</picklist>
+        <values>
+            <fullName>Authorized</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

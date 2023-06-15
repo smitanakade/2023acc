@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UnstageablePressureInjuryTotal</fullName>
+    <active>true</active>
+    <description>Validate the number of care recipients with unstageable pressure injuries is not greater than the number of care recipients with pressure injuries.</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    BLANKVALUE(No_CR_PI_Unstagable__c, 0) &gt; BLANKVALUE(No_CR_One_More_PI__c, 0)
+)</errorConditionFormula>
+    <errorDisplayField>No_CR_PI_Unstagable__c</errorDisplayField>
+    <errorMessage>Number of care recipients with one or more unstageable pressure injuries cannot be higher than the total of all care recipients with one or more pressure injuries.</errorMessage>
+</ValidationRule>

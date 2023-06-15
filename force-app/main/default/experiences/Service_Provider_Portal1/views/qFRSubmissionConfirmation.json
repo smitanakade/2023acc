@@ -1,0 +1,76 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "e07704a0-703a-4cda-8997-38ec625d7702",
+  "label" : "QFR Submission Confirmation",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "95abee92-c780-4552-b6db-0b83904cd1df",
+          "columns" : [ {
+            "UUID" : "9f570125-afbf-4892-9eef-27ad38e98844",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "95abee92-c780-4552-b6db-0b83904cd1df",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "dir" : "ltr",
+            "flexipageRegionWidth" : "LARGE",
+            "inline" : false,
+            "inlineLabel" : "Launch ACFR/ReportSuccessfulySubmitted",
+            "inlineVariant" : "brand",
+            "layout" : "lightning",
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "c:aCFRReportSuccessfulySubmittedEnglish",
+          "id" : "8385d905-5de7-46fc-980c-aec71501a1ac",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9f570125-afbf-4892-9eef-27ad38e98844",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "23cf8b2b-074b-4cad-b2e7-d26a5ae90872",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "QFR Submission Confirmation"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "60a47620-659c-4fb0-90eb-86cec908f81b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8dafaa87-8474-44ae-b506-7043d4debb3f",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-qfr-submission-confirmation"
+}

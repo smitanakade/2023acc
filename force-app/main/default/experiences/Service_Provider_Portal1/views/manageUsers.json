@@ -1,0 +1,67 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "a787fb3a-133f-4fee-a776-0c7ad7506c9e",
+  "label" : "Manage Users",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a829d695-fc4d-4961-ade2-5e4d3c2e9a90",
+          "columns" : [ {
+            "UUID" : "ba5ec634-3eb8-4a44-92d8-3d47a15e2c78",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a829d695-fc4d-4961-ade2-5e4d3c2e9a90",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:gpmsPortalManageUsers",
+          "id" : "87066462-81f4-4e50-a4ca-004c304b9624",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ba5ec634-3eb8-4a44-92d8-3d47a15e2c78",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ce4d247b-726a-42f0-a72c-d6a1d95a2718",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Manage Users"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "3fc74f55-742a-4395-b3ce-0c9cc1e89d38",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4204434f-2b32-48ef-b0cb-b02f46c1b213",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-manage-users"
+}

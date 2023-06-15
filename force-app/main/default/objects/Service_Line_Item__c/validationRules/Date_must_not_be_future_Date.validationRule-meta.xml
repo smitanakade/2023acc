@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_must_not_be_future_Date</fullName>
+    <active>true</active>
+    <description>Date last checked by StewartBrown must not be future date</description>
+    <errorConditionFormula>Date_last_checked_by_Stewart_Brown__c &gt; TODAY()</errorConditionFormula>
+    <errorDisplayField>Date_last_checked_by_Stewart_Brown__c</errorDisplayField>
+    <errorMessage>You must select a date that is not a future date.</errorMessage>
+</ValidationRule>

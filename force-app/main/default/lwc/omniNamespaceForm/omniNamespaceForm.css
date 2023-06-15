@@ -1,0 +1,36 @@
+:host {
+	--slds-c-button-radius-border: 4px;
+}
+
+.qfr-main-form-container {
+	display: flex;
+	flex-direction: row;
+	-moz-column-count: 2;
+	column-count: 2;
+	gap: 2rem;
+}
+
+.qfr-main-form-container .nav {
+	flex: 3;
+}
+
+.qfr-main-form-container .form {
+	flex: 9;
+	max-width: 1280px;
+}
+
+.qfr-main-form-container.is-collapsed .nav {
+	flex: initial;
+}
+
+.button-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+.button-next {
+	margin-left: auto;
+}

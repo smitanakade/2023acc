@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Application_Status</name>
+        <label>Application Status?</label>
+        <locationX>314</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Under_Formal_Assessment</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.NewStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Under Formal Assessment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.NewStatus__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Under Formal Assessment</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UpdateUnderFormalAssessmentdate</targetReference>
+            </connector>
+            <label>Under Formal Assessment</label>
+        </rules>
+        <rules>
+            <name>Delegate_s_Decision</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.NewStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Delegate&apos;s Decision</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.NewStatus__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Delegate&apos;s Decision</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Delegate_s_Decision</targetReference>
+            </connector>
+            <label>Delegate&apos;s Decision</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Application: Set Application Status Date {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Application: Set Application Status Date</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>This is to save the date every time application status changes to &quot;Update Delegate&apos;s Decision&quot;.</description>
+        <name>Update_Delegate_s_Decision</name>
+        <label>Update Delegate&apos;s Decision</label>
+        <locationX>314</locationX>
+        <locationY>455</locationY>
+        <inputAssignments>
+            <field>DatetoDelegate__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>This is to save the date every time application status changes to &quot;Under Formal Assessment&quot;.</description>
+        <name>UpdateUnderFormalAssessmentdate</name>
+        <label>Update Under Formal Assessment date</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <inputAssignments>
+            <field>UnderFormalAssessmentDate__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Application_Status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>NewStatus__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>BusinessLicenseApplication</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

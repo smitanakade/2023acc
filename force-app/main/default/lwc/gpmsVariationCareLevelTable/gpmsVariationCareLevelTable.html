@@ -1,0 +1,168 @@
+<template>
+
+    <div class="slds-section slds-is-open">
+        <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small" title="Section Title">
+                {allPlacesTitle}
+            </span>
+        </h3>
+        <div aria-hidden="false" class="slds-section__content">
+
+            <template if:true={allPlaces}>
+                <div class="slds-scrollable_x">
+                    <table class="slds-table slds-table_bordered slds-table_col-bordered">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="slds-text-align_right" scope="col" style="width:3.25rem"></th>
+                                <th scope="col">Packet ID</th>
+                                <th scope="col">Care Type</th>
+                                <th scope="col">Care Level</th>
+                                <th scope="col">Number of places</th>
+                                <th scope="col">Status of places</th>
+                                <th scope="col">Service</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Number of places to remain at this care level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={allPlaces} for:item="place">
+                                <tr class="slds-hint-parent" key={place.Id}>
+                                    <td class="slds-text-align_right" role="gridcell">
+                                        <lightning-input type="checkbox" name={place.Id} checked={place.checked} onchange={changeSelectedPlace}></lightning-input>
+                                    </td>
+                                    <th scope="row"><div class="slds-truncate"><lightning-formatted-url label={place.PacketId} value={place.PacketUrl} target="_blank"></lightning-formatted-url></div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.CareType}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.CareLevel}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.NumberOfRemaining}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.StatusChangeTo}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{currentServiceName}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{location}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.RemainingAfterVariation}</div></th>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            
+            </template>
+
+        </div>
+    </div>
+
+    <div class="slds-section slds-is-open">
+        <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small" title="Section Title">
+                Assign care level of places
+            </span>
+        </h3>
+        <div aria-hidden="false" class="slds-section__content">
+            <template if:true={selectedPlace}>
+        
+                <div class="slds-scrollable_x">
+                    <table class="slds-table slds-table_bordered slds-table_col-bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th scope="col">Packet ID</th>
+                            <th scope="col">Care Type</th>
+                            <th scope="col">Care Level</th>
+                            <th scope="col">{title}</th>
+                            <th scope="col">Status of places</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="slds-hint-parent">
+                            <th scope="row"><div><lightning-formatted-url label={selectedPlace.PacketId} value={selectedPlace.PacketUrl} target="_blank"></lightning-formatted-url></div></th>
+                            <th scope="row"><div>{selectedPlace.CareType}</div></th>
+                            <th scope="row">
+                                <div>
+                                    <template if:false={isOther}>
+                                        <lightning-radio-group value={selectedPlace.CareLevel} options={careLevelOptions} onchange={updateCareLevel} ></lightning-radio-group>
+                                    </template>
+                                    <template if:true={isOther}>
+                                        {selectedPlace.CareLevel}
+                                    </template>
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div>
+                                    <lightning-input type="number" name={selectedPlace.Id} value={selectedPlace.NumberOfChanges} max={selectedPlace.RemainingAfterVariation} min="1" step="1" onchange={updateNumer}></lightning-input>
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div>
+                                    <template if:false={selectedPlace.IsProvisional}>
+                                        <lightning-radio-group value={selectedPlace.StatusChangeTo} options={statusOptions} onchange={updateStatus} ></lightning-radio-group>
+                                    </template>
+                                    <template if:true={selectedPlace.IsProvisional}>
+                                        {selectedPlace.StatusChangeTo}
+                                    </template>
+                                </div>
+                            </th>
+                            <th scope="row">
+                                <div>
+                                    <lightning-button label="Add" disabled={selectedPlace.notValid} onclick={addToSummary}></lightning-button>
+                                </div>
+                            </th>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </template>
+
+
+
+        </div>
+    </div>
+
+    <div class="slds-section slds-is-open">
+        <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small" title="Section Title">
+                Summary of places
+            </span>
+        </h3>
+        <div aria-hidden="false" class="slds-section__content">
+            <template if:true={placeSummary}>
+        
+                <div class="slds-scrollable_x">
+                    <table class="slds-table slds-table_bordered slds-table_col-bordered">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th scope="col"></th>
+                                <th scope="col">Packet ID</th>
+                                <th scope="col">Care Type</th>
+                                <th scope="col">Care Level</th>
+                                <th scope="col">Number of places</th>
+                                <th scope="col">Status of places</th>
+                                <th scope="col">Service</th>
+                                <th scope="col">Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={placeSummary} for:item="place" for:index="index">
+                                <tr class="slds-hint-parent" key={place.Id}>
+                                    <th scope="row">
+                                        <lightning-button name={index} label="Edit" onclick={edit}></lightning-button>
+                                        <lightning-button name={index} label="Remove" onclick={remove} class="slds-m-left_xx-small"></lightning-button>
+                                    </th>
+                                    <th scope="row"><div class="slds-truncate"><lightning-formatted-url label={place.PacketId} value={place.PacketUrl} target="_blank"></lightning-formatted-url></div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.CareType}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.CareLevel}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.NumberOfChanges}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.StatusChangeTo}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{serviceName}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{location}</div></th>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+        
+            </template>
+        </div>
+    </div>
+
+
+    
+    
+</template>

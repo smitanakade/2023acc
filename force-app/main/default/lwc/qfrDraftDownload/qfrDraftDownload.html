@@ -1,0 +1,10 @@
+<template>
+    <p>{loadingInfo}</p>
+    <div if:false={isComplete} class="slds-is-relative" style="min-height: 200px">
+      <lightning-spinner 
+        variant='brand'
+        alternative-text="Please wait..."
+        size="large"
+      ></lightning-spinner>
+    </div>
+  </template>

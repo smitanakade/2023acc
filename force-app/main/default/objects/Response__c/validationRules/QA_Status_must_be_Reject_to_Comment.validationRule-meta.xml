@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QA_Status_must_be_Reject_to_Comment</fullName>
+    <active>true</active>
+    <description>Stop QA Assessors from adding QA External comments when the status of the QA Outcome is not &quot;Reject&quot;.</description>
+    <errorConditionFormula>AND(
+     NOT(ISPICKVAL(QA__c, &quot;Reject&quot;)), NOT(ISBLANK(QA_Comments__c))
+   )</errorConditionFormula>
+    <errorMessage>A QA Assessor can add an External comment only for rejected responses</errorMessage>
+</ValidationRule>

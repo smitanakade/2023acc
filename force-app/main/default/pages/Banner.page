@@ -1,0 +1,33 @@
+<apex:page id="Banner" showheader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+  <html>
+  <head>
+  <link rel="shortcut icon" href="{!$Resource.DOHInternalUserLogo}" type="image/x-icon" />
+    <title>GPMS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css">
+      body { text-align: center; padding: 10%; font: 20px Helvetica, sans-serif; color: #333; }
+      h1 { font-size: 42px; margin: 0; }
+      p{ font-size:initial}
+      article { display: block; text-align: left; max-width: 650px; margin: 0 auto;padding-top:19px; }
+      a { color: black; text-decoration: none; }
+      a:hover { color: #333; text-decoration: none; }
+      @media only screen and (max-width : 480px) {
+        h1 { font-size: 40px; }
+      }
+    </style>
+  </head>
+  <body>
+  <article>
+    <apex:image url="{!$Resource.DOHInternalUserLogo}" width="300px" />
+    <br/>
+    <h1>Please log in to GPMS</h1>
+       
+    <p>If you experience issues with GPMS log in please call the IT Service Desk on 1800 500 380</p>
+    <p></p>
+  </article>
+  </body>
+  </html>
+
+</apex:page>

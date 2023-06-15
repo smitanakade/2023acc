@@ -1,0 +1,38 @@
+<template>
+	<div>
+		<svg
+			fill="none"
+			height={iconSize}
+			viewBox="0 0 24 24"
+			width={iconSize}
+			class={componentClass}
+		>
+			<template if:true={isFullScreen}>
+				<path
+					d="m21 11v-8h-8l3.29 3.29-10 10-3.29-3.29v8h8l-3.29-3.29 10-10z"
+					fill={color}
+				/>
+			</template>
+			<template if:true={isShrink}>
+				<g clip-rule="evenodd" fill-rule="evenodd" fill={color}>
+					<path d="m21 4.42v-1.42h-1.42l-3.29 3.29-3.29-3.29v8h8l-3.29-3.29z" />
+					<path
+						d="m3 19.58 3.29-3.29-3.29-3.29h8v8l-3.29-3.29-3.29 3.29h-1.42z"
+					/>
+				</g>
+			</template>
+			<template if:true={isChevronDown}>
+				<path
+					d="m16.59 8.58997-4.59 4.58003-4.59-4.58003-1.41 1.41 6 6.00003 6-6.00003z"
+					fill={color}
+				/>
+			</template>
+			<template if:true={isEdit}>
+				<path
+					d="m3 17.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z"
+					fill={color}
+				/>
+			</template>
+		</svg>
+	</div>
+</template>

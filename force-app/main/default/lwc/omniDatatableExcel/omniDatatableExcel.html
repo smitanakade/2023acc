@@ -1,0 +1,64 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-04-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+  <c-qfr-notification title="Upload an Excel spreadsheet (optional)" class-name="slds-m-top_small" is-collapsible>
+    <p class="">As an option, you can download, complete and upload the
+      "{formType}" form to populate the data table.</p>
+    <p class="">
+      <a href="javascript:void(0);" class="slds-text-link" onclick={handleClick}> Read detailed instructions and guidelines here.</a>
+    </p>
+    <c-qfr-download-excel
+      form-id={recordId}
+      form-type={formType}
+    ></c-qfr-download-excel>
+    <c-acfr-upload-excel
+      cols={cols.length}
+      record-id={recordId}
+      form-type={formType}
+    ></c-acfr-upload-excel>
+  </c-qfr-notification>
+
+  <template if:true={isClicked}>
+    <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+      class="slds-modal slds-fade-in-open">
+      <div class="slds-modal__container">
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={closeModal}>
+          <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+            <use xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+          </svg>
+          <span class="slds-assistive-text">Close dialog</span>
+        </button>
+        <div class="slds-modal__header slds-text-align_left no-border slds-var-p-horizontal_large slds-var-p-top_large slds-p-bottom_none">
+          <h1 id="modal-heading-01" class="slds-modal__title" tabindex="-1">
+            Upload an Excel spreadsheet - instructions and guidelines</br>
+        </br>
+      </h1>
+      <h2 class="slds-text-heading_small">Data File Upload</h2>
+      <p class="slds-var-m-top_small">To assist providers in completing the "{formType}" form, an alternative method of data input (via Excel spreadsheet) has been provided. 
+            If you would like to use this feature instead of completing the data in your web-browser directly, 
+            please follow the instructions outlined below to download the Excel template. Once completed, upload the 
+            spreadsheet using the upload button and the corresponding fields in the web-based form will be populated. </br>
+    </br>
+            Please note, this upload process is entirely optional. If you do not wish to use it, close this message and continue to enter data in the web-based form.</p>
+</div>
+<div class="slds-modal__content slds-var-p-around_large slds-var-p-top_medium">
+  <h2 class="slds-text-heading_small">Please read before you begin</h2>
+  <p class ="slds-var-m-top_small">Please ensure you have read the following guidelines before attempting to use the import feature.</p>
+  <ul class="slds-list_dotted slds-var-m-top_small">
+    <li>When you upload a completed spreadsheet, data from the spreadsheet will overwrite any existing values on the "{formType}" form (this includes any blank cells you may have left incomplete).</li>
+    <li>Depending on the number of columns listed in your import spreadsheet, the import process may take some time to complete. 
+              If the page appears to freeze upon clicking the next button, please wait patiently and do not attempt to close the page. </li>
+    <li>The spreadsheet templates used for importing the data are custom generated for each approved provider and must be solely used by that provider for their own submission. 
+              Templates belonging to other approved providers will not work correctly.</li>
+  </ul>
+</div>
+</div>
+</section>
+<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>
+</template>

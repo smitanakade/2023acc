@@ -1,0 +1,73 @@
+@import "c/cssUtils";
+
+.qfr-qa-outcome-error-modal {
+	font-weight: normal;
+}
+.qfr-qa-outcome-error-modal .section-header {
+	font-size: 1.25rem;
+	padding: 8px 16px;
+	background-color: #eee;
+}
+
+.qfr-qa-outcome-error-modal .section-container {
+	padding: 16px;
+}
+
+.qfr-qa-outcome-error-modal .section-container > div {
+	margin-bottom: 16px;
+}
+
+.qfr-qa-outcome-error-modal .label {
+	font-weight: 500;
+	margin-bottom: 4px;
+}
+
+.qfr-qa-outcome-error-modal .readonly {
+	background-color: #f8f8f8;
+	padding: 16px;
+}
+
+.qfr-qa-outcome-error-modal .textarea {
+	width: 100%;
+	padding: 16px;
+	border: 1px solid #888888;
+	margin-bottom: 0;
+	border-radius: 2px;
+}
+.qfr-qa-outcome-error-modal .textarea[disabled] {
+	opacity: 0.5;
+}
+
+.qfr-qa-outcome-error-modal p {
+	white-space: normal;
+	font-weight: 400;
+}
+
+.qfr-qa-outcome-error-modal .slds-text-link {
+	color: var(--gpmsColsecondaryDark);
+}
+
+.slds-text-link:hover {
+	color: var(--gpmsColsecondaryDark);
+	text-decoration: underline;
+}
+
+.slds-textarea {
+	border-radius: 0;
+	border: 3px solid var(--gpmsColsecondaryDark);
+}
+
+.slds-textarea.has-error {
+	border-color: var(--gpmColErrorDark);
+	box-shadow: none;
+}
+
+.text-too-short-error {
+	max-height: 0px;
+	overflow: hidden;
+	transition: 0.3s;
+}
+
+.text-too-short-error.isShown {
+	max-height: 100px;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NoDisputeMgmtCase</fullName>
+    <active>true</active>
+    <description>Users cannot manually create dispute management cases from Case. They can only create dispute management cases from the hold or release process.</description>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &quot;Dispute_Management&quot;, NOT(ISPICKVAL( Origin , &quot;System&quot;) ))</errorConditionFormula>
+    <errorMessage>Cases of type Dispute Management can only be created through the hold/release process</errorMessage>
+</ValidationRule>

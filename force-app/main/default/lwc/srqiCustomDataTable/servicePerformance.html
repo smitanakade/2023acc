@@ -1,0 +1,21 @@
+<template>
+    <div class="srqi-rating-details-table-cell slds-p-vertical_medium">
+        <p>
+            <template lwc:if={typeAttributes.isQI}>
+                <lightning-formatted-number
+                    value={typeAttributes.serviceValue}
+                    format-style="decimal"
+                    maximum-fraction-digits="0"
+                >
+                </lightning-formatted-number>
+                % {typeAttributes.description}
+            </template>
+            <template lwc:elseif={typeAttributes.isCM}>
+                Average resident receive {typeAttributes.serviceValue} minutes/day from {typeAttributes.description}
+            </template>
+            <template lwc:else>
+                {typeAttributes.serviceValue}
+            </template>
+        </p>
+    </div>
+</template>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR12_CONREL_Check_Admin_Liquidator_Exist</fullName>
+    <active>true</active>
+    <description>Make sure the Administrator/Liquidator contact will not be duplicated for this organisation.</description>
+    <errorConditionFormula>AND(Administrator_Liquidator_Record_Exists__c = True,  RecordType.DeveloperName = &apos;Administrator_Liquidator_CR&apos;, ISNEW() )</errorConditionFormula>
+    <errorMessage>An &apos;Administrator/Liquidator&apos; contact already exists for this organisation</errorMessage>
+</ValidationRule>

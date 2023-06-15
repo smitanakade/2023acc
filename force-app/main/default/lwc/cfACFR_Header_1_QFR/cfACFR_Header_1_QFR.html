@@ -1,0 +1,187 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative ">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <omnistudio-toast class="flexcard-toast-element" theme="slds" title="" message="" styletype=""> </omnistudio-toast>
+</div>
+            <div if:true={showLoader} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <omnistudio-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></omnistudio-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card card-background slds-p-around_x-small slds-m-around_none " style="      
+         ">
+          <div data-style-id="state0element0" class="slds-col  header-title  slds-size_10-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0_child"   card={card}  record={record}  merge-field="%3Cdiv%3EAged%20Care%20Provider%20Administration%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element1" class="slds-col  slds-text-align_right notification-action  slds-p-top_small slds-p-bottom_small  slds-size_1-of-12  " data-rindex={rindex} style="background-color:#51376b;      
+         " ><omnistudio-flex-action data-style-id="state0element1_child"  tracking-obj={_childCardTrackingObj}  class= "state0element1_child flexActionElement" 
+        data-action-element-class="state0element1_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="notifications"   state-obj={record}  card={card}  record={record}  label="Notifications"  icon-name="utility:notification"  action-list='\[{"stateAction":{"id":"test-action","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"/apex"}}}]'  icon-only="true"  icon-size="small"  icon-color="#FFFFFF"  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element2" class="slds-col  slds-theme_default slds-text-align_center account-action  slds-size_1-of-12  " data-rindex={rindex} style="background-color:#51376b;      
+         --slds-c-button-radius-border: 50%;
+--sds-c-button-brand-color-background: #FFFFFF;
+--sds-c-button-brand-color-background-hover: #FFFFFF;
+
+" >
+    <omnistudio-flex-menu data-style-id="state0element2_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  card={card}  record={record}  type="action"  size="x-small"  variant="brand"  icon-name="action:user"  overflow="true"  label=""  position="right"  icon-size="xx-small"  icon-color="#51376b" 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1657672544603-0"
+    theme="slds"
+    data-style-id="state0element2_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"key":"1657672544606-xi0epnpsi","label":"Action","draggable":false,"isOpen":true,"card":"{card}","stateAction":{"id":"test-action","type":"Custom","displayName":"Action","vlocityIcon":"standard-default","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"/apex"}}}]'  label="Action"  icon-name="custom:custom10"  re-render-flyout="undefined"  preload-flyout="undefined"  flyout-details='\{}'  flyout-channel="undefined"  class="state0element2_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state0element2_menuitem_0" data-show-spinner="false" 
+    data-element-label="accountmenuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%22iconPosition%22%3A%22left%22%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     </omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1657672564266-0"
+    theme="slds"
+    data-style-id="state0element2_menuitem_1"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"key":"1657672564269-cgv291l8q","label":"Action","draggable":false,"isOpen":true,"card":"{card}","stateAction":{"id":"test-action","type":"Custom","displayName":"Action","vlocityIcon":"standard-default","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"/apex"}}}]'  label="Action"  icon-name="custom:custom11"  re-render-flyout="undefined"  preload-flyout="undefined"  flyout-details='\{}'  flyout-channel="undefined"  class="state0element2_menuitem_1 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state0element2_menuitem_1" data-show-spinner="false" 
+    data-element-label="accountmenuitem1" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%22iconPosition%22%3A%22left%22%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     </omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1657672577703-0"
+    theme="slds"
+    data-style-id="state0element2_menuitem_2"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"key":"1657672577706-sqyrl773a","label":"Action","draggable":false,"isOpen":true,"card":"{card}","stateAction":{"id":"test-action","type":"Custom","displayName":"Action","vlocityIcon":"standard-default","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"/apex"}}}]'  label="Logout"  icon-name="utility:logout"  re-render-flyout="undefined"  preload-flyout="undefined"  flyout-details='\{}'  flyout-channel="undefined"  class="state0element2_menuitem_2 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state0element2_menuitem_2" data-show-spinner="false" 
+    data-element-label="accountmenuitem2" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%22iconPosition%22%3A%22left%22%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     </omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <omnistudio-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card card-background slds-p-around_x-small slds-m-around_none " style="      
+         ">
+          <div data-style-id="state0element0" class="slds-col  header-title  slds-size_10-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0_child"   card={card}  record={record}  merge-field="%3Cdiv%3EAged%20Care%20Provider%20Administration%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element1" class="slds-col  slds-text-align_right notification-action  slds-p-top_small slds-p-bottom_small  slds-size_1-of-12  " data-rindex={rindex} style="background-color:#51376b;      
+         " ><omnistudio-flex-action data-style-id="state0element1_child"  tracking-obj={_childCardTrackingObj}  class= "state0element1_child flexActionElement" 
+        data-action-element-class="state0element1_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="notifications"   state-obj={record}  card={card}  record={record}  label="Notifications"  icon-name="utility:notification"  action-list='\[{"stateAction":{"id":"test-action","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"/apex"}}}]'  icon-only="true"  icon-size="small"  icon-color="#FFFFFF"  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element2" class="slds-col  slds-theme_default slds-text-align_center account-action  slds-size_1-of-12  " data-rindex={rindex} style="background-color:#51376b;      
+         --slds-c-button-radius-border: 50%;
+--sds-c-button-brand-color-background: #FFFFFF;
+--sds-c-button-brand-color-background-hover: #FFFFFF;
+
+" >
+    <omnistudio-flex-menu data-style-id="state0element2_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  card={card}  record={record}  type="action"  size="x-small"  variant="brand"  icon-name="action:user"  overflow="true"  label=""  position="right"  icon-size="xx-small"  icon-color="#51376b" 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1657672544603-0"
+    theme="slds"
+    data-style-id="state0element2_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"key":"1657672544606-xi0epnpsi","label":"Action","draggable":false,"isOpen":true,"card":"{card}","stateAction":{"id":"test-action","type":"Custom","displayName":"Action","vlocityIcon":"standard-default","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"/apex"}}}]'  label="Action"  icon-name="custom:custom10"  re-render-flyout="undefined"  preload-flyout="undefined"  flyout-details='\{}'  flyout-channel="undefined"  class="state0element2_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state0element2_menuitem_0" data-show-spinner="false" 
+    data-element-label="accountmenuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%22iconPosition%22%3A%22left%22%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     </omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1657672564266-0"
+    theme="slds"
+    data-style-id="state0element2_menuitem_1"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"key":"1657672564269-cgv291l8q","label":"Action","draggable":false,"isOpen":true,"card":"{card}","stateAction":{"id":"test-action","type":"Custom","displayName":"Action","vlocityIcon":"standard-default","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"/apex"}}}]'  label="Action"  icon-name="custom:custom11"  re-render-flyout="undefined"  preload-flyout="undefined"  flyout-details='\{}'  flyout-channel="undefined"  class="state0element2_menuitem_1 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state0element2_menuitem_1" data-show-spinner="false" 
+    data-element-label="accountmenuitem1" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%22iconPosition%22%3A%22left%22%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     </omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1657672577703-0"
+    theme="slds"
+    data-style-id="state0element2_menuitem_2"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"key":"1657672577706-sqyrl773a","label":"Action","draggable":false,"isOpen":true,"card":"{card}","stateAction":{"id":"test-action","type":"Custom","displayName":"Action","vlocityIcon":"standard-default","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"/apex"}}}]'  label="Logout"  icon-name="utility:logout"  re-render-flyout="undefined"  preload-flyout="undefined"  flyout-details='\{}'  flyout-channel="undefined"  class="state0element2_menuitem_2 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state0element2_menuitem_2" data-show-spinner="false" 
+    data-element-label="accountmenuitem2" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%22iconPosition%22%3A%22left%22%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     </omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <omnistudio-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </omnistudio-action>
+  
+            <omnistudio-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </omnistudio-action>
+            </div>
+          </template>

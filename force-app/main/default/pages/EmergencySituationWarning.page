@@ -1,0 +1,11 @@
+<apex:page standardController="GPMS_Emergency_Situation__c" lightningStylesheets="true" extensions="EmergencySituationMessageController">
+    <apex:pageMessages />
+    <apex:form >
+    	<apex:pageBlock title="Delete Emergency Situation">
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!customDelete}" id="deleteButton" value="Delete"/>
+            </apex:pageBlockButtons>
+            Are you sure you want to delete this Emergency Situation? It may cause a change in subsidy paid to providers.
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

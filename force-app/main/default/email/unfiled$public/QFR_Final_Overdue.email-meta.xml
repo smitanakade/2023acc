@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Final Overdue</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>QFR_DoH_Aged_Care_Letterhead</letterhead>
+    <name>QFR Final Overdue</name>
+    <style>formalLetter</style>
+    <subject>REPORTING_STARTDATE to REPORTING_ENDDATE  QFR FINAL OVERDUE NOTICE - NAPS_PROVIDER_ID [SEC=OFFICIAL]</subject>
+    <textOnly>{!Today}
+NAPS PROVIDER ID: {!Case.NAPSID__c}
+{!Case.Provider_Name__c}
+
+
+OVERDUE FINAL NOTICE
+Non-Submission of the {!Case.Reporting_Period_Quarterly__c} Quarterly Financial Report
+
+Dear Approved Provider
+
+I am writing to Snowy Valleys Council (you) as you have not submitted your Quarterly Financial
+Report (‘QFR’) for Quarter 1 2022/23, which was due on {!Case.Reporting_Due_Date__c}.
+
+Section 63-1(1)(m) of the Aged Care Act 1997 (‘the Act’) and Part 4A of the Accountability
+Principles 2014 (‘the Principles’) set out the QFR requirements which require approved
+providers to prepare a QFR for each financial quarter and submit this to the Secretary of the
+Department of Health and Aged Care (‘the Secretary’). Failure to lodge a QFR is a breach of
+your approved provider responsibilities set out under section 43 of the Principles.
+
+You should note that any breach of your responsibilities under the Act or Principles may result
+in a delegate of the Commissioner considering taking regulatory action including by issuing a
+Non-Compliance Notice or imposing one or more sanctions under section 63N of the Aged
+Care Quality and Safety Commission Act 2018. Nothing in this letter limits the Commission’s
+capacity to take future compliance action.
+
+Next Steps
+You must take all necessary actions to submit your QFR as a matter of urgency.
+QFRs must be submitted via the portal on the Forms Administration webpage. Should you
+require assistance, please contact:
+• FFBCONSULTATION@health.gov.au for general QFR enquiries
+• health@formsadministration.com.au if you are having difficulties accessing or using
+the website or completing an online form
+
+Yours sincerely,
+
+
+
+Elly Osborne
+Director
+Prudential Compliance Section
+Aged Care Quality and Safety Commission</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

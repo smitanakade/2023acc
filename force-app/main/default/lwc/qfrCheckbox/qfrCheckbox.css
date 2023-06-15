@@ -1,0 +1,100 @@
+.qfr-checkbox {
+  position: relative;
+  padding-left: 2rem;
+  line-height: 1.375rem;
+  margin-bottom: 1rem;
+}
+
+.qfr-checkbox p {
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-size: 0.9375rem;
+  color: #767676;
+}
+
+.qfr-checkbox p.error {
+  color: #970a3a;
+}
+
+.qfr-checkbox p.error svg {
+  position: relative;
+  top: 2px;
+}
+
+.qfr-checkbox [type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.qfr-checkbox [type="checkbox"] + label {
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.qfr-checkbox [type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 2px solid #767676;
+  transition: 0.3s ease-in-out;
+}
+
+.qfr-checkbox [type="checkbox"] + label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: calc(-2rem + 6px);
+  width: 7px;
+  height: 11px;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px 0px 0px 3px;
+  transform: rotate(-135deg);
+}
+
+.qfr-checkbox [type="checkbox"]:checked + label::before {
+  background-color: #000;
+  border-color: #000;
+}
+
+.qfr-checkbox .is-boxed [type="checkbox"] + label {
+  padding: 1rem;
+  padding-left: 3rem;
+  margin-left: -2rem;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  outline: 1px solid white;
+  border-radius: 2px;
+}
+
+.qfr-checkbox .is-boxed [type="checkbox"] + label::before {
+  top: 1rem;
+  left: 1rem;
+}
+
+.qfr-checkbox .is-boxed [type="checkbox"] + label::after {
+  top: 20px;
+  left: 24px;
+}
+
+.qfr-checkbox .is-boxed [type="checkbox"]:checked + label {
+  border-color: #00546e;
+  outline-color: #00546e;
+  background-color: #f7fcfd;
+  font-weight: 500;
+}
+
+.qfr-checkbox .has-error [type="checkbox"] + label {
+  background-color: #fde9ef;
+  border-color: #e91e63;
+  outline-color: #e91e63;
+}

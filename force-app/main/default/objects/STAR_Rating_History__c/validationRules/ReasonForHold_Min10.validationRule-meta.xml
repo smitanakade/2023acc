@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReasonForHold_Min10</fullName>
+    <active>false</active>
+    <description>If reason for hold field contains less than 10 characters, then error</description>
+    <errorConditionFormula>AND( Under_Review__c =true,LEN( Reason_for_hold__c )&lt;10)</errorConditionFormula>
+    <errorDisplayField>Reason_for_hold__c</errorDisplayField>
+    <errorMessage>Reason for hold cannot be less than 10 characters</errorMessage>
+</ValidationRule>

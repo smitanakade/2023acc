@@ -1,0 +1,20 @@
+<template>
+        <lightning-layout multiple-rows class="container">
+            <lightning-layout-item size="12" flexibility="auto" padding="horizontal-small">
+                <lightning-layout multiple-rows>
+                    <lightning-layout-item  size="5" class="slds-text-align_left margin">
+
+                        <template if:true={periods}>
+                            <p>Quality Indicators must be submitted four times throughout the financial year. Submission dates will be legislated and for the {yearMin}/{yearMax} financial year are as follows:</p> <br>
+                            <template for:each={periods} for:item="period" >
+                                <div key={period.key}>
+                                    <b>{period.quarter} Due {period.dueDate}</b>
+                                    <p>(reporting period  {period.startDate} -  {period.endDate})</p><br>
+                                </div>
+                            </template>
+                        </template>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>  
+        </lightning-layout>
+</template>

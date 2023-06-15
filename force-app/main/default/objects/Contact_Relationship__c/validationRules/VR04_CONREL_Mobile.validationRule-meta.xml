@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR04_CONREL_Mobile</fullName>
+    <active>false</active>
+    <description>Date that Contact is assigned as one of the Record Types.</description>
+    <errorConditionFormula>AND(ISBLANK(Mobile__c) &amp;&amp;  OR(RecordType.Name =&apos;Non Individual Contact&apos;))</errorConditionFormula>
+    <errorDisplayField>Mobile__c</errorDisplayField>
+    <errorMessage>Mobile is mandatory</errorMessage>
+</ValidationRule>

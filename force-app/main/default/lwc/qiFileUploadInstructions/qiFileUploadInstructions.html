@@ -1,0 +1,188 @@
+<template>
+    <div>
+        <template lwc:if={showBanner}>
+            <c-qi-file-upload-banner
+                from-parent
+                title-name="QI Program file upload template"
+            ></c-qi-file-upload-banner>
+        </template>
+    </div>
+    <div class={containerClass}>
+        <div class="main-content">
+            <p class="title">Upload your quality indicator data</p>
+
+            <div class="instruction">
+                <div class="number">1</div>
+                <div class="section-title">
+                    Download the QI Program file upload template
+                </div>
+                <div class="section-content">
+                    <p>
+                        The QI Program file upload template allows you to bulk
+                        upload your quality indicator data.
+                    </p>
+                    <br />
+                    <p>
+                        Download and complete the QI Program file upload
+                        template below.
+                    </p>
+                </div>
+                <div class="section-content">
+                    <a class="download-link">
+                        <div class="download-button" onclick={downloadTemplate}>
+                            <div class="excel-1">
+                                <img src={excel} />
+                            </div>
+                            <div class="file">
+                                <lightning-formatted-url
+                                    value={fileUrl}
+                                    label={title}
+                                    target="_blank"
+                                ></lightning-formatted-url>
+                            </div>
+                            <div class="download slds-float_right">
+                                <img src={download} />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="instruction">
+                <div class="number">2</div>
+                <div class="section-title">Select the reporting quarter</div>
+                <div class="section-content">
+                    The QI Program file upload allows the submission of quality
+                    indicator data in a single reporting period.
+                </div>
+                <div class="rp-selection">
+                    <template lwc:if={options}>
+                        <lightning-combobox
+                            variant="label-hidden"
+                            label="Reporting Quarters"
+                            name="progress"
+                            value={value}
+                            placeholder="Choose reporting quarter"
+                            options={options}
+                            onchange={handleChange}
+                            class="combo"
+                            disabled={rpReadOnly}
+                        ></lightning-combobox>
+                    </template>
+                </div>
+            </div>
+
+            <div class="instruction">
+                <div class="number">3</div>
+                <div class="section-title">
+                    Upload the QI Program file upload template
+                </div>
+                <div class="section-content">
+                    <p>
+                        Please upload the CSV or XLSX file in the nominated
+                        section below. The file will be validated to check for
+                        errors and confirm the quality indicator data for each
+                        service is correct. Validation may take up to 2 hours.
+                    </p>
+                    <br />
+                    <p>
+                        If errors are identified, the quality indicator data for
+                        the service will not be submitted. You will receive an
+                        email notification to assist in identifying and amending
+                        the quality indicator data to support submission.
+                    </p>
+                    <br />
+                    <p>
+                        If the quality indicator data is correct, you will
+                        receive email confirmation the file was successfully
+                        submitted.
+                    </p>
+                </div>
+                <template lwc:if={realStaingId}>
+                    <div class="upload">
+                        <lightning-file-upload
+                            name="fileUploader"
+                            record-id={realStaingId}
+                            accept={acceptedFormats}
+                            onuploadfinished={handleUploadFinished}
+                        >
+                        </lightning-file-upload>
+                    </div>
+                    <template if:true={uploadedFiles}>
+                        <template
+                            for:each={uploadedFiles}
+                            for:item="uploadedFile"
+                            for:index="index"
+                        >
+                            <div class="excel" key={uploadedFile.name}>
+                                <img src={excel} />
+                            </div>
+                            {uploadedFile.name}
+                            <lightning-icon
+                                key={uploadedFile.name}
+                                data-id={index}
+                                icon-name="utility:close"
+                                size="xx-small"
+                                onclick={removeFile}
+                                class="close-icon"
+                            ></lightning-icon>
+                            &nbsp;
+                        </template>
+                    </template>
+                </template>
+            </div>
+
+            <div class="instruction">
+                <div class="number">4</div>
+                <div class="consent">
+                    By submitting quality indicators data you...
+                </div>
+                <ul class="confirmation">
+                    <li>
+                        Confirm that you have collected, and are reporting, the
+                        quality indicator data in accordance with National Aged
+                        Care Mandatory Quality Indicator Program Manual 3.0 and
+                        all applicable laws, in accordance with the Aged Care
+                        Act 1997, Records Principles 2014 and Accountability
+                        Principles 2014.
+                    </li>
+                    <li>
+                        Confirm that any information you have provided does not
+                        contain any personal information as defined under
+                        Privacy Act 1988.
+                    </li>
+                </ul>
+                <br />
+                <p class="conclusion">
+                    This quality indicator data will overwrite all previously
+                    entered data.
+                </p>
+            </div>
+        </div>
+        <div>
+            <hr />
+            <template lwc:if={showLock}>
+                <div class="button-class slds-float_right">
+                    <lightning-button
+                        label="Submit"
+                        icon-name="utility:lock"
+                        icon-position="left"
+                        variant="brand"
+                    >
+                    </lightning-button>
+                </div>
+            </template>
+            <template lwc:if={unlock}>
+                <div class="button-class slds-float_right">
+                    <lightning-button
+                        label="Submit"
+                        variant="brand"
+                        onclick={handleClick}
+                        disabled={disableButton}
+                    >
+                    </lightning-button>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

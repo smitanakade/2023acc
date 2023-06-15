@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>CER_GPMS_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CER GPMS ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CER_GPMS_ACQSC_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CER GPMS ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CER_STAR_Rating_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CER STAR Rating Users</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CER_Star_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CER Star Users</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Consumer_Experience_Report_GPMS_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Consumer Experience Report GPMS ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Consumer_Experience_Report_GPMS_ACQSC_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Consumer Experience Reports GPMS ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Consumer_Experience_Report_with_Contact_Centre_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Consumer Experience Report with Contact Centre User</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Consumer_Experience_Report_with_Star_Rating_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Consumer Experience Report with Star Rating User</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

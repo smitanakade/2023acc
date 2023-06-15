@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR08_CONREL_StartDate</fullName>
+    <active>false</active>
+    <description>Date that Contact is assigned as one of the Record Types.</description>
+    <errorConditionFormula>AND(ISBLANK(Start_Date__c) &amp;&amp;  OR(RecordType.Name =&apos;Key Personnel&apos;,RecordType.Name =&apos;Point of Contact&apos;,RecordType.Name =&apos;Administrator/Liquidator&apos;,RecordType.Name =&apos;Consultant&apos;))</errorConditionFormula>
+    <errorDisplayField>Start_Date__c</errorDisplayField>
+    <errorMessage>Start Date is mandatory</errorMessage>
+</ValidationRule>

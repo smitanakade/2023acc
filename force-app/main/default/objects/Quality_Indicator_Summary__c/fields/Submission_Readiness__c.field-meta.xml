@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submission_Readiness__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    OR(
+        ISPICKVAL(Status__c, &apos;Submitted&apos;),
+        ISPICKVAL(Status__c, &apos;Late Submission&apos;),
+        ISPICKVAL(Status__c, &apos;Updated After Due Date&apos;)
+    ),
+    IMAGE(&apos;/img/samples/flag_green.gif&apos;, &apos;Green Flag&apos;) + &apos; COMPLETE&apos;,
+    IF(
+        OR(
+            AND(
+                REPORTING_PERIOD__r.End_Date__c &gt; $CustomMetadata.Quality_Indicator_Settings__mdt.QI_Stepper_for_Go_Live.Five_Domains_RP_End_Date__c,
+                Completed_QI_Details__c &lt; 11
+            ),
+            AND(
+                REPORTING_PERIOD__r.End_Date__c &lt;= $CustomMetadata.Quality_Indicator_Settings__mdt.QI_Stepper_for_Go_Live.Five_Domains_RP_End_Date__c,
+                Completed_QI_Details__c &lt; 5
+            )
+        ),
+        IMAGE(&apos;/img/samples/flag_red.gif&apos;, &apos;Red Flag&apos;) + &apos; NOT READY&apos;,
+        IMAGE(&apos;/img/samples/flag_yellow.gif&apos;, &apos;Yellow Flag&apos;) + &apos; READY&apos;
+    )
+)</formula>
+    <label>Submission Readiness</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incorporation_Type__c</fullName>
+    <description>INCORP_TYPE_CODE ACO Incorporation Type list</description>
+    <externalId>false</externalId>
+    <label>Incorporation Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Incorporation_ID_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Australian Proprietary Company</fullName>
+                <default>false</default>
+                <label>Australian Proprietary Company</label>
+            </value>
+            <value>
+                <fullName>Australian Public Company</fullName>
+                <default>false</default>
+                <label>Australian Public Company</label>
+            </value>
+            <value>
+                <fullName>Australian Registered Body</fullName>
+                <default>false</default>
+                <label>Australian Registered Body</label>
+            </value>
+            <value>
+                <fullName>Foreign Company (Overseas)</fullName>
+                <default>false</default>
+                <label>Foreign Company (Overseas)</label>
+            </value>
+            <value>
+                <fullName>Own Legislation</fullName>
+                <default>false</default>
+                <label>Own Legislation</label>
+            </value>
+            <value>
+                <fullName>BLANK</fullName>
+                <default>false</default>
+                <label>BLANK</label>
+            </value>
+            <value>
+                <fullName>Incorporated Association</fullName>
+                <default>false</default>
+                <label>Incorporated Association</label>
+            </value>
+            <value>
+                <fullName>Indigenous Corporation</fullName>
+                <default>false</default>
+                <label>Indigenous Corporation</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Local Government</fullName>
+                <default>false</default>
+                <label>Local Government</label>
+            </value>
+            <value>
+                <fullName>State Government</fullName>
+                <default>false</default>
+                <label>State Government</label>
+            </value>
+            <value>
+                <fullName>State Government Statutory Authority</fullName>
+                <default>false</default>
+                <label>State Government Statutory Authority</label>
+            </value>
+            <value>
+                <fullName>Territory Government</fullName>
+                <default>false</default>
+                <label>Territory Government</label>
+            </value>
+            <value>
+                <fullName>Not Incorporated</fullName>
+                <default>false</default>
+                <label>Not Incorporated</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>ACN</controllingFieldValue>
+            <valueName>Australian Proprietary Company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACN</controllingFieldValue>
+            <valueName>Australian Public Company</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ARBN</controllingFieldValue>
+            <valueName>Australian Registered Body</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ARBN</controllingFieldValue>
+            <valueName>Foreign Company (Overseas)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ARBN</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Own Legislation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IAN</controllingFieldValue>
+            <valueName>Incorporated Association</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ICN</controllingFieldValue>
+            <valueName>Indigenous Corporation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Taken to be Incorporated</controllingFieldValue>
+            <valueName>Local Government</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Taken to be Incorporated</controllingFieldValue>
+            <valueName>State Government</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Taken to be Incorporated</controllingFieldValue>
+            <valueName>State Government Statutory Authority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Taken to be Incorporated</controllingFieldValue>
+            <valueName>Territory Government</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>GPMS_Care_Type_Sharing_Rule</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>GPMS Care Type Sharing Rule</label>
+        <sharedTo>
+            <group>GPMS_Internal_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CHSP,NATSIFAC,Approved Provider</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>GPMS_Care_Type_DM_Integration_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>GPMS Care Type DM Integration User</label>
+        <sharedTo>
+            <group>GPMS_Internal_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>GPMS_Care_Type_Sharing_Rule2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>GPMS Care Type Sharing Rule2</label>
+        <sharedTo>
+            <group>GPMS_Internal_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>GPMS_Internal_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

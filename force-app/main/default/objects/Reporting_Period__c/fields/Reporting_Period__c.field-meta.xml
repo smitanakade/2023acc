@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reporting_Period__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Reporting_Period_Type__c, &apos;Year&apos;), TEXT(YEAR(Start_Date__c)), &apos;Quarter &apos; &amp; 
+IF( MONTH(Start_Date__c) &gt;= 1 &amp;&amp; MONTH(End_Date__c) &lt;= 3,&apos;3&apos;, 
+IF( MONTH(Start_Date__c) &gt;= 4 &amp;&amp; MONTH(End_Date__c) &lt;= 6,&apos;4&apos;, 
+IF( MONTH(Start_Date__c) &gt;= 7 &amp;&amp; MONTH(End_Date__c) &lt;= 9,&apos;1&apos;,
+IF( MONTH(Start_Date__c) &gt;= 10 &amp;&amp; MONTH(End_Date__c) &lt;= 12,&apos;2&apos;,null) ) ) ) 
+
+&amp; &apos; FY &apos; &amp; 
+
+IF(MONTH(Start_Date__c) &lt; 7,RIGHT( TEXT(YEAR(Start_Date__c) -1),
+2),RIGHT( TEXT(YEAR(Start_Date__c)),
+2)) &amp; &apos; - &apos; &amp; IF(MONTH(End_Date__c) &gt;= 7,RIGHT( TEXT(YEAR(End_Date__c) +1),
+2),RIGHT( TEXT(YEAR(End_Date__c)),
+2)))
+
+&amp; &apos; (&apos; &amp; 
+
+TEXT( DAY( Start_Date__c ) ) &amp; &apos; &apos; &amp; CASE(MONTH(Start_Date__c ),
+1,
+&quot;January&quot;,
+2,
+&quot;February&quot;,
+3,
+&quot;March&quot;,
+4,
+&quot;April&quot;,
+5,
+&quot;May&quot;,
+6,
+&quot;June&quot;,
+7,
+&quot;July&quot;,
+8,
+&quot;August&quot;,
+9,
+&quot;September&quot;,
+10,
+&quot;October&quot;,
+11,
+&quot;November&quot;,
+12,
+&quot;December&quot;,
+&quot;None&quot;) &amp; &apos; &apos; &amp; TEXT( YEAR( Start_Date__c ) ) &amp; &apos; - &apos; &amp; TEXT( DAY( End_Date__c ) ) &amp; &apos; &apos; &amp; CASE(MONTH(End_Date__c ),
+1,
+&quot;January&quot;,
+2,
+&quot;February&quot;,
+3,
+&quot;March&quot;,
+4,
+&quot;April&quot;,
+5,
+&quot;May&quot;,
+6,
+&quot;June&quot;,
+7,
+&quot;July&quot;,
+8,
+&quot;August&quot;,
+9,
+&quot;September&quot;,
+10,
+&quot;October&quot;,
+11,
+&quot;November&quot;,
+12,
+&quot;December&quot;,
+&quot;None&quot;) &amp; &apos; &apos; &amp; TEXT( YEAR( End_Date__c ) ) &amp; &apos;)&apos; &amp; IF( TODAY() &gt;= Start_Date__c &amp;&amp; TODAY() &lt;= End_Date__c, &apos; - Current reporting period&apos;, IF( ADDMONTHS( TODAY( ),
+-3 ) &gt;= Start_Date__c &amp;&amp; ADDMONTHS( TODAY( ),
+-3 ) &lt;= End_Date__c, &apos; - Previous reporting period&apos;,
+null ) )</formula>
+    <label>Reporting Period</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

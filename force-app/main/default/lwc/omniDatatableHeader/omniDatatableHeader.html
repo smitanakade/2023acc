@@ -1,0 +1,53 @@
+<template>
+	<lightning-layout
+		class="container-header slds-var-p-around_medium"
+		horizontal-align="end"
+		vertical-align="center"
+	>
+		<lightning-layout-item
+			flexibility="auto"
+			class="slds-var-p-around_xx-small"
+		>
+			<c-qfr-dropdown
+				default-label="View all"
+				list={dynamicViewList}
+				onchange={handleViewChange}
+			></c-qfr-dropdown>
+		</lightning-layout-item>
+
+		<lightning-layout-item
+			flexibility="auto"
+			class="slds-var-p-around_xx-small"
+		>
+			<c-qfr-button
+				icon={expandButtonIcon}
+				variant={expandButtonState}
+				icon-position="right"
+				onclick={handleExpandClick}
+			>
+				{expandTableButtonLabel}
+			</c-qfr-button>
+		</lightning-layout-item>
+		<lightning-layout-item
+			flexibility="auto"
+			class="slds-var-p-around_xx-small"
+		>
+			<c-qfr-dropdown
+				default-label="Jump to Section"
+				list={sections}
+				onchange={handleSectionChange}
+			></c-qfr-dropdown>
+		</lightning-layout-item>
+		<lightning-layout-item
+			flexibility="auto"
+			class="slds-var-p-around_xx-small"
+		>
+			<c-qfr-dropdown
+				default-label="Jump to Column"
+				list={columns}
+				onchange={handleColumnChange}
+				placement="right"
+			></c-qfr-dropdown>
+		</lightning-layout-item>
+	</lightning-layout>
+</template>

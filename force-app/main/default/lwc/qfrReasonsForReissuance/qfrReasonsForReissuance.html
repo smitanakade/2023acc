@@ -1,0 +1,38 @@
+<template>
+	<template if:true={showList}>
+		<c-qfr-notification
+			is-collapsible="true"
+			title="Reasons for reissuance for this form"
+		>
+			<p class="">
+				The explanations provided for ({responseCount}) of the cells in the
+				table were rejected by Quality Assurance. To proceed with resubmitting
+				your QFR, please address the comments that were made using the
+				hyperlinks below. Or alternatively, if you have no response to the
+				comments, provide a different data value in the cell.
+			</p>
+			<ul>
+				<template for:each={commentList} for:item="glc" for:index="index">
+					<li key={glc.glcodelineitemId}>
+						<a
+							href={glc.link}
+							data-id={glc.glcodelineitemId}
+							onclick={goToCell}
+							class="is-underline"
+							>{glc.qaExternalComments}</a
+						>
+					</li>
+				</template>
+			</ul>
+			<template if:true={showViewAll}>
+				<div class="slds-align_absolute-center slds-text-body_small">
+					<p>
+						<a class="slds-text-link" onclick={toggleViewAll}
+							>{showAllLabel} ({responseCount})</a
+						>
+					</p>
+				</div>
+			</template>
+		</c-qfr-notification>
+	</template>
+</template>

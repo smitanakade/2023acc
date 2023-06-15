@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DateResolvedBeforeDateApplied</fullName>
+    <active>true</active>
+    <description>Date Decision Ends cannot be before Date Decision Applied</description>
+    <errorConditionFormula>Date_Decision_Ends__c  &lt;   Date_Decision_Applied__c</errorConditionFormula>
+    <errorDisplayField>DateResolved</errorDisplayField>
+    <errorMessage>Date Decision Ends cannot be before Date Decision Applied</errorMessage>
+</ValidationRule>

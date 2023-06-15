@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>QIS_PORTAL_USERS</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>QIS PORTAL USERS</label>
+        <sharedTo>
+            <allCustomerPortalUsers></allCustomerPortalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Contact_Centre_Quality_Indicator_Summary</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Contact Centre Quality Indicator Summary</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Quality_Indicator_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>QISR_QIS_Contact_Centre_share_with_Contact_Centre</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>QISR QIS Contact Centre share with Contact Centre</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Contact_Centre_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>QISR_QIS_Contact_Centre_share_with_Quality_Indicator</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>QISR QIS Contact Centre share with Quality Indicator</label>
+        <sharedTo>
+            <group>Quality_Indicator_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Contact_Centre_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>QISR_QIS_Contact_Centre_share_with_Star_Rating</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>QISR QIS Contact Centre share with Star Rating</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Contact_Centre_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>QIS_QI_Users_and_STAR_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>QIS QI Users and STAR Users</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Quality_Indicator_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>QI_GPMS_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>QI GPMS ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>QI_Summary_GPMS_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>QI Summary GPMS ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>QI_Summary_GPMS_ACQSC_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>QI Summary GPMS ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>QI_Summary_Quality_Indicator_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>QI Summary Quality Indicator Users</label>
+        <sharedTo>
+            <group>Quality_Indicator_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Quality_Indicator_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Quality_Indicator_Contact_Centre_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Quality Indicator Contact Centre User</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Quality_Indicator_GPMS_ACQSC_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Quality Indicator GPMS ACQSC Users</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Quality_Indicator_Summary_Quality_Indicator_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Quality Indicator Summary Quality Indicator User</label>
+        <sharedTo>
+            <group>Quality_Indicator_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Quality_Indicator_Summary_Quality_Indicator_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Quality Indicator Summary Quality Indicator Users</label>
+        <sharedTo>
+            <group>Quality_Indicator_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Quality_Indicator_Summary_with_Contact_Centre_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Quality Indicator Summary with Contact Centre User</label>
+        <sharedTo>
+            <group>Contact_Centre_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Quality_Indicator_Summary_with_Star_Rating_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Quality Indicator Summary with Star Rating User</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>DM_Integration_User</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_SR_Users</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with SR Users</label>
+        <sharedTo>
+            <group>STAR_Rating_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>STAR_Rating_Users</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

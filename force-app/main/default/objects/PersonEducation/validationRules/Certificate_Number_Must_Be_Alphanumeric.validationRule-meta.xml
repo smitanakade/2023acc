@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certificate_Number_Must_Be_Alphanumeric</fullName>
+    <active>true</active>
+    <description>Certificate number needs to be alphanumeric (letters and numbers but no special characters).</description>
+    <errorConditionFormula>AND (NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+Not(REGEX(Certificate_Number__c, &quot;[A-Za-z0-9]+&quot;)),
+ Not(ISBLANK(Certificate_Number__c)),
+ RecordType.DeveloperName = &apos;Certification&apos;
+)</errorConditionFormula>
+    <errorDisplayField>Certificate_Number__c</errorDisplayField>
+    <errorMessage>Certificate Number can only have the letters A-z or numbers 0-9.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submission_Requested_By__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Used to capture the contact of the user who requested the bulk upload submission (if applicable).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>User who requested the bulk upload submission (if applicable).</inlineHelpText>
+    <label>Submission Requested By</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>File Stagings</relationshipLabel>
+    <relationshipName>File_Stagings</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

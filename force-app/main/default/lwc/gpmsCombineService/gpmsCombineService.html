@@ -1,0 +1,23 @@
+<template>
+
+    <template for:each={duplicateCR} for:item="crList">
+        <lightning-card title={crList.Title} key={crList.Id}>
+            <template if:true={crList.crList}>
+                <template for:each={crList.crList} for:item="contact">
+                    <div key={contact.Contact} class="slds-m-top_medium">
+                        <h2>{contact.Name}</h2>
+                        <lightning-radio-group label="Select Correct Role and Position" 
+                        name={contact.Contact} type={crList.Id} variant="label-hidden" 
+                        options={contact.options} value={contact.Select} onchange={handleChange}>
+                    </lightning-radio-group>
+                    </div>
+                </template>
+            </template>
+            <template if:false={crList.crList}>
+                <h2>No {crList.Title}</h2>
+            </template>
+        </lightning-card>
+    </template>
+
+    
+</template>

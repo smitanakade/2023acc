@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AC_Check_Status</fullName>
+    <active>true</active>
+    <description>When user update the status, user have to update comment at the same time.</description>
+    <errorConditionFormula>AND(!ISNEW(), ISCHANGED( Status__c ), !ISCHANGED(Comment__c), NOT($Setup.BypassTriggers__c.BypassValidationRules__c) )</errorConditionFormula>
+    <errorDisplayField>Comment__c</errorDisplayField>
+    <errorMessage>Please update the comment.</errorMessage>
+</ValidationRule>

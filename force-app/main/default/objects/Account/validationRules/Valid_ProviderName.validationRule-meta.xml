@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_ProviderName</fullName>
+    <active>true</active>
+    <description>Provider Name can only have values, when Is also an Approved Provider equal to Yes</description>
+    <errorConditionFormula>AND(
+TEXT(Is_Approved_Provider__c)&lt;&gt;&quot;Yes&quot;,
+NOT(ISBLANK(Provider__c)),
+OR(
+RecordType.DeveloperName=&quot;Service_Delivery_Organisation&quot;,
+RecordType.DeveloperName=&quot;Management_Company&quot;
+)
+)</errorConditionFormula>
+    <errorDisplayField>Provider__c</errorDisplayField>
+    <errorMessage>Provider Name should only be populated when the Account is also an Approved Provider.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,137 @@
+<template>
+	<div class="nds-grid nds-wrap nds-is-relative containersize">
+		<div style="position: fixed; z-index: 999999; top: 0; right: 0">
+			<omnistudio-toast
+				class="flexcard-toast-element"
+				theme="nds"
+				title=""
+				message=""
+				styletype=""
+			>
+			</omnistudio-toast>
+		</div>
+		<div
+			if:true={showLoader}
+			class="nds-is-absolute vloc-loader_override"
+			style="
+				height: 100%;
+				width: 100%;
+				min-height: 50px;
+				background: transparent;
+				z-index: 99;
+			"
+		>
+			<div>
+				<omnistudio-spinner
+					variant="brand"
+					alternative-text="Loading content..."
+					size="small"
+					theme="nds"
+				></omnistudio-spinner>
+			</div>
+		</div>
+		<template if:false={hasPermission}>
+			You don't have required permissions to view this card.
+		</template>
+		<template if:true={hasPermission}>
+			<template if:true={hasRecords}>
+				<template for:each={_records} for:item="record" for:index="rindex">
+					<omnistudio-flex-card-state
+						if:true={record}
+						key={record._flex.uniqueKey}
+						data-recordid={record.Id}
+						record={record}
+						data-statue="true"
+						data-index="0"
+						data-rindex={rindex}
+						class="cf-vlocity-state-0 cf-vlocity-state nds-size_12-of-12"
+						tracking-obj={_childCardTrackingObj}
+					>
+						<div
+							if:true={cardLoaded}
+							class="nds-grid nds-wrap nds-theme_default"
+							style="
+								background-color: #fff;
+								background-repeat: repeat;
+								color: #000;
+							"
+						>
+							<div
+								data-style-id="state0element0"
+								class="nds-col nds-size_12-of-12"
+								data-rindex={rindex}
+								style=""
+							>
+								<omnistudio-output-field
+									data-style-id="state0element0_child"
+									card={card}
+									record={record}
+									merge-field="%3Cdiv%3E&nbsp;This%20QFR%20submission%20period%20has%20now%20ended.%20If%20you%20want%20to%20start%20or%20resume%20this%20submission,%20please%20contact%20Forms%20Administration.%3C/div%3E"
+									theme="nds"
+								></omnistudio-output-field>
+							</div>
+						</div>
+					</omnistudio-flex-card-state>
+				</template>
+			</template>
+			<template if:false={hasRecords}>
+				<omnistudio-flex-card-state
+					record={record}
+					data-statue="false"
+					data-index="0"
+					data-rindex={rindex}
+					class="cf-vlocity-state-0 cf-vlocity-state nds-size_12-of-12"
+					tracking-obj={_childCardTrackingObj}
+				>
+					<div
+						if:true={cardLoaded}
+						class="nds-grid nds-wrap nds-theme_default"
+						style="
+							background-color: #fff;
+							background-repeat: repeat;
+							color: #000;
+						"
+					>
+						<div
+							data-style-id="state0element0"
+							class="nds-col nds-size_12-of-12"
+							data-rindex={rindex}
+							style=""
+						>
+							<omnistudio-output-field
+								data-style-id="state0element0_child"
+								card={card}
+								record={record}
+								merge-field="%3Cdiv%3E&nbsp;This%20QFR%20submission%20period%20has%20now%20ended.%20If%20you%20want%20to%20start%20or%20resume%20this%20submission,%20please%20contact%20Forms%20Administration.%3C/div%3E"
+								theme="nds"
+							></omnistudio-output-field>
+						</div>
+					</div>
+				</omnistudio-flex-card-state>
+			</template>
+		</template>
+		<template if:true={hasError}> {error} </template>
+
+		<omnistudio-action
+			action-wrapperclass="slds-hide"
+			re-render-flyout
+			class="action-trigger slds-col"
+			onupdateos={updateOmniscript}
+			onselectcards={updateSelectedCards}
+			onsetvalue={updateAction}
+			onfireactionevent={actionEvtHandler}
+		>
+		</omnistudio-action>
+
+		<omnistudio-action
+			class="execute-action"
+			re-render-flyout
+			action-wrapperclass="slds-hide"
+			onupdateos={updateOmniscript}
+			onselectcards={updateSelectedCards}
+			onsetvalue={updateAction}
+			onfireactionevent={actionEvtHandler}
+		>
+		</omnistudio-action>
+	</div>
+</template>

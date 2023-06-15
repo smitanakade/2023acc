@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_RFI_DueDate</fullName>
+    <active>true</active>
+    <description>RFI Due Date cannot be less than 28 days from Date RFI Sent.</description>
+    <errorConditionFormula>AND(RecordType.DeveloperName=&quot;Request_for_Information&quot;,ISCHANGED(RFI_Due_Date__c),NOT(ISCHANGED(Status)),RFI_Due_Date__c &lt;  Date_Requested__c +28)</errorConditionFormula>
+    <errorDisplayField>RFI_Due_Date__c</errorDisplayField>
+    <errorMessage>RFI Due Date cannot be less than 28 days from Date RFI Sent.</errorMessage>
+</ValidationRule>

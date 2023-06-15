@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Slowly_Changing_Dimension_GPMS_Tier_3_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Slowly Changing Dimension GPMS Tier 3 Admin</label>
+        <sharedTo>
+            <group>GPMS_System_Administrator</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Contact Previous Name,Contact Alias Name,Admin Org Name,NATSIFAC Name,Provider Name,CHSP Name,Service Delivery Organisation Name,Aged Care Organisation Name,Account Previous Name,Management Company Name,Service Name,Trading Name</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

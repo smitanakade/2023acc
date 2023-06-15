@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perm_AP_Acc_Access</fullName>
+    <active>true</active>
+    <description>Validation to restrict access to Account records which AP user has CRU access.</description>
+    <errorConditionFormula>AND(
+OR(ISNEW(),
+NOT(ISNEW()
+)),
+AND(
+Account__r.RecordType.DeveloperName = &apos;Approved_Provider&apos;,
+NOT(
+OR(
+$Permission.GPMS_System_Administrator,
+$Permission.GPMS_ACQSC_User,
+$Permission.System_Administrator,
+$Permission.QFR_Data_Entry
+))))</errorConditionFormula>
+    <errorMessage>You do not have access to create/edit Approved Provider related records</errorMessage>
+</ValidationRule>

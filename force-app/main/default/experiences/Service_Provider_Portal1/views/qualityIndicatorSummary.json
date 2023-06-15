@@ -1,0 +1,68 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "0dc00cdd-9d73-4764-9c29-2ad05f2e3783",
+  "label" : "Quality Indicator Summary",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a5c40ceb-8801-441b-9329-bc16fc94bdd1",
+          "columns" : [ {
+            "UUID" : "8eee19bd-bcb5-4561-9d3f-dd556a26ea4b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a5c40ceb-8801-441b-9329-bc16fc94bdd1",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:qiSummaryReportingBanner",
+          "id" : "a1b88c8d-35b2-44ab-8efc-bc2e01ecdf24",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8eee19bd-bcb5-4561-9d3f-dd556a26ea4b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "45556ecf-3de1-4310-b5b6-fb19f2f1dac9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Quality Indicator Summary"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "a875b859-608d-4945-82bf-b282b34e8483",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4334f2b1-f2f3-45a6-9ed5-f17a93635da6",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-quality-indicator-summary"
+}

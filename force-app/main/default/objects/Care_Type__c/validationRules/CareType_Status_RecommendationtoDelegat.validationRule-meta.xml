@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CareType_Status_RecommendationtoDelegat</fullName>
+    <active>true</active>
+    <errorConditionFormula>TEXT(Application__r.Application_Status__c)=&quot;Recommendation to Delegate&quot;</errorConditionFormula>
+    <errorMessage>Cannot Edit Care Type during Recommendation to Delegate.</errorMessage>
+</ValidationRule>

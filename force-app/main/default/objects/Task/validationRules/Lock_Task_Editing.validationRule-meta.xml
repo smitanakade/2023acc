@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Task_Editing</fullName>
+    <active>true</active>
+    <description>If Is_Locked__c=true then lock the task for editing</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName=&apos;Communication_Task&apos;,$Profile.Name =&apos;Health User&apos;,Locked__c=true)</errorConditionFormula>
+    <errorMessage>The task is now locked and cannot be edited.</errorMessage>
+</ValidationRule>

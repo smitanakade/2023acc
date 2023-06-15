@@ -1,0 +1,51 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative ">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <omnistudio-toast class="flexcard-toast-element" theme="slds" title="" message="" styletype=""> </omnistudio-toast>
+</div>
+            <div if:true={showLoader} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <omnistudio-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></omnistudio-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12"  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card slds-p-around_x-small slds-m-bottom_x-small" style="">
+          <div data-style-id="state0element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element0_child"   record={record}  card={card}  merge-field="%3Cp%3E%3Cspan%20style=%22font-size:%2036pt;%22%3E%3Cstrong%3E%3Cspan%20class=%22slds-text-heading_large%22%3ECompile%20your%20information%3C/span%3E%3C/strong%3E%3C/span%3E%3C/p%3E%0A%3Cp%3E%3Cbr%20/%3E%3Cspan%20style=%22font-size:%2014pt;%22%3EThe%20data%20you%20submit%20in%20the%20Quarterly%20Financial%20Report%20(QFR)%20will%20contribute%20to%20initiatives%20to%20improve%20financial%20reporting%20and%20strengthen%20prudential%20compliance%20for%20approved%20aged%20care%20providers.%20The%20Quarterly%20Financial%20Report%20collects%20information%20relevant%20to%20the%20services%20you%20offer:%3C/span%3E%3C/p%3E%0A%3Cul%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2014pt;%22%3EViability%20and%20prudential%20compliance%20related%20questions,%20for%20residential%20and%20home%20care%20providers%3C/span%3E%3C/li%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2014pt;%22%3EQuarterly%20Financial%20Statements,%20including%20income%20and%20balance%20sheet%20information,%20for%20residential%20and%20home%20care%20providers%3C/span%3E%3C/li%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2014pt;%22%3ELabour%20costs%20and%20hours,%20for%20residential%20and%20home%20care%20providers%3C/span%3E%3C/li%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2014pt;%22%3EQuarterly%20food%20and%20nutrition%20information,%20for%20residential,%20MPS,%20and%20NATSIFACP%20providers%3C/span%3E%3C/li%3E%0A%3C/ul%3E%0A%3Cp%3E&nbsp;%3C/p%3E%0A%3Cp%3E%3Cspan%20style=%22font-size:%2014pt;%22%3EIf%20you%20encounter%20any%20difficulties%20or%20require%20further%20information,%20please%20contact%20Forms%20Administration%20on%20(02)%204403%200640.%3C/span%3E%3C/p%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div>
+      </omnistudio-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <omnistudio-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12"  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card slds-p-around_x-small slds-m-bottom_x-small" style="">
+          <div data-style-id="state0element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element0_child"   record={record}  card={card}  merge-field="%3Cp%3E%3Cspan%20style=%22font-size:%2036pt;%22%3E%3Cstrong%3E%3Cspan%20class=%22slds-text-heading_large%22%3ECompile%20your%20information%3C/span%3E%3C/strong%3E%3C/span%3E%3C/p%3E%0A%3Cp%3E%3Cbr%20/%3E%3Cspan%20style=%22font-size:%2014pt;%22%3EThe%20data%20you%20submit%20in%20the%20Quarterly%20Financial%20Report%20(QFR)%20will%20contribute%20to%20initiatives%20to%20improve%20financial%20reporting%20and%20strengthen%20prudential%20compliance%20for%20approved%20aged%20care%20providers.%20The%20Quarterly%20Financial%20Report%20collects%20information%20relevant%20to%20the%20services%20you%20offer:%3C/span%3E%3C/p%3E%0A%3Cul%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2014pt;%22%3EViability%20and%20prudential%20compliance%20related%20questions,%20for%20residential%20and%20home%20care%20providers%3C/span%3E%3C/li%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2014pt;%22%3EQuarterly%20Financial%20Statements,%20including%20income%20and%20balance%20sheet%20information,%20for%20residential%20and%20home%20care%20providers%3C/span%3E%3C/li%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2014pt;%22%3ELabour%20costs%20and%20hours,%20for%20residential%20and%20home%20care%20providers%3C/span%3E%3C/li%3E%0A%3Cli%3E%3Cspan%20style=%22font-size:%2014pt;%22%3EQuarterly%20food%20and%20nutrition%20information,%20for%20residential,%20MPS,%20and%20NATSIFACP%20providers%3C/span%3E%3C/li%3E%0A%3C/ul%3E%0A%3Cp%3E&nbsp;%3C/p%3E%0A%3Cp%3E%3Cspan%20style=%22font-size:%2014pt;%22%3EIf%20you%20encounter%20any%20difficulties%20or%20require%20further%20information,%20please%20contact%20Forms%20Administration%20on%20(02)%204403%200640.%3C/span%3E%3C/p%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div>
+      </omnistudio-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <omnistudio-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </omnistudio-action>
+  
+            <omnistudio-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </omnistudio-action>
+            </div>
+          </template>

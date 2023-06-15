@@ -1,0 +1,1308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>GPMS</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
+        <application>Quality_Indicators</application>
+        <default>false</default>
+        <visible>false</visible>
+    </applicationVisibilities>
+    <custom>true</custom>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Origin</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Priority</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Subject</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.SuppliedEmail</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.ContactId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Description</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Birthdate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Email</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event__c.Batch_Event_Completed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <tabVisibilities>
+        <tab>ACO_Group__c</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Application__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-Case</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Late_Submission_Emails</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <userLicense>Salesforce</userLicense>
+    <layoutAssignments>
+        <layout>BusinessLicenseApplication-Recommendation to Delegate Layout</layout>
+        <recordType>BusinessLicenseApplication.CaretypeApplicationAssessmentAndReview</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>BusinessLicenseApplication-Closed Layout</layout>
+        <recordType>BusinessLicenseApplication.CaretypeApplicationClosed</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>BusinessLicenseApplication-Inactive Layout</layout>
+        <recordType>BusinessLicenseApplication.CaretypeApplicationClosedlockedInactive</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>BusinessLicenseApplication-Delegate Layout</layout>
+        <recordType>BusinessLicenseApplication.CaretypeApplicationDelgatedecision</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>BusinessLicenseApplication-Taken To Be Approved Layout</layout>
+        <recordType>BusinessLicenseApplication.CaretypeApplicationNotRequiredTakenToBeApproved</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>BusinessLicenseApplication-Application Layout</layout>
+        <recordType>BusinessLicenseApplication.CaretypeApplicationSubmitted</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Case-QFR Case layout</layout>
+        <recordType>Case.QFR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Aged Care Organisation</layout>
+        <recordType>Account.Aged_Care_Organisation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Case-Star Rating Dispute</layout>
+        <recordType>Case.Dispute_Management</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Case-Star Rating Error</layout>
+        <recordType>Case.Star_Rating_Error</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account_Relationship__c-ACO to Provider Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account_Relationship__c-ACO to ACO Layout</layout>
+        <recordType>Account_Relationship__c.Organisation_Owner</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account_Relationship__c-ACO to Provider Layout</layout>
+        <recordType>Account_Relationship__c.ACO_to_Account</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account_Relationship__c-ACO to Provider Layout</layout>
+        <recordType>Account_Relationship__c.ACO_to_Intermediary</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account_Relationship__c-ACO to Provider Layout</layout>
+        <recordType>Account_Relationship__c.ACO_to_Provider</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account_Relationship__c-ACO to Provider Layout</layout>
+        <recordType>Account_Relationship__c.Provider_to_Intermediary</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Approved Provider</layout>
+        <recordType>Account.Approved_Provider</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Benchmarking Organisation</layout>
+        <recordType>Account.Benchmarking_Organisation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-CHSP</layout>
+        <recordType>Account.Commonwealth_Home_Support_Programme</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-NATSIFAC</layout>
+        <recordType>Account.National_Aboriginal_and_Torres_Strait_Islander_Flexible_Aged_Care</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Management Company</layout>
+        <recordType>Account.Management_Company</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Service Delivery Organisation</layout>
+        <recordType>Account.Service_Delivery_Organisation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Administrative Organisation</layout>
+        <recordType>Account.Administrative_Organisation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account_Relationship__c-Provider to AO Layout</layout>
+        <recordType>Account_Relationship__c.Provider_to_Administrative_Organisation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account_Relationship__c-Provider to MC Layout</layout>
+        <recordType>Account_Relationship__c.Provider_to_Management_Company</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account_Relationship__c-Provider to SDO Layout</layout>
+        <recordType>Account_Relationship__c.Provider_to_Service_Delivery_Organisation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Accreditation_Certification__c-Accreditation Layout</layout>
+        <recordType>Accreditation_Certification__c.Accreditation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Accreditation_Certification__c-Certification Layout</layout>
+        <recordType>Accreditation_Certification__c.Certification</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Accreditation_Certification__c-Fire and Safety Compliance Layout</layout>
+        <recordType>Accreditation_Certification__c.Fire_and_Safety_Compliance</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Accreditation_Certification__c-Privacy and Space Compliance Layout</layout>
+        <recordType>Accreditation_Certification__c.Privacy_and_Space_Compliance</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Aged_Care_Planning_Region__c-Service Aged Care Planning Region Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Application Layout</layout>
+        <recordType>Application__c.Application_Submission_Receipt_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Application Layout</layout>
+        <recordType>Application__c.Application_Submitted_RFI</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Application Layout</layout>
+        <recordType>Application__c.Application_Submitted_Fee_Payment_Pending_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Application Layout</layout>
+        <recordType>Application__c.Assessment_RFI_Response_Pending_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Application Layout</layout>
+        <recordType>Application__c.For_Assessment_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Application Layout</layout>
+        <recordType>Application__c.Under_Assessment_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Application Layout</layout>
+        <recordType>Application__c.For_Review_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Application Layout</layout>
+        <recordType>Application__c.Under_Review_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Closed Layout</layout>
+        <recordType>Application__c.Recommendation_to_Delegate_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Closed Layout</layout>
+        <recordType>Application__c.Delegate_s_Decision_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Closed Layout</layout>
+        <recordType>Application__c.Finalise_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Closed Layout</layout>
+        <recordType>Application__c.Closed_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Closed Locked Layout</layout>
+        <recordType>Application__c.Closed_Locked_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Application__c-Taken To Be Approved Layout</layout>
+        <recordType>Application__c.Application_Not_Required_Taken_To_Be_Approved_APP</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Case-Request For Information</layout>
+        <recordType>Case.Request_for_Information</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact-Contact Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact-Contact Layout</layout>
+        <recordType>Contact.GPMS_Contact</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact-Contact Layout</layout>
+        <recordType>Contact.Point_of_Contact</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact-ACFR QFR Contact</layout>
+        <recordType>Contact.Financial_Contact_QFR_ACFR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact-Benchmarker Contact</layout>
+        <recordType>Contact.Benchmarker_Contact</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact_Relationship__c-Administrator%2FLiquidator Layout</layout>
+        <recordType>Contact_Relationship__c.Administrator_Liquidator_CR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact_Relationship__c-Consultant Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact_Relationship__c-Consultant Layout</layout>
+        <recordType>Contact_Relationship__c.Consultant_CR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact_Relationship__c-Key Personnel Layout</layout>
+        <recordType>Contact_Relationship__c.Key_Personnel_CR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact_Relationship__c-Non Individual Contact Layout</layout>
+        <recordType>Contact_Relationship__c.Non_Individual_Contact_CR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact_Relationship__c-Owner Layout</layout>
+        <recordType>Contact_Relationship__c.Owner_CR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact_Relationship__c-Point of Contact Layout</layout>
+        <recordType>Contact_Relationship__c.Point_of_Contact_CR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact_Relationship__c-Service Point of Contact Layout</layout>
+        <recordType>Contact_Relationship__c.Service_Point_of_Contact_CR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact_Relationship__c-Service Key Personnel Layout</layout>
+        <recordType>Contact_Relationship__c.Service_Key_Personnel_CR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>File_Staging__c-File Staging Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>File_Staging__c-File Staging Layout</layout>
+        <recordType>File_Staging__c.CEI</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>File_Staging__c-QI File Staging Layout</layout>
+        <recordType>File_Staging__c.QI</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Account_History__c-ABN History Layout</layout>
+        <recordType>GPMS_Account_History__c.ABN_History</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Account_History__c-Incorporation Status History Layout</layout>
+        <recordType>GPMS_Account_History__c.Incorporation_Status_History</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Account_History__c-Organisation Details History Layout</layout>
+        <recordType>GPMS_Account_History__c.Organisation_Details_History</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Service_Funding__c-AN ACC Classification Layout</layout>
+        <recordType>GPMS_Service_Funding__c.AN_ACC_Classification_Funding</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Service_Funding__c-Special Purpose Layout</layout>
+        <recordType>GPMS_Service_Funding__c.Special_Purpose_Funding</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Service_Funding__c-Specialist Dementia Care Program Layout</layout>
+        <recordType>GPMS_Service_Funding__c.Specialist_Dementia_Care_Program_Funding</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PersonEducation-Qualification Layout</layout>
+        <recordType>PersonEducation.Qualification</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PersonEducation-Certification Layout</layout>
+        <recordType>PersonEducation.Certification</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PersonEducation-Disqualification Details Layout</layout>
+        <recordType>PersonEducation.Disqualification_Details</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PersonEducation-Police Record Check Layout</layout>
+        <recordType>PersonEducation.Police_Record_Check</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Details__c-Falls and Major Injury</layout>
+        <recordType>Quality_Indicator_Details__c.Falls_and_Major_Injury</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Details__c-Medication Management</layout>
+        <recordType>Quality_Indicator_Details__c.Medication_Management</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Details__c-Physical Restraint</layout>
+        <recordType>Quality_Indicator_Details__c.Physical_Restraint</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Details__c-Pressure Injuries</layout>
+        <recordType>Quality_Indicator_Details__c.Pressure_Injuries</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Details__c-Unplanned Weight Loss</layout>
+        <recordType>Quality_Indicator_Details__c.Unplanned_Weight_Loss</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Details__c-Activities of Daily Living (ADLs)</layout>
+        <recordType>Quality_Indicator_Details__c.Activities_of_daily_living_ADLs</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Details__c-Consumer Experience</layout>
+        <recordType>Quality_Indicator_Details__c.Consumer_Experience</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Details__c-Hospitalisation</layout>
+        <recordType>Quality_Indicator_Details__c.Hospitalisation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Details__c-Continence</layout>
+        <recordType>Quality_Indicator_Details__c.Continence</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Details__c-Quality of life</layout>
+        <recordType>Quality_Indicator_Details__c.Quality_of_life</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Details__c-Workforce</layout>
+        <recordType>Quality_Indicator_Details__c.Workforce</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Summary__c-Quality Indicator Summary Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>RegulatoryCodeViolation-Regulatory Decision Layout</layout>
+        <recordType>RegulatoryCodeViolation.Regulatory_Decision</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>RegulatoryCodeViolation-Regulatory Decision Layout Lock</layout>
+        <recordType>RegulatoryCodeViolation.Regulatory_Decision_Lock</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>RegulatoryCodeViolation-Regulatory Decision Unlock Standard</layout>
+        <recordType>RegulatoryCodeViolation.Regulatory_Decision_Unlock</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SDO_Contract_Service__c-MC Or AO Service Layout</layout>
+        <recordType>SDO_Contract_Service__c.Management_Company_to_Service</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SDO_Contract_Service__c-MC Or AO Service Layout</layout>
+        <recordType>SDO_Contract_Service__c.Administration_Organisation_to_Service</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SDO_Contract_Service__c-SDO Contract Services Layout</layout>
+        <recordType>SDO_Contract_Service__c.SDO_Contract_to_Service</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Slowly_Changing_Dimension__c-Account Name Page Layout</layout>
+        <recordType>Slowly_Changing_Dimension__c.Account_Previous_Name_SCD</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Slowly_Changing_Dimension__c-Service Name Page Layout</layout>
+        <recordType>Slowly_Changing_Dimension__c.Service_Name</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Slowly_Changing_Dimension__c-Previous Name Page Layout</layout>
+        <recordType>Slowly_Changing_Dimension__c.Previous_Name</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Task-Communication Task Layout</layout>
+        <recordType>Task.Communication_Task</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>ViolationType-Violation Regulation Decision Type Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AllotmentConditions__c-Other</layout>
+        <recordType>AllotmentConditions__c.GPMS_Other</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AllotmentConditions__c-Demonstrated Links</layout>
+        <recordType>AllotmentConditions__c.GPMS_Demonstrated_Links</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AllotmentConditions__c-Milestones</layout>
+        <recordType>AllotmentConditions__c.GPMS_Milestones</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AllotmentConditions__c-Pre-Allocation Lump Sums</layout>
+        <recordType>AllotmentConditions__c.GPMS_Pre_Allocation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AllotmentConditions__c-Professional Planning of the Aged Care Service</layout>
+        <recordType>AllotmentConditions__c.GPMS_Professional_Planning_Section</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AllotmentConditions__c-Residential Respite Care</layout>
+        <recordType>AllotmentConditions__c.GPMS_Residential_Respite_Care</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>AllotmentConditions__c-Target Group</layout>
+        <recordType>AllotmentConditions__c.GPMS_Target_Group</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Bring_Online__c-Application for Determination</layout>
+        <recordType>Bring_Online__c.GPMS_Application_For_Determination</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Bring_Online__c-Cancel</layout>
+        <recordType>Bring_Online__c.Cancel_BringOnline</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Bring_Online__c-Change Proposed Operational Date</layout>
+        <recordType>Bring_Online__c.Change_Proposed_Operational_Date</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Bring_Online__c-Correct</layout>
+        <recordType>Bring_Online__c.Correct_BringOnline</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Bring_Online__c-Record AAT Decision</layout>
+        <recordType>Bring_Online__c.Record_AAT_Decision_BringOnline</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Bring_Online__c-Record a Decision on Request for Reconsideration</layout>
+        <recordType>Bring_Online__c.Record_a_Decision_on_Request_for_Reconsideration_BringOnline</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Bring_Online__c-Record Decision</layout>
+        <recordType>Bring_Online__c.Record_Decision_BringOnline</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Bring_Online__c-Record Request for Reconsideration</layout>
+        <recordType>Bring_Online__c.Record_Request_for_Reconsideration_BringOnline</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Bring_Online__c-Record Request for Reconsideration by the AAT</layout>
+        <recordType>Bring_Online__c.Record_Request_for_Reconsideration_by_the_AAT_BringOnline</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Bring_Online__c-Withdraw</layout>
+        <recordType>Bring_Online__c.Withdraw_BringOnline</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Event__c-Bring Online Event Layout</layout>
+        <recordType>Event__c.Bring_Online</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-Cease Places Layout</layout>
+        <recordType>Event__c.GPMS_Cease_Places</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-Cease S14-9 Places</layout>
+        <recordType>Event__c.GPMS_Cease_S14_9_Places</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-Change Care Setting Layout</layout>
+        <recordType>Event__c.Change_Care_Setting</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-Combine Layout</layout>
+        <recordType>Event__c.Combine</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-Deed of Variation</layout>
+        <recordType>Event__c.GPMS_Deed_of_Variation</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-Extend PA Event Layout</layout>
+        <recordType>Event__c.Extend_PA_Period</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-Manage Offline Layout</layout>
+        <recordType>Event__c.GPMS_Manage_Offline_places</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-NATSIFAC Cease Places Layout</layout>
+        <recordType>Event__c.NATSIFAC_Cease_Places</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-NATSIFAC Reinstate Places Layout</layout>
+        <recordType>Event__c.NATSIFAC_Reinstate_Places</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Event__c-PA Variation Layout</layout>
+        <recordType>Event__c.Variations_by_Provider_Secretary</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-Record Allotment</layout>
+        <recordType>Event__c.Record_Allotment</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-Relinquish Layout</layout>
+        <recordType>Event__c.GPMS_Relinquish</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-Revocation (Provisional Places)</layout>
+        <recordType>Event__c.Revoke</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-Surrender PA Layout</layout>
+        <recordType>Event__c.Surrender</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Event__c-Service Address Variation</layout>
+        <recordType>Event__c.GPMS_Vary_Service_Location</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Event__c-Transfer Event Layout</layout>
+        <recordType>Event__c.Transfer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Event__c-Variation Layout</layout>
+        <recordType>Event__c.Variation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Extend_PA_Period_Details__c-Cancelled</layout>
+        <recordType>GPMS_Extend_PA_Period_Details__c.Cancelled_Extend_PA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Extend_PA_Period_Details__c-Extend PA Period Details Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Extend_PA_Period_Details__c-Record AAT Decision</layout>
+        <recordType>GPMS_Extend_PA_Period_Details__c.Record_AAT_Decision_Extend_PA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Extend_PA_Period_Details__c-Record Decision</layout>
+        <recordType>GPMS_Extend_PA_Period_Details__c.Record_Decision_ExtendPA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Extend_PA_Period_Details__c-Record Request for Reconsideration</layout>
+        <recordType>GPMS_Extend_PA_Period_Details__c.Record_Request_for_Reconsideration_Extend_PA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Extend_PA_Period_Details__c-Record Request for Reconsideration by the AAT</layout>
+        <recordType>GPMS_Extend_PA_Period_Details__c.Record_Request_for_Reconsideration_by_the_AAT</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Extend_PA_Period_Details__c-Record a Decision on Request for Reconsideration</layout>
+        <recordType>GPMS_Extend_PA_Period_Details__c.Record_a_Decision_on_Request_for_Reconsideration</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Extend_PA_Period_Details__c-Withdraw</layout>
+        <recordType>GPMS_Extend_PA_Period_Details__c.Withdraw_ExtendPA</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Service_Delivery_Area__c-Service Delivery Area Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Relinquish_History__c-Record Decision Layout</layout>
+        <recordType>GPMS_Relinquish_History__c.Record_Decision_Relinquish</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Relinquish_History__c-Withdraw Layout</layout>
+        <recordType>GPMS_Relinquish_History__c.Withdraw_Relinquish</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Relinquish_History__c-Cancel Layout</layout>
+        <recordType>GPMS_Relinquish_History__c.Cancel_Relinquish</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Revocation_History__c-Cancel Layout</layout>
+        <recordType>GPMS_Revocation_History__c.Cancel_Revoke</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Revocation_History__c-Record a Decision on Request for Reconsideration Layout</layout>
+        <recordType>GPMS_Revocation_History__c.Record_a_Decision_on_Request_for_Reconsideration_Revoke</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Revocation_History__c-Record AAT Decision Layout</layout>
+        <recordType>GPMS_Revocation_History__c.Record_AAT_Decision_Revoke</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Revocation_History__c-Record Decision Layout</layout>
+        <recordType>GPMS_Revocation_History__c.Record_Decision_Revoke</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Revocation_History__c-Record Request for Reconsideration Layout</layout>
+        <recordType>GPMS_Revocation_History__c.Record_Request_for_Reconsideration_Revoke</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Revocation_History__c-Record Request for Reconsideration by the AAT Layout</layout>
+        <recordType>GPMS_Revocation_History__c.Record_Request_for_Reconsideration_by_the_AAT_Revoke</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Revocation_History__c-Withdraw Layout</layout>
+        <recordType>GPMS_Revocation_History__c.Withdrawn_Revoke</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Service_Combine_History__c-Cancel Layout</layout>
+        <recordType>GPMS_Service_Combine_History__c.Cancel_SC</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Service_Combine_History__c-Record Decision Layout</layout>
+        <recordType>GPMS_Service_Combine_History__c.Record_Decision_SC</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Service_Combine_History__c-Record Receipt for Further Information Layout</layout>
+        <recordType>GPMS_Service_Combine_History__c.Record_Receipt_for_Further_Information_SC</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Service_Combine_History__c-Record Request for Further Information Layout</layout>
+        <recordType>GPMS_Service_Combine_History__c.Record_Request_for_Further_Information_SC</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Service_Combine_History__c-Service Combine History Layout</layout>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Service_Combine_History__c-Submit Application Layout</layout>
+        <recordType>GPMS_Service_Combine_History__c.Submit_Application_SC</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Service_Combine_History__c-Withdraw Layout</layout>
+        <recordType>GPMS_Service_Combine_History__c.Withdraw_SC</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Variation_History__c-Cancel Layout</layout>
+        <recordType>GPMS_Variation_History__c.Cancel_Variation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Variation_History__c-Record AAT Decision Layout</layout>
+        <recordType>GPMS_Variation_History__c.Record_AAT_Decision</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Variation_History__c-Record Decision by Provider not to Activate Layout</layout>
+        <recordType>GPMS_Variation_History__c.Record_Decision_byProvider_not_to_Activate</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Variation_History__c-Record Decision Layout</layout>
+        <recordType>GPMS_Variation_History__c.Record_Decision</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Variation_History__c-Record Decision on Request For Reconsideration Layout</layout>
+        <recordType>GPMS_Variation_History__c.Record_Decision_on_Request_For_Reconsideration</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Variation_History__c-Record Decision to Activate Layout</layout>
+        <recordType>GPMS_Variation_History__c.Record_Decision_To_Activate</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Variation_History__c-Record Receipt on Request for Further Information Layout</layout>
+        <recordType>GPMS_Variation_History__c.Record_Receipt_on_Request_for_Further_Information</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Variation_History__c-Record Request For Further Information Layout</layout>
+        <recordType>GPMS_Variation_History__c.Record_Request_For_Further_Information</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Variation_History__c-Record Request For Reconsideration by AAT Layout</layout>
+        <recordType>GPMS_Variation_History__c.Record_Request_For_Reconsideration_by_AAT</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Variation_History__c-Record Request for Reconsideration Layout</layout>
+        <recordType>GPMS_Variation_History__c.Record_Request_for_Reconsideration_Variation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_Variation_History__c-Withdraw Layout</layout>
+        <recordType>GPMS_Variation_History__c.Withdraw</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Vary_Service_Location_History__c-Activate</layout>
+        <recordType>GPMS_Vary_Service_Location_History__c.GPMS_Record_Decision_To_Activate_VSL</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Vary_Service_Location_History__c-Cancel</layout>
+        <recordType>GPMS_Vary_Service_Location_History__c.GPMS_Cancel_VSL</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Vary_Service_Location_History__c-Change Variation Day Variation</layout>
+        <recordType>GPMS_Vary_Service_Location_History__c.GPMS_Change_Variation_Day_Variation_VSL</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Vary_Service_Location_History__c-Record a Decision on Request for Reconsideration</layout>
+        <recordType>GPMS_Vary_Service_Location_History__c.GPMS_Record_Decision_on_Request_For_Reconsideration_VSL</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Vary_Service_Location_History__c-Record Decision</layout>
+        <recordType>GPMS_Vary_Service_Location_History__c.GPMS_Record_Decision_VSL</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Vary_Service_Location_History__c-Record Request for Reconsideration</layout>
+        <recordType>GPMS_Vary_Service_Location_History__c.GPMS_Record_Request_for_Reconsideration_Variation_VSL</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>GPMS_Vary_Service_Location_History__c-Withdraw</layout>
+        <recordType>GPMS_Vary_Service_Location_History__c.GPMS_Withdraw_VSL</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Allotment__c-Residential Care Allotment</layout>
+        <recordType>Allotment__c.Approved_Provider_Residential_ALM</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Allotment__c-Flexible Care Allotment</layout>
+        <recordType>Allotment__c.Approved_Provider_Flexible_ALM</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Allotment__c-NATSIFAC Allotment</layout>
+        <recordType>Allotment__c.NATSIFAC_Flexible_ALT</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>BusinessLicense-CHSP Service Layout</layout>
+        <recordType>BusinessLicense.CHSP_Service</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>BusinessLicense-Combine Service Layout</layout>
+        <recordType>BusinessLicense.Service_Combine</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>BusinessLicense-NATSIFAC Service Layout</layout>
+        <recordType>BusinessLicense.NATSIFAC_Service</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>BusinessLicense-Approved Provider Service Layout</layout>
+        <recordType>BusinessLicense.Approved_Provider_Approval</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>BusinessLicense-Approved Provider Service Layout</layout>
+        <recordType>BusinessLicense.Approved_Provider_Service</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_PA_Variation_History__c-Activate Layout</layout>
+        <recordType>GPMS_PA_Variation_History__c.Activate_PA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_PA_Variation_History__c-Cancel Layout</layout>
+        <recordType>GPMS_PA_Variation_History__c.GPMS_Cancel_PA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_PA_Variation_History__c-AAT Decision Layout</layout>
+        <recordType>GPMS_PA_Variation_History__c.GPMS_AAT_Decision_PA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_PA_Variation_History__c-Change Variation Day Layout</layout>
+        <recordType>GPMS_PA_Variation_History__c.GPMS_Change_Variation_Day_PA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_PA_Variation_History__c-Decision Layout</layout>
+        <recordType>GPMS_PA_Variation_History__c.GPMS_Decision_PA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_PA_Variation_History__c-Decision on Request For Reconsideration Layout</layout>
+        <recordType>GPMS_PA_Variation_History__c.GPMS_Decision_on_Request_for_Reconsideration_PA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_PA_Variation_History__c-Request For Reconsideration by the AAT Layout</layout>
+        <recordType>GPMS_PA_Variation_History__c.GPMS_Request_for_Reconsideration_by_the_AAT_PA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_PA_Variation_History__c-Request for Reconsideration Layout</layout>
+        <recordType>GPMS_PA_Variation_History__c.GPMS_Request_for_Reconsideration_PA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>GPMS_PA_Variation_History__c-Withdraw Layout</layout>
+        <recordType>GPMS_PA_Variation_History__c.GPMS_Withdraw_PA</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>SA2__c-SA2 Layout</layout>
+        <recordType>SA2__c.GPMS_SA2</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Service_Account_Relationship__c-Provider to Service</layout>
+        <recordType>Service_Account_Relationship__c.Provider_to_Service</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Service_Account_Relationship__c-Provider to Service Read Only</layout>
+        <recordType>Service_Account_Relationship__c.Provider_to_Service_Read_Only</recordType>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Service_Event__c-Service Event Layout</layout>
+    </layoutAssignments>
+	<layoutAssignments>
+        <layout>Transfers__c-Acknowledge Transfer Layout</layout>
+        <recordType>Transfers__c.Acknowledge_Transfer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Activate Layout</layout>
+        <recordType>Transfers__c.Activate</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Cancel Layout</layout>
+        <recordType>Transfers__c.Cancel_Transfer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Change Transfer Date</layout>
+        <recordType>Transfers__c.Change_Transfer_Date</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Correct Layout</layout>
+        <recordType>Transfers__c.Correct_Transfer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Record AAT Decision Layout</layout>
+        <recordType>Transfers__c.Record_AAT_Decision_Transfer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Record a Decision on Request for Reconsideration Layout</layout>
+        <recordType>Transfers__c.Record_a_Decision_on_Request_for_Reconsideration_Transfer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Record Decision by Provider not to Activate Layout</layout>
+        <recordType>Transfers__c.Record_Decision_by_Provider_not_to_Activate</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Record Decision to Veto Layout</layout>
+        <recordType>Transfers__c.Record_Decision_to_Veto</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Notice to Resolve Layout</layout>
+        <recordType>Transfers__c.Record_Notice_to_Resolve</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Record Receipt of Further Information Layout</layout>
+        <recordType>Transfers__c.Record_Receipt_of_Further_Information</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Receipt of Response to Notice to Resolve Layout</layout>
+        <recordType>Transfers__c.Record_Receipt_of_Response_to_Notice_to_Resolve</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Record Request for Further Information Layout</layout>
+        <recordType>Transfers__c.Record_Request_for_Further_Information</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Record Request for Reconsideration Layout</layout>
+        <recordType>Transfers__c.Record_Request_for_Reconsideration</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Record Request for Reconsideration by AAT Layout</layout>
+        <recordType>Transfers__c.Record_Request_for_Reconsideration_by_AAT</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Transfers__c-Withdraw Layout</layout>
+        <recordType>Transfers__c.Withdraw_Transfer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Care_Type__c-Approved Provider Care Layout</layout>
+        <recordType>Care_Type__c.Approved_Provider_CT</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Care_Type__c-CHSP Care Layout</layout>
+        <recordType>Care_Type__c.CHSP_CT</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Care_Type__c-NATSIFAC Care Layout</layout>
+        <recordType>Care_Type__c.NATSIFAC_CT</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Detail_Version__c-Falls and Major Injury</layout>
+        <recordType>Quality_Indicator_Detail_Version__c.Falls_and_Major_Injury</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Detail_Version__c-Medication Management</layout>
+        <recordType>Quality_Indicator_Detail_Version__c.Medication_Management</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Detail_Version__c-Physical Restraint</layout>
+        <recordType>Quality_Indicator_Detail_Version__c.Physical_Restraint</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Detail_Version__c-Pressure Injuries</layout>
+        <recordType>Quality_Indicator_Detail_Version__c.Pressure_Injuries</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Detail_Version__c-Unplanned Weight Loss</layout>
+        <recordType>Quality_Indicator_Detail_Version__c.Unplanned_Weight_Loss</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Detail_Version__c-Activities of Daily Living (ADLs)</layout>
+        <recordType>Quality_Indicator_Detail_Version__c.Activities_of_daily_living_ADLs</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Detail_Version__c-Consumer Experience</layout>
+        <recordType>Quality_Indicator_Detail_Version__c.Consumer_Experience</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Detail_Version__c-Hospitalisation</layout>
+        <recordType>Quality_Indicator_Detail_Version__c.Hospitalisation</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Detail_Version__c-Continence</layout>
+        <recordType>Quality_Indicator_Detail_Version__c.Continence</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Detail_Version__c-Quality of life</layout>
+        <recordType>Quality_Indicator_Detail_Version__c.Quality_of_life</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Detail_Version__c-Workforce</layout>
+        <recordType>Quality_Indicator_Detail_Version__c.Workforce</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Quality_Indicator_Detail_Version__c-Set up QI Targets</layout>
+        <recordType>Quality_Indicator_Detail_Version__c.Set_up_QI_Targets</recordType>
+    </layoutAssignments>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Account</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Address</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>CalculationProcedureStep</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>CalculationProcedureVersion</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>CalculationProcedure</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>CalculationProcedureStep</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Case</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>false</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Contact</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>omnistudio__VlocityDataPack__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>omnistudio__DRBatchQueue__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>omnistudio__Interface_DRGeneric__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>omnistudio__VlocityDocuSignTemplate__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>omnistudio__VlocityErrorLogEntry__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>omnistudio__VlocityScheduledJob__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>omnistudio__VlocityTrackingEntry__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>OmniESignatureTemplate</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Contact.Financial_Contact_QFR_ACFR</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Contact.GPMS_Contact</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Contact.Point_of_Contact</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ActivitiesAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AddDirectMessageMembers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AllowUniversalSearch</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AllowViewKnowledge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ApexRestServices</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ApiEnabled</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AssignTopics</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ChatterEditOwnPost</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ChatterFileLink</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ChatterInternalUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ChatterInviteExternalUsers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ChatterOwnGroups</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ContentWorkspaces</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CreateCustomizeFilters</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CreateCustomizeReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CreateTopics</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>DistributeFromPersWksp</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditEvent</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EditTask</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditTopics</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EmailSingle</name>
+    </userPermissions>
+	  <userPermissions>
+        <enabled>false</enabled>
+        <name>EmailMass</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>EmailMass</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ListEmailSend</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EnableNotifications</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ExportReport</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ConvertLeads</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ImportPersonal</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>LightningConsoleAllowedForUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>LightningExperienceUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>MassInlineEdit</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RemoveDirectMessageMembers</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RunReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SelectFilesFromSalesforce</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SendSitRequests</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ShowCompanyNameAsUserBadge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubscribeToLightningReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>TransactionalEmailSend</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>UseWebLink</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewDeveloperName</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewHelpLink</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewRoles</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewTrustMeasures</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>false</enabled>
+        <name>ViewSetup</name>
+    </userPermissions>
+</Profile> 

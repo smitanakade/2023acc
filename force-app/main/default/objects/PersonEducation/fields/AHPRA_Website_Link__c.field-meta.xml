@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AHPRA_Website_Link__c</fullName>
+    <description>Displays link to AHPRA Website if Certification Type is &apos;AHPRA Registration Number&apos;</description>
+    <externalId>false</externalId>
+    <formula>IF(Text(Certification__c) != null &amp;&amp; Text(Certification__c) == &apos;AHPRA Registration Number&apos;,HYPERLINK(&apos;https://www.nursingmidwiferyboard.gov.au/&apos;,&apos;AHPRA website link&apos;),&apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Displays link to AHPRA Website if Certification Type is &apos;AHPRA Registration Number&apos;</inlineHelpText>
+    <label>AHPRA Website Link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

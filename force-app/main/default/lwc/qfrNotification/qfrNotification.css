@@ -1,0 +1,72 @@
+.slds-box.qfr-notification {
+	border-radius: 2px;
+	background-color: #f8f8f8;
+	border-color: #eeeeee;
+	display: flex;
+	flex-direction: row;
+	color: var(--gpmsColBrandDark, #261040);
+	margin-bottom: var(--lwc-spacingSmall, 0.75rem);
+}
+.slds-box.qfr-notification.is-success {
+	background-color: var(--gpmColSuccess, #4d8144);
+	border-color: var(--gpmColSuccess, #4d8144);
+	color: #fff;
+}
+.slds-box.qfr-notification.is-error {
+	background-color: var(--gpmColError, #e91e63);
+	border-color: var(--gpmColError, #e91e63);
+	color: var(--gpmsColGrey7, #000000);
+}
+.slds-box.qfr-notification.is-warning {
+	background-color: var(--gpmColWarning, #ffa400);
+	border-color: var(--gpmColWarning, #ffa400);
+	color: var(--gpmsColGrey7, #000000);
+}
+.slds-box.qfr-notification.is-info {
+	background-color: var(--gpmsColSecondaryLight3, #f7fcfd);
+	border-color: var(--gpmsColSecondaryLight2, #e8f4f9);
+	color: var(--gpmsColGrey7, #000000);
+}
+
+.slds-box.qfr-notification .qfr-notification_content {
+	font-family: "Roboto", sans-serif;
+	font-size: var(--font-size-paragraph-normal, 1rem);
+	font-weight: 400;
+	flex: 1;
+}
+
+.slds-box.qfr-notification .qfr-notification_action {
+	color: var(--gpmsColGrey7, #000000);
+	font-size: var(--font-size-heading-minus4, 0.875rem);
+	text-decoration: underline;
+}
+
+.slds-box.qfr-notification.is-success .qfr-notification_action {
+	color: var(--gpmsColGrey0, #ffffff);
+}
+
+.slds-box.qfr-notification .qfr-notification_title {
+	font-size: var(--font-size-paragraph-plus2, 1.25rem);
+	font-weight: 500;
+	line-height: 1.5rem;
+}
+
+.slds-box.qfr-notification .collapsible-content {
+	overflow: hidden;
+	max-height: 100vh;
+	transition: 0.3s ease-in-out;
+	margin-top: 0.5rem;
+}
+
+.slds-box.qfr-notification .collapsible-content > p {
+	margin-bottom: 0.75rem;
+}
+
+.slds-box.qfr-notification .collapsible-content.is-collapsed {
+	max-height: 0;
+	margin-top: 0;
+}
+
+.has-pointer {
+	cursor: pointer;
+}

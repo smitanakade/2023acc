@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SCR1or2__c</fullName>
+    <externalId>false</externalId>
+    <formula>If(Service_Compliance_Id__r.Service_Compliance_Rating__c = 2, true,
+If(Service_Compliance_Id__r.Service_Compliance_Rating__c = 1, true, false))</formula>
+    <label>SCR1or2</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

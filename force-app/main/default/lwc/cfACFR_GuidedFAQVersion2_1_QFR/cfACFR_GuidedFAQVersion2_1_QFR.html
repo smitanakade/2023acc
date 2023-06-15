@@ -1,0 +1,235 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative ">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <omnistudio-toast class="flexcard-toast-element" theme="slds" title="" message="" styletype=""> </omnistudio-toast>
+</div>
+            <div if:true={showLoader} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <omnistudio-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></omnistudio-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card background slds-p-around_x-small slds-m-around_none " style="      
+         ">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col  header-text  slds-size_6-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element0_child"   card={card}  record={record}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-family:%20'Salesforce%20Sans',%20Arial,%20sans-serif;%22%3EQuarterly%20Financial%20Report%20(QFR)%3C/span%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element1" class="slds-col   slds-p-around_x-small slds-size_6-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element0_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element0block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element0block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element0block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element0block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action1"   state-obj={record}  card={card}  record={record}  label="QFR Definitions  - Field Level Help (XLS)"  icon-name="doctype:excel"  action-list='\[{"stateAction":{"id":"flex-action-1666924557693","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://www.health.gov.au/sites/default/files/documents/2022/09/covid-19-vaccination-vaccination-data-2-september-2022_2.xlsx"}},"key":"1666924507615-932adjkar","label":"Action","draggable":true,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  styles='\{"label":{"fontSize":""}}'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element1" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element1_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element1block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element1block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element1block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element1block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action2"   state-obj={record}  card={card}  record={record}  label="QFR Sample Report Template - Current Q3 version (XLS)"  icon-name="doctype:excel"  action-list='\[{"stateAction":{"id":"test-action","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"/apex"}}}]'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element2" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element2_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element2block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element2block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element2block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element2block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action3"   state-obj={record}  card={card}  record={record}  label="QFR User Guides (PDF)"  icon-name="doctype:pdf"  action-list='\[{"stateAction":{"id":"flex-action-1666924783799","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://www.health.gov.au/sites/default/files/documents/2022/09/exposure-draft-and-explanatory-statement-of-the-quality-of-care-amendment-restrictive-practices-principles-2022-exposure-draft-quality-of-care-amendment-restrictive-practices-principles-2022_0.pdf"}},"key":"1666924742127-h33l3qywq","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element3" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element3_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element3block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element3block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element3block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element3block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action4"   state-obj={record}  card={card}  record={record}  label="Quarterly Financial Report - FAQs (PDF)"  icon-name="doctype:pdf"  action-list='\[{"stateAction":{"id":"flex-action-1666924852172","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://health.formsadministration.com.au/dss.nsf/Quarterly%20Financial%20Report%20-%20FAQs.pdf"}},"key":"1666924850301-9fev8w7mg","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element4" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element4_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element4block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element4block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element4block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element4block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action5"   state-obj={record}  card={card}  record={record}  label="Webinar June 2022 - Transcript (PDF)"  icon-name="doctype:pdf"  action-list='\[{"stateAction":{"id":"flex-action-1666924916203","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://health.formsadministration.com.au/dss.nsf/Transcript%2028314%20CC%20Quarterly%20Financial%20Report%20QFR%20Webinar%20Event%20-%20160622.pdf"}},"key":"1666924913079-6zehsweez","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element5" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element5_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element5block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element5block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element5block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element5block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action6"   state-obj={record}  card={card}  record={record}  label="Webinar June 2022 - Presentation Slides (PDF)"  icon-name="doctype:pdf"  action-list='\[{"stateAction":{"id":"flex-action-1666924977525","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://health.formsadministration.com.au/dss.nsf/Quarterly%20Financial%20Report%20QFR%20Webinar%20-%20Powerpoint%20Slides.pdf"}},"key":"1666924976387-897lavf21","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element6" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element6_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element6block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element6block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element6block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element6block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action7"   state-obj={record}  card={card}  record={record}  label="Webinar June 2022 - Presentation Video"  icon-name="utility:video"  action-list='\[{"stateAction":{"id":"flex-action-1666925022297","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://publish.viostream.com/play/bfxgwogdt5gexb"}},"key":"1666925020734-fb1wxgpbg","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  icon-color="#000000"  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element7" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element7_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element7block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element7block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element7block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element7block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action8"   state-obj={record}  card={card}  record={record}  label="What are care minutes?"  icon-name="utility:linked"  action-list='\[{"stateAction":{"id":"flex-action-1666925133602","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://www.health.gov.au/resources/publications/what-are-care-minutes"}},"key":"1666925132282-86p7hxkr7","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  icon-color="#000000"  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element0block_element1block_element7block_element1" class="slds-col  subtext  slds-size_11-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element1block_element7block_element1_child"   card={card}  record={record}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-family:%20'Salesforce%20Sans',%20Arial,%20sans-serif;%22%3EExplains%20the%20new%20care%20minute%20standards%20which%20are%20being%20introduced%20for%20residential%20aged%20care%20facilities%20as%20part%20of%20the%20AN-ACC%20funding%20model%3C/span%3E%3C/div%3E%0A%3Cdiv%3E&nbsp;%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element8" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element8_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element9" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element9_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element9block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element9block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element9block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element9block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action10"   state-obj={record}  card={card}  record={record}  label="Why is reporting care staffing minutes important? - Fact Sheet (PDF)"  icon-name="doctype:pdf"  action-list='\[{"stateAction":{"id":"flex-action-1666925335763","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://www.health.gov.au/resources/publications/why-is-reporting-care-staffing-minutes-important"}},"key":"1666925333963-v6rroojur","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element10" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element10_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element10block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element10block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element10block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element10block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action11"   state-obj={record}  card={card}  record={record}  label="How do I calculate my care minutes targets?"  icon-name="utility:linked"  action-list='\[{"stateAction":{"id":"flex-action-1666925402409","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://www.health.gov.au/resources/publications/how-do-i-calculate-my-care-minutes-targets"}},"key":"1666925333963-v6rroojur","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  icon-color="#000000"  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element0block_element1block_element10block_element1" class="slds-col  subtext  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element1block_element10block_element1_child"   card={card}  record={record}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-family:%20'Salesforce%20Sans',%20Arial,%20sans-serif;%22%3EExplains%20how%20providers%20can%20calculate%20their%20total%20care%20minute%20and%20registered%20nurse%20minutes%20target%20based%20on%20a%20facility's%20resident%20case-mix.&nbsp;%3C/span%3E%3C/div%3E%0A%3Cdiv%3E&nbsp;%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element11" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element11_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <omnistudio-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card background slds-p-around_x-small slds-m-around_none " style="      
+         ">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col  header-text  slds-size_6-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element0_child"   card={card}  record={record}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-family:%20'Salesforce%20Sans',%20Arial,%20sans-serif;%22%3EQuarterly%20Financial%20Report%20(QFR)%3C/span%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element1" class="slds-col   slds-p-around_x-small slds-size_6-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element0_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element0block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element0block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element0block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element0block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action1"   state-obj={record}  card={card}  record={record}  label="QFR Definitions  - Field Level Help (XLS)"  icon-name="doctype:excel"  action-list='\[{"stateAction":{"id":"flex-action-1666924557693","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://www.health.gov.au/sites/default/files/documents/2022/09/covid-19-vaccination-vaccination-data-2-september-2022_2.xlsx"}},"key":"1666924507615-932adjkar","label":"Action","draggable":true,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  styles='\{"label":{"fontSize":""}}'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element1" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element1_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element1block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element1block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element1block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element1block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action2"   state-obj={record}  card={card}  record={record}  label="QFR Sample Report Template - Current Q3 version (XLS)"  icon-name="doctype:excel"  action-list='\[{"stateAction":{"id":"test-action","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"/apex"}}}]'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element2" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element2_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element2block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element2block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element2block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element2block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action3"   state-obj={record}  card={card}  record={record}  label="QFR User Guides (PDF)"  icon-name="doctype:pdf"  action-list='\[{"stateAction":{"id":"flex-action-1666924783799","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://www.health.gov.au/sites/default/files/documents/2022/09/exposure-draft-and-explanatory-statement-of-the-quality-of-care-amendment-restrictive-practices-principles-2022-exposure-draft-quality-of-care-amendment-restrictive-practices-principles-2022_0.pdf"}},"key":"1666924742127-h33l3qywq","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element3" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element3_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element3block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element3block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element3block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element3block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action4"   state-obj={record}  card={card}  record={record}  label="Quarterly Financial Report - FAQs (PDF)"  icon-name="doctype:pdf"  action-list='\[{"stateAction":{"id":"flex-action-1666924852172","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://health.formsadministration.com.au/dss.nsf/Quarterly%20Financial%20Report%20-%20FAQs.pdf"}},"key":"1666924850301-9fev8w7mg","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element4" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element4_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element4block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element4block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element4block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element4block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action5"   state-obj={record}  card={card}  record={record}  label="Webinar June 2022 - Transcript (PDF)"  icon-name="doctype:pdf"  action-list='\[{"stateAction":{"id":"flex-action-1666924916203","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://health.formsadministration.com.au/dss.nsf/Transcript%2028314%20CC%20Quarterly%20Financial%20Report%20QFR%20Webinar%20Event%20-%20160622.pdf"}},"key":"1666924913079-6zehsweez","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element5" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element5_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element5block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element5block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element5block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element5block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action6"   state-obj={record}  card={card}  record={record}  label="Webinar June 2022 - Presentation Slides (PDF)"  icon-name="doctype:pdf"  action-list='\[{"stateAction":{"id":"flex-action-1666924977525","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://health.formsadministration.com.au/dss.nsf/Quarterly%20Financial%20Report%20QFR%20Webinar%20-%20Powerpoint%20Slides.pdf"}},"key":"1666924976387-897lavf21","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element6" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element6_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element6block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element6block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element6block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element6block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action7"   state-obj={record}  card={card}  record={record}  label="Webinar June 2022 - Presentation Video"  icon-name="utility:video"  action-list='\[{"stateAction":{"id":"flex-action-1666925022297","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://publish.viostream.com/play/bfxgwogdt5gexb"}},"key":"1666925020734-fb1wxgpbg","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  icon-color="#000000"  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element7" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element7_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element7block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element7block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element7block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element7block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action8"   state-obj={record}  card={card}  record={record}  label="What are care minutes?"  icon-name="utility:linked"  action-list='\[{"stateAction":{"id":"flex-action-1666925133602","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://www.health.gov.au/resources/publications/what-are-care-minutes"}},"key":"1666925132282-86p7hxkr7","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  icon-color="#000000"  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element0block_element1block_element7block_element1" class="slds-col  subtext  slds-size_11-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element1block_element7block_element1_child"   card={card}  record={record}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-family:%20'Salesforce%20Sans',%20Arial,%20sans-serif;%22%3EExplains%20the%20new%20care%20minute%20standards%20which%20are%20being%20introduced%20for%20residential%20aged%20care%20facilities%20as%20part%20of%20the%20AN-ACC%20funding%20model%3C/span%3E%3C/div%3E%0A%3Cdiv%3E&nbsp;%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element8" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element8_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element9" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element9_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element9block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element9block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element9block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element9block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action10"   state-obj={record}  card={card}  record={record}  label="Why is reporting care staffing minutes important? - Fact Sheet (PDF)"  icon-name="doctype:pdf"  action-list='\[{"stateAction":{"id":"flex-action-1666925335763","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://www.health.gov.au/resources/publications/why-is-reporting-care-staffing-minutes-important"}},"key":"1666925333963-v6rroojur","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  theme="slds"  ></omnistudio-flex-action>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element10" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element10_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element1block_element10block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1block_element10block_element0_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1block_element10block_element0_child flexActionElement" 
+        data-action-element-class="state0element0block_element1block_element10block_element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block1block1action11"   state-obj={record}  card={card}  record={record}  label="How do I calculate my care minutes targets?"  icon-name="utility:linked"  action-list='\[{"stateAction":{"id":"flex-action-1666925402409","type":"Custom","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"https://www.health.gov.au/resources/publications/how-do-i-calculate-my-care-minutes-targets"}},"key":"1666925333963-v6rroojur","label":"Action","draggable":false,"isOpen":true,"actionIndex":0}]'  flyout-details='\{}'  icon-color="#000000"  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element0block_element1block_element10block_element1" class="slds-col  subtext  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element1block_element10block_element1_child"   card={card}  record={record}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-family:%20'Salesforce%20Sans',%20Arial,%20sans-serif;%22%3EExplains%20how%20providers%20can%20calculate%20their%20total%20care%20minute%20and%20registered%20nurse%20minutes%20target%20based%20on%20a%20facility's%20resident%20case-mix.&nbsp;%3C/span%3E%3C/div%3E%0A%3Cdiv%3E&nbsp;%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element0block_element1block_element11" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0block_element1block_element11_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <omnistudio-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </omnistudio-action>
+  
+            <omnistudio-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </omnistudio-action>
+            </div>
+          </template>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perm_CHSP_Access</fullName>
+    <active>true</active>
+    <description>CHSP record access</description>
+    <errorConditionFormula>AND(
+(ISCHANGED(Allow_Updates__c)),
+OR(ISNEW(),
+NOT(ISNEW()
+)),
+AND(
+RecordType.DeveloperName = &apos;Commonwealth_Home_Support_Programme&apos;,
+NOT(ISCHANGED(Administrator_Liquidator_Record_Exists__c)),
+NOT(
+OR(
+$Permission.GPMS_System_Administrator,
+$Permission.GPMS_CHSP,
+$Permission.System_Administrator,
+$Permission.Star_Rating_Admin
+))))</errorConditionFormula>
+    <errorMessage>You do not have access to edit this CHSP record</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duration_Validation</fullName>
+    <active>true</active>
+    <description>Confirm Duration is not null</description>
+    <errorConditionFormula>ISNULL(LOI__c)</errorConditionFormula>
+    <errorDisplayField>LOI__c</errorDisplayField>
+    <errorMessage>Duration should not be null</errorMessage>
+</ValidationRule>

@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NewStatus__c</fullName>
+    <externalId>false</externalId>
+    <label>New Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CurrentStatus__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Application submission receipt</fullName>
+                <default>true</default>
+                <label>Application submission receipt</label>
+            </value>
+            <value>
+                <fullName>Applicant applied to AAT</fullName>
+                <default>false</default>
+                <label>Applicant applied to AAT</label>
+            </value>
+            <value>
+                <fullName>Application invalid - not accepted</fullName>
+                <default>false</default>
+                <label>Application invalid - not accepted</label>
+            </value>
+            <value>
+                <fullName>Application not required - already approved</fullName>
+                <default>false</default>
+                <label>Application not required - already approved</label>
+            </value>
+            <value>
+                <fullName>Application submitted - Fee payment pending</fullName>
+                <default>false</default>
+                <label>Application submitted - Fee payment pending</label>
+            </value>
+            <value>
+                <fullName>Assessment not required - taken to be approved</fullName>
+                <default>false</default>
+                <label>Assessment not required - taken to be approved</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Delegate&apos;s Decision</fullName>
+                <default>false</default>
+                <label>Delegate&apos;s Decision</label>
+            </value>
+            <value>
+                <fullName>Fee waiver decision</fullName>
+                <default>false</default>
+                <label>Fee waiver decision</label>
+            </value>
+            <value>
+                <fullName>Fee waiver review</fullName>
+                <default>false</default>
+                <label>Fee waiver review</label>
+            </value>
+            <value>
+                <fullName>Finalise</fullName>
+                <default>false</default>
+                <label>Finalise</label>
+            </value>
+            <value>
+                <fullName>For fee waiver</fullName>
+                <default>false</default>
+                <label>For fee waiver</label>
+            </value>
+            <value>
+                <fullName>Formal Assessment RFI - Fee payment pending</fullName>
+                <default>false</default>
+                <label>Formal Assessment RFI - Fee payment pending</label>
+            </value>
+            <value>
+                <fullName>Formal Assessment RFI Response Pending</fullName>
+                <default>false</default>
+                <label>Formal Assessment RFI Response Pending</label>
+            </value>
+            <value>
+                <fullName>Initial Assessment RFI - Fee payment pending</fullName>
+                <default>false</default>
+                <label>Initial Assessment RFI - Fee payment pending</label>
+            </value>
+            <value>
+                <fullName>Initial Assessment RFI Response pending</fullName>
+                <default>false</default>
+                <label>Initial Assessment RFI Response pending</label>
+            </value>
+            <value>
+                <fullName>Reconsideration Assessment</fullName>
+                <default>false</default>
+                <label>Reconsideration Assessment</label>
+            </value>
+            <value>
+                <fullName>RFI Approval</fullName>
+                <default>false</default>
+                <label>RFI Approval</label>
+            </value>
+            <value>
+                <fullName>RFI Extension Decision</fullName>
+                <default>false</default>
+                <label>RFI Extension Decision</label>
+            </value>
+            <value>
+                <fullName>RFI Extension Request</fullName>
+                <default>false</default>
+                <label>RFI Extension Request</label>
+            </value>
+            <value>
+                <fullName>Under Formal Assessment</fullName>
+                <default>false</default>
+                <label>Under Formal Assessment</label>
+            </value>
+            <value>
+                <fullName>Under Initial Assessment</fullName>
+                <default>false</default>
+                <label>Under Initial Assessment</label>
+            </value>
+            <value>
+                <fullName>Under Quality Review</fullName>
+                <default>false</default>
+                <label>Under Quality Review</label>
+            </value>
+            <value>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+                <label>Obsolete</label>
+            </value>
+            <value>
+                <fullName>For Quality Review</fullName>
+                <default>false</default>
+                <label>For Quality Review</label>
+            </value>
+            <value>
+                <fullName>For Initial Assessment</fullName>
+                <default>false</default>
+                <label>For Initial Assessment</label>
+            </value>
+            <value>
+                <fullName>For Formal Assessment</fullName>
+                <default>false</default>
+                <label>For Formal Assessment</label>
+            </value>
+            <value>
+                <fullName>For Delegate&apos;s Decision</fullName>
+                <default>false</default>
+                <label>For Delegate&apos;s Decision</label>
+            </value>
+            <value>
+                <fullName>Reconsideration request review</fullName>
+                <default>false</default>
+                <label>Reconsideration request review</label>
+            </value>
+            <value>
+                <fullName>Reconsideration Decisions</fullName>
+                <default>false</default>
+                <label>Reconsideration Decisions</label>
+            </value>
+            <value>
+                <fullName>Reconsideration requested</fullName>
+                <default>false</default>
+                <label>Reconsideration requested</label>
+            </value>
+            <value>
+                <fullName>Withdrawn – By Applicant</fullName>
+                <default>false</default>
+                <label>Withdrawn – By Applicant</label>
+            </value>
+            <value>
+                <fullName>Withdrawn – Under 63C</fullName>
+                <default>false</default>
+                <label>Withdrawn – Under 63C</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Withdrawn – By Applicant</controllingFieldValue>
+            <controllingFieldValue>Withdrawn – Under 63C</controllingFieldValue>
+            <controllingFieldValue>Finalise</controllingFieldValue>
+            <valueName>Closed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Withdrawn – By Applicant</controllingFieldValue>
+            <controllingFieldValue>Withdrawn – Under 63C</controllingFieldValue>
+            <controllingFieldValue>Fee Waiver Decision</controllingFieldValue>
+            <controllingFieldValue>Formal Assessment RFI Response Pending</controllingFieldValue>
+            <controllingFieldValue>Fee waiver review</controllingFieldValue>
+            <controllingFieldValue>Obsolete</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Requested</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Assessment</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Decisions</controllingFieldValue>
+            <controllingFieldValue>For Formal Assessment</controllingFieldValue>
+            <controllingFieldValue>RFI Extension Decision</controllingFieldValue>
+            <controllingFieldValue>Under Formal Assessment</controllingFieldValue>
+            <controllingFieldValue>RFI Approval</controllingFieldValue>
+            <controllingFieldValue>Formal Assessment RFI - Fee payment pending</controllingFieldValue>
+            <controllingFieldValue>Under Quality Review</controllingFieldValue>
+            <controllingFieldValue>For Quality Review</controllingFieldValue>
+            <controllingFieldValue>Assessment not required - taken to be approved</controllingFieldValue>
+            <controllingFieldValue>Initial Assessment RFI Response Pending</controllingFieldValue>
+            <controllingFieldValue>For Delegate&apos;s Decision</controllingFieldValue>
+            <controllingFieldValue>Delegate&apos;s Decision</controllingFieldValue>
+            <controllingFieldValue>Application submission receipt</controllingFieldValue>
+            <controllingFieldValue>Application not required - already approved</controllingFieldValue>
+            <controllingFieldValue>Application invalid - not accepted</controllingFieldValue>
+            <controllingFieldValue>For Initial Assessment</controllingFieldValue>
+            <controllingFieldValue>Under Initial Assessment</controllingFieldValue>
+            <controllingFieldValue>Initial Assessment RFI - Fee payment pending</controllingFieldValue>
+            <controllingFieldValue>RFI Extension Request</controllingFieldValue>
+            <controllingFieldValue>Application Submitted - Fee payment pending</controllingFieldValue>
+            <controllingFieldValue>For fee waiver</controllingFieldValue>
+            <controllingFieldValue>Applicant applied to AAT</controllingFieldValue>
+            <valueName>Obsolete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Withdrawn – By Applicant</controllingFieldValue>
+            <controllingFieldValue>Withdrawn – Under 63C</controllingFieldValue>
+            <controllingFieldValue>Fee Waiver Decision</controllingFieldValue>
+            <controllingFieldValue>Formal Assessment RFI Response Pending</controllingFieldValue>
+            <controllingFieldValue>Fee waiver review</controllingFieldValue>
+            <controllingFieldValue>Obsolete</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Request Review</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Requested</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Assessment</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Decisions</controllingFieldValue>
+            <controllingFieldValue>For Formal Assessment</controllingFieldValue>
+            <controllingFieldValue>RFI Extension Decision</controllingFieldValue>
+            <controllingFieldValue>Under Formal Assessment</controllingFieldValue>
+            <controllingFieldValue>RFI Approval</controllingFieldValue>
+            <controllingFieldValue>Formal Assessment RFI - Fee payment pending</controllingFieldValue>
+            <controllingFieldValue>Under Quality Review</controllingFieldValue>
+            <controllingFieldValue>For Quality Review</controllingFieldValue>
+            <controllingFieldValue>Initial Assessment RFI Response Pending</controllingFieldValue>
+            <controllingFieldValue>For Delegate&apos;s Decision</controllingFieldValue>
+            <controllingFieldValue>Delegate&apos;s Decision</controllingFieldValue>
+            <controllingFieldValue>Application submission receipt</controllingFieldValue>
+            <controllingFieldValue>Application not required - already approved</controllingFieldValue>
+            <controllingFieldValue>Application invalid - not accepted</controllingFieldValue>
+            <controllingFieldValue>For Initial Assessment</controllingFieldValue>
+            <controllingFieldValue>Under Initial Assessment</controllingFieldValue>
+            <controllingFieldValue>Initial Assessment RFI - Fee payment pending</controllingFieldValue>
+            <controllingFieldValue>RFI Extension Request</controllingFieldValue>
+            <controllingFieldValue>Application Submitted - Fee payment pending</controllingFieldValue>
+            <controllingFieldValue>For fee waiver</controllingFieldValue>
+            <controllingFieldValue>Applicant applied to AAT</controllingFieldValue>
+            <valueName>Withdrawn – By Applicant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Withdrawn – By Applicant</controllingFieldValue>
+            <controllingFieldValue>Withdrawn – Under 63C</controllingFieldValue>
+            <controllingFieldValue>Fee Waiver Decision</controllingFieldValue>
+            <controllingFieldValue>Formal Assessment RFI Response Pending</controllingFieldValue>
+            <controllingFieldValue>Fee waiver review</controllingFieldValue>
+            <controllingFieldValue>Obsolete</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Request Review</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Requested</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Assessment</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Decisions</controllingFieldValue>
+            <controllingFieldValue>For Formal Assessment</controllingFieldValue>
+            <controllingFieldValue>RFI Extension Decision</controllingFieldValue>
+            <controllingFieldValue>Under Formal Assessment</controllingFieldValue>
+            <controllingFieldValue>RFI Approval</controllingFieldValue>
+            <controllingFieldValue>Formal Assessment RFI - Fee payment pending</controllingFieldValue>
+            <controllingFieldValue>Under Quality Review</controllingFieldValue>
+            <controllingFieldValue>For Quality Review</controllingFieldValue>
+            <controllingFieldValue>Initial Assessment RFI Response Pending</controllingFieldValue>
+            <controllingFieldValue>For Delegate&apos;s Decision</controllingFieldValue>
+            <controllingFieldValue>Delegate&apos;s Decision</controllingFieldValue>
+            <controllingFieldValue>Application submission receipt</controllingFieldValue>
+            <controllingFieldValue>Application not required - already approved</controllingFieldValue>
+            <controllingFieldValue>Application invalid - not accepted</controllingFieldValue>
+            <controllingFieldValue>For Initial Assessment</controllingFieldValue>
+            <controllingFieldValue>Under Initial Assessment</controllingFieldValue>
+            <controllingFieldValue>Initial Assessment RFI - Fee payment pending</controllingFieldValue>
+            <controllingFieldValue>RFI Extension Request</controllingFieldValue>
+            <controllingFieldValue>Application Submitted - Fee payment pending</controllingFieldValue>
+            <controllingFieldValue>For fee waiver</controllingFieldValue>
+            <controllingFieldValue>Applicant applied to AAT</controllingFieldValue>
+            <valueName>Withdrawn – Under 63C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fee Waiver Decision</controllingFieldValue>
+            <controllingFieldValue>Application submission receipt</controllingFieldValue>
+            <valueName>For fee waiver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Formal Assessment RFI Response Pending</controllingFieldValue>
+            <controllingFieldValue>Initial Assessment RFI Response Pending</controllingFieldValue>
+            <valueName>RFI Extension Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Formal Assessment RFI Response Pending</controllingFieldValue>
+            <controllingFieldValue>RFI Approval</controllingFieldValue>
+            <controllingFieldValue>Under Quality Review</controllingFieldValue>
+            <controllingFieldValue>Under Initial Assessment</controllingFieldValue>
+            <valueName>For Formal Assessment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fee waiver review</controllingFieldValue>
+            <valueName>Fee waiver decision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reconsideration Request Review</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Decisions</controllingFieldValue>
+            <controllingFieldValue>Delegate&apos;s Decision</controllingFieldValue>
+            <controllingFieldValue>Applicant applied to AAT</controllingFieldValue>
+            <valueName>Finalise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reconsideration Request Review</controllingFieldValue>
+            <valueName>Reconsideration Assessment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reconsideration Requested</controllingFieldValue>
+            <valueName>Reconsideration request review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reconsideration Assessment</controllingFieldValue>
+            <controllingFieldValue>Reconsideration Decisions</controllingFieldValue>
+            <valueName>Reconsideration Decisions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>For Formal Assessment</controllingFieldValue>
+            <controllingFieldValue>Delegate&apos;s Decision</controllingFieldValue>
+            <valueName>Under Formal Assessment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RFI Extension Decision</controllingFieldValue>
+            <controllingFieldValue>Formal Assessment RFI - Fee payment pending</controllingFieldValue>
+            <valueName>Formal Assessment RFI Response Pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RFI Extension Decision</controllingFieldValue>
+            <controllingFieldValue>Initial Assessment RFI - Fee payment pending</controllingFieldValue>
+            <valueName>Initial Assessment RFI Response pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Under Formal Assessment</controllingFieldValue>
+            <controllingFieldValue>Under Initial Assessment</controllingFieldValue>
+            <valueName>RFI Approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Under Formal Assessment</controllingFieldValue>
+            <valueName>For Quality Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RFI Approval</controllingFieldValue>
+            <valueName>Formal Assessment RFI - Fee payment pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RFI Approval</controllingFieldValue>
+            <valueName>Initial Assessment RFI - Fee payment pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RFI Approval</controllingFieldValue>
+            <controllingFieldValue>Initial Assessment RFI Response Pending</controllingFieldValue>
+            <controllingFieldValue>Application submission receipt</controllingFieldValue>
+            <controllingFieldValue>Initial Assessment RFI - Fee payment pending</controllingFieldValue>
+            <controllingFieldValue>Application Submitted - Fee payment pending</controllingFieldValue>
+            <controllingFieldValue>For fee waiver</controllingFieldValue>
+            <valueName>For Initial Assessment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Under Quality Review</controllingFieldValue>
+            <controllingFieldValue>For Quality Review</controllingFieldValue>
+            <valueName>Under Quality Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Under Quality Review</controllingFieldValue>
+            <controllingFieldValue>For Delegate&apos;s Decision</controllingFieldValue>
+            <valueName>For Delegate&apos;s Decision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assessment not required - taken to be approved</controllingFieldValue>
+            <controllingFieldValue>Under Initial Assessment</controllingFieldValue>
+            <valueName>Assessment not required - taken to be approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Initial Assessment RFI Response Pending</controllingFieldValue>
+            <controllingFieldValue>Application submission receipt</controllingFieldValue>
+            <controllingFieldValue>Application invalid - not accepted</controllingFieldValue>
+            <controllingFieldValue>Under Initial Assessment</controllingFieldValue>
+            <controllingFieldValue>Application Submitted - Fee payment pending</controllingFieldValue>
+            <valueName>Application invalid - not accepted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>For Delegate&apos;s Decision</controllingFieldValue>
+            <valueName>Delegate&apos;s Decision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finalise</controllingFieldValue>
+            <valueName>Applicant applied to AAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application submission receipt</controllingFieldValue>
+            <valueName>Application submission receipt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application submission receipt</controllingFieldValue>
+            <controllingFieldValue>Application not required - already approved</controllingFieldValue>
+            <valueName>Application not required - already approved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application submission receipt</controllingFieldValue>
+            <controllingFieldValue>For fee waiver</controllingFieldValue>
+            <valueName>Application submitted - Fee payment pending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>For Initial Assessment</controllingFieldValue>
+            <valueName>Under Initial Assessment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RFI Extension Request</controllingFieldValue>
+            <valueName>RFI Extension Decision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>For fee waiver</controllingFieldValue>
+            <valueName>Fee waiver review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Reconsideration requested</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

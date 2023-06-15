@@ -1,0 +1,29 @@
+<!-- this is for file staging -->
+<apex:page showHeader="false" lightningStyleSheets="true" standardController="File_Staging__c"  recordSetVar="File_Staging__c">
+    <apex:includeLightning />
+    <!-- <apex:slds/> -->
+
+    <!--  c:srqiReadFile
+    c:srqiSpinnerLoading"/> -->
+
+    <div id="lwccontainer">
+        <apex:form >
+            <apex:pageBlock >
+                <apex:commandButton action="{!Cancel}" value="Cancel" />
+            </apex:pageBlock>
+        </apex:form>
+
+    </div>
+
+    <script>
+        $Lightning.use("c:srqiAuraAppForVFforLWC", function () {
+            $Lightning.createComponent("c:srqiFileUpload", {}, "lwccontainer",
+                function (cmp) {
+                    console.log("calling srqiFileUpload LWC from VFpage");
+
+                });
+
+        });
+    </script>
+
+</apex:page>

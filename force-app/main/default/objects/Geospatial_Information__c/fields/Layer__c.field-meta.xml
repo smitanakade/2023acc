@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Layer__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(TEXT(Layer_Id__c),
+&apos;0&apos;,&apos;Aged Care Planning Regions&apos;,
+&apos;1&apos;,&apos;Federal Electoral Divisions&apos;,
+&apos;2&apos;,&apos;Local Government Areas&apos;,
+&apos;3&apos;,&apos;Modified Monash Model (MMM)&apos;,
+&apos;4&apos;,&apos;Primary Health Networks&apos;,
+&apos;5&apos;,&apos;Remoteness Area&apos;,
+&apos;6&apos;,&apos;Statistical Areas Level 2&apos;,
+&apos;7&apos;,&apos;Statistical Areas Level 3&apos;,
+&apos;8&apos;,&apos;Accessibility and Remoteness Index of Australian 1999&apos;,
+&apos;9&apos;,&apos;Fire Weather Forecast Districts&apos;,
+&apos;10&apos;,&apos;Home And Community Care Program&apos;,
+&apos;11&apos;,&apos;Medical Locals - June 2012&apos;,
+&apos;12&apos;,&apos;Statistical Local Areas&apos;,
+&apos;&apos;
+)</formula>
+    <label>Layer</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

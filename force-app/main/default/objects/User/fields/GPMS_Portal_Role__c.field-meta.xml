@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GPMS_Portal_Role__c</fullName>
+    <description>Role of the portal users. Used for determining their access.</description>
+    <externalId>false</externalId>
+    <label>Portal Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Organisation Administrator</fullName>
+                <default>false</default>
+                <label>Organisation Administrator</label>
+            </value>
+            <value>
+                <fullName>Applicant</fullName>
+                <default>false</default>
+                <label>Applicant</label>
+            </value>
+            <value>
+                <fullName>Staff Member</fullName>
+                <default>false</default>
+                <label>Staff Member</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

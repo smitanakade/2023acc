@@ -1,0 +1,46 @@
+<template>
+ 
+    <article class="slds-card slds-card_boundary">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-contact" title="contact">
+                        <lightning-icon icon-name="standard:file" alternative-text="Related Documents" size="small"></lightning-icon>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <span>Related Documents ({documentSize})</span>
+                    </h2>
+                </div>
+                <template if:false={ispermissionEnabled}>
+                <div class="slds-no-flex">
+                    <lightning-file-upload name="fileUploader" record-id={recordId} onuploadfinished={handleUploadFinished} multiple></lightning-file-upload>
+                </div>
+            </template>
+            </header>
+        </div>
+        <div class="slds-card__body">
+            <lightning-datatable key-field="Id" 
+                errors={errors} 
+                data={data} draft-values={draftValues}
+                columns={columns}
+                onrowaction={handleRowAction} onsave={handleSave}> 
+                
+            </lightning-datatable>
+            
+        </div>
+        
+            <footer class="slds-card__footer">
+                <div style="min-height: 50;">
+                <template if:true={viewAll}>
+                    <lightning-button variant="Base" label="View All" onclick={viewAllAction} ></lightning-button>
+                </template>
+                </div>
+            </footer>
+        
+        
+    </article>
+
+
+</template>

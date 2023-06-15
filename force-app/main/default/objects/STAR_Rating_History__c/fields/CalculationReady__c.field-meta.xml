@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CalculationReady__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  ISPICKVAL(Status__c, &apos;Draft&apos;), 
+IF( ISNULL(Care_Minutes_Id__r.Care_Minutes_Rating__c) = false, 
+IF(ISNULL(Service_Compliance_Id__r.Service_Compliance_Rating__c) = false,
+IF(ISNULL(Quality_Indicator_Id__r.Quality_Indicator_Rating__c) = false,
+IF(ISNULL(Consumer_Experience_Id__r.Consumer_Experience_Rating__c) = false, true, false) , false) , false) , false) , false)</formula>
+    <label>CalculationReady</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

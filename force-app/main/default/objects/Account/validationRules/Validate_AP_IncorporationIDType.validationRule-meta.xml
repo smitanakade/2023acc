@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_AP_IncorporationIDType</fullName>
+    <active>true</active>
+    <description>The Approved Provider Incorporation ID Type must be Incorporated</description>
+    <errorConditionFormula>AND(
+NOT($Setup.BypassTriggers__c.BypassValidationRules__c),ISPICKVAL(Incorporation_ID_Type__c, &apos;Not Incorporated&apos;),
+RecordType.DeveloperName=&apos;Approved_Provider&apos;)</errorConditionFormula>
+    <errorDisplayField>Incorporation_ID_Type__c</errorDisplayField>
+    <errorMessage>The Approved Provider Incorporation ID Type must be Incorporated</errorMessage>
+</ValidationRule>

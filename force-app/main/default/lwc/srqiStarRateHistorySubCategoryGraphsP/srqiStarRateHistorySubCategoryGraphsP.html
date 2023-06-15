@@ -1,0 +1,568 @@
+<template>
+    <!-- header -->
+    <div class="srqi-portal-rating-detail-header">
+        <lightning-layout multiple-rows horizontal-align="start">
+            <lightning-layout-item size="10" large-device-size="10" medium-device-size="12" small-device-size="12">
+                <h2>{selectedServiceName}</h2>
+                <p class="srqi-header">Service ID {selectedServiceIntegrationId} | {selectedReportingPeriod}</p>
+                 <lightning-badge label={selectedSRH.Provider_Portal_Status__c}
+                                 class={statusBadgeCssClasses}></lightning-badge>
+            </lightning-layout-item>
+            <lightning-layout-item alignment-bump="left" class="srqi-float-right">
+                <lightning-button variant="brand-outline" icon-name="utility:chevronright" size='small'
+                                  icon-position="right"
+                                  class="srqi-button" label="See All Services" title="Go to all services"
+                                  onclick={goToAllServices}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+        <hr class="srqi-hr">
+    </div>
+    <!-- help box -->
+    <div class="slds-box srqi-help-box srqi-box slds-m-bottom_large slds-p-bottom_x-small">
+        <div class="slds-grid">
+            <div>
+                <lightning-icon icon-name="utility:info" size="small"
+                                class="srqi-brand-icon slds-p-top_xx-small"></lightning-icon>
+            </div>
+            <div class="slds-p-left_small">
+                <h4>Need help?</h4>
+                <p>If you have questions in relation to any of these ratings, please contact the My Aged Care service
+                    provider and assessor helpline on 1800 836 799. The helpline is open Monday to Friday between
+                    8am-8pm and Saturday between 10am-2pm.</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <template lwc:if={hasBusinessExemption}>
+            <div class="srqi-warning srqi-box slds-p-around_medium slds-m-bottom_large">
+                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                class="slds-m-right_medium srqi-icon" size='small' title='warning'></lightning-icon>
+                <span class="srqi-message">Star Ratings may be unavailable because there is an exemption on a sub-category.</span>
+            </div>
+        </template>
+        <template lwc:if={hasTransferExemption}>
+            <div class="srqi-warning srqi-box slds-p-around_medium slds-m-bottom_large">
+                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                class="slds-m-right_medium srqi-icon" size='small' title='warning'></lightning-icon>
+                <span class="srqi-message">Star Ratings may be unavailable because ownership was recently transferred.</span>
+            </div>
+        </template>
+        <template lwc:if={hasNewProviderExemption}>
+            <div class="srqi-warning srqi-box slds-p-around_medium slds-m-bottom_large">
+                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                class="slds-m-right_medium srqi-icon" size='small' title='warning'></lightning-icon>
+                <span class="srqi-message">Star Ratings may be unavailable because this is a new service.</span>
+            </div>
+        </template>
+        <template lwc:if={isAnyMissingRating}>
+            <div class="srqi-warning srqi-box slds-p-around_medium slds-m-bottom_large">
+                <div class="slds-grid">
+                    <div>
+                        <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                        class="slds-m-right_medium srqi-icon" size='small'
+                                        title='warning'></lightning-icon>
+                    </div>
+                    <div class="slds-p-left_small">
+                        <p class="srqi-message">A service may not have a rating due to any of the following reasons: The
+                            service may not have been operational, was impacted by technical issues or extenuating
+                            circumstances impacting the availability of data at this time.</p>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template lwc:if={isAnyUnderReview}>
+            <div class="srqi-warning srqi-box slds-p-around_medium slds-m-bottom_large">
+                <div class="slds-grid">
+                    <div>
+                        <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                        class="slds-m-right_medium srqi-icon" size='small'
+                                        title='warning'></lightning-icon>
+                    </div>
+                    <div class="slds-p-left_small">
+                        <h4 class="bold">IMPORTANT</h4>
+                        <p class="srqi-message">While a rating is under review the Overall Star Rating will not be
+                            publicly available until the review is complete.</p>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <br>
+    </div>
+    <!--Overall Rating-->
+    <c-srqi-portal-rating-detail-card
+        card-title="Overall Star Rating"
+    >
+        <a slot="subTitle" class="srqi-link" href={qiInfoURL} target="_blank">How we calculate ratings.</a>
+        <div slot="section1">
+            <c-srqi-portal-rating-detail-tile
+                show-first-tile={currentSRH.Id}
+                show-second-tile={newSRH.Id}
+                first-tile-date-right={currentSRH.Go_Live_Date__c}
+                first-tile-date-left={currentSRH.Rating_Calc_Date__c}
+                first-tile-title={firstRatingTileTitle}
+                first-tile-rating={currentSRH.STAR_Rating_Calculation__c}
+                first-tile-rating-label={currentSRH.SRH_Rating_Label__c}
+                second-tile-title={secondRatingTileTitle}
+                second-tile-date-right={newSRH.Go_Live_Date__c}
+                second-tile-date-left={newSRH.Rating_Calc_Date__c}
+                second-tile-rating={newSRH.STAR_Rating_Calculation__c}
+                second-tile-rating-label={newSRH.SRH_Rating_Label__c}
+                show-first-tile-body={showOverallRatingLeftTileBody}
+                show-second-tile-body={showOverallRatingRightTileBody}
+            >
+                <template lwc:if={isCurrentOverallRatingBusinessExempted}>
+                    <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                        <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                        class="slds-m-right_medium srqi-icon" size='small'
+                                        title='warning'></lightning-icon>
+                        <span class="srqi-message">{labelNoRatingAvailable}</span>
+                    </div>
+                </template>
+                <template lwc:elseif={isCurrentOverallRatingSystemExempted}>
+                    <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                        <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                        class="slds-m-right_medium srqi-icon" size='small'
+                                        title='warning'></lightning-icon>
+                        <span class="srqi-message">{labelNoRatingAvailable}</span></div>
+                </template>
+                <template lwc:elseif={isCurrentOverallRatingMissing}>
+                    <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                        <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                        class="slds-m-right_medium srqi-icon" size='small'
+                                        title='warning'></lightning-icon>
+                        <span class="srqi-message">{labelNoRatingAvailable}</span></div>
+                </template>
+                <template lwc:if={isCurrentOverallRatingUnderReview}>
+                    <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_large">
+                        <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                        class="slds-m-right_medium srqi-icon" size='small'
+                                        title='warning'></lightning-icon>
+                        <span class="srqi-message">{labelUnderReview}</span></div>
+                </template>
+                <template lwc:if={isNewOverallRatingUnderReview}>
+                    <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_large">
+                        <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                        class="slds-m-right_medium srqi-icon" size='small'
+                                        title='warning'></lightning-icon>
+                        <span class="srqi-message">{labelUnderReview}</span></div>
+                </template>
+                <template lwc:if={isNewOverallRatingBusinessExempted}>
+                    <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                        <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                        class="slds-m-right_medium srqi-icon" size='small'
+                                        title='warning'></lightning-icon>
+                        <span class="srqi-message">{labelNoRatingAvailable}</span>
+                    </div>
+                </template>
+                <template lwc:elseif={isNewOverallRatingSystemExempted}>
+                    <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                        <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                        class="slds-m-right_medium srqi-icon" size='small'
+                                        title='warning'></lightning-icon>
+                        <span class="srqi-message">{labelNoRatingAvailable}</span></div>
+                </template>
+                <template lwc:elseif={isNewOverallRatingMissing}>
+                    <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                        <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                        class="slds-m-right_medium srqi-icon" size='small'
+                                        title='warning'></lightning-icon>
+                        <span class="srqi-message">{labelNoRatingAvailable}</span></div>
+                </template>
+            </c-srqi-portal-rating-detail-tile>
+        </div>
+        <div slot="section2">
+            <c-srqi-star-rating-history-graph
+                rate-data={chartSRData}
+                date-data={chartDateSRData}
+                selected-date-data={chartSelectedDateSRData}
+                ></c-srqi-star-rating-history-graph>
+        </div>
+    </c-srqi-portal-rating-detail-card>
+    <h2 class="slds-m-bottom_x-large">Sub-category ratings</h2>
+    <!--Implementing Sub-nav from here-->
+    <lightning-tabset class="srqi-sub-category-tabs">
+        <!--SCR Rating-->
+        <lightning-tab label="Compliance">
+            <br><br>
+            <c-srqi-portal-rating-detail-card
+                card-title="Compliance" show-last-section={isSCRRatingDetailsAvailable}
+                card-sub-title="Based on the most recent compliance assessment and actions issued by the Aged Care Quality and Safety Commission.">
+                <div slot="section1">
+                    <c-srqi-portal-rating-detail-tile
+                        show-first-tile={currentSRH.Id}
+                        show-second-tile={newSRH.Id}
+                        first-tile-date-right={currentSRH.Go_Live_Date__c}
+                        first-tile-date-left={currentSCR.Rating_Calc_Date__c}
+                        first-tile-title={firstRatingTileTitle}
+                        first-tile-rating={currentSCR.Service_Compliance_Rating__c}
+                        first-tile-rating-label={currentSCR.SCR_Description__c}
+                        second-tile-title={secondRatingTileTitle}
+                        second-tile-date-right={newSRH.Go_Live_Date__c}
+                        second-tile-date-left={newSCR.Rating_Calc_Date__c}
+                        second-tile-rating={newSCR.Service_Compliance_Rating__c}
+                        second-tile-rating-label={newSCR.SCR_Description__c}
+                        show-first-tile-body={showSCRLeftTileBody}
+                        show-second-tile-body={showSCRRightTileBody}
+                    >
+                        <template lwc:if={isCurrentSCRBusinessExempted}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelExempted}</span>
+                            </div>
+                        </template>
+                        <template lwc:elseif={isCurrentSCRSystemExempted}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span>
+                            </div>
+                        </template>
+                        <template lwc:elseif={isCurrentSCRRatingMissing}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span>
+                            </div>
+                        </template>
+                        <template lwc:if={isNewSCRBusinessExempted}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelExempted}</span>
+                            </div>
+                        </template>
+                        <template lwc:elseif={isNewSCRSystemExempted}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span></div>
+                        </template>
+                        <template lwc:elseif={isNewSCRRatingMissing}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span></div>
+                        </template>
+                    </c-srqi-portal-rating-detail-tile>
+                </div>
+                <div slot="section2">
+                    <c-srqi-star-rating-history-graph
+                        rate-data={chartSCData}
+                        date-data={chartDateSCData}
+                        selected-date-data={chartSelectedDateSCData}></c-srqi-star-rating-history-graph>
+                    <br>
+                </div>
+                <div slot="lastSection">
+                    <c-srqi-portal-service-compliance-details
+                        field-mapping-j-s-o-n={qiDatatableFieldMappingJSON}
+                        service-id={selectedSRH.SF_Service_Id__c}></c-srqi-portal-service-compliance-details>
+                </div>
+
+            </c-srqi-portal-rating-detail-card>
+        </lightning-tab>
+        <!--QI Rating-->
+        <lightning-tab label="Quality Measures">
+            <br><br>
+            <c-srqi-portal-rating-detail-card
+                card-title="Quality Measures" show-last-section={isQIRatingDetailsAvailable}
+                card-sub-title="Based on the most recent Quality Indicators data reported by this service."
+            >
+                <div slot="section1">
+                    <c-srqi-portal-rating-detail-tile
+                        show-first-tile={currentSRH.Id}
+                        show-second-tile={newSRH.Id}
+                        first-tile-date-right={currentSRH.Go_Live_Date__c}
+                        first-tile-date-left={currentQI.Rating_Calc_Date__c}
+                        first-tile-title={firstRatingTileTitle}
+                        first-tile-rating={currentQI.Quality_Indicator_Rating__c}
+                        first-tile-rating-label={currentQI.QI_Rating_Label__c}
+                        second-tile-title={secondRatingTileTitle}
+                        second-tile-date-right={newSRH.Go_Live_Date__c}
+                        second-tile-date-left={newQI.Rating_Calc_Date__c}
+                        second-tile-rating={newQI.Quality_Indicator_Rating__c}
+                        second-tile-rating-label={newQI.QI_Rating_Label__c}
+                        show-first-tile-body={showQILeftTileBody}
+                        show-second-tile-body={showQIRightTileBody}
+                    >
+                        <template lwc:if={isCurrentQIBusinessExempted}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelExempted}</span>
+                            </div>
+                        </template>
+                        <template lwc:elseif={isCurrentQISystemExempted}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span>
+                            </div>
+                        </template>
+                        <template lwc:elseif={isCurrentQIRatingMissing}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span>
+                            </div>
+                        </template>
+                        <template lwc:if={isCurrentQIUnderReview}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_large">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelUnderReview}</span></div>
+                        </template>
+                        <template lwc:if={isNewQIUnderReview}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_large">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelUnderReview}</span></div>
+                        </template>
+                        <template lwc:if={isNewQIBusinessExempted}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelExempted}</span>
+                            </div>
+                        </template>
+                        <template lwc:elseif={isNewQISystemExempted}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span></div>
+                        </template>
+                        <template lwc:elseif={isNewQIRatingMissing}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span></div>
+                        </template>
+                    </c-srqi-portal-rating-detail-tile>
+                </div>
+                <div slot="section2">
+                    <c-srqi-star-rating-history-graph
+                        rate-data={chartQIData}
+                        date-data={chartDateQIData}
+                        selected-date-data={chartSelectedDateQIData}></c-srqi-star-rating-history-graph>
+                </div>
+                <div slot="lastSection">
+                    <c-srqi-portal-quality-measures-details field-mapping-j-s-o-n={qiDatatableFieldMappingJSON}
+                                                            srh-record={selectedSRH}></c-srqi-portal-quality-measures-details>
+                </div>
+            </c-srqi-portal-rating-detail-card>
+        </lightning-tab>        
+        <!--CER Rating-->
+        <lightning-tab label="Residents' Experience">
+            <br><br>
+            <c-srqi-portal-rating-detail-card
+                card-title="Residents' Experience" show-last-section={isCERRatingDetailsAvailable}
+                card-sub-title="Based on the most recent resident survey conducted for this service.">
+                <div slot="section1">
+                    <c-srqi-portal-rating-detail-tile
+                        show-first-tile={currentSRH.Id}
+                        show-second-tile={newSRH.Id}
+                        first-tile-title={firstRatingTileTitle}
+                        first-tile-date-right={currentSRH.Go_Live_Date__c}
+                        first-tile-date-left={currentCER.Rating_Calc_Date__c}
+                        first-tile-rating={currentCER.Consumer_Experience_Rating__c}
+                        first-tile-rating-label={currentCER.Total_CER_Rating_Label__c}
+                        second-tile-title={secondRatingTileTitle}
+                        second-tile-date-right={newSRH.Go_Live_Date__c}
+                        second-tile-date-left={newCER.Rating_Calc_Date__c}
+                        second-tile-rating={newCER.Consumer_Experience_Rating__c}
+                        second-tile-rating-label={newCER.Total_CER_Rating_Label__c}
+                        show-first-tile-body={showCERLeftTileBody}
+                        show-second-tile-body={showCERRightTileBody}
+                    >
+                        <template lwc:if={isCurrentCERBusinessExempted}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelExempted}</span>
+                            </div>
+                        </template>
+                        <template lwc:elseif={isCurrentCERSystemExempted}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span>
+                            </div>
+                        </template>
+                        <template lwc:elseif={isCurrentCERRatingMissing}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span>
+                            </div>
+                        </template>
+                        <template lwc:if={isCurrentCERUnderReview}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_large">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelUnderReview}</span></div>
+                        </template>
+                        <template lwc:if={isNewCERUnderReview}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_large">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelUnderReview}</span></div>
+                        </template>
+                        <template lwc:if={isNewCERBusinessExempted}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelExempted}</span>
+                            </div>
+                        </template>
+                        <template lwc:elseif={isNewCERSystemExempted}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span></div>
+                        </template>
+                        <template lwc:elseif={isNewCERRatingMissing}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span></div>
+                        </template>
+                    </c-srqi-portal-rating-detail-tile>
+                </div>
+                <div slot="section2">
+                    <c-srqi-star-rating-history-graph
+                        rate-data={chartCERData}
+                        date-data={chartDateCERData}
+                        selected-date-data={chartSelectedDateCERData}></c-srqi-star-rating-history-graph>
+                    <br>
+                </div>
+                <div slot="lastSection">
+                    <c-srqi-portal-residents-experience-details
+                        field-mapping-j-s-o-n={cerDatatableFieldMappingJSON}
+                        srh-record={selectedSRH}></c-srqi-portal-residents-experience-details>
+                </div>
+            </c-srqi-portal-rating-detail-card>
+        </lightning-tab>
+        <!--Care Minutes Rating-->
+        <lightning-tab label="Staffing">
+            <br><br>
+            <c-srqi-portal-rating-detail-card
+                card-title="Staffing" show-last-section={isCMRatingDetailsAvailable}
+                card-sub-title="Based on the staffing hours reported on the most recent Quarterly Financial Report.">
+                <div slot="section1">
+                    <c-srqi-portal-rating-detail-tile
+                        show-first-tile={currentSRH.Id}
+                        show-second-tile={newSRH.Id}
+                        first-tile-date-right={currentSRH.Go_Live_Date__c}
+                        first-tile-date-left={currentCM.Rating_Calc_Date__c}
+                        first-tile-title={firstRatingTileTitle}
+                        first-tile-rating={currentCM.Care_Minutes_Rating__c}
+                        first-tile-rating-label={currentCM.Care_Minutes_Rating_Label__c}
+                        second-tile-title={secondRatingTileTitle}
+                        second-tile-date-right={newSRH.Go_Live_Date__c}
+                        second-tile-date-left={newCM.Rating_Calc_Date__c}
+                        second-tile-rating={newCM.Care_Minutes_Rating__c}
+                        second-tile-rating-label={newCM.Care_Minutes_Rating_Label__c}
+                        show-first-tile-body={showCMLeftTileBody}
+                        show-second-tile-body={showCMRightTileBody}
+                    >
+                        <template lwc:if={isCurrentCMBusinessExempted}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelExempted}</span>
+                            </div>
+                        </template>
+                        <template lwc:elseif={isCurrentCMSystemExempted}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span>
+                            </div>
+                        </template>
+                        <template lwc:elseif={isCurrentCMRatingMissing}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span>
+                            </div>
+                        </template>
+                        <template lwc:if={isCurrentCMUnderReview}>
+                            <div slot="leftMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_large">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelUnderReview}</span></div>
+                        </template>
+                        <template lwc:if={isNewCMUnderReview}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_large">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelUnderReview}</span></div>
+                        </template>
+                        <template lwc:if={isNewCMBusinessExempted}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelExempted}</span>
+                            </div>
+                        </template>
+                        <template lwc:elseif={isNewCMSystemExempted}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span></div>
+                        </template>
+                        <template lwc:elseif={isNewCMRatingMissing}>
+                            <div slot="rightMessage" class="srqi-warning slds-p-around_medium slds-m-bottom_medium">
+                                <lightning-icon icon-name='utility:warning' alternative-text='warning'
+                                                class="slds-m-right_medium srqi-icon" size='small'
+                                                title='warning'></lightning-icon>
+                                <span class="srqi-message">{labelNoRatingAvailable}</span></div>
+                        </template>
+                    </c-srqi-portal-rating-detail-tile>
+                </div>
+                <div slot="section2">
+                    <c-srqi-star-rating-history-graph
+                        rate-data={chartCMRData}
+                        date-data={chartDateCMRData}
+                        selected-date-data={chartSelectedDateCMRData}></c-srqi-star-rating-history-graph>
+                    <br>
+                </div>
+                <div slot="lastSection">
+                    <c-srqi-portal-care-minutes-details field-mapping-j-s-o-n={cmDatatableFieldMappingJSON}
+                                                        srh-record={selectedSRH}></c-srqi-portal-care-minutes-details>
+                </div>
+            </c-srqi-portal-rating-detail-card>
+        </lightning-tab>
+    </lightning-tabset>
+    <!--End of Sub-nav-->
+    <br><br>
+</template>

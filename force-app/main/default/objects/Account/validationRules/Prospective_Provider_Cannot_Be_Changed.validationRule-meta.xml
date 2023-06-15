@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospective_Provider_Cannot_Be_Changed</fullName>
+    <active>false</active>
+    <description>Prospective Provider cannot be changed to &quot;Yes&quot; after having an approved care type</description>
+    <errorConditionFormula>AND(  ISPICKVAL( PRIORVALUE( Prospective_Provider__c ) , &quot;No&quot;),  NOT( ISPICKVAL( Prospective_Provider__c , &quot;Yes&quot;) ) )</errorConditionFormula>
+    <errorMessage>Prospective Provider cannot be changed to &quot;Yes&quot; after having an approved care type</errorMessage>
+</ValidationRule>

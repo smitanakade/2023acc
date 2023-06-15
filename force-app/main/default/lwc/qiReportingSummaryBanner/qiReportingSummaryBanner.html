@@ -1,0 +1,31 @@
+<template>
+    <lightning-layout multiple-rows class="container">
+        <lightning-layout-item size="12" flexibility="auto" padding="horizontal-small">
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="1" class="slds-text-align_center provider">{serviceProvider}</lightning-layout-item>
+                <lightning-layout-item size="12" class="space"></lightning-layout-item><br>
+                <lightning-layout-item size="8" class="slds-text-align_left reporting-period">Reporting on: {reportingPeriod}</lightning-layout-item>
+                <lightning-layout-item size="4" class="slds-text-align_right buttons " >     
+                    <button class="slds-button slds-button_outline-brand slds-text-align_right custom-icons" onclick={handleSave} title="Save" >      
+                        <img src={save}/><p >&nbsp;&nbsp;Save</p></button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="slds-button slds-button_outline-brand custom-icons" title="Close" onclick={handleClose} >
+                        <img src={close}/><p >&nbsp;&nbsp;Close</p></button>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" class="space"></lightning-layout-item><br>
+                <lightning-layout-item size="12" class="slds-text-align_left bottom">Service ID: {serviceId}  |  Reporting period due date: {dueDate} | Status: {status}</lightning-layout-item>
+            </lightning-layout>
+        </lightning-layout-item>  
+    </lightning-layout>
+    <template  lwc:if={lastModifiedDate}>
+        <lightning-layout>
+            <lightning-layout-item size="12" flexibility="auto" padding="around-medium" class="slds-text-align_right last-update">
+                <p>Last updated by {lastEditedBy} on <lightning-formatted-date-time value={lastModifiedDate}>
+                </lightning-formatted-date-time>, <lightning-formatted-date-time value={lastModifiedDate}
+                hour="2-digit"
+                hour12={ampm}
+                minute="2-digit">
+            </lightning-formatted-date-time></p>
+            </lightning-layout-item>  
+        </lightning-layout>
+    </template>
+</template>

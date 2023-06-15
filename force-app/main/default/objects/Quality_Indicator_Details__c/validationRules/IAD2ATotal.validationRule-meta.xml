@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IAD2ATotal</fullName>
+    <active>true</active>
+    <description>Number of care recipients with incontinence who experienced IAD 2A should not be greater than number of care recipients with incontinence who experienced IAD.</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    BLANKVALUE(No_CR_IAD_Skin_loss_without_infection__c, 0) &gt; BLANKVALUE(No_Care_Recipients_experienced_IAD__c, 0)
+)</errorConditionFormula>
+    <errorDisplayField>No_CR_IAD_Skin_loss_without_infection__c</errorDisplayField>
+    <errorMessage>Total number of care recipients with skin loss without clinical signs of infection cannot exceed the total number of care recipients with incontinence who experienced IAD.</errorMessage>
+</ValidationRule>

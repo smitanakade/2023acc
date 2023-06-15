@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <description>Identifying whether Case is being submitted for the first time.</description>
+        <name>First_QFR_Submission</name>
+        <label>First QFR Submission</label>
+        <locationX>456</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Submission_Count</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Submission_Count__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Submission_Count_Field</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Identifying whether the submission count is more than once or less than once.</description>
+        <name>Submission_Count</name>
+        <label>Submission Count</label>
+        <locationX>654</locationX>
+        <locationY>443</locationY>
+        <defaultConnectorLabel>Less than Once</defaultConnectorLabel>
+        <rules>
+            <name>More_than_Once</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Submission_Count__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Submission_Count</targetReference>
+            </connector>
+            <label>More than Once</label>
+        </rules>
+    </decisions>
+    <description>Update the Submission Count field on Case when a provider re-submits a QFR report</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Increments the submission count by 1 when status gets changed</description>
+        <name>IncrementSubmissionCount</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Submission_Count__c} +1</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <description>Updates the Last Submission Date field to the date the Case was submitted or re-submitted</description>
+        <name>UpdateSubmissionDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY ()</expression>
+    </formulas>
+    <interviewLabel>QFR-Update Submission Count on Case {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>QFR-Update Submission Count on Case</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update the Cases status to Re-Submitted when submission counts are incremented by 1</description>
+        <name>Set_Case_Status_to_Re_Submitted</name>
+        <label>Set Case Status to Re-Submitted</label>
+        <locationX>522</locationX>
+        <locationY>659</locationY>
+        <connector>
+            <targetReference>Update_the_Last_Submission_Date_Field</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Re-Submitted</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the Last Submission Field when a Case status is updated to Submitted</description>
+        <name>Update_Last_Submission_Date_Field</name>
+        <label>Update Last Submission Date Field</label>
+        <locationX>258</locationX>
+        <locationY>551</locationY>
+        <inputAssignments>
+            <field>Last_Submission_Date__c</field>
+            <value>
+                <elementReference>UpdateSubmissionDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>QFR_Submission_Date__c</field>
+            <value>
+                <elementReference>UpdateSubmissionDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the submission count field by incrementing it by 1</description>
+        <name>Update_Submission_Count</name>
+        <label>Update Submission Count</label>
+        <locationX>522</locationX>
+        <locationY>551</locationY>
+        <connector>
+            <targetReference>Set_Case_Status_to_Re_Submitted</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Submission_Count__c</field>
+            <value>
+                <elementReference>IncrementSubmissionCount</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the submission count field with the value 1.</description>
+        <name>Update_Submission_Count_Field</name>
+        <label>Update Submission Count Field</label>
+        <locationX>258</locationX>
+        <locationY>443</locationY>
+        <connector>
+            <targetReference>Update_Last_Submission_Date_Field</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Submission_Count__c</field>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the Last Submission Field when a Case status is updated to Submitted</description>
+        <name>Update_the_Last_Submission_Date_Field</name>
+        <label>Update the Last Submission Date Field</label>
+        <locationX>522</locationX>
+        <locationY>767</locationY>
+        <inputAssignments>
+            <field>Last_Submission_Date__c</field>
+            <value>
+                <elementReference>UpdateSubmissionDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>330</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>First_QFR_Submission</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Submitted</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

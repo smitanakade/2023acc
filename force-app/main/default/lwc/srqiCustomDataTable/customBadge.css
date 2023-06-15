@@ -1,0 +1,24 @@
+.qi-file-upload-status {
+    /* Override properties that have no styling hook at present */
+    --lwc-fontWeightBold: 500; /* Font weight */
+    --lwc-spacingXxSmall: 2px; /* Vertical padding */
+    --lwc-spacingXSmall: 11px; /* Horizontal padding */
+
+    &.submitted {
+        --slds-c-badge-color-background: var(--gpmColSuccess);
+        --slds-c-badge-text-color: white;
+    }
+
+    &.failed {
+        --slds-c-badge-color-background: var(--gpmColError);
+    }
+
+    &.pending {
+        --slds-c-badge-color-background: var(--gpmColWarning);
+    }
+
+    &.partial {
+        --slds-c-badge-color-border: var(--gpmColSuccess);
+        --slds-c-badge-color-background: var(--gpmColSuccessLight2);
+    }
+}

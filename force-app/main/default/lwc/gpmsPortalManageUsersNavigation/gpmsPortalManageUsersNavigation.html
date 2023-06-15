@@ -1,0 +1,48 @@
+<template>
+    <ul class="gpms-side-navigation">
+        <li>
+            <button
+                class="slds-button gpms-navigation-button active"
+                data-accountid={accountInfo.accountId}
+                data-accounttype="ACO"
+                onclick={handleNavClick}
+                type="button"
+            >
+                <div class="limit">
+                    {accountInfo.accountName}
+                    <span>ACO ID: {accountInfo.integrationId}</span>
+                </div>
+                <lightning-icon
+                    alternative-text="View users under this ACO"
+                    class="gpms-navigation-button-icon"
+                    icon-name="utility:chevronright"
+                    size="xx-small"
+                ></lightning-icon>
+            </button>
+            <ul class="sub-navigation">
+                <template for:each={accountInfo.providers} for:item="provider">
+                    <li key={provider.acrId}>
+                        <button
+                            class="slds-button gpms-navigation-button"
+                            data-accountid={provider.accountId}
+                            data-accounttype="provider"
+                            onclick={handleNavClick}
+                            type="button"
+                        >
+                            <div class="limit">
+                                {provider.accountName}
+                                <span>Provider ID: {provider.integrationId}</span>
+                            </div>
+                            <lightning-icon
+                                alternative-text="View users under this Provider"
+                                class="gpms-navigation-button-icon"
+                                icon-name="utility:chevronright"
+                                size="xx-small"
+                            ></lightning-icon>
+                        </button>
+                    </li>
+                </template>
+            </ul>
+        </li>
+    </ul>
+</template>

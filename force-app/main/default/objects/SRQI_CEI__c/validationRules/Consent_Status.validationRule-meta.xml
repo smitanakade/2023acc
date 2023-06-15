@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consent_Status</fullName>
+    <active>true</active>
+    <description>Confirm picklist not set to None</description>
+    <errorConditionFormula>ISPICKVAL(Consent_Status__c, &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>Consent_Status__c</errorDisplayField>
+    <errorMessage>Consent Status should be set to valid value other than None</errorMessage>
+</ValidationRule>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Combined_To__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Combined To</label>
+    <lookupFilter>
+        <active>false</active>
+        <filterItems>
+            <field>BusinessLicense.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Service Combine</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>BusinessLicense</referenceTo>
+    <relationshipLabel>Non Continuing Services</relationshipLabel>
+    <relationshipName>Non_Continuing_Services</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

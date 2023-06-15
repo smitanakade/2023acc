@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AR_Check_Integration_ID_Integration_Type</fullName>
+    <active>true</active>
+    <description>Checks to ensure Provider&apos;s ACO is different from TPO&apos;s ACO that is being linked</description>
+    <errorConditionFormula>AND( OR( RecordType.DeveloperName = &apos;Provider_to_Administrative_Organisation&apos;, RecordType.DeveloperName = &apos;Provider_to_Management_Company&apos;, RecordType.DeveloperName = &apos;Provider_to_Service_Delivery_Organisation&apos;
+), TEXT(Account_From_Id__r.Incorporation_Type__c) = TEXT(Account_To_Id__r.Incorporation_Type__c), Account_From_Id__r.Incorporation_ID__c = Account_To_Id__r.Incorporation_ID__c
+)</errorConditionFormula>
+    <errorDisplayField>Account_To_Id__c</errorDisplayField>
+    <errorMessage>Third Party Organisation has the same ACO details as Provider</errorMessage>
+</ValidationRule>

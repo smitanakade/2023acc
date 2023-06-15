@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApplicantConsidersLikely__c</fullName>
+    <externalId>false</externalId>
+    <label>Applicant Considers Likely</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Workcompletion</fullName>
+                <default>false</default>
+                <label>Work on the premises will be substantially finished before the end of the extension period</label>
+            </value>
+            <value>
+                <fullName>Reasonableprogress</fullName>
+                <default>false</default>
+                <label>Reasonable progress towards the construction of the premises will be made by the end of the extension period</label>
+            </value>
+            <value>
+                <fullName>AmountSpent</fullName>
+                <default>false</default>
+                <label>A substantial amount will be spent by the approved provider, in connection with the work on the premises, to meet the conditions to which the allocation was subject.</label>
+            </value>
+            <value>
+                <fullName>workproceedingsatisfactorily</fullName>
+                <default>false</default>
+                <label>If work on the premises has been delayed by circumstances beyond the approved provider’s control – work on the premises will proceed satisfactorily within a reasonable period.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

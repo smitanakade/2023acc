@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incident_Check_Past</fullName>
+    <active>true</active>
+    <description>Past emergency situation is not editable.</description>
+    <errorConditionFormula>AND(!IsNew() , PRIORVALUE(End_Date__c)  &lt; Today())</errorConditionFormula>
+    <errorMessage>Past emergency situation is not editable.</errorMessage>
+</ValidationRule>

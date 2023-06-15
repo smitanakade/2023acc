@@ -1,0 +1,103 @@
+<template>
+    <template if:true={hasPreviousVersion}>
+        <div class="container">
+            <div class="content">
+                <div class="first-line">
+                    <div class="version"><h1>{currentVersion}</h1></div>
+                    <div>
+                        <button
+                            class="custom-button"
+                            style={buttonStyle}
+                            name={currentStatus}
+                        >
+                            {currentStatus}
+                        </button>
+                    </div>
+                </div>
+                <div>{lastUpdated}</div>
+            </div>
+            <div class="control">
+                <label for="versionControl" class="combobox-label"
+                    >Previous Submissions</label
+                >
+                <lightning-combobox
+                    variant="label-hidden"
+                    id="versionControl"
+                    class="combobox"
+                    name="version"
+                    label="Previous Submissions"
+                    value={value}
+                    placeholder="Select Version"
+                    options={previousVersions}
+                    onchange={handleChange}
+                    required
+                ></lightning-combobox>
+            </div>
+        </div>
+        <template if:true={showWarning}>
+            <div class="slds-box box-container">
+                <div class="box-content">
+                    <div class="warning">
+                        <lightning-icon
+                            icon-name="utility:warning"
+                            size="xx-small"
+                            class="warning-icon"
+                        ></lightning-icon>
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <p>Warning</p>
+                        </div>
+                        <div>
+                            <p>
+                                Updates to this record will <u>not</u> be
+                                automatically saved or submitted. To save
+                                updates to the quality indicator data please
+                                click the 'Save' button above. To submit updates
+                                to the quality indicator data please proceed to
+                                'Submission' in the navigation below and
+                                complete the declaration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="close">
+                    <lightning-icon
+                        icon-name="utility:close"
+                        size="xx-small"
+                        onclick={handleClose}
+                        class="close-icon"
+                    ></lightning-icon>
+                </div>
+            </div>
+        </template>
+        <template if:true={readOnly}>
+            <div class="slds-box box-container-1">
+                <div class="box-content">
+                    <div class="info">
+                        <lightning-icon
+                            icon-name="utility:info"
+                            size="xx-small"
+                            class="info-icon"
+                        ></lightning-icon>
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <p>This page is read-only</p>
+                        </div>
+                        <div>
+                            <p>{readOnlyContent}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="close">
+                    <lightning-icon
+                        icon-name="utility:close"
+                        size="xx-small"
+                        onclick={handleReadOnlyClose}
+                    ></lightning-icon>
+                </div>
+            </div>
+        </template>
+    </template>
+</template>

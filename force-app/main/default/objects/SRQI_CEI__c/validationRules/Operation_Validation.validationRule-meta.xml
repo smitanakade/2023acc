@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Operation_Validation</fullName>
+    <active>true</active>
+    <description>Confirm picklist not set to None</description>
+    <errorConditionFormula>ISPICKVAL(Operation__c, &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>Operation__c</errorDisplayField>
+    <errorMessage>Operation should be set to valid value other than None</errorMessage>
+</ValidationRule>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sending Email Notification for Due Date Approaching</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>ACS_Letterhead2</letterhead>
+    <name>QI Due Date</name>
+    <style>freeForm</style>
+    <subject>QI Reporting Due Date Approaching [SEC = OFFICIAL]</subject>
+    <textOnly>Dear Quality Indicator User,
+
+
+
+
+
+QI Program data for the most recent reporting period {!Account.PreviousReportingPeriodName__c} is now due. Please provide QI Program data for the services mentioned below by the 21st day of the month after the end of the quarter.
+
+
+
+
+
+Reporting Period: {!Account.PreviousReportingPeriodName__c}
+
+Due Date: {!Account.PreviousReportingPeriodDueDt__c}
+
+Services: {!Account.ServiceNames__c}
+
+
+
+
+Sincerely,
+
+Government Provider Management System
+
+
+
+
+
+We acknowledge the Traditional Custodians of the lands we live on. We pay our respects to all Elders, past and present, of all Aboriginal and Torres Strait Islander nations.
+
+THIS IS AN AUTOMATED MESSAGE - PLEASE DO NOT REPLY DIRECTLY TO THIS EMAIL.
+
+
+IMPORTANT: This email is for the use of the intended recipient only and may contain information that is confidential, commercially valuable and/or subject to legal or parliamentary privilege. If you are not the intended recipient you are notified that any review, re-transmission, disclosure, dissemination or other use of, or taking of any action in reliance upon, this information is prohibited and may result in severe penalties. If you have received this email in error please notify the sender by contacting the help desk and delete all electronic and hard copies of this transmission together with any attachments. Please consider the environment before printing this email.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incident_Check_Other</fullName>
+    <active>true</active>
+    <description>Description emergency situation is mandatory, when emergency situation type is Other.</description>
+    <errorConditionFormula>AND(
+ISBLANK( Description_of_Emergency_Situation__c ),
+ISPICKVAL( Emergency_Situation_Type__c , &quot;Other&quot;) 
+)</errorConditionFormula>
+    <errorDisplayField>Description_of_Emergency_Situation__c</errorDisplayField>
+    <errorMessage>Description emergency situation is mandatory, when emergency situation type is Other.</errorMessage>
+</ValidationRule>

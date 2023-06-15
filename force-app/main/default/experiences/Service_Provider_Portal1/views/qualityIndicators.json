@@ -1,0 +1,82 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "8017b395-3c66-4c42-a40d-a65c9edba974",
+  "label" : "quality indicators",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "57250e57-cb0f-4f42-b521-c26fc496cf6f",
+          "columns" : [ {
+            "UUID" : "816e6ba6-8b55-4196-8683-25caa62f43f3",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "57250e57-cb0f-4f42-b521-c26fc496cf6f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:qiDataEntrySubmissionBanner",
+          "id" : "55f18ac8-ad9f-4e30-98bd-1f880b18717c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "c:qiKnowledgeBar",
+          "id" : "ef72b439-0524-4dd3-9a52-55a6e4e16732",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "c:qiDataEntryAndSubmission",
+          "id" : "1285f8e1-70a7-4b67-8431-2590a9dcecad",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "816e6ba6-8b55-4196-8683-25caa62f43f3",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "53139242-db6a-447d-bc70-c33136975fb3",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Quality Indicators"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "638b9ce7-7bfd-478a-a67d-9f906a6b531c",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "89dda1e9-c1fc-4ecd-a732-c813103d403b",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-quality-indicators"
+}

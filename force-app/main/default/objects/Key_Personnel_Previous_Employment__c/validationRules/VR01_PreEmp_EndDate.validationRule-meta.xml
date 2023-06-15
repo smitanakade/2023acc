@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR01_PreEmp_EndDate</fullName>
+    <active>true</active>
+    <description>Validate is &apos;End Date&apos; is after &apos;Start Date&apos;</description>
+    <errorConditionFormula>Previous_Employment_End_Date__c &lt; Previous_Employment_Start_Date__c</errorConditionFormula>
+    <errorDisplayField>Previous_Employment_End_Date__c</errorDisplayField>
+    <errorMessage>Please enter another date. Previous Employment End Date should be after the Previous Employment Start Date</errorMessage>
+</ValidationRule>

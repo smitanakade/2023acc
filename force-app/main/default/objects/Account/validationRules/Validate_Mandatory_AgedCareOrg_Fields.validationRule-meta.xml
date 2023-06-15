@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Mandatory_AgedCareOrg_Fields</fullName>
+    <active>true</active>
+    <description>Making fields mandatory for ACO RecordType</description>
+    <errorConditionFormula>AND(GPMS_ProspectivePortalACO__c == false,
+ RecordType.DeveloperName =&quot;Aged_Care_Organisation&quot;
+,
+OR(Incorporation_ID__c = &quot;&quot;,ISNULL(Incorporation_Status_Date__c)),
+NOT(ISPICKVAL(Incorporation_ID_Type__c,&quot;Not Incorporated&quot;)
+)
+)</errorConditionFormula>
+    <errorMessage>Complete the following mandatory fields:
+Incorporation ID Type,
+Incorporation ID,
+Incorporation Status,
+Incorporation Status Date,
+Incorporated Under,
+Incorporation Type</errorMessage>
+</ValidationRule>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>Comment</name>
+        <dataType>String</dataType>
+        <expression>&quot;Geospatial Data Refresh Completed &quot;+TEXT(DAY({!$Flow.CurrentDate}))+&quot;-&quot;+
+CASE(Month({!$Flow.CurrentDate}),
+1,&quot;JAN&quot;,
+2,&quot;FEB&quot;,
+3,&quot;MAR&quot;,
+4,&quot;APR&quot;,
+5,&quot;MAY&quot;,
+6,&quot;JUN&quot;,
+7,&quot;JUL&quot;,
+8,&quot;AUG&quot;,
+9,&quot;SEP&quot;,
+10,&quot;OCT&quot;,
+11,&quot;NOV&quot;,
+12,&quot;DEC&quot;,
+&quot;&quot;)+&quot;-&quot; +TEXT(YEAR({!$Flow.CurrentDate}))+&quot; &quot;+TEXT({!Hour24}) +&quot;:&quot;+{!MinuteSecond}</expression>
+    </formulas>
+    <formulas>
+        <name>CurrentTime</name>
+        <dataType>String</dataType>
+        <expression>TRIM(RIGHT({!CurrentDateTime},8))</expression>
+    </formulas>
+    <formulas>
+        <name>Hour24</name>
+        <dataType>Number</dataType>
+        <expression>if(
+	CONTAINS({!CurrentTime},&quot;pm&quot;),
+		if(
+			OR(
+				CONTAINS(LEFT({!CurrentTime},2), &quot;12&quot;),
+				CONTAINS(LEFT({!CurrentTime},1), &quot;12&quot;)
+			),
+			VALUE(
+				if(LEN({!CurrentTime})==8,
+					LEFT({!CurrentTime},2),
+					LEFT({!CurrentTime},1)
+				)
+			),
+			VALUE(
+				if(LEN({!CurrentTime})==8,
+					LEFT({!CurrentTime},2),
+					LEFT({!CurrentTime},1)
+				)
+			)+12
+		),
+		VALUE(
+			if(LEN({!CurrentTime})==8,
+				LEFT({!CurrentTime},2),
+				LEFT({!CurrentTime},1)
+			)
+		)
+)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>MinuteSecond</name>
+        <dataType>String</dataType>
+        <expression>MID(TEXT({!$Flow.CurrentDateTime}),15,5)</expression>
+    </formulas>
+    <interviewLabel>Geospatial Information Change to Completed {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Geospatial Information Change to Completed</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Geospatial_Information</name>
+        <label>Update Geospatial Information</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>Refresh_Comment__c</field>
+            <value>
+                <elementReference>Comment</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Geospatial_Information</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Refresh_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
+        <object>Geospatial_Information__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>CurrentDateTime</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>{!$Flow.CurrentDateTime}</text>
+    </textTemplates>
+</Flow>

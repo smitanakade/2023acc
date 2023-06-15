@@ -1,0 +1,787 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative containersize">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <omnistudio-toast class="flexcard-toast-element" theme="slds" title="" message="" styletype=""> </omnistudio-toast>
+</div>
+            <div if:true={showLoader} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <omnistudio-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></omnistudio-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12"  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card slds-p-around_x-small slds-m-bottom_x-small" style="">
+          <div data-style-id="state0element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element0_child"   card={card}  record={record}  merge-field="%3Cdiv%20class=%22slds-text-align_center%22%3E%3Cspan%20style=%22color:%20#ff0000;%22%3E%3Cstrong%3E%3Cspan%20class=%22ui-provider%20gz%20b%20c%20d%20e%20f%20g%20h%20i%20j%20k%20l%20m%20n%20o%20p%20q%20r%20s%20t%20u%20v%20w%20x%20y%20z%20ab%20ac%20ae%20af%20ag%20ah%20ai%20aj%20ak%22%20dir=%22ltr%22%3E%3Cspan%20class=%22ui-provider%20gp%20b%20c%20d%20e%20f%20g%20h%20i%20j%20k%20l%20m%20n%20o%20p%20q%20r%20s%20t%20u%20v%20w%20x%20y%20z%20ab%20ac%20ae%20af%20ag%20ah%20ai%20aj%20ak%22%20dir=%22ltr%22%3EPlaces%20events%20cannot%20be%20created%20as%20this%20service%20is%20in%20the%20process%20of%20being%20combined%20or%20is%20a%20discontinuing%20service.%3C/span%3E%3C/span%3E%3C/strong%3E%3C/span%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div>
+      </omnistudio-flex-card-state><omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="1" data-rindex={rindex} class="cf-vlocity-state-1 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-theme_shade slds-card slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_x-small slds-m-bottom_x-small " style="     border-top: #cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid;border-left: #cccccc 1px solid; 
+         ">
+          <div data-style-id="state1element0" class="slds-col   slds-size_2-of-12  " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state1element0_child"  tracking-obj={_childCardTrackingObj}  class= "state1element0_child flexActionElement" 
+        data-action-element-class="state1element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="action3"   state-obj={record}  record={record}  card={card}  action-list='\[{"actionIndex":0,"draggable":false,"isOpen":true,"key":"1671421750495-iw3bij3jw","label":"Cease Places","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","flyoutLwc":"n-a-t-s-i-f-a-c-places-cease-english","flyoutParams":{"AllotmentId":"{AllotmentId}","DateOfAllotment":"{DateOfAllotment}","GPMSInactive":"{GPMSInactive}","GPMSOperational":"{GPMSOperational}","Location":"{Location}","ProviderName":"{ProviderName}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671581739358","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"NATSIFACPlaces/Cease/English","type":"Flyout"}}]'  button-variant="brand"  display-as-button="true"  flyout-channel="close_modal"  flyout-details='\{"openFlyoutIn":"Modal"}'  hide-action-icon="true"  icon-name="standard-default"  label="Cease Places"  re-render-flyout="true"  theme="slds"  ><div slot="modalflyout" class="action3action0" ><omnistudio-custom-lwc-wrapper element-name="c-n-a-t-s-i-f-a-c-places-cease-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"DateOfAllotment\":\"{DateOfAllotment}\",\"GPMSInactive\":\"{GPMSInactive}\",\"GPMSOperational\":\"{GPMSOperational}\",\"Location\":\"{Location}\",\"ProviderName\":\"{ProviderName}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.action3action0} >
+     <c-n-a-t-s-i-f-a-c-places-cease-english   layout='lightning'    ></c-n-a-t-s-i-f-a-c-places-cease-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+      </div><div data-style-id="state1element1" class="slds-col   slds-size_2-of-12  " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state1element1_child"  tracking-obj={_childCardTrackingObj}  class= "state1element1_child flexActionElement" 
+        data-action-element-class="state1element1_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="action3clone0"   state-obj={record}  record={record}  card={card}  action-list='\[{"actionIndex":0,"draggable":false,"isOpen":true,"key":"1671421750495-iw3bij3jw","label":"Reinstate Places","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","flyoutLwc":"n-a-t-s-i-f-a-c-places-reinstate-english","flyoutParams":{"AllotmentId":"{AllotmentId}","DateOfAllotment":"{DateOfAllotment}","GPMSCeased":"{GPMSCeased}","Location":"{Location}","ProviderName":"{ProviderName}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671581727246","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"NATSIFACPlaces/Reinstate/English","type":"Flyout"}}]'  button-variant="brand"  display-as-button="true"  flyout-channel="close_modal"  flyout-details='\{"openFlyoutIn":"Modal"}'  hide-action-icon="true"  icon-name="standard-default"  label="Reinstate Places"  re-render-flyout="true"  theme="slds"  ><div slot="modalflyout" class="action3clone0action0" ><omnistudio-custom-lwc-wrapper element-name="c-n-a-t-s-i-f-a-c-places-reinstate-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"DateOfAllotment\":\"{DateOfAllotment}\",\"GPMSCeased\":\"{GPMSCeased}\",\"Location\":\"{Location}\",\"ProviderName\":\"{ProviderName}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.action3clone0action0} >
+     <c-n-a-t-s-i-f-a-c-places-reinstate-english   layout='lightning'    ></c-n-a-t-s-i-f-a-c-places-reinstate-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+      </div>
+        </div>
+      </omnistudio-flex-card-state><omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="2" data-rindex={rindex} class="cf-vlocity-state-2 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-theme_shade slds-card slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_x-small slds-m-bottom_x-small " style="     border-top: #cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid;border-left: #cccccc 1px solid; 
+         ">
+          <div data-style-id="state2element0" class="slds-col   slds-size_2-of-12  " data-rindex={rindex} style="" >
+    <omnistudio-flex-menu data-style-id="state2element0_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  record={record}  card={card}  icon-name="utility:down"  icon-position="right"  icon-size="x-small"  label="General"  overflow="true"  position="left"  size="small"  type="action"  variant="brand" 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1669689166776-0"
+    theme="slds"
+    data-style-id="state2element0_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1669689166781-2m3fpx1ca","label":"Record S14-5(4) Conditions ","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"record-conditions-places-english","flyoutParams":{"AllotmentId":"{AllotmentId}","CareType":"{CareType}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1669689249377","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"RecordConditions/Places/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Record S14-5(4) Conditions "  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element0_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element0_menuitem_0" data-show-spinner="false" 
+    data-element-label="menu0menuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu0menuitem0action0" ><omnistudio-custom-lwc-wrapper element-name="c-record-conditions-places-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"CareType\":\"{CareType}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu0menuitem0action0} >
+     <c-record-conditions-places-english   layout='lightning'    ></c-record-conditions-places-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div><div data-style-id="state2element1" class="slds-col   slds-size_2-of-12  " data-rindex={rindex} style="" >
+    <omnistudio-flex-menu data-style-id="state2element1_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  record={record}  card={card}  icon-name="utility:down"  icon-position="right"  icon-size="x-small"  label="Provisional Places"  overflow="true"  position="left"  size="small"  type="action"  variant="brand" 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1671418437907-0"
+    theme="slds"
+    data-style-id="state2element1_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671418437909-5vk2d6cel","label":"Bring Online","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"places-event-bring-online-places-event-bring-online-english","flyoutParams":{"AllotmentId":"{AllotmentId}","Location":"{Location}","ServiceCareType":"{ServiceCareType}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1673991140464","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"PlacesEventBringOnline/PlacesEventBringOnline/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Bring Online"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element1_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element1_menuitem_0" data-show-spinner="false" 
+    data-element-label="menu1menuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu1menuitem0action0" ><omnistudio-custom-lwc-wrapper element-name="c-places-event-bring-online-places-event-bring-online-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"Location\":\"{Location}\",\"ServiceCareType\":\"{ServiceCareType}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu1menuitem0action0} >
+     <c-places-event-bring-online-places-event-bring-online-english   layout='lightning'    ></c-places-event-bring-online-places-event-bring-online-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671418691188-0"
+    theme="slds"
+    data-style-id="state2element1_menuitem_1"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671418691191-0r1jvchh5","label":"Extend PA Period","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"places-extend-p-a-places-extend-p-a-english","flyoutParams":{"AllotmentId":"{AllotmentId}","AllotmentSubType":"{AllotmentSubType}","DateOfAllotment":"{DateOfAllotment}","Location":"{Location}","MarkDocumentsAsSent":"{MarkDocumentsAsSent}","NumberofPlaces":"{NumberofPlaces}","OriginalPAPeriodEndDate":"{OriginalPAPeriodEndDate}","PAPeriodEndDate":"{PAPeriodEndDate}","Provisional":"{Provisional}","ProvisionalPlacesNumber":"{ProvisionalPlacesNumber}","ServiceCareSubType":"{ServiceCareSubType}","ServiceCareType":"{ServiceCareType}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}","SizeOfCurrentProvisional":"{SizeOfCurrentProvisional}","WaiverType":"{WaiverType}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1681693528804","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"PlacesExtendPA/PlacesExtendPA/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Extend PA Period"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element1_menuitem_1 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element1_menuitem_1" data-show-spinner="false" 
+    data-element-label="menu1menuitem1" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu1menuitem1action0" ><omnistudio-custom-lwc-wrapper element-name="c-places-extend-p-a-places-extend-p-a-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"AllotmentSubType\":\"{AllotmentSubType}\",\"DateOfAllotment\":\"{DateOfAllotment}\",\"Location\":\"{Location}\",\"MarkDocumentsAsSent\":\"{MarkDocumentsAsSent}\",\"NumberofPlaces\":\"{NumberofPlaces}\",\"OriginalPAPeriodEndDate\":\"{OriginalPAPeriodEndDate}\",\"PAPeriodEndDate\":\"{PAPeriodEndDate}\",\"Provisional\":\"{Provisional}\",\"ProvisionalPlacesNumber\":\"{ProvisionalPlacesNumber}\",\"ServiceCareSubType\":\"{ServiceCareSubType}\",\"ServiceCareType\":\"{ServiceCareType}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\",\"SizeOfCurrentProvisional\":\"{SizeOfCurrentProvisional}\",\"WaiverType\":\"{WaiverType}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu1menuitem1action0} >
+     <c-places-extend-p-a-places-extend-p-a-english   layout='lightning'    ></c-places-extend-p-a-places-extend-p-a-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671418719084-0"
+    theme="slds"
+    data-style-id="state2element1_menuitem_2"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671418719088-ajic7cocb","label":"Surrender","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"surrender-p-a-places-english","flyoutParams":{"AllotmentId":"{AllotmentId}","DateOfAllotment":"{DateOfAllotment}","Location":"{Location}","ObjectIdForEventValidation":"{ObjectIdForEventValidation}","ObjectTypeForEventValidation":"{ObjectTypeForEventValidation}","PAPeriodEndDate":"{PAPeriodEndDate}","Provisional":"{Provisional}","ProvisionalPlacesNumber":"{ProvisionalPlacesNumber}","ServiceCareType":"{ServiceCareType}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}","SizeOfCurrentProvisional":"{SizeOfCurrentProvisional}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671420437901","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"SurrenderPA/Places/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Surrender"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element1_menuitem_2 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element1_menuitem_2" data-show-spinner="false" 
+    data-element-label="menu1menuitem2" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu1menuitem2action0" ><omnistudio-custom-lwc-wrapper element-name="c-surrender-p-a-places-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"DateOfAllotment\":\"{DateOfAllotment}\",\"Location\":\"{Location}\",\"ObjectIdForEventValidation\":\"{ObjectIdForEventValidation}\",\"ObjectTypeForEventValidation\":\"{ObjectTypeForEventValidation}\",\"PAPeriodEndDate\":\"{PAPeriodEndDate}\",\"Provisional\":\"{Provisional}\",\"ProvisionalPlacesNumber\":\"{ProvisionalPlacesNumber}\",\"ServiceCareType\":\"{ServiceCareType}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\",\"SizeOfCurrentProvisional\":\"{SizeOfCurrentProvisional}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu1menuitem2action0} >
+     <c-surrender-p-a-places-english   layout='lightning'    ></c-surrender-p-a-places-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div><div data-style-id="state2element2" class="slds-col   slds-size_3-of-12  " data-rindex={rindex} style="" >
+    <omnistudio-flex-menu data-style-id="state2element2_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  record={record}  card={card}  icon-name="utility:down"  icon-position="right"  icon-size="x-small"  label="Places Taken Effect"  overflow="true"  position="left"  size="small"  type="action"  variant="brand" 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1671419003308-0"
+    theme="slds"
+    data-style-id="state2element2_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671419003310-q2vyb1jw3","label":"Cease S14-9 Places","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"ceased-places-emergency-english","flyoutParams":{"AllotmentId":"{AllotmentId}","AllotmentType":"{AllotmentType}","Location":"{Location}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671604388087","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"CeasedPlaces/Emergency/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Cease S14-9 Places"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element2_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element2_menuitem_0" data-show-spinner="false" 
+    data-element-label="menu3menuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%22iconPosition%22%3A%22left%22%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu3menuitem0action0" ><omnistudio-custom-lwc-wrapper element-name="c-ceased-places-emergency-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"AllotmentType\":\"{AllotmentType}\",\"Location\":\"{Location}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu3menuitem0action0} >
+     <c-ceased-places-emergency-english   layout='lightning'    ></c-ceased-places-emergency-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671419026731-0"
+    theme="slds"
+    data-style-id="state2element2_menuitem_1"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671419026734-p4za774pv","label":"Change Care Setting","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"places-change-care-setting-english","flyoutParams":{"AllotmentId":"{AllotmentId}","Location":"{Location}","NumberofPlaces":"{NumberofPlaces}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671420798544","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"Places/ChangeCareSetting/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Change Care Setting"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element2_menuitem_1 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element2_menuitem_1" data-show-spinner="false" 
+    data-element-label="menu3menuitem1" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu3menuitem1action0" ><omnistudio-custom-lwc-wrapper element-name="c-places-change-care-setting-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"Location\":\"{Location}\",\"NumberofPlaces\":\"{NumberofPlaces}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu3menuitem1action0} >
+     <c-places-change-care-setting-english   layout='lightning'    ></c-places-change-care-setting-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671419141710-0"
+    theme="slds"
+    data-style-id="state2element2_menuitem_2"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671419141712-eu9io8pe4","label":"Convert Care Level Mix","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"care-level-convert-english","flyoutParams":{"AllotmentId":"{AllotmentId}","Location":"{Location}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671420878075","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"CareLevel/Convert/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Convert Care Level Mix"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element2_menuitem_2 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element2_menuitem_2" data-show-spinner="false" 
+    data-element-label="menu3menuitem2" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu3menuitem2action0" ><omnistudio-custom-lwc-wrapper element-name="c-care-level-convert-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"Location\":\"{Location}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu3menuitem2action0} >
+     <c-care-level-convert-english   layout='lightning'    ></c-care-level-convert-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div>
+        </div>
+      </omnistudio-flex-card-state><omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="3" data-rindex={rindex} class="cf-vlocity-state-3 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-theme_default slds-card slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_x-small slds-m-bottom_x-small " style="     border-top: #ccc 1px solid;border-right: #ccc 1px solid;border-bottom: #ccc 1px solid;border-left: #ccc 1px solid; 
+         ">
+          <div data-style-id="state3element0" class="slds-col   slds-size_12-of-12 condition-element" data-rindex={rindex} style=""  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-54","field":"VariationEventType","operator":"==","value":"Variation","type":"custom","hasMergeField":false},{"id":"state-new-condition-63","field":"VariationEventStatus","operator":"==","value":"Inactive","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}' ><omnistudio-output-field data-style-id="state3element0_child"   card={card}  record={record}  merge-field="%3Cdiv%20class=%22slds-text-align_center%22%3E%3Cstrong%3E%3Cspan%20class=%22ui-provider%20gp%20b%20c%20d%20e%20f%20g%20h%20i%20j%20k%20l%20m%20n%20o%20p%20q%20r%20s%20t%20u%20v%20w%20x%20y%20z%20ab%20ac%20ae%20af%20ag%20ah%20ai%20aj%20ak%22%20dir=%22ltr%22%20style=%22color:%20#e03e2d;%22%3EThe%20'Variation'%20event%20button%20is%20not%20visible%20as%20an%20incomplete%20Variation%20event%20has%20been%20started.%20Please%20go%20to%20the%20Variation%20event%20in%20the%20Events%20table%20to%20cancel%20this%20event%20before%20performing%20a%20new%20Variation%20event%20or%20other%20events.%3C/span%3E%3C/strong%3E%3C/div%3E"  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-54","field":"VariationEventType","operator":"==","value":"Variation","type":"custom","hasMergeField":false},{"id":"state-new-condition-63","field":"VariationEventStatus","operator":"==","value":"Inactive","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}'  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state3element1" class="slds-col   slds-size_12-of-12  condition-element" data-rindex={rindex} style=""  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-125","field":"PAVariationEventRecordType","operator":"==","value":"Variations_by_Provider_Secretary","type":"custom","hasMergeField":false},{"id":"state-new-condition-136","field":"PAVariationStatus","operator":"==","value":"Inactive","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}' ><omnistudio-output-field data-style-id="state3element1_child"   card={card}  record={record}  merge-field="%3Cdiv%20class=%22slds-text-align_center%22%3E%3Cstrong%3E%3Cspan%20class=%22ui-provider%20gp%20b%20c%20d%20e%20f%20g%20h%20i%20j%20k%20l%20m%20n%20o%20p%20q%20r%20s%20t%20u%20v%20w%20x%20y%20z%20ab%20ac%20ae%20af%20ag%20ah%20ai%20aj%20ak%22%20dir=%22ltr%22%20style=%22color:%20#e03e2d;%22%3EThe%20'Vary%20by%20Provider%20or%20Secretary'%20event%20button%20is%20not%20visible%20as%20an%20incomplete%20PA%20Variation%20event%20has%20been%20started.%20Please%20go%20to%20the%20PA%20Variation%20event%20in%20the%20Events%20table%20to%20cancel%20this%20event%20before%20performing%20a%20new%20PA%20Variation%20event%20or%20other%20events.%3C/span%3E%3C/strong%3E%3C/div%3E"  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-125","field":"PAVariationEventRecordType","operator":"==","value":"Variations_by_Provider_Secretary","type":"custom","hasMergeField":false},{"id":"state-new-condition-136","field":"PAVariationStatus","operator":"==","value":"Inactive","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}'  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state3element2" class="slds-col   slds-theme_shade slds-border_bottom slds-border_right slds-border_top slds-border_left slds-p-around_x-small  slds-size_12-of-12  " data-rindex={rindex} style="     border-bottom: #cccccc 1px solid;border-right: #cccccc 1px solid;border-top: #cccccc 1px solid;border-left: #cccccc 1px solid; 
+         " >
+    <omnistudio-block data-style-id="state3element2_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state3element2block_element0" class="slds-col   slds-size_2-of-12  " data-rindex={rindex} style="" >
+    <omnistudio-flex-menu data-style-id="state3element2block_element0_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  record={record}  card={card}  icon-name="utility:down"  icon-position="right"  icon-size="x-small"  label="General"  overflow="true"  position="left"  size="small"  type="action"  variant="brand" 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1669689166776-0"
+    theme="slds"
+    data-style-id="state3element2block_element0_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1669689166781-2m3fpx1ca","label":"Record S14-5(4) Conditions ","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"record-conditions-places-english","flyoutParams":{"AllotmentId":"{AllotmentId}","CareType":"{CareType}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1669689249377","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"RecordConditions/Places/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Record S14-5(4) Conditions "  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element0_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element0_menuitem_0" data-show-spinner="false" 
+    data-element-label="menu2menuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu2menuitem0action0" ><omnistudio-custom-lwc-wrapper element-name="c-record-conditions-places-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"CareType\":\"{CareType}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu2menuitem0action0} >
+     <c-record-conditions-places-english   layout='lightning'    ></c-record-conditions-places-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div><div data-style-id="state3element2block_element1" class="slds-col   slds-size_2-of-12  condition-element" data-rindex={rindex} style=""  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[]}' >
+    <omnistudio-flex-menu data-style-id="state3element2block_element1_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  record={record}  card={card}  icon-name="utility:down"  icon-position="right"  icon-size="x-small"  label="Provisional Places"  overflow="true"  position="left"  size="small"  type="action"  variant="brand"  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[]}' 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1671418437907-0"
+    theme="slds"
+    data-style-id="state3element2block_element1_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671418437909-5vk2d6cel","label":"Bring Online","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"places-event-bring-online-places-event-bring-online-english","flyoutParams":{"AllotmentId":"{AllotmentId}","Location":"{Location}","ServiceCareType":"{ServiceCareType}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1673991140464","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"PlacesEventBringOnline/PlacesEventBringOnline/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Bring Online"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element1_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element1_menuitem_0" data-show-spinner="false" 
+    data-element-label="menu3menuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu3menuitem0action0" ><omnistudio-custom-lwc-wrapper element-name="c-places-event-bring-online-places-event-bring-online-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"Location\":\"{Location}\",\"ServiceCareType\":\"{ServiceCareType}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu3menuitem0action0} >
+     <c-places-event-bring-online-places-event-bring-online-english   layout='lightning'    ></c-places-event-bring-online-places-event-bring-online-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671418691188-0"
+    theme="slds"
+    data-style-id="state3element2block_element1_menuitem_1"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671418691191-0r1jvchh5","label":"Extend PA Period","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"places-extend-p-a-places-extend-p-a-english","flyoutParams":{"AllotmentId":"{AllotmentId}","AllotmentSubType":"{AllotmentSubType}","DateOfAllotment":"{DateOfAllotment}","Location":"{Location}","MarkDocumentsAsSentDefault":"{MarkDocumentsAsSentDefault}","NumberofPlaces":"{NumberofPlaces}","OriginalPAPeriodEndDate":"{OriginalPAPeriodEndDate}","PAPeriodEndDate":"{PAPeriodEndDate}","Provisional":"{Provisional}","ProvisionalPlacesNumber":"{ProvisionalPlacesNumber}","ServiceCareSubType":"{ServiceCareSubType}","ServiceCareType":"{ServiceCareType}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}","SizeOfCurrentProvisional":"{SizeOfCurrentProvisional}","WaiverType":"{WaiverType}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1682489695885","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"PlacesExtendPA/PlacesExtendPA/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Extend PA Period"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element1_menuitem_1 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element1_menuitem_1" data-show-spinner="false" 
+    data-element-label="menu3menuitem1" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu3menuitem1action0" ><omnistudio-custom-lwc-wrapper element-name="c-places-extend-p-a-places-extend-p-a-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"AllotmentSubType\":\"{AllotmentSubType}\",\"DateOfAllotment\":\"{DateOfAllotment}\",\"Location\":\"{Location}\",\"MarkDocumentsAsSentDefault\":\"{MarkDocumentsAsSentDefault}\",\"NumberofPlaces\":\"{NumberofPlaces}\",\"OriginalPAPeriodEndDate\":\"{OriginalPAPeriodEndDate}\",\"PAPeriodEndDate\":\"{PAPeriodEndDate}\",\"Provisional\":\"{Provisional}\",\"ProvisionalPlacesNumber\":\"{ProvisionalPlacesNumber}\",\"ServiceCareSubType\":\"{ServiceCareSubType}\",\"ServiceCareType\":\"{ServiceCareType}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\",\"SizeOfCurrentProvisional\":\"{SizeOfCurrentProvisional}\",\"WaiverType\":\"{WaiverType}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu3menuitem1action0} >
+     <c-places-extend-p-a-places-extend-p-a-english   layout='lightning'    ></c-places-extend-p-a-places-extend-p-a-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671418719084-0"
+    theme="slds"
+    data-style-id="state3element2block_element1_menuitem_2"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671418719088-ajic7cocb","label":"Surrender","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"surrender-p-a-places-english","flyoutParams":{"AllotmentId":"{AllotmentId}","DateOfAllotment":"{DateOfAllotment}","Location":"{Location}","ObjectIdForEventValidation":"{ObjectIdForEventValidation}","ObjectTypeForEventValidation":"{ObjectTypeForEventValidation}","PAPeriodEndDate":"{PAPeriodEndDate}","Provisional":"{Provisional}","ProvisionalPlacesNumber":"{ProvisionalPlacesNumber}","ServiceCareType":"{ServiceCareType}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}","SizeOfCurrentProvisional":"{SizeOfCurrentProvisional}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671420437901","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"SurrenderPA/Places/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Surrender"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element1_menuitem_2 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element1_menuitem_2" data-show-spinner="false" 
+    data-element-label="menu3menuitem2" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu3menuitem2action0" ><omnistudio-custom-lwc-wrapper element-name="c-surrender-p-a-places-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"DateOfAllotment\":\"{DateOfAllotment}\",\"Location\":\"{Location}\",\"ObjectIdForEventValidation\":\"{ObjectIdForEventValidation}\",\"ObjectTypeForEventValidation\":\"{ObjectTypeForEventValidation}\",\"PAPeriodEndDate\":\"{PAPeriodEndDate}\",\"Provisional\":\"{Provisional}\",\"ProvisionalPlacesNumber\":\"{ProvisionalPlacesNumber}\",\"ServiceCareType\":\"{ServiceCareType}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\",\"SizeOfCurrentProvisional\":\"{SizeOfCurrentProvisional}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu3menuitem2action0} >
+     <c-surrender-p-a-places-english   layout='lightning'    ></c-surrender-p-a-places-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671496503467-0"
+    theme="slds"
+    data-style-id="state3element2block_element1_menuitem_3"
+     data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-508","field":"PAVariationStatus","operator":"!=","value":"Inactive","type":"custom","hasMergeField":false},{"id":"state-new-condition-513","field":"PAVariationEventRecordType","operator":"!=","value":"Variations_by_Provider_Secretary","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}' 
+    class="condition-element"
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"key":"1684139371542-vgxydjfts","label":"Action","draggable":true,"isOpen":false,"card":"{card}","stateAction":{"id":"test-action","type":"Custom","displayName":"Action","vlocityIcon":"standard-default","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"/apex"}}},{"actionIndex":0,"card":"{card}","contextId":"\\{AllotmentId}","draggable":true,"isOpen":false,"key":"1671496503469-nt608q3yy","label":"Vary by Provider or Secretary","stateAction":{"actionConditions":{"group":[],"id":"state-condition-object","isParent":true},"displayName":"Action","hasExtraParams":false,"id":"flex-action-1684138731831","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"0jN9r0000001Qy9EAE","Name":"PAVariation/RecordNoticeToVary/English","isLwcOs":true},"openUrlIn":"Current Window","tabLabel":"Vary by Provider or Secretary:  {AllotmentName}","type":"OmniScript","vlocityIcon":"standard-default"},"isTrackingDisabled":true}]'  label="Vary by Provider or Secretary"  icon-name="standard:default"  re-render-flyout="undefined"  preload-flyout="undefined"  flyout-details='\{}'  flyout-channel="undefined"  class="state3element2block_element1_menuitem_3 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element1_menuitem_3" data-show-spinner="false" 
+    data-element-label="menu3menuitem3" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     </omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div><div data-style-id="state3element2block_element2" class="slds-col   slds-size_3-of-12  condition-element" data-rindex={rindex} style=""  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[]}' >
+    <omnistudio-flex-menu data-style-id="state3element2block_element2_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  record={record}  card={card}  icon-name="utility:down"  icon-position="right"  icon-size="x-small"  label="Places Taken Effect"  overflow="true"  position="left"  size="small"  type="action"  variant="brand"  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[]}' 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1671419003308-0"
+    theme="slds"
+    data-style-id="state3element2block_element2_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671419003310-q2vyb1jw3","label":"Cease S14-9 Places","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"ceased-places-emergency-english","flyoutParams":{"AllotmentId":"{AllotmentId}","AllotmentType":"{AllotmentType}","Location":"{Location}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671604388087","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"CeasedPlaces/Emergency/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Cease S14-9 Places"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element2_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element2_menuitem_0" data-show-spinner="false" 
+    data-element-label="menu4menuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%22iconPosition%22%3A%22left%22%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu4menuitem0action0" ><omnistudio-custom-lwc-wrapper element-name="c-ceased-places-emergency-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"AllotmentType\":\"{AllotmentType}\",\"Location\":\"{Location}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu4menuitem0action0} >
+     <c-ceased-places-emergency-english   layout='lightning'    ></c-ceased-places-emergency-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671419026731-0"
+    theme="slds"
+    data-style-id="state3element2block_element2_menuitem_1"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671419026734-p4za774pv","label":"Change Care Setting","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"places-change-care-setting-english","flyoutParams":{"AllotmentId":"{AllotmentId}","Location":"{Location}","NumberofPlaces":"{NumberofPlaces}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671420798544","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"Places/ChangeCareSetting/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Change Care Setting"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element2_menuitem_1 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element2_menuitem_1" data-show-spinner="false" 
+    data-element-label="menu4menuitem1" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu4menuitem1action0" ><omnistudio-custom-lwc-wrapper element-name="c-places-change-care-setting-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"Location\":\"{Location}\",\"NumberofPlaces\":\"{NumberofPlaces}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu4menuitem1action0} >
+     <c-places-change-care-setting-english   layout='lightning'    ></c-places-change-care-setting-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671419141710-0"
+    theme="slds"
+    data-style-id="state3element2block_element2_menuitem_2"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671419141712-eu9io8pe4","label":"Convert Care Level Mix","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"care-level-convert-english","flyoutParams":{"AllotmentId":"{AllotmentId}","Location":"{Location}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671420878075","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"CareLevel/Convert/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Convert Care Level Mix"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element2_menuitem_2 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element2_menuitem_2" data-show-spinner="false" 
+    data-element-label="menu4menuitem2" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu4menuitem2action0" ><omnistudio-custom-lwc-wrapper element-name="c-care-level-convert-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"Location\":\"{Location}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu4menuitem2action0} >
+     <c-care-level-convert-english   layout='lightning'    ></c-care-level-convert-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671419747742-0"
+    theme="slds"
+    data-style-id="state3element2block_element2_menuitem_3"
+     data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-1470","field":"VariationEventStatus","operator":"!=","value":"Inactive","type":"custom","hasMergeField":false},{"id":"state-new-condition-1477","field":"VariationEventType","operator":"!=","value":"Variation","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}' 
+    class="condition-element"
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","contextId":"\\{AllotmentId}","draggable":false,"isOpen":true,"key":"1671419747745-rf64g6wf0","label":"Variation","reRenderFlyout":true,"stateAction":{"actionConditions":{"group":[],"id":"state-condition-object","isParent":true},"displayName":"Action","extraParams":{"AllotmentId":"{AllotmentId}","EventType":"\"Variation\""},"hasExtraParams":true,"id":"flex-action-1684292962201","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"0jN9r00000022wzEAA","Name":"Variation/RecordNoticeToVary/English","isLwcOs":true},"openUrlIn":"Current Window","tabLabel":"Variation: {AllotmentName}","type":"OmniScript","vlocityIcon":"standard-default"}}]'  label="Variation"  icon-name="standard:default"  re-render-flyout="undefined"  preload-flyout="undefined"  flyout-details='\{}'  flyout-channel="undefined"  class="state3element2block_element2_menuitem_3 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element2_menuitem_3" data-show-spinner="false" 
+    data-element-label="menu4menuitem3" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     </omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <omnistudio-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12"  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card slds-p-around_x-small slds-m-bottom_x-small" style="">
+          <div data-style-id="state0element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element0_child"   card={card}  record={record}  merge-field="%3Cdiv%20class=%22slds-text-align_center%22%3E%3Cspan%20style=%22color:%20#ff0000;%22%3E%3Cstrong%3E%3Cspan%20class=%22ui-provider%20gz%20b%20c%20d%20e%20f%20g%20h%20i%20j%20k%20l%20m%20n%20o%20p%20q%20r%20s%20t%20u%20v%20w%20x%20y%20z%20ab%20ac%20ae%20af%20ag%20ah%20ai%20aj%20ak%22%20dir=%22ltr%22%3E%3Cspan%20class=%22ui-provider%20gp%20b%20c%20d%20e%20f%20g%20h%20i%20j%20k%20l%20m%20n%20o%20p%20q%20r%20s%20t%20u%20v%20w%20x%20y%20z%20ab%20ac%20ae%20af%20ag%20ah%20ai%20aj%20ak%22%20dir=%22ltr%22%3EPlaces%20events%20cannot%20be%20created%20as%20this%20service%20is%20in%20the%20process%20of%20being%20combined%20or%20is%20a%20discontinuing%20service.%3C/span%3E%3C/span%3E%3C/strong%3E%3C/span%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div>
+      </omnistudio-flex-card-state><omnistudio-flex-card-state  record={record} data-statue="false"  data-index="1" data-rindex={rindex} class="cf-vlocity-state-1 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-theme_shade slds-card slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_x-small slds-m-bottom_x-small " style="     border-top: #cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid;border-left: #cccccc 1px solid; 
+         ">
+          <div data-style-id="state1element0" class="slds-col   slds-size_2-of-12  " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state1element0_child"  tracking-obj={_childCardTrackingObj}  class= "state1element0_child flexActionElement" 
+        data-action-element-class="state1element0_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="action3"   state-obj={record}  record={record}  card={card}  action-list='\[{"actionIndex":0,"draggable":false,"isOpen":true,"key":"1671421750495-iw3bij3jw","label":"Cease Places","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","flyoutLwc":"n-a-t-s-i-f-a-c-places-cease-english","flyoutParams":{"AllotmentId":"{AllotmentId}","DateOfAllotment":"{DateOfAllotment}","GPMSInactive":"{GPMSInactive}","GPMSOperational":"{GPMSOperational}","Location":"{Location}","ProviderName":"{ProviderName}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671581739358","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"NATSIFACPlaces/Cease/English","type":"Flyout"}}]'  button-variant="brand"  display-as-button="true"  flyout-channel="close_modal"  flyout-details='\{"openFlyoutIn":"Modal"}'  hide-action-icon="true"  icon-name="standard-default"  label="Cease Places"  re-render-flyout="true"  theme="slds"  ><div slot="modalflyout" class="action3action0" ><omnistudio-custom-lwc-wrapper element-name="c-n-a-t-s-i-f-a-c-places-cease-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"DateOfAllotment\":\"{DateOfAllotment}\",\"GPMSInactive\":\"{GPMSInactive}\",\"GPMSOperational\":\"{GPMSOperational}\",\"Location\":\"{Location}\",\"ProviderName\":\"{ProviderName}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.action3action0} >
+     <c-n-a-t-s-i-f-a-c-places-cease-english   layout='lightning'    ></c-n-a-t-s-i-f-a-c-places-cease-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+      </div><div data-style-id="state1element1" class="slds-col   slds-size_2-of-12  " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state1element1_child"  tracking-obj={_childCardTrackingObj}  class= "state1element1_child flexActionElement" 
+        data-action-element-class="state1element1_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="action3clone0"   state-obj={record}  record={record}  card={card}  action-list='\[{"actionIndex":0,"draggable":false,"isOpen":true,"key":"1671421750495-iw3bij3jw","label":"Reinstate Places","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","flyoutLwc":"n-a-t-s-i-f-a-c-places-reinstate-english","flyoutParams":{"AllotmentId":"{AllotmentId}","DateOfAllotment":"{DateOfAllotment}","GPMSCeased":"{GPMSCeased}","Location":"{Location}","ProviderName":"{ProviderName}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671581727246","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"NATSIFACPlaces/Reinstate/English","type":"Flyout"}}]'  button-variant="brand"  display-as-button="true"  flyout-channel="close_modal"  flyout-details='\{"openFlyoutIn":"Modal"}'  hide-action-icon="true"  icon-name="standard-default"  label="Reinstate Places"  re-render-flyout="true"  theme="slds"  ><div slot="modalflyout" class="action3clone0action0" ><omnistudio-custom-lwc-wrapper element-name="c-n-a-t-s-i-f-a-c-places-reinstate-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"DateOfAllotment\":\"{DateOfAllotment}\",\"GPMSCeased\":\"{GPMSCeased}\",\"Location\":\"{Location}\",\"ProviderName\":\"{ProviderName}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.action3clone0action0} >
+     <c-n-a-t-s-i-f-a-c-places-reinstate-english   layout='lightning'    ></c-n-a-t-s-i-f-a-c-places-reinstate-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+      </div>
+        </div>
+      </omnistudio-flex-card-state><omnistudio-flex-card-state  record={record} data-statue="false"  data-index="2" data-rindex={rindex} class="cf-vlocity-state-2 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-theme_shade slds-card slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_x-small slds-m-bottom_x-small " style="     border-top: #cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid;border-left: #cccccc 1px solid; 
+         ">
+          <div data-style-id="state2element0" class="slds-col   slds-size_2-of-12  " data-rindex={rindex} style="" >
+    <omnistudio-flex-menu data-style-id="state2element0_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  record={record}  card={card}  icon-name="utility:down"  icon-position="right"  icon-size="x-small"  label="General"  overflow="true"  position="left"  size="small"  type="action"  variant="brand" 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1669689166776-0"
+    theme="slds"
+    data-style-id="state2element0_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1669689166781-2m3fpx1ca","label":"Record S14-5(4) Conditions ","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"record-conditions-places-english","flyoutParams":{"AllotmentId":"{AllotmentId}","CareType":"{CareType}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1669689249377","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"RecordConditions/Places/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Record S14-5(4) Conditions "  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element0_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element0_menuitem_0" data-show-spinner="false" 
+    data-element-label="menu0menuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu0menuitem0action0" ><omnistudio-custom-lwc-wrapper element-name="c-record-conditions-places-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"CareType\":\"{CareType}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu0menuitem0action0} >
+     <c-record-conditions-places-english   layout='lightning'    ></c-record-conditions-places-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div><div data-style-id="state2element1" class="slds-col   slds-size_2-of-12  " data-rindex={rindex} style="" >
+    <omnistudio-flex-menu data-style-id="state2element1_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  record={record}  card={card}  icon-name="utility:down"  icon-position="right"  icon-size="x-small"  label="Provisional Places"  overflow="true"  position="left"  size="small"  type="action"  variant="brand" 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1671418437907-0"
+    theme="slds"
+    data-style-id="state2element1_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671418437909-5vk2d6cel","label":"Bring Online","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"places-event-bring-online-places-event-bring-online-english","flyoutParams":{"AllotmentId":"{AllotmentId}","Location":"{Location}","ServiceCareType":"{ServiceCareType}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1673991140464","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"PlacesEventBringOnline/PlacesEventBringOnline/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Bring Online"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element1_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element1_menuitem_0" data-show-spinner="false" 
+    data-element-label="menu1menuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu1menuitem0action0" ><omnistudio-custom-lwc-wrapper element-name="c-places-event-bring-online-places-event-bring-online-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"Location\":\"{Location}\",\"ServiceCareType\":\"{ServiceCareType}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu1menuitem0action0} >
+     <c-places-event-bring-online-places-event-bring-online-english   layout='lightning'    ></c-places-event-bring-online-places-event-bring-online-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671418691188-0"
+    theme="slds"
+    data-style-id="state2element1_menuitem_1"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671418691191-0r1jvchh5","label":"Extend PA Period","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"places-extend-p-a-places-extend-p-a-english","flyoutParams":{"AllotmentId":"{AllotmentId}","AllotmentSubType":"{AllotmentSubType}","DateOfAllotment":"{DateOfAllotment}","Location":"{Location}","MarkDocumentsAsSent":"{MarkDocumentsAsSent}","NumberofPlaces":"{NumberofPlaces}","OriginalPAPeriodEndDate":"{OriginalPAPeriodEndDate}","PAPeriodEndDate":"{PAPeriodEndDate}","Provisional":"{Provisional}","ProvisionalPlacesNumber":"{ProvisionalPlacesNumber}","ServiceCareSubType":"{ServiceCareSubType}","ServiceCareType":"{ServiceCareType}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}","SizeOfCurrentProvisional":"{SizeOfCurrentProvisional}","WaiverType":"{WaiverType}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1681693528804","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"PlacesExtendPA/PlacesExtendPA/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Extend PA Period"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element1_menuitem_1 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element1_menuitem_1" data-show-spinner="false" 
+    data-element-label="menu1menuitem1" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu1menuitem1action0" ><omnistudio-custom-lwc-wrapper element-name="c-places-extend-p-a-places-extend-p-a-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"AllotmentSubType\":\"{AllotmentSubType}\",\"DateOfAllotment\":\"{DateOfAllotment}\",\"Location\":\"{Location}\",\"MarkDocumentsAsSent\":\"{MarkDocumentsAsSent}\",\"NumberofPlaces\":\"{NumberofPlaces}\",\"OriginalPAPeriodEndDate\":\"{OriginalPAPeriodEndDate}\",\"PAPeriodEndDate\":\"{PAPeriodEndDate}\",\"Provisional\":\"{Provisional}\",\"ProvisionalPlacesNumber\":\"{ProvisionalPlacesNumber}\",\"ServiceCareSubType\":\"{ServiceCareSubType}\",\"ServiceCareType\":\"{ServiceCareType}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\",\"SizeOfCurrentProvisional\":\"{SizeOfCurrentProvisional}\",\"WaiverType\":\"{WaiverType}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu1menuitem1action0} >
+     <c-places-extend-p-a-places-extend-p-a-english   layout='lightning'    ></c-places-extend-p-a-places-extend-p-a-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671418719084-0"
+    theme="slds"
+    data-style-id="state2element1_menuitem_2"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671418719088-ajic7cocb","label":"Surrender","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"surrender-p-a-places-english","flyoutParams":{"AllotmentId":"{AllotmentId}","DateOfAllotment":"{DateOfAllotment}","Location":"{Location}","ObjectIdForEventValidation":"{ObjectIdForEventValidation}","ObjectTypeForEventValidation":"{ObjectTypeForEventValidation}","PAPeriodEndDate":"{PAPeriodEndDate}","Provisional":"{Provisional}","ProvisionalPlacesNumber":"{ProvisionalPlacesNumber}","ServiceCareType":"{ServiceCareType}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}","SizeOfCurrentProvisional":"{SizeOfCurrentProvisional}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671420437901","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"SurrenderPA/Places/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Surrender"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element1_menuitem_2 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element1_menuitem_2" data-show-spinner="false" 
+    data-element-label="menu1menuitem2" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu1menuitem2action0" ><omnistudio-custom-lwc-wrapper element-name="c-surrender-p-a-places-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"DateOfAllotment\":\"{DateOfAllotment}\",\"Location\":\"{Location}\",\"ObjectIdForEventValidation\":\"{ObjectIdForEventValidation}\",\"ObjectTypeForEventValidation\":\"{ObjectTypeForEventValidation}\",\"PAPeriodEndDate\":\"{PAPeriodEndDate}\",\"Provisional\":\"{Provisional}\",\"ProvisionalPlacesNumber\":\"{ProvisionalPlacesNumber}\",\"ServiceCareType\":\"{ServiceCareType}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\",\"SizeOfCurrentProvisional\":\"{SizeOfCurrentProvisional}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu1menuitem2action0} >
+     <c-surrender-p-a-places-english   layout='lightning'    ></c-surrender-p-a-places-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div><div data-style-id="state2element2" class="slds-col   slds-size_3-of-12  " data-rindex={rindex} style="" >
+    <omnistudio-flex-menu data-style-id="state2element2_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  record={record}  card={card}  icon-name="utility:down"  icon-position="right"  icon-size="x-small"  label="Places Taken Effect"  overflow="true"  position="left"  size="small"  type="action"  variant="brand" 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1671419003308-0"
+    theme="slds"
+    data-style-id="state2element2_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671419003310-q2vyb1jw3","label":"Cease S14-9 Places","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"ceased-places-emergency-english","flyoutParams":{"AllotmentId":"{AllotmentId}","AllotmentType":"{AllotmentType}","Location":"{Location}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671604388087","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"CeasedPlaces/Emergency/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Cease S14-9 Places"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element2_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element2_menuitem_0" data-show-spinner="false" 
+    data-element-label="menu3menuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%22iconPosition%22%3A%22left%22%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu3menuitem0action0" ><omnistudio-custom-lwc-wrapper element-name="c-ceased-places-emergency-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"AllotmentType\":\"{AllotmentType}\",\"Location\":\"{Location}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu3menuitem0action0} >
+     <c-ceased-places-emergency-english   layout='lightning'    ></c-ceased-places-emergency-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671419026731-0"
+    theme="slds"
+    data-style-id="state2element2_menuitem_1"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671419026734-p4za774pv","label":"Change Care Setting","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"places-change-care-setting-english","flyoutParams":{"AllotmentId":"{AllotmentId}","Location":"{Location}","NumberofPlaces":"{NumberofPlaces}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671420798544","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"Places/ChangeCareSetting/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Change Care Setting"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element2_menuitem_1 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element2_menuitem_1" data-show-spinner="false" 
+    data-element-label="menu3menuitem1" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu3menuitem1action0" ><omnistudio-custom-lwc-wrapper element-name="c-places-change-care-setting-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"Location\":\"{Location}\",\"NumberofPlaces\":\"{NumberofPlaces}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu3menuitem1action0} >
+     <c-places-change-care-setting-english   layout='lightning'    ></c-places-change-care-setting-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671419141710-0"
+    theme="slds"
+    data-style-id="state2element2_menuitem_2"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671419141712-eu9io8pe4","label":"Convert Care Level Mix","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"care-level-convert-english","flyoutParams":{"AllotmentId":"{AllotmentId}","Location":"{Location}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671420878075","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"CareLevel/Convert/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Convert Care Level Mix"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state2element2_menuitem_2 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state2element2_menuitem_2" data-show-spinner="false" 
+    data-element-label="menu3menuitem2" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu3menuitem2action0" ><omnistudio-custom-lwc-wrapper element-name="c-care-level-convert-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"Location\":\"{Location}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu3menuitem2action0} >
+     <c-care-level-convert-english   layout='lightning'    ></c-care-level-convert-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div>
+        </div>
+      </omnistudio-flex-card-state><omnistudio-flex-card-state  record={record} data-statue="false"  data-index="3" data-rindex={rindex} class="cf-vlocity-state-3 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-theme_default slds-card slds-border_top slds-border_right slds-border_bottom slds-border_left slds-p-around_x-small slds-m-bottom_x-small " style="     border-top: #ccc 1px solid;border-right: #ccc 1px solid;border-bottom: #ccc 1px solid;border-left: #ccc 1px solid; 
+         ">
+          <div data-style-id="state3element0" class="slds-col   slds-size_12-of-12 condition-element" data-rindex={rindex} style=""  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-54","field":"VariationEventType","operator":"==","value":"Variation","type":"custom","hasMergeField":false},{"id":"state-new-condition-63","field":"VariationEventStatus","operator":"==","value":"Inactive","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}' ><omnistudio-output-field data-style-id="state3element0_child"   card={card}  record={record}  merge-field="%3Cdiv%20class=%22slds-text-align_center%22%3E%3Cstrong%3E%3Cspan%20class=%22ui-provider%20gp%20b%20c%20d%20e%20f%20g%20h%20i%20j%20k%20l%20m%20n%20o%20p%20q%20r%20s%20t%20u%20v%20w%20x%20y%20z%20ab%20ac%20ae%20af%20ag%20ah%20ai%20aj%20ak%22%20dir=%22ltr%22%20style=%22color:%20#e03e2d;%22%3EThe%20'Variation'%20event%20button%20is%20not%20visible%20as%20an%20incomplete%20Variation%20event%20has%20been%20started.%20Please%20go%20to%20the%20Variation%20event%20in%20the%20Events%20table%20to%20cancel%20this%20event%20before%20performing%20a%20new%20Variation%20event%20or%20other%20events.%3C/span%3E%3C/strong%3E%3C/div%3E"  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-54","field":"VariationEventType","operator":"==","value":"Variation","type":"custom","hasMergeField":false},{"id":"state-new-condition-63","field":"VariationEventStatus","operator":"==","value":"Inactive","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}'  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state3element1" class="slds-col   slds-size_12-of-12  condition-element" data-rindex={rindex} style=""  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-125","field":"PAVariationEventRecordType","operator":"==","value":"Variations_by_Provider_Secretary","type":"custom","hasMergeField":false},{"id":"state-new-condition-136","field":"PAVariationStatus","operator":"==","value":"Inactive","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}' ><omnistudio-output-field data-style-id="state3element1_child"   card={card}  record={record}  merge-field="%3Cdiv%20class=%22slds-text-align_center%22%3E%3Cstrong%3E%3Cspan%20class=%22ui-provider%20gp%20b%20c%20d%20e%20f%20g%20h%20i%20j%20k%20l%20m%20n%20o%20p%20q%20r%20s%20t%20u%20v%20w%20x%20y%20z%20ab%20ac%20ae%20af%20ag%20ah%20ai%20aj%20ak%22%20dir=%22ltr%22%20style=%22color:%20#e03e2d;%22%3EThe%20'Vary%20by%20Provider%20or%20Secretary'%20event%20button%20is%20not%20visible%20as%20an%20incomplete%20PA%20Variation%20event%20has%20been%20started.%20Please%20go%20to%20the%20PA%20Variation%20event%20in%20the%20Events%20table%20to%20cancel%20this%20event%20before%20performing%20a%20new%20PA%20Variation%20event%20or%20other%20events.%3C/span%3E%3C/strong%3E%3C/div%3E"  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-125","field":"PAVariationEventRecordType","operator":"==","value":"Variations_by_Provider_Secretary","type":"custom","hasMergeField":false},{"id":"state-new-condition-136","field":"PAVariationStatus","operator":"==","value":"Inactive","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}'  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state3element2" class="slds-col   slds-theme_shade slds-border_bottom slds-border_right slds-border_top slds-border_left slds-p-around_x-small  slds-size_12-of-12  " data-rindex={rindex} style="     border-bottom: #cccccc 1px solid;border-right: #cccccc 1px solid;border-top: #cccccc 1px solid;border-left: #cccccc 1px solid; 
+         " >
+    <omnistudio-block data-style-id="state3element2_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state3element2block_element0" class="slds-col   slds-size_2-of-12  " data-rindex={rindex} style="" >
+    <omnistudio-flex-menu data-style-id="state3element2block_element0_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  record={record}  card={card}  icon-name="utility:down"  icon-position="right"  icon-size="x-small"  label="General"  overflow="true"  position="left"  size="small"  type="action"  variant="brand" 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1669689166776-0"
+    theme="slds"
+    data-style-id="state3element2block_element0_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1669689166781-2m3fpx1ca","label":"Record S14-5(4) Conditions ","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"record-conditions-places-english","flyoutParams":{"AllotmentId":"{AllotmentId}","CareType":"{CareType}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1669689249377","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"RecordConditions/Places/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Record S14-5(4) Conditions "  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element0_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element0_menuitem_0" data-show-spinner="false" 
+    data-element-label="menu2menuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu2menuitem0action0" ><omnistudio-custom-lwc-wrapper element-name="c-record-conditions-places-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"CareType\":\"{CareType}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu2menuitem0action0} >
+     <c-record-conditions-places-english   layout='lightning'    ></c-record-conditions-places-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div><div data-style-id="state3element2block_element1" class="slds-col   slds-size_2-of-12  condition-element" data-rindex={rindex} style=""  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[]}' >
+    <omnistudio-flex-menu data-style-id="state3element2block_element1_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  record={record}  card={card}  icon-name="utility:down"  icon-position="right"  icon-size="x-small"  label="Provisional Places"  overflow="true"  position="left"  size="small"  type="action"  variant="brand"  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[]}' 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1671418437907-0"
+    theme="slds"
+    data-style-id="state3element2block_element1_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671418437909-5vk2d6cel","label":"Bring Online","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"places-event-bring-online-places-event-bring-online-english","flyoutParams":{"AllotmentId":"{AllotmentId}","Location":"{Location}","ServiceCareType":"{ServiceCareType}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1673991140464","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"PlacesEventBringOnline/PlacesEventBringOnline/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Bring Online"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element1_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element1_menuitem_0" data-show-spinner="false" 
+    data-element-label="menu3menuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu3menuitem0action0" ><omnistudio-custom-lwc-wrapper element-name="c-places-event-bring-online-places-event-bring-online-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"Location\":\"{Location}\",\"ServiceCareType\":\"{ServiceCareType}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu3menuitem0action0} >
+     <c-places-event-bring-online-places-event-bring-online-english   layout='lightning'    ></c-places-event-bring-online-places-event-bring-online-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671418691188-0"
+    theme="slds"
+    data-style-id="state3element2block_element1_menuitem_1"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671418691191-0r1jvchh5","label":"Extend PA Period","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"places-extend-p-a-places-extend-p-a-english","flyoutParams":{"AllotmentId":"{AllotmentId}","AllotmentSubType":"{AllotmentSubType}","DateOfAllotment":"{DateOfAllotment}","Location":"{Location}","MarkDocumentsAsSentDefault":"{MarkDocumentsAsSentDefault}","NumberofPlaces":"{NumberofPlaces}","OriginalPAPeriodEndDate":"{OriginalPAPeriodEndDate}","PAPeriodEndDate":"{PAPeriodEndDate}","Provisional":"{Provisional}","ProvisionalPlacesNumber":"{ProvisionalPlacesNumber}","ServiceCareSubType":"{ServiceCareSubType}","ServiceCareType":"{ServiceCareType}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}","SizeOfCurrentProvisional":"{SizeOfCurrentProvisional}","WaiverType":"{WaiverType}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1682489695885","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"PlacesExtendPA/PlacesExtendPA/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Extend PA Period"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element1_menuitem_1 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element1_menuitem_1" data-show-spinner="false" 
+    data-element-label="menu3menuitem1" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu3menuitem1action0" ><omnistudio-custom-lwc-wrapper element-name="c-places-extend-p-a-places-extend-p-a-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"AllotmentSubType\":\"{AllotmentSubType}\",\"DateOfAllotment\":\"{DateOfAllotment}\",\"Location\":\"{Location}\",\"MarkDocumentsAsSentDefault\":\"{MarkDocumentsAsSentDefault}\",\"NumberofPlaces\":\"{NumberofPlaces}\",\"OriginalPAPeriodEndDate\":\"{OriginalPAPeriodEndDate}\",\"PAPeriodEndDate\":\"{PAPeriodEndDate}\",\"Provisional\":\"{Provisional}\",\"ProvisionalPlacesNumber\":\"{ProvisionalPlacesNumber}\",\"ServiceCareSubType\":\"{ServiceCareSubType}\",\"ServiceCareType\":\"{ServiceCareType}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\",\"SizeOfCurrentProvisional\":\"{SizeOfCurrentProvisional}\",\"WaiverType\":\"{WaiverType}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu3menuitem1action0} >
+     <c-places-extend-p-a-places-extend-p-a-english   layout='lightning'    ></c-places-extend-p-a-places-extend-p-a-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671418719084-0"
+    theme="slds"
+    data-style-id="state3element2block_element1_menuitem_2"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671418719088-ajic7cocb","label":"Surrender","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"surrender-p-a-places-english","flyoutParams":{"AllotmentId":"{AllotmentId}","DateOfAllotment":"{DateOfAllotment}","Location":"{Location}","ObjectIdForEventValidation":"{ObjectIdForEventValidation}","ObjectTypeForEventValidation":"{ObjectTypeForEventValidation}","PAPeriodEndDate":"{PAPeriodEndDate}","Provisional":"{Provisional}","ProvisionalPlacesNumber":"{ProvisionalPlacesNumber}","ServiceCareType":"{ServiceCareType}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}","SizeOfCurrentProvisional":"{SizeOfCurrentProvisional}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671420437901","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"SurrenderPA/Places/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Surrender"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element1_menuitem_2 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element1_menuitem_2" data-show-spinner="false" 
+    data-element-label="menu3menuitem2" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu3menuitem2action0" ><omnistudio-custom-lwc-wrapper element-name="c-surrender-p-a-places-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"DateOfAllotment\":\"{DateOfAllotment}\",\"Location\":\"{Location}\",\"ObjectIdForEventValidation\":\"{ObjectIdForEventValidation}\",\"ObjectTypeForEventValidation\":\"{ObjectTypeForEventValidation}\",\"PAPeriodEndDate\":\"{PAPeriodEndDate}\",\"Provisional\":\"{Provisional}\",\"ProvisionalPlacesNumber\":\"{ProvisionalPlacesNumber}\",\"ServiceCareType\":\"{ServiceCareType}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\",\"SizeOfCurrentProvisional\":\"{SizeOfCurrentProvisional}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu3menuitem2action0} >
+     <c-surrender-p-a-places-english   layout='lightning'    ></c-surrender-p-a-places-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671496503467-0"
+    theme="slds"
+    data-style-id="state3element2block_element1_menuitem_3"
+     data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-508","field":"PAVariationStatus","operator":"!=","value":"Inactive","type":"custom","hasMergeField":false},{"id":"state-new-condition-513","field":"PAVariationEventRecordType","operator":"!=","value":"Variations_by_Provider_Secretary","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}' 
+    class="condition-element"
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"key":"1684139371542-vgxydjfts","label":"Action","draggable":true,"isOpen":false,"card":"{card}","stateAction":{"id":"test-action","type":"Custom","displayName":"Action","vlocityIcon":"standard-default","targetType":"Web Page","openUrlIn":"Current Window","Web Page":{"targetName":"/apex"}}},{"actionIndex":0,"card":"{card}","contextId":"\\{AllotmentId}","draggable":true,"isOpen":false,"key":"1671496503469-nt608q3yy","label":"Vary by Provider or Secretary","stateAction":{"actionConditions":{"group":[],"id":"state-condition-object","isParent":true},"displayName":"Action","hasExtraParams":false,"id":"flex-action-1684138731831","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"0jN9r0000001Qy9EAE","Name":"PAVariation/RecordNoticeToVary/English","isLwcOs":true},"openUrlIn":"Current Window","tabLabel":"Vary by Provider or Secretary:  {AllotmentName}","type":"OmniScript","vlocityIcon":"standard-default"},"isTrackingDisabled":true}]'  label="Vary by Provider or Secretary"  icon-name="standard:default"  re-render-flyout="undefined"  preload-flyout="undefined"  flyout-details='\{}'  flyout-channel="undefined"  class="state3element2block_element1_menuitem_3 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element1_menuitem_3" data-show-spinner="false" 
+    data-element-label="menu3menuitem3" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     </omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div><div data-style-id="state3element2block_element2" class="slds-col   slds-size_3-of-12  condition-element" data-rindex={rindex} style=""  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[]}' >
+    <omnistudio-flex-menu data-style-id="state3element2block_element2_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  record={record}  card={card}  icon-name="utility:down"  icon-position="right"  icon-size="x-small"  label="Places Taken Effect"  overflow="true"  position="left"  size="small"  type="action"  variant="brand"  data-conditions='\{"id":"state-condition-object","isParent":true,"group":[]}' 
+    theme="slds" > 
+     <omnistudio-flex-menu-item 
+    name="menu-item-1671419003308-0"
+    theme="slds"
+    data-style-id="state3element2block_element2_menuitem_0"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671419003310-q2vyb1jw3","label":"Cease S14-9 Places","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"ceased-places-emergency-english","flyoutParams":{"AllotmentId":"{AllotmentId}","AllotmentType":"{AllotmentType}","Location":"{Location}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671604388087","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"CeasedPlaces/Emergency/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Cease S14-9 Places"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element2_menuitem_0 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element2_menuitem_0" data-show-spinner="false" 
+    data-element-label="menu4menuitem0" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%22iconPosition%22%3A%22left%22%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu4menuitem0action0" ><omnistudio-custom-lwc-wrapper element-name="c-ceased-places-emergency-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"AllotmentType\":\"{AllotmentType}\",\"Location\":\"{Location}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu4menuitem0action0} >
+     <c-ceased-places-emergency-english   layout='lightning'    ></c-ceased-places-emergency-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671419026731-0"
+    theme="slds"
+    data-style-id="state3element2block_element2_menuitem_1"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671419026734-p4za774pv","label":"Change Care Setting","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"places-change-care-setting-english","flyoutParams":{"AllotmentId":"{AllotmentId}","Location":"{Location}","NumberofPlaces":"{NumberofPlaces}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671420798544","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"Places/ChangeCareSetting/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Change Care Setting"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element2_menuitem_1 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element2_menuitem_1" data-show-spinner="false" 
+    data-element-label="menu4menuitem1" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu4menuitem1action0" ><omnistudio-custom-lwc-wrapper element-name="c-places-change-care-setting-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"Location\":\"{Location}\",\"NumberofPlaces\":\"{NumberofPlaces}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu4menuitem1action0} >
+     <c-places-change-care-setting-english   layout='lightning'    ></c-places-change-care-setting-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671419141710-0"
+    theme="slds"
+    data-style-id="state3element2block_element2_menuitem_2"
+    
+    class=""
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1671419141712-eu9io8pe4","label":"Convert Care Level Mix","reRenderFlyout":true,"stateAction":{"channelName":"close_modal","displayName":"Action","flyoutLwc":"care-level-convert-english","flyoutParams":{"AllotmentId":"{AllotmentId}","Location":"{Location}","ServiceId":"{ServiceId}","ServiceName":"{ServiceName}"},"flyoutType":"OmniScripts","hasExtraParams":true,"id":"flex-action-1671420878075","layoutType":"lightning","openFlyoutIn":"Modal","openUrlIn":"Current Window","osName":"CareLevel/Convert/English","type":"Flyout","vlocityIcon":"standard-default"}}]'  label="Convert Care Level Mix"  icon-name="standard:default"  re-render-flyout="true"  preload-flyout="undefined"  flyout-details='\{"openFlyoutIn":"Modal"}'  flyout-channel="close_modal"  class="state3element2block_element2_menuitem_2 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element2_menuitem_2" data-show-spinner="false" 
+    data-element-label="menu4menuitem2" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     <div slot="modalflyout" class="menu4menuitem2action0" ><omnistudio-custom-lwc-wrapper element-name="c-care-level-convert-english" property='\{"prefill":"{\"omniscriptEmbeddedSource\":\"flyout\",\"AllotmentId\":\"{AllotmentId}\",\"Location\":\"{Location}\",\"ServiceId\":\"{ServiceId}\",\"ServiceName\":\"{ServiceName}\"}"}' records={records} record-id={recordId} record={record}  card={card}  action={modalAction.menu4menuitem2action0} >
+     <c-care-level-convert-english   layout='lightning'    ></c-care-level-convert-english>
+    </omnistudio-custom-lwc-wrapper></div></omnistudio-flex-action>
+    </omnistudio-flex-menu-item><omnistudio-flex-menu-item 
+    name="menu-item-1671419747742-0"
+    theme="slds"
+    data-style-id="state3element2block_element2_menuitem_3"
+     data-conditions='\{"id":"state-condition-object","isParent":true,"group":[{"id":"state-new-condition-1470","field":"VariationEventStatus","operator":"!=","value":"Inactive","type":"custom","hasMergeField":false},{"id":"state-new-condition-1477","field":"VariationEventType","operator":"!=","value":"Variation","type":"custom","hasMergeField":false,"logicalOperator":"&&"}]}' 
+    class="condition-element"
+    >
+    <omnistudio-flex-action record={record} card={card}  action-list='\[{"actionIndex":0,"card":"{card}","contextId":"\\{AllotmentId}","draggable":false,"isOpen":true,"key":"1671419747745-rf64g6wf0","label":"Variation","reRenderFlyout":true,"stateAction":{"actionConditions":{"group":[],"id":"state-condition-object","isParent":true},"displayName":"Action","extraParams":{"AllotmentId":"{AllotmentId}","EventType":"\"Variation\""},"hasExtraParams":true,"id":"flex-action-1684292962201","isLwcOS":true,"layoutType":"lightning","omniType":{"Id":"0jN9r00000022wzEAA","Name":"Variation/RecordNoticeToVary/English","isLwcOs":true},"openUrlIn":"Current Window","tabLabel":"Variation: {AllotmentName}","type":"OmniScript","vlocityIcon":"standard-default"}}]'  label="Variation"  icon-name="standard:default"  re-render-flyout="undefined"  preload-flyout="undefined"  flyout-details='\{}'  flyout-channel="undefined"  class="state3element2block_element2_menuitem_3 flexActionElement" onexecuteaction={performAction} 
+    data-action-element-class="state3element2block_element2_menuitem_3" data-show-spinner="false" 
+    data-element-label="menu4menuitem3" 
+    theme="slds" extra-class="slds-dropdown__item" 
+      action-wrapperclass=""
+      action-labelclass="slds-truncate menu-item-label"
+      menu-item-data="%7B%7D"
+      icon-size="x-small"
+      icon-extraclass="slds-icon-text-default slds-m-right_x-small" >
+     </omnistudio-flex-action>
+    </omnistudio-flex-menu-item>
+    </omnistudio-flex-menu>
+    </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <omnistudio-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </omnistudio-action>
+  
+            <omnistudio-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </omnistudio-action>
+            </div>
+          </template>

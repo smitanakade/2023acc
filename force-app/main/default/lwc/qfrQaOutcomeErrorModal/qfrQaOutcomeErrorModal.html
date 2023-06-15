@@ -1,0 +1,242 @@
+<template>
+	<div class="qfr-qa-outcome-error-modal">
+		<c-qfr-modal
+			is-opened={modalIsOpenState}
+			title={modalTitle}
+			onclose={handleCloseModal}
+			has-footer={showFooter}
+		>
+			<template if:true={isManagement}>
+				<template if:true={selectedData}>
+					<div>
+						<section>
+							<h2 class="section-header">Information</h2>
+							<div class="section-container">
+								<div class="">
+									<p class="label">Validation(s)</p>
+									<div
+										class="readonly slds-p-vertical_x-small slds-p-horizontal_medium"
+									>
+										{selectedData.errorMessage}
+									</div>
+								</div>
+								<div class="">
+									<p class="label">Validation rule(s)</p>
+									<div
+										class="readonly slds-p-vertical_x-small slds-p-horizontal_medium"
+									>
+										{selectedData.validationRule}
+									</div>
+								</div>
+								<div class="">
+									<p class="label">Service</p>
+									<div
+										class="readonly slds-p-vertical_x-small slds-p-horizontal_medium"
+									>
+										{selectedData.serviceName}
+									</div>
+								</div>
+								<div class="">
+									<p class="label">Data input</p>
+									<div
+										class="readonly slds-p-vertical_x-small slds-p-horizontal_medium"
+									>
+										{selectedData.dataInput}
+									</div>
+								</div>
+								<div class="">
+									<p class="label">Provider explanation</p>
+									<div
+										class="readonly slds-p-vertical_x-small slds-p-horizontal_medium"
+									>
+										{selectedData.providerExplanation}
+									</div>
+								</div>
+							</div>
+						</section>
+						<section>
+							<h2 class="section-header">QA Assessment</h2>
+							<div class="section-container">
+								<div>
+									<p class="label">QA outcome</p>
+									<c-qfr-dropdown
+										list={outcomeList}
+										is-management="true"
+										default-label="Please select"
+										value={dropdownValue}
+										onchange={handlePicklistChange}
+										disabled={isNotQaUser}
+									></c-qfr-dropdown>
+								</div>
+								<template if:false={hideTextField}>
+									<div>
+										<p class="label">QA external comment</p>
+										<textarea
+											name="external"
+											rows="3"
+											class="textarea"
+											disabled={isNotQaUser}
+											oninput={updateQAExternalComments}
+										>
+                    {selectedData.qaExternalComments}
+                  </textarea
+										>
+									</div>
+									<div>
+										<p class="label">Amended explanation</p>
+										<textarea
+											name="amended"
+											rows="3"
+											class="textarea"
+											disabled={isNotQaUser}
+											oninput={updateAmendedExplanation}
+										>
+	                  {selectedData.amendedExplanation}
+                  </textarea
+										>
+									</div>
+								</template>
+							</div>
+						</section>
+					</div>
+					<div slot="footer">
+						<div class="slds-grid slds-gutters">
+							<template if:true={isNotQaUser}>
+								<div class="slds-col"></div>
+								<div class="slds-col">
+									<c-qfr-button
+										class="slds-m-right_xx-small"
+										is-management="true"
+										variant="brand-outline"
+										onclick={handleCloseModal}
+										is-fullwidth="true"
+									>
+										Close
+									</c-qfr-button>
+								</div>
+								<div class="slds-col"></div>
+							</template>
+							<template if:false={isNotQaUser}>
+								<div class="slds-col"></div>
+								<div class="slds-col">
+									<c-qfr-button
+										is-management="true"
+										variant="brand-outline"
+										onclick={handleCloseModal}
+										is-fullwidth="true"
+									>
+										Cancel
+									</c-qfr-button>
+								</div>
+								<div class="slds-col">
+									<c-qfr-button
+										is-management="true"
+										variant="brand"
+										data-id={selectedData.glcodelineitemId}
+										onclick={submit}
+										is-fullwidth="true"
+									>
+										Save
+									</c-qfr-button>
+								</div>
+								<div class="slds-col"></div>
+							</template>
+						</div>
+					</div>
+				</template>
+			</template>
+
+			<template if:false={isManagement}>
+				<div class="slds-p-around_medium">
+					<p>{errorMessage}</p>
+					<template if:false={hideExplanationOption}>
+						<p class="slds-m-top_x-small">
+							<a class="slds-text-link" onclick={toggleExplanationInput}>
+								Alternatively, continue here to provide an explanation
+							</a>
+						</p>
+					</template>
+					<template if:true={explanationIsOpened}>
+						<div class="slds-form-element slds-m-top_medium">
+							<label class="label" for="textarea-id-01">
+								Provide an explanation
+							</label>
+							<div class="slds-form-element__control">
+								<textarea
+									id="textarea-id-01"
+									name="explanation"
+									rows="5"
+									class={textAreaClass}
+									oninput={updateTextArea}
+								>
+									{displayExplanation}
+								</textarea
+								>
+							</div>
+						</div>
+						<p class="slds-text-body_small slds-text-color_weak slds-clearfix">
+							<lightning-icon
+								icon-name="utility:info_alt"
+								variant="information"
+								size="xx-small"
+								class="slds-float_left slds-m-right_xx-small slds-m-top_xxx-small"
+							></lightning-icon>
+							25 characters minimum
+						</p>
+						<p class={textTooShortClass}>
+							<svg
+								width="16"
+								height="16"
+								viewBox="0 0 24 24"
+								fill="none"
+								class="slds-float_left slds-m-right_xx-small"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g clip-path="url(#clip0_4192_14004)">
+									<path
+										d="M1 21H23L12 2L1 21ZM13 18H11V16H13V18ZM13 14H11V10H13V14Z"
+										fill="#970a3a"
+									/>
+								</g>
+								<defs>
+									<clipPath>
+										<rect width="24" height="24" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+							Only responses of 25 characters or more will be accepted
+						</p>
+						<template if:true={qaComment}>
+							<p class="label slds-m-top_x-small">QA Comment</p>
+							<div
+								class="readonly slds-p-vertical_x-small slds-p-horizontal_medium"
+							>
+								<p>{qaComment}</p>
+							</div>
+						</template>
+					</template>
+				</div>
+				<template if:true={explanationIsOpened}>
+					<div slot="footer">
+						<c-qfr-button
+							variant="brand-outline"
+							class="slds-m-right_x-small"
+							onclick={handleCloseModal}
+						>
+							Cancel
+						</c-qfr-button>
+						<c-qfr-button
+							disabled={isSubmitDisabled}
+							variant="brand"
+							class="slds-m-right_x-small"
+							onclick={providerSubmit}
+							is-loading={submitIsLoading}
+						>
+							Save & Close
+						</c-qfr-button>
+					</div>
+				</template>
+			</template>
+		</c-qfr-modal>
+	</div>
+</template>

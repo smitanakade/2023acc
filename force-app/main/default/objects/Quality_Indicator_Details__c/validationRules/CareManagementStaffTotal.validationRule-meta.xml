@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CareManagementStaffTotal</fullName>
+    <active>true</active>
+    <description>Number of care management staff who ceased work should not be greater than number of care management staff employed at start of quarter</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    BLANKVALUE(No_staff_stopped_facility_manager__c, 0) &gt; BLANKVALUE(No_of_staff_FM_start_quarter__c, 0)
+)</errorConditionFormula>
+    <errorDisplayField>No_staff_stopped_facility_manager__c</errorDisplayField>
+    <errorMessage>Number of staff employed as service managers who stopped working during the quarter cannot exceed the number of staff employed as service managers at the start of the quarter.</errorMessage>
+</ValidationRule>

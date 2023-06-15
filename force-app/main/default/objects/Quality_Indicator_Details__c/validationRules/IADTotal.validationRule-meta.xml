@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IADTotal</fullName>
+    <active>true</active>
+    <description>Number of care recipients with incontinence who experienced IAD should not be greater than number of care recipients with incontinence.</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    BLANKVALUE(No_Care_Recipients_experienced_IAD__c, 0) &gt; BLANKVALUE(No_CR_IAD__c, 0)
+)</errorConditionFormula>
+    <errorDisplayField>No_Care_Recipients_experienced_IAD__c</errorDisplayField>
+    <errorMessage>Total number of care recipients with incontinence who experienced IAD cannot exceed the total number of care recipient with incontinence.</errorMessage>
+</ValidationRule>

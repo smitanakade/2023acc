@@ -1,0 +1,157 @@
+<template>
+    <lightning-card>
+        <!-- Loading Spinner -->
+        <template if:true={isLoading}>
+            <lightning-spinner variant="brand" size="large" alternative-text="Loading"></lightning-spinner>
+        </template>
+        
+        <!-- Header -->
+        <h1 slot="title" class="slds-text-heading_large">{questionSectionTypeFormatted}</h1>
+
+        <!-- Body -->
+        <div>
+            <div class="slds-p-bottom_x-large">All fields marked with an asterisk must be completed before submission</div>
+
+            <template if:false={isQualityIndicatorTargetsSection}>
+                <h2 class="slds-text-heading_large slds-p-bottom_medium">Enter Quality Indicator data for {questionSectionTypeFormatted}</h2>
+            </template>
+            
+            <!-- Questions -->
+            <template if:true={questions}>
+                <template for:each={questions} for:item="question">
+                    <div key={question.Id}>
+                        <template if:true={question.sectionHeading}>
+                            <h2 class="slds-text-heading_large slds-p-bottom_medium">{question.sectionHeading}</h2>
+                        </template>
+                    </div>
+                    <div  key={question.Id} class="slds-p-bottom_large slds-grid">
+                        <div class="question-number-container">
+                            <template if:true={question.questionNumber}>
+                                <div class="question-number">
+                                    {question.questionNumber}
+                                </div>
+                            </template>
+                        </div>
+                        <div class="slds-grow question-container">
+                            <!-- If part of question group, show question group text. Else show question text. -->
+                            <template if:true={question.topLevelQuestionText}>
+                                <label for={question.Id} class="slds-show slds-p-bottom_xx-small question-label">
+                                    {question.topLevelQuestionText}
+                                    <template if:true={question.topLevelQuestionRequired}>
+                                        <span class="required-asterisk">*</span>
+                                    </template>
+                                    <template if:true={question.Question_Library__r.Help_Text__c}>
+                                        <lightning-helptext 
+                                            content={question.Question_Library__r.Help_Text__c}
+                                            class="slds-m-top_xxx-small">
+                                        </lightning-helptext>
+                                    </template>
+                                </label>
+                            </template>
+
+                            <!-- If part of question group, show question text -->
+                            <template if:true={question.isInQuestionGroup}>
+                                <label for={question.Id} class="slds-show slds-p-bottom_xx-small question-label-small">
+                                    {question.Question_Library__r.Question__c}
+                                    <template if:true={question.required}>
+                                        <span class="required-asterisk">*</span>
+                                    </template>
+                                    <template if:true={question.Question_Library__r.Help_Text__c}>
+                                        <lightning-helptext 
+                                            content={question.Question_Library__r.Help_Text__c}
+                                            class="slds-m-top_xxx-small">
+                                        </lightning-helptext>
+                                    </template>
+                                </label>
+                            </template>
+                            
+                            <lightning-input
+                                data-id={question.Key__c}
+                                class={question.class}
+                                date-style={question.dateStyle}
+                                type={question.Question_Library__r.Response_Data_Type__c}
+                                name={question.Key__c}
+                                required={question.required}
+                                label={question.Question_Library__r.Question__c}
+                                variant="label-hidden"
+                                aria-labelledby={question.Question_Library__r.Question__c}
+                                message-when-bad-input={question.dateError}
+                                max={question.maxNumber}
+                                message-when-range-overflow={question.numberError}
+                                min={question.minNumber}
+                                message-when-range-underflow={question.numberError}
+                                pattern={question.maxCharPattern}
+                                message-when-pattern-mismatch={question.charError}
+                                placeholder={question.placeholderText}
+                                message-when-value-missing="This is required"
+                                disabled={isReadOnly}>
+                            </lightning-input>
+                            
+
+                            <template if:true={question.warning}>
+                                <div class="warning-text">{question.warning}</div>
+                            </template>
+                            <template if:true={question.error}>
+                                <div class="error-text">{question.error}</div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </template>
+        </div>
+
+        <!-- Button Panel Divider -->
+        <hr>
+
+        <!-- Error Messages -->
+        <template if:true={errorMessageMap}>
+            <div class="errorMessage">
+                <h3><b>Error Message</b></h3>
+                <ul>
+                    <template for:each={errorMessageMap} for:item="errorMessage">
+                        <li key={errorMessage.key}>
+                            <a onclick={onErrorMessageClick} data-id={errorMessage.key}>
+                                &#8226; {errorMessage.value}
+                            </a>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </template>
+
+        <!-- Success Message -->
+        <template if:true={isSuccess}>
+            <div class="success-message">
+                <h3><b>Success!</b></h3>
+                <p>You have completed this section.</p>
+            </div>
+        </template>
+
+        <!-- Button Panel -->
+        <div class="slds-grid">
+            <lightning-button
+                label="Back"
+                icon-name="utility:chevronleft"
+                variant="brand-outline"
+                disabled={disableBackOnFirstSection}
+                onclick={handleBack}>
+            </lightning-button>
+            <lightning-button
+                label="Check Complete Data"
+                icon-name="utility:retail_execution"
+                variant="brand-outline"
+                class="slds-m-right_medium slds-col_bump-left"
+                disabled={isReadOnly}
+                onclick={handleSaveComplete}>
+            </lightning-button>
+            <lightning-button
+                label="Next"
+                icon-name="utility:chevronright"
+                icon-position="right"
+                variant="brand"
+                disabled={disableNextOnReadOnlyAndLastSection}
+                onclick={handleNext}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

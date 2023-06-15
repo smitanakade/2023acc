@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Incorporation_ID</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (TEXT(Incorporation_ID_Type__c) = &apos;ACN&apos;||TEXT(Incorporation_ID_Type__c) = &apos;ARBN&apos;|| TEXT(Incorporation_ID_Type__c) = &apos;ARSN&apos;, OR(LEN(Incorporation_ID__c)  &lt;&gt; 9,!ISNUMBER(Incorporation_ID__c)),NOT($Setup.BypassTriggers__c.BypassValidationRules__c))</errorConditionFormula>
+    <errorDisplayField>Incorporation_ID__c</errorDisplayField>
+    <errorMessage>The incorporation ID must have 9 digits</errorMessage>
+</ValidationRule>

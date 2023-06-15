@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EnrolledNurseTotal</fullName>
+    <active>true</active>
+    <description>Number of enrolled nurses who ceased work should not be greater than number of enrolled nurses employed at start of quarter</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    BLANKVALUE(No_staff_stopped_enrolled_nurse__c, 0) &gt; BLANKVALUE(No_of_staff_employed_as_Enrolled_Nurse__c, 0)
+)</errorConditionFormula>
+    <errorDisplayField>No_staff_stopped_enrolled_nurse__c</errorDisplayField>
+    <errorMessage>Number of staff employed as enrolled nurses who stopped working during the quarter cannot exceed number of staff employed as enrolled nurses at the start of the quarter.</errorMessage>
+</ValidationRule>

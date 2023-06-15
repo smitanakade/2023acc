@@ -1,0 +1,12 @@
+<template>
+    <div if:true={sfData}>
+        <lightning-datatable
+            columns={columnsFileStaging}
+            data={sfData}
+            hide-checkbox-column
+            key-field="id"></lightning-datatable>
+        <div>
+            <c-srqi-Spinner-Loading></c-srqi-Spinner-Loading>
+        </div>
+    </div>
+</template>

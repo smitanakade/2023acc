@@ -1,0 +1,36 @@
+.qfr-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+.qfr-modal .slds-modal {
+	/* position: relative; */
+}
+
+.qfr-modal .slds-modal__content {
+	/* border-radius: 4px; */
+}
+
+.qfr-modal .slds-modal__close {
+	top: 0;
+}
+
+.qfr-modal
+	button.slds-button.slds-button_icon.slds-button_icon-bare.slds-button_icon-inverse
+	:focus {
+	border: none;
+	box-shadow: none;
+}
+
+.qfr-modal .slds-modal__footer {
+	background-color: #fff;
+}
+
+.qfr-modal .slds-modal__footer .qfr-button,
+.qfr-modal .slds-modal__footer button {
+	display: inline-flex;
+	margin-left: 16px;
+}

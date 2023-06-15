@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_Up_Validation</fullName>
+    <active>true</active>
+    <description>Confirm picklist not set to None</description>
+    <errorConditionFormula>ISPICKVAL(Follow_Up__c, &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>Follow_Up__c</errorDisplayField>
+    <errorMessage>Follow Up should be set to valid value other than None</errorMessage>
+</ValidationRule>

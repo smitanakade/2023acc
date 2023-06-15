@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active__c</fullName>
+    <description>It determines if a service account relationship is active or not</description>
+    <externalId>false</externalId>
+    <formula>IF( Association_Start_Date__c &lt;= TODAY() &amp;&amp;  (Association_End_Date__c &gt; TODAY() || ISNULL(Association_End_Date__c)), true, false)</formula>
+    <label>Active</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

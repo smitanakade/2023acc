@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR03_CONREL_Phone</fullName>
+    <active>false</active>
+    <description>Date that Contact is assigned as one of the Record Types.</description>
+    <errorConditionFormula>AND(ISBLANK(Phone__c) &amp;&amp;  OR(RecordType.Name =&apos;Key Personnel&apos;,RecordType.Name =&apos;Point of Contact&apos;,RecordType.Name =&apos;Administrator/Liquidator&apos;,RecordType.Name =&apos;Non Individual Contact&apos;))</errorConditionFormula>
+    <errorDisplayField>Phone__c</errorDisplayField>
+    <errorMessage>Phone is mandatory</errorMessage>
+</ValidationRule>

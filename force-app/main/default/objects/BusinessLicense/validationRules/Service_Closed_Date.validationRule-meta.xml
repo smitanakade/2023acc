@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Closed_Date</fullName>
+    <active>true</active>
+    <description>Cannot Edit Status closed date for NATSIFAC if Status is Operational</description>
+    <errorConditionFormula>AND(
+NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+RecordType.DeveloperName =&apos;NATSIFAC_Service&apos;,
+ISPICKVAL(Status__c ,&apos;Operational&apos;),
+ISCHANGED(GPMS_Service_Close_Date__c))</errorConditionFormula>
+    <errorDisplayField>GPMS_Service_Close_Date__c</errorDisplayField>
+    <errorMessage>Service Closed Date cannot be edited when status is Operational.</errorMessage>
+</ValidationRule>

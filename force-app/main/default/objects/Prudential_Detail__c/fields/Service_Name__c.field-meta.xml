@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Name__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Service Name</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 AND 3) OR (2 AND 3) OR (1 AND 4) OR (2 AND 4)</booleanFilter>
+        <filterItems>
+            <field>BusinessLicense.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Approved Provider Service</value>
+        </filterItems>
+        <filterItems>
+            <field>BusinessLicense.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Service Combine</value>
+        </filterItems>
+        <filterItems>
+            <field>BusinessLicense.Care_Type__c</field>
+            <operation>equals</operation>
+            <value>Residential</value>
+        </filterItems>
+        <filterItems>
+            <field>BusinessLicense.Service_Care_Sub_Type__c</field>
+            <operation>equals</operation>
+            <value>Multi-Purpose Service</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>BusinessLicense</referenceTo>
+    <relationshipLabel>Prudential Details</relationshipLabel>
+    <relationshipName>Prudential_Details</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SF_AN_ACC_Base_Care_Tariff_checknull</fullName>
+    <active>true</active>
+    <description>AN ACC Base Care Tariff cannot be left blank.</description>
+    <errorConditionFormula>AND(ISPICKVAL(AN_ACC_Base_Care_Tariff__c,&quot;&quot;), RecordType.DeveloperName = &apos;AN_ACC_Classification_Funding&apos;)</errorConditionFormula>
+    <errorDisplayField>AN_ACC_Base_Care_Tariff__c</errorDisplayField>
+    <errorMessage>AN ACC Base Care Tariff cannot be left blank.</errorMessage>
+</ValidationRule>

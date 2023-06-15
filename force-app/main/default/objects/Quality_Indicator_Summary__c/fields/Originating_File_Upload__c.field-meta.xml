@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Originating_File_Upload__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Used to record the link to the originating bulk upload record.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Link to originating bulk upload</inlineHelpText>
+    <label>Originating File Upload</label>
+    <referenceTo>File_Staging__c</referenceTo>
+    <relationshipLabel>Quality Indicator Summary</relationshipLabel>
+    <relationshipName>Quality_Indicator_Summary</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,72 @@
+{
+  "appPageId" : "57e9e222-6b9e-43ba-bf54-9d4c062f85f5",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "ae9e7445-4754-499f-b6f0-6c12f7129ade",
+  "label" : "Branding",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a9276008-1453-4b79-8f32-8734ea9618a1",
+          "columns" : [ {
+            "UUID" : "e1bd1a82-f7e9-4c83-b45d-4ad19b0e60d9",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a9276008-1453-4b79-8f32-8734ea9618a1",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "appsList" : "[     {         \"text\": \"Aged Care Portal\",         \"link\": \"https://www.google.com/\",         \"iconname\": \"utility:company\"     },     {         \"text\": \"Link 2\",         \"link\": \"#\",         \"iconname\": \"utility:einstein\"     },     {         \"text\": \"Link 3\",         \"link\": \"#\",         \"iconname\": \"utility:metrics\"     },     {         \"text\": \"GPMS Portal\",         \"link\": \"#\",         \"iconname\": \"utility:agent_home\"     } ]",
+            "includeActionsBar" : false,
+            "includeSearchBar" : false,
+            "title" : "Aged Care Dept"
+          },
+          "componentName" : "dohagedcare:acdsHeader",
+          "id" : "043e22ff-1386-4664-9d0a-95eca7860bf3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e1bd1a82-f7e9-4c83-b45d-4ad19b0e60d9",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7e8a3948-e134-4bd3-bc14-4d13e5635c6e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Branding"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "afc12b93-08b2-489b-bf00-55e53d381905",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0020404e-8b7c-42db-97dd-769a551fb79c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-branding"
+}

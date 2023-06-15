@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SignificantWeightLossCommentsRequired</fullName>
+    <active>true</active>
+    <description>Comments are required when there are care recipients excluded because they did not have the required weights recorded</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    BLANKVALUE(No_CR_Excluded_MissingWtData__c, 0) &gt; 0,
+    ISBLANK(Comments__c)
+)</errorConditionFormula>
+    <errorDisplayField>Comments__c</errorDisplayField>
+    <errorMessage>Please enter comments why weight recording/s were absent.</errorMessage>
+</ValidationRule>

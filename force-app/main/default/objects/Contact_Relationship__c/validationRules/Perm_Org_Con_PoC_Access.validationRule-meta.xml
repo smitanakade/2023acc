@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perm_Org_Con_PoC_Access</fullName>
+    <active>true</active>
+    <description>Organisation Contact and Point of Contact record access</description>
+    <errorConditionFormula>AND(
+OR(ISNEW(),
+NOT(ISNEW()
+)),
+AND(
+OR(
+RecordType.DeveloperName = &apos;Non_Individual_Contact_CR&apos;,
+RecordType.DeveloperName = &apos;Point_of_Contact_CR&apos;,
+RecordType.DeveloperName =&apos;Service_Point_of_Contact_CR&apos;),
+NOT(
+OR(
+$Permission.GPMS_System_Administrator,
+$Permission.GPMS_STO,
+$Permission.GPMS_CHSP,
+$Permission.GPMS_NATSIFAC,
+$Permission.GPMS_Central_Office_Staff,
+$Permission.GPMS_ACQSC_User,
+$Permission.System_Administrator
+))))</errorConditionFormula>
+    <errorMessage>You do not have access to edit this record</errorMessage>
+</ValidationRule>

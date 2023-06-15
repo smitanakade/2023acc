@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Oragnisation_is_Government</fullName>
+    <active>true</active>
+    <description>This validation rule will only occur when user is trying to put status &quot;Taken to be approved&quot; when account is not an government organisation</description>
+    <errorConditionFormula>AND( NOT(ISPICKVAL(Account__r.Purpose__c,&apos;Government&apos;)),
+					ISPICKVAL(Current_Approval_Status__c, &apos;Taken to be Approved&apos;))</errorConditionFormula>
+    <errorMessage>Approved Provider needs to be government organisation</errorMessage>
+</ValidationRule>

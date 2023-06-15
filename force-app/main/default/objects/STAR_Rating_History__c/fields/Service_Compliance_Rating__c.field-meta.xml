@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Compliance_Rating__c</fullName>
+    <description>Gets Service Compliance Rating and shows star rating</description>
+    <externalId>false</externalId>
+    <formula>IMAGE(
+IF( Service_Compliance_Id__r.Service_Compliance_Rating__c = 5, &quot;/img/samples/stars_500.gif&quot;,
+IF( Service_Compliance_Id__r.Service_Compliance_Rating__c = 4, &quot;/img/samples/stars_400.gif&quot;,
+IF( Service_Compliance_Id__r.Service_Compliance_Rating__c = 3, &quot;/img/samples/stars_300.gif&quot;,
+IF( Service_Compliance_Id__r.Service_Compliance_Rating__c = 2, &quot;/img/samples/stars_200.gif&quot;,
+IF( Service_Compliance_Id__r.Service_Compliance_Rating__c = 1, &quot;/img/samples/stars_100.gif&quot;,
+IF( ISBLANK(Service_Compliance_Id__r.Service_Compliance_Rating__c), &quot;/img/samples/stars_000.gif&quot;,
+&quot;No rating available&quot;
+)
+)
+)
+)
+)
+), &quot;&quot;)</formula>
+    <label>Service Compliance Rating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

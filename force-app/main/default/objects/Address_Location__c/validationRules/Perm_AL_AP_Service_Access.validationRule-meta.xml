@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perm_AL_AP_Service_Access</fullName>
+    <active>true</active>
+    <description>Approved Provider Service record access</description>
+    <errorConditionFormula>AND(
+	OR(ISNEW(),NOT(ISNEW())),
+	AND(
+		Service__r.RecordType.DeveloperName = &apos;Approved_Provider_Service&apos;,
+		NOT(
+			OR(
+				$Permission.GPMS_System_Administrator,
+				$Permission.GPMS_STO,
+				$Permission.GPMS_Central_Office_Staff,
+				$Permission.System_Administrator
+			)
+		)
+	)
+)</errorConditionFormula>
+    <errorMessage>You do not have access to edit this record</errorMessage>
+</ValidationRule>

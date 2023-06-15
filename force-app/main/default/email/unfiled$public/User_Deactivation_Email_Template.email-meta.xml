@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>User_Deactivation_Reminder_Email_Letterhead</letterhead>
+    <name>User Deactivation Email Template</name>
+    <style>freeForm</style>
+    <subject>Salesforce {!$Label.Environment_Name} – Deactivate Salesforce User</subject>
+    <textOnly>Hi,
+
+
+Your Salesforce user in {!$Label.Environment_Name} will be deactivated in 10 working days (14 calendar days).
+
+
+If you want to continue using Salesforce and have access to this environment, please raise a ticket through the PET Front Door Platform Front Door - Overview (visualstudio.com).
+For any further queries, please contact the Platform Sustainability &amp; Services’ Support Team (DLPS&amp;S_Platform_support@health.gov.au).
+
+
+Thank you,
+
+Platform Sustainability &amp; Services Team
+
+Department of Health and Aged Care</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

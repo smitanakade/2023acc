@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Is_Response_No</name>
+        <label>Is Response &apos;No&apos;</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Response_is_No</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Response_Options__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>No</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_QA_Outcome_to_Approve</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Response is No</label>
+        </rules>
+    </decisions>
+    <description>When the response option is No, set the QA Outcome to Approve automatically, and updates Question Column</description>
+    <environments>Default</environments>
+    <interviewLabel>QFR - No Response Results in Automatic Approval {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>QFR - No Response Results in Automatic Approval</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>QFR_Response__C_AfterUpdate_ResponseOptions</description>
+        <name>Update_QA_Outcome_to_Approve</name>
+        <label>Update QA Outcome to Approve</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Additional_Information__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>QA__c</field>
+            <value>
+                <stringValue>Approve</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates Question Column when Response record is created</description>
+        <name>Update_Question_Column</name>
+        <label>Update Question Column</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Is_Response_No</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Question__c</field>
+            <value>
+                <elementReference>$Record.Question_Library__r.Question__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Question_Column</targetReference>
+        </connector>
+        <filterFormula>{!$Record.Form__r.RecordType.DeveloperName} = &apos;QFR&apos;</filterFormula>
+        <object>Response__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

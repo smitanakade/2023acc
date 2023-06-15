@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Postal_Address</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName != &quot;Aged_Care_Organisation&quot;,
+!Same_As_Physical_Address__c,
+OR(ISBLANK(ShippingStreet),ISBLANK(ShippingCountry),ISBLANK(ShippingCity),ISBLANK(ShippingState),ISBLANK(ShippingPostalCode),LEN(ShippingPostalCode)&lt;&gt;4,!ISNUMBER(ShippingPostalCode))
+)</errorConditionFormula>
+    <errorMessage>Postal Address is mandatory and Postcode must be 4 digits number.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,137 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative ">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <omnistudio-toast class="flexcard-toast-element" theme="slds" title="" message="" styletype=""> </omnistudio-toast>
+</div>
+            <div if:true={showLoader} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <omnistudio-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></omnistudio-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12"  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card slds-p-around_x-small slds-m-bottom_x-small" style="">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col  slds-p-bottom_small  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element0_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cstrong%3E%3Cspan%20class=%22TextRun%20SCXO24391005%20BCX0%22%20lang=%22EN-AU%22%20style=%22font-size:%2024pt;%22%20xml:lang=%22EN-AU%22%20data-contrast=%22auto%22%3E%3Cspan%20class=%22NormalTextRun%20SCXO24391005%20BCX0%22%3EAllotment%20Details%3C/span%3E%3C/span%3E%3C/strong%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element1" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element1_child"   record={record}  card={card}  field-name="IntegrationID"  label="Integration ID:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element2" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element2_child"   record={record}  card={card}  field-name="AllotmentSubType"  label="Allotment Sub Type:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element3" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element3_child"   record={record}  card={card}  field-name="WaiverType"  label="Waiver Type:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element4" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element4_child"   record={record}  card={card}  field-name="DateOfAllotment"  format="d/M/YYYY"  label="Date of Allotment:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element5" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element5_child"   record={record}  card={card}  field-name="OriginalDateOfAllotment"  format="d/M/yyyy"  label="Original Date of Allotment:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element6" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  condition-element" data-rindex={rindex} style="      
+         "  data-conditions='\{"group":[{"field":"EndDateOfAllotment","hasMergeField":false,"id":"state-new-condition-0","operator":"!=","type":"custom","value":""}],"id":"state-condition-object","isParent":true}' ><omnistudio-output-field data-style-id="state0element0block_element6_child"   record={record}  card={card}  data-conditions='\{"group":[{"field":"EndDateOfAllotment","hasMergeField":false,"id":"state-new-condition-0","operator":"!=","type":"custom","value":""}],"id":"state-condition-object","isParent":true}'  field-name="EndDateOfAllotment"  format="d/M/YYYY"  label="End Date of Allotment:"  placeholder=""  type="text"  data-preload-conditional-element="true"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element7" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element7_child"   record={record}  card={card}  field-name="Comments"  label="Comments:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element8" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element8_child"   record={record}  card={card}  field-name="LinkToDocument"  label="Link to Document:"  placeholder=""  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element1" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element1_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element1block_element0" class="slds-col  slds-p-bottom_small  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element1block_element0_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cstrong%3E%3Cspan%20class=%22TextRun%20SCXO24391005%20BCX0%22%20lang=%22EN-AU%22%20style=%22font-size:%2024pt;%22%20xml:lang=%22EN-AU%22%20data-contrast=%22auto%22%3E%3Cspan%20class=%22NormalTextRun%20SCXO24391005%20BCX0%22%3EService%20Details%3C/span%3E%3C/span%3E%3C/strong%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element1block_element1" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element1block_element1_child"   record={record}  card={card}  field-name="NameOfService"  label="Service Name:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element1block_element2" class="slds-col  slds-p-bottom_small  slds-size_5-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element1block_element2_child"   record={record}  card={card}  field-name="ServiceAddress"  label="Service Address:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element1block_element3" class="slds-col  slds-p-bottom_small  slds-size_6-of-12  condition-element" data-rindex={rindex} style="      
+         "  data-conditions='\{"group":[{"field":"ACPRToWhichPlacesRelatesToAutomated","hasMergeField":false,"id":"state-new-condition-7","operator":"!=","type":"custom","value":""}],"id":"state-condition-object","isParent":true}' ><omnistudio-output-field data-style-id="state0element1block_element3_child"   record={record}  card={card}  data-conditions='\{"group":[{"field":"ACPRToWhichPlacesRelatesToAutomated","hasMergeField":false,"id":"state-new-condition-7","operator":"!=","type":"custom","value":""}],"id":"state-condition-object","isParent":true}'  field-name="ACPRToWhichPlacesRelatesToAutomated"  label="Aged Care Planning Region to which Places Relate:"  placeholder=""  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element1block_element4" class="slds-col  slds-p-bottom_small  slds-size_6-of-12  condition-element" data-rindex={rindex} style="      
+         "  data-conditions='\{"group":[{"field":"ACPRToWhichPlacesRelatesToManual","hasMergeField":false,"id":"state-new-condition-7","operator":"!=","type":"custom","value":""}],"id":"state-condition-object","isParent":true}' ><omnistudio-output-field data-style-id="state0element1block_element4_child"   record={record}  card={card}  data-conditions='\{"group":[{"field":"ACPRToWhichPlacesRelatesToManual","hasMergeField":false,"id":"state-new-condition-7","operator":"!=","type":"custom","value":""}],"id":"state-condition-object","isParent":true}'  field-name="ACPRToWhichPlacesRelatesToManual"  label="Aged Care Planning Region to which Places Relate:"  placeholder=""  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element2" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element2_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element2block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element2block_element0_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cstrong%3E%3Cspan%20class=%22TextRun%20SCXO24391005%20BCX0%22%20lang=%22EN-AU%22%20style=%22font-size:%2024pt;%22%20xml:lang=%22EN-AU%22%20data-contrast=%22auto%22%3E%3Cspan%20class=%22NormalTextRun%20SCXO24391005%20BCX0%22%3EPlaces%20Information%3C/span%3E%3C/span%3E%3C/strong%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element3" class="slds-col   slds-size_7-of-12  condition-element" data-rindex={rindex} style="      
+         "  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}' ><omnistudio-output-field data-style-id="state0element3_child"   record={record}  card={card}  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'  merge-field="%3Ch4%3E&nbsp;%20Care%20Type%20:%20%7BCareType%7D%3C/h4%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element4" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><c-cf-places-summary data-style-id="state0element4_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node="\{record.PlaceInformation}"  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-places-summary>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <omnistudio-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12"  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card slds-p-around_x-small slds-m-bottom_x-small" style="">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col  slds-p-bottom_small  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element0_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cstrong%3E%3Cspan%20class=%22TextRun%20SCXO24391005%20BCX0%22%20lang=%22EN-AU%22%20style=%22font-size:%2024pt;%22%20xml:lang=%22EN-AU%22%20data-contrast=%22auto%22%3E%3Cspan%20class=%22NormalTextRun%20SCXO24391005%20BCX0%22%3EAllotment%20Details%3C/span%3E%3C/span%3E%3C/strong%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element1" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element1_child"   record={record}  card={card}  field-name="IntegrationID"  label="Integration ID:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element2" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element2_child"   record={record}  card={card}  field-name="AllotmentSubType"  label="Allotment Sub Type:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element3" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element3_child"   record={record}  card={card}  field-name="WaiverType"  label="Waiver Type:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element4" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element4_child"   record={record}  card={card}  field-name="DateOfAllotment"  format="d/M/YYYY"  label="Date of Allotment:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element5" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element5_child"   record={record}  card={card}  field-name="OriginalDateOfAllotment"  format="d/M/yyyy"  label="Original Date of Allotment:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element6" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  condition-element" data-rindex={rindex} style="      
+         "  data-conditions='\{"group":[{"field":"EndDateOfAllotment","hasMergeField":false,"id":"state-new-condition-0","operator":"!=","type":"custom","value":""}],"id":"state-condition-object","isParent":true}' ><omnistudio-output-field data-style-id="state0element0block_element6_child"   record={record}  card={card}  data-conditions='\{"group":[{"field":"EndDateOfAllotment","hasMergeField":false,"id":"state-new-condition-0","operator":"!=","type":"custom","value":""}],"id":"state-condition-object","isParent":true}'  field-name="EndDateOfAllotment"  format="d/M/YYYY"  label="End Date of Allotment:"  placeholder=""  type="text"  data-preload-conditional-element="true"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element7" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element7_child"   record={record}  card={card}  field-name="Comments"  label="Comments:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element8" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element8_child"   record={record}  card={card}  field-name="LinkToDocument"  label="Link to Document:"  placeholder=""  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element1" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element1_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element1block_element0" class="slds-col  slds-p-bottom_small  slds-size_12-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element1block_element0_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cstrong%3E%3Cspan%20class=%22TextRun%20SCXO24391005%20BCX0%22%20lang=%22EN-AU%22%20style=%22font-size:%2024pt;%22%20xml:lang=%22EN-AU%22%20data-contrast=%22auto%22%3E%3Cspan%20class=%22NormalTextRun%20SCXO24391005%20BCX0%22%3EService%20Details%3C/span%3E%3C/span%3E%3C/strong%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element1block_element1" class="slds-col  slds-p-bottom_small  slds-size_3-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element1block_element1_child"   record={record}  card={card}  field-name="NameOfService"  label="Service Name:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element1block_element2" class="slds-col  slds-p-bottom_small  slds-size_5-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element1block_element2_child"   record={record}  card={card}  field-name="ServiceAddress"  label="Service Address:"  placeholder="output"  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element1block_element3" class="slds-col  slds-p-bottom_small  slds-size_6-of-12  condition-element" data-rindex={rindex} style="      
+         "  data-conditions='\{"group":[{"field":"ACPRToWhichPlacesRelatesToAutomated","hasMergeField":false,"id":"state-new-condition-7","operator":"!=","type":"custom","value":""}],"id":"state-condition-object","isParent":true}' ><omnistudio-output-field data-style-id="state0element1block_element3_child"   record={record}  card={card}  data-conditions='\{"group":[{"field":"ACPRToWhichPlacesRelatesToAutomated","hasMergeField":false,"id":"state-new-condition-7","operator":"!=","type":"custom","value":""}],"id":"state-condition-object","isParent":true}'  field-name="ACPRToWhichPlacesRelatesToAutomated"  label="Aged Care Planning Region to which Places Relate:"  placeholder=""  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element1block_element4" class="slds-col  slds-p-bottom_small  slds-size_6-of-12  condition-element" data-rindex={rindex} style="      
+         "  data-conditions='\{"group":[{"field":"ACPRToWhichPlacesRelatesToManual","hasMergeField":false,"id":"state-new-condition-7","operator":"!=","type":"custom","value":""}],"id":"state-condition-object","isParent":true}' ><omnistudio-output-field data-style-id="state0element1block_element4_child"   record={record}  card={card}  data-conditions='\{"group":[{"field":"ACPRToWhichPlacesRelatesToManual","hasMergeField":false,"id":"state-new-condition-7","operator":"!=","type":"custom","value":""}],"id":"state-condition-object","isParent":true}'  field-name="ACPRToWhichPlacesRelatesToManual"  label="Aged Care Planning Region to which Places Relate:"  placeholder=""  type="text"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element2" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element2_child"  record={record}  card={card}  collapsed-by-default="false"  collapsible="false"  label="Block"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element2block_element0" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element2block_element0_child"   record={record}  card={card}  merge-field="%3Cdiv%3E%3Cstrong%3E%3Cspan%20class=%22TextRun%20SCXO24391005%20BCX0%22%20lang=%22EN-AU%22%20style=%22font-size:%2024pt;%22%20xml:lang=%22EN-AU%22%20data-contrast=%22auto%22%3E%3Cspan%20class=%22NormalTextRun%20SCXO24391005%20BCX0%22%3EPlaces%20Information%3C/span%3E%3C/span%3E%3C/strong%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div><div data-style-id="state0element3" class="slds-col   slds-size_7-of-12  condition-element" data-rindex={rindex} style="      
+         "  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}' ><omnistudio-output-field data-style-id="state0element3_child"   record={record}  card={card}  data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'  merge-field="%3Ch4%3E&nbsp;%20Care%20Type%20:%20%7BCareType%7D%3C/h4%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element4" class="slds-col   slds-size_12-of-12 " data-rindex={rindex} style="" ><c-cf-places-summary data-style-id="state0element4_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node="\{record.PlaceInformation}"  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  object-api-name={objectApiName}  theme="slds"   onupdateparent={updateParentData}></c-cf-places-summary>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <omnistudio-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </omnistudio-action>
+  
+            <omnistudio-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </omnistudio-action>
+            </div>
+          </template>

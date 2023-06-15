@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SCS_Reason_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISBLANK( Association_End_Date__c )),ISBLANK( Reason__c ))</errorConditionFormula>
+    <errorDisplayField>Reason__c</errorDisplayField>
+    <errorMessage>Reason is mandatory when Association is End Dated.</errorMessage>
+</ValidationRule>

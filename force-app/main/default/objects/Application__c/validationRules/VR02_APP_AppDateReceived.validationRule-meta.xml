@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR02_APP_AppDateReceived</fullName>
+    <active>true</active>
+    <description>Application Date Received cannot be a future date</description>
+    <errorConditionFormula>Application_Date_Received__c &gt; TODAY()</errorConditionFormula>
+    <errorDisplayField>Application_Date_Received__c</errorDisplayField>
+    <errorMessage>Application Date Received cannot be a future date</errorMessage>
+</ValidationRule>

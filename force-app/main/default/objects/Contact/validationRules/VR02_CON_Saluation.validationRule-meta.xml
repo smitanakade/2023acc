@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR02_CON_Saluation</fullName>
+    <active>true</active>
+    <description>To check if salutation is provided</description>
+    <errorConditionFormula>AND(
+				NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+				ISPICKVAL(Salutation, &apos;&apos;),
+				NOT(ISPICKVAL(GPMS_PortalRegistrationType__c , &apos;Prospective&apos;)),
+    NOT(ISCHANGED(Email_Body__c))			
+)</errorConditionFormula>
+    <errorDisplayField>Salutation</errorDisplayField>
+    <errorMessage>Salutation is mandatory</errorMessage>
+</ValidationRule>

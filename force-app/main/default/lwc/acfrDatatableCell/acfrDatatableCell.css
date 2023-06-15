@@ -1,0 +1,110 @@
+@import "c/cssUtils";
+
+:host {
+	--sds-c-textarea-sizing-min-height: 200px;
+}
+
+.cell-container {
+	display: flex;
+	padding: 3px 12px;
+	align-items: center;
+	height: 100%;
+
+	overflow: visible;
+}
+
+.cell-container-error {
+	background-color: rgba(243, 0, 43, 0.05);
+}
+
+.cell-container:focus-within {
+	/* border: 0px 2px 2px 0px solid #000; */
+	box-shadow: var(--lwc-brandAccessibleActive, rgb(1, 68, 134)) -1px -1px 0 1px
+		inset;
+}
+
+.cell-container-read-only {
+	font-weight: bold;
+	background-color: #f8f8f8;
+}
+
+.cell-container-hidden {
+	background-color: #f3f3f3;
+}
+
+.prefix {
+	flex: 1 0;
+	opacity: 85%;
+}
+
+.value {
+	flex: 2 1 0;
+	text-align: right;
+	margin: 0 5px;
+}
+
+input {
+	border: none;
+	background: transparent;
+	height: 100%;
+}
+
+input:focus {
+	outline: none;
+	border: none;
+}
+
+.slds-modal .slds-text-link {
+	color: var(--gpmsColsecondaryDark);
+}
+
+.slds-text-link:hover {
+	color: var(--gpmsColsecondaryDark);
+	text-decoration: underline;
+}
+
+.slds-text-color_error {
+	color: var(--gpmColErrorDark);
+}
+
+.slds-text-color_error:hover {
+	color: var(--gpmColErrorDark);
+}
+
+.error-container {
+	flex: 1 0;
+}
+
+.error-message-container {
+	position: relative;
+	align-self: flex-end;
+	display: inline-block;
+	align-items: center;
+}
+
+.error-message {
+	position: absolute;
+	bottom: 100%;
+	right: 0.25rem;
+	border-radius: 0.25rem;
+	height: fit-content;
+	padding: 8px 16px;
+	user-select: none;
+	-webkit-user-select: none;
+
+	/* slds dark blue background color */
+	background: var(--color-background-alt-inverse, rgb(3, 45, 96));
+	color: white;
+
+	opacity: 100%;
+}
+
+.error-message-fade {
+	opacity: 0%;
+	/* change second timeout delay to match delay + transition duration */
+	transition: opacity 0.2s ease-out;
+}
+
+.navigate-focus:focus-within {
+	outline: none;
+}

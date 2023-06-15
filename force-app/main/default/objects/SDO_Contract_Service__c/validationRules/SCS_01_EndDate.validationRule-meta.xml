@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SCS_01_EndDate</fullName>
+    <active>true</active>
+    <description>End date can&apos;t be populated before start date or without a reason</description>
+    <errorConditionFormula>AND(RecordType.Name =&apos;SDO Contract to Service&apos;,ISBLANK(Service_Contract_Start_Date__c),Service_Contract_End_Date__c &lt; Service_Contract_Start_Date__c)</errorConditionFormula>
+    <errorDisplayField>Service_Contract_End_Date__c</errorDisplayField>
+    <errorMessage>The end date should be after the start date</errorMessage>
+</ValidationRule>

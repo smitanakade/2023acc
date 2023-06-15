@@ -1,0 +1,69 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "id" : "815e9ef0-56b7-4870-a303-05d6d367bede",
+  "label" : "Disclaimer",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "ddc1f079-f63b-494d-9ada-25de442755b6",
+          "columns" : [ {
+            "UUID" : "3807fc00-52fb-4b90-94d7-ca45210ee20b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ddc1f079-f63b-494d-9ada-25de442755b6",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><span style=\"font-size: 48px;\">Disclaimer</span></h1><h1 style=\"text-align: center;\"><br></h1><p style=\"text-align: center;\"><strong style=\"font-size: 72px;\">COMING SOON</strong></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "a43491ca-8fbd-4c37-938a-f9084e477f97",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3807fc00-52fb-4b90-94d7-ca45210ee20b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "01ee6428-0109-4735-a35b-35b3cd3eb256",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Disclaimer"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "72ccd056-d719-40ad-a34d-f23abcd7d362",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "afa42d53-7014-426b-bc0d-eb2cfc16f794",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-disclaimer"
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Early_Alert__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ISPICKVAL( Status , &quot;Submitted&quot;)&amp;&amp; NOT(ISBLANK( Number_of_Yes_Responses__c  )),
+IMAGE(&quot;/img/samples/flag_green.gif&quot;, &quot;Green&quot;),
+IF(
+ISPICKVAL( Status , &quot;Re-submitted&quot;)&amp;&amp; NOT(ISBLANK( Number_of_Yes_Responses__c  )),
+IMAGE(&quot;/img/samples/flag_green.gif&quot;, &quot;Green&quot;),&quot;&quot;))</formula>
+    <label>Early Alert Flag</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

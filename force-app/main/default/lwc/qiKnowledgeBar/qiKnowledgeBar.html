@@ -1,0 +1,127 @@
+<template>
+    <div class="slds-tabs_default">
+        <div class="wrapper">
+            <ul class="slds-tabs_default__nav tab-container" role="tablist">
+                <li
+                    class="slds-tabs_default__item slds-grid slds-grid_vertical-align-center"
+                    title="Report due dates"
+                    role="presentation"
+                    data-item="qiKnowledge1"
+                    onclick={handleClick}
+                >
+                    <a
+                        class="slds-col slds-tabs_default__link reportingcss"
+                        role="tab"
+                        tabindex="-1"
+                        aria-selected="false"
+                        aria-controls="qiKnowledge1"
+                        id="qiKnowledge1rdd"
+                        data-link="qiKnowledge1"
+                        >Report due dates</a
+                    >
+                    <div
+                        class="slds-col slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none tab-icon"
+                    >
+                        <svg class="slds-button__icon" aria-hidden="true">
+                            <use xlink:href={svgURLrdd}></use>
+                        </svg>
+                    </div>
+                </li>
+                <li
+                    class="slds-tabs_default__item slds-grid slds-grid_vertical-align-center"
+                    title="Program Manual"
+                    role="presentation"
+                    data-item="qiKnowledge2"
+                    onclick={handleClick}
+                >
+                    <a
+                        class="slds-col slds-tabs_default__link reportingcss"
+                        role="tab"
+                        tabindex="-1"
+                        aria-selected="false"
+                        aria-controls="qiKnowledge2"
+                        id="qiKnowledge2pm"
+                        data-link="qiKnowledge2"
+                        >Supporting Material</a
+                    >
+                    <div
+                        class="slds-col slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none tab-icon"
+                    >
+                        <svg class="slds-button__icon" aria-hidden="true">
+                            <use xlink:href={svgURLpm}></use>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+            <template lwc:if={isNotBenchmarkerUser}>
+                <div class="navigation slds-grid slds-grid_vertical-align-end">
+                    <button
+                        class="slds-button slds-button_neutral slds-button_full-width navigation-button reportingcss"
+                        label="Reporting Dashboard"
+                        onclick={clickNavigate}
+                    >
+                        Reporting Dashboard
+                        <svg
+                            class="slds-button__icon slds-button__icon_right"
+                            aria-hidden="true"
+                        >
+                            <use
+                                xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#forward"
+                            ></use>
+                        </svg>
+                    </button>
+                </div>
+            </template>
+        </div>
+        <div class="tabs">
+            <div
+                id="qiKnowledge1"
+                class="tab-content tab-content-1 slds-tabs_default__content slds-hide"
+                data-id="qiKnowledge1"
+                role="tabpanel"
+                aria-labelledby="qiKnowledge1rdd"
+            >
+                <div class="tab-component">
+                    <c-qi-reporting-period></c-qi-reporting-period>
+                </div>
+                <div class="slds-no-flex tab-close">
+                    <hr />
+                    <lightning-button
+                        data-button="qiKnowledge1"
+                        variant="neutral"
+                        label="Close"
+                        title="Close"
+                        icon-name="utility:close"
+                        class="slds-p-around_xxx-small close-button"
+                        onclick={closeTab}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+            <div
+                id="qiKnowledge2"
+                class="tab-content slds-tabs_default__content slds-hide"
+                data-id="qiKnowledge2"
+                role="tabpanel"
+                aria-labelledby="qiKnowledge2pm"
+            >
+                <div class="tab-component">
+                    <c-cf-q-i_-supporting-material></c-cf-q-i_-supporting-material>
+                </div>
+                <div class="slds-no-flex tab-close">
+                    <hr />
+                    <lightning-button
+                        data-button="qiKnowledge2"
+                        variant="neutral"
+                        label="Close"
+                        title="Close"
+                        icon-name="utility:close"
+                        class="slds-p-around_xxx-small close-button"
+                        onclick={closeTab}
+                    >
+                    </lightning-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

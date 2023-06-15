@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SCS_02_StartDate</fullName>
+    <active>true</active>
+    <description>Start date must be populated wen creating an SCS record</description>
+    <errorConditionFormula>OR(AND(RecordType.Name =&apos;SDO Contract to Service&apos;,	
+				ISBLANK(Service_Contract_Start_Date__c)),
+				AND(RecordType.Name =&apos;Management Company to Service&apos;,	
+				ISBLANK(Association_Start_Date__c)))</errorConditionFormula>
+    <errorMessage>Must have a start date</errorMessage>
+</ValidationRule>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>ACQSC_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>ACQSC User</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Caretype Application - Submitted,Caretype Application - Closed locked - Inactive,Caretype Application - Not Required - Taken To Be Approved</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Caretype Application - Assessment And Review,Caretype Application - Closed,Caretype Application - Delgate decision</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>GPMS_ACQSC_Read_OnlyUsers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>GPMS ACQSC Read-OnlyUsers</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Caretype Application - Submitted,Caretype Application - Closed locked - Inactive,Caretype Application - Not Required - Taken To Be Approved</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Caretype Application - Assessment And Review,Caretype Application - Closed,Caretype Application - Delgate decision</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>GPMS_Sys_Admin_Application</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>GPMS Sys Admin Application</label>
+        <sharedTo>
+            <group>GPMS_System_Administrator</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Caretype Application - Submitted,Caretype Application - Closed locked - Inactive,Caretype Application - Not Required - Taken To Be Approved</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Caretype Application - Assessment And Review,Caretype Application - Closed,Caretype Application - Delgate decision</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

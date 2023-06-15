@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AntipsychoticDiagnosedTotal</fullName>
+    <active>true</active>
+    <description>Number of care recipients who received an antipsychotic medication for a diagnosed condition of psychosis should not be greater than number of care recipients who received an antipsychotic medication.</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    BLANKVALUE(No_Care_Recipients_diag_d_psychosis__c, 0) &gt; BLANKVALUE(No_CR_rec_antipsychotic__c, 0)
+)</errorConditionFormula>
+    <errorDisplayField>No_Care_Recipients_diag_d_psychosis__c</errorDisplayField>
+    <errorMessage>Number cannot be higher than the total number of care recipients assessed for antipsychotics.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount/PARENTGROUPVAL(RowCount, GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>% overall</description>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>Case$QFR_Submission_Date__c</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% overall</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <field>Case$NAPSID__c</field>
+    </columns>
+    <columns>
+        <field>Case$Provider_Name__c</field>
+    </columns>
+    <columns>
+        <field>Case.Forms__r.Service_Line_Items__r$Service__c.Integration_ID__c</field>
+    </columns>
+    <columns>
+        <field>Case.Forms__r.Service_Line_Items__r$Service_Label__c</field>
+    </columns>
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case$QFR_Care_Type__c</field>
+    </columns>
+    <columns>
+        <field>Case$QA_Assessment_Status__c</field>
+    </columns>
+    <columns>
+        <field>Case.Forms__r.Service_Line_Items__r$Date_last_notified__c</field>
+    </columns>
+    <columns>
+        <field>Case$Owner</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Case$Submission_Count__c</field>
+    </columns>
+    <description>Report for &apos;Submissions By Daily Received&apos; with the Report Type &apos;Cases with Forms and Service Line Item&apos;</description>
+    <filter>
+        <criteriaItems>
+            <column>Case$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.QFR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Forms__r.Service_Line_Items__r$Service_Label__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Total</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <field>Case$QFR_Submission_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Submissions By Daily Received</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Case_with_Forms_and_Service_Line_Items__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Case$QFR_Care_Type__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Case$QFR_Submission_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

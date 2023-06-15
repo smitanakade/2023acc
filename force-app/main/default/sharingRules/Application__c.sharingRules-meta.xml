@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>GPMS_ACQSC_Read_Only_Application</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>GPMS ACQSC Read Only Application</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Application Submission Receipt,Application Submitted - Fee Payment Pending,Closed Locked,For Assessment,Closed,Delegate&apos;s Decision,Application Submitted - RFI,Finalise,For Review,Assessment RFI - Response Pending</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Recommendation to Delegate,Under Review,Application Not Required - Taken To Be Approved,Inactive Application,Under Assessment,Application</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>GPMS_ACQSC_User_Application</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>GPMS ACQSC User Application</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Application Submission Receipt,Application Submitted - Fee Payment Pending,Closed Locked,For Assessment,Closed,Delegate&apos;s Decision,Application Submitted - RFI,Finalise,For Review,Assessment RFI - Response Pending</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Recommendation to Delegate,Under Review,Application Not Required - Taken To Be Approved,Inactive Application,Under Assessment,Application</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Under Assessment</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Under Review</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>GPMS_Sys_Admin_Application</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>GPMS Sys Admin Application</label>
+        <sharedTo>
+            <group>GPMS_System_Administrator</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Application Submission Receipt,Application Submitted - Fee Payment Pending,Closed Locked,For Assessment,Closed,Delegate&apos;s Decision,Application Submitted - RFI,Finalise,For Review,Assessment RFI - Response Pending</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Recommendation to Delegate,Under Review,Application Not Required - Taken To Be Approved,Inactive Application,Under Assessment,Application</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

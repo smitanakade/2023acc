@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Safety_rating__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE(
+IF(Safety_Score__c &lt;$CustomMetadata.CER_Formula__mdt.X1_star.Domain_Star_Range__c, &quot;/img/samples/stars_000.gif&quot;,
+IF(Safety_Score__c &lt;$CustomMetadata.CER_Formula__mdt.X2_star.Domain_Star_Range__c, &quot;/img/samples/stars_100.gif&quot;,
+IF(Safety_Score__c &lt;$CustomMetadata.CER_Formula__mdt.X3_star.Domain_Star_Range__c, &quot;/img/samples/stars_200.gif&quot;,
+IF(Safety_Score__c &lt;$CustomMetadata.CER_Formula__mdt.X4_star.Domain_Star_Range__c, &quot;/img/samples/stars_300.gif&quot;,
+IF(Safety_Score__c &lt;$CustomMetadata.CER_Formula__mdt.X5_star.Domain_Star_Range__c, &quot;/img/samples/stars_400.gif&quot;, &quot;/img/samples/stars_500.gif&quot;
+))))),
+&quot;Safety rating&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Safety rating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

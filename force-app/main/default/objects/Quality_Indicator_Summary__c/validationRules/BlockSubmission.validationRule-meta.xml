@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BlockSubmission</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    $Profile.Name != &apos;Integration User&apos;,
+    ISPICKVAL($User.UserType, &apos;Standard&apos;),
+    OR(
+        ISPICKVAL(Status__c, &apos;Submitted&apos;),
+        ISPICKVAL(Status__c, &apos;Late Submission&apos;),
+        ISPICKVAL(Status__c, &apos;Updated After Due Date&apos;)
+    ),
+    OR(
+        AND(
+            REPORTING_PERIOD__r.End_Date__c &gt; $CustomMetadata.Quality_Indicator_Settings__mdt.QI_Stepper_for_Go_Live.Five_Domains_RP_End_Date__c,
+            OR(
+                Completed_QI_Details__c &lt; 11,
+                AND(
+                    Completed_QI_Details__c = 11,
+                    ISBLANK(Requested_by__c)
+                )
+            )
+        ),
+        AND(
+            REPORTING_PERIOD__r.End_Date__c &lt;= $CustomMetadata.Quality_Indicator_Settings__mdt.QI_Stepper_for_Go_Live.Five_Domains_RP_End_Date__c,
+            Completed_QI_Details__c &lt; 5
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Please complete all Quality Indicator Domains and fill Requested By field to submit the record.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Locked_APP</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Application</compactLayoutAssignment>
+    <label>Closed Locked</label>
+    <picklistValues>
+        <picklist>Application_Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>For Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn - By Applicant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn - Under 63</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Care_Type_s__c</picklist>
+        <values>
+            <fullName>Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flexible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

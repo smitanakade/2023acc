@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Case</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Case, Forms and Service Line items</description>
+    <join>
+        <join>
+            <outerJoin>true</outerJoin>
+            <relationship>Service_Line_Items__r</relationship>
+        </join>
+        <outerJoin>false</outerJoin>
+        <relationship>Forms__r</relationship>
+    </join>
+    <label>Case with Forms and Service Line Items</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>QFR Submission Status</displayNameOverride>
+            <field>Status</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Provider NAPS ID</displayNameOverride>
+            <field>NAPSID__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Provider_Name__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CaseNumber</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Provider Type</displayNameOverride>
+            <field>QFR_Care_Type__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>QFR_Submission_Date__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>RecordType</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>QA_Assessment_Status__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Assigned to</displayNameOverride>
+            <field>Owner</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Submission_Count__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Provider Type</displayNameOverride>
+            <field>Care_Type__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Follow_Up_Status__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Expected_Resubmission_Date__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Comments__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Comments_Assessment__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Test Care Type</displayNameOverride>
+            <field>Account.Care_Type__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account.Type</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Organisation Type</displayNameOverride>
+            <field>Account.Organisation_Type__c</field>
+            <table>Case</table>
+        </columns>
+        <masterLabel>Cases</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Service NAPS ID</displayNameOverride>
+            <field>Service__c.Integration_ID__c</field>
+            <table>Case.Forms__r.Service_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>RC Notified Date</displayNameOverride>
+            <field>Date_last_notified__c</field>
+            <table>Case.Forms__r.Service_Line_Items__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Service Name</displayNameOverride>
+            <field>Service_Label__c</field>
+            <table>Case.Forms__r.Service_Line_Items__r</table>
+        </columns>
+        <masterLabel>Service Line Items</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Incomplete Reasons</displayNameOverride>
+            <field>Declaration_Incomplete_Reason__c</field>
+            <table>Case.Forms__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case__c</field>
+            <table>Case.Forms__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Case.Forms__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Declaration_Signature__c</field>
+            <table>Case.Forms__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Name</field>
+            <table>Case.Forms__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Type__c</field>
+            <table>Case.Forms__r</table>
+        </columns>
+        <masterLabel>Forms</masterLabel>
+    </sections>
+</ReportType>

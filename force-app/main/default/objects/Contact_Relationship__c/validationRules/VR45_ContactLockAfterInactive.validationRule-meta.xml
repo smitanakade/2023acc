@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR45_ContactLockAfterInactive</fullName>
+    <active>true</active>
+    <description>Stop user from editing history contact records</description>
+    <errorConditionFormula>AND(NOT(ISNEW()), PRIORVALUE(End_Date__c) &lt;= Today (), 
+				NOT($Permission.GPMS_System_Administrator) )</errorConditionFormula>
+    <errorMessage>Historical contact relationship records cannot be edited. Please contact the GPMS System Administrator</errorMessage>
+</ValidationRule>

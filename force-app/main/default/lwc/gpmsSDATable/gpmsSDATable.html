@@ -1,0 +1,26 @@
+<template>
+        <div class="slds-card__body slds-card__body_inner">
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large"> 
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                                <th>State</th>
+                                <th>ACPR</th>
+                                <th>SA2</th>
+                                <th>Places</th>  
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={data} for:item="data" for:index="index">
+                            <tr class="inputRows" key={data.ACPRId}>
+                                    <td>{data.State}</td>
+                                    <td>{data.ACPR}</td>
+                                    <td>{data.SA2}</td>
+                                    <td>
+                                        <lightning-input name={data.key} type="number" value={data.places} required onchange={handleChange} min=0></lightning-input>
+                                    </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+        </div>
+</template>

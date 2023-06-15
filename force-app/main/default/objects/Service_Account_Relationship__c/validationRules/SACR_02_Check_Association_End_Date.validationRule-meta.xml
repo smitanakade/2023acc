@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SACR_02_Check_Association_End_Date</fullName>
+    <active>true</active>
+    <description>The Association End Date should be after the Association Start Date.</description>
+    <errorConditionFormula>AND(NOT($Setup.BypassTriggers__c.BypassValidationRules__c),!ISBLANK(Association_End_Date__c), Association_End_Date__c  &lt;  Association_Start_Date__c )</errorConditionFormula>
+    <errorDisplayField>Association_End_Date__c</errorDisplayField>
+    <errorMessage>The Association End Date should be after the Association Start Date.</errorMessage>
+</ValidationRule>

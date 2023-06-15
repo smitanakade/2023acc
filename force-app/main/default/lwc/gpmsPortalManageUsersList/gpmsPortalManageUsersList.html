@@ -1,0 +1,27 @@
+<template>  
+    <ul class="gpms-user-list" if:true={hasContacts}>
+        <template for:each={contactsListFormatted} for:item="contact">
+            <li class="gpms-user-list-item" key={contact.acrId}>
+                <div class="user-details">
+                    <div class="slds-grid slds-has-flexi-truncate">
+                        <span class="slds-truncate" title={contact.email}>{contact.email}</span>
+                        <span class="color__weak slds-var-p-left_x-small">
+                            <template if:true={contact.isCurrentUser}>(You) </template><template if:false={contact.FTLS}>(Pending)</template>
+                        </span>
+                    </div>
+                    <div class="user-access">{contact.roles}</div>
+                </div>
+                <lightning-button
+                    data-acrid={contact.acrId}
+                    data-ftls={contact.FTLS}
+                    icon-name="utility:settings"
+                    label="Manage"
+                    onclick={handleManageUser}
+                    title="Manage this user"
+                    variant="base"
+                ></lightning-button>
+            </li>
+        </template>
+    </ul>
+    <p class="empty" if:false={hasContacts}>No users within this provider yet.</p>
+</template>

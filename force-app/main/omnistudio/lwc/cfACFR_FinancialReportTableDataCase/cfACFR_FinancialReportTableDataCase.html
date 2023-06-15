@@ -1,0 +1,719 @@
+<template>
+	<div class="slds-grid slds-wrap slds-is-relative">
+		<div style="position: fixed; z-index: 999999; top: 0; right: 0">
+			<omnistudio-toast
+				class="flexcard-toast-element"
+				theme="slds"
+				title=""
+				message=""
+				styletype=""
+			>
+			</omnistudio-toast>
+		</div>
+		<div
+			if:true={showLoader}
+			class="slds-is-absolute vloc-loader_override"
+			style="
+				height: 100%;
+				width: 100%;
+				min-height: 50px;
+				background: transparent;
+				z-index: 99;
+			"
+		>
+			<div>
+				<omnistudio-spinner
+					variant="brand"
+					alternative-text="Loading content..."
+					size="medium"
+					theme="slds"
+				></omnistudio-spinner>
+			</div>
+		</div>
+		<template if:false={hasPermission}>
+			You don't have required permissions to view this card.
+		</template>
+		<template if:true={hasPermission}>
+			<template if:true={hasRecords}>
+				<template for:each={_records} for:item="record" for:index="rindex">
+					<omnistudio-flex-card-state
+						if:true={record}
+						key={record._flex.uniqueKey}
+						data-recordid={record.Id}
+						record={record}
+						data-statue="true"
+						data-index="0"
+						data-rindex={rindex}
+						class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12"
+						tracking-obj={_childCardTrackingObj}
+					>
+						<div
+							if:true={cardLoaded}
+							class="slds-grid slds-wrap slds-p-top_xxx-small slds-p-bottom_xxx-small"
+							style=""
+						>
+							<div
+								data-style-id="state0element0"
+								class="slds-col slds-border_bottom slds-p-top_x-small slds-p-bottom_x-small slds-size_12-of-12 condition-element"
+								data-rindex={rindex}
+								style="border-bottom: #bbbbbb 1px solid; border-radius: 2px"
+								data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'
+							>
+								<omnistudio-block
+									data-style-id="state0element0_child"
+									record={record}
+									card={card}
+									collapsed-by-default="false"
+									collapsible="false"
+									data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'
+									label="Block"
+									theme="slds"
+									><div class="slds-grid slds-wrap">
+										<div
+											data-style-id="state0element0block_element0"
+											class="slds-col slds-text-align_left slds-size_1-of-12"
+											data-rindex={rindex}
+											style=""
+										>
+											<omnistudio-output-field
+												data-style-id="state0element0block_element0_child"
+												record={record}
+												card={card}
+												field-name="NAPSID__c"
+												label=""
+												placeholder="output"
+												type="text"
+												theme="slds"
+											></omnistudio-output-field>
+										</div>
+										<div
+											data-style-id="state0element0block_element1"
+											class="slds-col slds-text-align_center slds-size_2-of-12"
+											data-rindex={rindex}
+											style=""
+										>
+											<omnistudio-output-field
+												data-style-id="state0element0block_element1_child"
+												record={record}
+												card={card}
+												field-name="Provider_Name__c"
+												label=""
+												placeholder="output"
+												type="text"
+												theme="slds"
+											></omnistudio-output-field>
+										</div>
+										<div
+											data-style-id="state0element0block_element2"
+											class="slds-col slds-text-align_center slds-size_1-of-12 condition-element"
+											data-rindex={rindex}
+											style=""
+											data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'
+										>
+											<omnistudio-output-field
+												data-style-id="state0element0block_element2_child"
+												record={record}
+												card={card}
+												data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'
+												data-preload-conditional-element="false"
+												field-name=""
+												label=""
+												placeholder="QFR"
+												type="text"
+												theme="slds"
+												if:true={record._flex.state0element0block_element2_child}
+											></omnistudio-output-field>
+										</div>
+										<div
+											data-style-id="state0element0block_element3"
+											class="slds-col slds-text-align_center slds-size_2-of-12"
+											data-rindex={rindex}
+											style=""
+										>
+											<omnistudio-output-field
+												data-style-id="state0element0block_element3_child"
+												record={record}
+												card={card}
+												field-name="Reporting_Period_End_Date__c"
+												format="D/M/YYYY"
+												label=""
+												placeholder=""
+												type="date"
+												theme="slds"
+											></omnistudio-output-field>
+										</div>
+										<div
+											data-style-id="state0element0block_element4"
+											class="slds-col slds-text-align_center slds-size_1-of-12"
+											data-rindex={rindex}
+											style=""
+										>
+											<omnistudio-output-field
+												data-style-id="state0element0block_element4_child"
+												record={record}
+												card={card}
+												field-name="Status"
+												label=""
+												placeholder="output"
+												type="text"
+												theme="slds"
+											></omnistudio-output-field>
+										</div>
+										<div
+											data-style-id="state0element0block_element5"
+											class="slds-col slds-text-align_center slds-size_2-of-12"
+											data-rindex={rindex}
+											style=""
+										>
+											<omnistudio-output-field
+												data-style-id="state0element0block_element5_child"
+												record={record}
+												card={card}
+												field-name="Reporting_Due_Date__c"
+												format="D/M/YYYY"
+												label=""
+												placeholder=""
+												type="date"
+												theme="slds"
+											></omnistudio-output-field>
+										</div>
+										<div
+											data-style-id="state0element0block_element6"
+											class="slds-col slds-size_3-of-12"
+											data-rindex={rindex}
+											style=""
+										>
+											<omnistudio-block
+												data-style-id="state0element0block_element6_child"
+												record={record}
+												card={card}
+												collapsed-by-default="false"
+												collapsible="false"
+												label="Block"
+												theme="slds"
+												><div class="slds-grid slds-wrap">
+													<div
+														data-style-id="state0element0block_element6block_element0"
+														class="slds-col slds-text-align_center slds-p-top_x-small slds-p-horizontal_small slds-size_4-of-12 condition-element"
+														data-rindex={rindex}
+														style="
+															background-color: #51376b;
+															border-radius: 5px;
+															color: #51376b;
+														"
+														data-conditions='\{"group":[{"id":"state-new-condition-0","field":"Status","operator":"==","value":"New","type":"custom","hasMergeField":false},{"id":"state-new-condition-47","field":"QFR_RP_Locked__c","operator":"!=","value":"true","type":"custom","hasMergeField":false,"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'
+													>
+														<omnistudio-flex-action
+															data-style-id="state0element0block_element6block_element0_child"
+															tracking-obj={_childCardTrackingObj}
+															class="state0element0block_element6block_element0_child flexActionElement"
+															data-action-element-class="state0element0block_element6block_element0_child"
+															onexecuteaction={performAction}
+															data-show-spinner="false"
+															data-element-label="actionstart"
+															state-obj={record}
+															record={record}
+															card={card}
+															action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1663550107579-oiqljlaxa","label":"Action","stateAction":{"Community Named Page":{"targetName":"Form_Submission__c"},"displayName":"Action","hasExtraParams":true,"id":"flex-action-1673250452294","openUrlIn":"Current Window","targetParams":{"c__caseId":"{Id}"},"targetType":"Community Named Page","type":"Custom","vlocityIcon":"standard-default"}}]'
+															button-variant="brand"
+															data-conditions='\{"group":[{"id":"state-new-condition-0","field":"Status","operator":"==","value":"New","type":"custom","hasMergeField":false},{"id":"state-new-condition-47","field":"QFR_RP_Locked__c","operator":"!=","value":"true","type":"custom","hasMergeField":false,"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'
+															display-as-button="false"
+															flyout-channel="close_modal"
+															flyout-details="\{}"
+															hide-action-icon="true"
+															icon-color="#000"
+															icon-name="standard-default"
+															icon-size="x-small"
+															label="Start"
+															preload-flyout="false"
+															styles='\{"label":{"color":"#fff","fontSize":"","textAlign":"center","textDecoration":""}}'
+															theme="slds"
+														></omnistudio-flex-action>
+													</div>
+													<div
+														data-style-id="state0element0block_element6block_element1"
+														class="slds-col slds-text-align_center slds-p-top_x-small slds-p-horizontal_small slds-size_4-of-12 condition-element"
+														data-rindex={rindex}
+														style="
+															background-color: #51376b;
+															border-radius: 5px;
+															color: #51376b;
+														"
+														data-conditions='\{"group":[{"id":"state-new-condition-7","field":"QFR_RP_Locked__c","operator":"==","value":"true","type":"custom","hasMergeField":false}],"id":"state-condition-object","isParent":true}'
+													>
+														<omnistudio-flex-action
+															data-style-id="state0element0block_element6block_element1_child"
+															tracking-obj={_childCardTrackingObj}
+															class="state0element0block_element6block_element1_child flexActionElement"
+															data-action-element-class="state0element0block_element6block_element1_child"
+															onexecuteaction={performAction}
+															data-show-spinner="false"
+															data-element-label="resumeerror"
+															state-obj={record}
+															record={record}
+															card={card}
+															action-list='\[{"key":"1683764126833-9q8em2t1y","label":"Action","draggable":true,"isOpen":true,"card":"{card}","stateAction":{"id":"flex-action-1683770325361","type":"Flyout","displayName":"Action","vlocityIcon":"standard-default","openUrlIn":"Current Window","flyoutType":"childCard","openFlyoutIn":"Modal","channelName":"close_modal","cardNode":"{record}","cardName":"ACFR_CaseLockError","flyoutLwc":"ACFR_CaseLockError","layoutType":"lightning"},"actionIndex":0,"reRenderFlyout":true}]'
+															button-variant="brand"
+															data-conditions='\{"group":[{"id":"state-new-condition-7","field":"QFR_RP_Locked__c","operator":"==","value":"true","type":"custom","hasMergeField":false}],"id":"state-condition-object","isParent":true}'
+															display-as-button="false"
+															flyout-channel="close_modal"
+															flyout-details='\{"openFlyoutIn":"Modal"}'
+															hide-action-icon="false"
+															icon-color="#ffffff"
+															icon-name="utility:lock"
+															icon-size="x-small"
+															label="Locked"
+															styles='\{"label":{"color":"#fff","fontSize":"","textAlign":"center","textDecoration":""}}'
+															icon-only="true"
+															re-render-flyout="true"
+															theme="slds"
+															><div
+																slot="modalflyout"
+																class="resumeerroraction0"
+															>
+																<c-cf-a-c-f-r_-case-lock-error
+																	data-style-id="state0element0block_element6block_element1_child"
+																	card-node="\{record}"
+																	parent-record={record}
+																	records={_records}
+																	parent-mergefields={card}
+																	record-id={recordId}
+																	object-api-name={objectApiName}
+																	parent-attribute="\{}"
+																></c-cf-a-c-f-r_-case-lock-error></div
+														></omnistudio-flex-action>
+													</div>
+													<div
+														data-style-id="state0element0block_element6block_element2"
+														class="slds-col slds-text-align_center slds-p-top_x-small slds-p-horizontal_small slds-size_4-of-12 condition-element"
+														data-rindex={rindex}
+														style="
+															background-color: #51376b;
+															border-radius: 5px;
+															color: #51376b;
+														"
+														data-conditions='\{"group":[{"id":"state-new-condition-7","field":"QFR_RP_Locked__c","operator":"!=","value":"true","type":"custom","hasMergeField":false},{"id":"state-new-group-1","group":[{"id":"state-new-condition-0","field":"Status","operator":"==","value":"Draft","type":"custom","hasMergeField":false},{"id":"state-new-condition-15","field":"Status","operator":"==","value":"Reissued","type":"custom","hasMergeField":false,"logicalOperator":"||"}],"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'
+													>
+														<omnistudio-flex-action
+															data-style-id="state0element0block_element6block_element2_child"
+															tracking-obj={_childCardTrackingObj}
+															class="state0element0block_element6block_element2_child flexActionElement"
+															data-action-element-class="state0element0block_element6block_element2_child"
+															onexecuteaction={performAction}
+															data-show-spinner="false"
+															data-element-label="blknewblock7action1clone0"
+															state-obj={record}
+															record={record}
+															card={card}
+															action-list='\[{"actionIndex":0,"card":"{card}","draggable":true,"isOpen":false,"key":"1663550107579-oiqljlaxa","label":"Action","stateAction":{"Community Named Page":{"targetName":"Form_Submission__c"},"displayName":"Action","hasExtraParams":true,"id":"flex-action-1665627503466","openUrlIn":"Current Window","targetParams":{"c__caseId":"{Id}"},"targetType":"Community Named Page","type":"Custom","vlocityIcon":"standard-default"}}]'
+															button-variant="brand"
+															data-conditions='\{"group":[{"id":"state-new-condition-7","field":"QFR_RP_Locked__c","operator":"!=","value":"true","type":"custom","hasMergeField":false},{"id":"state-new-group-1","group":[{"id":"state-new-condition-0","field":"Status","operator":"==","value":"Draft","type":"custom","hasMergeField":false},{"id":"state-new-condition-15","field":"Status","operator":"==","value":"Reissued","type":"custom","hasMergeField":false,"logicalOperator":"||"}],"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'
+															display-as-button="false"
+															flyout-channel="close_modal"
+															flyout-details="\{}"
+															hide-action-icon="true"
+															icon-color="#000"
+															icon-name="standard-default"
+															icon-size="x-small"
+															label="Resume"
+															preload-flyout="false"
+															styles='\{"label":{"color":"#fff","fontSize":"","textAlign":"center","textDecoration":""}}'
+															theme="slds"
+														></omnistudio-flex-action>
+													</div>
+													<div
+														data-style-id="state0element0block_element6block_element3"
+														class="slds-col slds-text-align_center slds-p-top_x-small slds-p-horizontal_small slds-size_4-of-12 condition-element"
+														data-rindex={rindex}
+														style="
+															background-color: #51376b;
+															border-radius: 5px;
+															color: #51376b;
+														"
+														data-conditions='\{"group":[{"field":"Status","hasMergeField":false,"id":"state-new-condition-21","operator":"==","type":"custom","value":"Draft"},{"field":"Status","hasMergeField":false,"id":"state-new-condition-28","logicalOperator":"||","operator":"==","type":"custom","value":"Submitted"},{"field":"Status","hasMergeField":false,"id":"state-new-condition-0","logicalOperator":"||","operator":"==","type":"custom","value":"Reissued"},{"field":"Status","hasMergeField":false,"id":"state-new-condition-9","logicalOperator":"||","operator":"==","type":"custom","value":"Re-Submitted"}],"id":"state-condition-object","isParent":true}'
+													>
+														<omnistudio-flex-action
+															data-style-id="state0element0block_element6block_element3_child"
+															tracking-obj={_childCardTrackingObj}
+															class="state0element0block_element6block_element3_child flexActionElement"
+															data-action-element-class="state0element0block_element6block_element3_child"
+															onexecuteaction={performAction}
+															data-show-spinner="false"
+															data-element-label="blknewblock6action1clone0"
+															state-obj={record}
+															record={record}
+															card={card}
+															action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"isTrackingDisabled":false,"key":"1665558716316-aaxrvzfro","label":"Action","stateAction":{"Community Named Page":{"targetName":"QFR_Report_Download__c"},"displayName":"Action","hasExtraParams":true,"id":"flex-action-1674431576977","openUrlIn":"New Tab/Window","targetParams":{"caseId":"{Id}"},"targetType":"Community Named Page","type":"Custom","vlocityIcon":"standard-default"}}]'
+															button-variant="brand"
+															data-conditions='\{"group":[{"field":"Status","hasMergeField":false,"id":"state-new-condition-21","operator":"==","type":"custom","value":"Draft"},{"field":"Status","hasMergeField":false,"id":"state-new-condition-28","logicalOperator":"||","operator":"==","type":"custom","value":"Submitted"},{"field":"Status","hasMergeField":false,"id":"state-new-condition-0","logicalOperator":"||","operator":"==","type":"custom","value":"Reissued"},{"field":"Status","hasMergeField":false,"id":"state-new-condition-9","logicalOperator":"||","operator":"==","type":"custom","value":"Re-Submitted"}],"id":"state-condition-object","isParent":true}'
+															display-as-button="false"
+															flyout-channel="close_modal"
+															flyout-details="\{}"
+															hide-action-icon="true"
+															icon-color="#000"
+															icon-name="standard-default"
+															icon-size="x-small"
+															label="Download"
+															preload-flyout="false"
+															styles='\{"label":{"color":"#fff","fontSize":"","textAlign":"center","textDecoration":""}}'
+															theme="slds"
+														></omnistudio-flex-action>
+													</div></div
+											></omnistudio-block>
+										</div></div
+								></omnistudio-block>
+							</div>
+						</div>
+					</omnistudio-flex-card-state>
+				</template>
+			</template>
+			<template if:false={hasRecords}>
+				<omnistudio-flex-card-state
+					record={record}
+					data-statue="false"
+					data-index="0"
+					data-rindex={rindex}
+					class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12"
+					tracking-obj={_childCardTrackingObj}
+				>
+					<div
+						if:true={cardLoaded}
+						class="slds-grid slds-wrap slds-p-top_xxx-small slds-p-bottom_xxx-small"
+						style=""
+					>
+						<div
+							data-style-id="state0element0"
+							class="slds-col slds-border_bottom slds-p-top_x-small slds-p-bottom_x-small slds-size_12-of-12 condition-element"
+							data-rindex={rindex}
+							style="border-bottom: #bbbbbb 1px solid; border-radius: 2px"
+							data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'
+						>
+							<omnistudio-block
+								data-style-id="state0element0_child"
+								record={record}
+								card={card}
+								collapsed-by-default="false"
+								collapsible="false"
+								data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'
+								label="Block"
+								theme="slds"
+								><div class="slds-grid slds-wrap">
+									<div
+										data-style-id="state0element0block_element0"
+										class="slds-col slds-text-align_left slds-size_1-of-12"
+										data-rindex={rindex}
+										style=""
+									>
+										<omnistudio-output-field
+											data-style-id="state0element0block_element0_child"
+											record={record}
+											card={card}
+											field-name="NAPSID__c"
+											label=""
+											placeholder="output"
+											type="text"
+											theme="slds"
+										></omnistudio-output-field>
+									</div>
+									<div
+										data-style-id="state0element0block_element1"
+										class="slds-col slds-text-align_center slds-size_2-of-12"
+										data-rindex={rindex}
+										style=""
+									>
+										<omnistudio-output-field
+											data-style-id="state0element0block_element1_child"
+											record={record}
+											card={card}
+											field-name="Provider_Name__c"
+											label=""
+											placeholder="output"
+											type="text"
+											theme="slds"
+										></omnistudio-output-field>
+									</div>
+									<div
+										data-style-id="state0element0block_element2"
+										class="slds-col slds-text-align_center slds-size_1-of-12 condition-element"
+										data-rindex={rindex}
+										style=""
+										data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'
+									>
+										<omnistudio-output-field
+											data-style-id="state0element0block_element2_child"
+											record={record}
+											card={card}
+											data-conditions='\{"group":[],"id":"state-condition-object","isParent":true}'
+											data-preload-conditional-element="false"
+											field-name=""
+											label=""
+											placeholder="QFR"
+											type="text"
+											theme="slds"
+										></omnistudio-output-field>
+									</div>
+									<div
+										data-style-id="state0element0block_element3"
+										class="slds-col slds-text-align_center slds-size_2-of-12"
+										data-rindex={rindex}
+										style=""
+									>
+										<omnistudio-output-field
+											data-style-id="state0element0block_element3_child"
+											record={record}
+											card={card}
+											field-name="Reporting_Period_End_Date__c"
+											format="D/M/YYYY"
+											label=""
+											placeholder=""
+											type="date"
+											theme="slds"
+										></omnistudio-output-field>
+									</div>
+									<div
+										data-style-id="state0element0block_element4"
+										class="slds-col slds-text-align_center slds-size_1-of-12"
+										data-rindex={rindex}
+										style=""
+									>
+										<omnistudio-output-field
+											data-style-id="state0element0block_element4_child"
+											record={record}
+											card={card}
+											field-name="Status"
+											label=""
+											placeholder="output"
+											type="text"
+											theme="slds"
+										></omnistudio-output-field>
+									</div>
+									<div
+										data-style-id="state0element0block_element5"
+										class="slds-col slds-text-align_center slds-size_2-of-12"
+										data-rindex={rindex}
+										style=""
+									>
+										<omnistudio-output-field
+											data-style-id="state0element0block_element5_child"
+											record={record}
+											card={card}
+											field-name="Reporting_Due_Date__c"
+											format="D/M/YYYY"
+											label=""
+											placeholder=""
+											type="date"
+											theme="slds"
+										></omnistudio-output-field>
+									</div>
+									<div
+										data-style-id="state0element0block_element6"
+										class="slds-col slds-size_3-of-12"
+										data-rindex={rindex}
+										style=""
+									>
+										<omnistudio-block
+											data-style-id="state0element0block_element6_child"
+											record={record}
+											card={card}
+											collapsed-by-default="false"
+											collapsible="false"
+											label="Block"
+											theme="slds"
+											><div class="slds-grid slds-wrap">
+												<div
+													data-style-id="state0element0block_element6block_element0"
+													class="slds-col slds-text-align_center slds-p-top_x-small slds-p-horizontal_small slds-size_4-of-12 condition-element"
+													data-rindex={rindex}
+													style="
+														background-color: #51376b;
+														border-radius: 5px;
+														color: #51376b;
+													"
+													data-conditions='\{"group":[{"id":"state-new-condition-0","field":"Status","operator":"==","value":"New","type":"custom","hasMergeField":false},{"id":"state-new-condition-47","field":"QFR_RP_Locked__c","operator":"!=","value":"true","type":"custom","hasMergeField":false,"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'
+												>
+													<omnistudio-flex-action
+														data-style-id="state0element0block_element6block_element0_child"
+														tracking-obj={_childCardTrackingObj}
+														class="state0element0block_element6block_element0_child flexActionElement"
+														data-action-element-class="state0element0block_element6block_element0_child"
+														onexecuteaction={performAction}
+														data-show-spinner="false"
+														data-element-label="actionstart"
+														state-obj={record}
+														record={record}
+														card={card}
+														action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"key":"1663550107579-oiqljlaxa","label":"Action","stateAction":{"Community Named Page":{"targetName":"Form_Submission__c"},"displayName":"Action","hasExtraParams":true,"id":"flex-action-1673250452294","openUrlIn":"Current Window","targetParams":{"c__caseId":"{Id}"},"targetType":"Community Named Page","type":"Custom","vlocityIcon":"standard-default"}}]'
+														button-variant="brand"
+														data-conditions='\{"group":[{"id":"state-new-condition-0","field":"Status","operator":"==","value":"New","type":"custom","hasMergeField":false},{"id":"state-new-condition-47","field":"QFR_RP_Locked__c","operator":"!=","value":"true","type":"custom","hasMergeField":false,"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'
+														display-as-button="false"
+														flyout-channel="close_modal"
+														flyout-details="\{}"
+														hide-action-icon="true"
+														icon-color="#000"
+														icon-name="standard-default"
+														icon-size="x-small"
+														label="Start"
+														preload-flyout="false"
+														styles='\{"label":{"color":"#fff","fontSize":"","textAlign":"center","textDecoration":""}}'
+														theme="slds"
+													></omnistudio-flex-action>
+												</div>
+												<div
+													data-style-id="state0element0block_element6block_element1"
+													class="slds-col slds-text-align_center slds-p-top_x-small slds-p-horizontal_small slds-size_4-of-12 condition-element"
+													data-rindex={rindex}
+													style="
+														background-color: #51376b;
+														border-radius: 5px;
+														color: #51376b;
+													"
+													data-conditions='\{"group":[{"id":"state-new-condition-7","field":"QFR_RP_Locked__c","operator":"==","value":"true","type":"custom","hasMergeField":false}],"id":"state-condition-object","isParent":true}'
+												>
+													<omnistudio-flex-action
+														data-style-id="state0element0block_element6block_element1_child"
+														tracking-obj={_childCardTrackingObj}
+														class="state0element0block_element6block_element1_child flexActionElement"
+														data-action-element-class="state0element0block_element6block_element1_child"
+														onexecuteaction={performAction}
+														data-show-spinner="false"
+														data-element-label="resumeerror"
+														state-obj={record}
+														record={record}
+														card={card}
+														action-list='\[{"key":"1683764126833-9q8em2t1y","label":"Action","draggable":true,"isOpen":true,"card":"{card}","stateAction":{"id":"flex-action-1683770325361","type":"Flyout","displayName":"Action","vlocityIcon":"standard-default","openUrlIn":"Current Window","flyoutType":"childCard","openFlyoutIn":"Modal","channelName":"close_modal","cardNode":"{record}","cardName":"ACFR_CaseLockError","flyoutLwc":"ACFR_CaseLockError","layoutType":"lightning"},"actionIndex":0,"reRenderFlyout":true}]'
+														button-variant="brand"
+														data-conditions='\{"group":[{"id":"state-new-condition-7","field":"QFR_RP_Locked__c","operator":"==","value":"true","type":"custom","hasMergeField":false}],"id":"state-condition-object","isParent":true}'
+														display-as-button="false"
+														flyout-channel="close_modal"
+														flyout-details='\{"openFlyoutIn":"Modal"}'
+														hide-action-icon="false"
+														icon-color="#ffffff"
+														icon-name="utility:lock"
+														icon-size="x-small"
+														label="Locked"
+														styles='\{"label":{"color":"#fff","fontSize":"","textAlign":"center","textDecoration":""}}'
+														icon-only="true"
+														re-render-flyout="true"
+														theme="slds"
+														><div slot="modalflyout" class="resumeerroraction0">
+															<c-cf-a-c-f-r_-case-lock-error
+																data-style-id="state0element0block_element6block_element1_child"
+																card-node="\{record}"
+																parent-record={record}
+																records={_records}
+																parent-mergefields={card}
+																record-id={recordId}
+																object-api-name={objectApiName}
+																parent-attribute="\{}"
+															></c-cf-a-c-f-r_-case-lock-error></div
+													></omnistudio-flex-action>
+												</div>
+												<div
+													data-style-id="state0element0block_element6block_element2"
+													class="slds-col slds-text-align_center slds-p-top_x-small slds-p-horizontal_small slds-size_4-of-12 condition-element"
+													data-rindex={rindex}
+													style="
+														background-color: #51376b;
+														border-radius: 5px;
+														color: #51376b;
+													"
+													data-conditions='\{"group":[{"id":"state-new-condition-7","field":"QFR_RP_Locked__c","operator":"!=","value":"true","type":"custom","hasMergeField":false},{"id":"state-new-group-1","group":[{"id":"state-new-condition-0","field":"Status","operator":"==","value":"Draft","type":"custom","hasMergeField":false},{"id":"state-new-condition-15","field":"Status","operator":"==","value":"Reissued","type":"custom","hasMergeField":false,"logicalOperator":"||"}],"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'
+												>
+													<omnistudio-flex-action
+														data-style-id="state0element0block_element6block_element2_child"
+														tracking-obj={_childCardTrackingObj}
+														class="state0element0block_element6block_element2_child flexActionElement"
+														data-action-element-class="state0element0block_element6block_element2_child"
+														onexecuteaction={performAction}
+														data-show-spinner="false"
+														data-element-label="blknewblock7action1clone0"
+														state-obj={record}
+														record={record}
+														card={card}
+														action-list='\[{"actionIndex":0,"card":"{card}","draggable":true,"isOpen":false,"key":"1663550107579-oiqljlaxa","label":"Action","stateAction":{"Community Named Page":{"targetName":"Form_Submission__c"},"displayName":"Action","hasExtraParams":true,"id":"flex-action-1665627503466","openUrlIn":"Current Window","targetParams":{"c__caseId":"{Id}"},"targetType":"Community Named Page","type":"Custom","vlocityIcon":"standard-default"}}]'
+														button-variant="brand"
+														data-conditions='\{"group":[{"id":"state-new-condition-7","field":"QFR_RP_Locked__c","operator":"!=","value":"true","type":"custom","hasMergeField":false},{"id":"state-new-group-1","group":[{"id":"state-new-condition-0","field":"Status","operator":"==","value":"Draft","type":"custom","hasMergeField":false},{"id":"state-new-condition-15","field":"Status","operator":"==","value":"Reissued","type":"custom","hasMergeField":false,"logicalOperator":"||"}],"logicalOperator":"&&"}],"id":"state-condition-object","isParent":true}'
+														display-as-button="false"
+														flyout-channel="close_modal"
+														flyout-details="\{}"
+														hide-action-icon="true"
+														icon-color="#000"
+														icon-name="standard-default"
+														icon-size="x-small"
+														label="Resume"
+														preload-flyout="false"
+														styles='\{"label":{"color":"#fff","fontSize":"","textAlign":"center","textDecoration":""}}'
+														theme="slds"
+													></omnistudio-flex-action>
+												</div>
+												<div
+													data-style-id="state0element0block_element6block_element3"
+													class="slds-col slds-text-align_center slds-p-top_x-small slds-p-horizontal_small slds-size_4-of-12 condition-element"
+													data-rindex={rindex}
+													style="
+														background-color: #51376b;
+														border-radius: 5px;
+														color: #51376b;
+													"
+													data-conditions='\{"group":[{"field":"Status","hasMergeField":false,"id":"state-new-condition-21","operator":"==","type":"custom","value":"Draft"},{"field":"Status","hasMergeField":false,"id":"state-new-condition-28","logicalOperator":"||","operator":"==","type":"custom","value":"Submitted"},{"field":"Status","hasMergeField":false,"id":"state-new-condition-0","logicalOperator":"||","operator":"==","type":"custom","value":"Reissued"},{"field":"Status","hasMergeField":false,"id":"state-new-condition-9","logicalOperator":"||","operator":"==","type":"custom","value":"Re-Submitted"}],"id":"state-condition-object","isParent":true}'
+												>
+													<omnistudio-flex-action
+														data-style-id="state0element0block_element6block_element3_child"
+														tracking-obj={_childCardTrackingObj}
+														class="state0element0block_element6block_element3_child flexActionElement"
+														data-action-element-class="state0element0block_element6block_element3_child"
+														onexecuteaction={performAction}
+														data-show-spinner="false"
+														data-element-label="blknewblock6action1clone0"
+														state-obj={record}
+														record={record}
+														card={card}
+														action-list='\[{"actionIndex":0,"card":"{card}","draggable":false,"isOpen":true,"isTrackingDisabled":false,"key":"1665558716316-aaxrvzfro","label":"Action","stateAction":{"Community Named Page":{"targetName":"QFR_Report_Download__c"},"displayName":"Action","hasExtraParams":true,"id":"flex-action-1674431576977","openUrlIn":"New Tab/Window","targetParams":{"caseId":"{Id}"},"targetType":"Community Named Page","type":"Custom","vlocityIcon":"standard-default"}}]'
+														button-variant="brand"
+														data-conditions='\{"group":[{"field":"Status","hasMergeField":false,"id":"state-new-condition-21","operator":"==","type":"custom","value":"Draft"},{"field":"Status","hasMergeField":false,"id":"state-new-condition-28","logicalOperator":"||","operator":"==","type":"custom","value":"Submitted"},{"field":"Status","hasMergeField":false,"id":"state-new-condition-0","logicalOperator":"||","operator":"==","type":"custom","value":"Reissued"},{"field":"Status","hasMergeField":false,"id":"state-new-condition-9","logicalOperator":"||","operator":"==","type":"custom","value":"Re-Submitted"}],"id":"state-condition-object","isParent":true}'
+														display-as-button="false"
+														flyout-channel="close_modal"
+														flyout-details="\{}"
+														hide-action-icon="true"
+														icon-color="#000"
+														icon-name="standard-default"
+														icon-size="x-small"
+														label="Download"
+														preload-flyout="false"
+														styles='\{"label":{"color":"#fff","fontSize":"","textAlign":"center","textDecoration":""}}'
+														theme="slds"
+													></omnistudio-flex-action>
+												</div></div
+										></omnistudio-block>
+									</div></div
+							></omnistudio-block>
+						</div>
+					</div>
+				</omnistudio-flex-card-state>
+			</template>
+		</template>
+		<template if:true={hasError}> {error} </template>
+
+		<omnistudio-action
+			action-wrapperclass="slds-hide"
+			re-render-flyout
+			class="action-trigger slds-col"
+			onupdateos={updateOmniscript}
+			onselectcards={updateSelectedCards}
+			onsetvalue={updateAction}
+			onfireactionevent={actionEvtHandler}
+		>
+		</omnistudio-action>
+
+		<omnistudio-action
+			class="execute-action"
+			re-render-flyout
+			action-wrapperclass="slds-hide"
+			onupdateos={updateOmniscript}
+			onselectcards={updateSelectedCards}
+			onsetvalue={updateAction}
+			onfireactionevent={actionEvtHandler}
+		>
+		</omnistudio-action>
+	</div>
+</template>

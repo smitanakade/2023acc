@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Receipt_on_Request_for_Further_Information</fullName>
+    <active>true</active>
+    <label>Record Receipt on Request for Further Information</label>
+    <picklistValues>
+        <picklist>GPMS_Decision__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision by Provider not to Activate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GPMS_Delegate_State__c</picklist>
+        <values>
+            <fullName>ACT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GPMS_Request_Type__c</picklist>
+        <values>
+            <fullName>Reconsideration initiated by Secretary %28S85-4%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration requested by affected person %28S85-5%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

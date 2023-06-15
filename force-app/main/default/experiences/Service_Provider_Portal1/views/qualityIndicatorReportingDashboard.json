@@ -1,0 +1,75 @@
+{
+  "appPageId" : "6e588cb8-12f7-4459-9075-b7d0a3edc56b",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "dfbaec5c-7c3a-4a6c-8ab8-960ef4e04a28",
+  "label" : "Quality Indicator Reporting Dashboard",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "6648144e-28e8-48c9-a954-e56d3750b0f9",
+          "columns" : [ {
+            "UUID" : "44ed3e0c-0ebc-4c77-9a6b-ca9323c840a7",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6648144e-28e8-48c9-a954-e56d3750b0f9",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:qiReportDashBanner",
+          "id" : "72d15ed7-60dc-4684-a9d1-68e93ad96c33",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "c:qiRepDash",
+          "id" : "451c0e95-bd71-44b5-8ab7-b02e01a1e635",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "44ed3e0c-0ebc-4c77-9a6b-ca9323c840a7",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "78657dfd-aac3-42a7-bf5d-41dfbe6c8845",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Quality Indicator Reporting Dashboard"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "ecb94ecc-4dad-4475-bd3a-d871a00ecc49",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a357259a-bf85-4db9-a4b7-1c6149afd45e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-quality-indicator-reporting-dashboard"
+}

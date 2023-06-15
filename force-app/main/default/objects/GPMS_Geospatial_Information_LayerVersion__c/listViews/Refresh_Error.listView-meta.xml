@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Refresh_Error</fullName>
+    <columns>NAME</columns>
+    <columns>GPMS_Refresh_Layer_Version__c</columns>
+    <columns>GPMS_Layer__c</columns>
+    <columns>GPMS_Layer_Id__c</columns>
+    <columns>GPMS_Version__c</columns>
+    <columns>GPMS_Failure_Detail__c</columns>
+    <columns>GPMS_Failure_Date_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>GPMS_Refresh_Status__c</field>
+        <operation>equals</operation>
+        <value>Error</value>
+    </filters>
+    <label>Refresh Error</label>
+</ListView>

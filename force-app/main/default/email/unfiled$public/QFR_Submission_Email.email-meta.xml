@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send when provider submits the QFR - excel not attached</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>QFR_DoH_Aged_Care_Letterhead</letterhead>
+    <name>QFR Submission Email</name>
+    <style>formalLetter</style>
+    <subject>QFR submitted - {!Case.Reporting_Period_End_Date__c} - {!Case.Account} [SEC=OFFICIAL]</subject>
+    <textOnly>﻿Dear {!Contact.Name}
+
+
+
+Thanks for submitting your QFR for the period ending {!Case.Reporting_Period_End_Date__c} for {!Case.Provider_Name__c}.
+
+
+
+Note that an excel workbook (.xlsx) with a copy of the answers you provided can be downloaded from the QFR system.
+
+
+
+If there are any queries regarding your submission, we will contact you for further details.
+
+
+
+For more information about the QFR, please click here
+
+
+
+
+
+Regards,
+
+
+
+
+
+Australian Government Department of Health and Aged Care
+
+
+
+
+
+
+
+The Department of Health and Aged Care acknowledges First Nations peoples as the Traditional Owners of Country throughout Australia, and their continuing connection to land, sea and community. We pay our respects to them and their cultures, and to all Elders both past and present.
+
+
+
+THIS IS AN AUTOMATED MESSAGE – PLEASE DO NOT REPLY DIRECTLY TO THIS EMAIL.
+
+
+
+
+
+
+
+
+
+
+IMPORTANT: You are receiving this email because you provide aged care services, funded by the Australian Government under the Commonwealth Aged Care Act 1997 or via a Commonwealth Home Support Programme grant agreement. If you are unsubscribing from this service, the Department of Health and Aged Care requests that you supply an alternate email address, for example a group mailbox, to continue receiving important information for your organisation.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

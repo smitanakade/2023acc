@@ -1,0 +1,17 @@
+<template>
+    <section class="banner-container">
+        <template if:true={loaded}>
+            <h1>{greeting} {userFullName}</h1>
+            <h2>
+                <span class="slds-assistive-text">Your organisation:</span>{userAccountName}
+            </h2>
+        </template>
+        <div class="slds-spinner_container banner-spinner" if:false={loaded}>
+            <div role="status" class="slds-spinner slds-spinner_small slds-spinner_inverse">
+                <span class="slds-assistive-text">Loading your details</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </section>
+</template>

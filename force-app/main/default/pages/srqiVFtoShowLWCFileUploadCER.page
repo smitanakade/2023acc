@@ -1,0 +1,24 @@
+<!-- this is for file staging -->
+<apex:page showHeader="false" lightningStyleSheets="true" standardController="SRQI_CER__c"  recordSetVar="SRQI_CER__c">
+<apex:includeLightning />
+<div id="lwccontainer">
+    <apex:form >
+        <apex:pageBlock >
+           <apex:commandButton action="{!Cancel}" value="Cancel"/>
+        </apex:pageBlock>
+        </apex:form>
+</div>
+<script>
+//  var valueRC = '{!$CurrentPage.parameters.qString}';
+$Lightning.use("c:srqiAuraAppForVFforLWC", function(){
+    $Lightning.createComponent("c:srqiFileUpload",{
+
+        valueRC: 'CEI'
+    },"lwccontainer",
+    function(cmp){
+    // do your staff
+    });
+    
+});
+</script>
+</apex:page>

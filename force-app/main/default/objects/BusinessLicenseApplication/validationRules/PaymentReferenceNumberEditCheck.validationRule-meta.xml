@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PaymentReferenceNumberEditCheck</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT($Setup.BypassTriggers__c.BypassValidationRules__c),NOT(ISNEW()),ISCHANGED(PaymentReferenceNumber__c),NOT(ISPICKVAL(NewStatus__c,&apos;Application submission receipt&apos;)))</errorConditionFormula>
+    <errorMessage>Payment Reference Number cannot be updated.</errorMessage>
+</ValidationRule>

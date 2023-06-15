@@ -1,0 +1,59 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-06-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+   <div class="filter-search-layout">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item padding="around-small">
+                <lightning-input
+                    type="search"
+                    class="lightning-input_input"
+                    label="Search by service name or ID"
+                    data-name="searchbox"
+                    placeholder="Search service name or ID"
+                    onchange={updateSearch}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <c-multi-select-combobox
+                    label="Period ending"
+                    name="Period Ending"
+                    options={optionsRP}
+                    onchange={handleChangedRP}
+                    placeholder='All periods'>
+                </c-multi-select-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <c-multi-select-combobox
+                    label="Status"
+                    name="Status"
+                    options={optionsStatus}
+                    onchange={handleChangedStatus}
+                    placeholder='All statuses'>
+                </c-multi-select-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item alignment-bump="top" padding="around-small">
+                <div class="slds-m-top_x-small">
+                    <lightning-button
+                        variant="brand"
+                        class="filter-button slds-m-left_x-small slds-m-top_x-small "
+                        label="Apply Filters"
+                        title="Click to get table data"
+                        onclick={handleFiletrEvent}></lightning-button>
+                    <lightning-button
+                        variant="base"
+                        class="filter-button-clear slds-m-left_x-small"
+                        label="Clear Filters"
+                        title="Clear Filters"
+                        onclick={handleClearClick}
+                        disabled={isDisabled}>
+                    </lightning-button>
+                    
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

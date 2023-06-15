@@ -1,0 +1,36 @@
+<template>
+    <template if:true={showEverything}>
+        <div class="slds-box container">
+            <div class="content">
+                <div class="info">
+                    <lightning-icon
+                        icon-name="utility:info"
+                        size="xx-small"
+                        class="info-icon"
+                    ></lightning-icon>
+                </div>
+                <div class="description">
+                    <div class="title">
+                        <p>Extended functionality of the dashboard</p>
+                    </div>
+                    <div>
+                        <p>
+                            Clicking on the bar chart icon on the top right
+                            corner will allow user to access the complete range
+                            of features available on the dashboard, such as
+                            PDF/Excel download capability and various other
+                            functionalities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="close">
+                <lightning-icon
+                    icon-name="utility:close"
+                    size="xx-small"
+                    onclick={handleClose}
+                ></lightning-icon>
+            </div>
+        </div>
+    </template>
+</template>

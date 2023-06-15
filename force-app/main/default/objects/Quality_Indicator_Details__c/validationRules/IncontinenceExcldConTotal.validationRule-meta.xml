@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IncontinenceExcldConTotal</fullName>
+    <active>true</active>
+    <description>Total number of CR with incontinence should not be more than total number of CR assessed.</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    ISPICKVAL(Status__c, &apos;Completed&apos;),
+    (BLANKVALUE(No_CR_Assessed_incontinence__c , 0) + 
+BLANKVALUE(No_CR_IAD__c, 0)) &gt; BLANKVALUE(No_CR_Assessed__c, 0))</errorConditionFormula>
+    <errorDisplayField>No_CR_Assessed_incontinence__c</errorDisplayField>
+    <errorMessage>The total number of care recipients with incontinence, plus total number excluded because they did not have incontinence, cannot exceed the total number of care recipients assessed.</errorMessage>
+</ValidationRule>

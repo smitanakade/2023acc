@@ -1,0 +1,205 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-04-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+
+<template>
+	<template if:true={initComplete}>
+		<template if:false={isReadOnly}>
+			<c-omni-datatable-excel
+				record-id={recordId}
+				onexcelupload={handleExcelUpload}
+				cols={cols}
+				categories={categories}
+				form-type={formType}
+			></c-omni-datatable-excel>
+		</template>
+		<div class={datatableContainerClass}>
+			<div
+				if:false={isReadOnly}
+				class="information-container slds-var-p-around_medium"
+			>
+				{saveInformation}
+			</div>
+
+			<div class="datatable-header">
+				<c-omni-datatable-header
+					columns={colOptions}
+					sections={rowOptions}
+					onexpandtoggle={handleExpandToggle}
+					oncommentsonlytoggle={handleCommentsOnlyToggle}
+					onerrorsonlytoggle={handleErrorsOnlyToggle}
+					oncolumnselected={handleColumnSelected}
+					onsectionselected={handleSectionSelected}
+					onviewchange={handleViewChange}
+				></c-omni-datatable-header>
+			</div>
+
+			<div if:false={errorMessage} class="table-container">
+				<!-- Table Headings -->
+				<table class="datatable">
+					<thead>
+						<tr class="table-row-element">
+							<!-- Render each column heading -->
+							<template iterator:col={displayCols}>
+								<th
+									class={col.value.class}
+									key={col.value.id}
+									data-col-name={col.value.name}
+									scope="col"
+								>
+									<div class="display-flex">
+										<div>
+											<template if:true={col.value.showToggle}>
+												<lightning-input
+													class="slds-shrink-none"
+													data-col-index={col.index}
+													label=""
+													checked={col.value.isEnabled}
+													message-toggle-active=""
+													message-toggle-inactive=""
+													onchange={handleColumnToggle}
+													type="toggle"
+													style="margin-left: -8px"
+												></lightning-input>
+											</template>
+										</div>
+										<span class="table-header-value" data-title={col.value.name}
+											>{col.value.name}
+											<template if:true={col.value.hasInvalidCell}>
+												<svg
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													class="slds-m-left_x-small slds-m-bottom_xxx-small"
+												>
+													<g clip-path="url(#clip0_4192_14004)">
+														<path
+															d="M1 21H23L12 2L1 21ZM13 18H11V16H13V18ZM13 14H11V10H13V14Z"
+															fill="#970a3a"
+														/>
+													</g>
+													<defs>
+														<clipPath>
+															<rect width="24" height="24" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+											</template>
+										</span>
+									</div>
+								</th>
+							</template>
+						</tr>
+					</thead>
+
+					<!-- Collapsible headings-->
+					<template
+						for:each={categories}
+						for:item="category"
+						for:index="categoryIndex"
+					>
+						<tbody class="table-body" key={category.name}>
+							<tr
+								class="table-row-element slds-var-p-around_small"
+								data-row-name={category.name}
+							>
+								<th>
+									<div class="table-body-header display-flex">
+										<span
+											class="display-flex f-a-items-center cursor-pointer user-select-none"
+											data-category-index={categoryIndex}
+											onclick={handleCategoryClick}
+										>
+											<template if:true={category.isExpanded}>
+												<lightning-icon
+													class="category-icon slds-var-m-right_x-small"
+													icon-name="utility:chevrondown"
+													size="xx-small"
+													alternative-text="Indicates category is expanded"
+												></lightning-icon>
+											</template>
+											<template if:false={category.isExpanded}>
+												<lightning-icon
+													class="category-icon slds-var-m-right_x-small"
+													icon-name="utility:chevronright"
+													size="xx-small"
+													alternative-text="Indicates category is collapsed"
+												></lightning-icon>
+											</template>
+											<h2 class="category-label slds-text-heading_medium">
+												{category.name}
+											</h2>
+										</span>
+										<c-tooltip-user-guide-link-datatable></c-tooltip-user-guide-link-datatable>
+									</div>
+								</th>
+							</tr>
+						</tbody>
+
+						<!-- Data Cells - Contents of collapsible sections -->
+						<template if:true={category.isExpanded}>
+							<tbody class="table-body" key={category.order}>
+								<template for:each={category.displayRows} for:item="rowItem">
+									<tr
+										class="table-row-element"
+										key={rowItem.id}
+										data-row-name={rowItem.name}
+										onchange={handleCellChange}
+										onpicklistchange={handlePicklistChange}
+										onkeydown={handleCellKeyDown}
+										onfocusout={handleCellFocusOut}
+										onfocusin={handleCellFocusIn}
+									>
+										<th
+											class="slds-text-title_bold"
+											style={rowItem.inlineStyle}
+											scope="row"
+										>
+											<div class="table-body-header">{rowItem.name}</div>
+										</th>
+										<template for:each={rowItem.displayEntries} for:item="cell">
+											<td key={cell.cellId}>
+												<c-acfr-datatable-cell
+													record-id={cell.cellId}
+													cell-value={cell.displayValue}
+													type={cell.type}
+													picklist-options={cell.picklistVal}
+													allow-negatives={cell.allowNegatives}
+													show-errors={cell.showErrors}
+													is-read-only={cell.isReadOnly}
+													is-hidden={cell.isHidden}
+													is-valid={cell.isValid}
+													cell-error-message={cell.displayErrorMessage}
+													provider-explanation={cell.displayProviderExplanation}
+													qa-outcome={cell.displayQaOutcome}
+													qa-comments={cell.displayQaComments}
+													hard-validation={cell.isHardValidation}
+													errors-only-view={errorsOnly}
+													onexplanationupdate={handleExplanationChange}
+												></c-acfr-datatable-cell>
+											</td>
+										</template>
+									</tr>
+								</template>
+							</tbody>
+						</template>
+					</template>
+				</table>
+			</div>
+		</div>
+	</template>
+	<template if:false={initComplete}>
+		<div class="table-container slds-is-relative" style="min-height: 200px">
+			<lightning-spinner
+				variant="base"
+				alternative-text="Loading table, please wait..."
+				class="slds-align_absolute-center"
+			></lightning-spinner>
+		</div>
+	</template>
+</template>

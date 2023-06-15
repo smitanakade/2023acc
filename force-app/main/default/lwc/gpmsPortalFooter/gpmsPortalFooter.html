@@ -1,0 +1,26 @@
+<template>
+    <footer>
+        <section class="footer-links">
+            <template if:true={footerLinks} for:each={footerLinks} for:item="list">
+                <ul key={list.heading}>
+                    <li>
+                        <h2>{list.heading}</h2>
+                    </li>
+                    <template for:each={list.links} for:item="link">
+                        <li key={link.label}>
+                            <a href={link.url} target={link.target}>{link.label}</a>
+                        </li>
+                    </template>
+                </ul>    
+            </template>
+        </section>
+        <section class="footer-info">
+            <div class="logos">
+                <img src={logoGOV} alt="Australian Government logo" class="slds-var-m-right_large" />
+            </div>
+            <div class="acknowledgement-of-country">
+                <p>We acknowledge the Traditional Custodians of the lands we live on. We pay our respects to all Elders, past and present, of all Aboriginal and Torres Strait Islander nations.</p>
+            </div>
+        </section>
+    </footer>
+</template>

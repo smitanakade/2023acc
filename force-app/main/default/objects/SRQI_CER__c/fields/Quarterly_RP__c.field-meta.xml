@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quarterly_RP__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Indicates the quarterly reporting period CER record was loaded.</description>
+    <externalId>false</externalId>
+    <label>Quarterly RP</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Value must be a quartely reporting period</errorMessage>
+        <filterItems>
+            <field>Reporting_Period__c.Reporting_Period_Type__c</field>
+            <operation>equals</operation>
+            <value>Quarter</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Reporting_Period__c</referenceTo>
+    <relationshipLabel>Consumer Experience Reports (Quarterly RP)</relationshipLabel>
+    <relationshipName>Consumer_Experience_Reports1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

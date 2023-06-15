@@ -1,0 +1,41 @@
+.gpms-user-list-item {
+    align-items: center;
+    display: flex;
+    font-size: var(--font-size-paragraph-plus1);
+    gap: var(--spacing-xx-large);
+    justify-content: space-between;
+    line-height: var(--line-height-paragraph-normal);
+    padding: var(--spacing-large) var(--spacing-medium);
+}
+
+.gpms-user-list-item:nth-child(even) {
+    background: var(--gpmsColGrey1);
+}
+
+.user-details {
+    max-width: 100%;
+}
+
+.user-access {
+    color: var(--gpmsColGrey6);
+    font-size: var(--font-size-paragraph-normal);
+    margin-top: var(--spacing-x-small);
+}
+
+.color__weak {
+    color: var(--gpmsColGrey6);
+}
+
+.empty {
+    font-size: var(--font-size-paragraph-plus1);
+    margin: var(--spacing-xx-large) 0;
+}
+
+/* Breakpoints */
+
+/* Viewport >= 1024 */
+@media (min-width: 64em) {
+    .user-details {
+        max-width: calc(100% - 200px);
+    }
+}

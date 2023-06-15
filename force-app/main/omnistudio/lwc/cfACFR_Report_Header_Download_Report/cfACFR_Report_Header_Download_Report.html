@@ -1,0 +1,93 @@
+<template>
+            <div class="slds-grid slds-wrap slds-is-relative containersize">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <omnistudio-toast class="flexcard-toast-element" theme="slds" title="" message="" styletype=""> </omnistudio-toast>
+</div>
+            <div if:true={showLoader} class="slds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <omnistudio-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="medium"
+      theme="slds"
+      ></omnistudio-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card outer-header slds-p-around_x-small slds-m-around_none " style="      
+         ">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col   slds-size_8-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element0_child"   card={card}  record={record}  merge-field="%3Cdiv%3E%3Cspan%20style=%22color:%20#ecf0f1;%22%3E%7BAccountName%7D%3C/span%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element1" class="slds-col   slds-size_2-of-12  " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1_child flexActionElement" 
+        data-action-element-class="state0element0block_element1_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block0action1"   card={card}  record={record}  state-obj={record}  styles='\{"label":{"color":"#FFFFFF"}}'  label="Save and Close"  icon-size="x-small"  icon-name="utility:save"  icon-color="#FFFFFF"  flyout-details='\{}'  display-as-button="true"  action-list='\[{"actionIndex":0,"draggable":false,"isOpen":true,"key":"1667174068765-nqnft5pyg","label":"Action","stateAction":{"Community Named Page":{"targetName":"Financial_Reporting__c"},"id":"flex-action-1675051347159","openUrlIn":"Current Window","targetType":"Community Named Page","type":"Custom"}},{"actionIndex":1,"card":"{card}","draggable":true,"isOpen":false,"key":"1667273088730-frmm8uw3m","label":"Action","stateAction":{"displayName":"Action","eventName":"Omniscript","id":"flex-action-1667457378343","message":"HandleSaveAndCloseEvent","openUrlIn":"Current Window","subType":"PubSub","type":"Event","vlocityIcon":"standard-default"}}]'  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element0block_element2" class="slds-col  slds-text-align_center slds-p-top_x-small slds-p-horizontal_small  slds-size_2-of-12  " data-rindex={rindex} style="background-color:#51376B;      
+    border-radius:5px;    color:#51376B; " ><omnistudio-flex-action data-style-id="state0element0block_element2_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element2_child flexActionElement" 
+        data-action-element-class="state0element0block_element2_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="downloaddraftqfr"   card={card}  record={record}  state-obj={record}  styles='\{"label":{"color":"#ffffff","textAlign":"center"}}'  label="Download Draft"  icon-name="standard-default"  icon-color="#000"  hide-action-icon="true"  flyout-details='\{}'  action-list='\[{"actionIndex":0,"draggable":true,"isOpen":true,"key":"1669596345152-thj3ue2m5","label":"Action","stateAction":{"Community Named Page":{"targetName":"QFR_Report_Download__c"},"actionConditions":{"group":[],"id":"state-condition-object","isParent":true},"hasExtraParams":true,"id":"flex-action-1675212207812","openUrlIn":"New Tab/Window","targetParams":{"caseId":"{recordId}"},"targetType":"Community Named Page","type":"Custom"}}]'  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element0block_element3" class="slds-col   slds-size_1-of-12  " data-rindex={rindex} style="" >
+    <omnistudio-flex-menu data-style-id="state0element0block_element3_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  card={card}  record={record}  variant=""  type="action"  size="large"  position="left"  overflow="true"  icon-size="small"  icon-position=""  icon-name="utility:down"  icon-color="#FFFFFF" 
+    theme="slds" > 
+     
+    </omnistudio-flex-menu>
+    </div><div data-style-id="state0element0block_element4" class="slds-col   slds-size_7-of-12  " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element0block_element4_child"   card={card}  record={record}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-size:%2024pt;%20color:%20#ecf0f1;%22%3EQuarterly%20Financial%20Report%3C/span%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element5" class="slds-col   slds-size_10-of-12  " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element0block_element5_child"   card={card}  record={record}  merge-field="%3Cdiv%3E%3Cspan%20style=%22color:%20#ecf0f1;%22%3ENAPDSID:%20%7BNAPSID%7D%20%7C%20Reporting%20Period:%20%7BReportingPeriod%7D%20%7C%20Period%20Ending:%20%7Bend_date%7D&nbsp;%3C/span%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <omnistudio-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state slds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="slds-grid slds-wrap slds-card outer-header slds-p-around_x-small slds-m-around_none " style="      
+         ">
+          <div data-style-id="state0element0" class="slds-col   slds-p-around_x-small slds-size_12-of-12 " data-rindex={rindex} style="" >
+    <omnistudio-block data-style-id="state0element0_child"  card={card}  record={record}  label="Block"  collapsible="false"  collapsed-by-default="false"  theme="slds"  ><div class="slds-grid slds-wrap">
+          <div data-style-id="state0element0block_element0" class="slds-col   slds-size_8-of-12  " data-rindex={rindex} style="      
+         " ><omnistudio-output-field data-style-id="state0element0block_element0_child"   card={card}  record={record}  merge-field="%3Cdiv%3E%3Cspan%20style=%22color:%20#ecf0f1;%22%3E%7BAccountName%7D%3C/span%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element1" class="slds-col   slds-size_2-of-12  " data-rindex={rindex} style="" ><omnistudio-flex-action data-style-id="state0element0block_element1_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element1_child flexActionElement" 
+        data-action-element-class="state0element0block_element1_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="block0action1"   card={card}  record={record}  state-obj={record}  styles='\{"label":{"color":"#FFFFFF"}}'  label="Save and Close"  icon-size="x-small"  icon-name="utility:save"  icon-color="#FFFFFF"  flyout-details='\{}'  display-as-button="true"  action-list='\[{"actionIndex":0,"draggable":false,"isOpen":true,"key":"1667174068765-nqnft5pyg","label":"Action","stateAction":{"Community Named Page":{"targetName":"Financial_Reporting__c"},"id":"flex-action-1675051347159","openUrlIn":"Current Window","targetType":"Community Named Page","type":"Custom"}},{"actionIndex":1,"card":"{card}","draggable":true,"isOpen":false,"key":"1667273088730-frmm8uw3m","label":"Action","stateAction":{"displayName":"Action","eventName":"Omniscript","id":"flex-action-1667457378343","message":"HandleSaveAndCloseEvent","openUrlIn":"Current Window","subType":"PubSub","type":"Event","vlocityIcon":"standard-default"}}]'  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element0block_element2" class="slds-col  slds-text-align_center slds-p-top_x-small slds-p-horizontal_small  slds-size_2-of-12  " data-rindex={rindex} style="background-color:#51376B;      
+    border-radius:5px;    color:#51376B; " ><omnistudio-flex-action data-style-id="state0element0block_element2_child"  tracking-obj={_childCardTrackingObj}  class= "state0element0block_element2_child flexActionElement" 
+        data-action-element-class="state0element0block_element2_child" onexecuteaction={performAction} data-show-spinner="false"
+        data-element-label="downloaddraftqfr"   card={card}  record={record}  state-obj={record}  styles='\{"label":{"color":"#ffffff","textAlign":"center"}}'  label="Download Draft"  icon-name="standard-default"  icon-color="#000"  hide-action-icon="true"  flyout-details='\{}'  action-list='\[{"actionIndex":0,"draggable":true,"isOpen":true,"key":"1669596345152-thj3ue2m5","label":"Action","stateAction":{"Community Named Page":{"targetName":"QFR_Report_Download__c"},"actionConditions":{"group":[],"id":"state-condition-object","isParent":true},"hasExtraParams":true,"id":"flex-action-1675212207812","openUrlIn":"New Tab/Window","targetParams":{"caseId":"{recordId}"},"targetType":"Community Named Page","type":"Custom"}}]'  theme="slds"  ></omnistudio-flex-action>
+      </div><div data-style-id="state0element0block_element3" class="slds-col   slds-size_1-of-12  " data-rindex={rindex} style="" >
+    <omnistudio-flex-menu data-style-id="state0element0block_element3_child" 
+    onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction}  card={card}  record={record}  variant=""  type="action"  size="large"  position="left"  overflow="true"  icon-size="small"  icon-position=""  icon-name="utility:down"  icon-color="#FFFFFF" 
+    theme="slds" > 
+     
+    </omnistudio-flex-menu>
+    </div><div data-style-id="state0element0block_element4" class="slds-col   slds-size_7-of-12  " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element0block_element4_child"   card={card}  record={record}  merge-field="%3Cdiv%3E%3Cspan%20style=%22font-size:%2024pt;%20color:%20#ecf0f1;%22%3EQuarterly%20Financial%20Report%3C/span%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div><div data-style-id="state0element0block_element5" class="slds-col   slds-size_10-of-12  " data-rindex={rindex} style="" ><omnistudio-output-field data-style-id="state0element0block_element5_child"   card={card}  record={record}  merge-field="%3Cdiv%3E%3Cspan%20style=%22color:%20#ecf0f1;%22%3ENAPDSID:%20%7BNAPSID%7D%20%7C%20Reporting%20Period:%20%7BReportingPeriod%7D%20%7C%20Period%20Ending:%20%7Bend_date%7D&nbsp;%3C/span%3E%3C/div%3E"  theme="slds"  ></omnistudio-output-field>
+      </div>
+        </div></omnistudio-block>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <omnistudio-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </omnistudio-action>
+  
+            <omnistudio-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </omnistudio-action>
+            </div>
+          </template>

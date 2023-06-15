@@ -1,0 +1,59 @@
+.gpms-side-navigation {
+    font-size: var(--font-size-paragraph-plus1);
+    color: var(--gpmsColGrey7);
+}
+
+.gpms-side-navigation ul li {
+    border-top: 1px solid var(--gpmsColGrey3);
+}
+
+.gpms-navigation-button {
+    border-radius: 0;
+    border: 0;
+    justify-content: space-between;
+    line-height: var(--spacing-large);
+    padding: var(--spacing-medium) var(--spacing-large);
+    text-align: left;
+    width: 100%;
+}
+
+.gpms-navigation-button div,
+.gpms-navigation-button lightning-icon {
+    pointer-events: none;
+}
+
+.gpms-navigation-button:hover,
+.gpms-navigation-button:focus {
+    background-color: var(--gpmsColSecondaryLight3);
+}
+
+.gpms-navigation-button.active {
+    color: var(--gpmsColGrey0);
+    background-color: var(--gpmsColsecondaryDark);
+    pointer-events: none;
+}
+
+.gpms-side-navigation ul .gpms-navigation-button {
+    padding-left: calc(2.25 * var(--spacing-medium));
+}
+
+span {
+    color: var(--gpmsColGrey8);
+    display: block;
+    font-size: var(--font-size-paragraph-normal);
+    margin-top: var(--spacing-xx-small);
+}
+
+.gpms-navigation-button:hover span,
+.gpms-navigation-button:focus span {
+    color: var(--gpmsColGrey6);
+}
+
+.gpms-navigation-button.active span {
+    color: var(--gpmsColGrey0);
+}
+
+.limit {
+    width:90%;
+    word-wrap: break-word;
+}

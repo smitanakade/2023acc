@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SCS_03_AssociationStartDate</fullName>
+    <active>true</active>
+    <description>Start date must be populated wen creating an SCS record</description>
+    <errorConditionFormula>AND(RecordType.Name = &apos;Management Company to Service&apos;,	
+				ISBLANK(Association_Start_Date__c))</errorConditionFormula>
+    <errorDisplayField>Association_Start_Date__c</errorDisplayField>
+    <errorMessage>Must have a start date</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aged_Care_Organisations</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Integration_ID__c</columns>
+    <columns>Incorporation_Status__c</columns>
+    <columns>ACO_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Aged_Care_Organisation</value>
+    </filters>
+    <label>01 Aged Care Organisations</label>
+</ListView>

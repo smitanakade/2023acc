@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Provider</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISBLANK(Provider__c),OR(RecordType.DeveloperName=&apos;Administrative_Organisation&apos;,RecordType.DeveloperName=&apos;Management_Company&apos;,RecordType.DeveloperName=&apos;Service_Delivery_Organisation&apos;),ISPICKVAL(Is_Approved_Provider__c , &apos;Yes&apos;))</errorConditionFormula>
+    <errorDisplayField>Provider__c</errorDisplayField>
+    <errorMessage>Provider is mandatory</errorMessage>
+</ValidationRule>

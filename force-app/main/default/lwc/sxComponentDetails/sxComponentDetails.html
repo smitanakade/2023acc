@@ -1,0 +1,37 @@
+<template>
+    <div>
+        <div>
+            <lightning-breadcrumbs class="sx-component_nav">
+                <lightning-breadcrumb label="Home" href="/solutionexchange/s/">
+                </lightning-breadcrumb>
+                <lightning-breadcrumb label="Components" href="/solutionexchange/s/components">
+                </lightning-breadcrumb>
+                <lightning-breadcrumb label={cmpDetail.name} href="#">
+                </lightning-breadcrumb>
+            </lightning-breadcrumbs>
+        </div>
+        <h1 class="sx-component_title">{cmpDetail.name}</h1>
+        <br>
+        <div class="sx-component_brief">
+            {cmpDetail.brief}
+        </div>
+        <img class="sx-component_image" src={compUrl} alt={compUrl}/>
+        <lightning-tabset class="sx-component_tabset">
+            <lightning-tab label="Overview">
+                <div>
+                    <div>USAGE</div>
+                    <div>{cmpDetail.usage}</div>
+                </div>
+                <hr class="sx-component_split_line"/>
+                <div>
+                    <div>FURTHER INFORMATION</div>
+                    <div>
+                        For further documentation, code example and specification about this component, 
+                        <a href={cmpDetail.referenceUrl} target="_blank"> please click here.</a>
+                        <br />
+                    </div>
+                </div>
+            </lightning-tab>
+        </lightning-tabset>
+    </div>
+</template>

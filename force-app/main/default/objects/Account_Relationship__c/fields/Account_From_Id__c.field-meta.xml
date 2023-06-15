@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_From_Id__c</fullName>
+    <description>Parent account record to link another account record.</description>
+    <externalId>false</externalId>
+    <label>Account From</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(3 AND 4) OR (1 AND 2)</booleanFilter>
+        <filterItems>
+            <field>$Source.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ACO to Account, Organisation Owner and Owned</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Aged Care Organisation</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Provider to Administrative Organisation, Provider to Management Company, Provider to Service Delivery Organisation</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Approved Provider, Commonwealth Home Support Programme, National Aboriginal and Torres Strait Islander Flexible Aged Care Program</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Account Relationships (Account From)</relationshipLabel>
+    <relationshipName>Account_Relationship_From</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,51 @@
+<template>
+
+    <lightning-combobox name="progress" label="Revocation Type" value={value} options={picklistOptions} onchange={updateAction} ></lightning-combobox>
+
+    <template if:true={isRead}>
+        <lightning-radio-group name="reviewedConditions" label="Have you reviewed the Conditions of allocation under S14-5(4)?" value={reviewedConditions} options={radioButtonAllOptions} required type="radio" onchange={updatePicklist}></lightning-radio-group>
+    </template>
+
+    <template if:false={isRead}>
+        <lightning-radio-group name="reviewedConditions" label="Have you reviewed the Conditions of allocation under S14-5(4)?" value={reviewedConditions} options={radioButtonSomeOptions} onchange={updatePicklist}></lightning-radio-group>
+    </template>
+
+    </br>   
+
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Packet ID</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Care Type</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Care Level</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Care Setting</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Number of Places</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Status of Places</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Reduce Number of Places By</div></th>
+                <th class="" scope="col"><div class="slds-truncate slds-line-clamp">Number of Places after Reduction</div></th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            
+            <template for:each={places} for:item="place">
+                <tr class="slds-hint-parent" key={place.Id}>
+                    <td><div class="slds-truncate slds-line-clamp"><lightning-formatted-url label={place.PacketId} value={place.PacketUrl} target="_blank"></lightning-formatted-url></div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.CareType}</div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.CareLevel}</div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.CareSetting}</div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.NumberofPlaces}</div></td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.StatusofPlaces}</div></td>
+                    <td>
+                        <div class="slds-truncate">
+                            <lightning-input type="number" name={place.Id} value={place.NumberOfChanges} required max={place.NumberofPlaces} min="0" step="1" message-when-step-mismatch="Invalid Number" message-when-range-overflow="Number exceeds allocation" onchange={updateNumerOfInvoke} disabled={isRead}></lightning-input>
+                        </div>
+                    </td>
+                    <td><div class="slds-truncate slds-line-clamp">{place.NumberOfPlacesAfterReduction}</div></td>
+                </tr>
+            </template>
+            
+        </tbody>
+    </table>
+        
+</template>

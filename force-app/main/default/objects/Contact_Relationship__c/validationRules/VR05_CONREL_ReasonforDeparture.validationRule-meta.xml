@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR05_CONREL_ReasonforDeparture</fullName>
+    <active>true</active>
+    <description>Capture reason key personnel left position in organisation</description>
+    <errorConditionFormula>AND(
+    NOT($Setup.BypassTriggers__c.BypassValidationRules__c),
+    OR(
+        AND(
+            !ISBLANK(End_Date__c),
+            ISBLANK(Reason_for_Departure__c),
+            OR(
+                RecordType.DeveloperName =&apos;Key_Personnel_CR&apos;,
+                RecordType.DeveloperName =&apos;Service_Key_Personnel_CR&apos;
+            )
+        ),
+        AND(
+            ISBLANK(End_Date__c),
+            !ISBLANK(Reason_for_Departure__c),
+            OR(
+                RecordType.DeveloperName =&apos;Key_Personnel_CR&apos;,
+                RecordType.DeveloperName =&apos;Service_Key_Personnel_CR&apos;
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Reason_for_Departure__c</errorDisplayField>
+    <errorMessage>Reason for departure is mandatory when end date is entered</errorMessage>
+</ValidationRule>

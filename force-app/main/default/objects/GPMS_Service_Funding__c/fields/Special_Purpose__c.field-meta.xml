@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Purpose__c</fullName>
+    <description>Details type of special purpose.
+Note: required for ACMPS integration</description>
+    <externalId>false</externalId>
+    <label>Special Purpose</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Homeless Specialisation</fullName>
+                <default>false</default>
+                <label>Homeless Specialisation</label>
+            </value>
+            <value>
+                <fullName>Indigenous Specialisation</fullName>
+                <default>false</default>
+                <label>Indigenous Specialisation</label>
+            </value>
+            <value>
+                <fullName>Significant Refurbishment</fullName>
+                <default>false</default>
+                <label>Significant Refurbishment</label>
+            </value>
+            <value>
+                <fullName>New Building</fullName>
+                <default>false</default>
+                <label>New Building</label>
+            </value>
+            <value>
+                <fullName>Homeless or Indigenous Specialisation</fullName>
+                <default>false</default>
+                <label>Homeless or Indigenous Specialisation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

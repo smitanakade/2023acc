@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CHSP_Approval</fullName>
+    <active>true</active>
+    <label>CHSP Approval</label>
+    <picklistValues>
+        <picklist>Care_Type__c</picklist>
+        <values>
+            <fullName>Commonwealth Home Support Programme</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>JurisdictionType</picklist>
+        <values>
+            <fullName>COUNTRY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COUNTY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROVINCE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STATE</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Service_Care_Sub_Type__c</picklist>
+        <values>
+            <fullName>Assistance with Care and Housing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Care Relationship and Carer Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community and Home Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service System Development</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Funded</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Not Funded</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Reason__c</picklist>
+        <values>
+            <fullName>Funding approved and commenced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funding not approved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VerificationStatus</picklist>
+        <values>
+            <fullName>Authorized</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

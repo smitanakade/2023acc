@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Home_Care_Set_Operational</fullName>
+    <active>true</active>
+    <description>Home Care Service status cannot be set as Operational when the lookup Physical Address Location is null.</description>
+    <errorConditionFormula>AND(ISCHANGED(Status__c),ISPICKVAL(Status__c , &apos;Operational&apos;),ISBLANK(Physical_Address_Location__c),ISPICKVAL(Care_Type__c,&apos;Home Care&apos;))</errorConditionFormula>
+    <errorMessage>Home Care Service status cannot be set as Operational when Physical Address is null</errorMessage>
+</ValidationRule>

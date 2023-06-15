@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GPMS_Provisional_Sum__c</fullName>
+    <description>Sum of current with pending or no places&apos; provisional</description>
+    <externalId>false</externalId>
+    <label>Provisional Sum</label>
+    <summarizedField>Places_Allotment__c.Number_of_Places__c</summarizedField>
+    <summaryFilterItems>
+        <field>Places_Allotment__c.Status_of_Places__c</field>
+        <operation>equals</operation>
+        <value>Provisional</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Places_Allotment__c.Allotment__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

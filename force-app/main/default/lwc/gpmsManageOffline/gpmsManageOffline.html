@@ -1,0 +1,52 @@
+<template>    
+    <!-- <div class="slds-card__body slds-card__body_inner"> -->
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large">
+            <thead>
+                <tr>
+                    <th>Allotment</th>
+                    <th>Places belonging to this allotment</th>
+                </tr>
+            </thead>
+        
+            
+            <tbody>
+                <template for:each={allotments} for:item="allotment">
+                    <tr key={allotment.AllotmentId}>
+                        <td>
+                            <input type="radio" name="allotmentId" class="allotmentId" value={allotment.AllotmentId} onclick={updateSelection} />
+                            <label>{allotment.Name}</label>
+                        </td>
+                        <td>
+                            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large">
+                                <thead>
+                                    <tr>
+                                        <th>Care Type</th>
+                                        <th>Care Level</th>
+                                        <th>Number of places</th>
+                                        <th>Status of places</th>
+                                        <th>Status effective date</th>
+                                        <th>First brought into effect</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <template for:each={allotment.Place} for:item="place">
+                                        <tr key={place.Id}>
+                                            <td>{place.CareType}</td>
+                                            <td>{place.CareLevel}</td>
+                                            <td>{place.NumberofPlaces}</td>
+                                            <td>{place.StatusofPlaces}</td>
+                                            <td>{place.StatusEffectiveDate}</td>
+                                            <td>{place.FirstBroughtintoEffectDate}</td>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr> 
+                </template>
+            </tbody>
+        </table>
+
+    <!-- </div> -->
+</template>

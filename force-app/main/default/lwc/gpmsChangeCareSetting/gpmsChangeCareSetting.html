@@ -1,0 +1,145 @@
+<template>
+
+    <div class="slds-section slds-is-open">
+        
+        <div aria-hidden="false" class="slds-section__content">
+
+            <template if:true={allPlaces}>
+                <div class="slds-scrollable_x">
+                    <table class="slds-table slds-table_bordered slds-table_col-bordered">
+                      <thead>
+							<tr class="slds-line-height_reset">
+								<th class="slds-text-align_right" scope="col" style="width:3.25rem"></th>
+								<th scope="col">Packet ID</th>
+								<th scope="col">Care Type</th>
+								<th scope="col">Care Setting</th>
+								<th scope="col">Care Setting Effective Date</th>
+								<th scope="col">Number of Places</th>
+								<th scope="col">Status of Places</th>
+								<th scope="col">Status Effective Date</th>
+								<th scope="col">Number of Places to remain at this Care Setting</th>
+							</tr>
+						</thead>
+                        <tbody>
+                            <template for:each={allPlaces} for:item="place">
+                                <tr class="slds-hint-parent" key={place.PlacesId}>
+                                    <td class="slds-text-align_right" role="gridcell">
+                                        <lightning-input name={place.PlacesId} type="checkbox"  checked={place.checked} onchange={changeSelectedPlace}></lightning-input>
+                                    </td>
+									<th scope="row"><div class="slds-truncate"><lightning-formatted-url label={place.PacketId} value={place.PacketUrl} target="_blank"></lightning-formatted-url></div></th>
+									<th scope="row"><div class="slds-truncate">{place.CareType}</div></th>
+									<th scope="row"><div class="slds-truncate">{place.CareSetting}</div></th>
+									<th scope="row"><div class="slds-truncate">{place.CareSettingEffectiveDate}</div></th>
+									<th scope="row"><div class="slds-truncate">{place.NumberofRemaining}</div></th>
+									<th scope="row"><div class="slds-truncate">{place.StatusofPlaces}</div></th>
+									<th scope="row"><div class="slds-truncate">{place.StatusEffectiveDate}</div></th>
+									<th scope="row"><div class="slds-truncate">{place.RemainingAfterCareSetting}</div></th>
+								</tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            
+            </template>
+
+        </div>
+    </div>
+
+    <div class="slds-section slds-is-open">
+        <div aria-hidden="false" class="slds-section__content">
+            <template if:true={selectedPlace}>
+        
+                <div class="slds-scrollable_x">
+                    <table class="slds-table slds-table_bordered slds-table_col-bordered">
+                    <thead>
+                         <tr class="slds-line-height_reset">
+                            <th scope="col">Packet ID</th>
+                            <th scope="col">Care Type</th>
+                            <th scope="col">Care Setting</th>
+                            <th scope="col">Care Setting Effective Date</th>
+                            <th scope="col">Number of Places</th>
+                            <th scope="col">Status of Places</th>
+                            <th scope="col">Number of Places to remain at this Care Setting</th>
+                            <th scope="col">Status Effective Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       <tr class="slds-hint-parent">
+                            <th scope="row"><div class="slds-truncate"><lightning-formatted-url label={selectedPlace.PacketId} value={selectedPlace.PacketUrl} target="_blank"></lightning-formatted-url></div></th>
+                            <th scope="row"><div class="slds-truncate">{selectedPlace.CareType}</div></th>
+                            <th scope="row">
+                                <div>
+                                        <lightning-radio-group value={selectedPlace.CareSetting} options={careSettingOptions} onchange={updateCareSetting} ></lightning-radio-group>									                                          
+                                </div>
+                            </th>
+                            <th scope="row"><div class="slds-truncate">{selectedPlace.CareSettingEffectiveDate}</div></th>
+                            <th scope="row">
+                                <div>
+                                    <lightning-input type="number" name={selectedPlace.PlacesId} value={selectedPlace.CurrentAction} max={selectedPlace.NumberofRemaining} min="1" step="1" onchange={updateNumber} message-when-range-underflow="Number of Places must be greater than 0" message-when-range-overflow="Number of Places cannot exceed total number of places available for change of care setting"></lightning-input>
+                                </div>
+                            </th>
+                            <!-- <th scope="row"><div class="slds-truncate">{selectedPlace.NumberofRemaining}</div></th> -->
+                            <th scope="row"><div class="slds-truncate">{selectedPlace.StatusofPlaces}</div></th>
+                            <th scope="row"><div class="slds-truncate">{selectedPlace.currentRemainingAfterCareSetting}</div></th>
+                            <th scope="row"><div class="slds-truncate">{selectedPlace.StatusEffectiveDate}</div></th>
+                            <th scope="row">
+                                <div>
+                                    <lightning-button label="Add to Summary of Places" disabled={selectedPlace.notValid} onclick={addToSummary}></lightning-button>
+                                </div>
+                            </th>
+						</tr>
+                    </tbody>
+                    </table>
+                </div>
+            </template>
+        </div>
+    </div>  
+
+    <div class="slds-section slds-is-open">
+        <h3 class="slds-section__title slds-theme_shade">
+            <span class="slds-truncate slds-p-horizontal_small" title="Section Title">
+                Summary of Places
+            </span>
+        </h3>
+        <div aria-hidden="false" class="slds-section__content">
+            <template if:true={placeSummary}>
+        
+                <div class="slds-scrollable_x">
+                    <table class="slds-table slds-table_bordered slds-table_col-bordered">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th scope="col">Packet ID</th>
+                                <th scope="col">Action</th>
+                                <th scope="col">Care Type</th>
+                                <th scope="col">Care Setting</th>
+                                <th scope="col">Care Setting Effective Date</th>
+                                <th scope="col">Number of Places</th>
+                                <th scope="col">Status of Places</th>
+                                <th scope="col">Status Effective Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={placeSummary} for:item="place" for:index="index">
+                                <tr class="slds-hint-parent" key={place.PlacesId}>
+                                    <th scope="row"><div class="slds-truncate"><lightning-formatted-url label={place.PacketId} value={place.PacketUrl} target="_blank"></lightning-formatted-url></div></th>
+                                    <th scope="row">
+                                        <lightning-button name={index} label="Edit" onclick={edit}></lightning-button>
+                                        <lightning-button name={index} label="Remove" onclick={remove} class="slds-m-left_xx-small"></lightning-button>
+                                    </th>
+                                    <th scope="row"><div class="slds-truncate">{place.CareType}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.CareSetting}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.CareSettingEffectiveDate}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.CurrentAction}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.StatusofPlaces}</div></th>
+                                    <th scope="row"><div class="slds-truncate">{place.StatusEffectiveDate}</div></th>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+        
+            </template>
+        </div>
+    </div>
+
+</template>

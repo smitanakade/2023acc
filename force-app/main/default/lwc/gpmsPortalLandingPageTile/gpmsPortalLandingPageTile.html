@@ -1,0 +1,29 @@
+<template>
+    <a href={linkUrl} class="gpmsHomeCard" target={linkTarget}>
+        <div class="gpmsHomeCardRowTop">
+            <div if:false={iconColor} class="gpmsHomeCardIcon">
+                <img src={iconSrc} alt="" />
+            </div>
+            <div if:true={iconColor} class="gpmsHomeCardIcon cardIconPurple">
+                <img src={iconSrc} alt="" />
+            </div>
+            <img if:false={linkExternal} src={iconArrowF} alt="" />
+            <img if:true={linkExternal} src={iconExternalLink} alt="" />
+        </div>
+        <div class="gpmsHomeCardRowContent">
+            <h2 class="slds-var-m-bottom_small">{tileContent.heading}</h2>
+            <p if:true={tileContent.introText}>{tileContent.introText}</p>
+            <ul if:false={hasColumns} class="slds-list_dotted">
+                <template for:each={tileContent.listItems} for:item="item">
+                    <li key={item}>{item}</li>
+                </template>
+            </ul> 
+            <ul if:true={hasColumns} class="slds-list_dotted has-columns">
+                <template for:each={tileContent.listItems} for:item="item">
+                    <li key={item}>{item}</li>
+                </template>
+            </ul>
+            <span if:true={linkNewWindow} class="slds-assistive-text">(This link opens in a new tab)</span>
+        </div>
+    </a>
+</template>

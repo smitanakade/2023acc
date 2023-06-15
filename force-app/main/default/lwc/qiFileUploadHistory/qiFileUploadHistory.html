@@ -1,0 +1,44 @@
+<template>
+    <!-- Banner -->
+    <template lwc:if={isBenchmarkerUser}>
+        <c-qi-data-entry-submission-banner
+            title="Quality Indicator File Upload History"
+            hide-view-history-button="true"
+        ></c-qi-data-entry-submission-banner>
+        <div class="slds-m-top_x-large">
+            <c-qi-knowledge-bar></c-qi-knowledge-bar>
+        </div>
+    </template>
+    <template lwc:else>
+        <c-qi-file-upload-banner
+            title-name="Quality Indicator File Upload History"
+        ></c-qi-file-upload-banner>
+    </template>
+
+    <!-- Filters -->
+    <div class="slds-m-top_large slds-m-bottom_small">
+        <c-qi-file-upload-history-filter
+            onfilter={handleFilterUpdate}
+        ></c-qi-file-upload-history-filter>
+    </div>
+    
+    <!-- Data Table -->
+    <c-srqi-custom-data-table
+        class="qi-file-upload-history slds-max-medium-table_stacked srqi-rating-details-table"
+        key-field="id"
+        columns={dataTableColumns}
+        data={visibleRecords}
+        hide-checkbox-column="true"
+        onrowaction={handleRowAction}
+        sorted-by={sortedBy}
+        sorted-direction={sortedDirection}
+        onsort={handleSortUpdate}
+    ></c-srqi-custom-data-table>
+
+    <!-- Pagination -->
+    <c-srqi-Data-Table-Pagination-Star-Rating 
+        records={allRecords} 
+        onupdate={handlePagination} 
+        show-results=true
+    ></c-srqi-Data-Table-Pagination-Star-Rating>
+</template>

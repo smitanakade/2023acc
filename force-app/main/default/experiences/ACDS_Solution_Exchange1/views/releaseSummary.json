@@ -1,0 +1,75 @@
+{
+  "appPageId" : "57e9e222-6b9e-43ba-bf54-9d4c062f85f5",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "f4f51990-e0b2-408a-aaa6-7bc594fe26df",
+  "label" : "Release Summary",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<a href=\"/solutionexchange/s/\">Home</a> > <a href=\"/solutionexchange/s/release-summary\">Release Summary</a>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "e6329155-7bb9-410f-af55-147331b6f6d0",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ff4e2819-6cc0-4e9d-8922-affbf2566bf6",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h2><br></h2><h2><strong style=\"font-size: 36px;\">Design System Release Summary</strong></h2><p><br></p><p><span style=\"font-size: 16px;\">Each Design System release has a unique link for downloading its package, plus Release Notes, installation instructions, and upgrade instructions.</span></p><h2><strong>&nbsp;</strong></h2><p>&nbsp;</p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "3ee06d29-39f1-4997-83d4-900c08f588ec",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<div style=\"padding: 12px 12px 12px 36px;border-left-width: 5px;border-left-style: solid;border-left-color: #2ab27b;line-height: 1.4em;margin-top: 18px;margin-bottom: 18px;position: relative;background-color: rgba(42, 178, 123, 0.08);margin-left: 0px !important;margin-right: 0px !important;\">\n  <h3 class=\"slds-p-bottom_small\" style=\"font-size: 1.2em;\">Note</h3>\n  <p class=\"slds-p-bottom_small\">To install in a sandbox rather than a production org, alter the download URL by changing \"login\" to \"test\". For example:</p>\n  <p class=\"slds-p-bottom_small\">Production URL: <code>https://<span style=\"text-decoration: underline;\">login</span>.salesforce.com/packaging/installPackage.apexp?p0={package-id...} </code>\n  </p>\n  <p class=\"slds-p-bottom_small\">Sandbox URL: <code>https://<span style=\"text-decoration: underline;\">test</span>.salesforce.com/packaging/installPackage.apexp?p0={package-id...} </code>\n  </p>\n</div>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "68efbf75-5064-4954-94cf-f2fbf025f165",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<table>\n  \t<tr style=\"background: #0089AD;box-shadow: 0px 1px 0px #DDDBDA;color:#FFFFFF;flex: none;order: 0;flex-grow: 0;align-items: center;font-family: 'Roboto';font-style: normal;font-weight: 700;font-size: 14px;line-height: 20px;\">\n        <th style=\"padding:6px 12px;\">Release</th>\n        <th style=\"padding:6px 12px;\">Version</th>\n        <th style=\"padding:6px 12px;\">Date</th>\n        <th style=\"padding:6px 12px;\">Package Installation URL</th>\n        <th style=\"padding:6px 12px;\">Release Notes</th>\n        <th style=\"padding:6px 12px;\">Post-Installation Instructions</th>\n        <th style=\"padding:6px 12px;\">Post-Upgrade Instructions</th>\n    </tr>\n    <tr>\n        <td style=\"padding:6px 12px;\">July 2022</td>\n        <td style=\"padding:6px 12px;\">1.1</td>\n        <td style=\"padding:6px 12px;\">July 26, 2022</td>\n        <td style=\"padding:6px 12px;\"><a href=\"https://login.salesforce.com/packaging/installPackage.apexp?p0=04t8t0000000SLKAA2\" target=\"_blank\">Production Package</a><br>\n        <a href=\"https://test.salesforce.com/packaging/installPackage.apexp?p0=04t8t0000000SLKAA2\" target=\"_blank\">Sandbox Package</a></td>\n        <td style=\"padding:6px 12px;\"><a href=\"/solutionexchange/s/release-note-1-1\">ACDS v1.1 Release Notes</a></td>\n        <td style=\"padding:6px 12px;\">None</td>\n        <td style=\"padding:6px 12px;\">None</td>\n    </tr>\n    <tr>\n        <td style=\"padding:6px 12px;\">October 2022</td>\n        <td style=\"padding:6px 12px;\">2.1</td>\n        <td style=\"padding:6px 12px;\">October 07, 2022</td>\n        <td style=\"padding:6px 12px;\"><a href=\"https://login.salesforce.com/packaging/installPackage.apexp?p0=04t8t0000000SfoAAE\" target=\"_blank\">Production Package</a><br>\n        <a href=\"https://test.salesforce.com/packaging/installPackage.apexp?p0=04t8t0000000SfoAAE\" target=\"_blank\">Sandbox Package</a></td>\n        <td style=\"padding:6px 12px;\"><a href=\"/solutionexchange/s/release-note-2-1\">ACDS v2.1 Release Notes</a></td>\n        <td style=\"padding:6px 12px;\">None</td>\n        <td style=\"padding:6px 12px;\">None</td>\n    </tr>\n</table>"
+      },
+      "componentName" : "forceCommunity:htmlBlock",
+      "id" : "eb8a54ad-e9cc-4695-9903-d24bba03787f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2a08fa40-2d27-44b9-9915-5c347b051190",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "521ed4d1-fdac-4310-a3b9-2eff926dffdc",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Release Summary | Aged Care Design System"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "bbaa3930-a490-4eea-8c86-b7ab17d484aa",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8a54a5da-db83-40d0-b423-7b3f5485f205",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "XSr059NCM8WMoPPEHYyhva4HEamlwb",
+  "type" : "view",
+  "viewType" : "custom-release-summary"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Status_Change_Permission</fullName>
+    <active>true</active>
+    <description>This Validation rule is to stop QFR RC users to update case status</description>
+    <errorConditionFormula>AND( ISCHANGED( Status ),
+$Permission.QFR_Reasonableness_Check_User,
+ RecordType.DeveloperName =&apos;QFR&apos;)</errorConditionFormula>
+    <errorMessage>You don&apos;t have permission to change case status</errorMessage>
+</ValidationRule>

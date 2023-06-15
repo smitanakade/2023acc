@@ -1,0 +1,36 @@
+.gpmsCardHomeRow {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    justify-content: space-between;
+}
+
+.gpmsHomeCard {
+    display: flex;
+}
+
+/* Breakpoints */
+
+/* Viewport >= 768 */
+@media (min-width: 48em) {
+    .gpmsCardHomeRow {
+        flex-direction: row;
+        gap: var(--spacing-x-large);
+    }
+
+    .gpmsHomeCard {
+        flex: 1 0 40%;
+    }
+
+    .gpmsHomeCard:not(:first-child) {
+        margin-top: 0;
+    }
+}
+
+/* Viewport >= 1024 */
+@media (min-width: 64em) {
+    .gpmsHomeCard {
+        flex: 1 0 30%;
+    }
+}

@@ -1,0 +1,53 @@
+<template>
+            <div class="nds-grid nds-wrap nds-is-relative containersize">
+            <div style="position: fixed;z-index: 999999;top: 0;right: 0;">
+  <omnistudio-toast class="flexcard-toast-element" theme="nds" title="" message="" styletype=""> </omnistudio-toast>
+</div>
+            <div if:true={showLoader} class="nds-is-absolute vloc-loader_override" style="height: 100%; width: 100%; min-height:50px; background: transparent; z-index: 99;">
+  <div>
+   <omnistudio-spinner
+      variant="brand"
+      alternative-text="Loading content..."
+      size="small"
+      theme="nds"
+      ></omnistudio-spinner>
+  </div>
+</div>
+            <template if:false={hasPermission}>
+              You don't have required permissions to view this card.
+            </template>
+            <template if:true={hasPermission}>
+              <template if:true={hasRecords}>
+                        <template for:each={_records} for:item="record" for:index="rindex">
+                            <omnistudio-flex-card-state if:true={record}  key={record._flex.uniqueKey} data-recordid={record.Id} record={record} data-statue="true"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state nds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="nds-grid nds-wrap nds-theme_default nds-p-around_x-small nds-m-bottom_x-small " style="background-color:#fff;  background-repeat:repeat;    
+        color:#000; ">
+          <div data-style-id="state0element0" class="nds-col   nds-size_12-of-12 " data-rindex={rindex} style="" ><c-cf-a-c-f-r_-form-name-and-information data-style-id="state0element0_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  parent-attribute='\{"FormName":"Residential Labour Costs and Hours"}'  object-api-name={objectApiName}  theme="nds"  omni-json-def={omniJsonDef} omni-script-header-def={omniScriptHeaderDef} omni-custom-state={omniCustomState} omni-json-data={omniJsonData} omni-support-key={record._flex.uniqueKey}   onupdateparent={updateParentData}></c-cf-a-c-f-r_-form-name-and-information>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                        </template>
+                      </template>
+                      <template if:false={hasRecords}>
+                            <omnistudio-flex-card-state  record={record} data-statue="false"  data-index="0" data-rindex={rindex} class="cf-vlocity-state-0 cf-vlocity-state nds-size_12-of-12 "  tracking-obj={_childCardTrackingObj} >
+      <div if:true={cardLoaded} class="nds-grid nds-wrap nds-theme_default nds-p-around_x-small nds-m-bottom_x-small " style="background-color:#fff;  background-repeat:repeat;    
+        color:#000; ">
+          <div data-style-id="state0element0" class="nds-col   nds-size_12-of-12 " data-rindex={rindex} style="" ><c-cf-a-c-f-r_-form-name-and-information data-style-id="state0element0_child"  tracking-obj={_childCardTrackingObj}  is-inside-parent={insideParent} parent-uniquekey={uniqueKey}  card-node=""  parent-record={record}  records={_records}  parent-mergefields={card}  record-id={recordId}  is-child-card-tracking-enabled="false"  parent-attribute='\{"FormName":"Residential Labour Costs and Hours"}'  object-api-name={objectApiName}  theme="nds"   onupdateparent={updateParentData}></c-cf-a-c-f-r_-form-name-and-information>
+    </div>
+        </div>
+      </omnistudio-flex-card-state>
+                      </template>
+            </template>
+            <template if:true={hasError}>
+            {error}
+            </template>
+            
+      <omnistudio-action action-wrapperclass="slds-hide" re-render-flyout class="action-trigger slds-col" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+      
+      </omnistudio-action>
+  
+            <omnistudio-action class="execute-action" re-render-flyout action-wrapperclass="slds-hide" onupdateos={updateOmniscript} onselectcards={updateSelectedCards} onsetvalue={updateAction} onfireactionevent={actionEvtHandler}>
+            
+            </omnistudio-action>
+            </div>
+          </template>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_Provider_CT</fullName>
+    <active>true</active>
+    <label>Approved Provider</label>
+    <picklistValues>
+        <picklist>Care_Type__c</picklist>
+        <values>
+            <fullName>Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flexible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Residential</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Approval_Status__c</picklist>
+        <values>
+            <fullName>Application Threshold Not Met</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Withdrawn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approval Ceased</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approval Decision Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approve %28with dependencies%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved %28Not in Force%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intention to Revoke</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Approved %28threshold criteria not met%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Met Approval Threshold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revoked by Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revoked by the Commission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taken to be Approved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Reason__c</picklist>
+        <values>
+            <fullName>Funding approved and commenced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funding not approved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

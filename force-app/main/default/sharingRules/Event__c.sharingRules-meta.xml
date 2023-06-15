@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Event_GPMS_ACQSC</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Event GPMS ACQSC</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Users</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Variations by Provider &amp; Secretary,Record Allotment,Surrender,Cease Places,Exchange care type,Revoke,Change Care Setting,Transfer,Extend PA Period,Bring Online,Commence Funding,Variation,Suspend or Cease funding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Cease S14-9 Places,Manage the Offline Places,NATSIFAC Cease Places,Combine,Deed of Variation,Vary Service Location,Relinquish Places,NATSIFAC Reinstate Places</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Event_GPMS_ACQSC_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Event GPMS ACQSC Read Only</label>
+        <sharedTo>
+            <group>GPMS_ACQSC_Read_Only</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Variations by Provider &amp; Secretary,Record Allotment,Surrender,Cease Places,Exchange care type,Revoke,Change Care Setting,Transfer,Extend PA Period,Bring Online,Commence Funding,Variation,Suspend or Cease funding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Cease S14-9 Places,Manage the Offline Places,NATSIFAC Cease Places,Combine,Deed of Variation,Vary Service Location,Relinquish Places,NATSIFAC Reinstate Places</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Event_GPMS_Aged_Care_Accreditation</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Event GPMS Aged Care Accreditation</label>
+        <sharedTo>
+            <group>GPMS_Aged_Care_Accreditation_Users</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Variations by Provider &amp; Secretary,Record Allotment,Surrender,Cease Places,Exchange care type,Revoke,Change Care Setting,Transfer,Extend PA Period,Bring Online,Commence Funding,Variation,Suspend or Cease funding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Cease S14-9 Places,Manage the Offline Places,NATSIFAC Cease Places,Combine,Deed of Variation,Vary Service Location,Relinquish Places,NATSIFAC Reinstate Places</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Event_GPMS_CHSP</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Event GPMS CHSP</label>
+        <sharedTo>
+            <group>GPMS_CHSP_Users</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Variations by Provider &amp; Secretary,Record Allotment,Surrender,Cease Places,Exchange care type,Revoke,Change Care Setting,Transfer,Extend PA Period,Bring Online,Commence Funding,Variation,Suspend or Cease funding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Manage the Offline Places,Cease S14-9 Places,NATSIFAC Cease Places,Combine,Deed of Variation,Vary Service Location,Relinquish Places,NATSIFAC Reinstate Places</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Event_GPMS_Central_Office_Staff</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Event GPMS Central Office Staff</label>
+        <sharedTo>
+            <group>GPMS_Central_Office_Staff_Users</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Variations by Provider &amp; Secretary,Record Allotment,Surrender,Cease Places,Exchange care type,Revoke,Change Care Setting,Transfer,Extend PA Period,Bring Online,Commence Funding,Variation,Suspend or Cease funding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Cease S14-9 Places,Manage the Offline Places,NATSIFAC Cease Places,Combine,Deed of Variation,Vary Service Location,Relinquish Places,NATSIFAC Reinstate Places</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Event_GPMS_NASTIFAC</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Event GPMS NASTIFAC</label>
+        <sharedTo>
+            <group>GPMS_NATSIFAC_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>NATSIFAC Reinstate Places,NATSIFAC Cease Places,Record Allotment</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Event_GPMS_Partnered_Government</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Event GPMS Partnered Government</label>
+        <sharedTo>
+            <group>GPMS_Partnered_Government_Org_Users</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Variations by Provider &amp; Secretary,Record Allotment,Surrender,Cease Places,Exchange care type,Revoke,Change Care Setting,Transfer,Extend PA Period,Bring Online,Commence Funding,Variation,Suspend or Cease funding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Cease S14-9 Places,Manage the Offline Places,NATSIFAC Cease Places,Combine,Deed of Variation,Vary Service Location,Relinquish Places,NATSIFAC Reinstate Places</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Event_GPMS_STO</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Event GPMS STO</label>
+        <sharedTo>
+            <group>GPMS_STO_Users</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Cease Places,Exchange care type,Revoke,Change Care Setting,Extend PA Period,Bring Online,Record Allotment,Commence Funding,Surrender,Suspend or Cease funding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Cease S14-9 Places,Manage the Offline Places,Combine,Transfer,Variations by Provider &amp; Secretary,Deed of Variation,Vary Service Location,Variation,Relinquish Places</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Event_GPMS_Tier_3_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Event GPMS Tier 3 Admin</label>
+        <sharedTo>
+            <group>GPMS_System_Administrator</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Cease Places,Exchange care type,Revoke,Change Care Setting,Extend PA Period,Bring Online,Record Allotment,Commence Funding,Surrender,Suspend or Cease funding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Cease S14-9 Places,Manage the Offline Places,NATSIFAC Cease Places,Combine,Transfer,Variations by Provider &amp; Secretary,Deed of Variation,Vary Service Location,Variation,Relinquish Places,NATSIFAC Reinstate Places</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Benchmarking_Organisation_role_checking</fullName>
+    <active>true</active>
+    <errorConditionFormula>(AccountRecordType__c != &apos;Benchmarking_Organisation&apos;) &amp;&amp; INCLUDES( Roles, &apos;QI Benchmarker&apos;)</errorConditionFormula>
+    <errorDisplayField>Roles</errorDisplayField>
+    <errorMessage>QI Benchmarker Role should only be added against the Benchmarking Organisation Account</errorMessage>
+</ValidationRule>

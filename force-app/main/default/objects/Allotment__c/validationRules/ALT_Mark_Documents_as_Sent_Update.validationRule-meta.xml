@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALT_Mark_Documents_as_Sent_Update</fullName>
+    <active>true</active>
+    <description>Mark Documents as Sent cannot be updated.</description>
+    <errorConditionFormula>ISCHANGED(GPMS_Mark_Documents_as_Sent__c) &amp;&amp; NOT(ISBLANK(PRIORVALUE(GPMS_Mark_Documents_as_Sent__c))) &amp;&amp; $Profile.Name != &apos;System Administrator&apos;</errorConditionFormula>
+    <errorDisplayField>GPMS_Mark_Documents_as_Sent__c</errorDisplayField>
+    <errorMessage>Mark Documents as Sent can only be recorded once</errorMessage>
+</ValidationRule>

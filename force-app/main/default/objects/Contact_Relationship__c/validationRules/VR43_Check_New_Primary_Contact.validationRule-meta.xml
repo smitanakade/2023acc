@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR43_Check_New_Primary_Contact</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(RecordType.DeveloperName &lt;&gt; &apos;SCR&apos;, NeedNewPrimaryContact__c = true)</errorConditionFormula>
+    <errorMessage>There must be a Primary Contact for this Provider or Service. If there is no existing Primary Contact, please change the role to Primary Contact. To add a new Primary Contact, please add a new Point of Contact through the Provider or Service record.</errorMessage>
+</ValidationRule>

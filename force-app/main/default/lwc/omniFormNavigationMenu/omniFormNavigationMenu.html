@@ -1,0 +1,21 @@
+<template>
+	<div class={trackerClass}>
+		<button class="toggle" onclick={toggleTracker}></button>
+		<ul>
+			<template iterator:step={stepArray}>
+				<c-omni-form-navigation-menu-item
+					key={step.value.name}
+					step-name={step.value.name}
+					label={step.value.label}
+					data-id={index}
+					width={width}
+					status={step.value.status}
+					is-collapsed={isCollapsed}
+					error-message={step.value.errorMessage}
+					is-submission-locked={isSubmissionLocked}
+					is-last-child={step.last}
+				></c-omni-form-navigation-menu-item>
+			</template>
+		</ul>
+	</div>
+</template>

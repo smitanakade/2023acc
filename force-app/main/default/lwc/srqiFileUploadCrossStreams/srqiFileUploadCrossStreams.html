@@ -1,0 +1,20 @@
+<template>
+    <lightning-card   icon-name="action:upload"  title='Residential Aged Care Home Expenditure'
+    style="
+
+    --sds-c-icon-color-background:  purple;
+   
+    "
+    >
+    <!-- onuploadfinished={handleClickFile_Staging} 
+     multiple="multiple" 
+    -->
+      <p style="margin-left: 3%;"><b> Pre-fill this section</b></p> 
+        <div class="ytp-button" style="margin-left: 3%;    color: purple;        " >
+            <lightning-file-upload accept={acceptedCSVFormats} 
+                                   label="Upload your File to  pre-fill this section with your data." 
+                                   record-id={recordId}></lightning-file-upload>
+        </div>
+        
+    </lightning-card>
+</template>

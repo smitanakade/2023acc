@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Service</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Services must be related to current QFR.</errorMessage>
+        <filterItems>
+            <field>Service_Line_Item__c.Service_Label__c</field>
+            <operation>notEqual</operation>
+            <value>Total</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Form__c</field>
+            <operation>equals</operation>
+            <valueField>Service_Line_Item__c.Form__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Service_Line_Item__c</referenceTo>
+    <relationshipLabel>Financial Reporting Rule Exemptions</relationshipLabel>
+    <relationshipName>QFR_Reporting_Rules</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
